@@ -1,0 +1,368 @@
+建立蛋白质-配体相互作用模型
+===============================================
+
+`Jupyter Notebook <https://github.com/deepchem/deepchem/blob/master/examples/tutorials/Modeling_Protein_Ligand_Interactions.ipynb>`_
+
+`Jupyter Notebook 中文翻译版查看 <https://github.com/abdusemiabduweli/AIDD-Tutorial-Files/blob/main/DeepChem%20Jupyter%20Notebooks/建立蛋白质配体相互作用模型.ipynb>`_
+
+`Jupyter Notebook 中文翻译版下载 <https://abdusemiabduweli.github.io/AIDD-Tutorial-Files/DeepChem%20Jupyter%20Notebooks/建立蛋白质配体相互作用模型.ipynb>`_
+
+在本教程中，我们将带你了解如何使用机器学习和分子对接方法来预测蛋白质配体复合体的结合能。回想一下，配体是一种与蛋白质相互作用的小分子(通常是非共价的)。分子对接通过几何计算找到一种“结合构象”，小分子与蛋白质在合适的结合口袋中相互作用(也就是蛋白质上有凹槽的区域，小分子可以进入其中)。
+
+蛋白质的结构可以通过像 Cryo-EM 或 X 射线晶体学这样的技术来实验鉴定。这可以是用于基于结构的药物发现的一个强大工具。关于对接的更多内容，请阅读 `AutoDock Vina paper <https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3041641/>`_ 和 `deepchem.dock <https://deepchem.readthedocs.io/en/latest/docking.html>`_ 文档。有许多图形用户界面和命令行界面程序(如 AutoDock)用于执行分子对接。在这里，我们要展示如何通过 DeepChem 编程实现对接，从而能使自动化，和轻松与机器学习流程整合。
+
+通过本教程,你将沿着包括下列的事项学习：
+
+1. 加载蛋白质-配体复合物数据集 `[PDBbind] <http://www.pdbbind.org.cn/>`_
+2. 通过编程执行分子对接
+3. 使用相互作用指纹特征化蛋白质-配体复合物
+4. 拟合随机森林模型并预测结合亲和力
+
+为了开始本教程，我们将使用一个简单的预处理数据集文件，它以 gzip 文件的形式出现。每一行都是一个分子系统，每一列都代表了关于这个系统的不同信息。例如，在这个例子中，每一行都反映一个蛋白质-配体复合物，然后每一个列是：复合物唯一标识符；配体的 SMILES 字符串；配体与复合物中蛋白质的结合亲和力 (Ki)；所有行的只有蛋白质的PDB文件 Python `列表` ；以及所有行的只有配体的PDB文件 Python `列表` 。
+
+准备
+----------------
+
+蛋白质-配体复合物数据
+::::::::::::::::::::::::::
+
+在进行对接时，蛋白质和配体的可视化是很有帮助的。不幸的是，谷歌Colab（如果要使用谷歌Colab，国内需要翻墙）目前不支持我们进行可视化所需要的 Jupyter 小部件。在本地机器上可以安装 `MDTraj <https://github.com/mdtraj/mdtraj>`_ 和 `nglview <https://github.com/nglviewer/nglview>`_ 来查看我们正在使用的蛋白质-配体复合物。
+
+.. code-block:: Python
+
+    pip install -q mdtraj nglview
+    # jupyter-nbextension enable nglview --py --sys-prefix  # for jupyter notebook
+    # jupyter labextension install  nglview-js-widgets  # for jupyter lab
+
+
+    import os
+    import numpy as np
+    import pandas as pd
+
+    import tempfile
+
+    from rdkit import Chem
+    from rdkit.Chem import AllChem
+    import deepchem as dc
+
+    from deepchem.utils import download_url, load_from_disk
+
+为了演示对接过程，这里我们将使用一个 csv，其中包含来自 PDBbind 的配体的 SMILES 字符串以及配体和蛋白质靶点的 PDB 文件。稍后，我们会使用标签列训练一个模型来预测结合亲和力。我们还将从零开始展示如何下载和特征化 PDBbind 以训练模型。
+
+.. code-block:: Python
+
+    data_dir = dc.utils.get_data_dir()
+    dataset_file = os.path.join(data_dir, "pdbbind_core_df.csv.gz")
+
+    if not os.path.exists(dataset_file):
+        print('File does not exist. Downloading file...')
+        download_url("https://s3-us-west-1.amazonaws.com/deepchem.io/datasets/pdbbind_core_df.csv.gz")
+        print('File downloaded...')
+
+    raw_dataset = load_from_disk(dataset_file)
+    raw_dataset = raw_dataset[['pdb_id', 'smiles', 'label']]
+
+让我们看看 `raw_dataset` 是什么样的：
+
+.. code-block:: Python
+
+    raw_dataset.head(2)
+
+修复 PDB 文件
+::::::::::::::
+
+接下来，让我们获取一些用于可视化和对接的 PDB 蛋白质文件。我们将使用来自 `raw_dataset` 的 PDB ID，并使用 `pdbfixer <https://github.com/openmm/pdbfixer>`_ 直接从 `蛋白质数据库 <https://www.rcsb.org/>`_ 下载 PDB 文件。我们还将使用 `RDKit <https://www.rdkit.org/>`_ 对结构进行清理。这确保蛋白质和配体文件中存在的任何问题（非标准残基，化学有效性等）会得到纠正。请随意修改这些框和 pbid，以讨论新的蛋白质-配体复合物。我们在这里注意到 PDB 文件是复杂的，需要人类的判断来准备对接的蛋白质结构。DeepChem 包含许多 `对接程序 <https://deepchem.readthedocs.io/en/latest/api_reference/utils.html#docking-utilities>`_ 来帮助你准备蛋白质文件，但在尝试对接之前应该检查准备结果。
+
+.. code-block:: Python
+
+    from openmm.app import PDBFile
+    from pdbfixer import PDBFixer
+
+    from deepchem.utils.vina_utils import prepare_inputs
+
+    # consider one protein-ligand complex for visualization
+    pdbid = raw_dataset['pdb_id'].iloc[1]
+    ligand = raw_dataset['smiles'].iloc[1]
+
+    %%time
+    fixer = PDBFixer(pdbid=pdbid)
+    PDBFile.writeFile(fixer.topology, fixer.positions, open('%s.pdb' % (pdbid), 'w'))
+
+    p, m = None, None
+    # fix protein, optimize ligand geometry, and sanitize molecules
+    try:
+        p, m = prepare_inputs('%s.pdb' % (pdbid), ligand)
+    except:
+        print('%s failed PDB fixing' % (pdbid)) 
+
+    if p and m:  # protein and molecule are readable by RDKit
+        print(pdbid, p.GetNumAtoms())
+        Chem.rdmolfiles.MolToPDBFile(p, '%s.pdb' % (pdbid))
+        Chem.rdmolfiles.MolToPDBFile(m, 'ligand_%s.pdb' % (pdbid))
+
+可视化
+:::::::::
+
+如果你在 Colab 之外，你可以执行下面的代码，并使用 `MDTraj` 和 `MDTraj` 来可视化蛋白质和配体。
+
+.. code-block:: Python
+
+    import mdtraj as md
+    import nglview
+
+    from IPython.display import display, Image
+
+让我们来看看数据集中的第一个蛋白质-配体对：
+
+.. code-block:: Python
+
+    protein_mdtraj = md.load_pdb('3cyx.pdb')
+    ligand_mdtraj = md.load_pdb('ligand_3cyx.pdb')
+
+我们将使用函数 `nglview. show_mdtraj` 来查看我们的蛋白质和配体。注意，只有当你安装了nglview并启用必要的笔记本扩展时，这才会起作用。
+
+.. code-block:: Python
+
+    v = nglview.show_mdtraj(ligand_mdtraj)
+
+    display(v)  # interactive view outside Colab
+
+现在我们已经知道了配体的样子，让我们看看我们的蛋白质：
+
+.. code-block:: Python
+
+    view = nglview.show_mdtraj(protein_mdtraj)
+    display(view)  # interactive view outside Colab
+
+分子对接
+::::::::::::
+
+好了，现在我们已经有了数据和基本的可视化工具，让我们看看是否可以使用分子对接来估计蛋白质配体系统之间的结合亲和力。
+
+设置对接任务有三个步骤，你应该尝试不同的设置。我们需要明确的三件事是：
+
+1) 如何识别目标蛋白质中的结合口袋；
+2) 如何生成结合口袋中配体的取向(几何构象);
+3) 如何“评分”一个构象。
+
+记住，我们的目标是识别与目标蛋白强烈相互作用的候选配体，这可以通过评价分数反映出来。
+
+DeepChem 有一种简单的内置方法，可以识别蛋白质中的结合口袋。它是基于凸面外壳法（`convex hull method <https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4112621/pdf/1472-6807-14-18.pdf>`_ ）的。该方法的工作原理是在蛋白质结构周围创建一个三维多面体（convex hull），并确定最接近凸面外壳的蛋白质表面原子。由于考虑了一些生物化学性质，所以该方法不是纯几何的。它的优点是计算成本低，足以满足我们的目的。
+
+.. code-block:: Python
+
+    finder = dc.dock.binding_pocket.ConvexHullPocketFinder()
+    pockets = finder.find_pockets('3cyx.pdb')
+    len(pockets)  # number of identified pockets
+
+构象生成相当复杂。幸运的是，使用 DeepChem 的基于 AutoDock Vina 引擎的构象生成器使我们能够快速启动和运行构象生成。
+
+.. code-block:: Python
+
+    vpg = dc.dock.pose_generation.VinaPoseGenerator()
+
+我们可以从 `deepchem.dock. pose_scoring` 中指定一个包括排斥和疏水相互作用和氢键的构象评分函数。Vina 将帮我们处理处理这个问题，所以我们将允许 Vina 为构象计算分数。
+
+.. code-block:: Python
+
+    mkdir -p vina_test
+    %%time
+    complexes, scores = vpg.generate_poses(molecular_complex=('3cyx.pdb', 'ligand_3cyx.pdb'),  # protein-ligand files for docking,
+                                          out_dir='vina_test',
+                                          generate_scores=True
+                                          )
+
+我们在生成构象时使用了默认值 `num_modes` ，所以 Vina 将以 `kcal/mol` 为单位返回9个能量最低的构象。
+
+.. code-block:: Python
+
+    print(scores)
+
+我们能同时观察蛋白质和配体的复合物吗？是的，但我们需要把这些分子组合成一个 RDkit 分子。
+
+.. code-block:: Python
+
+    complex_mol = Chem.CombineMols(complexes[0][0], complexes[0][1])
+
+现在我们来显现一下复合体。我们可以看到配体插入到蛋白质的一个口袋里。
+
+.. code-block:: Python
+
+    v = nglview.show_rdkit(complex_mol)
+    display(v)
+
+现在我们已经了解了整个过程的各个部分，我们可以使用 DeepChem 的 `Docker` 类将它们组合在一起。Docker 将创建一个生成器，生成复合结构和对接分数组成的元组。
+
+.. code-block:: Python
+
+    docker = dc.dock.docking.Docker(pose_generator=vpg)
+    posed_complex, score = next(docker.dock(molecular_complex=('3cyx.pdb', 'ligand_3cyx.pdb'),
+                                            use_pose_generator_scores=True))
+
+对亲和力建模
+::::::::::::::::
+
+对接是预测蛋白质-配体结合亲和力的一个有用的工具，尽管是不精确的。然而，这需要一些时间，特别是对于大规模的虚拟筛选，我们可能会考虑不同的蛋白质靶点和数千个潜在的配体。我们可能会很自然地问，我们能训练一个机器学习模型来预测对接分数吗？让我们试试看！
+
+我们将展示如何下载 PDBbind 数据集。我们可以使用 MoleculeNet 中的加载器从 PDBbind 中的“精制（refined）”集获取4852个蛋白质-配体复合物或获取整个“一般（general）”集。为了简单起见，我们将坚持使用我们已经处理过的大约100个复合物来训练我们的模型。
+
+接下来，我们需要一种方法，将我们的蛋白质-配体复合物转换成可以被学习算法使用的表示形式。理想情况下，我们应该有神经网络蛋白-配体复合体指纹，但 DeepChem 还没有这种良好的机器学习指纹。然而，我们确实有手动调整好的特征器，可以帮助我们在这里的挑战。
+
+在接下来的教程中，我们将使用两种类型的指纹， `CircularFingerprint` 和 `ContactCircularFingerprint` 。DeepChem 还拥有体素化器（voxelizers）和网格描述符（grid descriptors），可将包含原子排列的 3D 体块转换为指纹。这些特征器对于理解蛋白质-配体复合物非常有用，因为它们允许我们将复合物转换为可以传递到简单机器学习算法中的向量。首先，我们要创建 `CircularFingerprints` 。它们将小分子转化为片段向量。
+
+.. code-block:: Python
+
+    pdbids = raw_dataset['pdb_id'].values
+    ligand_smiles = raw_dataset['smiles'].values
+
+
+    %%time
+    for (pdbid, ligand) in zip(pdbids, ligand_smiles):
+    fixer = PDBFixer(url='https://files.rcsb.org/download/%s.pdb' % (pdbid))
+    PDBFile.writeFile(fixer.topology, fixer.positions, open('%s.pdb' % (pdbid), 'w'))
+    
+    p, m = None, None
+    # skip pdb fixing for speed
+    try:
+        p, m = prepare_inputs('%s.pdb' % (pdbid), ligand, replace_nonstandard_residues=False,
+                            remove_heterogens=False, remove_water=False,
+                            add_hydrogens=False)
+    except:
+        print('%s failed sanitization' % (pdbid)) 
+
+    if p and m:  # protein and molecule are readable by RDKit
+        Chem.rdmolfiles.MolToPDBFile(p, '%s.pdb' % (pdbid))
+        Chem.rdmolfiles.MolToPDBFile(m, 'ligand_%s.pdb' % (pdbid))
+
+    proteins = [f for f in os.listdir('.') if len(f) == 8 and f.endswith('.pdb')]
+    ligands = [f for f in os.listdir('.') if f.startswith('ligand') and f.endswith('.pdb')]
+
+我们会做一些清理，以确保每个有效蛋白质都有一个有效的配体文件。这里的标准是将比较配体和蛋白质文件之间的 PDB ID，并删除任何没有相应配体的蛋白质。
+
+.. code-block:: Python
+
+    # Handle failed sanitizations
+    failures = set([f[:-4] for f in proteins]) - set([f[7:-4] for f in ligands])
+    for pdbid in failures:
+    proteins.remove(pdbid + '.pdb')
+
+.. code-block:: Python
+
+    len(proteins), len(ligands)
+
+.. code-block:: Python
+
+    pdbids = [f[:-4] for f in proteins]
+    small_dataset = raw_dataset[raw_dataset['pdb_id'].isin(pdbids)]
+    labels = small_dataset.label
+
+.. code-block:: Python
+
+    fp_featurizer = dc.feat.CircularFingerprint(size=2048)
+
+.. code-block:: Python
+
+    features = fp_featurizer.featurize([Chem.MolFromPDBFile(l) for l in ligands])
+
+.. code-block:: Python
+
+    dataset = dc.data.NumpyDataset(X=features, y=labels, ids=pdbids)
+    train_dataset, test_dataset = dc.splits.RandomSplitter().train_test_split(dataset, seed=42)
+
+.. code-block:: Python
+
+`dc.molnet. load_pdbbind` 加载器将负责下载并在底层为我们提供pdbbind 数据集。这将花费相当多的时间和计算，因此执行此操作的代码将被注释掉。如果你想要特征化所有 PDBbind 的精致集，请取消注释并享受一杯咖啡。否则，你可以继续使用我们上面构造的小数据集。
+
+.. code-block:: Python
+
+    # # Uncomment to featurize all of PDBBind's "refined" set
+    # pdbbind_tasks, (train_dataset, valid_dataset, test_dataset), transformers = dc.molnet.load_pdbbind(
+    #     featurizer=fp_featurizer, set_name="refined", reload=True,
+    #     data_dir='pdbbind_data', save_dir='pdbbind_data')
+
+现在，我们准备好机器学习了!
+
+为了拟合 deepchem 模型，首先我们实例化一个提供的(或用户编写的)模型类。在本例中，我们创建了一个类来包装 Sci-Kit Learn 中可用的任何机器学习模型，这些模型可以用来与 deepchem 进行操作。要实例化一个  ```SklearnModel``` ，您将需要 (a) task_type， (b) model_params，另一个  ```dict```  如下所示，以及 (c) 一个 ```model_instance``` 定义你想要的模型类型，在本例中是 ```RandomForestRegressor``` 。
+
+.. code-block:: Python
+
+    from sklearn.ensemble import RandomForestRegressor
+
+    from deepchem.utils.evaluate import Evaluator
+    import pandas as pd
+
+.. code-block:: Python
+
+    seed = 42 # Set a random seed to get stable results
+    sklearn_model = RandomForestRegressor(n_estimators=100, max_features='sqrt')
+    sklearn_model.random_state = seed
+    model = dc.models.SklearnModel(sklearn_model)
+    model.fit(train_dataset)
+
+注意，测试集的 :math:`R^2` 值表明模型没有产生有意义的输出。事实证明，预测结合亲和力是 *困难的* 。本教程并不是要展示如何创建最先进的预测结合亲和力的模型，而是为你提供使用分子对接、特征化复合物和训练模型生成自己的数据集的工具。
+
+.. code-block:: Python
+
+    # use Pearson correlation so metrics are > 0
+    metric = dc.metrics.Metric(dc.metrics.pearson_r2_score)
+
+    evaluator = Evaluator(model, train_dataset, [])
+    train_r2score = evaluator.compute_model_performance([metric])
+    print("RF Train set R^2 %f" % (train_r2score["pearson_r2_score"]))
+
+    evaluator = Evaluator(model, test_dataset, [])
+    test_r2score = evaluator.compute_model_performance([metric])
+    print("RF Test set R^2 %f" % (test_r2score["pearson_r2_score"]))
+
+我们使用的是非常小的数据集和过于简单的表示，所以测试集的性能非常糟糕也就不足为奇了。
+
+.. code-block:: Python
+
+    # Compare predicted and true values
+    list(zip(model.predict(train_dataset), train_dataset.y))[:5]
+
+.. code-block:: Python
+
+    list(zip(model.predict(test_dataset), test_dataset.y))[:5]
+
+蛋白质-配体复合物的显现
+:::::::::::::::::::::::::::
+
+在上一节中，我们只特征化了配体。这一次，让我们看看能否利用我们的结构信息，对蛋白质-配体指纹做些有意义的事情。首先，我们需要重新特征化数据集，但这次使用接触圆形指纹（contact circular fingerprint）。
+
+.. code-block:: Python
+
+    features = fp_featurizer.featurize(zip(ligands, proteins))
+    dataset = dc.data.NumpyDataset(X=features, y=labels, ids=pdbids)
+    train_dataset, test_dataset = dc.splits.RandomSplitter().train_test_split(dataset, seed=42)
+
+现在让我们在这个数据集上训练一个简单的随机森林模型。
+
+.. code-block:: Python
+
+    seed = 42 # Set a random seed to get stable results
+    sklearn_model = RandomForestRegressor(n_estimators=100, max_features='sqrt')
+    sklearn_model.random_state = seed
+    model = dc.models.SklearnModel(sklearn_model)
+    model.fit(train_dataset)
+
+让我们看看我们的准确性是什么样的！
+
+.. code-block:: Python
+
+    metric = dc.metrics.Metric(dc.metrics.pearson_r2_score)
+
+    evaluator = Evaluator(model, train_dataset, [])
+    train_r2score = evaluator.compute_model_performance([metric])
+    print("RF Train set R^2 %f" % (train_r2score["pearson_r2_score"]))
+
+    evaluator = Evaluator(model, test_dataset, [])
+    test_r2score = evaluator.compute_model_performance([metric])
+    print("RF Test set R^2 %f" % (test_r2score["pearson_r2_score"]))
+
+好的，看起来我们的精度比仅有配体数据集要低。尽管如此，拥有一个蛋白质-配体模型可能还是有用的，因为它可能比纯配体模型学习到不同的特征。
+
+相关阅读
+:::::::::
+
+到目前为止，我们已经使用了把 AutoDock Vina 作为后端的 DeepChem的对接模块为 pbbind 数据集生成对接分数。我们训练了一个基于蛋白质-配体复合物特征的简单的机器学习模型来直接预测结合亲和力。我们可能想尝试更复杂的对接程序，比如深度学习框架 `gnina <https://github.com/gnina/gnina>`_ 。你可以阅读更多关于使用卷积神经网络进行蛋白质配体评分的信息 `这里 <https://pubs.acs.org/doi/10.1021/acs.jcim.6b00740>`_ 。这里有一个讨论基于机器学习的评分函数的 `综述 <https://onlinelibrary.wiley.com/doi/abs/10.1002/wcms.1429>`_ 。

@@ -1,0 +1,61 @@
+Obtained Scoring license for ligfit_ext...
+Checked out license feature: DS_LigScore <v2009.03> [for msi<TeAM SolidSQUAD-SSQ>] (1 copy)
+
+D:\Program Files\BIOVIA\PPS\apps\scitegic\dscore\server\share/SBD/\pmf.par
+D:\Program Files\BIOVIA\PPS\apps\scitegic\dscore\server\share/SBD/\pmf04.par
+***************************************
+*                                     *
+*   L I G A N D F I T - S C O R E     *
+*                                     *
+*       Version 2.4                   *
+*       Copyright (C) 2018            *
+*                                     *
+*      2018 Accelrys Software Inc.    *
+*       www.accelrys.com              *
+*                                     *
+*  Build date: Oct 14 2018 20:25:38   *
+***************************************
+Run started at: Sat Sep 24 10:46:40 2022
+
+31 molecules in sd file: ligfit_in.sd
+Reading Receptor File: 3GEN.pdb
+Receptor atoms: 4350
+
+Molecule: 3GEN_ligand
+Molecule: 3GEN_ligand
+Molecule: 3GEN_ligand
+Molecule: 3GEN_ligand
+Molecule: 3GEN_ligand
+Molecule: 3GEN_ligand
+Molecule: 3GEN_ligand
+Molecule: 3GEN_ligand
+Molecule: 3GEN_ligand
+Molecule: 3GEN_ligand
+Molecule: 3GEN_ligand
+Molecule: 3GEN_ligand
+Molecule: 3GEN_ligand
+Molecule: 3GEN_ligand
+Molecule: 3GEN_ligand
+Molecule: 3GEN_ligand
+Molecule: 3GEN_ligand
+Molecule: 3GEN_ligand
+Molecule: 3GEN_ligand
+Molecule: 3GEN_ligand
+Molecule: 3GEN_ligand
+Molecule: 3GEN_ligand
+Molecule: 3GEN_ligand
+Molecule: 3GEN_ligand
+Molecule: 3GEN_ligand
+Molecule: 3GEN_ligand
+Molecule: 3GEN_ligand
+Molecule: 3GEN_ligand
+Molecule: 3GEN_ligand
+Molecule: 3GEN_ligand
+Molecule: 3GEN_ligand
+
+Scored 31 molecules in: 0.3 [sec]
+Molecules written: 31
+Run ended at: Sat Sep 24 10:46:41 2022
+
+Released license for ligfit_ext...
+

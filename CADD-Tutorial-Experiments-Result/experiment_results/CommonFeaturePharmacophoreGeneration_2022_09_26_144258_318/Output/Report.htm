@@ -1,0 +1,921 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=10" />
+  <title>Common Feature Pharmacophore Generation</title>
+  <style type="text/css">
+
+.css0 { margin:10px;  }
+.css1 { box-sizing:border-box; -moz-box-sizing:border-box; -ms-box-sizing:border-box;  }
+.css2 { text-align:left; vertical-align:top; color:#000000; width:100.0%; margin:0; padding:0; font:12.0pt Arial;  }
+.css3 { text-align:left; vertical-align:top; color:#000000; width:100.0%; margin:0; padding:1.0px; font:12.0pt Arial;  }
+.css4 { text-align:left; vertical-align:top; color:#0077c8; margin:0; padding:0; font:bold 18.0pt Arial; text-decoration:none;  }
+.css5 { text-align:left; vertical-align:top; color:#000000; margin:0; padding:0; font:12.0pt Arial; text-decoration:none;  }
+.css6 { text-align:left; vertical-align:top; color:#000000; margin:0; padding:0; font:12.0pt Arial;  }
+.css7 { text-align:left; vertical-align:top; color:#000000; width:50.0%; margin:0; padding:1.0px; font:12.0pt Arial;  }
+.css8 { vertical-align:top; color:#000000; margin:0; padding:0; font:12.0pt Arial; text-decoration:none;  }
+.css9 { vertical-align:top; color:#0077c8; margin:0; padding:0; font:bold 12.0pt Arial; text-decoration:none; white-space:nowrap;  }
+.css10 { text-align:left; vertical-align:top; color:#000000; margin:0; padding:0; font:12.0pt Arial; text-decoration:none; white-space:nowrap;  }
+.css11 { text-align:left; vertical-align:top; color:#000000; width:100.0%; margin:0 0 0 11.0px; padding:0; font:12.0pt Arial;  }
+.css12 { text-align:left; vertical-align:top; color:#000000; width:0; margin:0; padding:0; font:8.0pt Arial;  }
+.css13 { text-align:left; vertical-align:top; color:#000000; width:40.0%; margin:0 auto 0 0; padding:0; font:8.0pt Arial;  }
+.css14 { text-align:left; vertical-align:top; color:#000000; width:1.4778326%; margin:0; padding:0 0 0 5.0px; font:8.0pt Arial;  }
+.css15 { text-align:left; vertical-align:top; color:#000000; margin:0 0 0 13.0px; padding:0; font:8.0pt Arial; text-decoration:none;  }
+.css16 { text-align:left; vertical-align:top; color:#000000; width:49.261086%; margin:0; padding:2.0px 0 0 0; font:bold 8.0pt Arial;  }
+.css17 { text-align:left; vertical-align:top; color:#000000; margin:0; padding:0; font:bold 8.0pt Arial; text-decoration:none;  }
+.css18 { text-align:left; vertical-align:top; color:#000000; width:49.261086%; margin:0; padding:0; font:8.0pt Arial;  }
+.css19 { text-align:left; vertical-align:top; color:#000000; margin:0; padding:0; font:8.0pt Arial; text-decoration:none;  }
+.css20 { text-align:left; vertical-align:top; color:#000000; width:40.0%; margin:0 auto 0 30.0px; padding:0; font:8.0pt Arial;  }
+.css21 { text-align:left; vertical-align:top; color:#000000; width:50.0%; margin:0; padding:0 0 0 3.0px; font:bold 8.0pt Arial;  }
+.css22 { text-align:left; vertical-align:top; color:#000000; width:50.0%; margin:0; padding:2.0px 0 0 5.0px; font:8.0pt Arial;  }
+.css23 { text-align:left; vertical-align:top; color:#000000; width:100.0%; margin:0; padding:0; font:8.0pt Arial;  }
+.css24 { text-align:left; vertical-align:top; color:#000000; width:100.0%; margin:0 0 0 20.0px; padding:0; font:8.0pt Arial;  }
+.css25 { text-align:left; vertical-align:top; color:#000000; margin:0; padding:0; font:8.0pt Arial;  }
+.css26 { text-align:left; vertical-align:top; color:#000000; width:100.0%; margin:0; padding:1.0px; font:8.0pt Arial;  }
+.css27 { text-align:left; vertical-align:top; border-left:1px solid black; border-top:1px solid black; border-right:1px solid black; color:#000000; width:613.0px; margin:10.0px auto 0 0; padding:0; font:8.0pt Arial;  }
+.css28 { text-align:center; vertical-align:top; border-bottom:1px solid black; color:#000000; background:#b0c4de; margin:0; padding:1.0px 3.0px 1.0px 3.0px; font:bold 8.0pt Arial; text-decoration:none;  }
+.css29 { text-align:left; vertical-align:top; border-right:1px solid black; border-bottom:1px solid black; color:#000000; background:#b0c4de; margin:0; padding:1.0px 3.0px 1.0px 3.0px; font:bold 9.0pt Arial; white-space:nowrap;  }
+.css30 { text-align:left; vertical-align:top; border-right:1px solid black; border-bottom:1px solid black; color:#000000; background:#b0c4de; margin:0; padding:1.0px 3.0px 1.0px 3.0px; font:bold 9.0pt Arial;  }
+.css31 { text-align:left; vertical-align:top; border-bottom:1px solid black; color:#000000; background:#b0c4de; margin:0; padding:1.0px 3.0px 1.0px 3.0px; font:bold 9.0pt Arial; white-space:nowrap;  }
+.css32 { text-align:left; vertical-align:top; border-right:1px solid black; border-bottom:1px solid black; color:#000000; margin:0; padding:1.0px 6.0px 1.0px 6.0px; font:8.0pt Arial; white-space:nowrap;  }
+.css33 { text-align:left; vertical-align:top; border-bottom:1px solid black; color:#000000; margin:0; padding:1.0px 6.0px 1.0px 6.0px; font:8.0pt Arial; white-space:nowrap;  }
+.css34 { text-align:left; vertical-align:top; color:#000000; width:300.0px; margin:0; padding:1.0px; font:8.0pt Arial;  }
+.css35 { text-align:left; vertical-align:top; border:1px solid black; color:#000000; background:#b0c4de; margin:10.0px 10.0px 0 0; padding:0; font:12.0pt Arial; text-decoration:none;  }
+.css36 { text-align:left; vertical-align:top; color:#000000; width:100.0%; margin:0 0 0 20.0px; padding:0; font:12.0pt Arial;  }
+.css37 { text-align:left; vertical-align:top; color:#000000; width:100.0%; margin:0; padding:0 0 0 3.0px; font:8.0pt Arial;  }
+.css38 { text-align:left; vertical-align:top; color:#0000ff; margin:0; padding:0; font:8.0pt Arial; text-decoration:underline;  }
+.css39 { text-align:left; vertical-align:top; color:#000000; width:45.0%; margin:0 auto 0 10.0px; padding:0; font:8.0pt Arial;  }
+.css40 { text-align:left; vertical-align:top; color:#000000; width:50.0%; margin:0; padding:2.0px 0 0 0; font:bold 8.0pt Arial;  }
+.css41 { text-align:left; vertical-align:top; color:#000000; margin:0 0 0 10.0px; padding:0; font:bold 8.0pt Arial; text-decoration:none;  }
+.css42 { text-align:left; vertical-align:top; color:#000000; width:50.0%; margin:0; padding:0 0 0 3.0px; font:8.0pt Arial;  }
+.css43 { text-align:left; vertical-align:top; color:#0000ff; margin:0 0 0 -2.0px; padding:0; font:8.0pt Arial; text-decoration:underline;  }
+.css44 { text-align:left; vertical-align:top; color:#a9a9a9; margin:0; padding:0; font:bold 8.0pt Arial; text-decoration:none;  }
+.css45 { text-align:left; vertical-align:top; color:#a9a9a9; margin:0; padding:0; font:8.0pt Arial; text-decoration:none;  }
+.css46 { text-align:left; vertical-align:top; color:#000000; margin:0 0 0 12.0px; padding:0; font:8.0pt Arial; text-decoration:none;  }
+.css47 { vertical-align:top; color:#0077c8; margin:0; padding:0; font:8.0pt Arial; text-decoration:none;  }
+
+  </style>
+  <script type="text/javascript">
+
+function toggleDivVisibility(divId, imageContainerId) 
+{
+	if ( !divId ) { return; }
+	var div = document.getElementById(divId);
+	if ( !div ) { return; }
+	var currentlyVisible = div.style.display != 'none';
+	div.style.display = currentlyVisible ? 'none' : 'block';
+	var imageContainer = document.getElementById(imageContainerId);
+	if( imageContainer ) {
+		var cells = imageContainer.getElementsByTagName('img');
+		if ( cells.length ) 
+		{
+			var image = cells[0];
+			if (image.src.match('plus')) {
+				image.src = image.src.replace('plus', 'minus');
+			} else {
+				image.src = image.src.replace('minus', 'plus');
+			}
+		}
+	}
+}
+
+  </script>
+</head>
+<body class="css0">
+<script type="text/javascript">
+
+window.onload = function( )
+{	
+toggleDivVisibility('ID_Description','DS_REPORT_Description');
+toggleDivVisibility('ID_Parameters','DS_REPORT_Parameters');
+toggleDivVisibility('ID_Input Files','DS_REPORT_Input Files');
+toggleDivVisibility('ID_Details','DS_REPORT_Details');
+toggleDivVisibility('ID_Warnings','DS_REPORT_Warnings');
+toggleDivVisibility('ID_Tables','DS_REPORT_Tables');
+toggleDivVisibility('ID_Images','DS_REPORT_Images');
+toggleDivVisibility('ID_InfoGroupPara-1','DS_REPORT_InfoGroupPara-1');
+toggleDivVisibility('ID_InfoGroupPara-2','DS_REPORT_InfoGroupPara-2');
+toggleDivVisibility('ID_Information','DS_REPORT_Information');
+toggleDivVisibility('ID_GroupPara-1','DS_REPORT_GroupPara-1');
+toggleDivVisibility('ID_GroupPara-2','DS_REPORT_GroupPara-2');
+toggleDivVisibility('ID_GroupPara-3','DS_REPORT_GroupPara-3');
+toggleDivVisibility('ID_GroupPara-4','DS_REPORT_GroupPara-4');
+}
+
+</script>
+<table cellpadding="0" cellspacing="0" class="css2 css1"><tr><td class="css3"><div title="Generates common feature pharmacophore models from a set of ligands" class="css4 css1">Common Feature Pharmacophore Generation</div>
+</td>
+</tr>
+<tr><td class="css3"><div class="css5 css1"><HR></div>
+</td>
+</tr>
+<tr><td class="css3"><div class="css6 css1"><table cellpadding="0" cellspacing="0" class="css2 css1"><tr><td class="css7"><div class="css6 css1"><span title="Expand/Collapse" id="DS_REPORT_Information" onclick="toggleDivVisibility('ID_Information', 'DS_REPORT_Information')" class="css8"><img src="Report/images/icons/minus.png" /></span><span title="'Protocol runtime information'" class="css9">Information</span></div>
+</td>
+<td class="css7"><div class="css10 css1"></div>
+</td>
+</tr>
+</table>
+<table id="ID_Information" style="width: 500px;" cols="1" cellpadding="0" cellspacing="0" class="css11 css1">
+<tr>
+<td class="css12"><table style="width: 500px;" cols="3" cellpadding="0" cellspacing="0" class="css13 css1">
+<tr>
+<td class="css14"><div class="css15 css1">&nbsp;</div>
+</td>
+<td class="css16"><div class="css17 css1">Status</div>
+</td>
+<td class="css18"><div class="css19 css1">Success</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td class="css12"><table style="width: 500px;" cols="3" cellpadding="0" cellspacing="0" class="css13 css1">
+<tr>
+<td class="css14"><div class="css15 css1">&nbsp;</div>
+</td>
+<td class="css16"><div class="css17 css1">User</div>
+</td>
+<td class="css18"><div class="css19 css1">16606</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td class="css12"><table style="width: 500px;" cols="3" cellpadding="0" cellspacing="0" class="css13 css1">
+<tr>
+<td class="css14"><div title="Expand/Collapse" id="DS_REPORT_InfoGroupPara-1" onclick="toggleDivVisibility('ID_InfoGroupPara-1', 'DS_REPORT_InfoGroupPara-1')" class="css19 css1"><img src="Report/images/icons/minus.png" /></div>
+</td>
+<td class="css16"><div class="css17 css1">Elapsed Time</div>
+</td>
+<td class="css18"><div title="142 seconds" class="css19 css1">00:02:22</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td class="css12"><table id="ID_InfoGroupPara-1" style="width: 500px;" cols="2" cellpadding="0" cellspacing="0" class="css20 css1">
+<tr>
+<td class="css21"><div class="css17 css1">Start</div>
+</td>
+<td class="css22"><div title="Monday 26 September 22 14:42:59 " class="css19 css1">09/26/22 14:42:59</div>
+</td>
+</tr>
+<tr>
+<td class="css21"><div class="css17 css1">Finish</div>
+</td>
+<td class="css22"><div title="Monday 26 September 22 14:45:21 " class="css19 css1">09/26/22 14:45:21</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td class="css12"><table style="width: 500px;" cols="3" cellpadding="0" cellspacing="0" class="css13 css1">
+<tr>
+<td class="css14"><div title="Expand/Collapse" id="DS_REPORT_InfoGroupPara-2" onclick="toggleDivVisibility('ID_InfoGroupPara-2', 'DS_REPORT_InfoGroupPara-2')" class="css19 css1"><img src="Report/images/icons/minus.png" /></div>
+</td>
+<td class="css16"><div class="css17 css1">Server Name</div>
+</td>
+<td class="css18"><div title="https://localhost:9943" class="css19 css1"><a href="http://localhost:9944" target="_blank">AbdusemiAbduweli</a></div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td class="css12"><table id="ID_InfoGroupPara-2" style="width: 500px;" cols="2" cellpadding="0" cellspacing="0" class="css20 css1">
+<tr>
+<td class="css21"><div class="css17 css1">DS Version</div>
+</td>
+<td class="css22"><div class="css19 css1">19.1.0.18287</div>
+</td>
+</tr>
+<tr>
+<td class="css21"><div class="css17 css1">PP Version</div>
+</td>
+<td class="css22"><div class="css19 css1">19.1.0.1963</div>
+</td>
+</tr>
+<tr>
+<td class="css21"><div class="css17 css1">DS Client Version</div>
+</td>
+<td class="css22"><div class="css19 css1">19.1.0.18287</div>
+</td>
+</tr>
+<tr>
+<td class="css21"><div class="css17 css1">Server Ports</div>
+</td>
+<td class="css22"><div class="css19 css1">9944 (9943)</div>
+</td>
+</tr>
+<tr>
+<td class="css21"><div class="css17 css1">OS Distribution</div>
+</td>
+<td class="css22"><div class="css19 css1">Windows</div>
+</td>
+</tr>
+<tr>
+<td class="css21"><div class="css17 css1">OS  Version</div>
+</td>
+<td class="css22"><div class="css19 css1">10.0.22000</div>
+</td>
+</tr>
+<tr>
+<td class="css21"><div class="css17 css1">Memory Total</div>
+</td>
+<td class="css22"><div class="css19 css1">23.85 GB</div>
+</td>
+</tr>
+<tr>
+<td class="css21"><div class="css17 css1">Memory Free</div>
+</td>
+<td class="css22"><div class="css19 css1">12.87 GB</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr><td class="css3"><div class="css6 css1"><table cellpadding="0" cellspacing="0" class="css2 css1"><tr><td class="css7"><div class="css6 css1"><span title="Expand/Collapse" id="DS_REPORT_Summary" onclick="toggleDivVisibility('ID_Summary', 'DS_REPORT_Summary'); toggleDivVisibility('ID2_Summary', '')" class="css8"><img src="Report/images/icons/minus.png" /></span><span title="'Contains a brief summary of the protocol output'" class="css9">Summary</span></div>
+</td>
+<td class="css7"><div class="css10 css1"></div>
+</td>
+</tr>
+</table>
+<table id="ID_Summary" style="width: 500px;" cols="1" cellpadding="0" cellspacing="0" class="css2 css1">
+<tr>
+<td class="css12"><table cellpadding="0" cellspacing="0" class="css23 css1"><tr><td class="css23"><table style="width: 500px;" cols="1" cellpadding="0" cellspacing="0" class="css24 css1">
+<tr>
+<td class="css25"><div class="css19 css1">Generated 5 hypotheses</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td class="css23"><table cols="1" cellpadding="0" cellspacing="0" class="css23 css1">
+<tr>
+<td class="css25"><table cellpadding="0" cellspacing="0" class="css23 css1"><tr><td class="css26"><table cols="9" cellpadding="0" cellspacing="0" class="css27 css1">
+<tr>
+<td colspan="9" class="css28">Validation with Known Actives/Inactives</td>
+</tr>
+<tr>
+<td class="css29">Pharmacophore</td>
+<td class="css30">Total Actives</td>
+<td class="css30">Total Inactives</td>
+<td class="css30">True Positives</td>
+<td class="css30">True Negatives</td>
+<td class="css30">False Positives</td>
+<td class="css30">False Negatives</td>
+<td class="css29">Sensitivity</td>
+<td class="css31">Specificity</td>
+</tr>
+<tr>
+<td class="css32">Pharmacophore_1</td>
+<td class="css32">18</td>
+<td class="css32">19</td>
+<td class="css32">18</td>
+<td class="css32">2</td>
+<td class="css32">17</td>
+<td class="css32">0</td>
+<td class="css32">1</td>
+<td class="css33">0.10526</td>
+</tr>
+<tr>
+<td class="css32">Pharmacophore_2</td>
+<td class="css32">18</td>
+<td class="css32">19</td>
+<td class="css32">18</td>
+<td class="css32">2</td>
+<td class="css32">17</td>
+<td class="css32">0</td>
+<td class="css32">1</td>
+<td class="css33">0.10526</td>
+</tr>
+<tr>
+<td class="css32">Pharmacophore_3</td>
+<td class="css32">18</td>
+<td class="css32">19</td>
+<td class="css32">18</td>
+<td class="css32">2</td>
+<td class="css32">17</td>
+<td class="css32">0</td>
+<td class="css32">1</td>
+<td class="css33">0.10526</td>
+</tr>
+<tr>
+<td class="css32">Pharmacophore_4</td>
+<td class="css32">18</td>
+<td class="css32">19</td>
+<td class="css32">18</td>
+<td class="css32">2</td>
+<td class="css32">17</td>
+<td class="css32">0</td>
+<td class="css32">1</td>
+<td class="css33">0.10526</td>
+</tr>
+<tr>
+<td class="css32">Pharmacophore_5</td>
+<td class="css32">18</td>
+<td class="css32">19</td>
+<td class="css32">18</td>
+<td class="css32">2</td>
+<td class="css32">17</td>
+<td class="css32">0</td>
+<td class="css32">1</td>
+<td class="css33">0.10526</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td class="css26"><table cellpadding="0" cellspacing="0" class="css23 css1"><tr><td class="css34"><div><img src="Report/images/image4220193389947724200.png" width="300" height="300" class="css35 css1"></div>
+</td>
+<td class="css34"><div><img src="Report/images/image4750123825802221906.png" width="300" height="300" class="css35 css1"></div>
+</td>
+<td class="css34"><div><img src="Report/images/image4640635297531886865.png" width="300" height="300" class="css35 css1"></div>
+</td>
+<td class="css34"><div><img src="Report/images/image7816450568384082977.png" width="300" height="300" class="css35 css1"></div>
+</td>
+<td class="css34"><div><img src="Report/images/image6502149275474809974.png" width="300" height="300" class="css35 css1"></div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr><td class="css3"><div class="css6 css1"><table cellpadding="0" cellspacing="0" class="css2 css1"><tr><td class="css7"><div class="css6 css1"><span title="Expand/Collapse" id="DS_REPORT_Details" onclick="toggleDivVisibility('ID_Details', 'DS_REPORT_Details'); toggleDivVisibility('ID2_Details', '')" class="css8"><img src="Report/images/icons/minus.png" /></span><span title="'Contains additional details generated by the protocol'" class="css9">Details</span></div>
+</td>
+<td class="css7"><div class="css10 css1"></div>
+</td>
+</tr>
+</table>
+<table id="ID_Details" style="width: 500px;" cols="1" cellpadding="0" cellspacing="0" class="css2 css1">
+<tr>
+<td class="css12"><table cellpadding="0" cellspacing="0" class="css23 css1"><tr><td class="css23"><table style="width: 500px;" cols="1" cellpadding="0" cellspacing="0" class="css24 css1">
+<tr>
+<td class="css25"><div class="css19 css1"><table align="left" border="1" cellspacing="4" summary="">
+<tbody>
+<tr>
+<td> </td>
+<td>Features</td>
+<td>Rank</td>
+<td>Direct Hit</td>
+<td>Partial Hit</td>
+<td>Max Fit</td>
+</tr>
+<tr>
+<td>1</td>
+<td>PZHHAA</td>
+<td>96.678</td>
+<td>111111</td>
+<td>000000</td>
+<td>6</td>
+</tr>
+<tr>
+<td>2</td>
+<td>PZHHAA</td>
+<td>96.599</td>
+<td>111111</td>
+<td>000000</td>
+<td>6</td>
+</tr>
+<tr>
+<td>3</td>
+<td>PHHHAA</td>
+<td>94.827</td>
+<td>111111</td>
+<td>000000</td>
+<td>6</td>
+</tr>
+<tr>
+<td>4</td>
+<td>PHHHAA</td>
+<td>92.807</td>
+<td>111111</td>
+<td>000000</td>
+<td>6</td>
+</tr>
+<tr>
+<td>5</td>
+<td>PZHHAA</td>
+<td>91.656</td>
+<td>111111</td>
+<td>000000</td>
+<td>6</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr><td class="css3"><div class="css6 css1"><table cellpadding="0" cellspacing="0" class="css2 css1"><tr><td class="css7"><div class="css6 css1"><span title="Expand/Collapse" id="DS_REPORT_Results" onclick="toggleDivVisibility('ID_Results', 'DS_REPORT_Results')" class="css8"><img src="Report/images/icons/minus.png" /></span><span title="'Table with result files generated by the protocol'" class="css9">Results</span></div>
+</td>
+<td class="css7"><div class="css10 css1"></div>
+</td>
+</tr>
+</table>
+<table id="ID_Results" style="width: 500px;" cols="1" cellpadding="0" cellspacing="0" class="css36 css1">
+<tr>
+<td class="css37"><div title="./mappings.txt" class="css38 css1"><A HREF="./mappings.txt">Atom Mappings</A></div>
+</td>
+</tr>
+<tr>
+<td class="css37"><div title="./5HT2c_ligands_full.log" class="css38 css1"><A HREF="./5HT2c_ligands_full.log">Detailed Log File</A></div>
+</td>
+</tr>
+<tr>
+<td class="css37"><div title="./5HT2c_ligands_1.sd" class="css38 css1"><A HREF="./5HT2c_ligands_1.sd">Ligands Aligned to Pharmacophore 1</A></div>
+</td>
+</tr>
+<tr>
+<td class="css37"><div title="./5HT2c_ligands_2.sd" class="css38 css1"><A HREF="./5HT2c_ligands_2.sd">Ligands Aligned to Pharmacophore 2</A></div>
+</td>
+</tr>
+<tr>
+<td class="css37"><div title="./5HT2c_ligands_3.sd" class="css38 css1"><A HREF="./5HT2c_ligands_3.sd">Ligands Aligned to Pharmacophore 3</A></div>
+</td>
+</tr>
+<tr>
+<td class="css37"><div title="./5HT2c_ligands_4.sd" class="css38 css1"><A HREF="./5HT2c_ligands_4.sd">Ligands Aligned to Pharmacophore 4</A></div>
+</td>
+</tr>
+<tr>
+<td class="css37"><div title="./5HT2c_ligands_5.sd" class="css38 css1"><A HREF="./5HT2c_ligands_5.sd">Ligands Aligned to Pharmacophore 5</A></div>
+</td>
+</tr>
+<tr>
+<td class="css37"><div title="./5HT2c_ligands.log" class="css38 css1"><A HREF="./5HT2c_ligands.log">Log File</A></div>
+</td>
+</tr>
+<tr>
+<td class="css37"><div title="./mols.spst" class="css38 css1"><A HREF="./mols.spst">Molecular Properties</A></div>
+</td>
+</tr>
+<tr>
+<td class="css37"><div title="./5HT2c_ligands_1.ds_chm" class="css38 css1"><A HREF="./5HT2c_ligands_1.ds_chm">Output Pharmacophore 1</A></div>
+</td>
+</tr>
+<tr>
+<td class="css37"><div title="./5HT2c_ligands_2.ds_chm" class="css38 css1"><A HREF="./5HT2c_ligands_2.ds_chm">Output Pharmacophore 2</A></div>
+</td>
+</tr>
+<tr>
+<td class="css37"><div title="./5HT2c_ligands_3.ds_chm" class="css38 css1"><A HREF="./5HT2c_ligands_3.ds_chm">Output Pharmacophore 3</A></div>
+</td>
+</tr>
+<tr>
+<td class="css37"><div title="./5HT2c_ligands_4.ds_chm" class="css38 css1"><A HREF="./5HT2c_ligands_4.ds_chm">Output Pharmacophore 4</A></div>
+</td>
+</tr>
+<tr>
+<td class="css37"><div title="./5HT2c_ligands_5.ds_chm" class="css38 css1"><A HREF="./5HT2c_ligands_5.ds_chm">Output Pharmacophore 5</A></div>
+</td>
+</tr>
+<tr>
+<td class="css37"><div title="./ViewResults_1.ds_pl" class="css38 css1"><A HREF="./ViewResults_1.ds_pl">View Aligned Ligands 1</A></div>
+</td>
+</tr>
+<tr>
+<td class="css37"><div title="./ViewResults_2.ds_pl" class="css38 css1"><A HREF="./ViewResults_2.ds_pl">View Aligned Ligands 2</A></div>
+</td>
+</tr>
+<tr>
+<td class="css37"><div title="./ViewResults_3.ds_pl" class="css38 css1"><A HREF="./ViewResults_3.ds_pl">View Aligned Ligands 3</A></div>
+</td>
+</tr>
+<tr>
+<td class="css37"><div title="./ViewResults_4.ds_pl" class="css38 css1"><A HREF="./ViewResults_4.ds_pl">View Aligned Ligands 4</A></div>
+</td>
+</tr>
+<tr>
+<td class="css37"><div title="./ViewResults_5.ds_pl" class="css38 css1"><A HREF="./ViewResults_5.ds_pl">View Aligned Ligands 5</A></div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr><td class="css3"><div class="css6 css1"><table cellpadding="0" cellspacing="0" class="css2 css1"><tr><td class="css7"><div class="css6 css1"><span title="Expand/Collapse" id="DS_REPORT_Parameters" onclick="toggleDivVisibility('ID_Parameters', 'DS_REPORT_Parameters')" class="css8"><img src="Report/images/icons/minus.png" /></span><span title="'A table with the run-time parameters'" class="css9">Parameters</span></div>
+</td>
+<td class="css7"><div class="css10 css1"></div>
+</td>
+</tr>
+</table>
+<table id="ID_Parameters" style="width: 500px;" cols="1" cellpadding="0" cellspacing="0" class="css11 css1">
+<tr>
+<td class="css12"><table style="width: 500px;" cols="2" cellpadding="0" cellspacing="0" class="css39 css1">
+<tr>
+<td class="css40"><div class="css41 css1">Protocol Settings</div>
+</td>
+<td class="css42"><div title="../Input/Protocol.pr_xml" class="css43 css1"><A HREF="../Input/Protocol.pr_xml">Protocol.pr_xml</A></div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td class="css12"><table style="width: 500px;" cols="3" cellpadding="0" cellspacing="0" class="css13 css1">
+<tr>
+<td class="css14"><div title="Expand/Collapse" id="DS_REPORT_GroupPara-1" onclick="toggleDivVisibility('ID_GroupPara-1', 'DS_REPORT_GroupPara-1')" class="css19 css1"><img src="Report/images/icons/minus.png" /></div>
+</td>
+<td class="css16"><div class="css17 css1">Input Ligands</div>
+</td>
+<td class="css18"><table cols="1" cellpadding="0" cellspacing="0" class="css23 css1">
+<tr>
+<td class="css25"><div title="../Input/5HT2c_ligands.sd" class="css38 css1"><A HREF="../Input/5HT2c_ligands.sd">5HT2c_ligands.sd</A></div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td class="css12"><table id="ID_GroupPara-1" cols="2" cellpadding="0" cellspacing="0" class="css20 css1">
+<tr>
+<td class="css21"><div style="width: 300px;" class="css17 css1">Preprocessing</div>
+</td>
+<td class="css42"><div style="width: 300px;" class="css19 css1"></div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td class="css12"><table style="width: 500px;" cols="3" cellpadding="0" cellspacing="0" class="css13 css1">
+<tr>
+<td class="css14"><div title="Expand/Collapse" id="DS_REPORT_GroupPara-2" onclick="toggleDivVisibility('ID_GroupPara-2', 'DS_REPORT_GroupPara-2')" class="css19 css1"><img src="Report/images/icons/minus.png" /></div>
+</td>
+<td class="css16"><div class="css17 css1">Conformation Generation</div>
+</td>
+<td class="css18"><div class="css19 css1">BEST</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td class="css12"><table id="ID_GroupPara-2" cols="2" cellpadding="0" cellspacing="0" class="css20 css1">
+<tr>
+<td class="css21"><div style="width: 300px;" class="css17 css1">Maximum Conformations</div>
+</td>
+<td class="css42"><div style="width: 300px;" class="css19 css1">200</div>
+</td>
+</tr>
+<tr>
+<td class="css21"><div style="width: 300px;" class="css17 css1">Discard Existing Conformations</div>
+</td>
+<td class="css42"><div style="width: 300px;" class="css19 css1">True</div>
+</td>
+</tr>
+<tr>
+<td class="css21"><div style="width: 300px;" class="css17 css1">Energy Threshold</div>
+</td>
+<td class="css42"><div style="width: 300px;" class="css19 css1">10</div>
+</td>
+</tr>
+<tr>
+<td class="css21"><div style="width: 300px;" class="css17 css1">Ring Fragments File</div>
+</td>
+<td class="css42"><div style="width: 300px;" class="css19 css1"></div>
+</td>
+</tr>
+<tr>
+<td class="css21"><div style="width: 300px;" class="css17 css1">Save Conformations</div>
+</td>
+<td class="css42"><div style="width: 300px;" class="css19 css1">False</div>
+</td>
+</tr>
+<tr>
+<td class="css21"><div style="width: 300px;" class="css44 css1">Parallel Processing</div>
+</td>
+<td class="css42"><div style="width: 300px;" class="css45 css1">False</div>
+</td>
+</tr>
+<tr>
+<td class="css21"><div style="width: 300px;" class="css44 css1">Parallel Processing Batch Size</div>
+</td>
+<td class="css42"><div style="width: 300px;" class="css45 css1">4</div>
+</td>
+</tr>
+<tr>
+<td class="css21"><div style="width: 300px;" class="css44 css1">Parallel Processing Server</div>
+</td>
+<td class="css42"><div style="width: 300px;" class="css45 css1">localhost</div>
+</td>
+</tr>
+<tr>
+<td class="css21"><div style="width: 300px;" class="css44 css1">Parallel Processing Server Processes</div>
+</td>
+<td class="css42"><div style="width: 300px;" class="css45 css1">2</div>
+</td>
+</tr>
+<tr>
+<td class="css21"><div style="width: 300px;" class="css44 css1">Parallel Processing Preserve Order</div>
+</td>
+<td class="css42"><div style="width: 300px;" class="css45 css1">True</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td class="css12"><table style="width: 500px;" cols="3" cellpadding="0" cellspacing="0" class="css13 css1">
+<tr>
+<td class="css14"><div class="css46 css1">&nbsp;</div>
+</td>
+<td class="css16"><div class="css17 css1">Features</div>
+</td>
+<td class="css18"><div class="css19 css1">HB_ACCEPTOR 0 5,HB_DONOR 0 5,HYDROPHOBIC 0 5,HYDROPHOBIC_aromatic 0 5,POS_IONIZABLE 0 5</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td class="css12"><table style="width: 500px;" cols="3" cellpadding="0" cellspacing="0" class="css13 css1">
+<tr>
+<td class="css14"><div class="css46 css1">&nbsp;</div>
+</td>
+<td class="css16"><div class="css17 css1">Maximum Pharmacophores</div>
+</td>
+<td class="css18"><div class="css19 css1">5</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td class="css12"><table style="width: 500px;" cols="3" cellpadding="0" cellspacing="0" class="css13 css1">
+<tr>
+<td class="css14"><div class="css46 css1">&nbsp;</div>
+</td>
+<td class="css16"><div class="css17 css1">Minimum Interfeature Distance</div>
+</td>
+<td class="css18"><div class="css19 css1">2.97</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td class="css12"><table style="width: 500px;" cols="3" cellpadding="0" cellspacing="0" class="css13 css1">
+<tr>
+<td class="css14"><div class="css46 css1">&nbsp;</div>
+</td>
+<td class="css16"><div class="css17 css1">Maximum Excluded Volumes</div>
+</td>
+<td class="css18"><div class="css19 css1">0</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td class="css12"><table style="width: 500px;" cols="3" cellpadding="0" cellspacing="0" class="css13 css1">
+<tr>
+<td class="css14"><div title="Expand/Collapse" id="DS_REPORT_GroupPara-3" onclick="toggleDivVisibility('ID_GroupPara-3', 'DS_REPORT_GroupPara-3')" class="css19 css1"><img src="Report/images/icons/minus.png" /></div>
+</td>
+<td class="css16"><div class="css17 css1">Validation</div>
+</td>
+<td class="css18"><div class="css19 css1">True</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td class="css12"><table id="ID_GroupPara-3" cols="2" cellpadding="0" cellspacing="0" class="css20 css1">
+<tr>
+<td class="css21"><div style="width: 300px;" class="css17 css1">Active Ligands</div>
+</td>
+<td class="css42"><table cols="1" cellpadding="0" cellspacing="0" class="css23 css1">
+<tr>
+<td class="css25"><div title="../Input/active_ligands.sd" class="css38 css1"><A HREF="../Input/active_ligands.sd">active_ligands.sd</A></div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td class="css21"><div style="width: 300px;" class="css17 css1">Inactive Ligands</div>
+</td>
+<td class="css42"><table cols="1" cellpadding="0" cellspacing="0" class="css23 css1">
+<tr>
+<td class="css25"><div title="../Input/inactive_ligands.sd" class="css38 css1"><A HREF="../Input/inactive_ligands.sd">inactive_ligands.sd</A></div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td class="css21"><div style="width: 300px;" class="css17 css1">Conformation Generation</div>
+</td>
+<td class="css42"><div style="width: 300px;" class="css19 css1">FAST</div>
+</td>
+</tr>
+<tr>
+<td class="css21"><div style="width: 300px;" class="css17 css1">Conformation Generation Maximum Conformations</div>
+</td>
+<td class="css42"><div style="width: 300px;" class="css19 css1">250</div>
+</td>
+</tr>
+<tr>
+<td class="css21"><div style="width: 300px;" class="css17 css1">Conformation Generation Discard Existing Conformations</div>
+</td>
+<td class="css42"><div style="width: 300px;" class="css19 css1">True</div>
+</td>
+</tr>
+<tr>
+<td class="css21"><div style="width: 300px;" class="css17 css1">Conformation Generation Ring Fragments File</div>
+</td>
+<td class="css42"><div style="width: 300px;" class="css19 css1"></div>
+</td>
+</tr>
+<tr>
+<td class="css21"><div style="width: 300px;" class="css17 css1">Conformation Generation Energy Threshold</div>
+</td>
+<td class="css42"><div style="width: 300px;" class="css19 css1">20.0</div>
+</td>
+</tr>
+<tr>
+<td class="css21"><div style="width: 300px;" class="css17 css1">Fitting Method</div>
+</td>
+<td class="css42"><div style="width: 300px;" class="css19 css1">Rigid</div>
+</td>
+</tr>
+<tr>
+<td class="css21"><div style="width: 300px;" class="css17 css1">Maximum Omitted Features</div>
+</td>
+<td class="css42"><div style="width: 300px;" class="css19 css1">-1</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td class="css12"><table style="width: 500px;" cols="3" cellpadding="0" cellspacing="0" class="css13 css1">
+<tr>
+<td class="css14"><div title="Expand/Collapse" id="DS_REPORT_GroupPara-4" onclick="toggleDivVisibility('ID_GroupPara-4', 'DS_REPORT_GroupPara-4')" class="css19 css1"><img src="Report/images/icons/minus.png" /></div>
+</td>
+<td class="css16"><div class="css17 css1">Advanced</div>
+</td>
+<td class="css18"><div class="css19 css1"></div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td class="css12"><table id="ID_GroupPara-4" cols="2" cellpadding="0" cellspacing="0" class="css20 css1">
+<tr>
+<td class="css21"><div style="width: 300px;" class="css17 css1">Minimum Features</div>
+</td>
+<td class="css42"><div style="width: 300px;" class="css19 css1">1</div>
+</td>
+</tr>
+<tr>
+<td class="css21"><div style="width: 300px;" class="css17 css1">Maximum Features</div>
+</td>
+<td class="css42"><div style="width: 300px;" class="css19 css1">10</div>
+</td>
+</tr>
+<tr>
+<td class="css21"><div style="width: 300px;" class="css17 css1">Number of Leads That May Miss</div>
+</td>
+<td class="css42"><div style="width: 300px;" class="css19 css1">1</div>
+</td>
+</tr>
+<tr>
+<td class="css21"><div style="width: 300px;" class="css17 css1">Minimum Feature Points</div>
+</td>
+<td class="css42"><div style="width: 300px;" class="css19 css1">4</div>
+</td>
+</tr>
+<tr>
+<td class="css21"><div style="width: 300px;" class="css17 css1">Minimum Features in Moderately Active</div>
+</td>
+<td class="css42"><div style="width: 300px;" class="css19 css1">4</div>
+</td>
+</tr>
+<tr>
+<td class="css21"><div style="width: 300px;" class="css17 css1">Feature Misses</div>
+</td>
+<td class="css42"><div style="width: 300px;" class="css19 css1">1</div>
+</td>
+</tr>
+<tr>
+<td class="css21"><div style="width: 300px;" class="css17 css1">Complete Misses</div>
+</td>
+<td class="css42"><div style="width: 300px;" class="css19 css1">0</div>
+</td>
+</tr>
+<tr>
+<td class="css21"><div style="width: 300px;" class="css17 css1">Stereoisomers As Different Molecules</div>
+</td>
+<td class="css42"><div style="width: 300px;" class="css19 css1">False</div>
+</td>
+</tr>
+<tr>
+<td class="css21"><div style="width: 300px;" class="css17 css1">Align Ligands to Hypothesis</div>
+</td>
+<td class="css42"><div style="width: 300px;" class="css19 css1">True</div>
+</td>
+</tr>
+<tr>
+<td class="css21"><div style="width: 300px;" class="css17 css1">Best Mapping Only</div>
+</td>
+<td class="css42"><div style="width: 300px;" class="css19 css1">True</div>
+</td>
+</tr>
+<tr>
+<td class="css21"><div style="width: 300px;" class="css17 css1">Check Superposition</div>
+</td>
+<td class="css42"><div style="width: 300px;" class="css19 css1">True</div>
+</td>
+</tr>
+<tr>
+<td class="css21"><div style="width: 300px;" class="css17 css1">Superposition Error</div>
+</td>
+<td class="css42"><div style="width: 300px;" class="css19 css1">1.0</div>
+</td>
+</tr>
+<tr>
+<td class="css21"><div style="width: 300px;" class="css17 css1">Scale Feature Blob Size</div>
+</td>
+<td class="css42"><div style="width: 300px;" class="css19 css1">1.0</div>
+</td>
+</tr>
+<tr>
+<td class="css21"><div style="width: 300px;" class="css17 css1">Maximum Mappings</div>
+</td>
+<td class="css42"><div style="width: 300px;" class="css19 css1">1000</div>
+</td>
+</tr>
+<tr>
+<td class="css21"><div style="width: 300px;" class="css17 css1">Maximum Confs Per Mapping</div>
+</td>
+<td class="css42"><div style="width: 300px;" class="css19 css1">1000</div>
+</td>
+</tr>
+<tr>
+<td class="css21"><div style="width: 300px;" class="css17 css1">Memory</div>
+</td>
+<td class="css42"><div style="width: 300px;" class="css19 css1">512</div>
+</td>
+</tr>
+<tr>
+<td class="css21"><div style="width: 300px;" class="css17 css1">Explore Exhaustive HBond Geometry</div>
+</td>
+<td class="css42"><div style="width: 300px;" class="css19 css1">True</div>
+</td>
+</tr>
+<tr>
+<td class="css21"><div style="width: 300px;" class="css17 css1">Catalyst Parameter File</div>
+</td>
+<td class="css42"><div style="width: 300px;" class="css19 css1"></div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr><td class="css3"><div class="css6 css1"><span class="css8"><HR></span><span class="css47">Copyright © 2022 Dassault Systèmes Biovia Corp - All rights reserved.</span></div>
+</td>
+</tr>
+</table>
+
+</body>
+</html>

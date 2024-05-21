@@ -1,0 +1,94 @@
+
+<ELU xmlns="http://www.accelrys.com/dsm/elu/2">
+  <experiment Expanded="" Guid="{E7BDE08E-A63D-4506-A5A6-C062FCAB7147}" protocol="Protocols/BIOVIA Discovery Studio/Discovery Studio/Small Molecules/General Purpose/Calculate Molecular Properties" protocolName="Calculate Molecular Properties" version="1">
+    <Accl:mpropval name="Add Dispersion Correction" type="BoolType">
+      <Accl:value>False</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="ApplyToWindow" type="StringType">
+      <Accl:value>Input Ligands</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="DMol3 Settings" type="GroupType">
+      <Accl:value></Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="DMol3 Settings Solvent" type="StringType">
+      <Accl:value>None</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="DMol3 Settings Task" type="StringType">
+      <Accl:value>Energy</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="DSRunInteractive" type="BoolType">
+      <Accl:value>True</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Density Functional QM Properties" type="StringType">
+      <Accl:value></Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="FilesToOpen" type="StringType">
+      <Accl:value>ViewResults.ds_pl</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Formalism" type="StringType">
+      <Accl:value>RHF</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Functional" type="StringType">
+      <Accl:value>PWC</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Hamiltonian" type="StringType">
+      <Accl:value>AM1</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Input Ligands" type="LigandsType">
+      <Accl:value>TestSet_dataset-AI-2:All</Accl:value>
+      <Accl:transformData>c6597c4a-0f7c-9b08-c3-74-72-8f-0c-80-51-51</Accl:transformData>
+    </Accl:mpropval>
+    <Accl:mpropval name="Molecular Properties" type="CalculablepropertiesType">
+      <Accl:value>MY_Bayesian</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Parallel Processing" type="BoolType">
+      <Accl:value>False</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Parallel Processing Batch Size" type="LongType">
+      <Accl:value>1</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Parallel Processing Preserve Order" type="BoolType">
+      <Accl:value>True</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Parallel Processing Server" type="StringType">
+      <Accl:value>localhost</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Parallel Processing Server Processes" type="StringType">
+      <Accl:value>2</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Quality" type="StringType">
+      <Accl:value>Coarse</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Reporting" type="GroupType">
+      <Accl:value></Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Reporting Stylesheet" type="StylesheetType">
+      <Accl:value>{42691EC8-0CE0-4DB9-8B3C-5379CBB967A7}</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Save Intermediate Files" type="BoolType">
+      <Accl:value>False</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Semiempirical QM Properties" type="StringType">
+      <Accl:value></Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Semiempirical QM Properties Advanced" type="GroupType">
+      <Accl:value></Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Use Internal Coordinates" type="BoolType">
+      <Accl:value>False</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="VAMP Input File" type="URLType">
+      <Accl:value></Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="VAMP Settings" type="GroupType">
+      <Accl:value></Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="VAMP Settings Solvent" type="StringType">
+      <Accl:value>None</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="VAMP Settings Task" type="StringType">
+      <Accl:value>Energy</Accl:value>
+    </Accl:mpropval>
+  </experiment>
+
+</ELU>

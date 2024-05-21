@@ -1,0 +1,18 @@
+#!/usr/bin/perl
+use MdmDiscoveryScript;
+use SdmDiscoveryScript;
+use DSScript;
+
+my $sdmdoc = DiscoveryScript::Open({"Path" => "P2RY6_templates.bsml"});
+my $mdmdoc = DiscoveryScript::Open({"Path" => "P2RY6.dsv", "LoadAllObjects" => False});
+
+$sdmdoc->LinkMdmDocument($mdmdoc);
+use MdmDiscoveryScript;
+use DSScript;
+
+my $hashargs = { message => "<strong>Build Homology Models</strong><BR><html><p>Created 3 models.</p><p>Lowest Total PDF Energy : 1219.2933 for model P2RY6.M0003</p></html>",
+ details => "",
+ error => "",
+ ignore => "Protocol MessageBox: Build Homology Models" };
+use MdmCommands;
+MdmCommands::DSReportMessageBox($hashargs);

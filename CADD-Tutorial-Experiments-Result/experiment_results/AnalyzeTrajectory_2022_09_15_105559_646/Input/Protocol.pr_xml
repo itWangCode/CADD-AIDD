@@ -1,0 +1,92 @@
+
+<ELU xmlns="http://www.accelrys.com/dsm/elu/2">
+  <experiment Expanded="RMSD Reference,Protein Torsion Angles,Input Molecule" Guid="{2A3D8658-D885-4D24-AE13-65E695BC6293}" protocol="Protocols/BIOVIA Discovery Studio/Discovery Studio/Simulation/Analysis/Analyze Trajectory" protocolName="Analyze Trajectory" version="1">
+    <Accl:mpropval name="Analysis Type" type="StringType">
+      <Accl:value>RMSD,RMSF</Accl:value>
+      <Accl:transformData>RMSD,RMSF</Accl:transformData>
+    </Accl:mpropval>
+    <Accl:mpropval name="DSRunInteractive" type="BoolType">
+      <Accl:value>True</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Energy File" type="EnergyfileType">
+      <Accl:value></Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Fit Frames for RMSF" type="BoolType">
+      <Accl:value>True</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Frame Increment" type="LongType">
+      <Accl:value>1</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Frame Start" type="LongType">
+      <Accl:value>1</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Frame Stop" type="LongType">
+      <Accl:value></Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Input Molecule" type="StructureType">
+      <Accl:value>1YRF:1YRF</Accl:value>
+      <Accl:transformData>89305929-37d5-f167-f1-41-fa-2e-fe-0e-4a-82</Accl:transformData>
+    </Accl:mpropval>
+    <Accl:mpropval name="Input Molecule Frame Increment" type="LongType">
+      <Accl:value>1</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Input Molecule Frame Start" type="LongType">
+      <Accl:value>1</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Input Molecule Frame Stop" type="LongType">
+      <Accl:value></Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Properties" type="PropertyOfStructureType">
+      <Accl:value></Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Protein Torsion Angles" type="StringType">
+      <Accl:value>Main Chain</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="RMSD Reference" type="StringType">
+      <Accl:value>First Frame</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="RMSD Reference Atom Group" type="GroupOfStructureType">
+      <Accl:value></Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="RMSD Reference Atom Group to Fit" type="GroupOfStructureType">
+      <Accl:value></Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="RMSD Reference Label" type="StringType">
+      <Accl:value>RMSD to conf</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="RMSD Reference Save Fitted Trajectory" type="BoolType">
+      <Accl:value>True</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="RMSD Reference Scope" type="StringType">
+      <Accl:value>Molecule</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Reference Frame" type="LongType">
+      <Accl:value></Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Reference Molecule" type="StructureType">
+      <Accl:value></Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Reporting" type="GroupType">
+      <Accl:value></Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Reporting Chart Display Type" type="StringType">
+      <Accl:value>Default</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Reporting Stylesheet" type="StylesheetType">
+      <Accl:value>{42691EC8-0CE0-4DB9-8B3C-5379CBB967A7}</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Residues to Analyze" type="GroupOfStructureType">
+      <Accl:value></Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Save Intermediate Files" type="BoolType">
+      <Accl:value>False</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Trajectory File" type="TrajectoryfileType">
+      <Accl:value></Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="__DS_LSCK" type="StringType">
+      <Accl:value>K_Analysis</Accl:value>
+    </Accl:mpropval>
+  </experiment>
+
+</ELU>

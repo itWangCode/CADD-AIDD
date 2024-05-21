@@ -1,0 +1,12 @@
+Number of CHM Files, File Name, Number of Features, Feature Set, Selectivity
+10
+Ligand_01.ds_chm 6 AAADDR 12.2525
+Ligand_02.ds_chm 6 AAADDH 12.2525
+Ligand_03.ds_chm 6 AAADDH 12.2525
+Ligand_04.ds_chm 6 AAADDR 12.2525
+Ligand_05.ds_chm 6 AADDHH 12.2525
+Ligand_06.ds_chm 6 AADDHR 12.2525
+Ligand_07.ds_chm 6 AADDHH 12.2525
+Ligand_08.ds_chm 6 AADDHR 12.2525
+Ligand_09.ds_chm 6 AAAADD 12.2525
+Ligand_10.ds_chm 6 AADDHH 12.2525

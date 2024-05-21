@@ -1,0 +1,55 @@
+#!/usr/bin/perl
+use MdmDiscoveryScript;
+use DSScript;
+
+# Returns document only if ApplyToWindow condition is true on the client
+my $document = DiscoveryScript::LastActiveDocument(MdmModelType, True);
+
+if ($document) {
+    $document->Insert({"Path" => "Ligand_01.ds_chm", "LoadAllObjects" => False});
+} else{
+    $document = DiscoveryScript::Open({"Path" => "../Input/2IRZ.dsv"});
+    $document->Insert({"Path" => "Ligand.sd", "LoadAllObjects" => True});
+    $document->Insert({"Path" => "Ligand_01.ds_chm", "LoadAllObjects" => False});
+}
+
+$document->Insert({"Path" => "Ligand_02.ds_chm", "LoadAllObjects" => False});
+
+$document->Insert({"Path" => "Ligand_03.ds_chm", "LoadAllObjects" => False});
+
+$document->Insert({"Path" => "Ligand_04.ds_chm", "LoadAllObjects" => False});
+
+$document->Insert({"Path" => "Ligand_05.ds_chm", "LoadAllObjects" => False});
+
+$document->Insert({"Path" => "Ligand_06.ds_chm", "LoadAllObjects" => False});
+
+$document->Insert({"Path" => "Ligand_07.ds_chm", "LoadAllObjects" => False});
+
+$document->Insert({"Path" => "Ligand_08.ds_chm", "LoadAllObjects" => False});
+
+$document->Insert({"Path" => "Ligand_09.ds_chm", "LoadAllObjects" => False});
+
+$document->Insert({"Path" => "Ligand_10.ds_chm", "LoadAllObjects" => False});
+use MdmDiscoveryScript;
+use DSScript;
+
+my $queries = $document->Queries;
+my $count = $queries->Count;
+my $index = 1;
+while ($index < $count)
+{
+  $queries->Item($index)->SetInvisible(True);
+  $index++;
+}
+
+DSScript::invoke_action("ActionShowInTable");
+DSScript::invoke_action("ActionShowInGraphics");
+$document->UpdateViews();
+
+my $hashargs = { message => "<strong>Receptor-Ligand Pharmacophore Generation</strong><BR>Found 30 features in ligand: Ligand<BR>10 features match the receptor-ligand interactions: AAAAADDHHR<BR>10 pharmacophores generated.",
+ details => "<html>HB_ACCEPTOR: 15<BR>HB_DONOR: 4<BR>HYDROPHOBIC: 2<BR>POS_IONIZABLE: 1<BR>RING_AROMATIC: 8</html>
+",
+ error => "",
+ ignore => "Protocol MessageBox: Receptor-Ligand Pharmacophore Generation" };
+use MdmCommands;
+MdmCommands::DSReportMessageBox($hashargs);

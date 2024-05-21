@@ -1,0 +1,1011 @@
+Version:      Discovery Studio catHypo  2.0 (365)  Thursday, December 01, 2007 at 12:33 AM 
+Confs (cpd):  D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\Intermediate/
+Spreadsheet:  D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\Intermediate/mols.spst 
+Dictionary:   D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\Intermediate/Dictionary.ds_chm 
+Host:         AbdusemiAbduweli
+Outname:      5HT2c_ligands
+Logname:      5HT2c_ligands.log
+Statistics:   D:\Program Files\BIOVIA\PPS\apps\scitegic\dscore\server\share\Catalyst\conf\default.hstat
+
+Summary of parameters:
+  HyposReported	    5                              
+  Spacing	  300                              
+  MinPoints	    4                              
+  MinSubsetPoints	    4                              
+  SuperpositionError	    1                              
+  Misses	    1                              
+  FeatureMisses	    1                              
+  CompleteMisses	  0.0e+00                          
+  ToleranceFactor	    1                              
+  CheckSuperposition	    1                              
+  WeightVariation	    0.3                            
+  MappingCoeff	  0.0e+00                          
+  Mem	  510                              
+  IdealHBondGeomOnly	  0.0e+00                          
+  VariableWeight	  0.0e+00                          
+  VariableTolerance	  0.0e+00                          
+
+Constraints on numbers of features:
+Name:       HBA             HBD         HYDROPHOBIC   HYDROPHOBAromatic PosIonizable  Total
+Min:         0               0               0               0               0          1
+Max:         5               5               5               5               5          10
+
+Revised Grid Size = 10 picometers.
+Features: AA[compact algorithm]
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+
+#hypos: 990
+Phase 1:     0.00e     0.00u     0.00s     0r     0f     0i     0o     0c
+Phase 3:     0.00e     0.01u     0.00s     0r     0f     0i     0o     0c
+Features: HA[compact algorithm]
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+
+#hypos: 4479
+Phase 1:     0.00e     0.01u     0.00s     0r     0f     0i     0o     0c
+Phase 3:     0.00e     0.03u     0.00s     0r     0f     0i     0o     0c
+Features: ZA[compact algorithm]
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+
+#hypos: 1341
+Phase 1:     0.00e     0.03u     0.00s     0r     0f     0i     0o     0c
+Phase 3:     0.00e     0.03u     0.00s     0r     0f     0i     0o     0c
+Features: PA[compact algorithm]
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+
+#hypos: 962
+Phase 1:     0.00e     0.03u     0.00s     0r     0f     0i     0o     0c
+Phase 3:     0.00e     0.03u     0.00s     0r     0f     0i     0o     0c
+Features: HH[compact algorithm]
+Psssss!
+Psssss!
+Psssss!
+Psssss!
+Psssss!
+Psssss!
+
+#hypos: 5468
+Phase 1:     0.00e     0.03u     0.00s     0r     0f     0i     0o     0c
+Phase 3:     0.00e     0.04u     0.00s     0r     0f     0i     0o     0c
+Features: ZH[compact algorithm]
+Psssss!
+Psssss!
+Psssss!
+Psssss!
+Psssss!
+Psssss!
+
+#hypos: 3217
+Phase 1:     0.00e     0.03u     0.00s     0r     0f     0i     0o     0c
+Phase 3:     0.00e     0.06u     0.00s     0r     0f     0i     0o     0c
+Features: PH[compact algorithm]
+Psssss!
+Psssss!
+Psssss!
+Psssss!
+Psssss!
+Psssss!
+
+#hypos: 2364
+Phase 1:     0.00e     0.04u     0.00s     0r     0f     0i     0o     0c
+Phase 3:     0.00e     0.06u     0.00s     0r     0f     0i     0o     0c
+Features: ZZ[compact algorithm]
+Psssss!
+Psssss!
+Psssss!
+Psssss!
+Psssss!
+Psssss!
+
+#hypos: 324
+Phase 1:     0.00e     0.04u     0.00s     0r     0f     0i     0o     0c
+Phase 3:     0.00e     0.06u     0.00s     0r     0f     0i     0o     0c
+Features: PZ[compact algorithm]
+Psssss!
+Psssss!
+Psssss!
+Psssss!
+Psssss!
+Psssss!
+
+#hypos: 844
+Phase 1:     0.00e     0.04u     0.00s     0r     0f     0i     0o     0c
+Phase 3:     0.00e     0.06u     0.00s     0r     0f     0i     0o     0c
+Features: AAA[compact algorithm]
+P!
+P!
+P!
+P!
+P!
+PsssssRsssss!
+
+#hypos: 0
+Phase 1:     0.00e     0.04u     0.00s     0r     0f     0i     0o     0c
+Phase 3:     0.00e     0.06u     0.00s     0r     0f     0i     0o     0c
+Features: HAA[compact algorithm]
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+
+#hypos: 4812
+Phase 1:     0.00e     0.06u     0.00s     0r     0f     0i     0o     0c
+Phase 3:     0.00e     0.12u     0.00s     0r     0f     0i     0o     0c
+Features: ZAA[compact algorithm]
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+
+#hypos: 1304
+Phase 1:     0.00e     0.07u     0.00s     0r     0f     0i     0o     0c
+Phase 3:     0.00e     0.14u     0.00s     0r     0f     0i     0o     0c
+Features: PAA[compact algorithm]
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+
+#hypos: 954
+Phase 1:     0.00e     0.09u     0.00s     0r     0f     0i     0o     0c
+Phase 3:     0.00e     0.14u     0.00s     0r     0f     0i     0o     0c
+AA: Reprocessed hypos. Hypos remaining: 0
+Features: HHA[compact algorithm]
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+
+#hypos: 21194
+Phase 1:     1.00e     0.15u     0.00s     0r     0f     0i     0o     0c
+Phase 3:     0.00e     0.32u     0.00s     0r     0f     0i     0o     0c
+Features: ZHA[compact algorithm]
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+
+#hypos: 11612
+Phase 1:     1.00e     0.18u     0.00s     0r     0f     0i     0o     0c
+Phase 3:     0.00e     0.42u     0.00s     0r     0f     0i     0o     0c
+Features: PHA[compact algorithm]
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+
+#hypos: 9216
+Phase 1:     1.00e     0.23u     0.00s     0r     0f     0i     0o     0c
+Phase 3:     0.00e     0.48u     0.00s     0r     0f     0i     0o     0c
+HA: Not Desired. Freeing associated memory.
+Features: ZZA[compact algorithm]
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+
+#hypos: 1036
+Phase 1:     1.00e     0.23u     0.00s     0r     0f     0i     0o     0c
+Phase 3:     0.00e     0.50u     0.00s     0r     0f     0i     0o     0c
+Features: PZA[compact algorithm]
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+
+#hypos: 3102
+Phase 1:     1.00e     0.25u     0.00s     0r     0f     0i     0o     0c
+Phase 3:     0.00e     0.53u     0.00s     0r     0f     0i     0o     0c
+ZA: Not Desired. Freeing associated memory.
+PA: Not Desired. Freeing associated memory.
+Features: HHH[compact algorithm]
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+
+#hypos: 7514
+Phase 1:     1.00e     0.31u     0.00s     0r     0f     0i     0o     0c
+Phase 3:     0.00e     0.54u     0.00s     0r     0f     0i     0o     0c
+Features: ZHH[compact algorithm]
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+
+#hypos: 5955
+Phase 1:     1.00e     0.34u     0.00s     0r     0f     0i     0o     0c
+Phase 3:     0.00e     0.57u     0.00s     0r     0f     0i     0o     0c
+Features: PHH[compact algorithm]
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+
+#hypos: 4895
+Phase 1:     1.00e     0.35u     0.00s     0r     0f     0i     0o     0c
+Phase 3:     0.00e     0.60u     0.00s     0r     0f     0i     0o     0c
+HH: Not Desired. Freeing associated memory.
+Features: ZZH[compact algorithm]
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+
+#hypos: 901
+Phase 1:     1.00e     0.37u     0.00s     0r     0f     0i     0o     0c
+Phase 3:     0.00e     0.60u     0.00s     0r     0f     0i     0o     0c
+Features: PZH[compact algorithm]
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+
+#hypos: 3274
+Phase 1:     1.00e     0.37u     0.00s     0r     0f     0i     0o     0c
+Phase 3:     0.00e     0.64u     0.00s     0r     0f     0i     0o     0c
+ZH: Not Desired. Freeing associated memory.
+PH: Not Desired. Freeing associated memory.
+Features: PZZ[compact algorithm]
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+
+#hypos: 411
+Phase 1:     1.00e     0.37u     0.00s     0r     0f     0i     0o     0c
+Phase 3:     0.00e     0.64u     0.00s     0r     0f     0i     0o     0c
+ZZ: Not Desired. Freeing associated memory.
+PZ: Not Desired. Freeing associated memory.
+Features: HHAA[compact algorithm]
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+
+#hypos: 7328
+Phase 1:     1.00e     0.45u     0.00s     0r     0f     0i     0o     0c
+Phase 3:     1.00e     0.95u     0.00s     0r     0f     0i     0o     0c
+Features: ZHAA[compact algorithm]
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+
+#hypos: 2294
+Phase 1:     1.00e     0.46u     0.00s     0r     0f     0i     0o     0c
+Phase 3:     1.00e     1.09u     0.00s     0r     0f     0i     0o     0c
+Features: PHAA[compact algorithm]
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+
+#hypos: 2120
+Phase 1:     1.00e     0.48u     0.00s     0r     0f     0i     0o     0c
+Phase 3:     1.00e     1.20u     0.00s     0r     0f     0i     0o     0c
+HAA: Reprocessed hypos. Hypos remaining: 5
+Features: ZZAA[compact algorithm]
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+
+#hypos: 46
+Phase 1:     1.00e     0.50u     0.00s     0r     0f     0i     0o     0c
+Phase 3:     1.00e     1.20u     0.00s     0r     0f     0i     0o     0c
+Features: PZAA[compact algorithm]
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+
+#hypos: 374
+Phase 1:     1.00e     0.51u     0.00s     0r     0f     0i     0o     0c
+Phase 3:     1.00e     1.21u     0.00s     0r     0f     0i     0o     0c
+ZAA: Reprocessed hypos. Hypos remaining: 5
+PAA: Reprocessed hypos. Hypos remaining: 5
+Features: HHHA[compact algorithm]
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+
+#hypos: 22634
+Phase 1:     1.00e     0.64u     0.00s     0r     0f     0i     0o     0c
+Phase 3:     2.00e     1.89u     0.00s     0r     0f     0i     0o     0c
+Features: ZHHA[compact algorithm]
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+
+#hypos: 15888
+Phase 1:     1.00e     0.79u     0.00s     0r     0f     0i     0o     0c
+Phase 3:     2.00e     2.35u     0.00s     0r     0f     0i     0o     0c
+Features: PHHA[compact algorithm]
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+
+#hypos: 12468
+Phase 1:     1.00e     0.89u     0.00s     0r     0f     0i     0o     0c
+Phase 3:     3.00e     2.78u     0.00s     0r     0f     0i     0o     0c
+HHA: Reprocessed hypos. Hypos remaining: 5
+Features: ZZHA[compact algorithm]
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+
+#hypos: 2160
+Phase 1:     1.00e     0.92u     0.00s     0r     0f     0i     0o     0c
+Phase 3:     3.00e     2.82u     0.00s     0r     0f     0i     0o     0c
+Features: PZHA[compact algorithm]
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+
+#hypos: 7800
+Phase 1:     1.00e     0.96u     0.00s     0r     0f     0i     0o     0c
+Phase 3:     3.00e     3.09u     0.00s     0r     0f     0i     0o     0c
+ZHA: Reprocessed hypos. Hypos remaining: 5
+PHA: Reprocessed hypos. Hypos remaining: 5
+Features: PZZA[compact algorithm]
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+
+#hypos: 834
+Phase 1:     1.00e     0.98u     0.00s     0r     0f     0i     0o     0c
+Phase 3:     3.00e     3.10u     0.00s     0r     0f     0i     0o     0c
+ZZA: Reprocessed hypos. Hypos remaining: 3
+PZA: Reprocessed hypos. Hypos remaining: 5
+Features: HHHH[compact algorithm]
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+
+#hypos: 8014
+Phase 1:     1.00e     1.04u     0.00s     0r     0f     0i     0o     0c
+Phase 3:     4.00e     3.29u     0.00s     0r     0f     0i     0o     0c
+Features: ZHHH[compact algorithm]
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+
+#hypos: 7206
+Phase 1:     1.00e     1.10u     0.00s     0r     0f     0i     0o     0c
+Phase 3:     4.00e     3.45u     0.00s     0r     0f     0i     0o     0c
+Features: PHHH[compact algorithm]
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+
+#hypos: 6626
+Phase 1:     1.00e     1.14u     0.00s     0r     0f     0i     0o     0c
+Phase 3:     4.00e     3.62u     0.00s     0r     0f     0i     0o     0c
+HHH: Not Desired. Freeing associated memory.
+Features: ZZHH[compact algorithm]
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+
+#hypos: 1242
+Phase 1:     1.00e     1.17u     0.00s     0r     0f     0i     0o     0c
+Phase 3:     4.00e     3.64u     0.00s     0r     0f     0i     0o     0c
+Features: PZHH[compact algorithm]
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+
+#hypos: 5912
+Phase 1:     1.00e     1.20u     0.00s     0r     0f     0i     0o     0c
+Phase 3:     4.00e     3.76u     0.00s     0r     0f     0i     0o     0c
+ZHH: Not Desired. Freeing associated memory.
+PHH: Not Desired. Freeing associated memory.
+Features: PZZH[compact algorithm]
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+
+#hypos: 1082
+Phase 1:     1.00e     1.21u     0.00s     0r     0f     0i     0o     0c
+Phase 3:     4.00e     3.78u     0.00s     0r     0f     0i     0o     0c
+ZZH: Not Desired. Freeing associated memory.
+PZH: Not Desired. Freeing associated memory.
+PZZ: Not Desired. Freeing associated memory.
+Features: HHHAA[compact algorithm]
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+
+#hypos: 2592
+Phase 1:     1.00e     1.29u     0.00s     0r     0f     0i     0o     0c
+Phase 3:     5.00e     4.29u     0.00s     0r     0f     0i     0o     0c
+Features: ZHHAA[compact algorithm]
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+
+#hypos: 442
+Phase 1:     1.00e     1.32u     0.00s     0r     0f     0i     0o     0c
+Phase 3:     5.00e     4.39u     0.00s     0r     0f     0i     0o     0c
+Features: PHHAA[compact algorithm]
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+
+#hypos: 874
+Phase 1:     1.00e     1.37u     0.00s     0r     0f     0i     0o     0c
+Phase 3:     5.00e     4.48u     0.00s     0r     0f     0i     0o     0c
+HHAA: Reprocessed hypos. Hypos remaining: 5
+Features: ZZHAA[compact algorithm]
+PsssssRsssss!
+P!
+PsssssRsssss!
+P!
+PsssssRsssss!
+P!
+
+#hypos: 0
+Phase 1:     1.00e     1.37u     0.00s     0r     0f     0i     0o     0c
+Phase 3:     5.00e     4.48u     0.00s     0r     0f     0i     0o     0c
+Features: PZHAA[compact algorithm]
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+
+#hypos: 192
+Phase 1:     1.00e     1.39u     0.00s     0r     0f     0i     0o     0c
+Phase 3:     5.00e     4.50u     0.00s     0r     0f     0i     0o     0c
+ZHAA: Reprocessed hypos. Hypos remaining: 5
+PHAA: Reprocessed hypos. Hypos remaining: 5
+Features: PZZAA[compact algorithm]
+PsssssRsssss!
+P!
+PsssssRsssss!
+P!
+PsssssRsssss!
+P!
+
+#hypos: 0
+Phase 1:     1.00e     1.39u     0.00s     0r     0f     0i     0o     0c
+Phase 3:     5.00e     4.50u     0.00s     0r     0f     0i     0o     0c
+ZZAA: Reprocessed hypos. Hypos remaining: 4
+PZAA: Reprocessed hypos. Hypos remaining: 5
+Features: HHHHA[compact algorithm]
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+
+#hypos: 5192
+Phase 1:     2.00e     1.45u     0.00s     0r     0f     0i     0o     0c
+Phase 3:     6.00e     5.78u     0.00s     0r     0f     0i     0o     0c
+Features: ZHHHA[compact algorithm]
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+
+#hypos: 3242
+Phase 1:     2.00e     1.56u     0.00s     0r     0f     0i     0o     0c
+Phase 3:     6.00e     6.39u     0.00s     0r     0f     0i     0o     0c
+Features: PHHHA[compact algorithm]
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+
+#hypos: 4122
+Phase 1:     2.00e     1.68u     0.00s     0r     0f     0i     0o     0c
+Phase 3:     7.00e     6.90u     0.00s     0r     0f     0i     0o     0c
+HHHA: Reprocessed hypos. Hypos remaining: 5
+Features: ZZHHA[compact algorithm]
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+
+#hypos: 234
+Phase 1:     2.00e     1.73u     0.00s     0r     0f     0i     0o     0c
+Phase 3:     7.00e     6.93u     0.00s     0r     0f     0i     0o     0c
+Features: PZHHA[compact algorithm]
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+
+#hypos: 3032
+Phase 1:     2.00e     1.81u     0.00s     0r     0f     0i     0o     0c
+Phase 3:     7.00e     7.20u     0.00s     0r     0f     0i     0o     0c
+ZHHA: Reprocessed hypos. Hypos remaining: 5
+PHHA: Reprocessed hypos. Hypos remaining: 5
+Features: PZZHA[compact algorithm]
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+
+#hypos: 518
+Phase 1:     2.00e     1.82u     0.00s     0r     0f     0i     0o     0c
+Phase 3:     7.00e     7.23u     0.00s     0r     0f     0i     0o     0c
+ZZHA: Reprocessed hypos. Hypos remaining: 5
+PZHA: Reprocessed hypos. Hypos remaining: 5
+PZZA: Reprocessed hypos. Hypos remaining: 5
+Features: HHHHH[compact algorithm]
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+P!
+
+#hypos: 46
+Phase 1:     2.00e     1.85u     0.00s     0r     0f     0i     0o     0c
+Phase 3:     8.00e     7.28u     0.00s     0r     0f     0i     0o     0c
+Features: ZHHHH[compact algorithm]
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+P!
+
+#hypos: 60
+Phase 1:     2.00e     1.89u     0.00s     0r     0f     0i     0o     0c
+Phase 3:     8.00e     7.31u     0.00s     0r     0f     0i     0o     0c
+Features: PHHHH[compact algorithm]
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+
+#hypos: 36
+Phase 1:     2.00e     1.92u     0.00s     0r     0f     0i     0o     0c
+Phase 3:     8.00e     7.34u     0.00s     0r     0f     0i     0o     0c
+HHHH: Reprocessed hypos. Hypos remaining: 5
+Features: ZZHHH[compact algorithm]
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+P!
+
+#hypos: 2
+Phase 1:     2.00e     1.93u     0.00s     0r     0f     0i     0o     0c
+Phase 3:     8.00e     7.34u     0.00s     0r     0f     0i     0o     0c
+Features: PZHHH[compact algorithm]
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+
+#hypos: 52
+Phase 1:     2.00e     1.96u     0.00s     0r     0f     0i     0o     0c
+Phase 3:     8.00e     7.37u     0.00s     0r     0f     0i     0o     0c
+ZHHH: Reprocessed hypos. Hypos remaining: 5
+PHHH: Reprocessed hypos. Hypos remaining: 5
+Features: PZZHH[compact algorithm]
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+
+#hypos: 18
+Phase 1:     2.00e     1.98u     0.00s     0r     0f     0i     0o     0c
+Phase 3:     8.00e     7.37u     0.00s     0r     0f     0i     0o     0c
+ZZHH: Reprocessed hypos. Hypos remaining: 5
+PZHH: Reprocessed hypos. Hypos remaining: 5
+PZZH: Reprocessed hypos. Hypos remaining: 5
+Features: HHHHAA[compact algorithm]
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+
+#hypos: 38
+Phase 1:     2.00e     2.03u     0.00s     0r     0f     0i     0o     0c
+Phase 3:     8.00e     7.39u     0.00s     0r     0f     0i     0o     0c
+Features: ZHHHAA[compact algorithm]
+P!
+P!
+PsssssRsssss!
+P!
+P!
+P!
+
+#hypos: 0
+Phase 1:     2.00e     2.04u     0.00s     0r     0f     0i     0o     0c
+Phase 3:     8.00e     7.39u     0.00s     0r     0f     0i     0o     0c
+Features: PHHHAA[compact algorithm]
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+
+#hypos: 88
+Phase 1:     2.00e     2.09u     0.00s     0r     0f     0i     0o     0c
+Phase 3:     8.00e     7.40u     0.00s     0r     0f     0i     0o     0c
+HHHAA: Reprocessed hypos. Hypos remaining: 5
+Features: PZHHAA[compact algorithm]
+PsssssRsssss!
+PsssssRsssss!
+PsssssRsssss!
+P!
+PsssssRsssss!
+PsssssRsssss!
+
+#hypos: 18
+Phase 1:     2.00e     2.12u     0.00s     0r     0f     0i     0o     0c
+Phase 3:     8.00e     7.40u     0.00s     0r     0f     0i     0o     0c
+PZHHAA: Reprocessed hypos. Hypos remaining: 3
+ZHHAA: Reprocessed hypos. Hypos remaining: 5
+PHHAA: Reprocessed hypos. Hypos remaining: 5
+PZHAA: Reprocessed hypos. Hypos remaining: 5
+Features: HHHHHA[compact algorithm]
+P!
+P!
+PsssssRsssss!
+PsssssRsssss!
+P!
+P!
+
+#hypos: 0
+Phase 1:     2.00e     2.15u     0.00s     0r     0f     0i     0o     0c
+Phase 3:     8.00e     7.40u     0.00s     0r     0f     0i     0o     0c
+Features: ZHHHHA[compact algorithm]
+P!
+P!
+PsssssRsssss!
+P!
+P!
+P!
+
+#hypos: 0
+Phase 1:     2.00e     2.17u     0.00s     0r     0f     0i     0o     0c
+Phase 3:     8.00e     7.40u     0.00s     0r     0f     0i     0o     0c
+Features: PHHHHA[compact algorithm]
+PsssssRsssss!
+P!
+PsssssRsssss!
+P!
+PsssssRsssss!
+P!
+
+#hypos: 0
+Phase 1:     2.00e     2.21u     0.00s     0r     0f     0i     0o     0c
+Phase 3:     8.00e     7.40u     0.00s     0r     0f     0i     0o     0c
+HHHHAA: Reprocessed hypos. Hypos remaining: 5
+PHHHAA: Reprocessed hypos. Hypos remaining: 5
+HHHHA: Reprocessed hypos. Hypos remaining: 5
+Features: ZZHHHA[compact algorithm]
+P!
+P!
+P!
+P!
+P!
+P!
+
+#hypos: 0
+Phase 1:     2.00e     2.21u     0.00s     0r     0f     0i     0o     0c
+Phase 3:     8.00e     7.40u     0.00s     0r     0f     0i     0o     0c
+Features: PZHHHA[compact algorithm]
+PsssssRsssss!
+P!
+PsssssRsssss!
+P!
+PsssssRsssss!
+P!
+
+#hypos: 0
+Phase 1:     2.00e     2.26u     0.00s     0r     0f     0i     0o     0c
+Phase 3:     8.00e     7.40u     0.00s     0r     0f     0i     0o     0c
+ZHHHA: Reprocessed hypos. Hypos remaining: 5
+PHHHA: Reprocessed hypos. Hypos remaining: 5
+Features: PZZHHA[compact algorithm]
+P!
+P!
+P!
+P!
+P!
+P!
+
+#hypos: 0
+Phase 1:     2.00e     2.26u     0.00s     0r     0f     0i     0o     0c
+Phase 3:     8.00e     7.40u     0.00s     0r     0f     0i     0o     0c
+ZZHHA: Reprocessed hypos. Hypos remaining: 5
+PZHHA: Reprocessed hypos. Hypos remaining: 5
+PZZHA: Reprocessed hypos. Hypos remaining: 5
+Features: ZHHHHH[compact algorithm]
+P!
+P!
+P!
+P!
+P!
+P!
+
+#hypos: 0
+Phase 1:     2.00e     2.26u     0.00s     0r     0f     0i     0o     0c
+Phase 3:     8.00e     7.40u     0.00s     0r     0f     0i     0o     0c
+Features: PHHHHH[compact algorithm]
+P!
+P!
+P!
+P!
+P!
+P!
+
+#hypos: 0
+Phase 1:     2.00e     2.26u     0.00s     0r     0f     0i     0o     0c
+Phase 3:     8.00e     7.40u     0.00s     0r     0f     0i     0o     0c
+HHHHH: Reprocessed hypos. Hypos remaining: 2
+Features: ZZHHHH[compact algorithm]
+P!
+P!
+P!
+P!
+P!
+P!
+
+#hypos: 0
+Phase 1:     2.00e     2.26u     0.00s     0r     0f     0i     0o     0c
+Phase 3:     8.00e     7.40u     0.00s     0r     0f     0i     0o     0c
+Features: PZHHHH[compact algorithm]
+P!
+P!
+P!
+P!
+P!
+P!
+
+#hypos: 0
+Phase 1:     2.00e     2.26u     0.00s     0r     0f     0i     0o     0c
+Phase 3:     8.00e     7.40u     0.00s     0r     0f     0i     0o     0c
+ZHHHH: Reprocessed hypos. Hypos remaining: 4
+PHHHH: Reprocessed hypos. Hypos remaining: 4
+Features: PZZHHH[compact algorithm]
+P!
+P!
+P!
+P!
+P!
+P!
+
+#hypos: 0
+Phase 1:     2.00e     2.26u     0.00s     0r     0f     0i     0o     0c
+Phase 3:     8.00e     7.40u     0.00s     0r     0f     0i     0o     0c
+ZZHHH: Reprocessed hypos. Hypos remaining: 1
+PZHHH: Reprocessed hypos. Hypos remaining: 4
+PZZHH: Reprocessed hypos. Hypos remaining: 1
+Determining Partition Rank on level 6
+HHHHAA: 5  minRank: -84.7325  maxRank: -81.7868
+Determining Partition Rank on level 6
+PHHHAA: 5  minRank: -94.8272  maxRank: -88.5196
+Determining Partition Rank on level 6
+PZHHAA: 3  minRank: -96.6781  maxRank: -91.6564
+Determining Partition Rank on level 5
+HHHAA: 5  minRank: -74.7433  maxRank: -72.59
+Determining Partition Rank on level 5
+ZHHAA: 5  minRank: -76.8044  maxRank: -74.0004
+Determining Partition Rank on level 5
+PHHAA: 5  minRank: -83.8744  maxRank: -81.1856
+Determining Partition Rank on level 5
+PZHAA: 5  minRank: -81.5778  maxRank: -81.158
+Determining Partition Rank on level 5
+HHHHA: 5  minRank: -73.4889  maxRank: -71.6771
+Determining Partition Rank on level 5
+ZHHHA: 5  minRank: -75.9299  maxRank: -74.5468
+Determining Partition Rank on level 5
+PHHHA: 5  minRank: -85.9842  maxRank: -81.8375
+Determining Partition Rank on level 5
+ZZHHA: 5  minRank: -74.9521  maxRank: -71.3594
+Determining Partition Rank on level 5
+PZHHA: 5  minRank: -89.8468  maxRank: -85.2568
+Determining Partition Rank on level 5
+PZZHA: 5  minRank: -88.711  maxRank: -84.9077
+Determining Partition Rank on level 5
+HHHHH: 2  minRank: -57.4684  maxRank: -55.5803
+Determining Partition Rank on level 5
+ZHHHH: 4  minRank: -60.6016  maxRank: -59.0925
+Determining Partition Rank on level 5
+PHHHH: 4  minRank: -69.3293  maxRank: -61.9816
+Determining Partition Rank on level 5
+ZZHHH: 1  minRank: -63.2696  maxRank: -63.2696
+Determining Partition Rank on level 5
+PZHHH: 4  minRank: -74.1293  maxRank: -66.7816
+Determining Partition Rank on level 5
+PZZHH: 1  minRank: -77.8382  maxRank: -77.8382
+Determining Partition Rank on level 4
+HHAA: 5  minRank: -64.5157  maxRank: -61.8585
+Determining Partition Rank on level 4
+ZHAA: 5  minRank: -62.2241  maxRank: -59.3173
+Determining Partition Rank on level 4
+PHAA: 5  minRank: -72.1295  maxRank: -68.3009
+Determining Partition Rank on level 4
+ZZAA: 4  minRank: -55.8429  maxRank: -52.4404
+Determining Partition Rank on level 4
+PZAA: 5  minRank: -71.7559  maxRank: -67.3185
+Determining Partition Rank on level 4
+HHHA: 5  minRank: -64.7556  maxRank: -61.3806
+Determining Partition Rank on level 4
+ZHHA: 5  minRank: -64.4329  maxRank: -63.111
+Determining Partition Rank on level 4
+PHHA: 5  minRank: -73.7536  maxRank: -71.2007
+Determining Partition Rank on level 4
+ZZHA: 5  minRank: -63.8188  maxRank: -59.9071
+Determining Partition Rank on level 4
+PZHA: 5  minRank: -75.2254  maxRank: -71.1019
+Determining Partition Rank on level 4
+PZZA: 5  minRank: -75.2315  maxRank: -70.9733
+Determining Partition Rank on level 4
+HHHH: 5  minRank: -59.9411  maxRank: -57.188
+Determining Partition Rank on level 4
+ZHHH: 5  minRank: -62.8079  maxRank: -60.674
+Determining Partition Rank on level 4
+PHHH: 5  minRank: -71.5862  maxRank: -67.5276
+Determining Partition Rank on level 4
+ZZHH: 5  minRank: -62.2114  maxRank: -57.7197
+Determining Partition Rank on level 4
+PZHH: 5  minRank: -75.2428  maxRank: -70.8334
+Determining Partition Rank on level 4
+PZZH: 5  minRank: -74.5912  maxRank: -67.3821
+Determining Partition Rank on level 3
+HAA: 5  minRank: -48.1523  maxRank: -40.1683
+Determining Partition Rank on level 3
+ZAA: 5  minRank: -41.5304  maxRank: -37.5783
+Determining Partition Rank on level 3
+PAA: 5  minRank: -51.2301  maxRank: -46.1781
+Determining Partition Rank on level 3
+HHA: 5  minRank: -52.5077  maxRank: -46.8165
+Determining Partition Rank on level 3
+ZHA: 5  minRank: -51.5868  maxRank: -47.9958
+Determining Partition Rank on level 3
+PHA: 5  minRank: -60.73  maxRank: -56.8465
+Determining Partition Rank on level 3
+ZZA: 3  minRank: -42.3033  maxRank: -37.3738
+Determining Partition Rank on level 3
+PZA: 5  minRank: -60.6495  maxRank: -55.306
+globmin, max: -96.6781, -37.3738
+initial rank: -37.3738 wanted: 5 numBins: 201
+Gathering and Processing... numQualify: 201 theRank: -37.3738
+Number Reported is now: 5
+Aligning/Exporting level 1
+Aligning/Exporting level 2
+Aligning/Exporting level 3
+Aligning/Exporting level 4
+Aligning/Exporting level 5
+Aligning/Exporting level 6
+Exporting Hypos with Features: PHHHAA
+Exporting Hypos with Features: PZHHAA
+Aligning/Exporting level 7
+Aligning/Exporting level 8
+Aligning/Exporting level 9
+Aligning/Exporting level 10
+CPU time = 10 s  System time = 0 s 

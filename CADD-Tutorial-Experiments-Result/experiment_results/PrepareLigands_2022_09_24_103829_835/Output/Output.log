@@ -1,0 +1,11 @@
+[2022-09-24 10:38:30] ------------------------------------
+[2022-09-24 10:38:30] Protocol Name = 'Prepare Ligands'
+[2022-09-24 10:38:30] User Name = '16606'
+[2022-09-24 10:38:30] Run ID = '80ABECC3-C478-4091-B9BD-E6231760B331'
+[2022-09-24 10:38:30] Client message: 'Prepare Ligands: Molecule-(1)'
+[2022-09-24 10:38:31] Client message: 'Preparing confgen.'
+[2022-09-24 10:38:31] Client message: 'Running confgen.'
+[2022-09-24 10:38:31] Started running 'confgen'
+[2022-09-24 10:38:32] Finished running 'confgen'
+[2022-09-24 10:38:32] Client message: 'Molecule-(1): 1 ligands created'
+[2022-09-24 10:38:32] Final message: 'Molecule-(1): 1 ligands created'

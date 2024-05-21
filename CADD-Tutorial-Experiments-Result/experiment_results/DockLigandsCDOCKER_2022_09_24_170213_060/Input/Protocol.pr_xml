@@ -1,0 +1,125 @@
+
+<ELU xmlns="http://www.accelrys.com/dsm/elu/2">
+  <experiment Expanded="Advanced" Guid="{DF289213-6956-44C5-AD6E-2E8B5D4D8E31}" protocol="Protocols/BIOVIA Discovery Studio/Discovery Studio/Receptor-Ligand Interactions/Docking/Dock Ligands (CDOCKER)" protocolName="Dock Ligands (CDOCKER)" version="1">
+    <Accl:mpropval name="Advanced" type="GroupType">
+      <Accl:value></Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Cooling Steps" type="LongType">
+      <Accl:value>5000</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Cooling Target Temperature" type="DoubleType">
+      <Accl:value>300</Accl:value>
+      <Accl:transformData>300</Accl:transformData>
+    </Accl:mpropval>
+    <Accl:mpropval name="DSRunInteractive" type="BoolType">
+      <Accl:value>True</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Final Minimization" type="StringType">
+      <Accl:value>Full Potential</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Final Minimization Gradient Tolerance" type="DoubleType">
+      <Accl:value>0</Accl:value>
+      <Accl:transformData>0</Accl:transformData>
+    </Accl:mpropval>
+    <Accl:mpropval name="Forcefield" type="StringType">
+      <Accl:value>CHARMm</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Grid Extension" type="DoubleType">
+      <Accl:value>8.0</Accl:value>
+      <Accl:transformData>8.0</Accl:transformData>
+    </Accl:mpropval>
+    <Accl:mpropval name="Heating Steps" type="LongType">
+      <Accl:value>2000</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Heating Target Temperature" type="DoubleType">
+      <Accl:value>700</Accl:value>
+      <Accl:transformData>700</Accl:transformData>
+    </Accl:mpropval>
+    <Accl:mpropval name="Include Electrostatic Interactions" type="BoolType">
+      <Accl:value>True</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Input Ligands" type="LigandsType">
+      <Accl:value>Molecule-(1):All</Accl:value>
+      <Accl:transformData>0ec10244-8e80-3c6a-f8-b3-cd-b8-36-fd-19-cb</Accl:transformData>
+    </Accl:mpropval>
+    <Accl:mpropval name="Input Receptor" type="StructureType">
+      <Accl:value>3GEN_prep:3GEN</Accl:value>
+      <Accl:transformData>dfd567e1-adfc-243a-a5-53-44-bb-d0-49-d2-d8</Accl:transformData>
+    </Accl:mpropval>
+    <Accl:mpropval name="Input Site Sphere" type="ReceptorsphereOfStructureType">
+      <Accl:value>-17.0041, 6.71975, -15.0922, 9.73833</Accl:value>
+      <Accl:transformData>-17.0041, 6.71975, -15.0922, 9.73833</Accl:transformData>
+    </Accl:mpropval>
+    <Accl:mpropval name="Ligand Partial Charge Method" type="StringType">
+      <Accl:value>Momany-Rone</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Maximum Bad Orientations" type="LongType">
+      <Accl:value>800</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Orientation vdW Energy Threshold" type="DoubleType">
+      <Accl:value>300</Accl:value>
+      <Accl:transformData>300</Accl:transformData>
+    </Accl:mpropval>
+    <Accl:mpropval name="Orientations to Refine" type="LongType">
+      <Accl:value>10</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Parallel Processing" type="BoolType">
+      <Accl:value>False</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Parallel Processing Batch Size" type="LongType">
+      <Accl:value>25</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Parallel Processing Preserve Order" type="BoolType">
+      <Accl:value>True</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Parallel Processing Server" type="StringType">
+      <Accl:value>localhost</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Parallel Processing Server Processes" type="StringType">
+      <Accl:value>2</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Pose Cluster Radius" type="DoubleType">
+      <Accl:value>0.1</Accl:value>
+      <Accl:transformData>0.1</Accl:transformData>
+    </Accl:mpropval>
+    <Accl:mpropval name="Prepare Input Receptor" type="BoolType">
+      <Accl:value>True</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Random Conformations" type="LongType">
+      <Accl:value>10</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Random Conformations Dynamics Steps" type="LongType">
+      <Accl:value>1000</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Random Conformations Dynamics Target Temperature" type="DoubleType">
+      <Accl:value>1000</Accl:value>
+      <Accl:transformData>1000</Accl:transformData>
+    </Accl:mpropval>
+    <Accl:mpropval name="Random Dynamics Time Step" type="DoubleType">
+      <Accl:value>0.002</Accl:value>
+      <Accl:transformData>0.002</Accl:transformData>
+    </Accl:mpropval>
+    <Accl:mpropval name="Random Number Seed" type="StringType">
+      <Accl:value>314159 314159 314159 314159</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Reporting" type="GroupType">
+      <Accl:value></Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Reporting Stylesheet" type="StylesheetType">
+      <Accl:value>{42691EC8-0CE0-4DB9-8B3C-5379CBB967A7}</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Save Intermediate Files" type="BoolType">
+      <Accl:value>False</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Simulated Annealing" type="BoolType">
+      <Accl:value>True</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Top Hits" type="LongType">
+      <Accl:value>10</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Use Full Potential" type="BoolType">
+      <Accl:value>False</Accl:value>
+    </Accl:mpropval>
+  </experiment>
+
+</ELU>

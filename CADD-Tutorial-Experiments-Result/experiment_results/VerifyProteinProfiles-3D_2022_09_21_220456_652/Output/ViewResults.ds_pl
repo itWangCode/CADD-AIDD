@@ -1,0 +1,127 @@
+#!/usr/bin/perl
+use MdmDiscoveryScript;
+use DSScript;
+
+# Returns document only if ApplyToWindow condition is true on the client
+my $document = DiscoveryScript::LastActiveDocument(MdmModelType, True);
+
+if ($document) {
+	$document->Insert({"Path" => "Verify.mol2", "FormatType" => "mol2-merge-properties"});
+} else {
+	$document = DiscoveryScript::Open({"Path" => "../Input/P2RY6.dsv", "LoadAllObjects" => False});
+	$document->Insert({"Path" => "Verify.mol2", "FormatType" => "mol2-merge-properties"});
+}
+$document->UpdateViews();
+
+DSScript::invoke_action("ActionShowInTable");
+
+use strict;
+use MdmDiscoveryScript;
+use DSScript;
+
+my $document = DiscoveryScript::LastActiveDocument(MdmModelType);
+
+my $mols = $document->AllMolecules;
+if ($mols->Count <= 0) {
+  exit 0;
+}
+
+foreach my $mol (@$mols) {
+
+	my $v3dscore = $mol->GetProperty("Verify Score");
+
+    if ($v3dscore != "") {
+ 
+      my $aas = $mol->AminoAcids();
+	 
+      # Create groups and color molecule
+
+      my @toKill = ();
+      my $parent = "";
+      my $grps = $mol->Groups;
+      foreach my $g (@$grps) {
+		my $gn = $g->Name;
+		if (($gn=~/^Valid\-/) or ($gn=~/^Invalid\-/)) {
+			$parent = $g->Parent();
+			push @toKill, $g;
+		}
+      }
+      for my $g (@toKill) {
+		Mdm::Group::RemoveGroup($g);
+      }
+      
+      my $assembly;
+      if ($parent) {
+		$assembly = $parent;
+      } else {
+		$assembly=$mol->CreateAssembly();
+		$assembly->SetProperty("Name","Verify Groups");
+      }
+      
+      my $scoreProp = "Verify Score";
+      my $validAll = Mdm::Array::Create();
+      my $invalidAll = Mdm::Array::Create();
+      my $gp = Mdm::Array::Create();
+      my $validCnt = 0;
+      my $invalidCnt = 0;
+      my $first = 1;
+
+
+      for (my $i = 0; $i < $aas->Count(); $i++) {
+		my $aa = $aas->[$i];
+		my $t = $aa->GetProperty($scoreProp);
+		my $u = "";
+		$u = $aas->[$i + 1]->GetProperty($scoreProp) if($i < ($aas->Count() - 1));
+	
+		next if(length($t) == 0);
+	
+		### group
+		if ($t >= 0) {
+			$validAll->AddItem($aa);
+		} else {
+			$invalidAll->AddItem($aa);
+		}
+	
+		$gp->AddItem($aa);
+		if ((length($u) == 0) or ($t >= 0 and $u < 0) or ($t < 0 and $u >= 0)) {
+			my $gpName = "";
+			if ($t >= 0) {
+				$validCnt ++;
+				$gpName = "Valid-$validCnt";
+			} else {
+				$invalidCnt ++;
+				$gpName = "Invalid-$invalidCnt";
+			}
+	  
+			$assembly->CreateGroup($gpName, $gp);
+	  
+			$gp->ClearItems();
+		}
+      }
+      $assembly->CreateGroup("Valid-All", $validAll) if($validAll->Count() > 0);
+      $assembly->CreateGroup("Invalid-All", $invalidAll) if($invalidAll->Count() > 0);
+      
+    
+    }
+}
+
+$document->SetProteinPropertyColorScheme(
+    {
+        PropertyName => "Verify Score",
+        SpectrumType => Mdm::spectrumRedWhiteBlue,
+		NumberOfBands => 16
+    });
+
+$document->UpdateViews();
+DSScript::fit;
+
+use MdmDiscoveryScript;
+use DSScript;
+
+my $hashargs = { message => "<strong>Verify Protein (Profiles-3D)</strong><BR><html><table align=\"left\" border=\"1\" cellspacing=\"4\" summary=\"\"><tr><td>Protein</td><td>Verify Score</td><td>Expected High Score</td><td>Expected Low Score</td></tr><tr><td>P2RY6.M0003</td><td>80.48</td><td>135.595</td><td>61.0176</td></tr><tr><td>P2RY6.M0001</td><td>73.93</td><td>135.595</td><td>61.0176</td></tr><tr><td>P2RY6.M0002</td><td>76.6</td><td>135.595</td><td>61.0176</td></tr><tr><td>4XNV</td><td>91.53</td><td>154.869</td><td>69.6909</td></tr></Table></html>",
+ details => "<html>Per residue verify scores are added to the AminoAcid tab</html>
+",
+ error => "",
+ ignore => "Protocol MessageBox: Verify Protein (Profiles-3D)" };
+use MdmCommands;
+MdmCommands::DSReportMessageBox($hashargs);

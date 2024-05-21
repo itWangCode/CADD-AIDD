@@ -1,0 +1,586 @@
+!BioCAD CHM format, all rights reserved Monday 26 September 2022 14:44:05
+!VERSION 1.1
+QUERY 5HT2c_ligands_4
+{
+  AND primary_amine1 (  ) 
+  {
+    ATTRIBUTES :
+	COORD2D ( 0 0 ) ;
+	COORD3D ( 0 0 0 ) ;
+    TOPOLOGY :
+      ATOM #N#31
+	ELEMENTS ( N )
+	ALIPHATIC
+	HCOUNT ( 2 )
+	LPCOUNT ( 1 )
+	COORD2D ( 0 0 )
+	COORD3D ( -339 672.6 56.1 ) ;
+      ATOM #C#41
+	ELEMENTS ( C )
+	ALIPHATIC
+	LPCOUNT ( 0 )
+	COORDINATION ( 4 )
+	COORD2D ( 0 0 )
+	COORD3D ( -299.5 532.9 11.4 ) ;
+      ATOM #H#51
+	ELEMENTS ( H )
+	ALIPHATIC
+	HCOUNT ( 0 )
+	LPCOUNT ( 0 )
+	COORD2D ( 0 0 )
+	COORD3D ( -271 731.4 114.2 ) ;
+      ATOM #H#61
+	ELEMENTS ( H )
+	ALIPHATIC
+	HCOUNT ( 0 )
+	LPCOUNT ( 0 )
+	COORD2D ( 0 0 )
+	COORD3D ( -434.7 712.2 29.5 ) ;
+      BOND 2-31 ( #N#31 #C#41 )  ;
+      BOND 2-41 ( #N#31 #H#51 )  ;
+      BOND 2-51 ( #N#31 #H#61 )  ;
+  }
+  AND secondary_amine1 (  ) 
+  {
+    ATTRIBUTES :
+	COORD2D ( 0 0 ) ;
+	COORD3D ( 0 0 0 ) ;
+    TOPOLOGY :
+      ATOM #N#81
+	ELEMENTS ( N )
+	ALIPHATIC
+	HCOUNT ( 1 )
+	LPCOUNT ( 1 )
+	COORD2D ( 0 0 )
+	COORD3D ( -269.2 319.9 28 ) ;
+      ATOM #C#91
+	ELEMENTS ( C )
+	ALIPHATIC
+	LPCOUNT ( 0 )
+	COORDINATION ( 4 )
+	COORD2D ( 0 0 )
+	COORD3D ( -389.4 233.4 -15.1 ) ;
+      ATOM #C#101
+	ELEMENTS ( C )
+	ALIPHATIC
+	LPCOUNT ( 0 )
+	COORDINATION ( 4 )
+	COORD2D ( 0 0 )
+	COORD3D ( -135.6 243.7 16.5 ) ;
+      ATOM #H#111
+	ELEMENTS ( H )
+	ALIPHATIC
+	HCOUNT ( 0 )
+	LPCOUNT ( 0 )
+	COORD2D ( 0 0 )
+	COORD3D ( -277.6 421 61.9 ) ;
+      BOND 7-81 ( #N#81 #C#91 )  ;
+      BOND 7-91 ( #N#81 #C#101 )  ;
+      BOND 7-101 ( #N#81 #H#111 )  ;
+  }
+  AND tertiary_amine1 (  ) 
+  {
+    ATTRIBUTES :
+	COORD2D ( 0 0 ) ;
+	COORD3D ( 0 0 0 ) ;
+    TOPOLOGY :
+      ATOM #N#131
+	ELEMENTS ( N )
+	ALIPHATIC
+	HCOUNT ( 0 )
+	LPCOUNT ( 1 )
+	COORD2D ( 0 0 )
+	COORD3D ( -273.9 -50.9 63.5 ) ;
+      ATOM #C#141
+	ELEMENTS ( C )
+	ALIPHATIC
+	LPCOUNT ( 0 )
+	COORDINATION ( 4 )
+	COORD2D ( 0 0 )
+	COORD3D ( -154 -144.1 43.5 ) ;
+      ATOM #C#151
+	ELEMENTS ( C )
+	ALIPHATIC
+	LPCOUNT ( 0 )
+	COORDINATION ( 4 )
+	COORD2D ( 0 0 )
+	COORD3D ( -396.3 -103.2 -12.5 ) ;
+      ATOM #C#161
+	ELEMENTS ( C )
+	ALIPHATIC
+	LPCOUNT ( 0 )
+	COORDINATION ( 4 )
+	COORD2D ( 0 0 )
+	COORD3D ( -240.6 93.4 24.9 ) ;
+      BOND 12-131 ( #N#131 #C#141 )  ;
+      BOND 12-141 ( #N#131 #C#151 )  ;
+      BOND 12-151 ( #N#131 #C#161 )  ;
+  }
+  AND amidine1 (  ) 
+  {
+    ATTRIBUTES :
+	COORD2D ( 0 0 ) ;
+	COORD3D ( 0.2 -0.8 0.7 ) ;
+    TOPOLOGY :
+      ATOM #N#191
+	ELEMENTS ( N )
+	ALIPHATIC
+	HCOUNT ( 0 1 )
+	LPCOUNT ( 1 )
+	COORD2D ( 0 0 )
+	COORD3D ( -246.9 -311.3 64.4 ) ;
+      ATOM #C#201
+	ELEMENTS ( C )
+	ALIPHATIC
+	HCOUNT ( 0 )
+	LPCOUNT ( 0 )
+	COORD2D ( 0 0 )
+	COORD3D ( -212.3 -433.9 51.7 ) ;
+      ATOM #N#211
+	ELEMENTS ( N )
+	ALIPHATIC
+	HCOUNT ( 0 )
+	LPCOUNT ( 0 )
+	COORD2D ( 0 0 )
+	COORD3D ( -302 -528.5 3.8 ) ;
+      BOND 18-191 ( #N#191 #C#201 ) DOUBLE  ;
+      BOND 19-201 ( #C#201 #N#211 )  ;
+  }
+  AND guanidino1 (  ) 
+  {
+    ATTRIBUTES :
+	COORD2D ( 0 0 ) ;
+	COORD3D ( 335.3 662.4 -77.6 ) ;
+    TOPOLOGY :
+      ATOM #H#241
+	ELEMENTS ( H )
+	COORD2D ( 0 0 )
+	COORD3D ( 527 695.6 -17.1 ) ;
+      ATOM #N#251
+	ELEMENTS ( N )
+	ALIPHATIC
+	HCOUNT ( 1 2 )
+	LPCOUNT ( 0 )
+	COORD2D ( 0 0 )
+	COORD3D ( 461.3 624.8 -43 ) ;
+      ATOM #C#261
+	ELEMENTS ( C )
+	ALIPHATIC
+	HCOUNT ( 0 )
+	LPCOUNT ( 0 )
+	COORD2D ( 0 0 )
+	COORD3D ( 332.7 659.7 -78.7 ) ;
+      ATOM #N#271
+	ELEMENTS ( N )
+	ALIPHATIC
+	HCOUNT ( 0 1 )
+	LPCOUNT ( 1 )
+	COORD2D ( 0 0 )
+	COORD3D ( 250.7 569.4 -111.1 ) ;
+      ATOM #N#281
+	ELEMENTS ( N )
+	ALIPHATIC
+	HCOUNT ( 1 2 )
+	LPCOUNT ( 0 )
+	COORD2D ( 0 0 )
+	COORD3D ( 293.9 793.1 -78.9 ) ;
+      ATOM #H#311
+	ELEMENTS ( H )
+	COORD2D ( 0 0 )
+	COORD3D ( 200.6 818 -104.8 ) ;
+      BOND 24-231 ( #N#251 #H#241 )  ;
+      BOND 24-251 ( #N#251 #C#261 )  ;
+      BOND 25-261 ( #C#261 #N#271 ) DOUBLE  ;
+      BOND 25-271 ( #C#261 #N#281 )  ;
+      BOND 27-301 ( #N#281 #H#311 )  ;
+    OBJECTS :
+      POINT point-11
+	COORD2D ( 0 0 )
+	COORD3D ( 335.3 662.4 -77.6 )
+	CENTROID ( #N#251 #N#271 #N#281 )  ;
+  }
+  AND amidine-H1 (  ) 
+  {
+    ATTRIBUTES :
+	COORD2D ( 0 0 ) ;
+	COORD3D ( 374.4 201.9 -67.5 ) ;
+    TOPOLOGY :
+      ATOM #H#361
+	ELEMENTS ( H )
+	COORD2D ( 0 0 )
+	COORD3D ( 372.2 -5.1 -85.9 ) ;
+      ATOM #N#381
+	ELEMENTS ( N )
+	ALIPHATIC
+	HCOUNT ( 0 1 )
+	LPCOUNT ( 1 )
+	COORD2D ( 0 0 )
+	COORD3D ( 403.7 312.7 -49.1 ) ;
+      ATOM #C#391
+	ELEMENTS ( C )
+	ALIPHATIC
+	HCOUNT ( 0 )
+	LPCOUNT ( 0 )
+	COORD2D ( 0 0 )
+	COORD3D ( 436.8 189.1 -49.8 ) ;
+      ATOM #N#401
+	ELEMENTS ( N )
+	ALIPHATIC
+	HCOUNT ( 1 2 )
+	LPCOUNT ( 0 )
+	COORD2D ( 0 0 )
+	COORD3D ( 345.1 91.1 -85.8 ) ;
+      BOND 39-351 ( #N#401 #H#361 )  ;
+      BOND 37-381 ( #N#381 #C#391 ) DOUBLE  ;
+      BOND 38-391 ( #C#391 #N#401 )  ;
+    OBJECTS :
+      POINT point-21
+	COORD2D ( 0 0 )
+	COORD3D ( 374.4 201.9 -67.5 )
+	CENTROID ( #N#381 #N#401 )  ;
+  }
+  AND Exclude_guanidino1 (  ) 
+  {
+    ATTRIBUTES :
+	COORD2D ( 0 0 ) ;
+	COORD3D ( 693 -177.7 -124 ) ;
+    TOPOLOGY :
+      ATOM #N#431
+	ELEMENTS ( N )
+	ALIPHATIC
+	HCOUNT ( 1 2 )
+	LPCOUNT ( 0 )
+	COORD2D ( 0 0 )
+	COORD3D ( 606.8 -134.2 -63.1 ) ;
+      ATOM #C#441
+	ELEMENTS ( C )
+	ALIPHATIC
+	HCOUNT ( 0 )
+	LPCOUNT ( 0 )
+	COORD2D ( 0 0 )
+	COORD3D ( 673.2 -241.3 -119.5 ) ;
+      ATOM #N#451
+	ELEMENTS ( N )
+	ALIPHATIC
+	HCOUNT ( 0 1 )
+	LPCOUNT ( 1 )
+	COORD2D ( 0 0 )
+	COORD3D ( 779.2 -221.1 -185 ) ;
+      ATOM #N#461
+	ELEMENTS ( N )
+	ALIPHATIC
+	HCOUNT ( 1 2 )
+	LPCOUNT ( 0 )
+	COORD2D ( 0 0 )
+	COORD3D ( 623.6 -370.2 -104.3 ) ;
+      ATOM #H#471
+	ELEMENTS ( H )
+	COORD2D ( 0 0 )
+	COORD3D ( 642.8 -41.6 -74.3 ) ;
+      ATOM #H#501
+	ELEMENTS ( H )
+	COORD2D ( 0 0 )
+	COORD3D ( 539.6 -385.7 -52.4 ) ;
+      BOND 42-431 ( #N#431 #C#441 )  ;
+      BOND 43-441 ( #C#441 #N#451 ) DOUBLE  ;
+      BOND 43-451 ( #C#441 #N#461 )  ;
+      BOND 42-461 ( #N#431 #H#471 )  ;
+      BOND 45-491 ( #N#461 #H#501 )  ;
+    OBJECTS :
+      POINT point-2ex1
+	COORD2D ( 0 0 )
+	COORD3D ( 693 -177.7 -124 )
+	CENTROID ( #N#431 #N#451 )  ;
+  }
+  EXCLUDE amidineH_withExclusions1 ( amidine-H1 Exclude_guanidino1 ) 
+  {
+    ATTRIBUTES :
+	COORD2D ( 0 0 ) ;
+	COORD3D ( 392 182 -67.7 ) ;
+	PRESENT ( amidine-H1 ) ;
+	ABSENT ( Exclude_guanidino1 ) ;
+    CONSTRAINTS:
+      MAP amidine-H1/#H#361 
+	( Exclude_guanidino1/#H#501 ) ;
+      MAP amidine-H1/#N#381 
+	( Exclude_guanidino1/#N#451 ) ;
+      MAP amidine-H1/#C#391 
+	( Exclude_guanidino1/#C#441 ) ;
+      MAP amidine-H1/#N#401 
+	( Exclude_guanidino1/#N#461 ) ;
+      MAP amidine-H1/39-351 
+	( Exclude_guanidino1/45-491 ) ;
+      MAP amidine-H1/37-381 
+	( Exclude_guanidino1/43-441 ) ;
+      MAP amidine-H1/38-391 
+	( Exclude_guanidino1/43-451 ) ;
+  }
+  AND pos1 (  ) 
+  {
+    ATTRIBUTES :
+	COORD2D ( 0 0 ) ;
+	COORD3D ( 512.9 -552.2 -71.5 ) ;
+    TOPOLOGY :
+      ATOM #Any_Atom#31
+	ELEMENTS ( ANY )
+	POSITIVE
+	COORD2D ( 0 0 )
+	COORD3D ( 512.9 -552.2 -71.5 ) ;
+  }
+  AND Exclude_PosNeg1 (  ) 
+  {
+    ATTRIBUTES :
+	COORD2D ( 0 0 ) ;
+	COORD3D ( 647.6 -704.6 -95.7 ) ;
+    TOPOLOGY :
+      ATOM #Any_Atom#51
+	ELEMENTS ( ANY )
+	POSITIVE
+	COORD2D ( 0 0 )
+	COORD3D ( 583.7 -682.3 -117.5 ) ;
+      ATOM #Any_Atom#61
+	ELEMENTS ( ANY )
+	NEGATIVE
+	COORD2D ( 0 0 )
+	COORD3D ( 725.2 -721.8 -78.8 ) ;
+      BOND 4-51 ( #Any_Atom#51 #Any_Atom#61 ) SINGLE DOUBLE TRIPLE AROMATIC  ;
+  }
+  EXCLUDE positive_withExclusions1 ( pos1 Exclude_PosNeg1 ) 
+  {
+    ATTRIBUTES :
+	COORD2D ( 0 0 ) ;
+	COORD3D ( 512.9 -552.2 -71.5 ) ;
+	PROP ( SOURCE "BIOCAD_FUNCTION" ) ;
+	PRESENT ( pos1 ) ;
+	ABSENT ( Exclude_PosNeg1 ) ;
+    CONSTRAINTS:
+      MAP pos1/#Any_Atom#31 
+	( Exclude_PosNeg1/#Any_Atom#51 ) ;
+  }
+  OR PosIonizable_1 ( primary_amine1 secondary_amine1 tertiary_amine1 amidine1 guanidino1 amidineH_withExclusions1 positive_withExclusions1 ) 
+  {
+    ATTRIBUTES :
+	COORD2D ( 0 0 ) ;
+	COORD3D ( -701.8 546.8 0 ) ;
+	PROP ( SOURCE "BIOCAD_FUNCTION" ) ;
+    OBJECTS :
+      POINT PosIon-pt1 
+	COORD2D ( 0 0 )
+	COORD3D ( -701.8 546.8 0 )
+	MAP ( primary_amine1/#N#31 secondary_amine1/#N#81 tertiary_amine1/#N#131 amidine1/#N#191 guanidino1/point-11 amidineH_withExclusions1/amidine-H1/point-21 positive_withExclusions1/pos1/#Any_Atom#31 ) 
+	PROP ( INDEX_CODE "18" ) ;
+  }
+  AND HYDROPHOBIC_2 (  ) 
+  {
+    ATTRIBUTES :
+	COORD2D ( 0 0 ) ;
+	COORD3D ( 0 0 0 ) ;
+	PROP ( SOURCE "BIOCAD_FUNCTION" ) ;
+    OBJECTS :
+      POINT Hydrophobic1
+	COORD2D ( 0 0 )
+	COORD3D ( 0 0 0 )
+	HYDROPHOBE 
+	PROP ( INDEX_CODE "11" ) ;
+  }
+  AND HYDROPHOBIC_3 (  ) 
+  {
+    ATTRIBUTES :
+	COORD2D ( 0 0 ) ;
+	COORD3D ( 0 0 0 ) ;
+	PROP ( SOURCE "BIOCAD_FUNCTION" ) ;
+    OBJECTS :
+      POINT Hydrophobic2
+	COORD2D ( 0 0 )
+	COORD3D ( 0 0 0 )
+	HYDROPHOBE 
+	PROP ( INDEX_CODE "11" ) ;
+  }
+  AND HYDROPHOBIC_4 (  ) 
+  {
+    ATTRIBUTES :
+	COORD2D ( 0 0 ) ;
+	COORD3D ( 0 0 0 ) ;
+	PROP ( SOURCE "BIOCAD_FUNCTION" ) ;
+    OBJECTS :
+      POINT Hydrophobic3
+	COORD2D ( 0 0 )
+	COORD3D ( 0 0 0 )
+	HYDROPHOBE 
+	PROP ( INDEX_CODE "11" ) ;
+  }
+  AND atomWithLP1 (  ) 
+  {
+    ATTRIBUTES :
+	COORD2D ( 0 0 ) ;
+	COORD3D ( 0.2 182.4 19.6 ) ;
+    TOPOLOGY :
+      ATOM Heavy#NOS#31
+	ELEMENTS ( N O S )
+	CHARGE ( -7 -6 -5 -4 -3 -2 -1 0 )
+	VALENCE ( 2 3 )
+	LPCOUNT ( 1 2 3 )
+	COORDINATION ( 1 2 )
+	COORD2D ( 0 0 )
+	COORD3D ( 0 -115.7 -14 ) ;
+    OBJECTS :
+      POINT AcceptorProj11
+	COORD2D ( 0 0 )
+	COORD3D ( 0.2 182.4 19.6 ) ;
+      VECTOR AcceptorVector11 HEAD ( AcceptorProj11 ) TAIL ( Heavy#NOS#31 ) HBACCEPTOR  ;
+  }
+  AND goodN1 (  ) 
+  {
+    ATTRIBUTES :
+	COORD2D ( 0 0 ) ;
+	COORD3D ( 321 181.3 0 ) ;
+    TOPOLOGY :
+      ATOM Heavy#N#31
+	ELEMENTS ( N )
+	LPCOUNT ( 1 )
+	COORDINATION ( 3 )
+	COORD2D ( 0 0 )
+	COORD3D ( 321 -118.7 0 ) ;
+      ATOM #NonC#31
+	ELEMENTS ( ANY_NONCARBON )
+	COORD2D ( 0 0 )
+	COORD3D ( 471 -118.7 0 ) ;
+      BOND N-NonC1 ( Heavy#N#31 #NonC#31 ) SINGLE DOUBLE TRIPLE AROMATIC  ;
+    OBJECTS :
+      POINT AcceptorProj21
+	COORD2D ( 0 0 )
+	COORD3D ( 321 181.3 0 ) ;
+      VECTOR AcceptorVector21 HEAD ( AcceptorProj21 ) TAIL ( Heavy#N#31 ) HBACCEPTOR  ;
+  }
+  OR HBA_5 ( atomWithLP1 goodN1 ) 
+  {
+    ATTRIBUTES :
+	COORD2D ( 0 0 ) ;
+	COORD3D ( 135.2 293 4.9 ) ;
+	PROP ( SOURCE "BIOCAD_FUNCTION" ) ;
+    OBJECTS :
+      ATOM heavyAtom1 
+	COORD2D ( 0 0 )
+	COORD3D ( 9.2 293.4 0 )
+	MAP ( atomWithLP1/Heavy#NOS#31 goodN1/Heavy#N#31 ) 
+	PROP ( INDEX_CODE "14" ) ;
+      POINT AcceptorProj1 
+	COORD2D ( 0 0 )
+	COORD3D ( 309.2 293.4 0 )
+	MAP ( atomWithLP1/AcceptorProj11 goodN1/AcceptorProj21 ) 
+	PROP ( INDEX_CODE "15" ) ;
+      VECTOR AcceptorVector1 HEAD ( AcceptorProj1 ) TAIL ( heavyAtom1 ) 
+	MAP ( atomWithLP1/AcceptorVector11 goodN1/AcceptorVector21 )  ;
+  }
+  AND atomWithLP2 (  ) 
+  {
+    ATTRIBUTES :
+	COORD2D ( 0 0 ) ;
+	COORD3D ( 0.2 182.4 19.6 ) ;
+    TOPOLOGY :
+      ATOM Heavy#NOS#32
+	ELEMENTS ( N O S )
+	CHARGE ( -7 -6 -5 -4 -3 -2 -1 0 )
+	VALENCE ( 2 3 )
+	LPCOUNT ( 1 2 3 )
+	COORDINATION ( 1 2 )
+	COORD2D ( 0 0 )
+	COORD3D ( 0 -115.7 -14 ) ;
+    OBJECTS :
+      POINT AcceptorProj12
+	COORD2D ( 0 0 )
+	COORD3D ( 0.2 182.4 19.6 ) ;
+      VECTOR AcceptorVector12 HEAD ( AcceptorProj12 ) TAIL ( Heavy#NOS#32 ) HBACCEPTOR  ;
+  }
+  AND goodN2 (  ) 
+  {
+    ATTRIBUTES :
+	COORD2D ( 0 0 ) ;
+	COORD3D ( 321 181.3 0 ) ;
+    TOPOLOGY :
+      ATOM Heavy#N#32
+	ELEMENTS ( N )
+	LPCOUNT ( 1 )
+	COORDINATION ( 3 )
+	COORD2D ( 0 0 )
+	COORD3D ( 321 -118.7 0 ) ;
+      ATOM #NonC#32
+	ELEMENTS ( ANY_NONCARBON )
+	COORD2D ( 0 0 )
+	COORD3D ( 471 -118.7 0 ) ;
+      BOND N-NonC2 ( Heavy#N#32 #NonC#32 ) SINGLE DOUBLE TRIPLE AROMATIC  ;
+    OBJECTS :
+      POINT AcceptorProj22
+	COORD2D ( 0 0 )
+	COORD3D ( 321 181.3 0 ) ;
+      VECTOR AcceptorVector22 HEAD ( AcceptorProj22 ) TAIL ( Heavy#N#32 ) HBACCEPTOR  ;
+  }
+  OR HBA_6 ( atomWithLP2 goodN2 ) 
+  {
+    ATTRIBUTES :
+	COORD2D ( 0 0 ) ;
+	COORD3D ( 135.2 293 4.9 ) ;
+	PROP ( SOURCE "BIOCAD_FUNCTION" ) ;
+    OBJECTS :
+      ATOM heavyAtom2 
+	COORD2D ( 0 0 )
+	COORD3D ( 9.2 293.4 0 )
+	MAP ( atomWithLP2/Heavy#NOS#32 goodN2/Heavy#N#32 ) 
+	PROP ( INDEX_CODE "14" ) ;
+      POINT AcceptorProj2 
+	COORD2D ( 0 0 )
+	COORD3D ( 309.2 293.4 0 )
+	MAP ( atomWithLP2/AcceptorProj12 goodN2/AcceptorProj22 ) 
+	PROP ( INDEX_CODE "15" ) ;
+      VECTOR AcceptorVector2 HEAD ( AcceptorProj2 ) TAIL ( heavyAtom2 ) 
+	MAP ( atomWithLP2/AcceptorVector12 goodN2/AcceptorVector22 )  ;
+  }
+  FIT 5HT2c_ligands_4 ( PosIonizable_1 HYDROPHOBIC_2 HYDROPHOBIC_3 HYDROPHOBIC_4 HBA_5 HBA_6 ) 
+  {
+    ATTRIBUTES :
+	COORD2D ( 0 0 ) ;
+	COORD3D ( 0 0 0 ) ;
+	ROOT ;
+	WEIGHT ( PosIonizable_1 1.0000 ) ;
+	WEIGHT ( HYDROPHOBIC_2 1.0000 ) ;
+	WEIGHT ( HYDROPHOBIC_3 1.0000 ) ;
+	WEIGHT ( HYDROPHOBIC_4 1.0000 ) ;
+	WEIGHT ( HBA_5 1.0000 ) ;
+	WEIGHT ( HBA_6 1.0000 ) ;
+	MINIMUM_FIT ( 0.0000 ) ;
+    CONSTRAINTS :
+      BLOB PosIonizable_1.11 ( PosIonizable_1/PosIon-pt1 )
+	COORD2D ( 469.7 213.6 )
+	COORD3D ( 469.7 213.6 -79.1 )
+	TOLERANCE ( 170.0000 ) ;
+      BLOB HYDROPHOBIC_2.11 ( HYDROPHOBIC_2/Hydrophobic1 )
+	COORD2D ( -322 56 )
+	COORD3D ( -322 56 -152 )
+	TOLERANCE ( 170.0000 ) ;
+      BLOB HYDROPHOBIC_3.11 ( HYDROPHOBIC_3/Hydrophobic2 )
+	COORD2D ( 14 492 )
+	COORD3D ( 14 492 -184 )
+	TOLERANCE ( 170.0000 ) ;
+      BLOB HYDROPHOBIC_4.11 ( HYDROPHOBIC_4/Hydrophobic3 )
+	COORD2D ( -694 -516 )
+	COORD3D ( -694 -516 72 )
+	TOLERANCE ( 170.0000 ) ;
+      BLOB HBA_5.11 ( HBA_5/heavyAtom1 )
+	COORD2D ( 169.1 170.1 )
+	COORD3D ( 169.1 170.1 63.1 )
+	TOLERANCE ( 170.0000 ) ;
+      BLOB HBA_5.21 ( HBA_5/AcceptorProj1 )
+	COORD2D ( 242 -58 )
+	COORD3D ( 242 -58 248 )
+	TOLERANCE ( 230.0000 ) ;
+      BLOB HBA_6.11 ( HBA_6/heavyAtom2 )
+	COORD2D ( -114.4 -232.1 )
+	COORD3D ( -114.4 -232.1 78.3 )
+	TOLERANCE ( 170.0000 ) ;
+      BLOB HBA_6.21 ( HBA_6/AcceptorProj2 )
+	COORD2D ( -70 -496 )
+	COORD3D ( -70 -496 214 )
+	TOLERANCE ( 230.0000 ) ;
+  }
+}
+

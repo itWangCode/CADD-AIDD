@@ -1,0 +1,965 @@
+!BioCAD CHM format, all rights reserved
+!Tue Sep 27 10:22:54 2022
+!VERSION 1.1
+QUERY Ligand_03
+{
+  AND atomWithLP3 ( )
+  {
+    ATTRIBUTES :
+      COORD2D ( 0 0 ) ;
+      COORD3D ( 150.0 0.0 0.0 ) ;
+    TOPOLOGY :
+      ATOM Heavy#NOS#33
+    ELEMENTS ( N O S )
+    CHARGE ( -7 -6 -5 -4 -3 -2 -1 0 )
+    VALENCE ( 2 3 )
+    LPCOUNT ( 1 2 3 )
+    COORDINATION ( 1 2 )
+    COORD2D ( 0 0 )
+    COORD3D ( 0.0 0.0 0.0 ) ;
+    OBJECTS :
+      POINT AcceptorProj13
+    COORD2D ( 0 0 )
+    COORD3D ( 300.0 0.0 0.0 ) ;
+      VECTOR AcceptorVector13 HEAD ( AcceptorProj13 ) TAIL ( Heavy#NOS#33 ) HBACCEPTOR ;
+    CONSTRAINTS :
+  }
+  AND goodN3 ( )
+  {
+    ATTRIBUTES :
+      COORD2D ( 0 0 ) ;
+      COORD3D ( 100.0 0.0 0.0 ) ;
+    TOPOLOGY :
+      ATOM Heavy#N#33
+    ELEMENTS ( N )
+    LPCOUNT ( 1 )
+    COORDINATION ( 3 )
+    COORD2D ( 0 0 )
+    COORD3D ( 0.0 0.0 0.0 ) ;
+      ATOM #NonC#33
+    ELEMENTS ( ANY_NONCARBON )
+    COORD2D ( 0 0 )
+    COORD3D ( 0.0 0.0 0.0 ) ;
+      BOND N-NonC3 ( Heavy#N#33 #NonC#33 ) SINGLE DOUBLE AROMATIC TRIPLE ;
+    OBJECTS :
+      POINT AcceptorProj23
+    COORD2D ( 0 0 )
+    COORD3D ( 300.0 0.0 0.0 ) ;
+      VECTOR AcceptorVector23 HEAD ( AcceptorProj23 ) TAIL ( Heavy#N#33 ) HBACCEPTOR ;
+    CONSTRAINTS :
+  }
+  OR HB_ACCEPTOR3 ( atomWithLP3 goodN3 )
+  {
+    ATTRIBUTES :
+      COORD2D ( 0 0 ) ;
+      COORD3D ( 2373.7 4415.8 72.1 ) ;
+      PROP ( SOURCE "BIOCAD_FUNCTION" ) ;
+    OBJECTS :
+      ATOM heavyAtom3
+    COORD2D ( 0 0 )
+    COORD3D ( 2440.1 4488.9 87.7 )
+    MAP ( atomWithLP3/Heavy#NOS#33 goodN3/Heavy#N#33 )
+    PROP ( INDEX_CODE "14" ) ;
+      POINT AcceptorProj3
+    COORD2D ( 0 0 )
+    COORD3D ( 2240.9 4269.5 40.8 )
+    MAP ( atomWithLP3/AcceptorProj13 goodN3/AcceptorProj23 )
+    PROP ( INDEX_CODE "15" ) ;
+      VECTOR AcceptorVector3 HEAD ( AcceptorProj3 ) TAIL ( heavyAtom3 )
+    MAP ( atomWithLP3/AcceptorVector13 goodN3/AcceptorVector23 ) ;
+  }
+  AND atomWithLP4 ( )
+  {
+    ATTRIBUTES :
+      COORD2D ( 0 0 ) ;
+      COORD3D ( 150.0 0.0 0.0 ) ;
+    TOPOLOGY :
+      ATOM Heavy#NOS#34
+    ELEMENTS ( N O S )
+    CHARGE ( -7 -6 -5 -4 -3 -2 -1 0 )
+    VALENCE ( 2 3 )
+    LPCOUNT ( 1 2 3 )
+    COORDINATION ( 1 2 )
+    COORD2D ( 0 0 )
+    COORD3D ( 0.0 0.0 0.0 ) ;
+    OBJECTS :
+      POINT AcceptorProj14
+    COORD2D ( 0 0 )
+    COORD3D ( 300.0 0.0 0.0 ) ;
+      VECTOR AcceptorVector14 HEAD ( AcceptorProj14 ) TAIL ( Heavy#NOS#34 ) HBACCEPTOR ;
+    CONSTRAINTS :
+  }
+  AND goodN4 ( )
+  {
+    ATTRIBUTES :
+      COORD2D ( 0 0 ) ;
+      COORD3D ( 100.0 0.0 0.0 ) ;
+    TOPOLOGY :
+      ATOM Heavy#N#34
+    ELEMENTS ( N )
+    LPCOUNT ( 1 )
+    COORDINATION ( 3 )
+    COORD2D ( 0 0 )
+    COORD3D ( 0.0 0.0 0.0 ) ;
+      ATOM #NonC#34
+    ELEMENTS ( ANY_NONCARBON )
+    COORD2D ( 0 0 )
+    COORD3D ( 0.0 0.0 0.0 ) ;
+      BOND N-NonC4 ( Heavy#N#34 #NonC#34 ) SINGLE DOUBLE AROMATIC TRIPLE ;
+    OBJECTS :
+      POINT AcceptorProj24
+    COORD2D ( 0 0 )
+    COORD3D ( 300.0 0.0 0.0 ) ;
+      VECTOR AcceptorVector24 HEAD ( AcceptorProj24 ) TAIL ( Heavy#N#34 ) HBACCEPTOR ;
+    CONSTRAINTS :
+  }
+  OR HB_ACCEPTOR4 ( atomWithLP4 goodN4 )
+  {
+    ATTRIBUTES :
+      COORD2D ( 0 0 ) ;
+      COORD3D ( 2938.3 3913.6 -54.3 ) ;
+      PROP ( SOURCE "BIOCAD_FUNCTION" ) ;
+    OBJECTS :
+      ATOM heavyAtom4
+    COORD2D ( 0 0 )
+    COORD3D ( 2911.9 3923.9 41.6 )
+    MAP ( atomWithLP4/Heavy#NOS#34 goodN4/Heavy#N#34 )
+    PROP ( INDEX_CODE "14" ) ;
+      POINT AcceptorProj4
+    COORD2D ( 0 0 )
+    COORD3D ( 2991.2 3892.9 -246.1 )
+    MAP ( atomWithLP4/AcceptorProj14 goodN4/AcceptorProj24 )
+    PROP ( INDEX_CODE "15" ) ;
+      VECTOR AcceptorVector4 HEAD ( AcceptorProj4 ) TAIL ( heavyAtom4 )
+    MAP ( atomWithLP4/AcceptorVector14 goodN4/AcceptorVector24 ) ;
+  }
+  AND atomWithLP5 ( )
+  {
+    ATTRIBUTES :
+      COORD2D ( 0 0 ) ;
+      COORD3D ( 150.0 0.0 0.0 ) ;
+    TOPOLOGY :
+      ATOM Heavy#NOS#35
+    ELEMENTS ( N O S )
+    CHARGE ( -7 -6 -5 -4 -3 -2 -1 0 )
+    VALENCE ( 2 3 )
+    LPCOUNT ( 1 2 3 )
+    COORDINATION ( 1 2 )
+    COORD2D ( 0 0 )
+    COORD3D ( 0.0 0.0 0.0 ) ;
+    OBJECTS :
+      POINT AcceptorProj15
+    COORD2D ( 0 0 )
+    COORD3D ( 300.0 0.0 0.0 ) ;
+      VECTOR AcceptorVector15 HEAD ( AcceptorProj15 ) TAIL ( Heavy#NOS#35 ) HBACCEPTOR ;
+    CONSTRAINTS :
+  }
+  AND goodN5 ( )
+  {
+    ATTRIBUTES :
+      COORD2D ( 0 0 ) ;
+      COORD3D ( 100.0 0.0 0.0 ) ;
+    TOPOLOGY :
+      ATOM Heavy#N#35
+    ELEMENTS ( N )
+    LPCOUNT ( 1 )
+    COORDINATION ( 3 )
+    COORD2D ( 0 0 )
+    COORD3D ( 0.0 0.0 0.0 ) ;
+      ATOM #NonC#35
+    ELEMENTS ( ANY_NONCARBON )
+    COORD2D ( 0 0 )
+    COORD3D ( 0.0 0.0 0.0 ) ;
+      BOND N-NonC5 ( Heavy#N#35 #NonC#35 ) SINGLE DOUBLE AROMATIC TRIPLE ;
+    OBJECTS :
+      POINT AcceptorProj25
+    COORD2D ( 0 0 )
+    COORD3D ( 300.0 0.0 0.0 ) ;
+      VECTOR AcceptorVector25 HEAD ( AcceptorProj25 ) TAIL ( Heavy#N#35 ) HBACCEPTOR ;
+    CONSTRAINTS :
+  }
+  OR HB_ACCEPTOR5 ( atomWithLP5 goodN5 )
+  {
+    ATTRIBUTES :
+      COORD2D ( 0 0 ) ;
+      COORD3D ( 2976.4 3981.2 279.9 ) ;
+      PROP ( SOURCE "BIOCAD_FUNCTION" ) ;
+    OBJECTS :
+      ATOM heavyAtom5
+    COORD2D ( 0 0 )
+    COORD3D ( 3040.2 3978.9 202.9 )
+    MAP ( atomWithLP5/Heavy#NOS#35 goodN5/Heavy#N#35 )
+    PROP ( INDEX_CODE "14" ) ;
+      POINT AcceptorProj5
+    COORD2D ( 0 0 )
+    COORD3D ( 2848.8 3985.9 433.8 )
+    MAP ( atomWithLP5/AcceptorProj15 goodN5/AcceptorProj25 )
+    PROP ( INDEX_CODE "15" ) ;
+      VECTOR AcceptorVector5 HEAD ( AcceptorProj5 ) TAIL ( heavyAtom5 )
+    MAP ( atomWithLP5/AcceptorVector15 goodN5/AcceptorVector25 ) ;
+  }
+  AND Hydroxyl1 ( )
+  {
+    ATTRIBUTES :
+      COORD2D ( 0 0 ) ;
+      COORD3D ( 100.0 0.0 0.0 ) ;
+    TOPOLOGY :
+      ATOM Heavy#O#51
+    ELEMENTS ( O )
+    ALIPHATIC
+    HCOUNT ( 1 )
+    COORD2D ( 0 0 )
+    COORD3D ( 0.0 0.0 0.0 ) ;
+      ATOM #H#61
+    ELEMENTS ( H )
+    COORD2D ( 0 0 )
+    COORD3D ( 0.0 0.0 0.0 ) ;
+      BOND 4-51 ( Heavy#O#51 #H#61 ) ;
+    OBJECTS :
+      POINT DonorProj11
+    COORD2D ( 0 0 )
+    COORD3D ( 300.0 0.0 0.0 ) ;
+      VECTOR DonorVector11 HEAD ( DonorProj11 ) TAIL ( Heavy#O#51 ) HBDONOR ;
+    CONSTRAINTS :
+  }
+  AND Exclude_IonizedHydroxyl1 ( )
+  {
+    ATTRIBUTES :
+      COORD2D ( 0 0 ) ;
+      COORD3D ( 0.0 0.0 0.0 ) ;
+    TOPOLOGY :
+      ATOM #CPS...#81
+    ELEMENTS ( C P S )
+    ALIPHATIC
+    HCOUNT ( 0 )
+    COORD2D ( 0 0 )
+    COORD3D ( 0.0 0.0 0.0 ) ;
+      ATOM #O#101
+    ELEMENTS ( O )
+    ALIPHATIC
+    HCOUNT ( 0 )
+    LPCOUNT ( 2 )
+    COORD2D ( 0 0 )
+    COORD3D ( 0.0 0.0 0.0 ) ;
+      ATOM #O#111
+    ELEMENTS ( O )
+    ALIPHATIC
+    HCOUNT ( 1 )
+    COORD2D ( 0 0 )
+    COORD3D ( 0.0 0.0 0.0 ) ;
+      ATOM #H#121
+    ELEMENTS ( H )
+    COORD2D ( 0 0 )
+    COORD3D ( 0.0 0.0 0.0 ) ;
+      BOND 7-91 ( #CPS...#81 #O#101 ) DOUBLE ;
+      BOND 7-101 ( #CPS...#81 #O#111 ) ;
+      BOND 10-111 ( #O#111 #H#121 ) ;
+    OBJECTS :
+    CONSTRAINTS :
+  }
+  EXCLUDE Hydroxyl_withExclusions1 ( Hydroxyl1 Exclude_IonizedHydroxyl1 )
+  {
+    ATTRIBUTES :
+      COORD2D ( 0 0 ) ;
+      COORD3D ( 0.0 0.0 0.0 ) ;
+    PRESENT ( Hydroxyl1 ) ;
+    ABSENT ( Exclude_IonizedHydroxyl1 ) ;
+    CONSTRAINTS :
+      MAP Hydroxyl1/Heavy#O#51
+    ( Exclude_IonizedHydroxyl1/#O#111 ) ;
+      MAP Hydroxyl1/#H#61
+    ( Exclude_IonizedHydroxyl1/#H#121 ) ;
+      MAP Hydroxyl1/4-51
+    ( Exclude_IonizedHydroxyl1/10-111 ) ;
+  }
+  AND ThiolAcetylene1 ( )
+  {
+    ATTRIBUTES :
+      COORD2D ( 0 0 ) ;
+      COORD3D ( 100.0 0.0 0.0 ) ;
+    TOPOLOGY :
+      ATOM Heavy#CS#141
+    ELEMENTS ( C S )
+    ALIPHATIC
+    HCOUNT ( 1 )
+    COORDINATION ( 2 )
+    COORD2D ( 0 0 )
+    COORD3D ( 0.0 0.0 0.0 ) ;
+      ATOM #H#151
+    ELEMENTS ( H )
+    COORD2D ( 0 0 )
+    COORD3D ( 0.0 0.0 0.0 ) ;
+      BOND 13-141 ( Heavy#CS#141 #H#151 ) ;
+    OBJECTS :
+      POINT DonorProj21
+    COORD2D ( 0 0 )
+    COORD3D ( 300.0 0.0 0.0 ) ;
+      VECTOR DonorVector21 HEAD ( DonorProj21 ) TAIL ( Heavy#CS#141 ) HBDONOR ;
+    CONSTRAINTS :
+  }
+  AND amine1 ( )
+  {
+    ATTRIBUTES :
+      COORD2D ( 0 0 ) ;
+      COORD3D ( 100.0 0.0 0.0 ) ;
+    TOPOLOGY :
+      ATOM #H#191
+    ELEMENTS ( H )
+    COORD2D ( 0 0 )
+    COORD3D ( 0.0 0.0 0.0 ) ;
+      ATOM Heavy#N#201
+    ELEMENTS ( N )
+    HCOUNT ( 1 2 )
+    COORD2D ( 0 0 )
+    COORD3D ( 0.0 0.0 0.0 ) ;
+      BOND 19-181 ( Heavy#N#201 #H#191 ) ;
+    OBJECTS :
+      POINT DonorProj31
+    COORD2D ( 0 0 )
+    COORD3D ( 300.0 0.0 0.0 ) ;
+      VECTOR DonorVector31 HEAD ( DonorProj31 ) TAIL ( Heavy#N#201 ) HBDONOR ;
+    CONSTRAINTS :
+  }
+  AND Exclude_tetrazolyl1 ( )
+  {
+    ATTRIBUTES :
+      COORD2D ( 0 0 ) ;
+      COORD3D ( 0.0 0.0 0.0 ) ;
+    TOPOLOGY :
+      ATOM #H#281
+    ELEMENTS ( H )
+    COORD2D ( 0 0 )
+    COORD3D ( 0.0 0.0 0.0 ) ;
+      ATOM #C#231
+    ELEMENTS ( C )
+    AROMATIC
+    ENDOCYCLIC
+    BRIDGEHEAD
+    LPCOUNT ( 0 )
+    COORD2D ( 0 0 )
+    COORD3D ( 0.0 0.0 0.0 ) ;
+      ATOM #N#241
+    ELEMENTS ( N )
+    AROMATIC
+    ENDOCYCLIC
+    BRIDGEHEAD
+    HCOUNT ( 0 )
+    LPCOUNT ( 1 )
+    COORD2D ( 0 0 )
+    COORD3D ( 0.0 0.0 0.0 ) ;
+      ATOM #N#251
+    ELEMENTS ( N )
+    AROMATIC
+    ENDOCYCLIC
+    BRIDGEHEAD
+    HCOUNT ( 0 )
+    LPCOUNT ( 1 )
+    COORD2D ( 0 0 )
+    COORD3D ( 0.0 0.0 0.0 ) ;
+      ATOM #N#261
+    ELEMENTS ( N )
+    AROMATIC
+    ENDOCYCLIC
+    BRIDGEHEAD
+    HCOUNT ( 0 )
+    LPCOUNT ( 1 )
+    COORD2D ( 0 0 )
+    COORD3D ( 0.0 0.0 0.0 ) ;
+      ATOM #N#271
+    ELEMENTS ( N )
+    HCOUNT ( 1 2 )
+    COORD2D ( 0 0 )
+    COORD3D ( 0.0 0.0 0.0 ) ;
+      BOND 26-271 ( #N#271 #H#281 ) ;
+      BOND 22-231 ( #C#231 #N#241 ) AROMATIC ENDOCYCLIC ;
+      BOND 23-241 ( #N#241 #N#251 ) AROMATIC ENDOCYCLIC ;
+      BOND 24-251 ( #N#251 #N#261 ) AROMATIC ENDOCYCLIC ;
+      BOND 25-261 ( #N#261 #N#271 ) AROMATIC ENDOCYCLIC ;
+      BOND 22-261 ( #C#231 #N#271 ) AROMATIC ENDOCYCLIC ;
+    OBJECTS :
+    CONSTRAINTS :
+  }
+  AND Exclude_cf3Sulfonamide1 ( )
+  {
+    ATTRIBUTES :
+      COORD2D ( 0 0 ) ;
+      COORD3D ( 0.0 0.0 0.0 ) ;
+    TOPOLOGY :
+      ATOM #F#301
+    ELEMENTS ( F )
+    ALIPHATIC
+    EXOCYCLIC
+    HCOUNT ( 0 )
+    COORD2D ( 0 0 )
+    COORD3D ( 0.0 0.0 0.0 ) ;
+      ATOM #F#311
+    ELEMENTS ( F )
+    ALIPHATIC
+    EXOCYCLIC
+    HCOUNT ( 0 )
+    COORD2D ( 0 0 )
+    COORD3D ( 0.0 0.0 0.0 ) ;
+      ATOM #C#321
+    ELEMENTS ( C )
+    ALIPHATIC
+    EXOCYCLIC
+    HCOUNT ( 0 )
+    COORD2D ( 0 0 )
+    COORD3D ( 0.0 0.0 0.0 ) ;
+      ATOM #H#341
+    ELEMENTS ( H )
+    COORD2D ( 0 0 )
+    COORD3D ( 0.0 0.0 0.0 ) ;
+      ATOM #N#351
+    ELEMENTS ( N )
+    HCOUNT ( 1 2 )
+    COORD2D ( 0 0 )
+    COORD3D ( 0.0 0.0 0.0 ) ;
+      ATOM #O#361
+    ELEMENTS ( O )
+    ALIPHATIC
+    EXOCYCLIC
+    HCOUNT ( 0 )
+    COORD2D ( 0 0 )
+    COORD3D ( 0.0 0.0 0.0 ) ;
+      ATOM #O#371
+    ELEMENTS ( O )
+    ALIPHATIC
+    EXOCYCLIC
+    HCOUNT ( 0 )
+    COORD2D ( 0 0 )
+    COORD3D ( 0.0 0.0 0.0 ) ;
+      ATOM #F#381
+    ELEMENTS ( F )
+    ALIPHATIC
+    EXOCYCLIC
+    HCOUNT ( 0 )
+    COORD2D ( 0 0 )
+    COORD3D ( 0.0 0.0 0.0 ) ;
+      ATOM #S#391
+    ELEMENTS ( S )
+    ALIPHATIC
+    EXOCYCLIC
+    HCOUNT ( 0 )
+    COORD2D ( 0 0 )
+    COORD3D ( 0.0 0.0 0.0 ) ;
+      BOND 33-341 ( #H#341 #N#351 ) ;
+      BOND 38-341 ( #S#391 #N#351 ) EXOCYCLIC ;
+      BOND 38-351 ( #S#391 #O#361 ) DOUBLE EXOCYCLIC ;
+      BOND 38-361 ( #S#391 #O#371 ) DOUBLE EXOCYCLIC ;
+      BOND 31-301 ( #C#321 #F#311 ) EXOCYCLIC ;
+      BOND 31-381 ( #C#321 #S#391 ) EXOCYCLIC ;
+      BOND 31-371 ( #C#321 #F#381 ) EXOCYCLIC ;
+      BOND 31-291 ( #C#321 #F#301 ) EXOCYCLIC ;
+    OBJECTS :
+    CONSTRAINTS :
+  }
+  EXCLUDE good_amine_withExclusions1 ( amine1 Exclude_tetrazolyl1 Exclude_cf3Sulfonamide1 )
+  {
+    ATTRIBUTES :
+      COORD2D ( 0 0 ) ;
+      COORD3D ( 0.0 0.0 0.0 ) ;
+    PRESENT ( amine1 ) ;
+    ABSENT ( Exclude_tetrazolyl1 Exclude_cf3Sulfonamide1 ) ;
+    CONSTRAINTS :
+      MAP amine1/#H#191
+    ( Exclude_tetrazolyl1/#H#281 Exclude_cf3Sulfonamide1/#H#341 ) ;
+      MAP amine1/Heavy#N#201
+    ( Exclude_tetrazolyl1/#N#271 Exclude_cf3Sulfonamide1/#N#351 ) ;
+      MAP amine1/19-181
+    ( Exclude_tetrazolyl1/26-271 Exclude_cf3Sulfonamide1/33-341 ) ;
+  }
+  OR HB_DONOR6 ( Hydroxyl_withExclusions1 ThiolAcetylene1 good_amine_withExclusions1 )
+  {
+    ATTRIBUTES :
+      COORD2D ( 0 0 ) ;
+      COORD3D ( 3171.4 4359.5 360.1 ) ;
+      PROP ( SOURCE "BIOCAD_FUNCTION" ) ;
+    OBJECTS :
+      ATOM heavyAtom6
+    COORD2D ( 0 0 )
+    COORD3D ( 3185.7 4445.8 311.7 )
+    MAP ( Hydroxyl_withExclusions1/Hydroxyl1/Heavy#O#51 ThiolAcetylene1/Heavy#CS#141 good_amine_withExclusions1/amine1/Heavy#N#201 )
+    PROP ( INDEX_CODE "12" ) ;
+      POINT DonorProj1
+    COORD2D ( 0 0 )
+    COORD3D ( 3142.9 4186.8 456.9 )
+    MAP ( Hydroxyl_withExclusions1/Hydroxyl1/DonorProj11 ThiolAcetylene1/DonorProj21 good_amine_withExclusions1/amine1/DonorProj31 )
+    PROP ( INDEX_CODE "13" ) ;
+      VECTOR DonorVector1 HEAD ( DonorProj1 ) TAIL ( heavyAtom6 )
+    MAP ( Hydroxyl_withExclusions1/Hydroxyl1/DonorVector11 ThiolAcetylene1/DonorVector21 good_amine_withExclusions1/amine1/DonorVector31 ) ;
+  }
+  AND Hydroxyl2 ( )
+  {
+    ATTRIBUTES :
+      COORD2D ( 0 0 ) ;
+      COORD3D ( 100.0 0.0 0.0 ) ;
+    TOPOLOGY :
+      ATOM Heavy#O#52
+    ELEMENTS ( O )
+    ALIPHATIC
+    HCOUNT ( 1 )
+    COORD2D ( 0 0 )
+    COORD3D ( 0.0 0.0 0.0 ) ;
+      ATOM #H#62
+    ELEMENTS ( H )
+    COORD2D ( 0 0 )
+    COORD3D ( 0.0 0.0 0.0 ) ;
+      BOND 4-52 ( Heavy#O#52 #H#62 ) ;
+    OBJECTS :
+      POINT DonorProj12
+    COORD2D ( 0 0 )
+    COORD3D ( 300.0 0.0 0.0 ) ;
+      VECTOR DonorVector12 HEAD ( DonorProj12 ) TAIL ( Heavy#O#52 ) HBDONOR ;
+    CONSTRAINTS :
+  }
+  AND Exclude_IonizedHydroxyl2 ( )
+  {
+    ATTRIBUTES :
+      COORD2D ( 0 0 ) ;
+      COORD3D ( 0.0 0.0 0.0 ) ;
+    TOPOLOGY :
+      ATOM #CPS...#82
+    ELEMENTS ( C P S )
+    ALIPHATIC
+    HCOUNT ( 0 )
+    COORD2D ( 0 0 )
+    COORD3D ( 0.0 0.0 0.0 ) ;
+      ATOM #O#102
+    ELEMENTS ( O )
+    ALIPHATIC
+    HCOUNT ( 0 )
+    LPCOUNT ( 2 )
+    COORD2D ( 0 0 )
+    COORD3D ( 0.0 0.0 0.0 ) ;
+      ATOM #O#112
+    ELEMENTS ( O )
+    ALIPHATIC
+    HCOUNT ( 1 )
+    COORD2D ( 0 0 )
+    COORD3D ( 0.0 0.0 0.0 ) ;
+      ATOM #H#122
+    ELEMENTS ( H )
+    COORD2D ( 0 0 )
+    COORD3D ( 0.0 0.0 0.0 ) ;
+      BOND 7-92 ( #CPS...#82 #O#102 ) DOUBLE ;
+      BOND 7-102 ( #CPS...#82 #O#112 ) ;
+      BOND 10-112 ( #O#112 #H#122 ) ;
+    OBJECTS :
+    CONSTRAINTS :
+  }
+  EXCLUDE Hydroxyl_withExclusions2 ( Hydroxyl2 Exclude_IonizedHydroxyl2 )
+  {
+    ATTRIBUTES :
+      COORD2D ( 0 0 ) ;
+      COORD3D ( 0.0 0.0 0.0 ) ;
+    PRESENT ( Hydroxyl2 ) ;
+    ABSENT ( Exclude_IonizedHydroxyl2 ) ;
+    CONSTRAINTS :
+      MAP Hydroxyl2/Heavy#O#52
+    ( Exclude_IonizedHydroxyl2/#O#112 ) ;
+      MAP Hydroxyl2/#H#62
+    ( Exclude_IonizedHydroxyl2/#H#122 ) ;
+      MAP Hydroxyl2/4-52
+    ( Exclude_IonizedHydroxyl2/10-112 ) ;
+  }
+  AND ThiolAcetylene2 ( )
+  {
+    ATTRIBUTES :
+      COORD2D ( 0 0 ) ;
+      COORD3D ( 100.0 0.0 0.0 ) ;
+    TOPOLOGY :
+      ATOM Heavy#CS#142
+    ELEMENTS ( C S )
+    ALIPHATIC
+    HCOUNT ( 1 )
+    COORDINATION ( 2 )
+    COORD2D ( 0 0 )
+    COORD3D ( 0.0 0.0 0.0 ) ;
+      ATOM #H#152
+    ELEMENTS ( H )
+    COORD2D ( 0 0 )
+    COORD3D ( 0.0 0.0 0.0 ) ;
+      BOND 13-142 ( Heavy#CS#142 #H#152 ) ;
+    OBJECTS :
+      POINT DonorProj22
+    COORD2D ( 0 0 )
+    COORD3D ( 300.0 0.0 0.0 ) ;
+      VECTOR DonorVector22 HEAD ( DonorProj22 ) TAIL ( Heavy#CS#142 ) HBDONOR ;
+    CONSTRAINTS :
+  }
+  AND amine2 ( )
+  {
+    ATTRIBUTES :
+      COORD2D ( 0 0 ) ;
+      COORD3D ( 100.0 0.0 0.0 ) ;
+    TOPOLOGY :
+      ATOM #H#192
+    ELEMENTS ( H )
+    COORD2D ( 0 0 )
+    COORD3D ( 0.0 0.0 0.0 ) ;
+      ATOM Heavy#N#202
+    ELEMENTS ( N )
+    HCOUNT ( 1 2 )
+    COORD2D ( 0 0 )
+    COORD3D ( 0.0 0.0 0.0 ) ;
+      BOND 19-182 ( Heavy#N#202 #H#192 ) ;
+    OBJECTS :
+      POINT DonorProj32
+    COORD2D ( 0 0 )
+    COORD3D ( 300.0 0.0 0.0 ) ;
+      VECTOR DonorVector32 HEAD ( DonorProj32 ) TAIL ( Heavy#N#202 ) HBDONOR ;
+    CONSTRAINTS :
+  }
+  AND Exclude_tetrazolyl2 ( )
+  {
+    ATTRIBUTES :
+      COORD2D ( 0 0 ) ;
+      COORD3D ( 0.0 0.0 0.0 ) ;
+    TOPOLOGY :
+      ATOM #H#282
+    ELEMENTS ( H )
+    COORD2D ( 0 0 )
+    COORD3D ( 0.0 0.0 0.0 ) ;
+      ATOM #C#232
+    ELEMENTS ( C )
+    AROMATIC
+    ENDOCYCLIC
+    BRIDGEHEAD
+    LPCOUNT ( 0 )
+    COORD2D ( 0 0 )
+    COORD3D ( 0.0 0.0 0.0 ) ;
+      ATOM #N#242
+    ELEMENTS ( N )
+    AROMATIC
+    ENDOCYCLIC
+    BRIDGEHEAD
+    HCOUNT ( 0 )
+    LPCOUNT ( 1 )
+    COORD2D ( 0 0 )
+    COORD3D ( 0.0 0.0 0.0 ) ;
+      ATOM #N#252
+    ELEMENTS ( N )
+    AROMATIC
+    ENDOCYCLIC
+    BRIDGEHEAD
+    HCOUNT ( 0 )
+    LPCOUNT ( 1 )
+    COORD2D ( 0 0 )
+    COORD3D ( 0.0 0.0 0.0 ) ;
+      ATOM #N#262
+    ELEMENTS ( N )
+    AROMATIC
+    ENDOCYCLIC
+    BRIDGEHEAD
+    HCOUNT ( 0 )
+    LPCOUNT ( 1 )
+    COORD2D ( 0 0 )
+    COORD3D ( 0.0 0.0 0.0 ) ;
+      ATOM #N#272
+    ELEMENTS ( N )
+    HCOUNT ( 1 2 )
+    COORD2D ( 0 0 )
+    COORD3D ( 0.0 0.0 0.0 ) ;
+      BOND 26-272 ( #N#272 #H#282 ) ;
+      BOND 22-232 ( #C#232 #N#242 ) AROMATIC ENDOCYCLIC ;
+      BOND 23-242 ( #N#242 #N#252 ) AROMATIC ENDOCYCLIC ;
+      BOND 24-252 ( #N#252 #N#262 ) AROMATIC ENDOCYCLIC ;
+      BOND 25-262 ( #N#262 #N#272 ) AROMATIC ENDOCYCLIC ;
+      BOND 22-262 ( #C#232 #N#272 ) AROMATIC ENDOCYCLIC ;
+    OBJECTS :
+    CONSTRAINTS :
+  }
+  AND Exclude_cf3Sulfonamide2 ( )
+  {
+    ATTRIBUTES :
+      COORD2D ( 0 0 ) ;
+      COORD3D ( 0.0 0.0 0.0 ) ;
+    TOPOLOGY :
+      ATOM #F#302
+    ELEMENTS ( F )
+    ALIPHATIC
+    EXOCYCLIC
+    HCOUNT ( 0 )
+    COORD2D ( 0 0 )
+    COORD3D ( 0.0 0.0 0.0 ) ;
+      ATOM #F#312
+    ELEMENTS ( F )
+    ALIPHATIC
+    EXOCYCLIC
+    HCOUNT ( 0 )
+    COORD2D ( 0 0 )
+    COORD3D ( 0.0 0.0 0.0 ) ;
+      ATOM #C#322
+    ELEMENTS ( C )
+    ALIPHATIC
+    EXOCYCLIC
+    HCOUNT ( 0 )
+    COORD2D ( 0 0 )
+    COORD3D ( 0.0 0.0 0.0 ) ;
+      ATOM #H#342
+    ELEMENTS ( H )
+    COORD2D ( 0 0 )
+    COORD3D ( 0.0 0.0 0.0 ) ;
+      ATOM #N#352
+    ELEMENTS ( N )
+    HCOUNT ( 1 2 )
+    COORD2D ( 0 0 )
+    COORD3D ( 0.0 0.0 0.0 ) ;
+      ATOM #O#362
+    ELEMENTS ( O )
+    ALIPHATIC
+    EXOCYCLIC
+    HCOUNT ( 0 )
+    COORD2D ( 0 0 )
+    COORD3D ( 0.0 0.0 0.0 ) ;
+      ATOM #O#372
+    ELEMENTS ( O )
+    ALIPHATIC
+    EXOCYCLIC
+    HCOUNT ( 0 )
+    COORD2D ( 0 0 )
+    COORD3D ( 0.0 0.0 0.0 ) ;
+      ATOM #F#382
+    ELEMENTS ( F )
+    ALIPHATIC
+    EXOCYCLIC
+    HCOUNT ( 0 )
+    COORD2D ( 0 0 )
+    COORD3D ( 0.0 0.0 0.0 ) ;
+      ATOM #S#392
+    ELEMENTS ( S )
+    ALIPHATIC
+    EXOCYCLIC
+    HCOUNT ( 0 )
+    COORD2D ( 0 0 )
+    COORD3D ( 0.0 0.0 0.0 ) ;
+      BOND 33-342 ( #H#342 #N#352 ) ;
+      BOND 38-342 ( #S#392 #N#352 ) EXOCYCLIC ;
+      BOND 38-352 ( #S#392 #O#362 ) DOUBLE EXOCYCLIC ;
+      BOND 38-362 ( #S#392 #O#372 ) DOUBLE EXOCYCLIC ;
+      BOND 31-302 ( #C#322 #F#312 ) EXOCYCLIC ;
+      BOND 31-382 ( #C#322 #S#392 ) EXOCYCLIC ;
+      BOND 31-372 ( #C#322 #F#382 ) EXOCYCLIC ;
+      BOND 31-292 ( #C#322 #F#302 ) EXOCYCLIC ;
+    OBJECTS :
+    CONSTRAINTS :
+  }
+  EXCLUDE good_amine_withExclusions2 ( amine2 Exclude_tetrazolyl2 Exclude_cf3Sulfonamide2 )
+  {
+    ATTRIBUTES :
+      COORD2D ( 0 0 ) ;
+      COORD3D ( 0.0 0.0 0.0 ) ;
+    PRESENT ( amine2 ) ;
+    ABSENT ( Exclude_tetrazolyl2 Exclude_cf3Sulfonamide2 ) ;
+    CONSTRAINTS :
+      MAP amine2/#H#192
+    ( Exclude_tetrazolyl2/#H#282 Exclude_cf3Sulfonamide2/#H#342 ) ;
+      MAP amine2/Heavy#N#202
+    ( Exclude_tetrazolyl2/#N#272 Exclude_cf3Sulfonamide2/#N#352 ) ;
+      MAP amine2/19-182
+    ( Exclude_tetrazolyl2/26-272 Exclude_cf3Sulfonamide2/33-342 ) ;
+  }
+  OR HB_DONOR7 ( Hydroxyl_withExclusions2 ThiolAcetylene2 good_amine_withExclusions2 )
+  {
+    ATTRIBUTES :
+      COORD2D ( 0 0 ) ;
+      COORD3D ( 3218.3 3839.7 463.2 ) ;
+      PROP ( SOURCE "BIOCAD_FUNCTION" ) ;
+    OBJECTS :
+      ATOM heavyAtom7
+    COORD2D ( 0 0 )
+    COORD3D ( 3140.4 3850.6 401.5 )
+    MAP ( Hydroxyl_withExclusions2/Hydroxyl2/Heavy#O#52 ThiolAcetylene2/Heavy#CS#142 good_amine_withExclusions2/amine2/Heavy#N#202 )
+    PROP ( INDEX_CODE "12" ) ;
+      POINT DonorProj2
+    COORD2D ( 0 0 )
+    COORD3D ( 3374.1 3817.8 586.7 )
+    MAP ( Hydroxyl_withExclusions2/Hydroxyl2/DonorProj12 ThiolAcetylene2/DonorProj22 good_amine_withExclusions2/amine2/DonorProj32 )
+    PROP ( INDEX_CODE "13" ) ;
+      VECTOR DonorVector2 HEAD ( DonorProj2 ) TAIL ( heavyAtom7 )
+    MAP ( Hydroxyl_withExclusions2/Hydroxyl2/DonorVector12 ThiolAcetylene2/DonorVector22 good_amine_withExclusions2/amine2/DonorVector32 ) ;
+  }
+  AND HYDROPHOBIC9 ( )
+  {
+    ATTRIBUTES :
+      COORD2D ( 0 0 ) ;
+      COORD3D ( 3194.0 4636.0 692.0 ) ;
+      PROP ( SOURCE "BIOCAD_FUNCTION" ) ;
+    TOPOLOGY :
+    OBJECTS :
+      POINT Hydrophobic2
+    COORD2D ( 0 0 )
+    COORD3D ( 3194.0 4636.0 692.0 )
+    HYDROPHOBE
+    PROP ( INDEX_CODE "11" ) ;
+    CONSTRAINTS :
+  }
+  FIT fit ( HB_ACCEPTOR3 HB_ACCEPTOR4 HB_ACCEPTOR5 HB_DONOR6 HB_DONOR7 HYDROPHOBIC9 )
+  {
+    ATTRIBUTES :
+      COORD2D ( 0 0 ) ;
+      COORD3D ( 0.0 0.0 0.0 ) ;
+      ROOT ;
+    WEIGHT ( HB_ACCEPTOR3 1.0000 ) ;
+    WEIGHT ( HB_ACCEPTOR4 1.0000 ) ;
+    WEIGHT ( HB_ACCEPTOR5 1.0000 ) ;
+    WEIGHT ( HB_DONOR6 1.0000 ) ;
+    WEIGHT ( HB_DONOR7 1.0000 ) ;
+    WEIGHT ( HYDROPHOBIC9 1.0000 ) ;
+    MINIMUM_FIT ( 0.0000 ) ;
+    CONSTRAINTS :
+      EXCLUDED_VOLUME ExcludedVolume_1.12
+    COORD2D ( 0 0 )
+    COORD3D ( 2508.6 5147.4 -15.0 )
+    TOLERANCE ( 100.7937 ) ;
+      EXCLUDED_VOLUME ExcludedVolume_1.13
+    COORD2D ( 0 0 )
+    COORD3D ( 3345.5 5122.1 653.1 )
+    TOLERANCE ( 126.9921 ) ;
+      EXCLUDED_VOLUME ExcludedVolume_1.14
+    COORD2D ( 0 0 )
+    COORD3D ( 2083.8 4623.4 89.3 )
+    TOLERANCE ( 100.7937 ) ;
+      EXCLUDED_VOLUME ExcludedVolume_1.15
+    COORD2D ( 0 0 )
+    COORD3D ( 3591.2 4653.3 744.3 )
+    TOLERANCE ( 115.3800 ) ;
+      EXCLUDED_VOLUME ExcludedVolume_1.16
+    COORD2D ( 0 0 )
+    COORD3D ( 2787.4 4518.9 996.6 )
+    TOLERANCE ( 115.3800 ) ;
+      EXCLUDED_VOLUME ExcludedVolume_1.17
+    COORD2D ( 0 0 )
+    COORD3D ( 3389.4 3712.7 655.6 )
+    TOLERANCE ( 136.7981 ) ;
+      EXCLUDED_VOLUME ExcludedVolume_1.18
+    COORD2D ( 0 0 )
+    COORD3D ( 2413.4 4668.0 445.0 )
+    TOLERANCE ( 153.0345 ) ;
+      EXCLUDED_VOLUME ExcludedVolume_1.19
+    COORD2D ( 0 0 )
+    COORD3D ( 3603.3 4633.6 35.6 )
+    TOLERANCE ( 100.7937 ) ;
+      EXCLUDED_VOLUME ExcludedVolume_1.20
+    COORD2D ( 0 0 )
+    COORD3D ( 2805.9 4213.5 533.9 )
+    TOLERANCE ( 153.0345 ) ;
+      EXCLUDED_VOLUME ExcludedVolume_1.21
+    COORD2D ( 0 0 )
+    COORD3D ( 2896.2 5059.5 805.0 )
+    TOLERANCE ( 126.9921 ) ;
+      EXCLUDED_VOLUME ExcludedVolume_1.22
+    COORD2D ( 0 0 )
+    COORD3D ( 3715.8 4147.8 618.9 )
+    TOLERANCE ( 126.9921 ) ;
+      EXCLUDED_VOLUME ExcludedVolume_1.23
+    COORD2D ( 0 0 )
+    COORD3D ( 3299.8 3315.0 500.1 )
+    TOLERANCE ( 126.9921 ) ;
+      EXCLUDED_VOLUME ExcludedVolume_1.24
+    COORD2D ( 0 0 )
+    COORD3D ( 3305.6 3915.0 -504.2 )
+    TOLERANCE ( 115.3800 ) ;
+      EXCLUDED_VOLUME ExcludedVolume_1.25
+    COORD2D ( 0 0 )
+    COORD3D ( 3874.2 4371.8 327.1 )
+    TOLERANCE ( 145.3696 ) ;
+      EXCLUDED_VOLUME ExcludedVolume_1.26
+    COORD2D ( 0 0 )
+    COORD3D ( 2288.3 4129.9 77.4 )
+    TOLERANCE ( 145.3696 ) ;
+      EXCLUDED_VOLUME ExcludedVolume_1.27
+    COORD2D ( 0 0 )
+    COORD3D ( 3568.2 4916.1 481.2 )
+    TOLERANCE ( 145.3696 ) ;
+      EXCLUDED_VOLUME ExcludedVolume_1.28
+    COORD2D ( 0 0 )
+    COORD3D ( 2740.1 3830.3 -299.7 )
+    TOLERANCE ( 153.0345 ) ;
+      EXCLUDED_VOLUME ExcludedVolume_1.29
+    COORD2D ( 0 0 )
+    COORD3D ( 3323.2 3566.4 -102.4 )
+    TOLERANCE ( 172.3548 ) ;
+      EXCLUDED_VOLUME ExcludedVolume_1.30
+    COORD2D ( 0 0 )
+    COORD3D ( 3744.9 4067.6 -137.1 )
+    TOLERANCE ( 145.3696 ) ;
+      EXCLUDED_VOLUME ExcludedVolume_1.31
+    COORD2D ( 0 0 )
+    COORD3D ( 3089.1 4198.4 -270.7 )
+    TOLERANCE ( 166.4067 ) ;
+      EXCLUDED_VOLUME ExcludedVolume_1.32
+    COORD2D ( 0 0 )
+    COORD3D ( 3698.4 3692.5 427.4 )
+    TOLERANCE ( 100.7937 ) ;
+      EXCLUDED_VOLUME ExcludedVolume_1.33
+    COORD2D ( 0 0 )
+    COORD3D ( 2848.3 4658.8 488.4 )
+    TOLERANCE ( 136.7981 ) ;
+      EXCLUDED_VOLUME ExcludedVolume_1.34
+    COORD2D ( 0 0 )
+    COORD3D ( 3140.6 4109.3 617.8 )
+    TOLERANCE ( 126.9921 ) ;
+      EXCLUDED_VOLUME ExcludedVolume_1.35
+    COORD2D ( 0 0 )
+    COORD3D ( 3039.3 3448.4 669.1 )
+    TOLERANCE ( 115.3800 ) ;
+      EXCLUDED_VOLUME ExcludedVolume_1.36
+    COORD2D ( 0 0 )
+    COORD3D ( 3369.0 4704.1 1165.8 )
+    TOLERANCE ( 136.7981 ) ;
+      EXCLUDED_VOLUME ExcludedVolume_1.37
+    COORD2D ( 0 0 )
+    COORD3D ( 3112.4 4120.8 937.0 )
+    TOLERANCE ( 115.3800 ) ;
+      EXCLUDED_VOLUME ExcludedVolume_1.38
+    COORD2D ( 0 0 )
+    COORD3D ( 2885.7 3799.7 643.2 )
+    TOLERANCE ( 126.9921 ) ;
+      BLOB HB_ACCEPTOR34 ( HB_ACCEPTOR3/heavyAtom3 )
+    COORD2D ( 0 0 )
+    COORD3D ( 2440.1 4488.9 87.7 )
+    TOLERANCE ( 160.0000 ) ;
+      BLOB HB_ACCEPTOR35 ( HB_ACCEPTOR3/AcceptorProj3 )
+    COORD2D ( 0 0 )
+    COORD3D ( 2240.9 4269.5 40.8 )
+    TOLERANCE ( 220.0000 ) ;
+      BLOB HB_ACCEPTOR46 ( HB_ACCEPTOR4/heavyAtom4 )
+    COORD2D ( 0 0 )
+    COORD3D ( 2911.9 3923.9 41.6 )
+    TOLERANCE ( 160.0000 ) ;
+      BLOB HB_ACCEPTOR47 ( HB_ACCEPTOR4/AcceptorProj4 )
+    COORD2D ( 0 0 )
+    COORD3D ( 2991.2 3892.9 -246.1 )
+    TOLERANCE ( 220.0000 ) ;
+      BLOB HB_ACCEPTOR58 ( HB_ACCEPTOR5/heavyAtom5 )
+    COORD2D ( 0 0 )
+    COORD3D ( 3040.2 3978.9 202.9 )
+    TOLERANCE ( 160.0000 ) ;
+      BLOB HB_ACCEPTOR59 ( HB_ACCEPTOR5/AcceptorProj5 )
+    COORD2D ( 0 0 )
+    COORD3D ( 2848.8 3985.9 433.8 )
+    TOLERANCE ( 220.0000 ) ;
+      BLOB HB_DONOR610 ( HB_DONOR6/heavyAtom6 )
+    COORD2D ( 0 0 )
+    COORD3D ( 3185.7 4445.8 311.7 )
+    TOLERANCE ( 160.0000 ) ;
+      BLOB HB_DONOR611 ( HB_DONOR6/DonorProj1 )
+    COORD2D ( 0 0 )
+    COORD3D ( 3142.9 4186.8 456.9 )
+    TOLERANCE ( 220.0000 ) ;
+      BLOB HB_DONOR712 ( HB_DONOR7/heavyAtom7 )
+    COORD2D ( 0 0 )
+    COORD3D ( 3140.4 3850.6 401.5 )
+    TOLERANCE ( 160.0000 ) ;
+      BLOB HB_DONOR713 ( HB_DONOR7/DonorProj2 )
+    COORD2D ( 0 0 )
+    COORD3D ( 3374.1 3817.8 586.7 )
+    TOLERANCE ( 220.0000 ) ;
+      BLOB HYDROPHOBIC915 ( HYDROPHOBIC9/Hydrophobic2 )
+    COORD2D ( 0 0 )
+    COORD3D ( 3194.0 4636.0 692.0 )
+    TOLERANCE ( 160.0000 ) ;
+  }
+}

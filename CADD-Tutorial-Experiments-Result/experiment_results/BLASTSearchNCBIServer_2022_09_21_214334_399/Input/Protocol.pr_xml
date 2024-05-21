@@ -1,0 +1,62 @@
+
+<ELU xmlns="http://www.accelrys.com/dsm/elu/2">
+  <experiment Expanded="Advanced" Guid="{BD4A385B-DC88-414F-B122-CCAEE7A390D7}" protocol="Protocols/BIOVIA Discovery Studio/Discovery Studio/Macromolecules/Sequence Analysis/BLAST Search (NCBI Server)" protocolName="BLAST Search (NCBI Server)" version="1">
+    <Accl:mpropval name="Advanced" type="GroupType">
+      <Accl:value></Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="DSRunInteractive" type="BoolType">
+      <Accl:value>True</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="E-value Cutoff" type="DoubleType">
+      <Accl:value>10</Accl:value>
+      <Accl:transformData>10</Accl:transformData>
+    </Accl:mpropval>
+    <Accl:mpropval name="Entrez Query" type="StringType">
+      <Accl:value></Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Filter Low Complexity" type="BoolType">
+      <Accl:value>True</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Gap Penalties" type="StringType">
+      <Accl:value>Existence: 11 Extension: 1</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Gapped Alignment" type="BoolType">
+      <Accl:value>True</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Input Database" type="StringType">
+      <Accl:value>pdbaa</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Input Sequence" type="AasequenceType">
+      <Accl:value>Q15077:P2RY6</Accl:value>
+      <Accl:transformData>56fc115e-0e46-e6e3-0b-7c-6d-94-54-33-68-1f:28e83347-f840-4042-53-ee-bf-b5-97-13-b5-19</Accl:transformData>
+    </Accl:mpropval>
+    <Accl:mpropval name="Maximum Hits" type="LongType">
+      <Accl:value>100</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Organism" type="StringType">
+      <Accl:value></Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Reporting" type="GroupType">
+      <Accl:value></Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Reporting Stylesheet" type="StylesheetType">
+      <Accl:value>{42691EC8-0CE0-4DB9-8B3C-5379CBB967A7}</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Save Intermediate Files" type="BoolType">
+      <Accl:value>False</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Scoring Matrix" type="StringType">
+      <Accl:value>BLOSUM62</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="URL" type="StringType">
+      <Accl:value>https://blast.ncbi.nlm.nih.gov/Blast.cgi</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Use Composition Based Statistics" type="BoolType">
+      <Accl:value>True</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Word Size" type="LongType">
+      <Accl:value>3</Accl:value>
+    </Accl:mpropval>
+  </experiment>
+
+</ELU>

@@ -1,0 +1,24 @@
+#!/usr/bin/perl
+use MdmDiscoveryScript;
+use SdmDiscoveryScript;
+use DSScript;
+
+my $mdmdoc = DiscoveryScript::LastActiveDocument(MdmModelType);
+if (!$mdmdoc) {
+	$mdmdoc = DiscoveryScript::Open({"Path" => "../Input/Blast_Structures-(1).dsv", "LoadAllObjects" => False});
+}
+
+my $sdmdoc = DiscoveryScript::Open({"Path" => "P2RY6_templates.bsml"});
+
+if ($mdmdoc && $sdmdoc) {
+	$sdmdoc->LinkMdmDocument($mdmdoc);
+}
+use MdmDiscoveryScript;
+use DSScript;
+
+my $hashargs = { message => "<strong>Align Sequence to Templates</strong><BR>Model sequence P2RY6 aligned with 1 template<BR>Sequence identity = 31.0%<BR>Sequence similarity = 48.5%",
+ details => "",
+ error => "",
+ ignore => "Protocol MessageBox: Align Sequence to Templates" };
+use MdmCommands;
+MdmCommands::DSReportMessageBox($hashargs);

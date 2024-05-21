@@ -1,0 +1,46 @@
+
+<ELU xmlns="http://www.accelrys.com/dsm/elu/2">
+  <experiment Expanded="Advanced" Guid="{7BA1DF4C-5E0A-A40E-BFD6-EB2B7A8BEB88}" protocol="Protocols/BIOVIA Discovery Studio/Discovery Studio/Pharmacophores/Pharmacophore Features/Feature Mapping" protocolName="Feature Mapping" version="1">
+    <Accl:mpropval name="Advanced" type="GroupType">
+      <Accl:value></Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="ApplyToWindow" type="StringType">
+      <Accl:value>Input Ligands</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Catalyst Parameter File" type="CopyurlType">
+      <Accl:value></Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="CustomDictionary" type="CustomdictionaryOfFeaturesnocountsType">
+      <Accl:value></Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="DSRunInteractive" type="BoolType">
+      <Accl:value>True</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="DeclareLocal" type="StringType">
+      <Accl:value>OutputName</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Features" type="FeaturesnocountsType">
+      <Accl:value>HB_ACCEPTOR,HB_DONOR,HYDROPHOBIC,NEG_IONIZABLE,POS_IONIZABLE,RING_AROMATIC</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="FilesToOpen" type="StringType">
+      <Accl:value>ViewResults.ds_pl</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Input Ligands" type="LigandsType">
+      <Accl:value>5HT2c_ligands:All</Accl:value>
+      <Accl:transformData>5350e64d-cd04-b6dc-cc-04-da-04-7c-18-98-08</Accl:transformData>
+    </Accl:mpropval>
+    <Accl:mpropval name="Map Each Conformation Separately" type="BoolType">
+      <Accl:value>False</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Reporting" type="GroupType">
+      <Accl:value></Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Reporting Stylesheet" type="StylesheetType">
+      <Accl:value>{42691EC8-0CE0-4DB9-8B3C-5379CBB967A7}</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Save Intermediate Files" type="BoolType">
+      <Accl:value>False</Accl:value>
+    </Accl:mpropval>
+  </experiment>
+
+</ELU>

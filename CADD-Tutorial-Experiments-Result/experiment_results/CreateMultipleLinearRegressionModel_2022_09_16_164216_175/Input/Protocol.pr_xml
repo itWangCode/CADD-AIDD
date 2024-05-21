@@ -1,0 +1,79 @@
+
+<ELU xmlns="http://www.accelrys.com/dsm/elu/2">
+  <experiment Expanded="Dependent Property,Advanced,Independent Properties,Cross Validation" Guid="{1AAD2D02-E4F7-4227-A47F-D4CDC5E0C084}" protocol="Protocols/BIOVIA Discovery Studio/Discovery Studio/Small Molecules/QSAR/Create Multiple Linear Regression Model" protocolName="Create Multiple Linear Regression Model" version="1">
+    <Accl:mpropval name="Additional Properties" type="StringType">
+      <Accl:value></Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Advanced" type="GroupType">
+      <Accl:value></Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="ApplyToWindow" type="StringType">
+      <Accl:value>Input Ligands</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Calculable Properties" type="CalculablepropertiesType">
+      <Accl:value>ALogP,ECFP_6,Molecular_Weight,Num_AromaticRings,Num_H_Acceptors,Num_H_Donors,Num_Rings,Num_RotatableBonds,Molecular_FractionalPolarSurfaceArea</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Cross Validation" type="BoolType">
+      <Accl:value>True</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Cross Validation Folds" type="StringType">
+      <Accl:value>5</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="DSRunInteractive" type="BoolType">
+      <Accl:value>True</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Dependent Property" type="NumericpropertyOfLigandsType">
+      <Accl:value>pki-trypsin</Accl:value>
+      <Accl:transformData>pki-trypsin</Accl:transformData>
+    </Accl:mpropval>
+    <Accl:mpropval name="FilesToOpen" type="StringType">
+      <Accl:value>ViewResults.ds_pl</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Independent Properties" type="GroupType">
+      <Accl:value></Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Input Ligands" type="LigandsType">
+      <Accl:value>TrainingSet_dataset-qsar:All</Accl:value>
+      <Accl:transformData>128c5e6d-7561-0bcb-bd-de-0f-c3-6b-9a-62-bc</Accl:transformData>
+    </Accl:mpropval>
+    <Accl:mpropval name="Input Test Ligands" type="LigandsType">
+      <Accl:value>TestSet_dataset-qsar:All</Accl:value>
+      <Accl:transformData>d51468b1-8f31-54f4-1b-e7-de-b9-45-4e-eb-36</Accl:transformData>
+    </Accl:mpropval>
+    <Accl:mpropval name="Learn Options" type="StringType">
+      <Accl:value>Perform OPS Analysis,Track Fingerprint Features</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Maximum Correlation" type="DoubleType">
+      <Accl:value>0.90</Accl:value>
+      <Accl:transformData>0.90</Accl:transformData>
+    </Accl:mpropval>
+    <Accl:mpropval name="Minimum Samples per Variable" type="StringType">
+      <Accl:value>SqrtEstimate</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Model Domain Fingerprint" type="StringType">
+      <Accl:value>FCFP_2</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Model Name" type="StringType">
+      <Accl:value>MY_2D_QSAR</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Reporting" type="GroupType">
+      <Accl:value></Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Reporting Chart Display Type" type="StringType">
+      <Accl:value>Default</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Reporting Stylesheet" type="StylesheetType">
+      <Accl:value>{42691EC8-0CE0-4DB9-8B3C-5379CBB967A7}</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Save Intermediate Files" type="BoolType">
+      <Accl:value>False</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="User Properties" type="PropertiesOfLigandsType">
+      <Accl:value></Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Weight Property" type="NumericpropertyOfLigandsType">
+      <Accl:value></Accl:value>
+    </Accl:mpropval>
+  </experiment>
+
+</ELU>

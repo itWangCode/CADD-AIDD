@@ -1,0 +1,172 @@
+
+<ELU xmlns="http://www.accelrys.com/dsm/elu/2">
+  <experiment Expanded="Validation,Conformation Generation" Guid="{621C4E0D-A814-0A0B-C040-1B6A65DE18D3}" protocol="Protocols/BIOVIA Discovery Studio/Discovery Studio/Pharmacophores/Create Pharmacophores/Common Feature Pharmacophore Generation" protocolName="Common Feature Pharmacophore Generation" version="1">
+    <Accl:mpropval name="Active Ligands" type="LigandsType">
+      <Accl:value>F:\GitHub\CADD----\5.LBDD\上机课-LBDD-1-V2021\active_ligands.sd</Accl:value>
+      <Accl:transformData>THISISAFILE</Accl:transformData>
+    </Accl:mpropval>
+    <Accl:mpropval name="Advanced" type="GroupType">
+      <Accl:value></Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Align Ligands to Hypothesis" type="BoolType">
+      <Accl:value>True</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Best Mapping Only" type="BoolType">
+      <Accl:value>True</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Catalyst Parameter File" type="CopyurlType">
+      <Accl:value></Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Check Superposition" type="BoolType">
+      <Accl:value>True</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Complete Misses" type="LongType">
+      <Accl:value>0</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Conformation Generation" type="StringType">
+      <Accl:value>BEST</Accl:value>
+      <Accl:transformData>BEST</Accl:transformData>
+    </Accl:mpropval>
+    <Accl:mpropval name="CustomDictionary" type="CustomdictionaryOfFeaturesType">
+      <Accl:value></Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="DSRunInteractive" type="BoolType">
+      <Accl:value>True</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="DeclareLocal" type="StringType">
+      <Accl:value>OutputName,OutputConfName,OutputFailConfName</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Discard Existing Conformations" type="BoolType">
+      <Accl:value>True</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Energy Threshold" type="DoubleType">
+      <Accl:value>10</Accl:value>
+      <Accl:transformData>10</Accl:transformData>
+    </Accl:mpropval>
+    <Accl:mpropval name="Explore Exhaustive HBond Geometry" type="BoolType">
+      <Accl:value>True</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Feature Misses" type="LongType">
+      <Accl:value>1</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Features" type="FeaturesType">
+      <Accl:value>HB_ACCEPTOR 0 5,HB_DONOR 0 5,HYDROPHOBIC 0 5,HYDROPHOBIC_aromatic 0 5,POS_IONIZABLE 0 5</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Inactive Ligands" type="LigandsType">
+      <Accl:value>F:\GitHub\CADD----\5.LBDD\上机课-LBDD-1-V2021\inactive_ligands.sd</Accl:value>
+      <Accl:transformData>THISISAFILE</Accl:transformData>
+    </Accl:mpropval>
+    <Accl:mpropval name="Input Ligands" type="LigandsType">
+      <Accl:value>5HT2c_ligands:All</Accl:value>
+      <Accl:transformData>5350e64d-cd04-b6dc-cc-04-da-04-7c-18-98-08</Accl:transformData>
+    </Accl:mpropval>
+    <Accl:mpropval name="Input Ligands Preprocessing" type="StringType">
+      <Accl:value></Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Maximum Conformations" type="LongType">
+      <Accl:value>200</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Maximum Confs Per Mapping" type="LongType">
+      <Accl:value>1000</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Maximum Excluded Volumes" type="LongType">
+      <Accl:value>0</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Maximum Features" type="LongType">
+      <Accl:value>10</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Maximum Mappings" type="LongType">
+      <Accl:value>1000</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Maximum Pharmacophores" type="LongType">
+      <Accl:value>5</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Memory" type="LongType">
+      <Accl:value>512</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Minimum Feature Points" type="LongType">
+      <Accl:value>4</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Minimum Features" type="LongType">
+      <Accl:value>1</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Minimum Features in Moderately Active" type="LongType">
+      <Accl:value>4</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Minimum Interfeature Distance" type="DoubleType">
+      <Accl:value>2.97</Accl:value>
+      <Accl:transformData>2.97</Accl:transformData>
+    </Accl:mpropval>
+    <Accl:mpropval name="Number of Leads That May Miss" type="LongType">
+      <Accl:value>1</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Parallel Processing" type="BoolType">
+      <Accl:value>False</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Parallel Processing Batch Size" type="LongType">
+      <Accl:value>4</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Parallel Processing Preserve Order" type="BoolType">
+      <Accl:value>True</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Parallel Processing Server" type="StringType">
+      <Accl:value>localhost</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Parallel Processing Server Processes" type="StringType">
+      <Accl:value>2</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Reporting" type="GroupType">
+      <Accl:value></Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Reporting Stylesheet" type="StylesheetType">
+      <Accl:value>{42691EC8-0CE0-4DB9-8B3C-5379CBB967A7}</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Ring Fragments File" type="CopyurlType">
+      <Accl:value></Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Save Conformations" type="BoolType">
+      <Accl:value>False</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Save Intermediate Files" type="BoolType">
+      <Accl:value>False</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Scale Feature Blob Size" type="DoubleType">
+      <Accl:value>1.0</Accl:value>
+      <Accl:transformData>1.0</Accl:transformData>
+    </Accl:mpropval>
+    <Accl:mpropval name="Stereoisomers As Different Molecules" type="BoolType">
+      <Accl:value>False</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Superposition Error" type="DoubleType">
+      <Accl:value>1.0</Accl:value>
+      <Accl:transformData>1.0</Accl:transformData>
+    </Accl:mpropval>
+    <Accl:mpropval name="Validation" type="BoolType">
+      <Accl:value>True</Accl:value>
+      <Accl:transformData>True</Accl:transformData>
+    </Accl:mpropval>
+    <Accl:mpropval name="Validation Conformation Generation" type="StringType">
+      <Accl:value>FAST</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Validation Conformation Generation Discard Existing Conformations" type="BoolType">
+      <Accl:value>True</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Validation Conformation Generation Energy Threshold" type="DoubleType">
+      <Accl:value>20.0</Accl:value>
+      <Accl:transformData>20.0</Accl:transformData>
+    </Accl:mpropval>
+    <Accl:mpropval name="Validation Conformation Generation Maximum Conformations" type="LongType">
+      <Accl:value>250</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Validation Conformation Generation Ring Fragments File" type="CopyurlType">
+      <Accl:value></Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Validation Fitting Method" type="StringType">
+      <Accl:value>Rigid</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Validation Maximum Omitted Features" type="LongType">
+      <Accl:value>-1</Accl:value>
+    </Accl:mpropval>
+  </experiment>
+
+</ELU>

@@ -1,0 +1,57 @@
+
+---------------------------------------------------------
+
+ BIOVIA, San Diego 2007
+ LibDock version: 2.3
+ Build date: Oct 14 2018
+
+ D. Diller & K. Merz (2001).
+ "High Throughput Docking for Library Design and Library Prioritization."
+ Proteins: Struct., Funct., and Genet. 43:113-124.
+
+---------------------------------------------------------
+####################################################################
+####################### PARAMETER VALUES ###########################
+####################################################################
+#  XLO                                -26.74
+#  YLO                                -3.02
+#  ZLO                                -24.83
+#  XHI                                -7.27
+#  YHI                                16.46
+#  ZHI                                -5.35
+#  NUM_HOT_SPOTS                      100
+#  PROTEIN_PDB                        3GEN.pdb
+#  HS_FILE                            Hotspots-3GEN.pdb
+#  HOST_NAME                          AbdusemiAbduweli
+####################################################################
+##################### END OF PARAMETER VALUES ######################
+####################################################################
+
+Checked out license feature: DS_LibDock <v2009.03> [for msi<TeAM SolidSQUAD-SSQ>] (1 copy)
+
+There are 4350 atoms in 3GEN.pdb
+The volume of the binding site is 547.87
+There were 67581 points below the cutoff
+The expected value is -3.67
+The std= 1.56
+There are 11617 points above 1 sigma
+There are 2585 points above 2 sigma
+There are 36 points above 3 sigma
+There are 0 points above 4 sigma
+There are 0 points above 5 sigma
+The Apolar grid
+There are 100 apolar clusters
+The Polar grid
+There were 68442 points below the cutoff
+The expected value is -3.24
+The std= 2.43
+There are 10143 points above 1 sigma
+There are 3532 points above 2 sigma
+There are 816 points above 3 sigma
+There are 55 points above 4 sigma
+There are 0 points above 5 sigma
+There are 100 polar clusters
+
+CPU time: 3.87[s]
+
+Released LibDock License

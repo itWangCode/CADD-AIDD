@@ -1,0 +1,22 @@
+#!/usr/bin/perl
+use MdmDiscoveryScript;
+use ChartDiscoveryScript;
+
+# Returns document only if ApplyToWindow condition is true on the client
+my $document = DiscoveryScript::LastActiveDocument(MdmModelType, True);
+
+if ($document) {
+    $document->Insert({"Path" => "TestSet_dataset-AI-2.sd", "FormatType" => "mol-merge-properties"});
+    sleep(1);
+} else{
+    $document = Mdm::Document::Create();
+    $document->Insert({"Path" => "TestSet_dataset-AI-2.sd", "LoadAllObjects" => False});
+    $document->IsDataTableViewShown = True;
+    $document->IsHierarchyViewShown = False;
+    $document->IsGraphicsViewShown  = False; 
+}
+
+$document->UpdateViews();
+
+my $chart = Chart::Document::CreateLinePlot($document, "Molecule", "%FP", "%TP", "");
+$chart->UpdateViews();

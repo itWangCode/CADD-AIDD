@@ -1,0 +1,77 @@
+使用拆分器（Splitters）
+===============================================
+
+`Jupyter Notebook <https://github.com/deepchem/deepchem/blob/master/examples/tutorials/Working_With_Splitters.ipynb>`_
+
+`Jupyter Notebook 中文翻译版查看 <https://github.com/abdusemiabduweli/AIDD-Tutorial-Files/blob/main/DeepChem%20Jupyter%20Notebooks/使用拆分器.ipynb>`_
+
+`Jupyter Notebook 中文翻译版下载 <https://abdusemiabduweli.github.io/AIDD-Tutorial-Files/DeepChem%20Jupyter%20Notebooks/使用拆分器.ipynb>`_
+
+
+在使用机器学习时，通常将数据分为训练集、验证集和测试集。MoleculeNet 加载器会自动完成这个操作。但是应该如何拆分数据呢？这个问题看似简单，但其实很复杂。拆分数据的方法有很多种，选择哪一种方法对结果的可靠性有很大影响。本教程介绍 DeepChem 提供的一些拆分方法。
+
+拆分器（Splitters）
+---------------------
+
+在 DeepChem 中，将样本拆分为多个数据集的方法是由 `Splitter` 对象定义的。为数据选择合适的方法非常重要。否则，你训练过的模型可能看起来比实际工作得更好。
+
+想想一个典型的药物开发流程。你可能从筛选成千上万的分子开始，测试它们是否与你感兴趣的目标结合。一旦你找到了一个似乎有效的，你就会尝试通过测试它的成千上万个变体来优化它，寻找一个具有更强亲合力的分子。再然后你可能会在动物身上测试，看它会不会有不可接受的毒性，所以你会尝试更多的变体来解决问题。
+
+这对化学数据集有一个重要的影响：它们通常包含大量彼此非常相似的分子。如果以一种简单的方式将数据分割为训练集和测试集，训练集将包含许多与测试集中的分子非常相似的分子，即使它们并不完全相同。因此，该模型可能在测试集上表现得非常好，但当您试图将其用于与训练数据不太相似的其他数据时，就会失效。
+
+让我们看看在 DeepChem 中的一些分离器。
+
+RandomSplitter
+:::::::::::::::::::::::
+
+这是最简单的拆分器之一。它只是以完全随机的方式为训练集、验证集和测试集选择样本。
+
+我们不是说过这是个坏主意吗？这取决于你的数据。如果每个样本都是真正独立于其他样本的，那么这是一个拆分数据的好方法。拆分器没有通用的最佳选择。这完全取决于你的数据集，对于某些数据集，这是一个很好的选择。
+
+RandomStratifiedSplitter
+:::::::::::::::::::::::::::::::
+
+一些数据集非常不平衡：所有样本中只有一小部分是正样本。在这种情况下，随机拆分有时可能导致验证集或测试集对某些任务只有很少甚至没有正样本。这使得我们无法评估性能。
+
+`RandomStratifiedSplitter` 通过将正样本和负样本平均拆分来解决这个问题。如果你要求80/10/10的拆分，那么验证集和测试集将不仅包含10%的样本，还包含10%的正样本。
+
+ScaffoldSplitter
+:::::::::::::::::::::
+
+这个拆分器试图解决上面讨论的许多分子彼此非常相似的问题。它识别构成每个分子核心的骨架，并确保具有相同骨架的所有分子都被放入相同的数据集。这仍然不是一个完美的解决方案，因为两个分子可能具有不同的骨架，但在其他方面非常相似，但通常比随机拆分有很大的改进。
+
+ButinaSplitter
+::::::::::::::::::
+
+这是另一种尝试解决相似分子问题的拆分器。它根据它们的分子指纹对它们进行聚类，因此具有相似指纹的往往会在同一个数据集中。这种拆分算法所需的时间是跟分子数量的平方成正比，因此它主要用于中小型数据集。
+
+SpecifiedSplitter
+::::::::::::::::::
+
+这个拆分器把一切都留给用户。你需要确切地告诉它在每个数据集中放入哪些样本。如果你预先知道特定的拆分适合于你的数据，那么这将非常有用。
+
+一个例子是根据时间拆分。假设有一个研究项目，你再不断地生成和测试新分子。当你获得更多的数据时，你定期地在稳定增长的数据集上重新训练你的模型，然后用它来预测其他尚未测试的分子的结果。验证这种方法是否有效的一种好方法是选择一个特定的截止日期，在当时拥有的所有数据上训练模型，并看看它对以后生成的其他数据的预测效果如何。
+
+
+使用不同拆分器的效果
+-------------------------
+
+让我们来看一个例子。我们将使用 random、scaffold、和 Butina 拆分器加载Tox21毒性数据集。对于每一个，我们训练一个模型，并在训练集和测试集上对其进行评估。
+
+.. code-block:: Python
+
+    import deepchem as dc
+
+    splitters = ['random', 'scaffold', 'butina']
+    metric = dc.metrics.Metric(dc.metrics.roc_auc_score)
+    for splitter in splitters:
+        tasks, datasets, transformers = dc.molnet.load_tox21(featurizer='ECFP', split=splitter)
+        train_dataset, valid_dataset, test_dataset = datasets
+        model = dc.models.MultitaskClassifier(n_tasks=len(tasks), n_features=1024, layer_sizes=[1000])
+        model.fit(train_dataset, nb_epoch=10)
+        print('splitter:', splitter)
+        print('training set score:', model.evaluate(train_dataset, [metric], transformers))
+        print('test set score:', model.evaluate(test_dataset, [metric], transformers))
+        print()
+
+它们在训练集上产生非常相似的性能，但 random 拆分器在测试集上有更高的性能。Scaffold 拆分器有较低的测试集得分，Butina 拆分器甚至更低。这是否意味着 random 拆分器更好？不!这意味着 random 拆分器并不能准确地衡量模型的工作情况。因为测试集包含许多与训练集中的分子非常相似的分子，所以它不是真正独立的。它使模型看起来比实际工作得更好。Scaffold 和 Butina 拆分器可以更好地说明未来独立数据的预期结果。

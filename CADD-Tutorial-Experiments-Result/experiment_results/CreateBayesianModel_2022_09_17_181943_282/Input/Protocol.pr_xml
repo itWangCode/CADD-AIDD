@@ -1,0 +1,69 @@
+
+<ELU xmlns="http://www.accelrys.com/dsm/elu/2">
+  <experiment Expanded="Advanced,Cross Validation,Learn Options,Independent Properties" Guid="{DA2D391E-EB9F-47B6-AEA7-E12D99479B7E}" protocol="Protocols/BIOVIA Discovery Studio/Discovery Studio/Small Molecules/QSAR/Create Bayesian Model" protocolName="Create Bayesian Model" version="1">
+    <Accl:mpropval name="Additional Properties" type="StringType">
+      <Accl:value></Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Advanced" type="GroupType">
+      <Accl:value></Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="ApplyToWindow" type="StringType">
+      <Accl:value>Input Ligands</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Calculable Properties" type="CalculablepropertiesType">
+      <Accl:value>ALogP,Molecular_Weight,Num_H_Donors,Num_H_Acceptors,Num_RotatableBonds,Num_Rings,Num_AromaticRings,Molecular_FractionalPolarSurfaceArea,ECFP_6</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Cross Validation" type="BoolType">
+      <Accl:value>True</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Cross Validation Folds" type="StringType">
+      <Accl:value>5</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="DSRunInteractive" type="BoolType">
+      <Accl:value>True</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="FilesToOpen" type="StringType">
+      <Accl:value>ViewResults.ds_pl</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Independent Properties" type="GroupType">
+      <Accl:value></Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Input Ligands" type="LigandsType">
+      <Accl:value>TrainingSet_dataset-AI-2:All</Accl:value>
+      <Accl:transformData>20053b0b-9b71-a7a1-f1-2d-4e-1f-ec-6e-70-76</Accl:transformData>
+    </Accl:mpropval>
+    <Accl:mpropval name="Input Test Ligands" type="LigandsType">
+      <Accl:value>TestSet_dataset-AI-2:All</Accl:value>
+      <Accl:transformData>c6597c4a-0f7c-9b08-c3-74-72-8f-0c-80-51-51</Accl:transformData>
+    </Accl:mpropval>
+    <Accl:mpropval name="Learn Options" type="StringType">
+      <Accl:value>Validate Models,Remove Uninformative Bins,Equipopulate Bins</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Model Domain Fingerprint" type="StringType">
+      <Accl:value>FCFP_2</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Model Name" type="StringType">
+      <Accl:value>MY_Bayesian</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Number of Bins" type="LongType">
+      <Accl:value>10</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Property for Active" type="NumericpropertyOfLigandsType">
+      <Accl:value>activity</Accl:value>
+      <Accl:transformData>activity</Accl:transformData>
+    </Accl:mpropval>
+    <Accl:mpropval name="Reporting" type="GroupType">
+      <Accl:value></Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Reporting Stylesheet" type="StylesheetType">
+      <Accl:value>{42691EC8-0CE0-4DB9-8B3C-5379CBB967A7}</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Save Intermediate Files" type="BoolType">
+      <Accl:value>False</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="User Properties" type="PropertiesOfLigandsType">
+      <Accl:value></Accl:value>
+    </Accl:mpropval>
+  </experiment>
+
+</ELU>

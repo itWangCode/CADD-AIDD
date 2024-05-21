@@ -1,0 +1,6 @@
+#!/usr/bin/perl
+use MdmDiscoveryScript;
+use SdmDiscoveryScript;
+use DSScript;
+
+my $document = DiscoveryScript::Open({"Path" => "3GEN_prep.dsv", "LoadAllObjects" => False});

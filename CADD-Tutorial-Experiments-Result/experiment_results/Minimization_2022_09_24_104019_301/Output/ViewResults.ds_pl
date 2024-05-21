@@ -1,0 +1,25 @@
+#!/usr/bin/perl
+use MdmDiscoveryScript;
+use DSScript;
+
+my $hashargs = { message => "<strong>Minimization</strong><BR>CHARMm Energy = 0.97763.\nFor individual energy components, see the molecule properties in the table.\n",
+ details => "",
+ error => "",
+ ignore => "Protocol MessageBox: Minimization" };
+use MdmCommands;
+MdmCommands::DSReportMessageBox($hashargs);
+use MdmDiscoveryScript;
+use DSScript;
+
+# Returns document only if ApplyToWindow condition is true on the client
+my $document = DiscoveryScript::LastActiveDocument(MdmModelType, True);
+
+if ($document) {
+	$document->Insert({"Path" => "3GEN_ligand.mol2", "FormatType" => "mol2-merge-properties"});
+} else {
+	$document = DiscoveryScript::Open({"Path" => "../Input/3GEN_ligand.dsv", "LoadAllObjects" => False});
+	$document->Insert({"Path" => "3GEN_ligand.mol2", "FormatType" => "mol2-merge-properties"});
+}
+$document->UpdateViews();
+
+DSScript::invoke_action("ActionShowInTable");

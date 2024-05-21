@@ -1,0 +1,128 @@
+
+<ELU xmlns="http://www.accelrys.com/dsm/elu/2">
+  <experiment Expanded="Advanced,Conformation Generation" Guid="{DAAD0CC7-3C20-875A-851F-16C4341F3EED}" protocol="Protocols/BIOVIA Discovery Studio/Discovery Studio/Pharmacophores/Compare Pharmacophores/Ligand Profiler" protocolName="Ligand Profiler" version="1">
+    <Accl:mpropval name="Activity Property" type="PropertyOfLigandsType">
+      <Accl:value></Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Advanced" type="GroupType">
+      <Accl:value></Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Catalyst Parameter File" type="CopyurlType">
+      <Accl:value></Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Conformation Generation" type="StringType">
+      <Accl:value>BEST</Accl:value>
+      <Accl:transformData>BEST</Accl:transformData>
+    </Accl:mpropval>
+    <Accl:mpropval name="DSRunInteractive" type="BoolType">
+      <Accl:value>True</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="DeclareLocal" type="StringType">
+      <Accl:value>OutputName,OutputFailConfName,OutputSPSTName,BaseLigand,FitList,SuccessCount,TmpSPST,AddFromSPST</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Discard Existing Conformations" type="BoolType">
+      <Accl:value>True</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Energy Threshold" type="DoubleType">
+      <Accl:value>10</Accl:value>
+      <Accl:transformData>10</Accl:transformData>
+    </Accl:mpropval>
+    <Accl:mpropval name="Fitting Method" type="StringType">
+      <Accl:value>Rigid</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Input Database" type="StringType">
+      <Accl:value>Sample [81 mol]</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Input Database Hitlist" type="HitlistType">
+      <Accl:value></Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Input Database Limit Hits" type="StringType">
+      <Accl:value>First N</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Input Database Maximum" type="LongType">
+      <Accl:value>300</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Input File Pharmacophores" type="QueriesType">
+      <Accl:value>C:\Users\16606\Documents\Discovery Studio\Results\CommonFeaturePharmacophoreGeneration_2022_09_26_144258_318\Output\5HT2c_ligands_1.ds_chm,C:\Users\16606\Documents\Discovery Studio\Results\CommonFeaturePharmacophoreGeneration_2022_09_26_144258_318\Output\5HT2c_ligands_2.ds_chm,C:\Users\16606\Documents\Discovery Studio\Results\CommonFeaturePharmacophoreGeneration_2022_09_26_144258_318\Output\5HT2c_ligands_3.ds_chm,C:\Users\16606\Documents\Discovery Studio\Results\CommonFeaturePharmacophoreGeneration_2022_09_26_144258_318\Output\5HT2c_ligands_4.ds_chm,C:\Users\16606\Documents\Discovery Studio\Results\CommonFeaturePharmacophoreGeneration_2022_09_26_144258_318\Output\5HT2c_ligands_5.ds_chm</Accl:value>
+      <Accl:transformData>,,,,</Accl:transformData>
+    </Accl:mpropval>
+    <Accl:mpropval name="Input LigandProfilerDB Pharmacophores" type="LigandprofilerdbType">
+      <Accl:value></Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Input Ligands" type="LigandsType">
+      <Accl:value>F:\GitHub\CADD----\5.LBDD\上机课-LBDD-1-V2021\all_ligands.sd</Accl:value>
+      <Accl:transformData>THISISAFILE</Accl:transformData>
+    </Accl:mpropval>
+    <Accl:mpropval name="Input PharmaDB Pharmacophores" type="PharmadbType">
+      <Accl:value></Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Input Type" type="StringType">
+      <Accl:value>Ligands</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Keep Input Conformations" type="BoolType">
+      <Accl:value>False</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Maximum Conformations" type="LongType">
+      <Accl:value>200</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Maximum Omitted Features" type="LongType">
+      <Accl:value>-1</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Minimum Interfeature Distance" type="DoubleType">
+      <Accl:value>0.5</Accl:value>
+      <Accl:transformData>0.5</Accl:transformData>
+    </Accl:mpropval>
+    <Accl:mpropval name="Model Selection" type="StringType">
+      <Accl:value>Most Selective</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Parallel Processing" type="BoolType">
+      <Accl:value>False</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Parallel Processing Batch Size" type="LongType">
+      <Accl:value>25</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Parallel Processing Preserve Order" type="BoolType">
+      <Accl:value>True</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Parallel Processing Server" type="StringType">
+      <Accl:value>localhost</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Parallel Processing Server Processes" type="StringType">
+      <Accl:value>2</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Prune Empty Fits" type="BoolType">
+      <Accl:value>True</Accl:value>
+      <Accl:transformData>True</Accl:transformData>
+    </Accl:mpropval>
+    <Accl:mpropval name="Prune Missed Molecules" type="BoolType">
+      <Accl:value>True</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Reporting" type="GroupType">
+      <Accl:value></Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Reporting Stylesheet" type="StylesheetType">
+      <Accl:value>{42691EC8-0CE0-4DB9-8B3C-5379CBB967A7}</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Ring Fragments File" type="CopyurlType">
+      <Accl:value></Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Save Aligned Ligands" type="BoolType">
+      <Accl:value>True</Accl:value>
+      <Accl:transformData>True</Accl:transformData>
+    </Accl:mpropval>
+    <Accl:mpropval name="Save Conformations" type="BoolType">
+      <Accl:value>False</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Save Intermediate Files" type="BoolType">
+      <Accl:value>False</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Scale Fit Values" type="BoolType">
+      <Accl:value>False</Accl:value>
+      <Accl:transformData>False</Accl:transformData>
+    </Accl:mpropval>
+    <Accl:mpropval name="__DS_LSCK" type="StringType">
+      <Accl:value>K_SBF</Accl:value>
+    </Accl:mpropval>
+  </experiment>
+
+</ELU>

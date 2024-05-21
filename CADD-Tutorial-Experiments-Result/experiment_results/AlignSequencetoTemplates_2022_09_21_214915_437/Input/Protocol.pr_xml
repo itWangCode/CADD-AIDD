@@ -1,0 +1,66 @@
+
+<ELU xmlns="http://www.accelrys.com/dsm/elu/2">
+  <experiment Expanded="" Guid="{0CA80E01-62EE-43C1-807C-79A676A6FC18}" protocol="Protocols/BIOVIA Discovery Studio/Discovery Studio/Macromolecules/Homology Modeling/Align Sequence to Templates" protocolName="Align Sequence to Templates" version="1">
+    <Accl:mpropval name="Align Structures" type="BoolType">
+      <Accl:value>True</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Create Sequence Profile" type="BoolType">
+      <Accl:value>False</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="DSRunInteractive" type="BoolType">
+      <Accl:value>True</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="E-value Cutoff" type="DoubleType">
+      <Accl:value>0.0001</Accl:value>
+      <Accl:transformData>0.0001</Accl:transformData>
+    </Accl:mpropval>
+    <Accl:mpropval name="FilesToOpen" type="StringType">
+      <Accl:value>ViewResults.ds_pl</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Filter Low Complexity" type="BoolType">
+      <Accl:value>True</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Gap Penalties" type="StringType">
+      <Accl:value>Existence: 11 Extension: 1</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Gapped Alignment" type="BoolType">
+      <Accl:value>True</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Input Database" type="StringType">
+      <Accl:value>Swiss-Prot</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Input Model Sequence" type="AasequenceType">
+      <Accl:value>Q15077:P2RY6</Accl:value>
+      <Accl:transformData>56fc115e-0e46-e6e3-0b-7c-6d-94-54-33-68-1f:28e83347-f840-4042-53-ee-bf-b5-97-13-b5-19</Accl:transformData>
+    </Accl:mpropval>
+    <Accl:mpropval name="Input Template Structures" type="ProteinsType">
+      <Accl:value>Blast Structures-(1):All</Accl:value>
+      <Accl:transformData>0f293c73-35d1-bf27-68-35-b9-be-46-e9-99-f8</Accl:transformData>
+    </Accl:mpropval>
+    <Accl:mpropval name="Maximum Hits" type="LongType">
+      <Accl:value>500</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Queue Name" type="StringType">
+      <Accl:value></Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Reporting" type="GroupType">
+      <Accl:value></Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Reporting Stylesheet" type="StylesheetType">
+      <Accl:value>{42691EC8-0CE0-4DB9-8B3C-5379CBB967A7}</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Run On Grid" type="BoolType">
+      <Accl:value>False</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Save Intermediate Files" type="BoolType">
+      <Accl:value>False</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Scoring Matrix" type="StringType">
+      <Accl:value>BLOSUM62</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Server" type="StringType">
+      <Accl:value>Local</Accl:value>
+    </Accl:mpropval>
+  </experiment>
+
+</ELU>

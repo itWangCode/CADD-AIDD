@@ -1,0 +1,10 @@
+#!/usr/bin/perl
+use MdmDiscoveryScript;
+use DSScript;
+
+my $document = DiscoveryScript::Open({"Path" => "5HT2c_ligands_5.ds_chm"});
+$document->Insert({"Path" => "5HT2c_ligands_5.sd", "LoadAllObjects" => False});
+
+DSScript::invoke_action("ActionShowInTable");
+DSScript::invoke_action("ActionShowInGraphics");
+$document->UpdateViews();

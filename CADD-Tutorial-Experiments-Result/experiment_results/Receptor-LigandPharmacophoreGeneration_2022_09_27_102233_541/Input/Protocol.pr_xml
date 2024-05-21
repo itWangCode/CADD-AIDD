@@ -1,0 +1,132 @@
+
+<ELU xmlns="http://www.accelrys.com/dsm/elu/2">
+  <experiment Expanded="" Guid="{D89BB9EB-115E-412A-9567-C81D83D7E592}" protocol="Protocols/BIOVIA Discovery Studio/Discovery Studio/Pharmacophores/Create Pharmacophores/Receptor-Ligand Pharmacophore Generation" protocolName="Receptor-Ligand Pharmacophore Generation" version="1">
+    <Accl:mpropval name="Active Ligands" type="LigandsType">
+      <Accl:value></Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Add Shape Constraint" type="BoolType">
+      <Accl:value>False</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Advanced" type="GroupType">
+      <Accl:value></Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Check Pharmacophores" type="BoolType">
+      <Accl:value>True</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Conformation Generation" type="StringType">
+      <Accl:value>FAST</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="DSRunInteractive" type="BoolType">
+      <Accl:value>True</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Discard Existing Conformations" type="BoolType">
+      <Accl:value>True</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Energy Threshold" type="DoubleType">
+      <Accl:value>20.0</Accl:value>
+      <Accl:transformData>20.0</Accl:transformData>
+    </Accl:mpropval>
+    <Accl:mpropval name="Fitting Method" type="StringType">
+      <Accl:value>Rigid</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Inactive Ligands" type="LigandsType">
+      <Accl:value></Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Input Ligand" type="StructureType">
+      <Accl:value>Molecule:Ligand</Accl:value>
+      <Accl:transformData>33d3bbf4-0f04-87f1-ff-cc-2d-1c-e9-7b-ff-2c</Accl:transformData>
+    </Accl:mpropval>
+    <Accl:mpropval name="Input Receptor" type="StructureType">
+      <Accl:value>2IRZ_prep:2IRZ</Accl:value>
+      <Accl:transformData>21c50435-ed50-d027-06-13-c8-83-cd-c6-1b-7f</Accl:transformData>
+    </Accl:mpropval>
+    <Accl:mpropval name="Keep Water Molecules" type="BoolType">
+      <Accl:value>False</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Maximum Charge Distance" type="DoubleType">
+      <Accl:value>5.6</Accl:value>
+      <Accl:transformData>5.6</Accl:transformData>
+    </Accl:mpropval>
+    <Accl:mpropval name="Maximum Conformations" type="LongType">
+      <Accl:value>100</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Maximum Exclusion Volume Distance" type="DoubleType">
+      <Accl:value>5.0</Accl:value>
+      <Accl:transformData>5.0</Accl:transformData>
+    </Accl:mpropval>
+    <Accl:mpropval name="Maximum Features" type="LongType">
+      <Accl:value>6</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Maximum Hydrogen Bond Distance" type="DoubleType">
+      <Accl:value>3.0</Accl:value>
+      <Accl:transformData>3.0</Accl:transformData>
+    </Accl:mpropval>
+    <Accl:mpropval name="Maximum Hydrophobic Distance" type="DoubleType">
+      <Accl:value>5.5</Accl:value>
+      <Accl:transformData>5.5</Accl:transformData>
+    </Accl:mpropval>
+    <Accl:mpropval name="Maximum Omitted Features" type="LongType">
+      <Accl:value>1</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Maximum Pharmacophores" type="LongType">
+      <Accl:value>10</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Minimum Features" type="LongType">
+      <Accl:value>4</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Minimum Interfeature Distance" type="DoubleType">
+      <Accl:value>2.0</Accl:value>
+      <Accl:transformData>2.0</Accl:transformData>
+    </Accl:mpropval>
+    <Accl:mpropval name="Minimum Shape Similarity" type="DoubleType">
+      <Accl:value>0.5</Accl:value>
+      <Accl:transformData>0.5</Accl:transformData>
+    </Accl:mpropval>
+    <Accl:mpropval name="Parallel Processing" type="BoolType">
+      <Accl:value>False</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Parallel Processing Batch Size" type="LongType">
+      <Accl:value>25</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Parallel Processing Preserve Order" type="BoolType">
+      <Accl:value>True</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Parallel Processing Server" type="StringType">
+      <Accl:value>localhost</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Parallel Processing Server Processes" type="StringType">
+      <Accl:value>2</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Projection Point Only" type="BoolType">
+      <Accl:value>False</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Queue Name" type="StringType">
+      <Accl:value></Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="RebuildInRTC" type="BoolType">
+      <Accl:value>True</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Reporting" type="GroupType">
+      <Accl:value></Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Reporting Stylesheet" type="StylesheetType">
+      <Accl:value>{42691EC8-0CE0-4DB9-8B3C-5379CBB967A7}</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Ring Fragments File" type="CopyurlType">
+      <Accl:value></Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Run On Grid" type="BoolType">
+      <Accl:value>False</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Save Intermediate Files" type="BoolType">
+      <Accl:value>False</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Selectivity Scoring" type="StringType">
+      <Accl:value>Rules</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Validation" type="BoolType">
+      <Accl:value>False</Accl:value>
+    </Accl:mpropval>
+  </experiment>
+
+</ELU>

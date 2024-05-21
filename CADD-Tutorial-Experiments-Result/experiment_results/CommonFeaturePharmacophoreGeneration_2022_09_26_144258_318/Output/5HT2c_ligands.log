@@ -1,0 +1,233 @@
+HipHop / Hypothesis Identification
+Version:      Discovery Studio catHypo  2.0 (365)  Thursday, December 01, 2007 at 12:33 AM 
+Confs (cpd):  D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\Intermediate/
+Spreadsheet:  D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\Intermediate/mols.spst 
+Dictionary:   D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\Intermediate/Dictionary.ds_chm 
+Host:         AbdusemiAbduweli
+Outname:      5HT2c_ligands
+Logname:      5HT2c_ligands.log
+Statistics:   D:\Program Files\BIOVIA\PPS\apps\scitegic\dscore\server\share\Catalyst\conf\default.hstat
+
+Summary of parameters:
+  HyposReported	    5                              
+  Spacing	  300                              
+  MinPoints	    4                              
+  MinSubsetPoints	    4                              
+  SuperpositionError	    1                              
+  Misses	    1                              
+  FeatureMisses	    1                              
+  CompleteMisses	  0.0e+00                          
+  ToleranceFactor	    1                              
+  CheckSuperposition	    1                              
+  WeightVariation	    0.3                            
+  MappingCoeff	  0.0e+00                          
+  Mem	  510                              
+  IdealHBondGeomOnly	  0.0e+00                          
+  VariableWeight	  0.0e+00                          
+  VariableTolerance	  0.0e+00                          
+
+Constraints on numbers of features:
+Name:       HBA             HBD         HYDROPHOBIC   HYDROPHOBAromatic PosIonizable  Total
+Min:         0               0               0               0               0          1
+Max:         5               5               5               5               5          10
+
+Summary of lead molecules selected:
+            Name     Principal MaxOmitFeat Chirality Confs Feats
+       5HT2c_ligand1        2      0                    76  13.99
+       5HT2c_ligand2        2      0                    37  17.46
+       5HT2c_ligand3        2      0                    49  11.84
+       5HT2c_ligand4        2      0                    76  12.12
+       5HT2c_ligand5        2      0                    32  11.50
+       5HT2c_ligand6        2      0                    31  14.39
+
+Summary of feature definitions:
+  A: HBA
+     heavyAtom:  Tolerance= 160
+     AcceptorProj:  Tolerance= 220
+  D: HBD
+     heavyAtom:  Tolerance= 160
+     DonorProj:  Tolerance= 220
+  H: HYDROPHOBIC
+     Hydrophobic:  Tolerance= 160
+  Z: HYDROPHOBAromatic
+     Hydrophobic1:  Tolerance= 160
+  P: PosIonizable
+     PosIon-pt:  Tolerance= 160
+
+
+Summary of feature definition hit statistics:
+                   HBA  hits/lead:  mean= 2.68  stddev=  0.90
+                   HBD  hits/lead:  mean= 0.96  stddev=  2.35
+           HYDROPHOBIC  hits/lead:  mean= 6.42  stddev=  1.02
+     HYDROPHOBAromatic  hits/lead:  mean= 2.16  stddev=  0.41
+          PosIonizable  hits/lead:  mean= 1.33  stddev=  0.52
+
+
+Summary of feature definition hits by molecule:
+                        A      D      H      Z      P   
+       5HT2c_ligand1   2.08   0.01   7.89   2.00   2.00 
+       5HT2c_ligand2   2.86   5.76   4.84   2.00   2.00 
+       5HT2c_ligand3   1.98   0.00   6.86   2.00   1.00 
+       5HT2c_ligand4   2.46   0.00   6.70   1.96   1.00 
+       5HT2c_ligand5   2.28   0.00   6.22   2.00   1.00 
+       5HT2c_ligand6   4.39   0.00   6.00   3.00   1.00 
+
+Summary of ranking coefficients:
+  Constant: -6.6
+  Dispersion: 0.0054
+  A: 2.5
+  D: 2.7
+  H: 1.9
+  Z: 2.7
+  P: 3.5
+
+Processing:
+ Generating hypos with AA: [c]...... 990
+ Generating hypos with HA: [c]...... 4479
+ Generating hypos with ZA: [c]...... 1341
+ Generating hypos with PA: [c]...... 962
+ Generating hypos with HH: [c]...... 5468
+ Generating hypos with ZH: [c]...... 3217
+ Generating hypos with PH: [c]...... 2364
+ Generating hypos with ZZ: [c]...... 324
+ Generating hypos with PZ: [c]...... 844
+ Generating hypos with AAA: [c]...... 0
+ Generating hypos with HAA: [c]...... 4812
+ Generating hypos with ZAA: [c]...... 1304
+ Generating hypos with PAA: [c]...... 954
+ Reprocessing hypos with AA: 0 remaining.
+ Generating hypos with HHA: [c]...... 21194
+ Generating hypos with ZHA: [c]...... 11612
+ Generating hypos with PHA: [c]...... 9216
+ Hypos with features HA not desired. Freeing memory.
+ Generating hypos with ZZA: [c]...... 1036
+ Generating hypos with PZA: [c]...... 3102
+ Hypos with features ZA not desired. Freeing memory.
+ Hypos with features PA not desired. Freeing memory.
+ Generating hypos with HHH: [c]...... 7514
+ Generating hypos with ZHH: [c]...... 5955
+ Generating hypos with PHH: [c]...... 4895
+ Hypos with features HH not desired. Freeing memory.
+ Generating hypos with ZZH: [c]...... 901
+ Generating hypos with PZH: [c]...... 3274
+ Hypos with features ZH not desired. Freeing memory.
+ Hypos with features PH not desired. Freeing memory.
+ Generating hypos with PZZ: [c]...... 411
+ Hypos with features ZZ not desired. Freeing memory.
+ Hypos with features PZ not desired. Freeing memory.
+ Generating hypos with HHAA: [c]...... 7328
+ Generating hypos with ZHAA: [c]...... 2294
+ Generating hypos with PHAA: [c]...... 2120
+ Reprocessing hypos with HAA: 5 remaining.
+ Generating hypos with ZZAA: [c]...... 46
+ Generating hypos with PZAA: [c]...... 374
+ Reprocessing hypos with ZAA: 5 remaining.
+ Reprocessing hypos with PAA: 5 remaining.
+ Generating hypos with HHHA: [c]...... 22634
+ Generating hypos with ZHHA: [c]...... 15888
+ Generating hypos with PHHA: [c]...... 12468
+ Reprocessing hypos with HHA: 5 remaining.
+ Generating hypos with ZZHA: [c]...... 2160
+ Generating hypos with PZHA: [c]...... 7800
+ Reprocessing hypos with ZHA: 5 remaining.
+ Reprocessing hypos with PHA: 5 remaining.
+ Generating hypos with PZZA: [c]...... 834
+ Reprocessing hypos with ZZA: 3 remaining.
+ Reprocessing hypos with PZA: 5 remaining.
+ Generating hypos with HHHH: [c]...... 8014
+ Generating hypos with ZHHH: [c]...... 7206
+ Generating hypos with PHHH: [c]...... 6626
+ Hypos with features HHH not desired. Freeing memory.
+ Generating hypos with ZZHH: [c]...... 1242
+ Generating hypos with PZHH: [c]...... 5912
+ Hypos with features ZHH not desired. Freeing memory.
+ Hypos with features PHH not desired. Freeing memory.
+ Generating hypos with PZZH: [c]...... 1082
+ Hypos with features ZZH not desired. Freeing memory.
+ Hypos with features PZH not desired. Freeing memory.
+ Hypos with features PZZ not desired. Freeing memory.
+ Generating hypos with HHHAA: [c]...... 2592
+ Generating hypos with ZHHAA: [c]...... 442
+ Generating hypos with PHHAA: [c]...... 874
+ Reprocessing hypos with HHAA: 5 remaining.
+ Generating hypos with ZZHAA: [c]...... 0
+ Generating hypos with PZHAA: [c]...... 192
+ Reprocessing hypos with ZHAA: 5 remaining.
+ Reprocessing hypos with PHAA: 5 remaining.
+ Generating hypos with PZZAA: [c]...... 0
+ Reprocessing hypos with ZZAA: 4 remaining.
+ Reprocessing hypos with PZAA: 5 remaining.
+ Generating hypos with HHHHA: [c]...... 5192
+ Generating hypos with ZHHHA: [c]...... 3242
+ Generating hypos with PHHHA: [c]...... 4122
+ Reprocessing hypos with HHHA: 5 remaining.
+ Generating hypos with ZZHHA: [c]...... 234
+ Generating hypos with PZHHA: [c]...... 3032
+ Reprocessing hypos with ZHHA: 5 remaining.
+ Reprocessing hypos with PHHA: 5 remaining.
+ Generating hypos with PZZHA: [c]...... 518
+ Reprocessing hypos with ZZHA: 5 remaining.
+ Reprocessing hypos with PZHA: 5 remaining.
+ Reprocessing hypos with PZZA: 5 remaining.
+ Generating hypos with HHHHH: [c]...... 46
+ Generating hypos with ZHHHH: [c]...... 60
+ Generating hypos with PHHHH: [c]...... 36
+ Reprocessing hypos with HHHH: 5 remaining.
+ Generating hypos with ZZHHH: [c]...... 2
+ Generating hypos with PZHHH: [c]...... 52
+ Reprocessing hypos with ZHHH: 5 remaining.
+ Reprocessing hypos with PHHH: 5 remaining.
+ Generating hypos with PZZHH: [c]...... 18
+ Reprocessing hypos with ZZHH: 5 remaining.
+ Reprocessing hypos with PZHH: 5 remaining.
+ Reprocessing hypos with PZZH: 5 remaining.
+ Generating hypos with HHHHAA: [c]...... 38
+ Generating hypos with ZHHHAA: [c]...... 0
+ Generating hypos with PHHHAA: [c]...... 88
+ Reprocessing hypos with HHHAA: 5 remaining.
+ Generating hypos with PZHHAA: [c]...... 18
+ Reprocessing hypos with PZHHAA: 3 remaining.
+ Reprocessing hypos with ZHHAA: 5 remaining.
+ Reprocessing hypos with PHHAA: 5 remaining.
+ Reprocessing hypos with PZHAA: 5 remaining.
+ Generating hypos with HHHHHA: [c]...... 0
+ Generating hypos with ZHHHHA: [c]...... 0
+ Generating hypos with PHHHHA: [c]...... 0
+ Reprocessing hypos with HHHHAA: 5 remaining.
+ Reprocessing hypos with PHHHAA: 5 remaining.
+ Reprocessing hypos with HHHHA: 5 remaining.
+ Generating hypos with ZZHHHA: [c]...... 0
+ Generating hypos with PZHHHA: [c]...... 0
+ Reprocessing hypos with ZHHHA: 5 remaining.
+ Reprocessing hypos with PHHHA: 5 remaining.
+ Generating hypos with PZZHHA: [c]...... 0
+ Reprocessing hypos with ZZHHA: 5 remaining.
+ Reprocessing hypos with PZHHA: 5 remaining.
+ Reprocessing hypos with PZZHA: 5 remaining.
+ Generating hypos with ZHHHHH: [c]...... 0
+ Generating hypos with PHHHHH: [c]...... 0
+ Reprocessing hypos with HHHHH: 2 remaining.
+ Generating hypos with ZZHHHH: [c]...... 0
+ Generating hypos with PZHHHH: [c]...... 0
+ Reprocessing hypos with ZHHHH: 4 remaining.
+ Reprocessing hypos with PHHHH: 4 remaining.
+ Generating hypos with PZZHHH: [c]...... 0
+ Reprocessing hypos with ZZHHH: 1 remaining.
+ Reprocessing hypos with PZHHH: 4 remaining.
+ Reprocessing hypos with PZZHH: 1 remaining.
+ Inspecting hypos with PHHHAA
+ Inspecting hypos with PZHHAA
+
+Exporting hypotheses:
+1 PZHHAA  Rank:  96.678  DH: 111111  PH: 000000 Max Fit: 6
+
+2 PZHHAA  Rank:  96.599  DH: 111111  PH: 000000 Max Fit: 6
+
+3 PHHHAA  Rank:  94.827  DH: 111111  PH: 000000 Max Fit: 6
+
+4 PHHHAA  Rank:  92.807  DH: 111111  PH: 000000 Max Fit: 6
+
+5 PZHHAA  Rank:  91.656  DH: 111111  PH: 000000 Max Fit: 6
+
+Halted normally.
+CPU time = 10 s  System time = 0 s 

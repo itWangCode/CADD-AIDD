@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<?format DECIMAL="."?>
+<!DOCTYPE Bsml PUBLIC "-//Labbook, Inc. BSML DTD//EN" "http://www.labbook.com/dtd/bsml2_2.dtd">
+<!-- The BSML specification was created by Joseph H. Spitzner, Ph.D., LabBook, Inc. http://www.labbook.com -->
+<Bsml>
+<Attribute name="model-type" content="alignment"/>
+<Definitions>
+<Sequences>
+<Sequence id="SEQ_0" title="P2RY6" comment="P2Y purinoceptor 6 OS=Homo sapiens OX=9606 GN=P2RY6 PE=1 SV=1" locus="P2RY6" representation="raw" local-acckey="" db-source="" length="328" molecule="aa">
+<Attribute name="version" content="1.3"/>
+<Attribute name="sequence-id" content="P2RY6"/>
+<Attribute name="sequence-guid" content="2a1c57db-1972-5a6c-34-a0-2e-8f-17-14-48-90"/>
+<Attribute name="date-created" content="21-SEP-2022"/>
+<Attribute name="date-last-updated" content="21-SEP-2022"/>
+<Attribute name="seq-version" content="1.3"/>
+<Attribute name="Sacs" content="0 1"/>
+<Attribute name="transl-table" content="1"/>
+<Feature-tables>
+<Feature-table>
+</Feature-table>
+<Feature-table>
+</Feature-table>
+</Feature-tables>
+<Seq-data>MEWDNGTGQALGLPPTTCVYRENFKQLLLPPVYSAVLAAGLPLNICVITQ
+ICTSRRALTRTAVYTLNLALADLLYACSLPLLIYNYAQGDHWPFGDFACR
+LVRFLFYANLHGSILFLTCISFQRYLGICHPLAPWHKRGGRRAAWLVCVA
+VWLAVTTQCLPTAIFAATGIQRNRTVCYDLSPPALATHYMPYGMALTVIG
+FLLPFAALLACYCLLACRLCRQDGPAEPVAQERRGKAARMAVVVAAAFAI
+SFLPFHITKTAYLAVRSTPGVPCTVLEAFAAAYKGTRPFASANSVLDPIL
+FYFTQKKFRRRPHELLQKLTAKWQRQGR</Seq-data>
+</Sequence>
+<Sequence id="SEQ_1" title="4XNV" comment="PDB sequence" locus="4XNV" representation="raw" local-acckey="" db-source="" length="340" molecule="aa">
+<Attribute name="secondary-structure:Kabsch and Sander" content="CCCCCCCCCCCHHHHCHHHHHHHHHHHHHHHHHHHHHHHHCCCCCCHHHHHHHHHHHHHHHHHHHCHHHHHHHHCCCCCCCCHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHCCCCCHHHHHHHHHHHHHHHHHHHHHHHCHHHHHCSSSSCCCCCSSSSCCCCCCCCHHHHHHHHHHHHHHCHHHHHHHHHHHHHHHHHHHCCCCCSSSCCCCCSSCCCCCCCCCCCCCCCCHHHCCCCCCCCCHHHSSSCCCHHHHHHHHHHHHHHHHHHHCHHHHHHHHHHHHHHHHHCCCHHHCHHHHHHHHHHHHHHHHHHHHHHCCHHHHHHCCCCCCCC"/>
+<Attribute name="secondary-structure:PDB" content="UUUUUUUUUUHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHUUUUHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHUUUUUUHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHUUUHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHSSSSUUUUUSSSSUUUUUUHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHUUUUSSSUUUUUSSUUUUUUUUUUUUUUUHHHHHUUUUUUUHHHUSSSUUHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHUHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHUUUUUUU"/>
+<Attribute name="version" content="1.3"/>
+<Attribute name="sequence-id" content="4XNV"/>
+<Attribute name="sequence-guid" content="4e998ea1-dfa3-8f9f-9c-c5-e8-7a-32-a3-74-42"/>
+<Attribute name="date-created" content="21-SEP-2022"/>
+<Attribute name="date-last-updated" content="21-SEP-2022"/>
+<Attribute name="seq-version" content="1.3"/>
+<Attribute name="ChainIds" content="A"/>
+<Attribute name="Sacs" content="0 1"/>
+<Attribute name="salresidue:0" content="Ser39"/>
+<Attribute name="salresidue:118" content="Lys158"/>
+<Attribute name="salresidue:208" content="Met1001"/>
+<Attribute name="salresidue:241" content="Val1038"/>
+<Attribute name="salresidue:258" content="Pro253"/>
+<Attribute name="SecondaryStructureTypes" content="Kabsch_and_Sander|0|PDB|0|"/>
+<Attribute name="transl-table" content="1"/>
+<Feature-tables>
+<Feature-table>
+</Feature-table>
+<Feature-table>
+</Feature-table>
+</Feature-tables>
+<Seq-data>SFKCALTKTGFQFYYLPAVYILVFIIGFLGNSVAIWMFVFHMKPWSGISV
+YMFNLALADFLYVLTLPALIFYYFNKTDWIFGDAMCKLQRFIFHVNLYGS
+ILFLTCISAHRYSGVVYPKSLGRLKKKNAICISVLVWLIVVVAISPILFY
+SGTGVRKNKTITCYDTTSDEYLRSYFIYSMCTTVAMFCVPLVLILGCYGL
+IVRALIYKMKKYTCTVCGYIYNPEDGDPDNGVNPGTDFKDIVCPLCGVGK
+DQFEEVEEPLRRKSIYLVIIVLTVFAVSYIPFHVMKTMNLRARLDFQTPA
+MCAFNDRVYATYQVTRGLASLNSCVNPILYFLAGDTFRRR</Seq-data>
+</Sequence>
+</Sequences>
+<Tables>
+<Alignment-point-set id="ALIGN_0" seqids="SEQ_0 SEQ_1" featids="NONE" numseg="17" starts="1 -1 14 1 139 -1 141 126 -1 159 174 160 -1 203 217 214 -1 219 222 224 -1 227 225 228 -1 229 226 253 -1 300 273 302 312 -1" strands="N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N" seglens="13 125 2 33 1 43 11 5 5 3 1 1 24 47 2 39 17">
+<Attribute name="alignment-guid" content="9084bf00-94ec-4924-11-8b-8a-24-2c-be-ba-4b"/>
+<Attribute name="score" content="0"/>
+<Attribute name="e-value" content="0"/>
+<Attribute name="bit-score" content="0"/>
+<Attribute name="number" content="0"/>
+</Alignment-point-set>
+</Tables>
+</Definitions>
+</Bsml>

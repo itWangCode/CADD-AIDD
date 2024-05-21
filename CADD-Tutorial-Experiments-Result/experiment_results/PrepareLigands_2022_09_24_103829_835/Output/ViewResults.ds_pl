@@ -1,0 +1,15 @@
+#!/usr/bin/perl
+use MdmDiscoveryScript;
+use DSScript;
+
+my $document = DiscoveryScript::Open({"Path" => "Molecule-(1).sd", "LoadAllObjects" => False});
+use MdmDiscoveryScript;
+use DSScript;
+
+my $hashargs = { message => "<strong>Prepare Ligands</strong><BR>Input ligands: 1<BR>Ligands created: 1<BR>Ionizations: 1",
+ details => "<html>Input ligands: 1<BR>Ligands created: 1<BR>Ionizations: 1</html>
+",
+ error => "",
+ ignore => "Protocol MessageBox: Prepare Ligands" };
+use MdmCommands;
+MdmCommands::DSReportMessageBox($hashargs);

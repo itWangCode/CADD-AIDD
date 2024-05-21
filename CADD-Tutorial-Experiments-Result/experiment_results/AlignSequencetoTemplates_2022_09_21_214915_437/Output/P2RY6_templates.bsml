@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<?format DECIMAL="."?>
+<!DOCTYPE Bsml PUBLIC "-//Labbook, Inc. BSML DTD//EN" "http://www.labbook.com/dtd/bsml2_2.dtd">
+<!-- The BSML specification was created by Joseph H. Spitzner, Ph.D., LabBook, Inc. http://www.labbook.com -->
+<Bsml>
+<Attribute name="model-type" content="alignment"/>
+<Definitions>
+<Sequences>
+<Sequence id="SEQ_0" title="P2RY6" comment="P2Y purinoceptor 6 OS=Homo sapiens OX=9606 GN=P2RY6 PE=1 SV=1" locus="P2RY6" representation="raw" local-acckey="" db-source="" length="328" molecule="aa">
+<Attribute name="version" content="1.3"/>
+<Attribute name="sequence-id" content="P2RY6"/>
+<Attribute name="sequence-guid" content="e014fa90-450d-ded2-1c-79-4e-51-54-19-95-15"/>
+<Attribute name="date-created" content="21-SEP-2022"/>
+<Attribute name="date-last-updated" content="21-SEP-2022"/>
+<Attribute name="seq-version" content="1.3"/>
+<Attribute name="Sacs" content="0 1"/>
+<Attribute name="transl-table" content="1"/>
+<Feature-tables>
+<Feature-table>
+</Feature-table>
+<Feature-table>
+</Feature-table>
+</Feature-tables>
+<Seq-data>MEWDNGTGQALGLPPTTCVYRENFKQLLLPPVYSAVLAAGLPLNICVITQ
+ICTSRRALTRTAVYTLNLALADLLYACSLPLLIYNYAQGDHWPFGDFACR
+LVRFLFYANLHGSILFLTCISFQRYLGICHPLAPWHKRGGRRAAWLVCVA
+VWLAVTTQCLPTAIFAATGIQRNRTVCYDLSPPALATHYMPYGMALTVIG
+FLLPFAALLACYCLLACRLCRQDGPAEPVAQERRGKAARMAVVVAAAFAI
+SFLPFHITKTAYLAVRSTPGVPCTVLEAFAAAYKGTRPFASANSVLDPIL
+FYFTQKKFRRRPHELLQKLTAKWQRQGR</Seq-data>
+</Sequence>
+<Sequence id="SEQ_1" title="4XNV" comment="PDB sequence" locus="4XNV" representation="raw" local-acckey="" db-source="" length="340" molecule="aa">
+<Attribute name="sequence-id" content="4XNV"/>
+<Attribute name="sequence-guid" content="5c747a20-250b-d11b-be-92-09-c2-87-d5-24-96"/>
+<Attribute name="date-created" content="21-SEP-2022"/>
+<Attribute name="date-last-updated" content="21-SEP-2022"/>
+<Attribute name="seq-version" content="1.3"/>
+<Attribute name="Sacs" content="0 1"/>
+<Attribute name="transl-table" content="1"/>
+<Feature-tables>
+<Feature-table>
+</Feature-table>
+<Feature-table>
+</Feature-table>
+</Feature-tables>
+<Seq-data>SFKCALTKTGFQFYYLPAVYILVFIIGFLGNSVAIWMFVFHMKPWSGISV
+YMFNLALADFLYVLTLPALIFYYFNKTDWIFGDAMCKLQRFIFHVNLYGS
+ILFLTCISAHRYSGVVYPKSLGRLKKKNAICISVLVWLIVVVAISPILFY
+SGTGVRKNKTITCYDTTSDEYLRSYFIYSMCTTVAMFCVPLVLILGCYGL
+IVRALIYKMKKYTCTVCGYIYNPEDGDPDNGVNPGTDFKDIVCPLCGVGK
+DQFEEVEEPLRRKSIYLVIIVLTVFAVSYIPFHVMKTMNLRARLDFQTPA
+MCAFNDRVYATYQVTRGLASLNSCVNPILYFLAGDTFRRR</Seq-data>
+</Sequence>
+</Sequences>
+<Tables>
+<Alignment-point-set id="ALIGN_0" seqids="SEQ_0 SEQ_1" featids="NONE" numseg="17" starts="1 -1 14 1 139 -1 141 126 -1 159 174 160 -1 203 217 214 -1 219 222 224 -1 227 225 228 -1 229 226 253 -1 300 273 302 312 -1" strands="N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N N" seglens="13 125 2 33 1 43 11 5 5 3 1 1 24 47 2 39 17">
+<Attribute name="alignment-guid" content="25df49b5-10b6-981e-d7-46-7c-9b-87-f2-98-b8"/>
+<Attribute name="score" content="0"/>
+<Attribute name="e-value" content="0"/>
+<Attribute name="bit-score" content="0"/>
+<Attribute name="number" content="0"/>
+</Alignment-point-set>
+</Tables>
+</Definitions>
+</Bsml>

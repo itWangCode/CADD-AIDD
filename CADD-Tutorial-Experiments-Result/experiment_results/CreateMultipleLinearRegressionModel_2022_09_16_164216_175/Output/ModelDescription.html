@@ -1,0 +1,271 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<TITLE>Model MY_2D_QSAR</TITLE>
+  <style type="text/css">
+  table { 
+	width: 800.0px;
+	border-collapse: collapse; 
+	font-family: sans-serif; 
+	font-size: xx-small;
+  }
+  th {
+	border-width: 1px;
+	padding: 3px;
+	border-style: outset;
+	border-color: black;
+	background-color: #b0c4de;
+  }
+  td {
+	border-width: 1px;
+	padding: 3px;
+	border-style: outset;
+	border-color: black;
+	background-color: #f2f2f2;
+  }
+  h1 {
+	font-family: sans-serif;
+	font-size: large;
+	margin-bottom: 3px;
+  }
+  h5 {
+	font-family: sans-serif;
+	font-size: medium;
+	margin-bottom: 3px;
+  }
+  p {
+	font-family: sans-serif; 
+	font-size: xx-small;
+  }
+  </style>
+</HEAD>
+<BODY>
+<h1>Model MY_2D_QSAR</h1>
+<P>Calculates the property MY_2D_QSAR. See <i>Output</i> for other properties that can be computed.</P>
+<P>The model was built using the Least-Squares method. </P><P>The document contains these additional sections of information:<br><A href="#RegressionStatsTable"><B>Regression Statistics</B></A><br><A href="#CoeffVariableTable"><B>Model Coefficients and Variables</B></A><br><A href="#TrainingData"><B>Training Data Information</B></A><br><A href="#ExcludedVariables"><B>Excluded Variable Information</B></A><br><A href="#ModelParameters"><B>Model Construction Parameters</B></A><!-- Section -->
+<!-- LinkText: Regression Statistics-->
+<P><A name="RegressionStatsTable"></A><U><H5>Regression Statistics Table</H5></U></P><P>This table contains statistics from the regression modeling procedure.</P>
+<table>
+<tr>
+<th>Statistic</th>
+<th>Value</th>
+</tr>
+<tr><td>N</td><td>70</td></tr>
+<tr><td>r</td><td>0.977</td></tr>
+<tr><td>r<sup>2</sup></td><td>0.954</td></tr>
+<tr><td>r<sup>2</sup> (adjusted)</td><td>1.211</td></tr>
+<tr><td>r<sup>2</sup> (prediction)</td><td>0.174</td></tr>
+<tr><td>RMS residual error</td><td>0.1843</td></tr>
+<tr><td>q<sup>2</sup> (cross-validation)</td><td>0.202</td></tr>
+<tr><td>RMS residual error (cross-validation)</td><td>1.145</td></tr>
+</table>
+<!-- Section -->
+<!-- LinkText: Model Coefficients and Variables-->
+<P><A name="CoeffVariableTable"></A><U><H5>Coefficient-Variable Table</H5></U><P align="right"><A href="#Top"><I>Back to Top</I></A></P></P><P>This table contains the coefficients and associated variables for the equation.</P>
+<table>
+<tr>
+<th>Coefficient</th>
+<th>Variable</th>
+</tr>
+<tr><td>0.263585</td><td>Constant</td></tr>
+<tr><td>0.139511</td><td>ALogP</td></tr>
+<tr><td>-0.151553</td><td>Count&lt;ECFP_6:-591526139&gt;</td></tr>
+<tr><td>0.254562</td><td>Count&lt;ECFP_6:-1910270391&gt;</td></tr>
+<tr><td>0.255009</td><td>Count&lt;ECFP_6:-1100000244&gt;</td></tr>
+<tr><td>0.255548</td><td>Count&lt;ECFP_6:-1074141656&gt;</td></tr>
+<tr><td>0.257191</td><td>Count&lt;ECFP_6:1559650422&gt;</td></tr>
+<tr><td>0.25646</td><td>Count&lt;ECFP_6:642810091&gt;</td></tr>
+<tr><td>0.257106</td><td>Count&lt;ECFP_6:-182236392&gt;</td></tr>
+<tr><td>0.257097</td><td>Count&lt;ECFP_6:-606302475&gt;</td></tr>
+<tr><td>0.256129</td><td>Count&lt;ECFP_6:1572579716&gt;</td></tr>
+<tr><td>1.11729</td><td>Count&lt;ECFP_6:-992506539&gt;</td></tr>
+<tr><td>-0.493043</td><td>Count&lt;ECFP_6:734603939&gt;</td></tr>
+<tr><td>3.02386</td><td>Count&lt;ECFP_6:-797085356&gt;</td></tr>
+<tr><td>0.256944</td><td>Count&lt;ECFP_6:2099970318&gt;</td></tr>
+<tr><td>0.258393</td><td>Count&lt;ECFP_6:770157610&gt;</td></tr>
+<tr><td>0.257053</td><td>Count&lt;ECFP_6:-2024255407&gt;</td></tr>
+<tr><td>0.257212</td><td>Count&lt;ECFP_6:1996767644&gt;</td></tr>
+<tr><td>0.25823</td><td>Count&lt;ECFP_6:-786013480&gt;</td></tr>
+<tr><td>0.258704</td><td>Count&lt;ECFP_6:1997021792&gt;</td></tr>
+<tr><td>0.257812</td><td>Count&lt;ECFP_6:-175146122&gt;</td></tr>
+<tr><td>0.259305</td><td>Count&lt;ECFP_6:1298504034&gt;</td></tr>
+<tr><td>0.259698</td><td>Count&lt;ECFP_6:858184972&gt;</td></tr>
+<tr><td>0.261082</td><td>Count&lt;ECFP_6:-932108170&gt;</td></tr>
+<tr><td>-0.000900798</td><td>Count&lt;ECFP_6:-1332781180&gt;</td></tr>
+<tr><td>0.0869928</td><td>Count&lt;ECFP_6:-757679000&gt;</td></tr>
+<tr><td>0.331836</td><td>Count&lt;ECFP_6:-1102925512&gt;</td></tr>
+<tr><td>1.15026</td><td>Count&lt;ECFP_6:-177264675&gt;</td></tr>
+<tr><td>-1.71094</td><td>Count&lt;ECFP_6:859796174&gt;</td></tr>
+<tr><td>1.1353</td><td>Count&lt;ECFP_6:-1686976258&gt;</td></tr>
+<tr><td>0.260358</td><td>Count&lt;ECFP_6:-1302110264&gt;</td></tr>
+<tr><td>0.261407</td><td>Count&lt;ECFP_6:1095683433&gt;</td></tr>
+<tr><td>0.263643</td><td>Count&lt;ECFP_6:-768126022&gt;</td></tr>
+<tr><td>0.261617</td><td>Count&lt;ECFP_6:2007300961&gt;</td></tr>
+<tr><td>0.261366</td><td>Count&lt;ECFP_6:397284699&gt;</td></tr>
+<tr><td>0.260751</td><td>Count&lt;ECFP_6:1451403962&gt;</td></tr>
+<tr><td>0.262348</td><td>Count&lt;ECFP_6:2071685859&gt;</td></tr>
+<tr><td>-0.620883</td><td>Count&lt;ECFP_6:-1952026932&gt;</td></tr>
+<tr><td>0.464346</td><td>Count&lt;ECFP_6:-658363709&gt;</td></tr>
+<tr><td>-1.78009</td><td>Count&lt;ECFP_6:-1506130950&gt;</td></tr>
+<tr><td>1.28495</td><td>Count&lt;ECFP_6:1670941296&gt;</td></tr>
+<tr><td>0.261055</td><td>Count&lt;ECFP_6:1155958977&gt;</td></tr>
+<tr><td>0.260224</td><td>Count&lt;ECFP_6:-952707428&gt;</td></tr>
+<tr><td>0.260105</td><td>Count&lt;ECFP_6:-1278685991&gt;</td></tr>
+<tr><td>0.259641</td><td>Count&lt;ECFP_6:1079175434&gt;</td></tr>
+<tr><td>0.259554</td><td>Count&lt;ECFP_6:-2135040425&gt;</td></tr>
+<tr><td>0.162945</td><td>Count&lt;ECFP_6:-1897341097&gt;</td></tr>
+<tr><td>-0.774082</td><td>Count&lt;ECFP_6:-167460056&gt;</td></tr>
+<tr><td>0.772336</td><td>Count&lt;ECFP_6:-1059365320&gt;</td></tr>
+<tr><td>0.943147</td><td>Count&lt;ECFP_6:-572965350&gt;</td></tr>
+<tr><td>0.926212</td><td>Count&lt;ECFP_6:-1867561664&gt;</td></tr>
+<tr><td>-0.962577</td><td>Count&lt;ECFP_6:-1683911134&gt;</td></tr>
+<tr><td>-1.47467</td><td>Count&lt;ECFP_6:-178525456&gt;</td></tr>
+<tr><td>0.101045</td><td>Count&lt;ECFP_6:-292555972&gt;</td></tr>
+<tr><td>1.49489</td><td>Count&lt;ECFP_6:-666950485&gt;</td></tr>
+<tr><td>0.366783</td><td>Count&lt;ECFP_6:1564392544&gt;</td></tr>
+<tr><td>0.00835034</td><td>Count&lt;ECFP_6:1571214559&gt;</td></tr>
+<tr><td>-0.0527057</td><td>Count&lt;ECFP_6:-2019199918&gt;</td></tr>
+<tr><td>-0.807647</td><td>Count&lt;ECFP_6:-1487746661&gt;</td></tr>
+<tr><td>-1.03346</td><td>Count&lt;ECFP_6:292958156&gt;</td></tr>
+<tr><td>1.75669</td><td>Count&lt;ECFP_6:-756348342&gt;</td></tr>
+<tr><td>0.479547</td><td>Count&lt;ECFP_6:-103562730&gt;</td></tr>
+<tr><td>-1.4798</td><td>Count&lt;ECFP_6:-1950934120&gt;</td></tr>
+<tr><td>0.181543</td><td>Count&lt;ECFP_6:-857146788&gt;</td></tr>
+<tr><td>0.035885</td><td>Count&lt;ECFP_6:-408473190&gt;</td></tr>
+<tr><td>-0.627152</td><td>Count&lt;ECFP_6:864909220&gt;</td></tr>
+<tr><td>0.770691</td><td>Count&lt;ECFP_6:-740847217&gt;</td></tr>
+<tr><td>0.910334</td><td>Count&lt;ECFP_6:408216150&gt;</td></tr>
+<tr><td>0.988691</td><td>Count&lt;ECFP_6:1595399376&gt;</td></tr>
+<tr><td>0.262223</td><td>Count&lt;ECFP_6:515773057&gt;</td></tr>
+<tr><td>1.45669</td><td>Count&lt;ECFP_6:78036066&gt;</td></tr>
+<tr><td>-2.06101</td><td>Count&lt;ECFP_6:-1884411803&gt;</td></tr>
+<tr><td>0.504692</td><td>Count&lt;ECFP_6:1021725999&gt;</td></tr>
+<tr><td>0.716968</td><td>Count&lt;ECFP_6:-665999307&gt;</td></tr>
+<tr><td>0.215824</td><td>Count&lt;ECFP_6:661073749&gt;</td></tr>
+<tr><td>-0.379654</td><td>Count&lt;ECFP_6:864518973&gt;</td></tr>
+<tr><td>0.257071</td><td>Count&lt;ECFP_6:191790798&gt;</td></tr>
+<tr><td>-0.694789</td><td>Count&lt;ECFP_6:1338334141&gt;</td></tr>
+<tr><td>-0.0174989</td><td>Molecular_Weight</td></tr>
+<tr><td>0.117988</td><td>Num_AromaticRings</td></tr>
+<tr><td>0.811412</td><td>Num_H_Acceptors</td></tr>
+<tr><td>0.653521</td><td>Num_H_Donors</td></tr>
+<tr><td>-0.389538</td><td>Num_Rings</td></tr>
+<tr><td>0.0348633</td><td>Num_RotatableBonds</td></tr>
+<tr><td>-11.4967</td><td>Molecular_FractionalPolarSurfaceArea</td></tr>
+</table>
+<!-- Section -->
+<!-- LinkText: Training Data Information-->
+<P><A name="TrainingData"></A><U><H5>Training Data Information</H5></U><P align="right"><A href="#Top"><I>Back to Top</I></A></P></P><p>The data used to train the model consisted of 70 samples. The following are the statistics for the dependent (Y) and independent (X) variables. (The first row shows statistics for the Y variable. All other rows are for X variables.)</p>
+<table>
+<tr><th>Variable</th><th>Min</th><th>Max</th><th>Mean</th><th>Std. Dev.</th></tr>
+<tr><td><b>pki-trypsin</b></td><td>3.854</td><td>7.699</td><td>5.9975</td><td>0.86078</td></tr>
+<tr><td colspan="5"></td></tr>
+<tr><td>ALogP</td><td>-2.386</td><td>6.525</td><td>2.654</td><td>1.3647</td></tr>
+<tr><td>ECFP_6</td><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td></tr>
+<tr><td>Molecular_Weight</td><td>355.46</td><td>676.91</td><td>512.58</td><td>65.768</td></tr>
+<tr><td>Num_AromaticRings</td><td>1</td><td>4</td><td>2.8571</td><td>0.72281</td></tr>
+<tr><td>Num_H_Acceptors</td><td>4</td><td>7</td><td>5.1143</td><td>0.8871</td></tr>
+<tr><td>Num_H_Donors</td><td>3</td><td>4</td><td>3.3571</td><td>0.47916</td></tr>
+<tr><td>Num_Rings</td><td>2</td><td>6</td><td>3.8429</td><td>0.87236</td></tr>
+<tr><td>Num_RotatableBonds</td><td>5</td><td>14</td><td>8.4429</td><td>1.6443</td></tr>
+<tr><td>Molecular_FractionalPolarSurfaceArea</td><td>0.218</td><td>0.403</td><td>0.28823</td><td>0.036476</td></tr>
+</table>
+<!-- Section -->
+<!-- LinkText: Excluded Variable Information-->
+<P><A name="ExcludedVariables"></A><U><H5>Excluded Variable Information</H5></U><P align="right"><A href="#Top"><I>Back to Top</I></A></P></P><p>The following table shows statistics for the independent (X) training data variables that were excluded from the model for any of the following reasons: (1) The variable was constant or was a string when a number was expected. [Unexpected string variables appear as constants with values of 0.] (2) The variable contained too few nonzero values (fewer than 8, as specified by the <i>MinSamplesPerVariable</i> parameter; however, fingerprint features excluded due to too few nonzero values are not listed below). (3) The variable was correlated with another variable (correlation coefficient greater in magnitude than 0.9, as specified by the <i>Max Correlation</i> parameter). The <b>Reason</b> column indicates the reason that the variable was excluded. </p>
+<table>
+<tr><th>Variable</th><th>Min</th><th>Max</th><th>Mean</th><th>Std. Dev.</th><th>Reason</th></tr>
+<tr><td>Count&lt;ECFP_6:670515721&gt;</td><td>0</td><td>1</td><td>0.84286</td><td>0.36656</td><td>Correlated with other variables</td></tr>
+<tr><td>Count&lt;ECFP_6:960161451&gt;</td><td>0</td><td>1</td><td>0.24286</td><td>0.43191</td><td>Correlated with other variables</td></tr>
+<tr><td>Count&lt;ECFP_6:20550775&gt;</td><td>0</td><td>1</td><td>0.24286</td><td>0.43191</td><td>Correlated with other variables</td></tr>
+<tr><td>Count&lt;ECFP_6:1658067901&gt;</td><td>0</td><td>1</td><td>0.84286</td><td>0.36656</td><td>Correlated with other variables</td></tr>
+<tr><td>Count&lt;ECFP_6:-1016680330&gt;</td><td>0</td><td>1</td><td>0.24286</td><td>0.43191</td><td>Correlated with other variables</td></tr>
+<tr><td>Count&lt;ECFP_6:2102150379&gt;</td><td>0</td><td>1</td><td>0.98571</td><td>0.11952</td><td>Correlated with other variables</td></tr>
+<tr><td>Count&lt;ECFP_6:-675671408&gt;</td><td>0</td><td>1</td><td>0.24286</td><td>0.43191</td><td>Correlated with other variables</td></tr>
+<tr><td>Count&lt;ECFP_6:571867147&gt;</td><td>0</td><td>1</td><td>0.18571</td><td>0.39168</td><td>Correlated with other variables</td></tr>
+<tr><td>Count&lt;ECFP_6:1574959513&gt;</td><td>0</td><td>1</td><td>0.24286</td><td>0.43191</td><td>Correlated with other variables</td></tr>
+<tr><td>Count&lt;ECFP_6:-978131182&gt;</td><td>0</td><td>1</td><td>0.71429</td><td>0.45502</td><td>Correlated with other variables</td></tr>
+<tr><td>Count&lt;ECFP_6:1454306807&gt;</td><td>0</td><td>1</td><td>0.18571</td><td>0.39168</td><td>Correlated with other variables</td></tr>
+<tr><td>Count&lt;ECFP_6:796830164&gt;</td><td>0</td><td>1</td><td>0.18571</td><td>0.39168</td><td>Correlated with other variables</td></tr>
+<tr><td>Count&lt;ECFP_6:117107367&gt;</td><td>0</td><td>1</td><td>0.24286</td><td>0.43191</td><td>Correlated with other variables</td></tr>
+<tr><td>Count&lt;ECFP_6:944467641&gt;</td><td>0</td><td>1</td><td>0.72857</td><td>0.44791</td><td>Correlated with other variables</td></tr>
+<tr><td>Count&lt;ECFP_6:1336540477&gt;</td><td>0</td><td>1</td><td>0.74286</td><td>0.44021</td><td>Correlated with other variables</td></tr>
+<tr><td>Count&lt;ECFP_6:-1331450522&gt;</td><td>0</td><td>1</td><td>0.52857</td><td>0.50279</td><td>Correlated with other variables</td></tr>
+<tr><td>Count&lt;ECFP_6:1449212896&gt;</td><td>0</td><td>1</td><td>0.71429</td><td>0.45502</td><td>Correlated with other variables</td></tr>
+<tr><td>Count&lt;ECFP_6:-102666057&gt;</td><td>0</td><td>1</td><td>0.11429</td><td>0.32046</td><td>Correlated with other variables</td></tr>
+<tr><td>Count&lt;ECFP_6:-1756464860&gt;</td><td>0</td><td>1</td><td>0.74286</td><td>0.44021</td><td>Correlated with other variables</td></tr>
+<tr><td>Count&lt;ECFP_6:-755462605&gt;</td><td>0</td><td>1</td><td>0.64286</td><td>0.48262</td><td>Correlated with other variables</td></tr>
+<tr><td>Count&lt;ECFP_6:717474525&gt;</td><td>0</td><td>1</td><td>0.7</td><td>0.46157</td><td>Correlated with other variables</td></tr>
+<tr><td>Count&lt;ECFP_6:-1150899835&gt;</td><td>0</td><td>1</td><td>0.64286</td><td>0.48262</td><td>Correlated with other variables</td></tr>
+<tr><td>Count&lt;ECFP_6:1146720904&gt;</td><td>0</td><td>1</td><td>0.62857</td><td>0.48668</td><td>Correlated with other variables</td></tr>
+<tr><td>Count&lt;ECFP_6:710652510&gt;</td><td>0</td><td>1</td><td>0.64286</td><td>0.48262</td><td>Correlated with other variables</td></tr>
+<tr><td>Count&lt;ECFP_6:-1289586824&gt;</td><td>0</td><td>1</td><td>0.62857</td><td>0.48668</td><td>Correlated with other variables</td></tr>
+<tr><td>Count&lt;ECFP_6:1698998511&gt;</td><td>0</td><td>1</td><td>0.11429</td><td>0.32046</td><td>Correlated with other variables</td></tr>
+<tr><td>Count&lt;ECFP_6:-1811366813&gt;</td><td>0</td><td>1</td><td>0.62857</td><td>0.48668</td><td>Correlated with other variables</td></tr>
+<tr><td>Count&lt;ECFP_6:1515192889&gt;</td><td>0</td><td>1</td><td>0.74286</td><td>0.44021</td><td>Correlated with other variables</td></tr>
+<tr><td>Count&lt;ECFP_6:-1650219925&gt;</td><td>0</td><td>1</td><td>0.11429</td><td>0.32046</td><td>Correlated with other variables</td></tr>
+<tr><td>Count&lt;ECFP_6:-281505363&gt;</td><td>0</td><td>1</td><td>0.12857</td><td>0.33714</td><td>Correlated with other variables</td></tr>
+<tr><td>Count&lt;ECFP_6:-1173882748&gt;</td><td>0</td><td>1</td><td>0.64286</td><td>0.48262</td><td>Correlated with other variables</td></tr>
+<tr><td>Count&lt;ECFP_6:1637591468&gt;</td><td>0</td><td>1</td><td>0.64286</td><td>0.48262</td><td>Correlated with other variables</td></tr>
+<tr><td>Count&lt;ECFP_6:2006518499&gt;</td><td>0</td><td>1</td><td>0.64286</td><td>0.48262</td><td>Correlated with other variables</td></tr>
+<tr><td>Count&lt;ECFP_6:-81428579&gt;</td><td>0</td><td>1</td><td>0.68571</td><td>0.46758</td><td>Correlated with other variables</td></tr>
+<tr><td>Count&lt;ECFP_6:1233434266&gt;</td><td>0</td><td>1</td><td>0.64286</td><td>0.48262</td><td>Correlated with other variables</td></tr>
+<tr><td>Count&lt;ECFP_6:-1364467941&gt;</td><td>0</td><td>1</td><td>0.62857</td><td>0.48668</td><td>Correlated with other variables</td></tr>
+<tr><td>Count&lt;ECFP_6:-594723798&gt;</td><td>0</td><td>1</td><td>0.62857</td><td>0.48668</td><td>Correlated with other variables</td></tr>
+<tr><td>Count&lt;ECFP_6:2146640915&gt;</td><td>0</td><td>1</td><td>0.62857</td><td>0.48668</td><td>Correlated with other variables</td></tr>
+<tr><td>Count&lt;ECFP_6:1929265201&gt;</td><td>0</td><td>1</td><td>0.64286</td><td>0.48262</td><td>Correlated with other variables</td></tr>
+<tr><td>Count&lt;ECFP_6:325895898&gt;</td><td>0</td><td>1</td><td>0.62857</td><td>0.48668</td><td>Correlated with other variables</td></tr>
+<tr><td>Count&lt;ECFP_6:865482986&gt;</td><td>0</td><td>1</td><td>0.15714</td><td>0.36656</td><td>Correlated with other variables</td></tr>
+<tr><td>Count&lt;ECFP_6:-1505292865&gt;</td><td>0</td><td>1</td><td>0.15714</td><td>0.36656</td><td>Correlated with other variables</td></tr>
+<tr><td>Count&lt;ECFP_6:-376546800&gt;</td><td>0</td><td>1</td><td>0.45714</td><td>0.50176</td><td>Correlated with other variables</td></tr>
+<tr><td>Count&lt;ECFP_6:601995614&gt;</td><td>0</td><td>1</td><td>0.15714</td><td>0.36656</td><td>Correlated with other variables</td></tr>
+<tr><td>Count&lt;ECFP_6:-954757448&gt;</td><td>0</td><td>1</td><td>0.11429</td><td>0.32046</td><td>Correlated with other variables</td></tr>
+<tr><td>Count&lt;ECFP_6:-1625362884&gt;</td><td>0</td><td>1</td><td>0.11429</td><td>0.32046</td><td>Correlated with other variables</td></tr>
+<tr><td>Count&lt;ECFP_6:833921154&gt;</td><td>0</td><td>1</td><td>0.12857</td><td>0.33714</td><td>Correlated with other variables</td></tr>
+<tr><td>Count&lt;ECFP_6:-174624245&gt;</td><td>0</td><td>1</td><td>0.11429</td><td>0.32046</td><td>Correlated with other variables</td></tr>
+<tr><td>Count&lt;ECFP_6:-1490910266&gt;</td><td>0</td><td>1</td><td>0.11429</td><td>0.32046</td><td>Correlated with other variables</td></tr>
+<tr><td>Count&lt;ECFP_6:-454715551&gt;</td><td>0</td><td>1</td><td>0.11429</td><td>0.32046</td><td>Correlated with other variables</td></tr>
+<tr><td>Count&lt;ECFP_6:2025485523&gt;</td><td>0</td><td>1</td><td>0.11429</td><td>0.32046</td><td>Correlated with other variables</td></tr>
+<tr><td>Count&lt;ECFP_6:-19155222&gt;</td><td>0</td><td>1</td><td>0.14286</td><td>0.35245</td><td>Correlated with other variables</td></tr>
+<tr><td>Count&lt;ECFP_6:-1078835860&gt;</td><td>0</td><td>1</td><td>0.14286</td><td>0.35245</td><td>Correlated with other variables</td></tr>
+<tr><td>Count&lt;ECFP_6:1386744051&gt;</td><td>0</td><td>1</td><td>0.15714</td><td>0.36656</td><td>Correlated with other variables</td></tr>
+<tr><td>Count&lt;ECFP_6:-1719301700&gt;</td><td>0</td><td>1</td><td>0.14286</td><td>0.35245</td><td>Correlated with other variables</td></tr>
+<tr><td>Count&lt;ECFP_6:864287155&gt;</td><td>0</td><td>1</td><td>0.11429</td><td>0.32046</td><td>Correlated with other variables</td></tr>
+</table>
+<!-- Section -->
+<!-- LinkText: Model Construction Parameters-->
+<P><A name="ModelParameters"></A><U><H5>Model Construction Parameters</H5></U><P align="right"><A href="#Top"><I>Back to Top</I></A></P></P><p>The following parameter values were specified by the learner component. Some items are internal parameters not exposed by the component. In the course of building the model, certain values may have been adjusted from the values shown below.</p>
+
+<table><tr><th>Parameter</th><th>Value</th></tr>
+<tr><td>LearnedPropertyName</td><td>MY_2D_QSAR</td></tr>
+<tr><td>Name</td><td>pki-trypsin</td></tr>
+<tr><td>UseProperties</td><td>UserSet</td></tr>
+<tr><td>PredefinedSet</td><td>Estate_Keys</td></tr>
+<tr><td>UserSet</td><td>ALogP,ECFP_6,Molecular_Weight,Num_AromaticRings,Num_H_Acceptors,Num_H_Donors,Num_Rings,Num_RotatableBonds,Molecular_FractionalPolarSurfaceArea</td></tr>
+<tr><td>IgnoreProperties</td><td></td></tr>
+<tr><td>InitialModelFrom</td><td>Least-Squares</td></tr>
+<tr><td>Weight Property</td><td></td></tr>
+<tr><td><b>kNN Options</b></td><td></td></tr>
+<tr><td>Number of Nearest Neighbors</td><td>20</td></tr>
+<tr><td>Dynamic Smoothing Factor</td><td>0.5</td></tr>
+<tr><td>Number of XV Groups</td><td>11</td></tr>
+<tr><td><b>Additional Options</b></td><td></td></tr>
+<tr><td>NumberOfComponents</td><td>20</td></tr>
+<tr><td>MinSamplesPerVariable</td><td>SqrtEstimate</td></tr>
+<tr><td>Decorrelation Method</td><td>Pearson</td></tr>
+<tr><td>Max Correlation</td><td>0.90</td></tr>
+<tr><td>Learn Options</td><td>Perform OPS Analysis, Track Fingerprint Features</td></tr>
+<tr><td>Indicator Baseline</td><td>Most Common Value</td></tr>
+<tr><td>Numeric Distance Function</td><td>Euclidean</td></tr>
+<tr><td>Numeric Scaling</td><td>Mean-Center and Scale, Scale by Number of Dimensions</td></tr>
+<tr><td>Fingerprint Distance Function</td><td>Tanimoto</td></tr>
+<tr><td>Model Domain Fingerprint</td><td>FCFP_2</td></tr>
+<tr><td>Additional Properties</td><td></td></tr>
+<tr><td>TopLevelComment</td><td>Add Protocol Comment Here</td></tr>
+<tr><td>Destination Folder</td><td>16606/LearnedProperties</td></tr>
+<tr><td>Max OPS Fingerprint Bits</td><td>1000</td></tr>
+<tr><td>Create Proxy Component</td><td>False</td></tr>
+
+</table>
+</body>
+</html>

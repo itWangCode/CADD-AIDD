@@ -1,0 +1,717 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sci:data xmlns:sci="http://www.SciTegic.com/" object="SciTegic.Protocol.1" format="8.0.0">
+	<sci:dbitem>
+		<sci:component name="MY_Bayesian" version="2">
+			<sci:arg name="RunToCompletion" type="StringType" required="false" visibility="visible" multi="false" uimpl="false">
+				<sci:help>When &lt;i&gt;RunToCompletion&lt;/i&gt; is set to &quot;True - For Each Data Record&quot;, the subprotocol is re-initialized and executed in its entirety for each individual data record it processes.
+&lt;p&gt;
+When set to &quot;True - For Each Category&quot;, the data records are divided into categories based on the value of the Categorize Using parameter and then the subprotocol is re-initialized and executed in its entirety for each category of data records. When used in conjunction with &lt;i&gt;Parallel Processing Options&lt;/i&gt;, each category of data records will be sent to the remote server as part of one single batch.</sci:help>
+				<sci:member>RunToCompletion Categorize Using</sci:member>
+				<sci:legalval selected="true">False</sci:legalval>
+				<sci:legalval>True - For Each Data Record</sci:legalval>
+				<sci:legalval>True - For Each Category</sci:legalval>
+			</sci:arg>
+			<sci:arg name="RunToCompletion Categorize Using" type="StringType" required="false" visibility="visible" multi="false" uimpl="false">
+				<sci:help>Required when RunToCompletion is set to &lt;i&gt;True - For Each Category&lt;/i&gt;, this parameter specifies the property or properties used to define the categories.</sci:help>
+				<sci:validscript>SetInvalidDetails(&apos;This parameter is required when RunToCompletion is set to True - For Each Category&apos;);
+Parameter() ne &apos;&apos;;</sci:validscript>
+				<sci:enabledscript>SetDisabledDetails(&apos;To Enable, Set RunToCompletion to True - For Each Category&apos;);
+Parameter(&apos;RunToCompletion&apos;) eq &apos;True - For Each Category&apos;;</sci:enabledscript>
+			</sci:arg>
+			<sci:arg name="Parallel Processing Options" type="BoolType" required="false" visibility="visible" multi="false" uimpl="false">
+				<sci:help>&lt;p&gt;
+When set to True, this set of options allows the subprotocol to execute in parallel on one or more independent Pipeline Pilot servers, running locally or remotely.  Additional parameters control the number of data records to send in each process batch, the list of Pipeline Pilot servers to use, the number of protocol processes that can be executed on each server, and whether to preserve the order of the processed data records.
+&lt;/p&gt;&lt;p&gt;
+Use this option with care, since it will not increase throughput in all circumstances. Generally speaking, it yields improved performance when the parallelization benefits outweigh the data transfer overhead for the specified batch size.  As a rough guide, performance can be improved when each individual batch requires at least 10 seconds to execute, although this can be affected by the size of each data record.
+&lt;/p&gt;&lt;p&gt;
+When running the protocol with debugging, the subprotocol will provide debugging messages to detail each of the various steps of execution.  Also, components located within the parallel subprotocol will display their debugging messages as well.
+&lt;/p&gt;&lt;p&gt;
+For more information on the parallel subprotocol options, see &lt;a href=&quot;javascript:DoLink(&apos;scihelpdocs/user/subprots/subprot_parallel_processing.htm&apos;)&quot;&gt;Parallel Processing Subprotocols&lt;/a&gt;.
+&lt;/p&gt;
+</sci:help>
+				<sci:member>Parallel Processing Options Batch Size</sci:member>
+				<sci:member>Parallel Processing Options Server</sci:member>
+				<sci:member>Parallel Processing Options Preserve Order</sci:member>
+				<sci:legalval>True</sci:legalval>
+				<sci:legalval selected="true">False</sci:legalval>
+			</sci:arg>
+			<sci:arg name="Parallel Processing Options Batch Size" type="LongType" required="true" visibility="visible" multi="false" uimpl="false">
+				<sci:help>&lt;p&gt;The number of records to send to the remote server(s) for each subprotocol execution.  In general, performance is optimized when the amount of time required to process each batch is at least 10 seconds (note that this can vary depending on the characteristics of the remote server&apos;s hardware).  Use a batch size of -1 to pass all data in a single batch.&lt;/p&gt;
+&lt;p&gt;When &lt;i&gt;RunToCompletion&lt;/i&gt; is set to &quot;True - for each category&quot;, the batch sizes will be determined by the number of records in each individual category.  Therefore, the &lt;i&gt;Batch Size&lt;/i&gt; parameter is not applicable.</sci:help>
+				<sci:enabledscript>#parallel := Parameter(&apos;Parallel Processing Options&apos;);
+if (not #parallel) then
+	SetDisabledDetails(&quot;This parameter is only applicable if &apos;Parallel Processing Options&apos; is &apos;True&apos;&quot;);
+end if;
+#parallel;</sci:enabledscript>
+			</sci:arg>
+			<sci:arg name="Parallel Processing Options Server" type="StringType" required="false" visibility="visible" multi="false" expanded="true" uimpl="false">
+				<sci:help>&lt;p&gt;
+A comma-separated list of Pipeline Pilot servers on which to execute the parallel subprotocol.  The server names should be in the same format as the Pipeline Pilot Client&apos;s change server dialog (that is, server-name:port-number).
+&lt;/p&gt;&lt;p&gt;
+Specifying &lt;b&gt;localhost&lt;/b&gt; as a server will cause the subprotocol to use its own Pipeline Pilot server.  This can be useful on multi-CPU/multi-core systems (where the subprotocol jobs are spawned on the same machine) and Pipeline Pilot Linux clusters (where &apos;localhost&apos; requests spawning the subprotocol jobs on the same cluster).
+&lt;/p&gt;</sci:help>
+				<sci:member>Parallel Processing Options Server Processes</sci:member>
+				<sci:member>Parallel Processing Options Server Run On Grid</sci:member>
+				<sci:validscript>SetInvalidDetails(&apos;This parameter is required.&apos;);
+Parameter() ne &apos;&apos;;</sci:validscript>
+				<sci:enabledscript>SetDisabledDetails(&quot;This parameter is only applicable if &apos;Parallel Processing Options&apos; is &apos;True&apos;&quot;);
+Parameter(&apos;Parallel Processing Options&apos;);</sci:enabledscript>
+			</sci:arg>
+			<sci:arg name="Parallel Processing Options Server Processes" type="StringType" required="false" visibility="visible" multi="false" uimpl="false">
+				<sci:help>A comma-separated list of the maximum number of batches that can be simultaneously executed on each remote server.  The number of entries in this parameter must equal the number of servers. If &apos;*&apos; is specified as the number of processes, then that server will only launch as many batches as the administrator of the remote server has permitted.&lt;/br&gt;&lt;/br&gt;For non-Grid Engine job, the number of jobs will be limited to the value for the maximum number of simultaneous subprotocol jobs as defined in the Admin Console even if this value is higher than the value entered here or &apos;*&apos;.&lt;/br&gt;&lt;/br&gt;For Grid Engine jobs, the number of jobs will be limited to the value for the maximum number of simultaneous subprotocol grid jobs as defined in the Admin Console even if this value is higher than the value entered here or &apos;*&apos;.&lt;/br&gt;&lt;/br&gt;</sci:help>
+				<sci:validscript>/* Server Processes must have the same number of comma separated entries as the Server parameter and must have a value*/
+#processes := parameter();
+expand(&apos;,&apos;, #processes);
+#servers := parameter(&apos;Parallel Processing Options Server&apos;);
+expand(&apos;,&apos;, #servers);
+
+if (numvalues(#processes) == 0) then
+	SetInvalidDetails(&apos;This parameter is required.&apos;);
+else
+	SetInvalidDetails(&apos;The number of server processes (&apos; . numvalues(#processes) . &apos;) must equal the number of servers (&apos; . numvalues(#servers) . &apos;).&apos;);
+end if;
+numvalues(#processes) &gt; 0 and numvalues(#processes) == numvalues(#servers);</sci:validscript>
+				<sci:enabledscript>SetDisabledDetails(&quot;This parameter is only applicable if &apos;Parallel Processing Options&apos; is &apos;True&apos;&quot;);
+Parameter(&apos;Parallel Processing Options&apos;);</sci:enabledscript>
+			</sci:arg>
+			<sci:arg name="Parallel Processing Options Server Run On Grid" type="BoolType" required="false" visibility="visible" multi="false" uimpl="false">
+				<sci:help>Run subprotocol on grid engine if available.  Note: If no grid engine is configured the subprotocol will still run even if this parameter is set to true.</sci:help>
+				<sci:member>Parallel Processing Options Server Run On Grid Queue Name</sci:member>
+				<sci:member>Parallel Processing Options Server Run On Grid Grid Options</sci:member>
+				<sci:enabledscript>parameter(&apos;Parallel Processing Options&apos;);</sci:enabledscript>
+				<sci:legalval selected="true">True</sci:legalval>
+				<sci:legalval>False</sci:legalval>
+			</sci:arg>
+			<sci:arg name="Parallel Processing Options Server Run On Grid Queue Name" type="StringType" required="false" visibility="visible" multi="false" legalvalsenforced="false" uimpl="false">
+				<sci:help>Select the queue name on the grid to submit jobs to. Leave blank to use default queue name.</sci:help>
+				<sci:enabledscript>parameter(&apos;Parallel Processing Options Server Run On Grid&apos;);</sci:enabledscript>
+			</sci:arg>
+			<sci:arg name="Parallel Processing Options Server Run On Grid Grid Options" type="StringType" required="false" visibility="visible" multi="true" uimpl="false">
+				<sci:help>&lt;p&gt;This is an array of command line options to send to the Grid engine submit command.&lt;/p&gt;
+&lt;p&gt;If you just include one line, whatever you enter will be sent &quot;as is&quot; to the submission command.&lt;/p&gt;
+&lt;/br&gt;
+&lt;b&gt;Example - Just sending options directly to command line - PBS&lt;/b&gt;
+&lt;p&gt;-l procs=16 -l walltime=08:00:00 -A PROJECTID&lt;/p&gt;
+&lt;/br&gt;
+&lt;p&gt;There are a number of parameters that Pipeline Pilot will translate to the correct command line options for whichever supported Grid Engine you are using.&lt;/p&gt;
+&lt;/br&gt;
+&lt;b&gt;Example - Supported parameters&lt;/b&gt;
+&lt;p&gt;Account=&amp;lt;Project/Account name&amp;gt;&lt;/p&gt;
+&lt;p&gt;Maximum Execution Time=&amp;lt;HH:MM:SS&amp;gt; hours, minutes, seconds - LSF ignores seconds&lt;/p&gt;
+&lt;p&gt;Number of Cores=&amp;lt;16&amp;gt;&lt;/p&gt;
+&lt;p&gt;Parallel Environment=&amp;lt;The Parallel Environment to use&amp;gt; - Only needed for SGE&lt;/p&gt;
+&lt;p&gt;Other=&amp;lt;Additional Parameters sent directly to submit command line&amp;gt;&lt;/p&gt;
+&lt;/br&gt;
+&lt;p&gt;Any of these options can be commented out by placing a # in front of them.&lt;/p&gt;
+&lt;/br&gt;
+					</sci:help>
+				<sci:enabledscript>parameter(&apos;Parallel Processing Options Server Run On Grid&apos;);</sci:enabledscript>
+				<sci:value>Account=</sci:value>
+				<sci:value>Maximum Execution Time=</sci:value>
+				<sci:value>Parallel Environment=</sci:value>
+				<sci:value>Number of Cores=</sci:value>
+				<sci:value>Other=</sci:value>
+			</sci:arg>
+			<sci:arg name="Parallel Processing Options Preserve Order" type="BoolType" required="false" visibility="visible" multi="false" uimpl="false">
+				<sci:help>Whether to preserve the order of the data as it enters and leaves the remote subprotocol.</sci:help>
+				<sci:enabledscript>SetDisabledDetails(&quot;This parameter is only applicable if &apos;Parallel Processing Options&apos; is &apos;True&apos;&quot;);
+Parameter(&apos;Parallel Processing Options&apos;);</sci:enabledscript>
+				<sci:legalval selected="true">True</sci:legalval>
+				<sci:legalval>False</sci:legalval>
+			</sci:arg>
+			<sci:arg name="Tempfiles" type="StringType" required="false" visibility="visible" multi="false" uimpl="true">
+				<sci:help>&lt;p&gt;A comma-delimited list of global properties, each of which is automatically populated with the name of a file in the job&apos;s temporary folder, which always has a unique name.&lt;p/&gt;For each global name, an additional global is created (with the suffix &lt;i&gt;_Filename&lt;/i&gt;) that hold only the leaf file name of the temporary file.&lt;/p&gt;</sci:help>
+			</sci:arg>
+			<sci:arg name="DeclareLocal" type="StringType" required="false" visibility="visible" multi="false" uimpl="true">
+				<sci:help>&lt;p&gt;Lists a set of properties (without the @) to create on the global property list for this subprotocol. Separate property names with commas. Such properties can only be accessed within the scope of this subprotocol and its descendent subprotocols.&lt;p/&gt;
+
+&lt;p&gt;Any global property not declared in this way is created on the top-level global property list and is accessible from all subprotocols, but breaks the encapsulation of the subprotocol and may collide with another property of the same name.&lt;/p&gt;
+
+&lt;p&gt;Therefore, you should always declare a new global property in the &lt;i&gt;DeclareLocal&lt;/i&gt; parameter, to minimize the scope of the global property to the subprotocol where it is used.&lt;/p&gt;
+
+&lt;p&gt;The example &lt;i&gt;DeclareLocal&lt;/i&gt; value below creates 3 global properties in the subprotocol scope. Note that you can initialize the declared global value with a scalar value using the &quot;:=&quot; syntax, as shown. You can surround text string values with quotes to aid clarity.&lt;/p&gt;
+&lt;pre&gt;
+    SubP_Counter := 0, SubP_NameHash, SubP_TitleText:=&quot;Sample 1&quot;
+&lt;/pre&gt;
+</sci:help>
+			</sci:arg>
+			<sci:arg name="OnDataTypeError" type="StringType" required="true" visibility="hidden" multi="false">
+				<sci:help>When an expected data type is not found during processing:  
+  Halt: Terminate the execution of the network
+  Fail: Continue execution of the network, passing data out the Fail(red) port
+  Pass: Continue execution of the network, passing data out the Pass(green) port</sci:help>
+				<sci:legalval selected="true">Halt</sci:legalval>
+				<sci:legalval>Fail</sci:legalval>
+				<sci:legalval>Pass</sci:legalval>
+			</sci:arg>
+			<sci:arg name="OnGeneralError" type="StringType" required="true" visibility="hidden" multi="false">
+				<sci:help>When an recoverable error occurs during processing:  
+  Halt: Terminate the execution of the network
+  Fail: Continue execution of the network, passing data out the Fail(red) port
+  Pass: Continue execution of the network, passing data out the Pass(green) port</sci:help>
+				<sci:legalval selected="true">Halt</sci:legalval>
+				<sci:legalval>Fail</sci:legalval>
+				<sci:legalval>Pass</sci:legalval>
+			</sci:arg>
+			<sci:arg name="ComponentAttributes" type="StringType" required="false" visibility="hidden" multi="true">
+				<sci:help>Component Attributes</sci:help>
+				<sci:legalval selected="true">ComponentTakesInput</sci:legalval>
+				<sci:legalval selected="true">ComponentReturnsPass</sci:legalval>
+				<sci:legalval selected="true">ComponentReturnsFail</sci:legalval>
+				<sci:legalval>ComponentRunsLocal</sci:legalval>
+			</sci:arg>
+			<sci:arg name="Output" type="StringType" required="true" visibility="visible" multi="true">
+				<sci:help>Specifies the name of the model&apos;s output property.</sci:help>
+				<sci:legalval type="DoubleType" selected="true">MY_Bayesian</sci:legalval>
+			</sci:arg>
+			<sci:arg name="Output Options" type="StringType" required="false" visibility="visible" multi="true">
+				<sci:help>&lt;P&gt;These control which variants of the output scores will be generated for each selected model.  Selections other than &quot;NormalizedProbability&quot; causes the output property to the appended with a hash sign &quot;#&quot; and the name of the option.  Options are:&lt;/P&gt; &lt;UL&gt;
+ &lt;LI&gt;NormalizedProbability: The standard Laplacian-modified Bayesian score.
+ &lt;LI&gt;Enrichment: An estimate of enrichment, that is, the increased likelihood (versus random) of this sample being in the &quot;good&quot; category.
+ &lt;LI&gt;EstPGood: The estimated probability that the sample is in the &quot;good&quot; category, based on an assumed normal distribution of scores within the good and non-good categories.
+ &lt;LI&gt;Prediction: A True/False prediction using the best cutoff value estimated from leave-one-out cross-validation. The cutoff is chosen to minimize the average of the false positive rate and false negative rate.
+ &lt;/UL&gt;
+ You may select more than one of these options.  In that case, multiple properties will be output.</sci:help>
+				<sci:legalval selected="true">NormalizedProbability</sci:legalval>
+				<sci:legalval selected="true">Enrichment</sci:legalval>
+				<sci:legalval selected="true">EstPGood</sci:legalval>
+				<sci:legalval selected="true">Prediction</sci:legalval>
+			</sci:arg>
+			<sci:arg name="Preferred Class Cutoff" type="StringType" required="false" visibility="visible" multi="true">
+				<sci:help>Cutoff value for distinguishing &quot;good&quot; from &quot;bad&quot; samples when making predictions. &quot;Default&quot; indicates that the cutoff derived from leave-one-out cross-validation when building the model should be used. 
+&lt;p&gt;&lt;b&gt;Note:&lt;/b&gt;
+&lt;ul&gt;
+&lt;li&gt;Classification models generate numerical scores or probabilities as their raw output. A cutoff value is then used in order to convert these scores into class predictions. Adjusting the cutoff from its default value may yield better class predictions for some models, particularly when the model&apos;s training data were imbalanced. Changing the value of &lt;i&gt;Preferred Class Cutoff&lt;/i&gt; changes the class predictions but has no effect on the output scores.
+&lt;/ul&gt;</sci:help>
+				<sci:value>Default</sci:value>
+			</sci:arg>
+			<sci:arg name="Error Option" type="StringType" required="false" visibility="visible" multi="false">
+				<sci:help>&lt;P&gt;This controls what happens when a model fails to calculate its output. The options are:&lt;/P&gt; &lt;UL&gt;
+ &lt;LI&gt;&lt;B&gt;Leave Undefined:&lt;/B&gt; Leave the property undefined.
+ &lt;LI&gt;&lt;B&gt;Return NULL:&lt;/B&gt; Return the property with the string NULL.
+ &lt;LI&gt;&lt;B&gt;Return Error Text:&lt;/B&gt; Return text containing information about why the output could not be calculated.
+ &lt;/UL&gt;
+</sci:help>
+				<sci:legalval>Leave Undefined</sci:legalval>
+				<sci:legalval>Return NULL</sci:legalval>
+				<sci:legalval selected="true">Return Error Text</sci:legalval>
+			</sci:arg>
+			<sci:arg name="Use Memory Cache" type="BoolType" required="false" visibility="visible" multi="false">
+				<sci:help>Specifies whether to cache model in memory to reduce startup time when making predictions over multiple protocol runs. Requires the use of protocol pooling.</sci:help>
+				<sci:member>Clear Cache When Done</sci:member>
+				<sci:legalval>True</sci:legalval>
+				<sci:legalval selected="true">False</sci:legalval>
+			</sci:arg>
+			<sci:arg name="Clear Cache When Done" type="BoolType" required="false" visibility="visible" multi="false">
+				<sci:help>Specifies whether clear the cached model when finished. Set this to True when no further calculations will be done with the model, and you wish to free the memory the model is consuming.</sci:help>
+				<sci:enabledscript>Parameter(&apos;Use Memory Cache&apos;)</sci:enabledscript>
+				<sci:legalval>True</sci:legalval>
+				<sci:legalval selected="true">False</sci:legalval>
+			</sci:arg>
+			<sci:arg name="Allow Missing Data" type="BoolType" required="false" visibility="visible" multi="false">
+				<sci:help>Specifies whether to calculate an output property when one or more input properties used in its calculation are missing. &lt;p&gt;If False, then the value specified by &lt;i&gt;Error Option&lt;/i&gt; is assigned to the property when any input property is missing, and the data record is sent out the Fail port. &lt;p&gt;If True, the output property is calculated even when input properties are missing, with any contribution from missing properties omitted from the calculation. The resulting prediction is sent out the Pass port along with a property named &lt;b&gt;ErrorText&lt;/b&gt; containing the value &quot;CalculationMissingRequiredProperties&quot;. Use this option when you view a possibly flawed prediction based on incomplete data as better than no prediction at all.</sci:help>
+				<sci:legalval>True</sci:legalval>
+				<sci:legalval selected="true">False</sci:legalval>
+			</sci:arg>
+			<sci:arg name="CustomErrorText" type="StringType" required="false" visibility="nevershow" multi="false">
+				<sci:help>Custom Error Message</sci:help>
+			</sci:arg>
+			<sci:arg name="ComponentDisplayName" type="StringType" required="false" visibility="nevershow" multi="false">
+				<sci:value>MY_Bayesian</sci:value>
+			</sci:arg>
+			<sci:arg name="ProtocolAutoLayout" type="BoolType" required="false" visibility="nevershow" multi="false">
+				<sci:help>Protocol AutoLayout</sci:help>
+				<sci:value>1</sci:value>
+			</sci:arg>
+			<sci:arg name="ComponentDisabled" type="LongType" required="false" visibility="nevershow" multi="false">
+				<sci:value>0</sci:value>
+			</sci:arg>
+			<sci:arg name="ComponentIcon" type="StringType" required="false" visibility="nevershow" multi="false">
+				<sci:value>ModelNode</sci:value>
+			</sci:arg>
+			<sci:arg name="ComponentRevision" type="LongType" required="true" visibility="nevershow" multi="false">
+				<sci:help>Component Revision</sci:help>
+				<sci:value>790</sci:value>
+			</sci:arg>
+			<sci:arg name="ComponentGUID" type="StringType" required="false" visibility="nevershow" multi="false">
+				<sci:help>The Unique ID for this item</sci:help>
+				<sci:value>{D7426A85-5118-40AF-9B26-4C1D2B1FA9A7}</sci:value>
+			</sci:arg>
+			<sci:arg name="ComponentPoint" type="StringType" required="false" visibility="nevershow" multi="false">
+				<sci:value>90 -95</sci:value>
+			</sci:arg>
+			<sci:arg name="ByReference" type="BoolType" required="false" visibility="nevershow" multi="false">
+				<sci:help>By Ref</sci:help>
+				<sci:value>0</sci:value>
+			</sci:arg>
+			<sci:arg name="ComponentHelp" type="StringType" required="false" visibility="nevershow" multi="false">
+				<sci:help>Help for the component</sci:help>
+				<sci:value>100</sci:value>
+				<sci:value>Calculates the value of &quot;MY_Bayesian&quot;</sci:value>
+				<sci:value>&lt;!-- Header --&gt;
+&lt;A name=&quot;Top&quot;&gt;&lt;/A&gt;&lt;P&gt;Calculates the property MY_Bayesian. &lt;/P&gt;
+&lt;P&gt;&lt;/P&gt;&lt;P&gt;The help text contains these additional sections of information:&lt;br&gt;&lt;A href=&quot;#ValidationTable&quot;&gt;&lt;B&gt;Cross-validation Results&lt;/B&gt;&lt;/A&gt;&lt;br&gt;&lt;A href=&quot;#EnrichmentTable&quot;&gt;&lt;B&gt;Enrichment Results&lt;/B&gt;&lt;/A&gt;&lt;br&gt;&lt;A href=&quot;#PercentileTable&quot;&gt;&lt;B&gt;Percentile Results&lt;/B&gt;&lt;/A&gt;&lt;br&gt;&lt;A href=&quot;#CategoryStatisticsTable&quot;&gt;&lt;B&gt;Category Statistics Results&lt;/B&gt;&lt;/A&gt;&lt;br&gt;&lt;A href=&quot;#NonValidatedTable&quot;&gt;&lt;B&gt;Non-validated Models Results&lt;/B&gt;&lt;/A&gt;&lt;br&gt;&lt;A href=&quot;#TrainingData&quot;&gt;&lt;B&gt;Training Data Information&lt;/B&gt;&lt;/A&gt;&lt;br&gt;&lt;A href=&quot;#ConstructionInfo&quot;&gt;&lt;B&gt;Model Construction Information&lt;/B&gt;&lt;/A&gt;&lt;br&gt;&lt;A href=&quot;#ModelParameters&quot;&gt;&lt;B&gt;Model Construction Parameters&lt;/B&gt;&lt;/A&gt;&lt;!-- Section --&gt;
+&lt;!-- LinkText: Cross-validation Results--&gt;
+&lt;P&gt;&lt;A name=&quot;ValidationTable&quot;&gt;&lt;/A&gt;&lt;U&gt;&lt;H5&gt;Leave-one-out Cross-Validation Results&lt;/H5&gt;&lt;/U&gt;&lt;/P&gt;&lt;P&gt;This model was built using 457 samples, and validated using a leave-one-out cross-validation. Each sample was left out one at a time, and a model built using the results of the samples, and that model used to predict the left-out sample. Once all the samples had predictions, a ROC plot was generated, and the area under the curve (&lt;strong&gt;XV ROC AUC&lt;/strong&gt;) calculated.&lt;/P&gt;
+&lt;P&gt;&lt;strong&gt;Best Split&lt;/strong&gt; was calculated by picking the split that minimized the sum of the percent misclassified for category members and for category nonmembers, using the cross-validated score for each sample. Using that split, a contingency table is constructed, containing the number of true positives (&lt;strong&gt;TP&lt;/strong&gt;), false negatives (&lt;strong&gt;FN&lt;/strong&gt;), false positives (&lt;strong&gt;FP&lt;/strong&gt;), and true negatives (&lt;strong&gt;TN&lt;/strong&gt;). &lt;/P&gt;
+&lt;table&gt;
+&lt;tr&gt;&lt;th&gt;Output&lt;/th&gt;&lt;th&gt;XV ROC AUC&lt;/th&gt;&lt;th&gt;Best Split&lt;/th&gt;&lt;th&gt;TP/FN&lt;br&gt;FP/TN&lt;/th&gt;
+&lt;th&gt;# in Category&lt;/th&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;MY_Bayesian&lt;/td&gt;
+&lt;td&gt;0.992&lt;/td&gt;&lt;td&gt;-6.017&lt;/td&gt;&lt;td align=center&gt;210/11&lt;br&gt;3/233&lt;/td&gt;&lt;td&gt;221&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+&lt;!-- Section --&gt;
+&lt;!-- LinkText: Enrichment Results--&gt;
+&lt;P&gt;&lt;A name=&quot;EnrichmentTable&quot;&gt;&lt;/A&gt;&lt;U&gt;&lt;H5&gt;Enrichment Results&lt;/H5&gt;&lt;/U&gt;&lt;P align=&quot;right&quot;&gt;&lt;A href=&quot;#Top&quot;&gt;&lt;I&gt;Back to Top&lt;/I&gt;&lt;/A&gt;&lt;/P&gt;&lt;/P&gt;&lt;P&gt;This model was built using 457 samples, and validated using a leave-one-out cross-validation. Each sample was left out one at a time, and a model built using the results of the samples, and that model used to predict the left-out sample. Once all the samples had predictions, an enrichment plot was generated, and the percentage of true category members captured at a particular percentage cutoff. (For example, in a column labeled &quot;1%&quot; would be the percentage of true category members (e.g., actives) that were found in the top 1% of the list, when sorted by the model score.)&lt;/P&gt;
+&lt;P&gt;This table shows the output name, the percentage of samples that are in that particular category, the number of category members, and the percentage of true members found. Percentages that are less than 100% are in &lt;b&gt;bold&lt;/b&gt;.&lt;/P&gt;
+&lt;table&gt;
+&lt;tr&gt;&lt;th&gt;Output&lt;/th&gt;&lt;th&gt;&lt;center&gt;Category %&lt;/center&gt;&lt;/th&gt;&lt;th&gt;1%&lt;/th&gt;&lt;th&gt;5%&lt;/th&gt;&lt;th&gt;10%&lt;/th&gt;&lt;th&gt;25%&lt;/th&gt;&lt;th&gt;50%&lt;/th&gt;&lt;th&gt;75%&lt;/th&gt;&lt;th&gt;90%&lt;/th&gt;&lt;th&gt;95%&lt;/th&gt;&lt;th&gt;99%&lt;/th&gt;&lt;tr&gt;
+&lt;td&gt;MY_Bayesian&lt;/td&gt;
+&lt;td&gt;&lt;center&gt;48.359%&lt;/center&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;1.8%&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;10%&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;20.4%&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;51.6%&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;96.8%&lt;/b&gt;&lt;/td&gt;&lt;td&gt;100%&lt;/td&gt;&lt;td&gt;100%&lt;/td&gt;&lt;td&gt;100%&lt;/td&gt;&lt;td&gt;100%&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+&lt;!-- Section --&gt;
+&lt;!-- LinkText: Percentile Results--&gt;
+&lt;P&gt;&lt;A name=&quot;PercentileTable&quot;&gt;&lt;/A&gt;&lt;U&gt;&lt;H5&gt;Percentile Results&lt;/H5&gt;&lt;/U&gt;&lt;P align=&quot;right&quot;&gt;&lt;A href=&quot;#Top&quot;&gt;&lt;I&gt;Back to Top&lt;/I&gt;&lt;/A&gt;&lt;/P&gt;&lt;/P&gt;&lt;P&gt;This table shows, for each model, the cutoff needed to capture a particular percentage of the good samples. For each cutoff, it shows below the estimated percentages of false positives and true negatives for the non-good samples. This table is designed to help you pick the cutoff value that best balances your desire to capture as many good samples as possible, while keeping the number of false positives at a minimum.&lt;/P&gt;
+&lt;P&gt;The rates shown in this table are estimates derived from the cross-validated data; the actual numbers you would find on your own data may vary.&lt;/P&gt;
+&lt;P&gt;Cutoffs which lead to 10% or greater false positives are displayed in &lt;B&gt;bold&lt;/B&gt; for ease of identification. &lt;/P&gt;
+&lt;table&gt;
+&lt;tr&gt;&lt;th&gt;Model Name&lt;/th&gt;&lt;th&gt;99%&lt;/th&gt;&lt;th&gt;95%&lt;/th&gt;&lt;th&gt;90%&lt;/th&gt;
+&lt;th&gt;70%&lt;/th&gt;&lt;th&gt;50%&lt;/th&gt;&lt;th&gt;30%&lt;/th&gt;&lt;th&gt;10%&lt;/th&gt;&lt;th&gt;5%&lt;/th&gt;&lt;th&gt;1%&lt;/th&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;MY_Bayesian&lt;/td&gt;&lt;td&gt;-10.829&lt;br&gt;&lt;B&gt;11%&lt;/B&gt;/89%&lt;/td&gt;
+&lt;td&gt;-1.734&lt;br&gt;2%/98%&lt;/td&gt;
+&lt;td&gt;3.203&lt;br&gt;1%/99%&lt;/td&gt;
+&lt;td&gt;8.660&lt;br&gt;1%/99%&lt;/td&gt;
+&lt;td&gt;19.704&lt;br&gt;1%/99%&lt;/td&gt;
+&lt;td&gt;30.748&lt;br&gt;1%/99%&lt;/td&gt;
+&lt;td&gt;36.205&lt;br&gt;1%/99%&lt;/td&gt;
+&lt;td&gt;41.143&lt;br&gt;1%/99%&lt;/td&gt;
+&lt;td&gt;50.238&lt;br&gt;1%/99%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+&lt;!-- Section --&gt;
+&lt;!-- LinkText: Category Statistics Results--&gt;
+&lt;P&gt;&lt;A name=&quot;CategoryStatisticsTable&quot;&gt;&lt;/A&gt;&lt;U&gt;&lt;H5&gt;Category Statistics Results&lt;/H5&gt;&lt;/U&gt;&lt;P align=&quot;right&quot;&gt;&lt;A href=&quot;#Top&quot;&gt;&lt;I&gt;Back to Top&lt;/I&gt;&lt;/A&gt;&lt;/P&gt;&lt;/P&gt;&lt;P&gt;This table shows, for each category, statistics derived from the cross-validated predictions of the model built for that category as applied to members of that category and non-members of that category.  For each group, the number of members/nonmembers (N) is given; the mean prediction for each subset (Mean); and the estimate standard deviation of the predictions for each subset (StdDev).&lt;/P&gt;
+&lt;P&gt;(Categories with one or no members do not have a mean and standard deviation, as there are too few predictions upon which to base them during cross-validation. Also, occasionally categories may contain many duplicate or highly-similar compounds which predict close or identical values, causing them to have unusually low standard deviation values.  These low values may be adjusted at time of use of these standard deviations for predicting, for example, percentile results.)&lt;/P&gt;
+&lt;table&gt;&lt;tr&gt;&lt;th&gt;Output&lt;/th&gt;&lt;th&gt;&lt;center&gt;Category&lt;br&gt;N&lt;/center&gt;&lt;/th&gt;&lt;th&gt;&lt;center&gt;Category&lt;br&gt;Mean&amp;nbsp;(&amp;#0177;StdDev)&lt;/center&gt;&lt;/th&gt;&lt;th&gt;&lt;center&gt;Noncategory&lt;br&gt;N&lt;/center&gt;&lt;/th&gt;&lt;th&gt;&lt;center&gt;Noncategory&lt;br&gt;Mean&amp;nbsp;(&amp;#0177;StdDev)&lt;/center&gt;&lt;/th&gt;&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;MY_Bayesian&lt;/td&gt;&lt;td&gt;&lt;center&gt;221&lt;/center&gt;&lt;/td&gt;&lt;td&gt;&lt;center&gt;19.70&amp;nbsp;(&amp;#0177;12.99)&lt;/center&gt;&lt;/td&gt;&lt;/td&gt;&lt;td&gt;&lt;center&gt;236&lt;/center&gt;&lt;/td&gt;&lt;td&gt;&lt;center&gt;-22.10&amp;nbsp;(&amp;#0177;9.06)&lt;/center&gt;&lt;/td&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+&lt;!-- Section --&gt;
+&lt;!-- LinkText: Non-validated Models Results--&gt;
+&lt;P&gt;&lt;A name=&quot;NonValidatedTable&quot;&gt;&lt;/A&gt;&lt;U&gt;&lt;H5&gt;Non-validated Models Results&lt;/H5&gt;&lt;/U&gt;&lt;P align=&quot;right&quot;&gt;&lt;A href=&quot;#Top&quot;&gt;&lt;I&gt;Back to Top&lt;/I&gt;&lt;/A&gt;&lt;/P&gt;&lt;/P&gt;&lt;P&gt;All categories contained enough samples for cross-validation.&lt;/P&gt;
+&lt;!-- Section --&gt;
+&lt;!-- LinkText: Training Data Information--&gt;
+&lt;P&gt;&lt;A name=&quot;TrainingData&quot;&gt;&lt;/A&gt;&lt;U&gt;&lt;H5&gt;Training Data Information&lt;/H5&gt;&lt;/U&gt;&lt;P align=&quot;right&quot;&gt;&lt;A href=&quot;#Top&quot;&gt;&lt;I&gt;Back to Top&lt;/I&gt;&lt;/A&gt;&lt;/P&gt;&lt;/P&gt;&lt;p&gt;The data used to train the model consisted of 457 samples. The following are the statistics for the independent (X) properties.&lt;/p&gt;
+&lt;table&gt;
+&lt;tr&gt;&lt;th&gt;Property&lt;/th&gt;&lt;th&gt;Min&lt;/th&gt;&lt;th&gt;Max&lt;/th&gt;&lt;th&gt;Mean&lt;/th&gt;&lt;th&gt;Std. Dev.&lt;/th&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;ALogP&lt;/td&gt;&lt;td&gt;-2.331&lt;/td&gt;&lt;td&gt;8.437&lt;/td&gt;&lt;td&gt;4.2156&lt;/td&gt;&lt;td&gt;1.82&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Molecular_Weight&lt;/td&gt;&lt;td&gt;172.02&lt;/td&gt;&lt;td&gt;775.86&lt;/td&gt;&lt;td&gt;437.5&lt;/td&gt;&lt;td&gt;94.941&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Num_H_Donors&lt;/td&gt;&lt;td&gt;0&lt;/td&gt;&lt;td&gt;4&lt;/td&gt;&lt;td&gt;1.0372&lt;/td&gt;&lt;td&gt;0.89537&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Num_H_Acceptors&lt;/td&gt;&lt;td&gt;0&lt;/td&gt;&lt;td&gt;10&lt;/td&gt;&lt;td&gt;4.1291&lt;/td&gt;&lt;td&gt;1.6455&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Num_RotatableBonds&lt;/td&gt;&lt;td&gt;0&lt;/td&gt;&lt;td&gt;20&lt;/td&gt;&lt;td&gt;5.1597&lt;/td&gt;&lt;td&gt;2.8886&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Num_Rings&lt;/td&gt;&lt;td&gt;0&lt;/td&gt;&lt;td&gt;7&lt;/td&gt;&lt;td&gt;3.5492&lt;/td&gt;&lt;td&gt;1.3631&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Num_AromaticRings&lt;/td&gt;&lt;td&gt;0&lt;/td&gt;&lt;td&gt;5&lt;/td&gt;&lt;td&gt;2.5405&lt;/td&gt;&lt;td&gt;1.1718&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Molecular_FractionalPolarSurfaceArea&lt;/td&gt;&lt;td&gt;0&lt;/td&gt;&lt;td&gt;0.657&lt;/td&gt;&lt;td&gt;0.20343&lt;/td&gt;&lt;td&gt;0.081987&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;ECFP_6&lt;/td&gt;&lt;td&gt;N/A&lt;/td&gt;&lt;td&gt;N/A&lt;/td&gt;&lt;td&gt;N/A&lt;/td&gt;&lt;td&gt;N/A&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+&lt;p&gt;The test to identify &quot;good&quot; samples is: &lt;pre&gt;property(&quot;activity&quot;) is defined AND property(&quot;activity&quot;) = 1&lt;/pre&gt;&lt;/p&gt;
+You can extend this model by adding your own training data to it to create a new model. Use the &lt;I&gt;New Model from Old&lt;/I&gt; component to do this. The new training samples must contain the properties as specified above (except that they need not contain properties that can be calculated on-demand). The &quot;good&quot; samples must be marked so that they can be identified by the above test. Because the original training data were not saved with this model, you will not be able to compute cross-validation statistics for the new model.&lt;!-- Section --&gt;
+&lt;!-- LinkText: Model Construction Information--&gt;
+&lt;P&gt;&lt;A name=&quot;ConstructionInfo&quot;&gt;&lt;/A&gt;&lt;U&gt;&lt;H5&gt;Model Construction Information&lt;/H5&gt;&lt;/U&gt;&lt;P align=&quot;right&quot;&gt;&lt;A href=&quot;#Top&quot;&gt;&lt;I&gt;Back to Top&lt;/I&gt;&lt;/A&gt;&lt;/P&gt;&lt;/P&gt;
+&lt;P&gt;Post-processing was performed to remove low-information bins. Low-information bins are those that have: normalized estimates in the range [-0.05, 0.05].&lt;/P&gt;
+&lt;P&gt;For each property, the following table gives the original number of bins (&lt;I&gt;Original&lt;/I&gt;), the number removed due to too few samples (&lt;I&gt;TooFew&lt;/I&gt;), the number removed due to a poor normalized estimate (&lt;I&gt;Noninformative&lt;/I&gt;), and the final number of bins saved in the model (&lt;I&gt;Final&lt;/I&gt;).&lt;/P&gt;
+&lt;table&gt;
+&lt;tr&gt;&lt;th&gt;Property&lt;/th&gt;&lt;th&gt;Original&lt;/th&gt;&lt;th&gt;TooFew&lt;/th&gt;&lt;th&gt;Noninformative&lt;/th&gt;&lt;th&gt;Final&lt;/th&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;ALogP&lt;/td&gt;&lt;td&gt;11&lt;/td&gt;&lt;td&gt;0&lt;/td&gt;&lt;td&gt;1&lt;/td&gt;&lt;td&gt;10&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Molecular_Weight&lt;/td&gt;&lt;td&gt;11&lt;/td&gt;&lt;td&gt;0&lt;/td&gt;&lt;td&gt;1&lt;/td&gt;&lt;td&gt;10&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Num_H_Donors&lt;/td&gt;&lt;td&gt;4&lt;/td&gt;&lt;td&gt;0&lt;/td&gt;&lt;td&gt;0&lt;/td&gt;&lt;td&gt;4&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Num_H_Acceptors&lt;/td&gt;&lt;td&gt;6&lt;/td&gt;&lt;td&gt;0&lt;/td&gt;&lt;td&gt;0&lt;/td&gt;&lt;td&gt;6&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Num_RotatableBonds&lt;/td&gt;&lt;td&gt;8&lt;/td&gt;&lt;td&gt;0&lt;/td&gt;&lt;td&gt;0&lt;/td&gt;&lt;td&gt;8&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Num_Rings&lt;/td&gt;&lt;td&gt;5&lt;/td&gt;&lt;td&gt;0&lt;/td&gt;&lt;td&gt;0&lt;/td&gt;&lt;td&gt;5&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Num_AromaticRings&lt;/td&gt;&lt;td&gt;5&lt;/td&gt;&lt;td&gt;0&lt;/td&gt;&lt;td&gt;0&lt;/td&gt;&lt;td&gt;5&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Molecular_FractionalPolarSurfaceArea&lt;/td&gt;&lt;td&gt;11&lt;/td&gt;&lt;td&gt;0&lt;/td&gt;&lt;td&gt;0&lt;/td&gt;&lt;td&gt;11&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;ECFP_6&lt;/td&gt;&lt;td&gt;9246&lt;/td&gt;&lt;td&gt;0&lt;/td&gt;&lt;td&gt;34&lt;/td&gt;&lt;td&gt;9212&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/P&gt;
+&lt;!-- Section --&gt;
+&lt;!-- LinkText: Model Construction Parameters--&gt;
+&lt;P&gt;&lt;A name=&quot;ModelParameters&quot;&gt;&lt;/A&gt;&lt;U&gt;&lt;H5&gt;Model Construction Parameters&lt;/H5&gt;&lt;/U&gt;&lt;P align=&quot;right&quot;&gt;&lt;A href=&quot;#Top&quot;&gt;&lt;I&gt;Back to Top&lt;/I&gt;&lt;/A&gt;&lt;/P&gt;&lt;/P&gt;&lt;p&gt;The following parameter values were specified by the learner component. Some items are internal parameters not exposed by the component. In the course of building the model, certain values may have been adjusted from the values shown below.&lt;/p&gt;
+
+&lt;table&gt;&lt;tr&gt;&lt;th&gt;Parameter&lt;/th&gt;&lt;th&gt;Value&lt;/th&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;LearnedPropertyName&lt;/td&gt;&lt;td&gt;MY_Bayesian&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;TestForGood&lt;/td&gt;&lt;td&gt;property(&amp;quot;activity&amp;quot;) is defined AND property(&amp;quot;activity&amp;quot;) = 1&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;UseProperties&lt;/td&gt;&lt;td&gt;UserSet&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;PredefinedSet&lt;/td&gt;&lt;td&gt;ALogP, Molecular_Weight, Num_H_Donors, Num_H_Acceptors, Num_RotatableBonds, Molecular_FractionalPolarSurfaceArea, ECFP_6&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;UserSet&lt;/td&gt;&lt;td&gt;ALogP,Molecular_Weight,Num_H_Donors,Num_H_Acceptors,Num_RotatableBonds,Num_Rings,Num_AromaticRings,Molecular_FractionalPolarSurfaceArea,ECFP_6&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;IgnoreProperties&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;b&gt;Additional Options&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;NumberOfBins&lt;/td&gt;&lt;td&gt;10&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Learn Options&lt;/td&gt;&lt;td&gt;Validate Models, Remove Uninformative Bins, Equipopulate Bins&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Numeric Distance Function&lt;/td&gt;&lt;td&gt;Euclidean&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Numeric Scaling&lt;/td&gt;&lt;td&gt;Mean-Center and Scale, Scale by Number of Dimensions&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Fingerprint Distance Function&lt;/td&gt;&lt;td&gt;Tanimoto&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Model Domain Fingerprint&lt;/td&gt;&lt;td&gt;FCFP_2&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;DestinationFolder&lt;/td&gt;&lt;td&gt;16606/LearnedProperties&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Create Proxy Component&lt;/td&gt;&lt;td&gt;False&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Cost Matrix&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Post-Processing Script&lt;/td&gt;&lt;td&gt;resize(#op, 4);&amp;#xA;#op[1] := &apos;NormalizedProbability&apos;;&amp;#xA;#op[2] := &apos;Enrichment&apos;;&amp;#xA;#op[3] := &apos;EstPGood&apos;;&amp;#xA;#op[4] := &apos;Prediction&apos;;&amp;#xA;SetParam(&apos;Output Options&apos;,#op);&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;DuplicationEstimate&lt;/td&gt;&lt;td&gt;1.0&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;GoodDuplicationEstimate&lt;/td&gt;&lt;td&gt;1.0&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Additional Properties&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Max OPS Fingerprint Bits&lt;/td&gt;&lt;td&gt;1000&lt;/td&gt;&lt;/tr&gt;
+
+&lt;/table&gt;
+</sci:value>
+				<sci:value>Generic Data</sci:value>
+				<sci:value>Data records to calculate properties with</sci:value>
+				<sci:value>Generic Data</sci:value>
+				<sci:value>Data records which had at least one successful property calculation</sci:value>
+				<sci:value>Generic Data</sci:value>
+				<sci:value>Data records for which no successful property calculations occurred</sci:value>
+			</sci:arg>
+			<sci:arg name="RegistrationVersion" type="StringType" required="false" visibility="nevershow" multi="false">
+				<sci:help>The server version when this component was registered</sci:help>
+				<sci:value>19.1.0.1963</sci:value>
+			</sci:arg>
+			<sci:arg name="Component Sticky Notes" type="StringType" required="false" visibility="nevershow" multi="false"/>
+			<sci:arg name="Protocol Sticky Notes" type="StringType" required="false" visibility="nevershow" multi="false">
+				<sci:help>Protocol Sticky Notes</sci:help>
+			</sci:arg>
+			<sci:arg name="ProtocolScale2" type="LongType" required="false" visibility="nevershow" multi="false">
+				<sci:help>Protocol Scale</sci:help>
+				<sci:value>100</sci:value>
+			</sci:arg>
+			<sci:arg name="Protocol Options" type="StringType" required="false" visibility="nevershow" multi="false">
+				<sci:help>Protocol Options</sci:help>
+				<sci:legalval>Owner Access Only</sci:legalval>
+			</sci:arg>
+			<sci:arg name="Registrant" type="StringType" required="false" visibility="nevershow" multi="false">
+				<sci:help>The user who registered this component.</sci:help>
+				<sci:value>16606</sci:value>
+			</sci:arg>
+			<sci:arg name="RegistrationDate" type="StringType" required="false" visibility="nevershow" multi="false">
+				<sci:help>The date this component was registered.</sci:help>
+				<sci:value>Sat Sep 17 18:19:46 2022</sci:value>
+			</sci:arg>
+			<sci:arg name="Component Path" type="StringType" required="false" visibility="nevershow" multi="false">
+				<sci:help>The original path within the database of this component.</sci:help>
+				<sci:value>MY_Bayesian</sci:value>
+			</sci:arg>
+			<sci:arg name="Output Score" type="StringType" required="false" visibility="nevershow" multi="false">
+				<sci:help>Whether to output the standard score, or the cross-validated score. (You should used the latter only when applying this model to the original training data.  The score on a sample is the score you would get by leaving the sample out and building the model on the remaining training data.)</sci:help>
+				<sci:legalval selected="true">Standard</sci:legalval>
+				<sci:legalval>Cross-Validated</sci:legalval>
+			</sci:arg>
+			<sci:arg name="Bayesian Option" type="StringType" required="false" visibility="nevershow" multi="false">
+				<sci:help>The type of Bayesian scoring to utilize</sci:help>
+				<sci:legalval selected="true">SciTegic</sci:legalval>
+				<sci:legalval>R1</sci:legalval>
+				<sci:legalval>R2</sci:legalval>
+				<sci:legalval>R3</sci:legalval>
+				<sci:legalval>R4</sci:legalval>
+				<sci:legalval>Avidon</sci:legalval>
+				<sci:legalval>SciTegic_X1</sci:legalval>
+				<sci:legalval>R1_X1</sci:legalval>
+				<sci:legalval>R2_X1</sci:legalval>
+				<sci:legalval>R3_X1</sci:legalval>
+				<sci:legalval>R4_X1</sci:legalval>
+				<sci:legalval>Avidon_X1</sci:legalval>
+				<sci:legalval>SciTegic_X2</sci:legalval>
+				<sci:legalval>R1_X2</sci:legalval>
+				<sci:legalval>R2_X2</sci:legalval>
+				<sci:legalval>R3_X2</sci:legalval>
+				<sci:legalval>R4_X2</sci:legalval>
+				<sci:legalval>Avidon_X2</sci:legalval>
+			</sci:arg>
+			<sci:arg name="Model Type" type="StringType" required="false" visibility="nevershow" multi="false">
+				<sci:help>The type of the model</sci:help>
+				<sci:value>Bayesian/SciTegic</sci:value>
+			</sci:arg>
+		</sci:component>
+		<sci:protocol>
+			<sci:data object="SciTegic.CalculateWithEquation.1">
+				<sci:component name="MY_Bayesian" version="2">
+					<sci:arg name="OnGeneralError" type="StringType" required="true" visibility="hidden" multi="false">
+						<sci:help>When an recoverable error occurs during processing:  
+  Halt: Terminate the execution of the network
+  Fail: Continue execution of the network, passing data out the Fail(red) port
+  Pass: Continue execution of the network, passing data out the Pass(green) port</sci:help>
+						<sci:legalval selected="true">Halt</sci:legalval>
+						<sci:legalval>Fail</sci:legalval>
+						<sci:legalval>Pass</sci:legalval>
+					</sci:arg>
+					<sci:arg name="OnDataTypeError" type="StringType" required="true" visibility="hidden" multi="false">
+						<sci:help>When an expected data type is not found during processing:  
+  Halt: Terminate the execution of the network
+  Fail: Continue execution of the network, passing data out the Fail(red) port
+  Pass: Continue execution of the network, passing data out the Pass(green) port</sci:help>
+						<sci:legalval selected="true">Halt</sci:legalval>
+						<sci:legalval>Fail</sci:legalval>
+						<sci:legalval>Pass</sci:legalval>
+					</sci:arg>
+					<sci:arg name="Output" type="StringType" required="true" visibility="visible" multi="true">
+						<sci:help>Specifies the name of the model&apos;s output property.</sci:help>
+						<sci:value>$(Output)</sci:value>
+					</sci:arg>
+					<sci:arg name="ComponentAttributes" type="StringType" required="false" visibility="hidden" multi="true">
+						<sci:help>Component Attributes</sci:help>
+						<sci:legalval selected="true">ComponentTakesInput</sci:legalval>
+						<sci:legalval selected="true">ComponentReturnsPass</sci:legalval>
+						<sci:legalval selected="true">ComponentReturnsFail</sci:legalval>
+						<sci:legalval>ComponentRunsLocal</sci:legalval>
+					</sci:arg>
+					<sci:arg name="Output Options" type="StringType" required="false" visibility="visible" multi="true">
+						<sci:help>&lt;P&gt;These control which variants of the output scores will be generated for each selected model.  Selections other than &quot;NormalizedProbability&quot; causes the output property to the appended with a hash sign &quot;#&quot; and the name of the option.  Options are:&lt;/P&gt; &lt;UL&gt;
+ &lt;LI&gt;NormalizedProbability: The standard Laplacian-modified Bayesian score.
+ &lt;LI&gt;Enrichment: An estimate of enrichment, that is, the increased likelihood (versus random) of this sample being in the &quot;good&quot; category.
+ &lt;LI&gt;EstPGood: The estimated probability that the sample is in the &quot;good&quot; category, based on an assumed normal distribution of scores within the good and non-good categories.
+ &lt;LI&gt;Prediction: A True/False prediction using the best cutoff value estimated from leave-one-out cross-validation. The cutoff is chosen to minimize the average of the false positive rate and false negative rate.
+ &lt;/UL&gt;
+ You may select more than one of these options.  In that case, multiple properties will be output.</sci:help>
+						<sci:value>$(Output Options)</sci:value>
+					</sci:arg>
+					<sci:arg name="Preferred Class Cutoff" type="StringType" required="false" visibility="visible" multi="true">
+						<sci:help>Cutoff value for distinguishing &quot;good&quot; from &quot;bad&quot; samples when making predictions. &quot;Default&quot; indicates that the cutoff derived from leave-one-out cross-validation when building the model should be used. 
+&lt;p&gt;&lt;b&gt;Note:&lt;/b&gt;
+&lt;ul&gt;
+&lt;li&gt;Classification models generate numerical scores or probabilities as their raw output. A cutoff value is then used in order to convert these scores into class predictions. Adjusting the cutoff from its default value may yield better class predictions for some models, particularly when the model&apos;s training data were imbalanced. Changing the value of &lt;i&gt;Preferred Class Cutoff&lt;/i&gt; changes the class predictions but has no effect on the output scores.
+&lt;/ul&gt;</sci:help>
+						<sci:value>$(Preferred Class Cutoff)</sci:value>
+					</sci:arg>
+					<sci:arg name="Error Option" type="StringType" required="false" visibility="visible" multi="false">
+						<sci:help>&lt;P&gt;This controls what happens when a model fails to calculate its output. The options are:&lt;/P&gt; &lt;UL&gt;
+ &lt;LI&gt;&lt;B&gt;Leave Undefined:&lt;/B&gt; Leave the property undefined.
+ &lt;LI&gt;&lt;B&gt;Return NULL:&lt;/B&gt; Return the property with the string NULL.
+ &lt;LI&gt;&lt;B&gt;Return Error Text:&lt;/B&gt; Return text containing information about why the output could not be calculated.
+ &lt;/UL&gt;
+</sci:help>
+						<sci:value>$(Error Option)</sci:value>
+					</sci:arg>
+					<sci:arg name="Use Memory Cache" type="BoolType" required="false" visibility="visible" multi="false">
+						<sci:help>Specifies whether to cache model in memory to reduce startup time when making predictions over multiple protocol runs. Requires the use of protocol pooling.</sci:help>
+						<sci:value>$(Use Memory Cache)</sci:value>
+					</sci:arg>
+					<sci:arg name="Clear Cache When Done" type="BoolType" required="false" visibility="visible" multi="false">
+						<sci:help>Specifies whether clear the cached model when finished. Set this to True when no further calculations will be done with the model, and you wish to free the memory the model is consuming.</sci:help>
+						<sci:value>$(Clear Cache When Done)</sci:value>
+					</sci:arg>
+					<sci:arg name="Allow Missing Data" type="BoolType" required="false" visibility="visible" multi="false">
+						<sci:help>Specifies whether to calculate an output property when one or more input properties used in its calculation are missing. &lt;p&gt;If False, then the value specified by &lt;i&gt;Error Option&lt;/i&gt; is assigned to the property when any input property is missing, and the data record is sent out the Fail port. &lt;p&gt;If True, the output property is calculated even when input properties are missing, with any contribution from missing properties omitted from the calculation. The resulting prediction is sent out the Pass port along with a property named &lt;b&gt;ErrorText&lt;/b&gt; containing the value &quot;CalculationMissingRequiredProperties&quot;. Use this option when you view a possibly flawed prediction based on incomplete data as better than no prediction at all.</sci:help>
+						<sci:value>$(Allow Missing Data)</sci:value>
+					</sci:arg>
+					<sci:arg name="CustomErrorText" type="StringType" required="false" visibility="nevershow" multi="false">
+						<sci:help>Custom Error Message</sci:help>
+					</sci:arg>
+					<sci:arg name="ComponentIcon" type="StringType" required="true" visibility="nevershow" multi="false">
+						<sci:help>Component Icon</sci:help>
+						<sci:value>ComponentNode</sci:value>
+					</sci:arg>
+					<sci:arg name="Registrant" type="StringType" required="false" visibility="nevershow" multi="false">
+						<sci:help>Registrant</sci:help>
+						<sci:value>scitegic/generic</sci:value>
+					</sci:arg>
+					<sci:arg name="RegistrationDate" type="StringType" required="false" visibility="nevershow" multi="false">
+						<sci:help>Registrant Date</sci:help>
+						<sci:value>Wed Apr 09 11:54:40 2003</sci:value>
+					</sci:arg>
+					<sci:arg name="ComponentGUID" type="StringType" required="false" visibility="nevershow" multi="false">
+						<sci:help>GUID</sci:help>
+						<sci:value>{91FF8747-EE4F-4EE0-A377-21CEA0562DB8}</sci:value>
+					</sci:arg>
+					<sci:arg name="DerivedFrom" type="StringType" required="false" visibility="nevershow" multi="false">
+						<sci:help>The component this component is based upon.</sci:help>
+						<sci:value>CalcWithEquation</sci:value>
+					</sci:arg>
+					<sci:arg name="ComponentDisplayName" type="StringType" required="false" visibility="nevershow" multi="false">
+						<sci:value>MY_Bayesian</sci:value>
+					</sci:arg>
+					<sci:arg name="ComponentDisabled" type="LongType" required="false" visibility="nevershow" multi="false">
+						<sci:help>Disabled</sci:help>
+						<sci:value>0</sci:value>
+					</sci:arg>
+					<sci:arg name="ComponentPoint" type="StringType" required="false" visibility="nevershow" multi="false">
+						<sci:help>Component Point</sci:help>
+						<sci:value>85 -50</sci:value>
+					</sci:arg>
+					<sci:arg name="ComponentHelp" type="StringType" required="false" visibility="nevershow" multi="true">
+						<sci:help>Fancy Help</sci:help>
+						<sci:value>100</sci:value>
+						<sci:value>An internal component created when you learn a model of some data. Do not directly use this component.</sci:value>
+						<sci:value>This is an internal component that should not be used directly.</sci:value>
+						<sci:value>Generic Data</sci:value>
+						<sci:value/>
+						<sci:value>Generic Data</sci:value>
+						<sci:value/>
+						<sci:value>Generic Data</sci:value>
+						<sci:value/>
+					</sci:arg>
+					<sci:arg name="IsLearnedModelImplementation" type="BoolType" required="false" visibility="nevershow" multi="false">
+						<sci:value>true</sci:value>
+					</sci:arg>
+					<sci:arg name="Output Score" type="StringType" required="false" visibility="nevershow" multi="false">
+						<sci:help>Whether to output the standard score, or the cross-validated score. (You should used the latter only when applying this model to the original training data.  The score on a sample is the score you would get by leaving the sample out and building the model on the remaining training data.)</sci:help>
+						<sci:value>$(Output Score)</sci:value>
+					</sci:arg>
+					<sci:arg name="Bayesian Option" type="StringType" required="false" visibility="nevershow" multi="false">
+						<sci:help>The type of Bayesian scoring to utilize</sci:help>
+						<sci:value>$(Bayesian Option)</sci:value>
+					</sci:arg>
+					<sci:arg name="ComponentLocalID" type="LongType" required="false" visibility="nevershow" multi="false">
+						<sci:help>Local Component Identifier</sci:help>
+						<sci:value>0</sci:value>
+					</sci:arg>
+					<sci:arg name="Relearn Component" type="StringType" required="false" visibility="nevershow" multi="false">
+						<sci:value>{22699AB0-7583-4062-976F-46E680B2CBFF}</sci:value>
+					</sci:arg>
+					<sci:arg name="Relearn PointInfoText" type="StringType" required="false" visibility="nevershow" multi="false">
+						<sci:value>4,9,3;ALogP;IsNumber;NoSubtype;SciTegic.value.DoubleValue;4;1;1024;2;1;-2.331;8.437;1926.545;9635.32148899999;457;457;4.21563457330416;1.8199669244438;;0,3;Molecular_Weight;IsNumber;NoSubtype;SciTegic.value.DoubleValue;4;1;1024;2;1;172.02254;775.86208;199935.32913;91590018.3085636;457;457;437.495249737418;94.940515287786;;0,3;Num_H_Donors;IsNumber;NoSubtype;SciTegic.value.IntegerValue;4;1;1024;2;1;0;4;474;858;457;457;1.03719912472648;0.895365669684738;;0,3;Num_H_Acceptors;IsNumber;NoSubtype;SciTegic.value.IntegerValue;4;1;1024;2;1;0;10;1887;9029;457;457;4.12910284463895;1.64548512474854;;0,3;Num_RotatableBonds;IsNumber;NoSubtype;SciTegic.value.IntegerValue;4;1;1024;2;1;0;20;2358;15980;457;457;5.15973741794311;2.88864795722258;;0,3;Num_Rings;IsNumber;NoSubtype;SciTegic.value.IntegerValue;4;1;1024;2;1;0;7;1622;6606;457;457;3.5492341356674;1.36311381849088;;0,3;Num_AromaticRings;IsNumber;NoSubtype;SciTegic.value.IntegerValue;4;1;1024;2;1;0;5;1161;3577;457;457;2.54048140043764;1.1717882629736;;0,3;Molecular_FractionalPolarSurfaceArea;IsNumber;NoSubtype;SciTegic.value.DoubleValue;4;1;1024;2;1;0;0.657;92.966;21.983674;457;457;0.203426695842451;8.19871873737531e-002;;0,3;ECFP_6;IsFingerprint;NoSubtype;SciTegic.value.IntegerFingerprintValue;0;1;1024;2;1;0;0;0;0;0;0;0;0;;0,1088,1024,L2Norm,Tanimoto,Unknown,,0</sci:value>
+					</sci:arg>
+					<sci:arg name="Relearn LearnedPropertyName" type="StringType" required="false" visibility="nevershow" multi="false">
+						<sci:value>MY_Bayesian</sci:value>
+					</sci:arg>
+					<sci:arg name="Relearn TestForGood" type="StringType" required="false" visibility="nevershow" multi="false">
+						<sci:value>property(&quot;activity&quot;) is defined AND property(&quot;activity&quot;) = 1</sci:value>
+					</sci:arg>
+					<sci:arg name="Relearn WhenFinished" type="StringType" required="false" visibility="nevershow" multi="false">
+						<sci:value>Nothing</sci:value>
+					</sci:arg>
+					<sci:arg name="Relearn Learn Options" type="StringType" required="false" visibility="nevershow" multi="false">
+						<sci:value>Validate Models</sci:value>
+						<sci:value>Remove Uninformative Bins</sci:value>
+						<sci:value>Equipopulate Bins</sci:value>
+					</sci:arg>
+					<sci:arg name="Relearn Model Domain Fingerprint" type="StringType" required="false" visibility="nevershow" multi="false">
+						<sci:value>FCFP_2</sci:value>
+					</sci:arg>
+					<sci:arg name="Relearn Numeric Distance Function" type="StringType" required="false" visibility="nevershow" multi="false">
+						<sci:value>Euclidean</sci:value>
+					</sci:arg>
+					<sci:arg name="Relearn Numeric Scaling" type="StringType" required="false" visibility="nevershow" multi="false">
+						<sci:value>Mean-Center and Scale</sci:value>
+						<sci:value>Scale by Number of Dimensions</sci:value>
+					</sci:arg>
+					<sci:arg name="Relearn Fingerprint Distance Function" type="StringType" required="false" visibility="nevershow" multi="false">
+						<sci:value>Tanimoto</sci:value>
+					</sci:arg>
+					<sci:arg name="Relearn Additional Properties" type="StringType" required="false" visibility="nevershow" multi="false"/>
+					<sci:arg name="Relearn DestinationFolder" type="StringType" required="false" visibility="nevershow" multi="false">
+						<sci:value>16606/LearnedProperties</sci:value>
+					</sci:arg>
+					<sci:arg name="Relearn NumberOfBins" type="StringType" required="false" visibility="nevershow" multi="false">
+						<sci:value>10</sci:value>
+					</sci:arg>
+					<sci:arg name="Relearn Post-Processing Script" type="StringType" required="false" visibility="nevershow" multi="false">
+						<sci:value>resize(#op, 4);
+#op[1] := &apos;NormalizedProbability&apos;;
+#op[2] := &apos;Enrichment&apos;;
+#op[3] := &apos;EstPGood&apos;;
+#op[4] := &apos;Prediction&apos;;
+SetParam(&apos;Output Options&apos;,#op);</sci:value>
+					</sci:arg>
+					<sci:arg name="Relearn PointCalculator" type="StringType" required="false" visibility="nevershow" multi="false">
+						<sci:value>xNH68CkFAAA0LDksMztBTG9nUDtJc051bWJlcjtOb1N1YnR5cGU7U2NpVGVnaWMudmFsdWUuRG91YmxlVmFsdWU7NDsxOzEwMjQ7MjsxOy0yLjMzMTs4LjQzNzsxOTI2LjU0NTs5NjM1LjMyMTQ4ODk5OTk5OzQ1Nzs0NTc7NC4yMTU2MzQ1NzMzMDQxNjsxLjgxOTk2NjkyNDQ0Mzg7OzAsMztNb2xlY3VsYXJfV2VpZ2h0O0lzTnVtYmVyO05vU3VidHlwZTtTY2lUZWdpYy52YWx1ZS5Eb3VibGVWYWx1ZTs0OzE7MTAyNDsyOzE7MTcyLjAyMjU0Ozc3NS44NjIwODsxOTk5MzUuMzI5MTM7OTE1OTAwMTguMzA4NTYzNjs0NTc7NDU3OzQzNy40OTUyNDk3Mzc0MTg7OTQuOTQwNTE1Mjg3Nzg2OzswLDM7TnVtX0hfRG9ub3JzO0lzTnVtYmVyO05vU3VidHlwZTtTY2lUZWdpYy52YWx1ZS5JbnRlZ2VyVmFsdWU7NDsxOzEwMjQ7MjsxOzA7NDs0NzQ7ODU4OzQ1Nzs0NTc7MS4wMzcxOTkxMjQ3MjY0ODswLjg5NTM2NTY2OTY4NDczODs7MCwzO051bV9IX0FjY2VwdG9ycztJc051bWJlcjtOb1N1YnR5cGU7U2NpVGVnaWMudmFsdWUuSW50ZWdlclZhbHVlOzQ7MTsxMDI0OzI7MTswOzEwOzE4ODc7OTAyOTs0NTc7NDU3OzQuMTI5MTAyODQ0NjM4OTU7MS42NDU0ODUxMjQ3NDg1NDs7MCwzO051bV9Sb3RhdGFibGVCb25kcztJc051bWJlcjtOb1N1YnR5cGU7U2NpVGVnaWMudmFsdWUuSW50ZWdlclZhbHVlOzQ7MTsxMDI0OzI7MTswOzIwOzIzNTg7MTU5ODA7NDU3OzQ1Nzs1LjE1OTczNzQxNzk0MzExOzIuODg4NjQ3OTU3MjIyNTg7OzAsMztOdW1fUmluZ3M7SXNOdW1iZXI7Tm9TdWJ0eXBlO1NjaVRlZ2ljLnZhbHVlLkludGVnZXJWYWx1ZTs0OzE7MTAyNDsyOzE7MDs3OzE2MjI7NjYwNjs0NTc7NDU3OzMuNTQ5MjM0MTM1NjY3NDsxLjM2MzExMzgxODQ5MDg4OzswLDM7TnVtX0Fyb21hdGljUmluZ3M7SXNOdW1iZXI7Tm9TdWJ0eXBlO1NjaVRlZ2ljLnZhbHVlLkludGVnZXJWYWx1ZTs0OzE7MTAyNDsyOzE7MDs1OzExNjE7MzU3Nzs0NTc7NDU3OzIuNTQwNDgxNDAwNDM3NjQ7MS4xNzE3ODgyNjI5NzM2OzswLDM7TW9sZWN1bGFyX0ZyYWN0aW9uYWxQb2xhclN1cmZhY2VBcmVhO0lzTnVtYmVyO05vU3VidHlwZTtTY2lUZWdpYy52YWx1ZS5Eb3VibGVWYWx1ZTs0OzE7MTAyNDsyOzE7MDswLjY1Nzs5Mi45NjY7MjEuOTgzNjc0OzQ1Nzs0NTc7MC4yMDM0MjY2OTU4NDI0NTE7OC4xOTg3MTg3MzczNzUzMWUtMDAyOzswLDM7RUNGUF82O0lzRmluZ2VycHJpbnQ7Tm9TdWJ0eXBlO1NjaVRlZ2ljLnZhbHVlLkludGVnZXJGaW5nZXJwcmludFZhbHVlOzA7MTsxMDI0OzI7MTswOzA7MDswOzA7MDswOzA7OzAsMTA4OCwxMDI0LEwyTm9ybSxUYW5pbW90byxVbmtub3duLCww9gLwkgMAAPDJAQAA9t359gn69gVBTG9nUPr2EE1vbGVjdWxhcl9XZWlnaHT69gxOdW1fSF9Eb25vcnP69g9OdW1fSF9BY2NlcHRvcnP69hJOdW1fUm90YXRhYmxlQm9uZHP69glOdW1fUmluZ3P69hFOdW1fQXJvbWF0aWNSaW5nc/r2JE1vbGVjdWxhcl9GcmFjdGlvbmFsUG9sYXJTdXJmYWNlQXJlYfr2BkVDRlBfNvYJ+vYFQUxvZ1D69hBNb2xlY3VsYXJfV2VpZ2h0+vYMTnVtX0hfRG9ub3Jz+vYPTnVtX0hfQWNjZXB0b3Jz+vYSTnVtX1JvdGF0YWJsZUJvbmRz+vYJTnVtX1Jpbmdz+vYRTnVtX0Fyb21hdGljUmluZ3P69iRNb2xlY3VsYXJfRnJhY3Rpb25hbFBvbGFyU3VyZmFjZUFyZWH69gZFQ0ZQXzb2Cfr2BUFMb2dQ+vYQTW9sZWN1bGFyX1dlaWdodPr2DE51bV9IX0Rvbm9yc/r2D051bV9IX0FjY2VwdG9yc/r2Ek51bV9Sb3RhdGFibGVCb25kc/r2CU51bV9SaW5nc/r2EU51bV9Bcm9tYXRpY1Jpbmdz+vYkTW9sZWN1bGFyX0ZyYWN0aW9uYWxQb2xhclN1cmZhY2VBcmVh+vYGRUNGUF828fH2Cfr2BUFMb2dQ+vYQTW9sZWN1bGFyX1dlaWdodPr2DE51bV9IX0Rvbm9yc/r2D051bV9IX0FjY2VwdG9yc/r2Ek51bV9Sb3RhdGFibGVCb25kc/r2CU51bV9SaW5nc/r2EU51bV9Bcm9tYXRpY1Jpbmdz+vYkTW9sZWN1bGFyX0ZyYWN0aW9uYWxQb2xhclN1cmZhY2VBcmVh+vYGRUNGUF82+vH69hJDb2xsZWN0IFN0YXRpc3RpY3P69gRHb29k+vY8cHJvcGVydHkoImFjdGl2aXR5IikgaXMgZGVmaW5lZCBBTkQgcHJvcGVydHkoImFjdGl2aXR5IikgPSAx+vYTQWxsUHJvcGVydGllc09uR29vZPr2EkNhbGN1bGF0YWJsZU9uR29vZPr2EENhbGN1bGFibGVPbkdvb2Tx</sci:value>
+					</sci:arg>
+				</sci:component>
+				<sci:proplist>
+					<sci:propval name="VariableSetStatisticsCompressed">true</sci:propval>
+					<sci:propval name="VariableSetStatisticsUncompressedSize" lVal="157366"/>
+					<sci:propval name="VariableSetStatisticsSerialization" base64="UI1">H4sIAAAAAAAEC+x9BVxUTfe/0qBSoigWJraEIohSKhYoKmArqICohIDdiajYid3drdjdriB2d4PgVbH+M/d+z91dQn2e9/3967O7r3u/9zvnnJk558yZWbg872pBL83UJl8+wTArLU07X77a1Z2rO7h4eEeG+ro0i2nZP7x7cLRLy8i2/bvHDo4KdmnbI8wvODSsR80BQX37B9dsFNm/e9/gAI5darvYudjZ2td2sWegTk27Os5qn/aONR3t6tg7MSEXW/HtYst68onsG9yjf9+g6G7tgsNCe8X+J53WdrKvaedYx8neJTdk72Bf28mhplPdus51He3r8lGqjIPNtFvTbo0iIyKjY/5iDM0iYoNDg6NzmTmfn/TOYd2jR4/gqNj/tIM6LvxtXyfn+NtExgbFBrGAeEZG9PzPZvGbTsIiQv8z2w4u/O2cc/we0ZHhQbFhPdr8x13YsyRkWaDehTLVvKKDesSGRUYE9fWNZKnXtn90SFCPYI/o4KC/CH2eOW/Lcp7llMqnfU17J1u74Bq2ttmyrXFDL99ujqwzLzbV4Oio6LCI2LxXGZJNRVbKO1ueaLTipGxTfrLVZWfr5MQ+7GtX97ZvGRkdXt0vKCIsPDI2srp/RJ+IyIER1avbCiZZyVnC0vq+rr6RMbE1oqIjewTHxLBRWQ8MirGOCo4OYYrBPa1jI62jg8MjBwRb940cWCMsgtMsVpER1t3DImJqWnvnwloHRQdbx/aKjOGfQbHWvYIGBNezZissPKhv2BBmNDgmNoxZCY6xDotgIsHW0UHMHdadatjWtK1T3Zp/dqlZv5ava1Zatfz58rFBekVGWwcH9ehlzQbKBhc7uLqoFxLZlw2Lj1rMf+vQsAHMKLcYGR0WGsYCbR0hljLryBBxwNaV6zdzbYW2+rWauVaRDEFKmmpP65792dAj2f8irUOCB1rHBIVH9WWGubJfZKRX8MA/qgZZR0WyMecyadFKy8gI2ZcDgmEtKIL5m409JLeBxzAn9iR/hUf2DO4rGmLJEdRX1JccJujXF13hmiV0qx8b7Vo/tperL3xWvxa74YTSASBoUrjNPjrQ6Ivf1WKmswQPqYeeruK+wciezHxPVzs7GdrKSMnZgZRseJMN5TKVdgSlplL1z+a8yJxqYZdN1ZaR0pISoVUaVzN1Q3INly04ykhpQYnQmm2OfFDq1Vo24iQjpRElQqtkrqHq0MSiKevWkZFSV4nQKllpoWpFrQTLNv6BtUCypgxj3tVW7iDXTFGOl5qlATehLqQqKhtxtq+dWywclMF2trezl8QlSwbshu+XroJWlmDgGRQT3DcsIjhL0GkSGdkzOfnL17RSOvnyrRG00rJY+VmnEAyFquu5rK6Y6FmCVd7nIcUXoY4oa6r0hJTQf1KzF9UKqiZullAiW0+qBxC5KxNJR87RP6o5iV2Z50zHP2rWEjUNRU2+Xf9Roa6oYMYV1JLsj4rNRMUKSi/mnU9/8qw0Bj0pb7KESrn7NPs+y9xrKNTYIOj+VdyT05PTvwpOovg/C32ygms6ipr/IPrJghbXcxb1/lkGJAvaXLW+qPqPsyBZ0OHaDqL232ZCsqDLlVxEpX+aDcmCHlf2EZX/84xIFvSVY/mnWZEsGDDl9LR+HbTyrRJ0BCOWJWkLWZlYzbLFKO0cQ8I9QTe/oCvopGfeuvy57ZPVWkdx+319+jWf7j/dcFus1r0KeqN/uGV6PxpiUdNqiXvmKPuESusVx93TM+s/aJVg+WW6e+b55I/aO532uqd//ZKVnv7106d0QYtVJt5Rek7FFMHo65d0wUiome1dVcHU7uViV9bQE0wEU8FMKCJYCSWFCoK1Qvn6Ir/kKWXSZJTg2dVyd76O0HPPlMHb1vtKj39j5J4pA9P2zrvODjB2zyzVsafLgyum7pls7luaPDJXAf1nFdMJMC7inikDS+7IHpbumTLYVJLpd7Nyz5QBt3v4gbV7pgy4yINpFdzzjo9np8ur940KdkdAon9WsigXF0O3lT+7WOi27O2eqXhpvCIr1MAjs8QXF0PH1Dke6ZlTh0w8/dYhyz1z45VlybtmxXvkGp8cirK3eXxqCLXkKFF8ctiVNbSFgkIBMT7FhTKCjVBJGR6FHJ4vmTSlTJqMEjic3F4z4kR/90wZbOzUwOZQykA2CwJifL4Mds+Ugf+xdataOg91z5RBhQLzj24eP9w984BdgyDDKiPdMzdUW/ps/7hRKmCkUL5xz42j3TNl0CzTftIz14numTIo/NHjSsi1qe7CKb54dGjxaEvR+ISg5BNfpgjKtUzxdhnrXQRXJ7HFIomEg3If5J7+JZfFkkMxRdDhi0VHGCekCH5CKWmF5DAmi9kLw4WyQiG+/vibOz09XcEXlpagzcw859PQ++00KlBuSb0YYMjDFktg1IpjNJ2rU9HWfOdvpqOqmCLo8enoCd5CgNBbCBZqs1UsLnqxM1WDsmgxoSJLQze24IuJ01CZGpucOC8+Mx1WznSZZT1Bn9WW73yeBr+dZ231eVbCXPquAHC8QvNsNA9TTzn9m3mqKqYIBnyeBkI7wVawF5oJnoKHUEKoojJXVaOyuCGbgrFQiS06B8FSKKc6X45pDeU+a33WnwGbtoWQzGev+9vZl1RP1vYLMOvL+2nW7glEbfvNrFUVUwRdPmtdYYQQKHQQRgnmKvNVNScLlhSKC5WFGGXCYo45J6gvXPvzpCwwqU/ScqswEzP4uJEmNWocqHXLfzMpVUV5rB2EIcJUoRvzrDJhVc3Jgnxvai94iYKqyZpOy1BO17SV2JULUKywK1NhWWbF999ntBuHhvBXqlvmy29sm27Qzj3z3dtqJte+1WHTy2Dbtun8Ru6Z5V0ie+wsXzb33TiHYopQgMesAKvy1VnaVWf5Wk2wY6iGUI2Pl+3HOSzLOhasIJUQSrPduLhQlOWdqaDHio38onRl10+ZZbdF95rxLslNCdzqdD3QrOBxt0wZ2NgZsL3ypFumDIxr7Fj8Ye1pt0wZCJU7Tzv+6axbpgziPQLZbn7BLVMGp6x5Z5fcMmWwKqqB0Y2VV90yZSCde5LdcFpggJytBK8r8QGluaXFtNLip6e07+Xz5UvrOpR9nG/MTlEGatsAgsaSz0Bn+qd1Yz0zQ8JTHKevX9WIlf+o5TYFrPp7ZgYsubA4rd+8RulfvmYJONkpj0yiaX5uymkjReycxUoaxGF+iruWtptd0lz4R3lO/GClXluop2DxaJDmz+lITusJXRVpNTiazHLzGRPxEHzkMAnFFax6aimEpkJXdsn+EpyF7kJDliFNmfF4wUghlBNFsomyIleCVWi2QylYnTNmqRPFKjGvyVYsL4oxC0UFB9k2V2bNBjzF9Nh4SsktAGxn0GHnvNbsU09ozCp6cZZn56RGxmlzPTZX/sVXm70LsOybpm6DSWixnrVZHZojPBH2MFtRgiurxA1ZhvcVwliGsy2C2XYWOgru7K3H7gOEBmy7acCKkrvgyzSqsdLE9xQ9VsVrsNVRk60PBybnDJbXWz1mpTjbx+oxzXpMz5vp0F5UnelI74pMTh9aEmoiOAlNmI4P678puxqwWVYSrIW6QnPWbxW2j7N5KtjEbBhVU9ARp8c4S9ZemXm0nFBZogrLE2czLsJaLVkrb7diSozSZsPRYoMqyuNsyM7Q/JRmwEcDRTGUPHBM3ICJ6rM3855slsRYM2tikWOi2qyHGgoW6JLUqs36NlSwom/KlA3VlcUQ6bO5WLFwmLIgcONidIwlQTZBLXZyZF9QhBK8iQePdSfFWboXBXnX7HsLSyZtJmzFxPWYWin2WVhS0oYyN8BkxX4k10nt0qyESMGR6euyQEYwVFEozBJO8hQPnS4Lcy12PHFkQecse/NBcUfS24ahKiwOVbgXHAQXFjp+BLFkfjZhnxyZsfGVZCMtKtqwZH1w5ULMTFH2aa5ghDkDxuy2GItIER4eHaE8C5wlm5cB71GHDcucmTFjvirHzFgwVIJhlTcXM2aEGTPDPwuyt0qzYCr5TUck+Xcn3mjJ+uOBMmKfRdhZXZcNyoLdSW8TNgXC5kyCvy3Y25zJ8UrBx2XAc5OEVK+GzKyxpCROiElLcWBdMF+Ko5GGxENUEXnNpZh1llzUxhc5T1cePNbGLmK+Mo7SlmT54LWYC/ngjJgGD5OeHHzeOR+rLo+fGEZdKPKLlGRcX0oM3hcTlCQ4LAZhJsGLGn+XwZVjK5Z7JdmM+bmNx7+Q2Is4dLE3vp54N2IOwS5TKMEI7n3+5muRVxHJOJ8AXwXSJz/RUQtvZwPl1gryRZDNnbwTPng4S+qyEEYvT0K+Z8ZYKS/CkoYvJG12NWI2xTGIJrQEE/Eq9sL4IvxOxQyfr0ix8ZsIZgxyl5MArx/iP0YwWmphnGSNVW7VGEgyTJC5nTnRRM4C0RofH8xKF7Zk2IC5pNwf01M3yKNtLPpVn82R1zPlW6xi2UlWkqXeeBZKdlkHFswEL0fiJKT8E++4j/mmwMPBxLTZmGksrIX7RW1wXJ8I5ipRFrkAc5VFg3z567H+TcRvRTwW0vcazonLgOc+Y8VO6SsPb+D2YckA2zOjdFnJMBUDxxcWiy/TM2eDNeLjZu8igoWkxPVp5ckMSHGcTJgWLk9IVRkJ8+CzwYrlgZU1vrP/9sVGwAMmDkOOHA8aW/GMtuVtbKpSDWSY71j6LPA2sp+5ecmRUs4qG9hYmB7/ZErqqSMuEU7rs3+sgrF/fAXqiX7muzOPpIG4F/N84atP+uSrjb91GcMdT2/OSZnFeX32j68hcW3y0bF7KYZcXpvZl+ptEZabXIuHgZc4ehcUkbH4acZkjdlo+P5gxjS5PFUCks/tWohp8LUnfRMWfSP2UpAx0qj5lQeKb0b8k5/SlKOkmTGGOZHfiXIcKsszd77ai9USdhRj/3gaQYfXML6s8D/qnjrgqS5nEnMFr/Y5ZZi03BFf9HyghZlbirGUMGNXvqvyez02bV46uB1W2VjXfMs0Z4z0lqT4hJmMmAaSJC9JXMIUcpI0jZHL0Ft0kTg7eUAcqIxP4qWws8ThfuBdMQfLcxDTjieg5Hrqh1+lcKgyuWEeUOYpdMXnyosmKz7ZCiAfGU8BlaIMHZ6I0vrnuswAyxbRIbSOsJI4z4YlnRKZHVpJfJXyYpCjQ6bAE58vIv6mK/XGxyK1SJ9ITTGk4hSYPivNPHg0QXEk/I6p8mlzlYKsnZ/rC0hDhxWxiWND5ltDNmhxhFKjNEk+e8xMcoQ4BfVJcH9QnZOFVEF2A6pt3Dxv50ktO0tdgN2RfSbJId2KcqJ1cSZ8yjQz2WdcG0EQVZUVW7zly7Ug+8dcxK3xDvho+D9+pueVi0yKV8aLgvIYxO7Fgah+yCy3QQ2MlHniGMMDJd+qA1GDD4B1K68GNREYZOuWhVY84LDywaTZNBkjv3L2y5rY7PicWIbwRcf0dXkB4A0q4RTXHhNQMcatiknHr2LpYhnAvsNIWqrKXJK/mF3yHs8riePbDUtd2T1cjo9FEmC8bElSlm9FdfmDz0IhDpsodKByK64EvqjZPPmC4N+1xIXBO2NvfuiSuhZZsSfegLFIlvhIJZIsq165cWliYJmouDC5ZWSmOD/RhMiJX+JFLVGZf/Dk5gMS9ywO+eTEF12VXlHtnYvy8yiiyYfOsHRhiIuKd7Ip5gj1hBLF2U8WJLeIKmw0/CqpiyYk78mD4z1wt7HhSitPjqWkI06HOYFHWnIPVxDHgA9pEHIOcCnRy1Jv7FMyJKswfbEPmebzwJu7meWZLCtOWZvtcOYqFEGMnN0yxGcgNfCQ8f2H+0FKBW6PjIqThVlW48mW8sptsTfbpsguOzfKBng/vJn1Ia4a8i2T50tW3TG44zq0h0gnO/SGbOR+5x4RhyiNU/pUDoq3sUmxXUaUYwr8gIgXCWNqnFUfiCTHxZhILlOGHVzIabhyF/JsETOGXfN4S+7nI6Qx8qzK/cVs8F1SDAubvCgkj1jWkoGqESXJFZR3qjIc8xb2Txwt70sMpyTEfC3qSTORRJgkN4chk1kYyGmbN8j1nmnClFJQGhy3I9pi7Vip4q1S7vcIVsTc4b3w2s7nJBVc3iqZ51eqBLwrHgO8pWhJd5KjlV3yJBY58gTZkEQ4yy2zjnkD9kyoS4q4ES85Ga7E16LsV1Vx1iadimjp83Mhf/NME08x4qioNfuVu4EJKpd8HmOQp0CTF71GAxFtiC7iY0WxkCbCe5fEJCFS4f3CaSJFUtyAWBjRyharKCr6TlZWxkmFksyR8yUraObOkwuyxGW/Z6wYa2XUaarUhcoQiYIpnkE0boJigoksNyyyuX6oWJVLoaogy1Y2EErS7Jay3avfiorYNVW6UbMu/pxIlVGpsYzmjisg+oXNh6e/GDV5NNIXE7Ef8haTYEmmZlF0jZwHyiZmRn3AvEOxfqjx2YfOVi/9EIMZlcoQ/2QnF7EnVpn5MPlb6ovu2L30P+UQ1JEoiDlKokojkCSb6or8jjmHrURVHrLoXjoWYGBMWLznQ5VU6MrHLtZPRgBSk8RI8pJR1d74EHAkyEb/127ZwJRvaSbKexUkzkocfJ67JG+VxsVnIntBbah8OiSl2kD+UOX+AueilgvFDeVBi03KMsKk8hRkQ1ddA6q3vIGHX2XELBeUicNl2T8eZnbBEmEoD1eK5yUmzFVUhyPqYiqsu2zfWeTOWV/8e7V43mBi0gMQPP/YDU9EPlD+waGkJF3RldSnar/isMk8t4P8FoF0w1kxxUlM7YqBq3C8E2X/Kg2ig9DGhi4dmiDJe0BHfMTwd7Z+1QZHhkU9uhGvslgud5LneQP3FCZLV1GetUi+FBsl60xAkskmCQXSI98p6ZyDk9qkyeaUV2pylEdvnM6jSVVfRUQFqkrkgSl18mhWpdk8eParFks4LxsrpjtzLNvf5DdPV+UdSYBlMxQTgSefSo+YidqEVG8YVpGnO6WEjGSgYvyP8O+UlJPicaK3aDyHAckFohhk5UGozEPm/hZk7ycPWyLNhyDZpevf9vJfkCPviKdavurZGMR0YmcG/s0v5+GEd8q0xIIsDTjvYfMWNj2k2d8NN29rOfXZOOhQxCcijQzOFKXB5tTk81S+1G6UtLoQ41XMZVehe7qqWPkrmIse701684HI+K/MkVAuZqWmbA3yLeuGB0xc82Lg5NUvi5Dt3K9/KZab8n+gqmaO2/l7W3+SlNr/IPW7ZtbGg8eGmEMqB5GLjNrUcppQb/7tnRhbOakooaTrbxX/ZWMus4Ol3L3xL7v5W7W8h8Mt8JRnEmpC/Aah+10nfJ1wC/zj9y8mIi2t34v9VetfdKduJ4dCDkJdXjkjPmyanAREb8mlQUWP5P7CbSpav4eqmaouyVrEakWf6q1/dUcDloTV78iANAC6+1dXGOYX2TW5d5aHeTUn/CPNPAz+/0yrOisnFiOQk1Zn/n92j+rc+KxV7rPdqrT8XwWVY5ailn1wxHI5paxa4Dn//8hss8/u/6579rdn4uPZ93I+dq3+FLVwSxjD/p0Qpgtm6enpQvF09hSInbBZSGJxKJMuHGW/jGZvBXtgrxJrl15CkXQWqHSxgTj5yh4ItedPL6Wns4eI9dKFUnKLErDf4/EvINpMpqygny40YU34xlxOIVgqBTmvz28FAzWSM/wZRH2hEU8ZO/a1qAB794YQSzAdLqKTzr8yMSF1ZdbMHvyLFkKERGEYexi6mfxQdDf2Rxs1mAJ/4Lo2e/jZmT3OzJ+iaqryULQPe7z5zw9F84cW1R+KbsZmzX/Ew39aRY9EV2cPWvHfcnCOvzlyYc86u7Dn1lzZuOzZb7f5Q9mlBTPG1hOftCzLPccfiq4g/sWC9GM45k8TpsMfii6O55HZ48D0YhqFWKv0UHRxHhsWwHTR/+xrI3MSP2ixaMgvBUOKdKYuM0pApGDBLAhF0SA+YpHOhsm//SmFOWIEH1660JmNAukgFJBkFOzChpL7S5HOfl2azp534foF+MPbBbMLKtQJFj475nZdFrwOzBkV2INRVbm7RMdz59uy+1bMrdVEVvpSpdKsyx6v4w812zBl9scf1gyyGTGKP65swj75Q82m7GrCnkmTHmouyvrglnM81MwfW+MPNbOnnPn41R5q1mY9mDLT/EHkMvwpcP48cvZHltljPkoqj2ea+eMPyjd/arYgGxt/xs6CJQL7eZ7yMWb+XBc9pVxQejpZfHKMP9LMj43iSmHRIxnVK3+miJ5oluLPHJ/d92bKWOQZ0uxKUiHhi5Wlm1JfRnkbkkXSWYbQDZuK9GUq5wPK/LEG/otG9oM5HhAuxsPCM1/8wTQx4poRHcOfw5Le/+L5ZP7DGgW3KdrDB+7EizgG1Z+hqwryaIjafHEIujQ9flXw/wnGqhSwOHnlT/eZvRxCnBFLY46WdDYeI/Uf0TMm54/s1SekPmb+mzbpUVAzXKU7/ltcRmQn+ZOR/KX0Ujp/eNwi59gYoxCnjaohSeSRG7nMj9U+/psY/rtj/qnHcllKE4nhy5dHQhyI9MEbuLDUwJtyjgocGxnX4e10zSkLhotJogpieO7nfDEhRToLCPNRzsY/MIIe66QsE2KeUMkdNher32sKrHCztcFSIbscJ5UPDEuP5EsO4kvKmA3TipVdHu3/9gPD0vOMZoIZ64Xbl+KmfOxX+jMB/sQj/6sLQ1aG+fu/88CwGH4kgkpCIDH4z/jV3+KPYMHxxJEEc1mG3L38DCL+qlpcBdDipwb2ZunG0zHns8C8DS/md17McsqwMZEMCyYzxaT4c8JmLJ34M77cl/w++/PC+ozjrdLzv5KcCdPlJwtmhv+Pvbn/peeFSU66irVUlJaQJMnGwqfK/v3uxdTyeliY/fELe/OncP/dmy8j6SVe2Ucu5QESyos4U2kG4llLnDScyTD3qVTXRWewG6XqbxCzKj3porySR3nUyW/EiWYVsKdIV00jfidGgmc9/6ucPB8F5gKqjwLnNjyWLSopw3NHijdHOV+5WcjJKZijc1SRnGI5GXFaKi4gtzCD8pcAhnmNw4vdsf+JTyWpPJrEAySWC/50P3MlvZkSk/6LF5/57wP7m/a/6IId1FjU8KAuX9V/9hhbA5gH69ownd3ktjmwllxeKg7LpZVTYh1Stv0ufAqlmApUktzHuQ8DMizdeVliK4nXF/5IO68qYtHjM1R7hJdFQQwFv4iQR4ZBdtJhorwt24v3oUBHyguXFZNJdCIvZqIvCbCUE60zg6JVqTdRhXfCAH8OSWmOoTyyQ7ILIzAnXkT7qoPO1YAKmb07miezxufPRpztxRlBuezU9UVZ7jXxpTaTXG/EXrisSunlC1M9vdT7IEM8m6UXTUcixABIfueOICF+lQRUGXWsXrf5/KWJ/O6Tu119uOo2f3+nkJpVVw4oWS/7vdzwB0DZp8yVv0HSs6bMbWK3efbNfINnaqUlxe4pU5QxzWXdID+5Q/8w/Nyj9WctpVkmqyKeo0c5qJTNKsJKI79Bcm7JIFdhMQ48qVENWBRwpy6uuqrUW6Q7hTibP+SaIjfNPDixLvLznfr7XzwTq+rnPDrLQbN8EesXX6MiorzJIQmCzV/txf0oKivy0vi3fC7xFEMmPt/FEY2DOvjDCJTNMsqlCxglm//dq3plU7HNe2WHdva30Spkjn0HqcIChTQW17uaxj+5YbPP4QBOiDw5N8eVHTP5txZKF/HJelah+U4u5QH/pCwSIb/N0ZFyoOLcuYi4Mrkj/i4TlRZyQVKf6p/pgnLDzEXlH1A5nPLfIcSwSlVJWpaqhBL/tmhz/2krxLmwTwmId/IHk5DxvwR/P91/2YGamtp4877JdbLcENsk1ezJNyo/MpE5GbCMlrE6YJHg3+L+1XOo6pay38Gv2WnlvarjlexvERutuNXxY2ReT50yA79ZoL81LzeqDk3CfPVxJItIAIJycnIBhRQ8Lopm9Yuk+b/hU71b+U7uWSGj/yHAnMa/tsjf/8TgoTaqsWJRZa30c3CpgipPN9SOU45UVKWtmhUI+fU/NI3fm5V7/x1gc8Nb2lH4nUK0K30qu5DkpG0HmBlWtgPlZHKI/JeJPKb3l72Qdt7i5CBej8Sf7PAo89Thdywz2JEyb+V0Zl9coHmJiDuOGAJpJHnJ/WNejCfb4aQ0FMdAc8X1H5vMQ4E7CCZlwO/zEFfSUPoLSdKRY8FPL2IuqnT+D+yQvTyvUtAUubbLw84JcpXPSXLFnOx/mck5OpHJvZdsw8muK8WVf+ahzhVybxJZtvXwZv5P9aVQvRGxCpN9DDlk/xGhzJyc6DeGpEH8RuD/bNN/wUeKfzoD3ic/7/ALrfvs45CNirI5WnMn/ulA/iCfy+j+oIFmnJPYnYIzvIKqbubZB69WgUQNriW/sotL93KzOlDNTfUWNgzV9+9Wm7JHNRMK1Tu1G2qQemfqRKhdlWZ/g5ARaop532QzpDr7nNHL28x/2KI+imzG1Bv/dJdN+X/yVtVZOTFz35/f2WbzPznaP9vONpi/vf29YckK94SKvWy3rEXViIqgDFXb88IknFe7yJPQ31yVY5YimV2HWC6nlFULPOdzzlZpKM+xKkU4ylMs/beNeauxypqHZh60bIrrqb/kpryBikLeQqotKgoSlHyt+dR4QOMBjQc0HtB4QOMBjQc0HtB4QOMBjQc0HtB4QOMBjQc0HtB4QOMBjQc0HtB4QOMBjQc0HtB4QOMBjQc0HtB4QOMBjQc0HtB4QOMBjQc0HtB4QOMBjQc0HtB4QOMBjQc0HtB4QOMBjQc0HtB4QOMBjQc0HtB4QOMBjQc0HtB4QOMBjQc0HtB4QOMBjQc0HtB4QOMBjQc0HtB4QOOB/x0e+Kp5aTyg8YDGAxoPaDyg8YDGAxoPaDyg8YDGAxoPaDyg8YDGAxoPaDyg8YDGAxoPaDyg8YDGAxoPaDyg8YDGAxoPaDyg8YDGAxoPaDyg8cD/kx7Iz/9PLtPT3ozyrQTY7sHLqYDFWpT/BFjQL/Iw4Mqq56oB9l378x1gE1c3XcBBl4/HAXrfPLgK8Gz4hOeA816tHw+4udzsVoA7Fm0neLN7JQXYRR46AwE/ta03CvCo3ozhgE6PQ3oAGuevRmzDNz1p6AFvnB0g0CqkVwnAX3WGnAFcNTCBBGbViSHon3TCBAJDnT7eBBSW7J8H+LXzMSfA7Rc2VwZskH5FG9C7ZaPNgIPNR20HHGH2oxfgGwOHnYCbzuwcB9h9z8OhgFP7T3QFNHlX2gfwiMPZWMB5RtsyABes8L8IePN5odqA651HjgW06BZLQ79ccNgtko0sPR/QZYRdf0CTO4Y2gLvThxQHLNukdSHAWiuNHwN6z0+tA/h+6oOPgOMLGBsBjnowoCXggMmpSwFfn903BFDrU/ggwJIXfY8ABlfeMg2wyHpXf8CuRzK6AI4sGEcJc2j0r3xgY99fKgZ4OdqNornFcQp1cVNoRgle+cNCEtB5tr0f1H61qjkBsFO5N30Bk047hQPO3t/tKuBcr8bE7jmQ0BjsyMtftgI+CBljBThzdyGK8YV8lZLBNu38dCOg9bDQ+oDBJ4PaAr5MtuwEaFd6jB9g3KHQNoAjAi7RGE4aXdkP1rm0ZwLg9zsJhwCNKraldTxu/UHy5MfLISEQCI9f3xuw1l2DFECdHkOvACbUvEYC1x1O2IF1jTq0CND+zQgvwMFx8ym5tjospmB9G1Y/jQRcqtKEllhm0Yyn2JichcC2d298AIcnBecH9PStTrN4nbyNsnrcvvzdIHBba8Q7wK8zVy4DvN+vQyDggAcNqVTcvOc3GGyjC6NtAcvqtaOk9WvbliZUs5n1TAhUqbedohleoepTsKmdhxD8YVOH8iFkdRgljJ9X9Z6QHbn/hDng1QbldQCtjl1rDtg9rgvVyfSURApW/xVGTyBgbFG7PeCPtk4HAJ3j5loCXpw3hCw4tCnzBqxwSkGFNLxxLK3uMdUH3oFA4V0JlFFLXyVS7piNHOkIAROTlxTCm/mL6IJtN74ARXNKekYU2At+DUMBF0ba7AYc6tV/IeD4qHhi3ziHUFUOLGcwEAKGOpc2AHpOG38XsHDljTUBF9QtTmuoq28+yh2jguUbQSDJuyj5IdXu52uwd/ROUpYcNz3lAnb2YSeqZ+u1tm8Ge8D9ez3Aye+GE3vB4ge5r1WLX1QRXa70p8knao8gGJjkSiFMPXSoKYzNGHmnO2C5tRvOAyp+zV0CeOC8gT3gkLjzVwnafHMH3LC7ixvg+w0XaZB3Knwk/0YseUXFPM2sGy3T4pF9f0Bt5oOl8tqctjoRbMydOp0Ary+O/gVYuojuBcBmc8vLhfSEjgDWP+HGScAC/QpXBvRau+wYoGXBORS30AiH42B1Dra4BfjI8ArtZCOtOtH2FbJ55TYIjOs2jWC7URdItnPWS4Lrr+wdB9mVsYdpZcV0u0GbcOlp8TTjst0sqMqtrVy5ENR0NzZZD9jsfhoVpi6uaTfBut/xoTR6oTfCFuyUWT28ActdO0PV6J7DedrGq3+dSbEI9B5D8HuWL3lnfo+jN2BhT4+3PwF9d3qUAfTvM4CmWcLdyQpsvoDeRoDtN7obAMYe60Aw37M+5cCesf5K3qk7bocn2NH2y8wAR9SdS3U9rPvQg2CfDxtsAZh6vSiVwas/7IaBjTLZOQTw4WWtTYBzM3ZVB5xz6m5BwOg6HdcBbu5Wg9bFiYE25LN9LXoOgIBTcBWq4K8y2lPKTY7IR2V7b69tcZCdl2X3AXDNzOZhgL1rDNkBqHvE6xpgzVlzCwM20TIIBWyZUJSqnM74WaZgPf1vkvuaW1rPBVt8Rgb5wajtDqoaqa3HEGvaqy1Vz+CQqr2h1mZDWVoXfv2GXwXbf8mVh4BvGnkPB1xgtLQXYL/80Z8Aexz33gM4YOg0YrXv7rwOdvKcTZRGK29Vbwn2/DM7BeBJ3VmktjSgIWVUr6RU8k7wpvgsyJbp6DMFcF+KfOZ6+cFCLtA273wg4D12yGRAvSJ3TgEeN57kDxi04n1twDvnHnUH7Gz2bhZgp1et6NCQUOFUG7Alg2/TOr58PY3sloufVQ0CPT/so6y+PKHXLrAPUtZQco0Mj4sCO/vcclJLaVFjItgd3yY8A0z6akN5tqORx2qwUX7N7gG6jJv6FHBwSANLQK3Shw0A343YoQdYcF18NODpYpdTAS0rfGkEqP0yswLgtqaFNwH+StpMk9/+05LWxeYxo0hAMWETlfjbxZ8Tu3mGE62Agc1OtoOxjJjmYwCje6+fB7j1bQylp2PB8wLYVksM+wCOrjyLMuphlSiKcZrLkGIQ0Hm1cwWg4b5CNJynQWuovL5L30Mbypbhk6jClJu6nGSrP65GX5ha1Jb3oSfjv5Crn029fh9dnJ6xlnIy0W7tC7CvneY6ABbu6BIE+NJTfySgW74q5oC+P0fS0BfvD6ECUuaI2w8IeM0uT6cri3yhW8BODDEzAfR5GNQYMGpyj/qAesM7tQYsU3zccsCdzxaSwPkAu/Jg7Y3WVAVsFT6fBqk/wacsWE/TFCo2+6ZangFrHXqB5lYxOW002Jjyx24DhjapSdnX33wcuc+v/mvaRe4N0r8E2RYzWpcG7BttewWwe9d2KwGXNo97CzjtvvcxwBHzo+IBa834aQg4xyuK1HatsXUBO3LT4bWAq7ptpi20mV5fR7Clmxaj8rr6+E7KktZr7agiJmnts4fsqCtu5JJtLd6cBlvy1LuOgAdr/aSTTfWCIyj79gdM3g2BtNedqOClDmo6B+ww54mZgBuO9aZctzrX/w3Yll1mUCU40s6EYhw9r6grqRVpRdmX5OQyA6zR2etDAbvu6EThrqvYeB7s7pFxmwGfex6mwObbfpAE7p0/QWo6irQUyHa+GUaB7XrhmB1YrW+rewOGrZ53ALC1/2YzwA2xYbRaOnx8QpX258gfJyHw8pdjJ0CFi9cFwE5lDIMB/UvcJ7UVSSZGYE/OPU2F6eKz51QfFo+s+A0C5Yptolg0GZhvMdgpQ2pQLFZlOXwG+yqm/SDAwA7xgYDruvzaBuhzMaovoE6rSuMAnztsp45T09yJHZO4hXLHR3cB5Zmh6weqyttNf02BBRePLRRug9QW5L6xvSuEQ8Bqce0jgEc2lGkIaLGtPA1nX/1mtB9fuvSJlvQFv4szIevcoRLtegtTWtQBmzm9ailAG63mVFaab25BVeOj24CdENjZ8wJF6GNGiDbYGjY1hgGeMn+6HXDWwLf7AU93MaaClzCuahrYVUO70opNPpY8G+wV7VlRgNYzetLQx7c+sgBs6fMZFE3bJQ0CwD6Nu90GsEOjD8mA5mNs+gFWGfBWC7BLxqobgKM/6X8A/NT1CC29JgbfBoBdl7iWvOP0q9scsPlis2i8pxxrEvssy5Vgx/PFCSYVu+kBtd4vj0wGPOzVYiHgvlmjyOv10naTU+srtEl20osCtIaGO8/1hFpT14rmgJYN69UA/FnB9hXgucoF+gAeexpO0dx81+YaWLNHVcoCXo77Qkk7aUotWjj7Am9XhMD7+KHrAKv2ajUUMP+CfbRaXt/y/wp2kX89mlvpft7kX70PnetB4Mz9LDoVp/S5dAHs8jel2gO2TT1Ep23jKzW9wc6Z/ZYS3LVvkytgCzVqQ3bzBXSijj2Da1GEGr4a8gmyQwt/0gUcaST/LKh+FR1aLUe7BNC5xGWmFSVXyL1itMhm9nq+GRZKr+lM66L44nbWYAs+LE0uWXgxIQns4Q1LnwHWGLRyDGCFO28+Arb6PCUC0H7gUVrz01rfJoHFMyOpenrVt7sI2Y53NlKEwpYMqQt2/g23poADvv+cApjoGL8EMOruYtqlt19y1gF7/VsY5Y5/ie4dwFb4eoHyYWnoueFg6zzqTkvEc1SRXmDb9pVP5mcGnXsJ9ua3MpRy6+rNrwn2zJ7LdoDl9H9RAJ5f9aZgvavegPbuZ3YpGZBtttWqJOCqIp26A2YFvKDV/St/xwkkaytQx70iXi4Cm1piBx2pgotZDwPb/3k0dRFRqRZ9CUq8WZV23o4ODajjmS+SyO4JK89oWDhmbEKVy3Plz91gSwT2mA9oHHjmJmCRYRGPAWeXSe0BqJNqTjG+lBxyF6yRZeQmwB/6Dcl9u7aWnAY24NBxSoIJN+uRSxaa2yZAIN0xwRYwuciugYDlfQtUB3zxpHkdQJdytlRLKt4+GgM2w29rNcBvta+PAFxZYytZCK77hHb/A6ZxxHZqeX0KZFfEtrgHuMqvQ3HAB4MKtAJs7ds+DvDWia4/AJfGzief9W7cJx7skmaJlKnXJs4sBta/VqgNoG/3/N8Blz9c4A34etdzd0D7PZMpq620tG+BfRoXtx5Q56IuraHElYOugrVaOG86YKWIerR97QvMqgx24MgXlFGeutNXgfWekEKnq70BUVSVPVw+UNFt03cXbUnNArtWgtqBEzG1AF3vtqJ96LH2xoJge1WbNxrw6fAtNIYZjqOfg/V4VjoWcOHofeSd5LKv6VgXf2siLenl7XzpPDl5xKRAqIUGn6RZHHCqmwT22uSblCUDEptvBRuZfzfF2OBQgiPYsYsaHgas3iDfR8CM+dWCAfc360DVU8+mqT/Yh4M/pQC61jVcDFiz0Wxaeq/KTafxfl26pBcEvqdqU4IvevhxA9hDg6fQYlg7ashcsA8PBFDaO6yMrgK2d6wFJVetDldome739F0Lgbjm09sDTuk4gPywfGViC7A7C5hnAZYb6EGu3n5pUyeysNmUZmwUsc0B7IvNIynGT04soISxO3ONJlR2sj4thvm79n6Cmp2H22nAA8amewD7VTamBTn2eaXbYBtnWl4EtNl8morC0wKlTcFa9VhaFNC8+nIqbSerHNgM1rPi+oaAXT99Hg8YGT+JglX+RaG3YKsOSTUEHPt1Be3S3Z8nUY1ynP+asq95SmFaDB9222VCzWvyjBOAdiXrbwQMv9DmFOCaKiOdAD8X60p2IyzWTwKbb3HDVECLSUajAM0nXaA9oGk9s0Jg7xVxpGB12ZRkAfbW43m0pA0En3ZgR3/q1xiwjUU/bcC7jtYbAOd9PkCr5emCAFqQCZPaOEMgqcAPGnqvjrF0wrM50kYfAk8stesClnFvSWuo24QuFFibZnpLIPDYI2gvYC//710A+xitmg+Yb7OvI2CjW/NuAKY2SqLelkWWosDWuWZGZWVi8TgryAY9rGwMOOf+0nOA/cvuJked7eBEC9L4+waKps+peuS+yV5HKR/W9a1L2bfVvvEUGPPXzqBNrW8fP9okCqd9pWrkN7fwfsiuM1hPa/NL+Vd0ftA/130QBN4EWFDVqBVrUwKsvuUW2nFs5jk9Bdv72AkKQMSGd1Qn7/nal4VAsZRFBwE37tWmNV/8RMwIsJsamdAu4tQ7YxHZXdSlM2Apn2Xkkg/OmwlWX1yDvH7QpDCFu3WJGyZQe9+mXTxg6IkuNN70PtN3gbUerDURsJGTOZWVeYOO0HrTTz8cBYGkvbsaABbNKOMLuKG69lfAuwXKzgHUet/3JKCzXXnK1IP1PtwEO72vGe1kj33T6KRQcvB1Covh4XptIBtTcX8TwHXu46hyuc3OIkfFNJhKdkt36kpjOK716QPUUsa5vQAMHFGDEsa5aaMHYOuuG0Cr0DZ4aDrYXcvbk1pEm3PkvlWhHpQwWzwnU2Bfx7weA7XQiAG0OxUaUIL8e0lXPw0C9TKW08h2BhvUBnt2ThUazlqtuu3BGsZHUjE/qP2eonnDJKg6BH6+EKhGrZ5RZgfY+GYPBwCaFtEin5XyrxoBNjmkMp0G91axoaG7OhekBZnRowdF3sa/N6mlH0wgr3+q5XMZxnaGr+gI+PFO5QmAGa/PbAdMsJu7EjCzWu9vgE7OZ1oDzoh0Ij/Yt11UEOyEijUKAA6odO0RoM8MZz9Al0rWVI3WPz5Jy/T1wRXk6mcbXfJDNnRKMu1DmQ/q0RoqVWMIBWu57+KfkJ12wyEJcJDvawrWyoy2dMxPWPX2KgSO1r5eC7BhxmUSqN1Wn0rm6OeXz0Og3+TBNDeXmb3mgu1SasEmQKcJDy4BPkvUopx8t+t6W7ANulUrAnhxz1aafPrGOFOwHau0odTwahWUAFZ/2I8QwPXHTRYCGlr1Pg6o86IH+WHFzuJ0INobdrE/BNqPWzYIcEyfaFoi3cd6lgQ7IN82CtZtuwOrwJb3S/ACbHklgSpiwfrvKISmgwtvg0CbtUOqAB5xPUi7U/xsHyoViQY9SG2V9r4nkN3++dEvwLSqE8sB/urZ8jbgjEZNZwM6jDKuDLj96pM1gMtcJ9OMu9aOoFIcccv3DgSeDpx/EbDs0UUbAQODX7gD/pgXR+yQXRb3wBbwk39L+/5IZdpQ5sR57CGBIhbDAHfP084CHBQ5hPZCj6JVToPN/6MQpbK55z6qiFd0alOtPrGiIcnWHVfKCGqlaz6kCHU2q0mz6FBvDU1+88Q9tCU9Oe3mA7Web8eT3RU2XXqC/VxmAEX+XeheOuEFz7FpAQGfLsnkvhoTf5FTo30TPCFQ2dSVAuDnPGwq2HMFzncBPOq0nhKx2Yd3H8F6nh95BXByfCmKvJFjNOXZ7mmLWkHg26T+VPAKTKv1HWzkOM85gNHJP6jgdTFqPBys01ozEnCwGvED7MGQKQ6AaasDPwMmxky2BLTzbUCZenrsaROwHpG3gwCfPilfB/DDxsg3gENDA+iwt73mbSqkz/tV6wyBNvV/FgGcsebcYMBrLd2owtR6+YBqqkuJrt4Q2NlrJuVOrTWxL8E+m3GZvO79s50x2DGV9tcHvPnyB62sDh6LaOi9yy7cCYGsJUOI9TR9TezrtcnHIDB5dqNSgGm34t8BPvlwtzZgsW5fKM+iy53uCLbMBpOxgNOq2T0G/NHa2wxwSLGr+oCtmhuRdzqGTRkNtmpiMxtAp7fdGgIWN52iC7j/ecB0wBvfij4DbL7Tj9jkXV06gXXdaXwPUPfekO2k1u9xTcCstNs0i7mvGtMeG/g+XwAEnFyeC4C25cdQYDee8FGA9RrWuCxgeNefFKzbqc6hYCOvWvkDvgjWPwO4tIkPTSjGxozidmDi7WYQ6HzLhtab/q2Cm8GuTTpOZeV6aFE7sJZfjtAGWPGYMAWs3ZWCdJarvGRhVbDd7U4vAFxRqs14wA+ud5oA9txWiNwXdqmlB9gsh0UtAYNmDqWisL65K6VGDe0X+SHQe0PmfMCkpJY6gJZ3mlAxH61zzhysV7AOLVOT4KkUi8Pzt3mRsV39qFRUH1mM1pt7+t5kCDiYNaKdLLFJEyew25e2p23x+JTD5IctDSvQqbjPqpWLIRvvNLo7oK/nry6ANx8toVR2Cf1VDOzIz0XIk/Hmu2jNjzN++RQCr31qXwec0aLCFsCoH2cpLCGBhZ+DzazW5xFg/JUEWi3ly3tkgq1tUK0u4JhVxnSezOd8aibYkRuDKRbPhi9JA7ve/YQ2oPV75xKAa+p1owJy8ftaC7BdKj6lXaRucgyx+UvHD4NAuU5WjoBHysylWcyf9ILy4dWTtI0QaKldUg9w6orCpwEPfkultbn4tvwNsH01E5JtYp1O9WH10Y+UyrErCqTCwqnqwbPIWFIo9VZmUu8osOt629UB9HGqXAnw13UfF8DXEzwdAAO2v/sAuPvTz5OALn1q0DpuqggpBLbC0bGUMIfMOtFq2WryglJ5dZe2VD3j2z6mob/tfv0nLJSqfouqXMvb9Q+CbVi9NqX969jOBF8UkH8RvKdSXVrohqNaLoKae9ot8mTlrnVoON1PZlJYpnmZfYNsqtsxmvyuT37k33yKV9Mg8FLbLhbQIaqvM+DY6n1HA244ZEAVZo9wnYbTJbDmfghMCdwbBzh8p/wbhXl9VtcGaxY4ayFgifgRYwDvNFv7CvDNpaylgF9vTD4K6DSg5RfA0/nZz2+lPwpoe6/ZCMDXkU20AE18e1B6jhw4gQQqbN3pA4GmKWt+AHa/s6oUoFtYtQDANZPrJAEubv6oNGDfM4VoHR9clH8I2B6tXlJWr/w6kbzzcPH+dAjsH+1JLnkYX6MN2IPHttHKUowreRPsuO+7g0jAdB2Vthmlzi4BW25tmgJwT/1KTQFNClg/A9Src3wbYONXldcDbsq8ZgwYbnX+MODtO5k03qIZxQPBzu58mfxg/aEl1VS74SHtILA2/TVlSRPtrq2I3diUZmFmUVkfbEePjTQhd71+58A2uDefhm687BwJHLOJodPguiofC0B24eSbZCyoyeLyYBdfrk5ZUunKGsrfaVMTaTg9J7+mxdBvx3LaQs+efvQeFpxfbScLRdfsKwM2YJVOUcA0xZ1oQBuvXpSIExoKt8H69n/jBOi0b0JfwKmKGbMBQ7RHvAW843aatsVGqQJtM02DiyyAQFcd75WAqZfe0tIL8Iw+C3b4qR+UiBv1Gj8E+6B388qA8TUf0ubjcyrxEdhz0wcQbDmpHcVtxrJ3tLGW/FT8JWQLPhtGOVm30vE0sEPvzHAFLNv3E03oQpGWtPz3ZiRThdljZ5kfsgmzepGxY2VMzcGGl1lBJT7fxpM1wS7urd8bMNNzPM24+g/7S2C7vbqzFzDj0guS3Zh8mepOnNNJYk8t6jUUstYbl5EFh5s7SGBDcjsK4cCe/pRnJ04epaIwO73LAFi41s/HGzDy0O1egH37yPvQ56tpm8G+KeDXFPD1ah83QOsWnTwA2zxpSjPeWCzyGtgNyid9y7x4MRGs7k7t14Bz7eZS2S4RM4bgQh+/0RDY/DB2BaDLcaPngENaZ6YAjrCc9BUwcX2FsoCx+aIo+34WDDYFO6qJAR0w3lrczwQ76I4rGSv5eaMJ2JU+h2jnvbag/CmwoVOmUjWaEh5HkZ871YPK4PMN7atDdkr1gQLgt0SXLmRh5VMjwBjzoZ8AHXdtJmMesw5TLRnyq/h2CIzf1ssKcLlvwlrAJktm0MoKSo/bDbb4mANUVpKMK1JNTV02nZb/rAaLLSHr+XTgbMBV5ypQPpwM/hkMdn0dv5+Ah0/+oLKyuXJ5Oko0GBtHZ43jh/0PQLaNdpV6gD7DHlGClw6+qQPW9sGoR4AH0mZQYGNqDye4wHz5DQiMeKN4CmheI5o21jOL/Kja79meRSvA7v6zi5Cd6diOHPXLYCvJbq3fkWSb5asyGbJ6AUY9Afv1ap0AeGX9U9pxnv+Q/wak3vubjSGw2WzoFsDhxZacAHxz4Y4X4Pwjz2YAvr6zPRzQt/GJToDhXazfAs7oudEQMLmG/JchN51/0rrY7H2DXGJY1+UFZMdZR/wCHH/ThuL2um10Q7IbVm4SoE5UJtXf5bOiaB133PHhKgQ8H4x7DdjLfB2tblPvVTTNQiv3tITAMp8StHXoF1nrC7ba2k4zAQdtnWwLGP5qYDXAXSmGpwG31Lu1BPDzqQ60IAtp+VLaW/uZU/4u7rqLDoYLsxxdoXY6pTfl2WD7jL5gXzd9TTE+uSqIYtzAqbEpBJp87+UDGN172VnAAlYDSO1eZs0MsKvbFCsJqPhxrjxgy41TtQFTqtegyO8ua3UGbGSbXXRoWOQSMRzsmJYHac3rT79Ds3h9qr8eBB67vyM/jPtlZw+2r0Ux8vrOnmMp+65XK0wWMj6704TuHLKZDzX39A1RgKsK/dgAOHxW8g7ABQ1+2AHGLzh2FVAnsvkywPu7H9OJVMfiOh3+D0/4RV6PS4ksDdkOjY4fB/wxx602YOdGl18BVhnabRPg9kpD7gNuqLaPTqS35wfVBdvpy6PqgFddDlUF/FqnEp13Rs3c1Q/smC3nqLxmNex0jNT6VE0H7Ll/AkHjgzFNwG4M7VcL8G0fZ1o47h5bZoAt6d+yEKDRxHZUoN97n6GOS4T3+gKBk5lR+wBL6bal0tZplNkwsLPOvB8HWHb2heKANiXu0WLocjlhBNiEKoPkLOn2irowH1qB/FDO35kyNbBUZV2otbZuQvVBMScfleJZo4xOQcC/lFURwLdhBjQ3j3Sb62BnW59ZDXjS7+hJkm15LwRQMHB/A9gyoG4JwAvDOg0CtApIJGPW40stButX1nwsCaSfpIN303r1KOXq5v9K+9CxTJNvkN15eactYN+wksaAsZd9KIT38+8hn90a7rgHArf6fyFYUbGaLAxul0FeP9HUxxSy/afeJ4EO0eOpKve+1KgCBD4Fz7oEeML3OGXJc3P/UWDnfP0+ALBVv4CFgIXOrh8MOHHmVtohR968/xXsmwuXHQG9nR6OB1SMjjwPeP5Z4G3An+1O0s5bYmahFLDmAxvZAL6zb07wdYHd9EUh4utsKgrxQyzlYH2aTMn1wTagMywUu5BFkx/UoXAgWL/ZETSyY4YPqYJ/LLGY6ll61A8vyOop5L/9vXGgPuVDpx47CkLg0MEpkwBNTHZuA3w0aI0d4K5z5Y8Aapnf0QIcHJFF1Wh+xqfDYGfbyT8rDp5TYgHYwA5OFPnuI+XT1Sn7Resh0P5cKap9LX48oARfef5ROwj82u43EnCF4yuyW+PS+6dgeypsKOVG9/Y+CtbPsXRNwPMBXb8BVi1r2xiwmbUueXLHFb3+YOOH+aYBTvhWswzgkXKdigMeDt9K24FXcEgW2PkOnpUAe1d5mQroljKUpmn8ue5UsKFFDpwi2V3PLQCteg73A7w6ZqcB4OFZplRWhIp17oEdXXf1OcBhG99FAN7+VFYXsNDUAMqoy0d7twbrutQhFHDUj9gNgELBTCp4MzrXp2C9S+9A24xLhs0DyDprraeN9bmPQ2mwS6/PqgKYtOtWW8BbZZcLgIOqXKMNO3R9PvK6uaP8VzoJ7zdSricecyGvJxpYdYOFA/Xm1wAsWr4YBeBF/fyU1WvbVKAyaJ48i0r8lLgtVH+fpvSggrffatlVGBsZOuMI4BvLs5R938KCyZMV7L+R2sGUtrSkN4x7fRNqQcueUtxulEnZCjZxZip5ssUotzpgl+rUJwud7ebOArvx8TOKRe1ZutZghaAPlFxNw7uSf+eWazcaAjc3XyXZs0fdaELHnghUVlac/lwYsp+n2VN92Di4jjbY/OuCpgB+sd9Cy6lzWn2yoFtvK/k3cOzRJ5DdF7OcqqeThf5HsFWbfKS6U3rzlrdgrY4co5Sr0aIJlYq4Zw5xELCefY8W7/M+10i2TNH1PyCgmOc0AdD+3DmqUc87r3oFttqNlyRrMSz5NdjbI0rSoeFTXOplsFefmV4DLFyuWj3Ak70L0izGvkjpBTbOX8sbcHO8U0fA95tmjQSsn7yZpvnjQikdsJUvjJ4HOLrzB0qNbqU/+IPV+jmbymv+t/PJ67vnDaBN7Y3jRKqIrTqEmEKt+/A3owCXVTWllVW6a/gXsGuGXaEqt7dmJ1uwX1YXpglZuu6mka053dkYAo1HW1oCej/oSskVXmHhKrBDbIqtAWyzacsLQL2fqygJlizxIkdtmn+W5nY+bd5SyNZr/pw2qtflG+iBtdUzpaxe4PfwF9hLjY/Qyoob252MdWt8vjEExpct2BdQL6nTXMAv1SY4Az6wOUgrdq2lDp0nZ8+1HAeBF6MrUH0osfIrWXAeMIdWYcUDm5tCtrvxwLIEE2quBjwy1z0/4EZv+SgRZrhvOdhKtcZ+BhSalqfdP63coO9gSzaZTOXq3mSPs2BLl9rqBjjmwfZKgNPn+1cEfP5myRHAKk1ueAL+PDfPHHBPpWMEh1W4ZgK2r7CWFsP2rOW0uovqrLsAgff1xlG5OjKgOS30yec/kyfNPCrSIMvoj6ZYBBSs7g4Ll/pvmw84yaV/VUB92+RkwD4HQhMAJ5e5uJsE+hSaDvjIRtEFMPJ+TV9As8wYXcDLV4/RJpw/37Z2YMP6BI4EHHzsNdm1nBPyCWzGbX1aF2EOXnKCT7P3gIBe5i9KDePBI4zAuj1SLAWs8SyLeptroDce7IyjPanjTYPsaAWM3FNtGQTG1R5Baz4x5MkpsJ9bzDwPWG+P/Jvtkvsm9gAb6ziJvP7sbsP6YJ+9Cada0ifp8HqwLc/ssQBceCaaFtmsxYZOYOcdrdEecOjnpm0Ap+k40yIbpvtkGtiuJbqRheHH61Ombpq5rTYEurT5RNHs9GA1hbtLo/lkYfTsMvchG7UrP1WuX3WtKfucftRLh4D7jKKzARds3OoKuHW3M/nhu68RlaD3lwJotazxNqXkiju1mwrIrGm9qXqajK/oCGOTW7aiXO8QYpIJdtOrpacBLy5PKAq4vciFloCKFTUo5WI2jbcH2+HafMrfTZXOFQC7Oqg4bcJCM7eZYAdkFKTeHm8edgHstC99ggAXLZSfwu+5fRytgKHjZlKp2NP0OfXmuGneVqhZmUw+BDhr4aNUwCYDtp8B7DmmXQXAIeUKPQBcaVegJGDImbaDAB+MvErr7czdVxS3xmbWdOwwH+s0F7Lf7BW/AOP67CKnfm8uHztOhnYNgcAKB/nH/cP9DtKKNb4feA0CTU620gFMsYhqDnizZ6OygGtdtGMA+++aWhDQOf3sR8AbdZ3MAcenLKdDwyv99XvAniq8lpK26d0jJ8EumNKP4jYv4hLNeHzZJo0hEF3moiHg2GOVKIRBjptoFZaaMZ5ifOxCSfo+lLrnihnUXjgmkOwbo3XNwDZp7H4LcHWhUvGAO2f3uANYNXourYBTOw+R2tQTLnshkPTD9wNg87sLKH99q1VZAfaAf5vCgIOfutCa1y7RhRz1bHihWRBY/nDZOsCK9r2org8bcOo52JP7vEhgZ5bHF7AHJnfyAdTXjuwF6NtxOrl6e6fm28C+Ln1pDuC0INtJgAmRfnGAk47s1QfsmBZAsgf2OdBRbWNME0cI2B0ZdQ+w3lx/qjvN36dSpb2RKf9xsNG0H+8hu/ex91XAFmWdYgGtEhpQbwuGjz8IdkRb+azxzXkxHTBqjVyzGQLrD56h4ZzZHEu7SFrsEIJhii0Eh7/9shJqj1uG/AD8nGz8EnB8/8FUBitqZbQGOzimM9Wdwj2jHcD2LfluKuDT5nZUBrtOsKbe6hcrUxECO/fdvgI4vs122pK8h5/YANbpVpn1gLbjram35vlTXoOt9tWK6kPT+gXIZ2GBZ1tAYFDcCopxsWbFE8FecfV1Anz/OZOCdf6HN2VUyawLdSBQquhzyp1Wwu6GYKuYDu8J2HdO4QGAha12uwC+8TlbHvCuz+1gwEdv6zYC1FqaGg5o7p9WA9B+0ekGgC0No6iWzD5kTOvN3/5CCgSW3g2k9CyTuH0Y2EPv3U4B2v2o8g0wKeIcqe3ym9IebHMb+xGAlkFdZgMGVXrcDbB8QxcqeKNOTkoF+6tvEtXJQktLzANrEVnZCvC2YeZEwARTgZZT++07PoO9ennVOEDdTuWpynXP72cJtuWrurQu2lyW/3Mfhb4s7QSBmxa2lOtTX1QvBba5tVUg4PyrF2cABnW6HAUYE3GK4lawQddksEXaFKQZFzEclAm2TNl6nwCnnQuk3GnUPLU02JseWtUAq8bJf5HW51vUFrBtTxfuA9iuVoNCgI32lKYVsGfIik1gS2R63QBcPWnhNEDroZ0tAOftm0l2T1erQCP7eK0SpYbRZV9avFX2NKZNeOeOjcthQa/LYRtAoWj1Z4BX7EPJ2NJPi83A9ny5sRVg/wXatAJ+JIwYDnbUpIVPAB0KGJPPJr7NpDQaWcWKfiRz7Uk87ehXJzgR2/DTdVrdy+wTMmDsyGg7YquMb3kNbJ/F7o8Al1mG0E5WeWfreLBlfjlHAsZX+U6zOBH/kDaf1tNTKD0X17Gkhf55oyFNqNZcr/GwkKK/IAsw5swMCnfNxPlLwBYfnPABsM8Lu3WAW+ssoAU5/+iqlmD1hyZ4AB6y0CE1LR8v8u+9C4cpf48ejTsJ2RWFJ/cGrFIhhvI3qdK5fmAvHSq1BrD+7MJXAFfO6tcA8MKXoHTA4JMFQwG7FVHUBsxaEpYEOHDZK/L6ksRuT8HqPPMngdHP5WDtHH+L/LsmNnMsZB1dFd8B4zrpE/v0VsoosG1mzcoPaHjufDvA9/mXpwFW+OWtC+gx/dBFwMMnfpF/fR17eIIt2+4VWfBSVP0Ctrdv3FfAZsdeDQYMeWnRGXBF6yYU2GcJXWmQg+4FLoTAxzu7ggD9i7o3BhxdOYnKVdLdReTU+Y/k/76ccZNbFDfDiaOLQG1Pya7nAFNrnt0K+PjIDjqU/fhehwq/9bnUehAw+F7sEmANs121AOtU+NoF0O/xhBKAevdO03J6P3jLArBvBm2nWnK8alo42B27GjcBLJ54hgpTDx3ln9jVukre+eU5lvxQqPM1PajVGNaX8uzCziETwFpPrBUAGLfAnwR6fDH1Atu9V4vdgKMWFJ8LeHxkPB2IFhmXKwf24pPN/QG/z0++DPh2S1daThtH71oF9mCyDsk67fKkCWW0KzwZAlN7rjwF+KR0H9qlW6WePQTW7L2FDuD0md3mA1b9cuQd4IagGZ8AfxYc2RSwQ+3JVHdebsjcDHbf/qtvASdW/UkJk1h5M+0tTxZGU64v6Wd8FrI3b8pPNFo8GkcB2D2jwD0I9GiRQAH40mIHLX+tcTqjIdCsQitKjU277+4Au3u7ZwjghcAJsYAV3ta/AOj31fYOYH+bR7QCCq/cT5uE56oTUyBgHOFZFPBx18/ziA3f+RGw94ihjQDP9m23CHC/g4IELmZcoOq5tWh9qmcbe9RLhax1sXzPAX1jG5Mfei7+FQM20aPHUcCiPlM+AE43HLsNUDHsy2rAE9Ms7QET75egolDLcDdNvm6f27Rv1s5X2QWy8V92VAN0mnGC0tNj4AYLsKsq7WgBqNv+Bq3YQuHzabwTQhWUJYdd1lIFfz+iHHnnomMCnT3XHR1FI2u8RKAaNWhboWvowtRoKKVnRnQWrfkSg5yOQ6DxgHs/ABfoBlLVOD5gKAVgR7mLdGhYEPie0rOFY8QKqLkZXaa5lV1jNwxsSIz8FxHFAhI3gdUfblgBMGFdTArg0N5DzwAWK+ZB28y9KSMoJ3sbKLZCYO7GSdMAQzp/+QxovXMTLT3vxbuovGpvn34AAqGurQYBriucVhawSYuIQMDYcVkU2FrLyxUCG2caPwRwTfdXvQC7ZpSmkQWNHDQO7LpDfahWNwudNwLstDHVGwKeGuXzBnBV9ENaWfcrttgA9oDeMVpO010b09ZRaMO3pRA4alCkOaD5oy/egJ6elyjGl5wjSoId5Wn2DHBKp180Y4ch0VR3GkZ2vQ+BpKtmNAvbz4vcwGrfl48He6bm3wF2/sTNiYApwoFDgKNfF5gA6FC34mHAA/kL0XrTWxNAX/CmtjpMJeihVQtSG9SwMAXLaoPbY1iYUvAnRb7x0ADaUO4/T4+EQNfiPpSpDyPffgHrUdZjOuDqsFOU4D1fzvsGdsyIDZSpDXdFC2BPpF+nkZVyOkEzThx4no75tzMqURr1uC4/bXx3RuQxWPh5R/6RwRA3+b/eMMVjiRcEdhvJ/7HxtL0JbcAuHR5pD2g2Xv7r9703UmeAnTvpJPnhXv61RmCLPNKjDXvDYz1DsG7n7lPkHy3rTWveLuQ8GfNITaT0LPfi6xOobW+YlA9wW9Wg8oCL7vjQggxIWE8Jsy+8/3IIRD4sVARw8KKgmaR24oUv4NrJt4YCdq2sR0tkW6/TFKHjgY9oO3B5Ut4KsiUsKyvImG2gO2C/+w20APd+GTwQ0OP16jqAocG1yDvvT5QuBda8w0hy3xDDVw3AVqvjRKk8+OYj2t+0dwW0hUA7cydaDJYF29P2dfjqASpXGf4RVHeC0so1gdqS6c8rE3zqHwBo/2gfef11cA+K23OtK1QGK2X0ID+0sEycBLWU+1Y3ALv3eUxjMHd7TWoRd/fR8tcvu4qKTdTYHQ+g9k5H/iHUmBMpH8FWvOoQAZios4OGfv7GIQsSeNXiBODwB1WIfe0UTMXxleM0qp5C2jYqjpNuC7+gltL91VRAuzhtMqaIaz0cbFifx+SHfiu3UwmySzKvB4E5Di+tyULL/XRUS4/tfhNsIePi7wBLvjlA7huxJJZWt7avX0EIXJpQkpbp3XZt5oD1fRa4F9B+rfw91j/U7BPYqlkNBwDO9TlwDbCr5zVaLa33LqSiezzK4AMEWti5U62uFrTrM9j2wqFowPCjNgsBLUcOHw045c5Z8uSUpVnOYAfYtqN18eRbSW2wN6LeFgDceWEcJUEzA0s/sAtq+pGjmlqUoppqELx1LgSmXPJrA9jRr405oNeaRFoip/PvzAIrDJr1AvD0IVvyb/8SSXfBKp7WLQ74rP+vaoB372uZAG65K//XPIbfnVIX7KO7mdMARw0Yawp4OOXnNkDf2hGnALXaDYgCLO5fm4aTumDQU7DWtrMoQu2CK7QC26BVAs24sVc8ZV/52VsIror1oD3LvUtZcp9BrSF6sGA86el4QHfng0MAuxX5cgiwSJ29awHLaBekjKqQlfYdbM2rQT0Ap3yKpPV28KPXV7Brlyx7D1hfdx6ti53e1s3AfqgUeAvw7qYxlJ4+IxuS3YZpu2h3WmcUfwOygzwG5gfU1XtEmVpYcYUszD55sz8EbC4NnQdYaFPt54BBrr8OAmo7HKoNWN6qgR3gr6ywn4Ajv0UMBrw2Lj9tPl0TK1KweiTbU1giZ3whR233PDMFan3Tt1DVKOo2hCK/YkZx2g6Mm1waBdkR3mNoSR+96FaT2Ct9QgG3vapDFfzhiE6UZwPtNwRB4PPP+A2ALp71qWQaPu5+GeyL5i2p4xGxS6mWOLeqVwsCmSWcKcY/296qAXaf/flvgEVWuVLZ7qHdry/YKLNLqYC2GfWoKOz9OpDCYj8zZjIErMKz6LS95mhNWpDzRtWmxZt4rKQNZI8lp5UCfHt0K3WxKDq2OljrO6fuAB659Og04JC7zdoDHt4lP07Uq9anRWB1t+z6Ajjh8YWmgHtdFN6AWWFjVwLmC67eB3DnaKMGgKPLV6aM2mPpRINsO28WraywlvJ/kffqsrI9oWZZyHULYIe6RrS3BPY/QfW3V5TtRggsjwsngQ/5Ds0EO3bgMlo4t0+fLwb2evfxlA97LZyWgx0+tgHFrebaOv5gqz7s/hIw63z9boArVq+kw0jzqu0pCbx021LC6P+aQMbmXw8IgNox/43mgH1MDxQAvPjT0x7wpsn8+oBVSladAFj7nfxfTgj3kv96+KRRymgIhN960Q+wVWQcrUIH7bckcNDJgsZbuMQwV8ga7CxDx9s3y2p1B7v12JKlgPcrraekHdEyqjHYRmN20Tp+qeh4FezBe+0SAa/c209sgl0YqW1tZLMMAivSjQimd11uB1Z/zOX7gPM6dTsBWHv1vemANTf4GwPqrd3ZGXB60goKS8+4ilRe97+P3AyBvdVHBALOT+s2HHBwxQkUgEZNvtEJ2svg5RII1C+8hbbxAoFlRoK1cr11D7CliWIoYGFrN9oZ2gQ7fwDb+sxV2p2uG/jTKpyRblYHArFnIhwBj01LigZcclqf/Lum7KBVYE+MiLMGnJPShjaqy8KacWAnVJCfTHbdnI+8E3VEZz4EzlxaURDwvnkrU8BR+u9IdpLHy4NgO3/7kQJ4vv/zgYB6A+sWAbxwrQVVo46jtIaB7VLmAG0SN9Ps14NtcEt+EP3Z+0OHwVoJEWUAY8t6zQKsnyj/YeOt4ol0HHd53I/Ge61u1lrItk536w2427vaM8A5dadQ7dv7uvR+sDUajf8JWE3/DFnQn/GgJNjRlb1pxt2L3RsENmPQURfAcvdTKRZXIiwpf+N7Hm8IARtFG6qpx3zGlwdr2rFJf8Bqo0YmAWZ0vUZJMKbt2gdgT0wuSTk5TlGUsq/5cDcjCBQI6j8R8M6K+7cBi3w8TJuPZZsX5IeFTtaUfVXC2/aArOf0l10A941/QEvkjmcGZV/+o/2uQ8C2jOdbwKCq8vMwtRcn0TRPXyoRAYE00/P/i6jzjsfyff+/zMgKiawQpZJKSHYZDRIllIoyiiJFKCIZEU2RXVlvIqFkhki0EMpeCWmhoUh+n8fj9zru73/Px+vxus7rHMdxnOfNdV837ZufrVOUoeqYSVEFH2f/ng21cko4HPj55i9KdEPH9SxQ/x5hPJDvxPKKaqrqRo1CGAwOubEBR28v+Q7cJT5B9cExQIEWVu7vjkQYlKQMNgLHP4yNAQOsllAf/lw2o1pi3LmIjigGB6Zpk0gckqfgOj1vfy5aqA35TfHbb3CiAir/19ynwJH0DQ7A/4ULFZD9fJ/obrceF1NosCj5UTFPKr9ohcueFvA5An9Mzp8AClo5fAU6sSizAjnMurSAs5FNfcDuBTpUNQ53TtFlXHtln8Gw7G2QHvC7PNsqoEzIMao73bvKDaD+Psc47zguUqTuLOvYQIOfDJ7/EN7xFg6qcqdqZPZCvbf+4SyQr6ZwBbAhiHMTcDIk7j1Q5Mali0CrWUFazRIbMyoKm5k1XsHwcd8jeeD1ROb9wHY2xoOQZvuOyUCd/Rf7HHhBayoQyCJp1wNM14mhUnwy+S+V+Ln8fBQ7XOUj/vBKHhxIBop9lO4FPnhq/Qv4mfvAPWCCLOM1F0GrpvdAXdT6mAKR0/fAAahvF7AeAorpPGsGCp+MpmH28W1NgVriZkBBEJoinA819QznDmDaFcaLkvPPXdoHteFoLc2v4lXfTVDdf76RA+6JbnAm9bM5Fcdtvw10obYtPGUNLPnuOgxcG3edwj6Kv5cN6kNPH5oHvhANaaix3KX9wCf6YTT46nZ7KhVNsvmU6J77fojAyz3oaAs8s1KJsmW1K/8cqAYtFx4Ap63ZtgLvrzOiXfoK31yKX63r/mYw2F187QR873+TA7jHsJ5CWYtbTwxqwC5TC+DpkfErwHmvf1BV3pFuegPqpslMmp03GoolUBVPFdOU+CwuoYlyfirjAsP2HXc+As9Py9LG2vbAlGo12/kabRiM3rHvBPpfqaOie/fZ4yCohZ7avsCcK0LkrbDoV4LKyZlFAR71Yd401P17rlHyWrIupQFdjxGhwR9S842C1+9VtAFQu3yCtpl+aSdagJc6dlSNxueeoEJ6xCCBom/xfrclaOFOqCi1EH11QAAq5wV1Wgt9Y0mKh2+1LedhuBqaow7UvHv9HFBfdFchcL3yYAvw9bqzP4ESd+d3AVdbraHt9oZE1lOoC9xW06QaJ8dQrY6648cMw8lnniFA4wU1f4C5fAdMgGWnE68Dq81FqO7cfPFcGOqkf8lRoH63SRLQYsyqCGjLzkn7xb9d+2jEl+ebNsPAnxFH8dCrKBEN1T2KmT7NeOm5UQbMNB/5AYPx/YPvgcPxGdRYpLQ4Dcjk3aQhDFbs0rTc47ePL4Raq3uXasmfldkUUfs1ZKlsfzSYR+huucYPl52Xb00AzkkL4gEGettRQjKr7qM1rjvYEwtDSLQilbbTq1xpfkXXVUnAEHB1XQHQfP56mupPJ1oppfO3jVG7B+130URFljH+CRs/wXgevEJygLI7smpQCO2+TRcxBjqb+v5HqufEIeCWBTavgbVnPWnWTS0XGEEtiRMJA/4xbngLzI6IpLttdBKlFJH3PqACw8fJBRrAoV9hFL/WJc99oEYyMf7Hqsd9jCK1diR0Foa1GXf4gXGr2HWASr2Z1F+mwI9noCoG2FCU9D57SH2QsWKkU93urbQWuqpNWbhsfP4QFXOWiEV0lMj1e+UAw9icDcuBdjKZ/4CyZ00ZYR+RKQtVS9mOVO5mO+q6qMwLiup9laLd8EY0t1EYMc3sboJaWHbpDVDEQ9AeGBf0iEpxW225HdRZfTWqv/97I8YvqGtkQj4Ahy8tpllnsltHEVX31YWW0P/OtBi8b5da3QTWfHpKQVCUJ0Y9yzol3g5Dk8PjFuDGKC66cdElh7lQ7S6YcgHzzP9NAsW+GFC7gluuU3e+ScynZHisnRMK74vv/+0D7qj1JpQo06Qs1NfTpdWskjkdAa//t7PHgOXf1v8FdmjnNAAddLbT7rTu15WrUD3z2AuBfxLWUyH9L+7sJaiFvsmlQEOpSAoYtcNnqMrxi+60gCHs1ZV6oK3zH3+g2OvXNIrwBYwvEs9UWFJuDuqbUn+FP1bP4rJu8YwbwFOdX2jOavYuocN/1peTV2CIWrKZcuhqnyelXndoCuVmtroDFUePsWCaPoXR3dTJmK4De9GYymszimrHT6W0dciNOZ+A4bV6GE2qcII6jU3JZflZGD4INlM8PFo/eArq2FndPKDOg4O7gfN0Z4eBRUFrnIHKCWK+wFWfj48BV8RspO7oL9PYDvV7wCjF+nSIyVeoz/8UU7Y4zfXzgppXwTUfeNBUdAFwyWcvCo3lrw5TolcsfuEEw9k3trTGau/VaFL7tv/SgeE93+s44Gi5NnVnv5BYIlTdEMZDD2t7GBuKP0uDPgzOaunUbknZg8tQ970vVgTK2it0Ap8/vU2F1N2X9x7UGDsOOnCaCfbQcq+uD1gKwyqmo6pAXrnyecBjKwqLgRelv3oAzU3ltIBd96ooGWQiR6lU7Gtyz4Zh138t8sByo73qwD9fGC+eiGnpo0hdN5rYCMPRuA+kdhbu3Ar18Ns6yrcxjvJwqBOJ1whnIt+FQBXVHKGNlX3DYVoLx5aRLTDIuR1nBxaGqx0HajwNo7Bf5y86A7VBpZAai3M7TIeyWKY9t2GQ+bKGjuN/pJfTR6OUa7q0m96viKQA7+ncfwSXtY1rUH+DNM0oqgMr82ixxjREqd1SRcY7yivk5CkItrxbGIzGPnZX9gC1+18kAC/b/V0DVDoqkwIs4Ob6A/T7zXhZx6G/TFSjZDsaaWyLxZSoDMarMr79rrgjhzJgSYfoOBrjNGrdCPxcxMYPbAs0MQdmem2lJXyyl10PquUfUwrE2meNFGe25c20b45oR1rCe1xdm5KhKSN6HdTRFYEbgMNPjhFuGm6+BtVfeKMfcMal+QuwgWc3jcL0lC8VkNX7wumkq+pixQFvhd7j30Bbzs+k2n77ShPVvCSoAYbVEVXfgMOS1TRM6cR91N/k5YyfXzCb+4dSxET7yhNctj5v42PgEv6Og8CBT5OewPcLFlEfogy8nkPdL7DeBvimVakdGCEd+gmY5tRDx47kwKQMqEomQ5rAPTFq0XTZmmgqCkOq29WgOvlIUfwmjVjRYUR6F+Nb1GwNfrzw8vSulAEGXnthBNScFKKq8VJvNWGqQC3N79rBJgrwpKOMB2a2nDGlqM7JTGpCY/njh3yB4jUvdgG7fRj/JCzbY7gI6oSnLE2fRF9vOdRtFu50t1qZEOqv8u5YDRiS2N+tB7K97aUaJbT6iRPUp5z36GBoyPozE2rMyn+EWYWO3VCZeRh7i/BjJymoqrcYX1bsOX2jDOo138i1wAV2lyjJlrgI0JypTcZQC991C+icyt0fugqXjWhKDwHls8do85m8f2wHVN7R05TzeieqDKHqCyTRTLLr8bZA7bgzSx+urgrNnIT6nndPGnDDz8XawGrHIiGgn+dvyvns6QZKaaZfO2k1zbLDaVmi2z9Q4vhJrPiKFhLOO/gA43am09mIY6htAOoXU2MaRdTZBhaoMZuCacepTQyLhfpWTeAzcLwsn3b/bsEOamzwXzTdouz0xBS8Nz1544HWRl9ok3h3k5+Ci6t8Oxm+SB4+D29B+buVwMV/VGktVs9UUW4W3TtxAYYco//Ie9zy7yhUsadhoUA2jsddwOLu1ZTzE0o2lKaeLYclYehwZKUg2Lhq2w2oUjqMX6Z7MjWXdqe7/ibHYBCIzo4CZrbOKAG7Ht2hv2sIvpqlzTJH/cZ8GCo2bqN1e7NBejXUFbOy3kDxM+kUJes2JlB35hxqaoVhiRHjd+2Lp4KPQL2/gmUdcP1y9T/A8i7Gv5X0Gpg4obI+v+wDPKM1S9lSnTb4FupOEQPqTuGVBxTr45/O0e70zptvD7zNCz7QGtt5MV6GrcqeIQyD52aDXuBybi5azVtT0+JQZVhbTwEDBI/oAB2Mov8D3lL2fQ+8aZnHDBRv1aV2LRuXPIR6SWsD7fP3jbWoTsa5Mk6ZPZb/ycHr8GGKRuEp7voIavnKl3RMcpqc4wy1srKzGDjCwXYGqJtusAV4J0KUJjWcyWwTVD3eHi2gt8wOSifVH8b3oP7hYry8ZYPOCaqpfcMPgmDYP+e9B1CRI42C9rLEpRdQnSeWSAHXrz9EnbS2KaLG5hicp9hRubOFzmfXTS7RPGxujqD+pp5X3I3GitmXUUovflhwE+p/fxPYgeEhPyii/rp1UlSr/K7UhWHd7kRBoEvObABQo+pHG/BsLMde4PWqJ7Rvzl8/Rtli1vGJto4RMalBeG24jygD3Q6N9ABf7+jYCny5P2EYmPOSmUY88vy+A9TrAk2WwPqDXbQ19y7PoeiLt9ZJhkExaecBoJOQ4gJg7uNV+4AFHcpLgW/GAig8g/q5MqHKrYgrALLxD48Cn2YIbQcWaB4oAXJX3mwCBiQ/o9Vc4x1HpcIy5aQiDAf3svMAUx1tqA9jJt8fQ+1LeUNnGJWzT25AnbPSNgTo191BC+BcV3gYah3HOdqEc/RkKQj+a5lLuLK4MQbeaL+nO4EtJTV0i/n7Ryl+k6McaX8775JAQeBgaXYal634/sQN2OoaJAC0NKnsB3KeYPwWlLVk32WoXEqMN1WLH2miUmz5jfHRyOL+KzoTFAcOUvxufNUcixacjUX3AI1/W14E+hUdyAJG9hynAM8t6aGIKvjN+Lo590wqpfSrxeq3cJmv8Toa8UMTp6dQ1Z2eiwEbU7dTBjC5RKhDLVig+AookCSvArwxe+sIkGlRfgmw5KEmJZnQ7VSaM/Y3m2mYrtNCD+Atz9Y2Air/1KNizvEkVRtqHmcSLaHuhb+CUPe8/bEL2GeheQc4vk5dGng0qOkN0IV1zjqg5vfLdBjhMwqVgHpLZpCC9qyvOy/UzC3V9AH6srEXxS/H7jeUOIcKftKIzTL9KNFzT2lToieWHjmJxg6o3KLTYIA9G/VMMH+fBgxzGg3vAoM5ntOO/vXUdVrjT+taD8JwrjvTFKjmVSIPnBB+/x24rSyLcmjBHuUTUBdYyisDe4o302WH4xgv+s6WF7sEw76P6rSwgk4b8qDa/KdHU/LvqIQL1OzoGhqFUk8IhWegidELGJSaymh+hzd9XgxVqr6Y6tnDIpsMqKzxF3YCY7yiWYH3HIvo05enofcM1AML+USBkssNqQyau5XTyaauWIEDBqsqCV/g5PJOSt7n5390QmWy5aE1juBi/NLx2WuMt1Xt28oIgi8GZVR/mRLPUYo8Zek3QGPsq5aaATkFrWlKGsOe0fTV9JVSXsgXPaCIMmpb9QmXrcxTZKR/625HqNqh/pTSrTG8DVC7eS/4ANsWsdK6KRef7oOqfPk2LZa84kg51GLfeMqLVP58Wah9uYwtNHZftQfUxcqLacPmjdtDpZhr3jSVlbMJ82iH/GL5ghLSJqycYudHgZEmGtu534Eui1wn8BqqWvcrWgCFB/udoMrzC9KmZlEa/Qiqwu6blBchJ5ZTuTrQpNcMg2HKA5q+57kqa6CylatuAfZZ7A8AFqj5FQClJlUTgbtjXpoAhRQSqDg+GlxDu4jgujxa2Ay1q3PhXVa6mQZ0wWyQQllbo5oiVSel4yO8ezcGnwOORnTqAxfKss8H6lyIswWe2DRC3hXzDag+PB0/RAdZGdNlZ+DNTvJoAR5wU1kMfCCa9xD4gm0NLcsJcxsFqHtaGE+7CWiteQ61fviVM/CfAPNeoOq9/2iNL1V0v4QqPF/tAnD9U7OtwI3hPenA1lx3SaDrQQMaUDb3Bjo/aHwKPAnDC0EVmnWfO4w3C/JwT3+AQUjFJQXYY+RXDVzOZkU9U5KS0YMqOSmcC3zvU7cWmOzyjbp+YnFtGFTxiO9swE9qTzcCeY0u7AJ6z7e4Bxz1VHMHeilwXQMmvt9BletdlJ431OXsfRrAn35LKPpEhJlyoN4Vvk67yOkA5yNQRb/slwbmGgVZATM/x7wCWucp8AJ74iddgSUxjFAeuMBcBHX3/lkyaL9zpTWeWfYvCgau9zsoTRdkWBVC3c/uWgz8oSdBid7nM9kENeYP47tRrhe8hqDWyHZRTL6xST4Gle1XHUWUdPPLDVCDhz7SlLA6WlL6a3IwfmGnz57xn0H7qG+0t0xMcdKcmfOa0LYY+rVqP9qtPx5OW111zMxKqC+VTlGSWR88R6fBg2XptG61RzPXwHvJfkE+cN+De1SKuXfWUbvbtt4YhKG0NzYLeNAhZwp4Mfd+HPAhzwaaVDvdYNpFyoS2LYMhbeiKF9D1nhoLsLffpxtoEOpAAeMR7LUJ6p4JLw7g/Oy0U8DaZUG0JSUvemgBdSbhKlWC4O2vKAiY6hQoqqdOm96CN0t883egyCNhGlDl37tjUH/IbNsCHM0dTwVu/3k0gZB3HgXX9+5aapevU5nSyVJCOhjeu9PTNNWi95L8oTIlh1wE/uONoli/ffUrqXOqS67CcGei5DIwdLhqBTCz3l4fqLqFlc4PSUfsqZ5dMO5cD4OY5UIqIL/r6qhG3Y87/AcG1hPi1MKaDecoW4rPetIKHZ2nqQCvuEAfFbzevqBKqE9GytKBd67cpszy3v4xHmr1+TQqpAncAnlQW+T1aCZFTXloHzK/aSEAA0uQeRVQfIMZGb44GRGWTnN3wTCPdTGFkbKwmzhUy9F5B4HuD2wsgLniR7cBry1SeAhsX9JSAez/aKQEvC0oeRu40TTuKRk+JHcArwgkHQCemH57FuhxuJ5KW5eGM20Hg3WDfjBYedTSWuhOM/55I16Y1gzD3Z611LPiXDMdqILRyhSTbM19H6BOmwjTshxyjqZjR8YAjzUMb3UYT7701t9xgyr11LQEON99HaX/N9210VBdLlaUApfFJ/EDN97bPAqsNpBcALz45akGcJVDpR6QZ0fJDvJGbKR8k60Qok7qCltlwzAns+00cCLUsg1oHJxMPatMf3YFqtT5QsoWVh0eWajVNT+oO0Ljm6iTTbt/McOQo7DFEcj9Tm4x8EGF0mFgWzzji0vblpXTeWdeTh2tJleqBTu8l3domwEFtCtomAeDx6kxe7/yDTAYm+hRSmc3jp+BapZ/9QdQssGSEufswIdpqElcXTRRkifUaMQuNzX6YIjIzaVKqy79lAKxu4OVap/Kv/JV8GosyafMiptiouBiqd71AgatteU0UcJHzydCNSnkbQQ+b3WmntXu0U6BKhzZRYecU7KDhJt1R5bAkJeS/xX46oqcL3CJ/WFKssDGzXQ8eHBxJbUbl8547fUTgZfmuOzGBU0aRWn3VVp5N+7SeBh6F2+h7O7fkUSVa66iHEWfU8YJRXi19kjyAaVfN1FhMqhLouUWYLGj7cvDxb0XXt/QF1RWyi11aGHdxS2cYbjaViEDFEqto6pxps9/AqrshisxQHUDB9qzjkb8OgR10HjnJeBz1xXCQPGeFZuARoe+9QA/zv3GAiyfdaCKOPh3ohbq+S0ubEAX3sHvwI7+QNpjf25a3wI1YxsvpYjAqyQqV/pS12j6hmvk78Dr9Ok6xa+fTT2pavF3fsNgrXSrHLiVafQx8MKhFBrb6vQWJqgC1hfuAifFt/wHFNv2mjLL9qUtzaT8Gpk4GG4nH6SY7NMTLoK6fME6mh2HYzzuUDs+7agAVmqEtAGT3bTGgKfknlJjX2p3+kNVbWo+DbQu1KF80zXIvQKVxf28KTD6ep8o8NQy9zpgoX72daChzEp7oJrafsrN86uYP0J9sZCxAGc2mVOtvpjOOFIddFUygjfcMrUUODLMR5llf3WU7tajNE0rdFPsERWQq1wn6fxwwerCM7TQleQ3AuxZVqwFVEh5QcXcO5fxmH77YecGGJQ/a1EGLP9SRVHidmbpFhgWcYS2AscstOnYfGajijdUe15HMlwynUtLaN/OeB4m65Md1Si++4x3id9PHKhHC5eU/NYCz6Yx/n+cdoOJ4ozTpGYeDErtXG+AYS3etAeoj7+gcvXZQHcuDPveyKYDnzSc3ge06J/jARzrLgwAlgyJDAPj25QpGVSSZqmAtJ9geQXDziu/TwBlRMZWALmYDncA7Wy1GEvI60BB65/HmKjxjaeXw3txZF47cGhqJ+W8oGu5DlTDVbK/gdsirBKAr0d+3QKKXblCU8Iy/8os1D2SN2h+E/Z30QGDT0KFStuNlSlJ8EZu56IaNZVTNgF120T5F2BMxfxgoP7nM9JA3y7Gd65inaL2Q+2y9RUBtjQx3hjQe/wwlavX6xk/F7xz4Bztm0zqog64bMv7Dl6g7lXG9023JGorQ+3tyqwE8udK0sqveLiWUiQk5akBDDZnDlOkbj24hQZkKJ0UBQNndYMi8MLlnT+B5cMOFsB17/qoXH0qfEah/DpMjAp/tns9fXLPPq1EH3ce/O9xWLRgn7DxJnDzxwlq4byVWgbUk23zaHbMKyVDoM5/Vn8fyHWrlB24tlpFHbjp9D3qby8/53uoSakS/cCvb9TygdkHRNiArH7XJ4EtkflUH3hWbhWDGrti52ugbAgHVc8Lqa8zod5Yb2kNPDFsLgUMPCrPA9RIzqWIOvBkB81kKacTBaJX0uNIeKtc6ylFlO7WfYAa7d3YDMw6v3wXMFjLlvJCYtenM1BZgjTos7TTjCOFRvC8rxTKN5hlKKISvo1Qxj5U3d6LFiIfRf4Cftm2jkJ5XuUmDajcOlGrgDUOu2nO3F8/ozhLjxQegOGKRBCNeI93IkWfHb8C1dSlgjsOwBsWeqMG2LnMeScw9Pnav8DWB8coqs8G+eZA5drpSz1bFiRER5/LvKq0YcdejyfDO69GGptXCOOfbhr6rhRGX+oeOKLdAO6TtELGRe+1oTaOv1MC7p0sLgGe+PSacujSYMA6qJubjYaAG/0XbASu5rhAAeMb8oOixP5AC+VFoawdhVwm/0ranUqeHAxEC+frcmhZDLkVlkINXOsUDRwqePgbyLHq43rgz93BNPikivBxqGPvDs4Dap1ifIP59lAi1RJDc+FkGJS3Mba6xXrV1K5aNuMLUeYmnLSazG26DrjMfBPjRb7da4oo5B4Y76SpfveP1wVePw9uE2B6jJsPcGnbvljgky39lBc+LllkaN59h6YkKdldBN7546uHgd0WQ4LAhuM7WoAWhmnbgWaXGM/mD3942A61diJzNfBENPdToOM6XX1gRHjlZ6CCQjSlaYP0MGVAdbavKAz1shZmwLEhxhNWResZr3xib5N/BsO1C6tZgWbdlnQUtvQooNSz2zrwD4aIiKUUMLn65YNQf7y2oq7vjut3h1rzl8MS+LVzfQYw4yc/7ZCXS1fvhfpTR4o21gKtZMq3mrd66TD8WnJXAlim0vgd6HzTgRl4TvKmMLCAr49ifcNU212oSz8z3gdd0tE3DVVggSjVEt2WX6lQ22Rv0azfDzOhRE94rkFbPmfR2yZ4xwbL5IBnBPiplkjFFNDg9+/4dw6GmKcv6YwY3MzTB1XPQ/Ud8KBPGMXZ4+9BlMf3T66imnpCoigSXmaTHmrBip9fEmq4R6UxUGuoigrTvV82xVDn5D5cAkz6UeYBdN/edQ2Y17iCLpNafE4ZavGKb9QHadn7WVDX3Rk9A2z9T8YK2B7fUQNcJWy9BihwoJIG5LA0MgWq/ZbnlBdWjTmDUL2Fy0jdGnUtDKog1zBVRI9hRnCN+aR5wnDqdSTlxZrDAUlQh7hNx4F5H+VdgWfCkihbNuV2qUCdDk3+Cby+yJTqTuoM499K7YukKTS4FHfSWpz9VhmIy6buTOQCn21zuAksy1p6D2h4l7sQOFbFeNW9Z/YXPqiDvt+dgdrjyhTg2j3ZFEYa18XLYDDy2EL722WhLm2oM//3WmZ5wZX7oB5fefQ4MNz2eD7wtNmlS0ABNjUZ4KMtVrSjy3b9CIK6u4LpD3BfWRdNVNtMxCKoEYfn0hoLFDrvh8p7aMQcuGrRz4PAZBFBUqeTOkyh7q8JHgOG8vgfAY6EJWYCT99bFQs88oybiu52M449UPcJRNBnkaTteyn6WP+cfQvDl03n6EB/oDtpFOqefKZE4PjmPjp+1ReIzYGqtoOTguv7/maKVMf8L3S3rKiFHPCuUFxLO4PrTcbfzxYF+1Gil4zeLoLXw98zAPgjrIJW3iy+xxeqRfB3ym5+vmmavoupi57DUGex9g6wIKiOC5jpm/MNyDq1iTHVMyPtUK+f+kq7tMePrltQOZdmURjZ7HroBfUQ3+lPQOZHZnQL8WlTGvyuMtVgGE4vUwoF+o9ZFwCLjEX8garLFmQBGy860gpxBrIvgPr4rQYVptoUVcohzio7GvHpptdr4S2NT1YE6vMaUWNcZW8ppdeIKj6GweD6NQrlkz2Gz6AmBiym6SucEDkKdenfZ+TVefN6PVTR9HW0NR/k5kyFuiCgk47C4zOXiqHel9tEsRNaXyAL9eea/6g7lio+2VA/1R6gHDrGffEGVGs+49fAt1NcFCWGmSqHoKYVXKVaraOdRScbIY1BdRhuLD11Frjxnxx1fWGbFK2QeNguMpQYXqfNUnOn7CQuE9LeTJE6mxE3ClXfJpKCQMDB7jzU1IXbDYDNw3U0JabrS6lONjSHcsOgsimAbvzww65hqP/+jlI9W3vGnqbvmPSNARiyKhfbAYu3OzgAywyTrIFev6d1gS+OM54hCut/pAb13+VNrUAPDpYcoMZ5JUqR49IelOhqrDFfYMh9tqIJyLRC1gZoIfbzFPDDP8an8fQMxuMYyili/8Ggd+gLY8SRko+h9h8J2wwcfWo9Dnzh9ohKUDzvCAXi8w3FfjCIll0zAprq52YAj9csegUcu7WfosT9mDrdYu6LoO0w8BzMo8seXAqhNZ70br8Pw3yB41SCNHLlzkEV+RDWC9QQlmkERnuqfgZu5jrJA0wUlqXFCt4hSMU8aEmAJAxNliF0Egvlf3sSqsn6dtpCVR4rTkHVGxGiPvA4LuCF6qWVRkfsN2sqaEAJz5rJu7zpM300GtiryYnLuOKOVgI7rRPmAA89+hsKbFjNOPd1apymOilw6o4qGTyzTICX555SAvJzrLcFStxPJYPNorz9UG1La58BU/91BAI5dzCe2L+ru5XyeKFQD83OXLsl/fDelaz+CkyQsqIo2V6wXRwqy4fSTcBF6t4fgdWHuwWBbeJ9FH1zvi4XgeoYWEJJJvjLtQ6qTzjjF2Di5hQPQo3RtqTlNppKpBVKObX0KAydQtba5L23nFSZ9YlU+JcdO01RPSj5MAVeedlpOqL49I6vgBp/5nc+cEnVSrrxuPQlPqisIad2AyNMHtE8hI8+3wpV3nCQAlx04NsSqMuffab9QqfmAsWD/V+9YBi4K5fcBLau9FwE5Gq+9xyY9jO1A9gkt4i2pIctmTTMTN7zwjBYj+3lAj6OW04laO7vSDp2yGQ0sMLwbN4eQ6DAPybq5AtXTgrlFh/jXTC8KDKl+b3qmD8f6rJzqvTZyW0frz7Ud5ftXgI39XRS2U5sjUqD2lY0mwA0eGSiBzzUxfgnlpvYpn1QXW6eEAWKVjFehOohcFEBauvg7BXggxcZt4AinvkzwDwPBdos3apkxaCWcneFATdLG9sA7Wp0fIE/jJjYgWwRwVRLhPvFzKDOu+n+FDj0bwvVklyhCQr7geb3f2HwramUBWpHMV7/0v2d8XXzf+I3qOie0Iil6jkRISKEy+TUROuBu+YlUBgFb2P86LHCcdODMDgI59gBlXXCxoGnAnIoJs0SsmlTE/ycbQHDETsTCvDZHTYNUDkMP1Gp4Ds2WwiVLSmUUi90eWkp1HqrYU+gi1ANC9C+rJ3utjj3MnX9gOgGHRiq3t9+A1xnnX8R6KpaRJdNmvHUQq2PWEdLeOQR47ty5+wOasDwM3kn3cKQXYUS5/7uu9Uw3DU/QlHCHuJJe1ZzZkQ0DHIT4TeAuddTOoGCq80oHlJziiOhSnCdDgDuFJqlNZ6z9w2V+DuJicwwlH1+ngPcVVPbB1wpuvM38F5UAxWbqwoWC6B+zNlwCFicUkHbouq844TdJ23EYRA6blMG/Lp6bBQ44zjPGfiLdRnlRawSK0UJyxpm6nqRSMcveF/aLN8LZK99GQTcYsf4d8p/gk/oo4bYGGPzCfXVfABvTP9+GrGJrmsN1BJ5odvAEGevdmC7vOVr4DPdflos4VTGS8GznqfR8UsqQYCKgsXuHtpQojuPXkYLn/ZOnwIu8vpBGZDTL7kDahHHEKW/nKU11ZKTc87TnL14EJ0Cb5vmJx6gxTFnCq5JvYu0JcWfjOKA4cqarbR1PIzgjoJqZ6KvDAxaPp8FmLkwgfoge2uzG9SLv+r8gf2hVt+AGimLBIAs/4aoDzdTN9LKX4tdRnnBfoKdRnzoz9n7uEzkL+OnDDfzMH73TErGj0qbwJcRdXj1Kxnfl865o07h6X5vJ23YFhmbS+DN+fi0FOgmKv4fUOJ29hrgQFBsE3CXRN4qYH/DB4qoeMWTVEtM1Bmf3B1djlBwRVV++4PL1m17yAjad+PFUBcG1lHRZW1qa4fq2dVkDnwXvM4I+CLrOwX4rbcXKXnDVroVwHDRY+kjYMrjWZqSY3cv6UH92NImA9x1io9qtbMSlxJUpgOyyUBDn4WJQD9JlUVAqd1bfYDzW8/HAr/+zaEWvgRcpNnZG6tA+1uzOOMP8P0vb7Xisj/fdKhc/Yp5IAF11yjj9ck2medcoa7ncdoJ1OCSjAOeyVOfC3wxtGAfsP6wHuVFyA9mWs2mocL5MET4M10G5toddQIa3azKB2638n0GrJ74wg+MvcSyAVigPjwJzCjSpcTJ814SDtVdeWo3sCn1cA9QbV1XC1DxXTblUIn+XCog+pLSa2Hg1VjqCTz6OZ8MO87FWUD9xORHp7bFk6FdUFey7WEDLt9VSIccU383Sl5TVyaqchFyVTSTy0rUKDfLJqaoFFu7M9Maz5UXmUK7jbH31gE3fao3ADL9jN4K7FYwUATaspRT9EWrDNJq3skSowDX139zEt7HsQYUBOriqwSgZvQ4swIvlGdSSqe9d6JKa1PQpwWDsnfERuC/oPjDwJjBjzRi1j+H70Idj+2iNG3m6aRAnDlsIApDXzJPFPC/0JGDwDldqn7A5DcXh4A3+XeIAM0NxqWAzKnt+kBLndM1wNljgXQZb3sqXbZHx5oThlVvsqWB4omj2cBpQRaq6yEyUxQPXPujaZ+P/RRDKRJQlEfF5lsd43sdK+sWaqKxSx8HxoAWOc3UHWPZtVRAOOcpNcDg1xmgDuTYxkFjexOZtQzqQNKPGeBe5ruUFw8mbJmgJrwJ8AHOc+DPAvYxvzgGLDc2pYxN8dxL8VC9ZW4HDLGdoTT4/ZYf7aFmD09kAi0Xn6wAqlWkLwEWfbtCjR2IMc6DOnXepAWY6/QuDah8rZHW+Fx1eTNU5u5c2iQcxBjvoNBYw3hMtCP9OTV2weiIPy4TM0y4B1xeto2C4LammRBU87u3KY+HLj2ic6q5R1ooDLvss+jGypd+v4G6Pi1PDviyy3YOcJ5AkCWw+OgLY6DmaS2K9SjXfQ5Qn2/lokCcq7aUNmHXOf+xwhDbVUHTNy5+lib1zqe09TCwOvRT1ydtbtNyGz4tG4chOzOeou9S+mpagKGRbLpFXGHQFnhv54ZRor/nivWC6nb2MEWUdOjSQah7rj0iFL6WRRnAv+oVHXJYFopMw/vVoOccUPSHxxEg199jNNXxkWfEoJZdt6Q+iBv7BUEt9dtGxdFKXDMV6vripcPAyofp14AXfFrWAgOMlX4CY/020Wq6CJtLQFXRM58HPCvPeMBSLp2PRjH/OQul3ua8LoooV+8bHrgsfAnvKqDWjTIa5uj5n6uhjqgz/lm6ddsjMtzqk6X0H5pU7IRX98k7Okp8zJSgav9xu2cyDLs+qgoCBYL3FgF3rxDNABbsEKJhsnhrLYbqJZL/Fvgp/QwNPlLVkLYZ3ZurtsOgufkl7ZteMpp0pKpMyG2Ewe3I/HLgsM6HCaBtlO1X4KvZJKoEX6V9aDVvPW+VgsHk5/pZoN3cHEqGJTPvH0Gduj3KCXwyy2EOTDzF+Lvc98JTO6D+FngbAcz8HKcHdOZTp+lLlCszgfrlwM14YK+9P3lL9/5HZ7nd98/0wbD1xgE6n9lV6R+Ayp8kvBy45OjqO0DXKF9/4ME9tw2AUpGMZwF9Pn+gsa0K2Hkahij+BRTgt10YL1xouLZOA4bwP160hGEzz55ArTgvFAzsd+ShiYp7WZUEde16xm/puLc560DVG/gUAnQJ/U0LIBEUS11vWMJHCdm48oQtvKOGTKSOvrK4CdX5s7E98M6rVio2bi9epUHNv/WLGfi7haUduM3qOhXdk53sdO6bXPjuIQwBIf/R3UJGTS5CrajxWQEcVtd3Bq4v4adkGGv833tMf7H8Yh4fmzZhvN1w8ZV5+6AOHHOiSjA5f9IPKqeyDBl8Fs8ugpocn1wHPCXwH6XIKu3xJqgOhsrpwDJHMUr0MkdZqjuWKlGBMGhaqtIS1lur05TwvnHjgIFjNQt1/WsK8zDUaX1DLmCnzTJW4Cetl1LAPX8Y/yFlCqlRhHpPL5biQUVUfSfUL2wuH4HX37f8AAqKr6SAuebWQ6MoyKxqhOF40R6a373FcfVQUxNjcoEd/ecp1r8v+k47+rXP2XYwWCtLBgAv+8sXAld1pH8HHr31gJbl0jwtN6jdR47REeW2E+MXuEY7GL/pNrWyeyW8/qdfU7mSullGcbZHtcwUBqZJzwKgvNE92tTUtqrwQf348Dd9btnQZXwKamrqD9pjWfIMKIfE2C1ohcTuad2GN1o22gho2xjRC3z7MFwZKDn3uzrwydteWoAPS6rNoG41maQBPXddSRPlxvboPQx7SsI2Aj0m22uBOTVpg0CWM3coLz6WDkZCNXa4QgXvsVV9F9QVE2csgfdyxmSBZccysoCLbvLTpmbTOUOd1O9OIgN/gTKdVv46XqCp5hpjPJtUklNJs86nq0jp9HqShSY1Me5WMu7GbiFPJV4m5SK1O4etUQ4GtcBZKivDzFo0fWVG5pSQH/yMMuGtvmp2CMiV3HMAGLTB8QNwqfk2J+A/yX4toH9aGhMwce+5x0DD/eySwE1empPAjgZvqkb9255fhaqZp0RH9xVvFtNqcrqLUTLkxF+mY7P7lSIFXCbbI1gBFP1WRd1RMEkxhvpQtMkKqLq2hC77ZW/TDLVJT51icj/PqjyoJxqMQoFCmy5SH8r2nhSBelj2B2XLo8AMqn23l3m8g6GYQ5sdyGRXR/P7au096o78UXF9GGYLU0n94fy1DOq8dN5NwIou5mngr6OMX9uovyZD8yv1+dEoDA9lLi8AntvWQXth9/4iKttR7N6vYbgj+9AX6BIufxYo6PuHYnJOpBylU8WDVJpql743VNdnBtymcFnSP8YnS7/7kbeguvc2yAO7LT5QKNccUjxO6vtfe4CdO+bdAy6OsrgLnNvZSMvCaVtEefFmkisWhiCt+1JAr8AIaSB35V2qGmsqttJGZbOLdTMM25/3/gUal36gTt5MzcmHWnOvSxBoUHWLEyhTXEYBE17G+Jbv9HLXDBjyRz9Rtjy9e7AH6qV3ntQz97MvLaAu3Ch0BOiSf3UEaBLEeAPgXe4/tELnVXiDYZCoXE53y+MoOAN1zWNPUaD3+hk6g4dpC1IRk9vqTLeIuRtQA69o3sVvQN/H2RPAxu+M50DyR2cpPPkksmnwlneN58GrruSTCnQSKaRArD7W6wHVfvP4GHA04y2l0+Dqr1RsXB3/UEw6xxZSH2ZPM/3CZYevNz8AHmw67gkUOSNKg1+WmbQMaoBndz9wRnuYui57ynMp1Etn1xYBj4k8ooytOF+wFio/u91RYNZuIW5gKIs19fd6TIIm1Dl8jXHA30KjJ4E9W0f/AA1vxnYBq3vNo4CyKvfpxl+X5tNiRd25QUU3l7t4Mbwdd+2plgxF8A1BvdYU4ww8aPOJSkXRWq4nUIV991wEvjHOvAB8LPGeptrgOOO9+SvGh3JgKMnpp/l9miosAvV8kC3Ng7pUHUUfv3WFDgx+FWVvgUGjInXAcyEV/wFXV91pBXKqruQF/iuI4wBe0xA+B6x9aLsK2KEdQ8XGkFWrAerisK3UM6HvS39CfddzUAz45M6rp8Bf/d1U+I8bVF+DWn6YWxjoMBoYA3yZ2EbbImuAGc2kwp2UABg67fypMd7RoXCoDz5X0Cgse93oCNi1sJyqZ6rnD5odrU95vbjs3OYmWljVOg4bqFnOhVR3rJXf34bq8kIiAniE7xCVFTWPe7QsfU0vqOhqXf0WDW+2miihUsy7SaiVsozfZMkc2k5Bq7hPRBaG7nW7qe6EZchSPROeLyQHQ/8PVS7gIw82GvyCFm5CQ7bsuTBMl5ZTiqyRthCGyjQjT97I1oUlUDluLj8F3L6tuRTo5rJlHPg9OcoBWDrOeIw87XA47f43/u87eC8dco3g/bGrhxLS3nwdLbdWYiHN74bDLYnwKtyVsgCOarNRxm5ZlMAENblxiqYkLWEORepUqc0zGJ6Mf30DrJTNFAdqfPFqBnLYMrJQ2mkNleLEOdf/wTBXbt894IungnQiZZ93bTlU29RdlAFvPD7QEhowBa6H4cbuxxQlv+eH5UJdtGcjrXHWLTMqTCsW1FyG4fNYw03gI63dS4Bzn7wdBfY0xaUBQ9xnFIEdB7MkgHc8Q+huoo0StPPu4/hwDIaPUudpdvxaLmZC/ZfW0AncfIzxxfKzrwdoFxnp2kQ1SnFr3V94mzxMJYGa5oz3E7CrnpSB+lrDlc4a7l8Yf53ZuqHUDIbf9QI06+4JipZQw/mX09bc6D25GGp8c3oF8H//Hq4ExthvoQXgiy0+CvV5w1ra9R5E6lJosM2ZowEDr5oZxbpnTgvNr6E949yXNc5Mdf2vf+1SXNb0+xfl/E6h2iCoHT+56oEthV9fAGfvMN5nHv+vxwTqRi0rivX/fsRchVpyyagWqHGc8arEG7PcpHLK8dBlJ+412sIbmCRHBzilYF/CyOyP0jDcfRD+HmgV30/YJ9hFeDevaz4MG+TGKd/eyrZSUcjRmiVsvy1KJajkmCLtbx7bpB+iBZ3ecjdgRGIModTxd4Q63HG0AIqpqpT+2s9f0p41ufLCYbTwfrqTMnbRkStU17eKME3DULnN4DrwUNSf3cCupVaU8wEPn/hB7VbWpLsJ/zu+EirTxMpzwCanMjpSmec5UGiser/BCQbF96Xk9S0UoWq03nQL3Y3rpYQjvOk8824A1Q695gTO1RSRAj64xmMIVPgSRTPppbNaH6qt8CU7oLXtRRbg/qhayoDaA9PknS1howBXzT9BUxJdypGPy94rdlJMLlifQxtrQ5Ec1SiWu5doQHrHWqgwHVmpQ7Vkxd4DoWhMt1UgHPhY9Vck8LbVDcrY3Faxs1DdToZTEfPi+MMO9X8v3KWIMrRPzoRa5Ru6ALi89IQCMI2p1Rv4WJK9H2hdP9QHdFlZIQYMC7NNANYLLjwEvMEhMQK0at1JCyDYvYVKWwz/FG1JOkdMAuH1uVm+FVg55yMV0pdJetZQd307+hGoec5DGNirybcZ+Gz7SxrQGIu5P1Tj0JvuwPEBm0FgoPmRhcA0F6U24KqqJ3SLpRu2UQlq/84cD8NHt5pdwM7PXAeAC/s6eoEG/XnJQKWSCIoovhXLL5DhQs9iYGTPiWFgXsz71cDYttVrgHaODreBNQYNk0DRxnDqpPpTIRqxhFyzDQwzDsUzwIRV05RkO046UZSISc1Gw/B3lybNw2+L+A6oLoWPqetbTbtomBom5l9gkAoeugK8+POIPXDFRAItbM/EDlqhzK4YOoz4XvU4A+9kTj4l5H8xuUeg3q6WpFG8yLpVCNVjoxuN+J5PMuVFhaqKAQzf5BsopZ0LfupADf+cR8OselLoCVWTO4Z69mJlpwNUSZEbNJNrn7w8D9Ww/AutW4/sawmoJ+UPPgV+/I+XNvcbrodOQJ1SypwAas+PPAb8Fu9nBfTivkYVJlBSbi3Uj6v06DKp9b9pbAJMOa0wSCz6NADkMs3XAj61HmQDlrWnPwCeu5xE+fbrQ0gDVCaf3E3AkE/7TwFFtn+nwrTA7/NlqPqXh2mYNzc9oc1d8Cwr5fzCzx0UJb0vuYpxWTWLDQ3o7EQYM9SAk3+3AL2ZX/0GSgXaUEQxa6z7D6pL2rPDwD3rk2lZhPcovYG6yC2EdqeTY810Ig35nnIXBvu1taxAt34JW6DZhdvngFl9bXRjr+fJXlDlZtYUAO+MatBlAlJvaMNu3J0mCMP9h6eoha7+IErp9r1dNEzT2DNX4d1yeVAKuNXAlgZktTZBBarx3gdUU4393+pDfTfzirZxLoVV7VBvZTN+R+Gj9FWq6/4Cv/bC4B235gbw6o9bFLRK/ykdhBr01agJWK5y0xx4azEPzc7Jgc+eUBVuBzgDlYQzaR/ycEynW5wXDR6H4bQIExUQz6s7XaDm+Sx8DpzUmKHQCPk3ng61gVWYTnilNtqRUB8EWlE8GARudYI6FC1zEvjk4SFaFsm0KGWo6aszKMn+tvI5QL1ve1sAOGEl+gHo/lWDVv7bxuveUO1zJTOBk9y6ukDtsz4Uys8GDt2GmiQZTF1P2mZBgXjckk0chtTfiX5Ab0UfNSBvIpM6cG/nGUoGu59pdGMxnjEyvLJY4g/vPr9U6sNI5lZqzEqQ8Tqr52cYX9++9rylFJctqD5FUbJH8K4lVPa8T8bAnXPnUB8Wbb9zE+qpClma3zM399LuVNLLShugV0R5JbxuVr1ywAb3ddRuzmO+x1B9S6sdga6Fu2eA0c78x4FywSadwH+Vo2FA5covv4AX6/Loxombl1C+LWyIp2qvvLiDgoB5Xq8iLhPt8KIcar+55RLUNDXTRGBjg8oP4JWt+a+AHDVL64DxHBy0bzrIe9OIl/w5thkG/Q6THUCBy1x043Rt60VQnaW4qZM9ySuoKu/UXXkdBperQTLAjzz11N+9Jeo1UE2eXqC1MCqyJSwuZzOCoSHvI8Xk4+gP76C2Vk8YEEY4lgHPjSrT9GW7thdBPdugeAFoOSBDJYin/+p9qB8c9Ol89mo4IwPq2m4/C+Aj1Tgt4MWmkWlg95sj1MkDc/iXQB33OkCJc+dIRCtU9hpHFeAOrhCqGj2yTiZQLXsvUCVIdzsVC5VV9eA+4BuWFZ+B5U+ufCHsvF4A/PLLJAKobyTuDlzWcJEVuPps3RPgx2onipLyLd3UyTHRpDkwNH3LoRoleoyZDlrXHAfoMMKhIFYB79DxtdnARQlGNGc7HfmoVKx/9XM9DOeljjcDIwa5qED7Hs3ZBrXtn/VhYHJIKvX3aY8zrdA17+VXYchP6ekCKs0ToD6ETuvsh+prvCMBmLqQ8cyT0UD4TqgtH8Io9Qp9l9yFGraiicoVywO9eqg1aVl7gEYbbJyBr++/4QYeGZ1Hgy8oWhwF1XlS7g4wft1bOpfYt1iHQj2ZzukF9H1/gwakMqzHC/Xch0SKs+PBVVZQD2h+oxvX/zteDPXas500ikN6+/ygLg3hzgU62ByjDPBQWbMGan9OoyqQbW1UGXCBUCpdFjXoSWXwkZ/VPBiq2TZxAU+c874MXNH0hzJraeOhB1B/cHrUAIdEblPIefAa02L9k7k4A8MTH8YvGH3dpR0CNXPpYlFgqftN2tE7I3fRCj1/0HkSBveJPUrAY1d30S0Unl1YDbX9hzp9qlv9WEcMqrDlNA1zTl4HLWF/cLAHDCGbd9Ep864t0w+o9vsMjgFvJb6kUL6XEskJtZaZLw94OvrjR+DxICPaktabZ1J/RXcGvoSh396eqtwnGT0HqPdcRwaAbcqhVPg3bA56CLVg+zs6ExwNl6I99sHuBirmNws+UEX8dsmA8m3cPkkbLcTOnfsVaMF9YQXwr2hmEHC/5awQ0K9oLm0HjWnrMqCq81ZPAStbrlNw3d9rR9VzNdsjPRjWPJuOBNpO+lC27FG3pIjquH7VFYYBxcSNwI3NWcZAjy0HmYHamSrywLFTZT7ABmU9DmBbQhSliNOjK0lQmzkyNwCd0mVXAW/85V0GDJVSodjhOXCeQqOqJ4MNhssXh6WBVV2zNFHde1Q0oGbE76JQbrUOroLaye2UDWx1NaCZzMo1osViSZui+BVdp0Mhx7O5fxKXbdBoagS+6DxPfZg4yPhW0Z/spXTZV/6Bc/DemMytA75s62ECNu5io+nTTHOphurjHDoHuG9zWzQwcoXOY6BJwtAosOBBJwV4ubMrzW9bOuMLiK/CHmvCy9Ms+x7osi2HRnFHeC0trNu5Kx9gqH/1jvbCf/n62lDZ3tZSEfPK3HQeajHbRYoz//UmglD5b22gdRP9Uk0JGZl0g+pZkIHtM3i1pnlFgEqNPnSq4Hyyi0Lje3oIFfNr+1QM4S3tGaexjX77QqcVFzMHGmbW8+Wn4d1g9ekoMPOudCCwomcwFDi3JJsKyL3OgAiopQW/KDfPjGyjxco8/1MPBv+Ib+FAVf/7VGnNDdZTinQYJtbC0D5pTYOP1+o+CzX78KMsoOtLpVvA0UU+1DPek3F0fjCLkKPEWbC6VQ3eLeJttG7TEzEnoMZ9mn8VqM2x9j5Qccu7lcDSq3mbgN0tOyg8bztfoKAd9u+ph2Hv2DF2oPIRxn+V5470kXdoWd1LGFaLtbgDE0UTrgN7vwmQKlvqKA1VQPE+lYrTRreoVEys9DCGgTX2ByvQ62rlFeB26SN7gOd+etMK5b4dKIS6yPdqOpB7zS9aWM/TNXZQFUJ2Us+2RTK3Q2Xela0LbDuyh04KYwnmNHjbVltKsrPB1TS/2/7xUxCIe/nRMMsrlz1GY+n69RSTR/Y2UaWd0vtGtVpBN6EZ3t0DjP9R+bxaxwv1eKkpRdTPe88eQdX+zUIrrxfMOHPdeuk3BMMLRx454F2P03Tj5RmXHaDuPfvvOHBC+p0EUMwhnM4l+Y/CTaEWL18zC7R4xXcIqHg0owNYG3uPUFH4A03fmbJrdOPFzba0WWrbp8ngMs3zhzyBugM854H1Yml6wCcO9VTXTxnxZ0CdSi2lPC56MzsF9U7RaUqc+0sfjEMdPT2zFWjy6hctFucy33KoE4vm0IlJ6fFpOmDE+TP+xuRexUtZ+NehZxEu25ojPgoUcJz/DKiy/J4skMnwkCPQx9WKypXBCj2avpLK2c0wLP59g6Y6+pKGIdSK2wpHgEf6tClNFU+U0UeCa7rX18FQatC1Aviq25Vy8yTvo1yo7pOeWsA17dIKQMerCyeB+T7xVB8+99VTQrarDNB+YX773Gd4X/94TDnE5tLyH9TPH7Mp5FpNn1HPOFsDAmDoHW+j+A0QsnwANfJ75VPgIvM7tPJVt7h+QHURGeEDTvbb9ABjOO3FgKt9Zmi52xIY3zo8eeBQGgyH2DYcBlYEMp46sXP4vwfySxaKwyBWM0AF+mHzzGuodocOJADfVR2ixAmvcKQjla5+bDUMXO2t9EGhl/cXBfiCfTzaMGgt76Hpk8laReFZEs5Fx5nsoQMU63OTd3/DZXwSPtLATfvTacQ2tttojYVTN1L1HLR1OQ3v3yHzAuBVR40dQM9NITQ7ShqqA1An0vpoov7VZtOW5L191UUY1OumeYBVUVG0WK3vjkdBTWhMpRErOzN+pjHnYQp9oppzOi8F3indh6Q+aTgzH+r6BbMU9lJ7HNWhrtXhoUT/zstYobsnRHRgiOruzgMu/JM+AWzL2EElXkPbRhlqdZgLpYicS+5fqD2uzWuADzkYXy2bOvEvH2rOykyqRuXhGp+gvl1TT7PO9VB7BuqZvHa6hXvcI6p9Z2UZ75aX01amEiTbznhj4TLBaMrjba97n6AxrfGNlIVJ361LoXqJ36cdUnq23BsqTwrbJqDDkakvwHj3VKpRRYPbaao/dV6ixmasrnbCm/vBklKaLe0pFTGV6WSqDzUJfx3g1RnkVwO2vx6ivBhtGRiD2hJoLweUzGM8dCbPrkArtKBAleqZU/qSWHhvHllIu0j+oPlTqAuTvCmzBJSdKqHuVzu7F/hEi5sWK37wqhPUSTM+yoAro8N02Vy+Va9gGD9XSEGQ2B52FKq808oIoKi1HTvwQMFLusXvXDE6YKwty+mHYapiBY2iqYCxb7Y0h6bCoMQz8QbYf+nRauCTrjyakqEu3RKo17fPUmYt28aoGntrVR/CIPzcYjvQpDErG/h19MQQMCXeWwIYvbHdH3hw+NA+4Pk5V4WA/0Un0RL2C7HrQy1fyvhplLBqWQqutONrfWDwFWcyAfIUcMoD7+tcsgZWaK6glC4d2fUe6mWj3VfpsleS1J2zWleoKGz7mx4Pg79wKB2I/p55Qkt497nHFhheV8UtAVYdkqSV5+tRpqi+ovbmDAy17ikLgGXLIoqA94bjRYBakn7GwPfjAxuBr07OodwUeyqzH+qO0DW2wF2d72SANnrMi4G3l/bRTmaenGoONTP41i2gfMMYzdlTZb4PULmZ26WA1xtvPQbus4xdCqwN56adQUDNxA6qd8hCJaD50xtXgC8lCujg8uOpGz/UsrDgZUAv51jq+o+yfBpx6jZ/qjDP2uLpvLPd2u4PLnPUZ8kCVnq/FwSWjztSpU3PqLeAWmP7hPorsXmSBmR27DolmcyVuI/wHpvhCwAe3sxLY9Pa390OVVr0DGWLWLj0NFSX8VTanXx1s+ZC3aj7jgzn450pC8OYgykeyp5qUDp59G+k8OzbcYvORhmsh9zQmJRe5DBw1tD1GpDf8yB9TH2YV/kSKq/+qutA+TVtQcBVMa+SgM/HHJYD7StPMgP/OcR0AT8t2RcOlFArpwWQrWJ8R8F0DTN9ktD0D6aSWR3IeJP9HifGX32+/wmjYS7rCOJAu+nBlneA7nUfaRcxVeyjuhNXKncJBkEeM0oyjuHgSKibjv/JB/6T6NgGtJ3QIHRQTqc9IKfYIRCGGg/GX2+fCMbQrCuFMp4TK0rRYoPXOuHEG+BFZSdaeWnzSerDxYEnO2CwkrqjCSw8rPELuDK7h7bbW5EffkKVMebpBtZGtPoCh2ZdadabLkhRH6J5C6kwCU86HoU32emsAfBncyCt8XfVKQeoAjMe64CHmE80AzuZc+m0ou+8k8rKitu5VEvanOWpMO3zXEUYZayQhhYUh05rAdUjOClS2UJVqNJeX8xDhrezfurwFm+NpuSN/ZLSCtVzpxWtvPwA431MDStX3oRhmecryk3XQMZRotaetReG+V8tKaKy+z7TgA6Wzg2GYZ7hNRrF1jteIVCfXj7SAhz43wOqwBGHoLtAR6v2Z8D5KaMUUdv1v9RDDRg47wg8fK6XsvvrdZV4qHdtAkSBto8U44A1CVN0nvTS3FEFtW67DxWbuNY2yu6yAs5OGD7LPbMBGhVKugAj/xyNBsYGv+UG5qoNLACOiH6mmWx765wBtXaBSANwdq8pzY5011IaUIrTfDqR6ij0HYNX9HXTEJA9b4EFkGNcnY51F9+ynYQqdmE3pUjrsgI/qMLr360Fpk+8oxSxFRih8HyTMc8HhpyLbDQlU7rLvkC98OkApcjei0upk0ot5U9hWL4qeyF5TXnoY9SCND4dqB9C51GU/L0w1Qc12yWAUY2WRYZBdTr+QxdYlSlBm5q9V6UE1MOzSapAq8cJ48CtF1nVgPvSj5sCK1IZb0o9FnuH9oBfn0doJj8HSovDa+Gk/hwo3PLlK5AvKug2cPqxM41tSt+JRpFmeTMRht1Hi7qBzpLBm4FBR3NmgFJavv+AwymBNOunyhxjod58pmkP7D2vHQo8+0m4DihxpZx20+FvV5WgHmd7wQp8914kGTij5kiFaWd4K9WSIA9xGtspjwHanYaDy6meOSh9q0QL5kM3e4BG8l+FgH/+ORkCWTYFVQBdHzgRtqtwrIZaXfwtBBiwuJN26Q2PG2l22G4xXivz+tD9c/ByLhFcCmRvK6dDg/QJy/NQa+Wr6ZAjcUKBDAsXvaSVnzfk7Q/vrn05nsAU419/geMWDyn1di5uWAU16GjhcWCIfSxVWrHAfEWoX6rXHQaumP5LeRxfmSEI1chI6jPwkleOPjBBLIY2tfraIioVcm5O1FjfXi9beH2ybU4DM/d93w1cIn2Xdun0dh82qG63EtyAK1fGE57SVKbZ8Vu89wUMb/6LnAP0zTmvAzx8sJtyk4tnF3Xdq/Um5eb9A3MOwXv33h+q4N4C/Q+pMbksqlGuMa00TOOqNurk43sVVFY+za3UwGVOfw6eAAaMfKNYn1GYOwK1MafMCDhfYrcKkNNqsQJQIa+QBlQp2TIL9dHPLzQP+oHsFJO651Mo5H5wslJ/Nz+Qa8RlHgONt4F186b4gZX8tTSgX45elLwFdXXvYDB12S4MZG3+pA2c3sn4P8P9LFkRqLeZnxcAZ1XvURELn2NBsZPeJEeD1/ymSIZlr4roFn27vengUl+1wQCNCf3ZkAVUv/bmClCyXJYue66iQPFrPZqiBUO96v9+FPr/f7l93p6VVHTNRs9sgZqaVUNT7SEisA/qfq1iduDiAmdawu/h/1E6af3rodQLUGS8b8V74qo5LtsWEJENbC/4QrNe33OXVujFT8Z3dNmY9dThPe7txAkc7Xv5B8jXq0RTwvWW8WZB3hfLhmEwt8j/DxjII05RonXWl/YL5tWM98VzsMrkwes8rr0QyFvplwJcsjBGHrj8ZSHVVO17ht5Q74XrVwM9RZtXAzNP+R4G7lgUFgbk+uuzDahxy5f247NO4xJQuzdFJQLjBIUEgMdSd9UCxR6m+wFfckjRlhQ66k0jZhpbSGX7WSY3Lez98Cs0Z/NzOi3Rgr2YFZ0f+CbMnKFmLBXRBIbvMi8Dbs2saANaOy2lUVh5+1NMPuot6oKh8p/0cqB5ihuVFbe0kxQE7huHlGFYPns4H+heZk3Fpixa9QDUdwtzKKW3s69eD7UvcfcIkC/xRCmw1EqrHJgvfeYHsN7KnxbLd6NZO9S9rL/eA7lcmqm0cb0b1IPqEKrsBNxT0VADZJbVXwrMe17MDeQSnxoEbtf2UwIO9O02A67sekB9OPj2uCvURceb4oDPF2bQyodkzf8LtT45sIoMSjvofLb13zPysvbuHYCh33jLBNDAy6cQ+DKAi+Ls4aWVFIjj774+g+GjagoVaPXJsH1QdyrMlwAK9AfvBgZGzqU+2GgzvnxdI8V4UHrEvOX/tXbe4Vy28d9XZGVkJMmqrChFSKSMUMomSbJKSlQ2GZktOxJxK6FhZ0QaFJVSKKFSKRUSUtml53ccz/vz/f33/PXc/9yv4328r/O6zvP8jFPfZQnvxiWmdOwIZnOkdFrqFhAFQ3DfDoqzyq6DZJi5FWwCg+pFESagLEemMrBlX2QEcHKV5gHg3lLGm0o612kWQOUL1LwCfL79lQDwzBpNOgWNywi9gTrMnU89YM+jjWeh8iaV0zoI5X18CjX1IuNb8liz1tGjj9gzXtdT9d1YBK+2oFsy8FHINhosZjsnNUvToRuLYQjIm7cKqCWpnQA8/e81BZevY4cB1KscydR82BKu0C1CXkxRCfqakBwIL4d88TRwyVgrBXhebb8e1DfCR02BRjm7PwIfVorkA30CDCOBX2UZr7nHx1tLQw2WCOEBNrG1DwKTngQZA+tauygvnuxTLoZqneTxHDg7N9sWmOXgvQf48Uu8FPC5WgfFr0izEtWHkXN/2GDQtrLxAzaVmLQC39llLQeu+Gd5CFhfb0WGnDZ32vmmGj5a6gan7+/gPbnAKBSYNh5EBW/0aMRxqBVuLE1AY+PfucDc3TKvgHaS9RRROY6ZwlA382VQyYxWMqPtLtzVLwrDl9lVtN0hvKUeUCc9L88HCkh+3Q7cYL6FJpTvWCED9RWnIAWt+oOF1Bl4O+9RWdGc+noLXjHBMCqkd1/0x0FdymlCQXDF7rg11MxFabFABfby/cDFC437yGD9+RGw6koJ3dgptJHmJh29IQkG41uP3YGVZvp0LkmSS6LdTFvqSDVqDvMGCsTv+eIUO/ePMH6sxFhGXxaDLTneSNvifmV3FNTCT/FKwLyVKd+AQw6sd4BRfJrUs46MxbNDnd5luQZ46imj0orXplIWlrpxUA7JrpuiPG4fK3yCy77ExXsDy/QOUcjpyBk4Q934cMML4M6pRDZguKsz7Waf5LMrUGdfMd6iyfrboQ/q3BBOE2D6KmGavKVsJcXZ5lKjYzC05k9JAJdd0aIomTn+4QzUdbftbwJ7PgTQXozHPeOEGnwyXRH4UPHbFmDY0mdUbA6xbH0JVZzT9i7wfUPKZqDIyl0/gTnHTqgBfRI23gay9/RxAP8TMZgP7N78giJ1w7ZzlLGvmwf/wbBQfrMC8IpXJE0ozmNhHdScsQRJYNuYfznw33VJqlFqL0R3Qj2ztIjmNpftIKW0Q3sJ5ZBUV+wmeJurblLsnGXaTnVnp966Khi09TbTOrhFddDjHBPMOAeDwdLNbkD7Rn0VoPi1hTT5mB1KdKqYzF9J2/2gNJhiZ+Gu3A+4bOFaS1/gsqWMn1v95rXrK9SDW38GAcPWh9Ng/RMiiVDX8DE+/8YlyTMI9eqxMKoaolIGA1CnreypvzG5+lP8fjEPmIVh2bUmyoAdnZWUhWERu71g6C47QDOWjnSkEmRWUUNh5LZkCRO82pcinwEfCPux0gjBEVQRhawl/kJ1rN1zFegW9oC226tuUgjqG6/F/UC9OgUqeFsealAxj+T5SM/7fJtjF7yZ98NHgaKnTzwCrrsw5wswfHLMHqh2u/Y4MIh/00NgoalkOvDT/EFaqCHeHWlQ+/qurgPKZOyh9f1vtMAC6o/dLnuAE3vnzADNyhQoRXj7uSiikv9V0wi5YcGUImbrrTVwmXMSKz2kROoElYo/VyutYJAWeLEDqMIzSZsVIn5eAGqhntpJYKyDDpWKhrc7KOTmcH+iNNV1zKWHFBuricZl/9YvlQKuMoykShBxmYUe/U+vGBWFHi8uip2q5tYaXKZQOo96rM/mHYQfZe3XwqAp7v4dmNm+ijZge6KCI9R9gjYUUWWpa45CvSt1kRe4i7XeHeg9OZQEjDWeT5OXa5GjFFnz7QK1jp3Hx8/Du39l4gqgcUUx7ebAgo4oqN/9T+8FHtnoTYHYt0mbliS0d/8vGJZqXKQ8ntWSboZ6/qU1P9C7wv4pMFPR/wAw7G4PzU3H8eM+qLu4VFKBD5XHqeNESR5ThZqfx0KdQSmY9QXUj87bKOdlY5yoVDQtyDwNg9Fnxr9EdhWobYQa3q9LI/zeXnMY6gOh7gngVSkbir7P46mdUGtuK1NmDWs0UOoJ6xVeheFC1vFDQEN2LW3g57EumoX3Mn+aZsDCQjUYpgKEM4C+Mga01HZzuiljzZfvpHNqW/M8Jni3WVx8Dsy/nkobm+qkOQ+qUgWXFvCJnz4fMDHtET3O8NrIUqi6C4/3AUeqLncDMz0kKNH93KYNoBoW+dQBf7js1AeWq9h4AeN/llCAi85JoCPKMTuDcBgu718oBwwKrm8ERm2LIoNEkaMM1AUKVbQOt2Y+0sFl576CNBh2VW5zA6ZJdb4GTmy0CgSq1m+hDpmTspIZKmfMdipBT1rKbKD+4RElb7rja5pxxSEOit+trhrn4F22dxMlg2tv8zeo2tIZtCSfvccSoGq6qlMW/lsnSNstlzSUCUPeOp2VwE1DiSVA/eGDlJD2sjV/oerwiOUBb6iZ0/KNzPpfgMr3k/FPMqaJhZQXegfT2GHYrDhIAc5uMMED9equxZbAMZWHtMeznj2OUA2tY+jRBXYYUHY7jnNQ+q8Z4TkC7271o7TUuuMLf0A9+yOHWr6KVtdCqMzRNwkjb/4whqr53OcsUPkT41WC5aKGFOsSfp8EYeCQtaoBVnfLmwHnbdh5BnhlwiYG+Gl1wA3g3PAw2gBWpT9jUNcO5jYB7f/OtAGPrZem9I8bVhiAKvZ0hsKeo6JrHlS1z4z3eHvZL6cZb8nZsBMG7dICOsBVbUuksO+MTKf4PWdz3Afexi0bLwHL3VpSgM2VLbuAlt8eUZrK15t+gpp7XcEa+MRHkNLpPAsHpV5mQLwveeWtqJaE7b5/DWrdbtO7wOSmA7RQ50z0qEAvFIvfDANHbz7F5D5p4/1QyxdrUdjnFX26BfWK/TVa6giHhO1QheyuUk29daVmNXl9D1CrC4/ynYb6vIL5N3Aqcpae12VhSyXUoOxGMsg+engHqsC9jwrALQ2MD5GpS+dKQE31FP8JvFikvBR4P+CpKjBQnkMM2HzhezRwdY6YLTB0ngDlfLayrjXUR+reNPlGt02SULdNbv4I7DNlfFBF5WUX7UVPam8RDNrvMmiErKw/dJw5YFhP+G3qYRm8NXwaVM9iWhfLQpVNVVsBrPMQqQAamKRSPTvbF0HnX0XzQjomXdIznoVX3/NkIvCwRjUluslegyaonsXD74ASLHWHgdkN+p+BHB+v0vns3LWRfqh7cuuLgYf9J7SAxdsKqbTlbWGn8hqypfElDMmNI+3Avsuc6sA1g3UXgR/KDamCB/fvaIBqu8RgDdDfPaEceMCL8aunp9s5KH5r39ZQ2HuHdFMgLn0zeBOXdZnaVwO1PC62Ah/cWBwFnFjK+Jifld7PL1ALS4cp51223aQokZ6+HAsDz/qCAWB5syUXcORACLW6gCOa+lBF10hT2Y5hZvzQgpNUG/0x+ObNXZo894fSRbhs1X3plUDXxRc2As9zvF0CDBhuIy+TNR/F+qne1QdhWFv/ltRtq75RIEaJBg3BML9vLVWubRa2R6HmewZ9B24Jt/0A7L12ivLtH0sXDeY0I+IOQ7CFNxWF/gtGt6GaGvztAq5YICYCPN5fXAAU6LHJBYr9+0KXKTxdTpOvYhmnvlnAL7ceXo19fdQkNGP9O6BWVUfTCEFjszxQc+IPU2is0jWlArLbwoAJhldRB+khtZaX06J6dThpwyCT8cweeOb9PUOg39VhqiXC0fwPoR7r86PQUOvIpa734dA+mmZMaDot9fIl/XTjD+d3KmIE7tDj5sCY/BHaixXGS0egvq7jpTT96GJHQftlyUGqBLL8z0/AeyifxwWoyctP8XD0TB/tfOhhCSMY4vUGU4DjizbXA02bmkOAv6LrrgJ7Cwe/Au0PVVAbV/idtQOqcqKmFdD5KbMY8DPr1stA63XFJkAfpaP0vOJznk9BvTTvKqVp7asj+lBnZFt+AeMaF7wDtki4UlmpZlaluiPwsC4fBvPpT5QXpq6SLVAPqLFS0eUTaqdqtKzfhFLENjFzGbz7wm9RRRTOlqbJiz5h6obhrroC1T7dtCkdqDr8/00AWUrZ1wHH4rvfAo8esHwPdE7fZwyUCTpUAVy9xlMA+ICrfQYosT+UymDhqQsWULcKV9NKLrcw4Iea2Xz4KfCyxCYKgoGvtp1QuRV300LxCN2mfdPpeUVqWWv+aXiLUjZSOp1lVqCi8CLtByWOQNijN/Dq9dpqEGpIZwHncEtQEXstqkzBdStUxBuGw8L8lkDvXN8MYGfQbqrgLK17KIeKS+wp5/9rWpoIb/KeYwuA01NVjsAvJpGawMKw4xQEamu0qRrd3NVOsTMuEkaGu6/mKOOyo7HJD4BD91+I02A1syeBQTqvaEnYLjcSPotOnIbhiOpldeAGv/t/gIL3PjwEHl/ynPIi3r78FamDCSJAmfzSPKBk4JQWUFzeKxi41SGQ+gWLq1wdVC/xag7gx5culAw+n9xsoIpKyQsCo8ZNjwFfqPhfB0bKO9BhRCl1CfUsZgFdGrfi261eeNkSVnoAL79JHwbe6pA+BDywai0XsGn95glgxUORSmDt0WVNwGMZgfuAipvES4CnnLjGgG8/7okAPrZeSSXedc1jWjMvrfO06s5XFs6FN+3GWT9gh2boHqD5knuU0tLuqRTV9mtWUvq/vX6RQk5UM4Fy89CdAgOMYLviIs1NPnHZPKg5wTbhwJsvgl4A33yLphmXqWbvgipyP4qy+/7o7WdQl2flUJTUNkvNgWr1V4Ti93XpRDlUTx8vynkD2V/UySb5z5vCICOx7Dxw4VpxI+DzhZPOwGc33lwAhr+Zou3e8yOFiu6c2lpqaoufzbsGr8qtbioVS5lfVEPVut9AIffWYEwYasgOK2ooIhnNtFlDRTW0sW8O9NNmnX3/kxWXbRpv2QS0PvbPHzh3Gfd2oPe0I93CU8uF1regRIe8WeJnKY+rVF0ycJmEugjFTuj6Pd+hzvT4UZQMfrj1BuqL7ZY0TbljR9ZCVRhVygFmplxwAcpeNssH5rNnEJqesaRpWlffowJyMjWcahTbw7fUACe6g1ZghEMBXL5Ann9X+YGODftpJZc/U6VtSXcfoDh7u0CYOsOt2jg7XKbCm6gMTLaYS3s8KjVGh5Ha5lXHYShOadUApgvJbQBK97+lCR2Mi/oB1aKshdQFV7oojCx5GmkDgn07PeE9eSCP9jj99clLUPlW6tLcPt3jo+1OmE42hMHyWim1A8fPV2SgVn7vIcOT1ZxboRYYMD6aY2ExQ3Nr8OWqhUFFt5QZeEmY8V1ebyZ3hEH9Irn6GDAz3+MD0HWTN/WhS/dETkFtaRWm3m0WETgD1XeLZxnQanV1EPCr3Ak7oBxzzFfgnvkre4BL8/rZgHvZeyk3pWK9OaHy7OfeCaza8WwcmH9B4y1QjPOAJjB1b68U8PtlRapn1enc2VDNLLezAu/P3N0CfG9VSaHsmjXcB7Ul1PIm8F6aDc3NukpjNdSKC6GOQCWOk5Qi74+uk4Aa/GD1XiBfohoHMOC2dQdwqYojnfhHnv6MgOrF1bkKeO+O2Dpg3jfGrwoopfgJQX0U0UP11+S0JAXM9BIJWsn7zQK88J4WlqsCVrecuUbjjnS8BDaZ+6YCudgdRIEfa5sCgSrT8npAQaeVZDhXweoONdNyGbVFZzvGDxe8a1r9F4aqv4v3AxXCK2mzbu29QF1PyG3gBAwSl3dkAnlm3poDNdJfE8Yl5FGkro9g/CSIpKLdQ3j3ShiQV3W/OlUC3pwMahIfvCqpOKrU7qa/ZrjTlT5hhDOX/tMHylXMdNK4ytYsQL4FvjTY4S2x1LO+GR1jbEBbHy3JkqPa1ISTe7+pYYQXS78oAVN/MW8D/j1/fhB4RowpGfh79s0vwnbGCxEyQu6yUNc+Yc4H6lz6lgS87uRFJ6bMqXpuqHLHUhYBIznZaQsLdiRRGbSIMaHj4uTq1YTZKekiuOxaXKYCkH1102vgzwclNG4jk4kl1LhsqVxg6aIUCtpx+4FbUENGYkKBjUoFs8DjEx9MgKnB12mpGyIYX/esW5s+BMOJNgsqNq+XbKL+FvqHZRKGJFfGm6K43J9IQ111rpKe4d/4qxtQLb/OoeBqOMp4S8gJG6EsGES/9xgAF91ifIeVQMgfXqgJ8lZUdDfceECZ9cfpGPU3rnuL78LrNbtjCVCw5eU54J+RgRKgmsQzOnPVGQnLQz2zdQ/VSefwZGoHWQ4XKWhNOhmHsj9J+lSC1I7/pd2saDIpwmB2ykvkgLG72aeB4jIbDwKTqhiLGq3esQvq595Aip0lHCoU9pm3/VbAIDxpSwVkTOZVHdQfViZpwGgTQwHgoT17DwPvawTQLE68YHyp3KujM+dhqHv9SR2o9sCDWvOaB40pUPkPS5kBmY/IURid0rniBPUItwDVag7BPqqef0+wlsIQ/qePSry2vhwtX4A64+cidvpsog3Ypsd4fX6HtQBF6rvjS3dgsJngeZQBp259pFKRYPu/n35vq6KC9ytu2zdcNuS/ho4STuefXoR6xlP2GFDDPYCe4eTgJ9oAzYn5vTAMp5sYk5f3Rjrwm9ZWGuGi3iyNu41Zl3IzqbmDtqW0XoNqddHWx5QB0moetJueBmILMe6g4jIqpDwHGH/rufsuvg3D/rk9X+lx5K0p5GTn91I6Kc14PoLhr2p4H5DXnfFlVOvSS0/SYEIs24CDTMM0TXmVziCoEVKMsv0rsI9m7GBXRo/uN3MiFt7TTxjftzLQV/gUakXtH+oix1Yx90C94/NfANBo6ww9Q0p7zRuobIfmUCDGp+WdhRr28kMEUGRR3k1g9Z0MSie5aSd7qBzKo5T+DklfH0JlsuinUlFp9PIC1NJ7LFTwFnaV0qOXOuTIw9BqqRECLLsRQrFu1C3aApVVwYwW1Yl/XzXU647lmsAn3t/Kgdz1ShQE9woY/4zVytOzGYbJKP1uoK7/f3TjdNZEEahbkrzWA1MGPFSBL8KZqAck3l3pCPU0rzbNWMhL3RCqbfLxjcBj4/M1gKe8hKnSGnB+oWKupbCbCYb89f9OAE29/C4Cy6cW0cnc9fx9KkwS9eIdMGyJzTwCfMN7k3IofHwu9e7pacYr/IE9YlT4eeJ3yuIyPeOrr4H5rRsdgFylhfeA37ss7wCnsroozp6/DsyHai0+Tpt1/aTJANSA4K9UH1I7vh6A+m9hayXQW9GYOiT30d1tUP05H0QBw/d00eoc4pjXBVVs6QTlpscTTtohphJ5HRjU+M9RaWtQzHSD2ruunqpy48KDFIj8+6KCYTDs9aaie5/lB5UVu9JVFOB3cxm/QJtzqOclLivrjlgNdJcKoMJU3Z5eDPWW82PKY72LYdTUUj+voLpjUT/nGrxOJc8pzkpWhmZAfTY4Q0sSrSlKz3vfwd0Chu9/DXiB+4q7FwIDWK7wAyvGAw8CWQtfmAF/7zgkAxQR4ae67jYnmg7T9qIvNsCg9pdRggTYXXShvgxkpWLDlrbqFFRZHkOavO1Dhxyo16KE1wE/ONV9Ak58Z6MaZZS2qRlqxPISKq8J5wZMoDKv5aXC5J9eSbfImL5bBcOwwiJaSWPp72SQ+9vPA8ODD8spdrQ3H/kIdeCdMY1w5ZK6K9Q9vHup2IR6M761VkJHiCI1f11INrxrNLZQUxM9v9cK6kxxeRzwfVK9PzD83cuVwOnnKZToMVquFOD7ShlfeHO273wMvJvuTdIen6uMpBt/CwunYiMc3T0Db6b8mBHw/a6ao8APq+WpVJj+86Aw2m8tvhWGz64t08B9smf6gQ0qN8eBzdczTYGOsyfJ8GzhS1rqsit+NGNHi3YqV70WLUm4jD8tnLHUPz48grrZrZrawe9hxltjFH0EKFJvMulSBlQ56dONjetCaIS8i0UU61zXfjJOCvrHLuMW/SljtNSVlu6WUB0GFD8QphyJB+YbDO8Eljp1nAQ2hzM+WiZ2/uIaqL1Pv9LOx/IxPq47+mzWEQauwN0twN2VytQvLvAdoQkdqDA9AUN1IaP2WapuZ4Yqtp3rN9BvcwalXnaxnjZUQ4s0OpEa7mejWdQKRFCA2/IzPjJh2xZsjcvaGhLXAmuvh9kCJdqZKAvZn+45DvVPuAwlepyPAlWYVa1nN8EwL/L9MeClYl+6cX3XprNQV+wKmwWe/7uSDchueWQAeDUlhoqNX1JtN1Tpx4rvgMK6//sWgJXhkVB/8Tyl9nVVrpjK9oOkt/tgsGf+ogxkPXZiL3CSX80EeGfnc9rjDbpctA7Nt+tpsNsTuylFjOxrOnHZb2d3USB/xFIKrrpoC4ooIxsrOmDMLWOjaZrGp7fjshNdh6gSqFV20ELtb321GIbDATYUMKY1q2l1Wl+70bhdUwJ98Kp33aBYf77RixLHQN9eGoYzUjmLgF//6lEBqa78IQt1wa0LFHK7jFfRk8Xz6FNLOnRBqgHe3uxQRWDF6Woq5rm8FlQye1UmC2Aw4hx8ASwKPmIHtHgYkQjUGw6kcmW4jvFXXdewDe3Qzx9xfvAq+Xf8A7bufPUG+N/MZdoWnf4/16F6eDQ2AptaVuQDXzn/dwo4/ngtFaYW815a1L7CoDwYlhfb06mC57MhxdmeowKTMOjp7g4HrlfmfAysbJahcW+qhlZCdWZJ8gEOd/noA0W36ZQAr7bdWg5szGH8jk1n5rpbUPc8ZLzt/ea59/eghgjbngfGG8XuAMpN33ABukxX9AKzRDX2AFX/u7MT+EfXuQLopcKzAOj7VakUuJTdm0qF+dINqVCvbOahHTrVEn8XqoOz+kFgk0TWH2DVSsan+LaKc1HiWHxivHgT8YDxzZjW17ZSinQo/KjDCAXHnhH+kshlgbp9ntxP4JZ1qnOB0jEt+4CK81S8gI++51F4xlvH0QYsu6NAyRsc2E1F7LloDWXsaLv8Foyg7LrHELhvVTbl5pxh4WtQz965RevbIRtAp6u1/+1Rh+HSheNCwBydvGDgE55s2ouv5eOfoUqMLygDhs1O08nxeYAWReqvbdOTMDxXiPsBFBTaxgrsF+vIAn46YL8M+GBfJxlW2DhS5zWrDHOAQePXHSoV97Z8pWRw3b/wBgxV3BejgOEV2quAo+1bqBrda7bMhKpufP0dsI+zmuLB87C1BNR8fVMP4J351lRLPu7NpMwqVEw/BEPRlBIFYo9KxAzUxK3fSB2fmkMzHm13/QqDo+smKm23S2MioNbw/qFY7+9KeA7VnnOWUE2dUwuqdVOwLlA5byGVwUDrRBWofbv5aNx92rJ0t38HT5Ph1N/lyfCGPeummpp79mou1BJ7K0cgXz0LRYkmi98LqAlzuLSBa4PfngYmMQ2RoXDBV8r5mIdOVAmkD9yjfPPT/UM7H59y5QTd7cP0VmCytTjtsc82N/L65x3YDsMT9yPudGO9aDegl6MwVeWkfyIPoeqO/aGwZ0+fYwP10clXtDolyoxXab85V0XCkFk9TXfLT9Ki2LE9w/jin4hiXVqHZ9vMl+KyV3eGKU11gpZdghrwMosmlOHkMgLVvP76ceCBuhqqchGDt2izqso878PAotZG290lwh4P1eojFxWQtzsGDkM9OS7tBLTdLssOdPbYR0tyv0F7HtTpzdoKQIevtwWAqSFM0kA1s43+wKLvyRSIQllyNPkVq5hoJaWC3FfAu7lz61egTDs3PdmdJe3OULX+XjMFvlCQbQbKF/ZRHrNdMh+Dyt018wG4tKX0JjCEK+QK8M6ucsrjlfu30HabsEjUwNDZMZgP9CrY7g1Mmm1bD9zIdN0c2G7gRNVIWUaQcl4qkPEvsjydM1/gXTGpQYH4dYfqBqi1exbuBoa94NkPjGhTjANyyvwQAer9WU2HkUnD0Cqov/bxCwMrHwk3AmN+K+UBL1Xe4ASeUg79BZT9zXgPXEdp2V+omtPaV4GmthYGQKGLbzSALoctaX35bv9bB/V6ldB34C3NSuoBzCrsAVBtPL9MADt3FdBxcbM171uo5zvSHYDnhPJoofL5+zmgunE6zQJT7FwoaK1lFuhB/SzWLAucabLIBl7ZZuoI3BlSQq1OYlsq/UmwvvzYPBjEpYUoCz8JftkINTzkmSKw5eVWCvuOYOFMqMyG36ms+F/YVgSV/05ACXBl7xIKT511NykmL/HcbYHhX6kjrRm/iCTVvuh9n2hJnEu+zYc32+gzlW0Ts0ZbqC8iHgUB+0dK6bwzZXabnmFE67UaDLE+ERQEsdIrpqC+t9GmLmIdZEDbfb3Cyw8G24NsdGhg75SiDLjOk/cbBr+aVFqS1baO/FDDZoMmgU+sJCl2vLa7LoJadamYCunOBQ/PQp3nq09ZqPw7kC6T83naC4PabCUdZ5gSD8VAZanOoM2aTXlAzzBsGjACQ/FAihGQddUsPXrS6g1UwXcoLFgNw22Jd5Sb+0sKaPnuaj6mWA9+lcwE70BMbR0wWStbH7hFahsl7/6dAnTeYbpuMwRDvosr9Yu/ErsFoT58yEbFxlW0XwhqaV4dTV7YRiIH6siHAAouXYXaAqgvF3FWAcunItcCDwbOoUpwdnIZ3eJzZakuDLnGrylgJG5eSIfqVvX6NTBRx2gfsLH7TgWwXmiqH2g/NkSBKP7y7jKomldsTgL5lNusgJJlPbTqyS/9lKD2tynTow+dVqX2pRTgdAaGuhOPvIA+gg3FwO5uIQoCk7Y4e6g/lX/9A57et+04cDCf8Tb9kzeO8UL1mn7fCdz7OI72QoKZZwBqjI25AnBz3NFwYJt6ID0Z72KBo1ALdfeaASc0j1Ixz2LV84Wa/L6HTqS7i17aQFUbC/oD7Padpd181iNEwWW34zFVRA7jwh3wKln8oKi2FP/cDDXH4vkt4FlxaVoH57knqZAqNzkzw3CPteswUMVwmTbwyuhn2gAN3gk+qCVtTwKBpqzpn4Ed/T60vpJWni5QQ9hUO4Bph+/SyfEZayuV17SfLydg4PI+bQKMf7d/LvBU5D2KdQm7ZbTUf8qG6LLlOpMH4OV2NdoFNJ63bj5Qo62NTkz7tzHVQ22bkjcGyitlUAXXPeK6AeqCQVlah76+M1xQR5y5QoFSZ5jvAs3GGB9iiNbqpEW96nY8DIb8C2rewNF3muXAk0sYX6zPH8t4Y9bUPF/qvNXd5vSQHudiKWNThT5zY4Q8j7W/gZb81zKAVycDFYEyBp4swC/OfQ7A0Dl5c4B73Ioo0d+raIlD7RTgp/g1LxDOgnq2yvMmcPVEJGFgQ20t1PPd5/yATZ4PnxI67KaN/eGmfQqqUrc/BcHamGZa1N6l9VSjWMQY3//Am7CCdjPtUw6dVjp4W65hsPqQxbRQp14+oDbukL9uCoaUD+2fgOm6LWuAMru/UD07oKgyDLWqeT/lkOf7RNpCtkttP2DQO1FXAPTPWOMBlN77rRp44KM1jXCsQSYF6g0DQVPgdmleqohxF8Po4NLrfYXqL/vBipfwxtoWVQKHHLoI+WXjnkMV2X0zDRivKboHOPe+0Fbg3781lIV1PwNos57zjnnCsDYzk+pD5Kt9FGdTpV57YZjk224DNEi2lAZmKU0qACvTlUSBjj6id4B8u/aQ6rqskgfqKfZRiskNjm5PoAqyZVEgNvEzPjhaODBF3bT+pR8VvGh5aSlclu6gXQbUvnuuEOiW3XMEmOCeTY+z1EbzBNRW0yxLoN2R7V1Avz9ahsDxg2q7gZu6FlBM7gntWgtVQZWPiu5AfRAFopNd/D0Yks8HUwaMv1lBsS7gwBkPA1vyLmFgR8xDHeB5vge0LffCH2hB9ZaLTgD6h36LAiYtE6XClP1sC0V1TowDHX02frxIg53o2TeAy1TeqKoBMx/I7QTKDYkTasQos0HNG/j9HzBnRRwVpu+BUYlQN6kWUSWQ8XaogjrAfE4TyJ7+JQB4eE017aafD+Ptkf2JdWRYHMraCe9FN8b7wS+l73SFKrhMLhW4ImUTRfX3h5WKUIfsjqgCzabu0YwloqNnoGZueUih3LqO8fmsdM/gFTC8j39BUZIhdeQMVB3+LdTUsmuSBKC2NHhWALn/7J0Ffnb5EQ3072i+DOR4J7AdaKet0wasG15eDNyppLoP6GbjdxfY0S8uC/TVcNsKVFAToO5UKrDCBOrQh2UhQBmVlD9Ao6gPX4DJm5fR8iV1vH0HtX5eC91t0d9PlLHLbg4MwuD4UHw5MPZJB62OsMPEQajON6cppb209tFBYLb33UUyNARQd3Jg+7wU6vqAampfa/gYf9WxOlbThE6qmFKiG/q1/MVlZ4Ns9wK134r7Aa153FSAk6PlQ8BRM1tD4K868dVAqWmNJqDks1QKmLiGU31QhUfPMdZBduchqINmERRyRq1Xt0GVD6gkb8hXRTOozS/5lIALPt2kvJBbkP0I6tCVw3S36ICLtlBnWK4vBh7OlxYB+jpfLwVuTbc9DZRk++sIDPvbTmF0IKzWE2qn4RuKdR2uQTqO8x7Wp2cQkDh3A973IWKU3d5/4sWh7pQf0QXmxpfQBlxW2kwnfteDUVQGfa8LUky6jzfPxWULrnY1AqO0+OgQ2b6hlwxsdYtfwyCn2B8DfHG5UALotrKzDijLdWQa+LT3jiIwU9luE7DwY6EdcN5h18PAnlUbVwIPyYy9Bx4tN58PfG07QZkVO6d5HVQf3jiKanmn6jtQlb9/Og60CXwRBGRqzqdANLT9SUF7x67RFAY7mf2zQKcV6d+Bh4w4aQuLuCposxyWB1yAISxknEL5nUvDPKgHA+PlgZ2TajRCiDOrBtSd4/507MjtGqLls/kxQ3vRs2P/bXjnRN2k2BltODhMI+gknQMmcnJTpLKsYfwy887HNQth4GdfHA102834hny/a4zXs8p+OF6HQTJ2mxxwz3zDBcCiW/dCgKyvdSgmzW6tpn07JbrCGgY1wR00WIhSWRZUo8adJsC+QSln4MVj85cB/0UtoLspW59lhXpkXJc672wgN6WejHPiRhgE285eAfLr3L4GbDJzyAfGbIx3BzbX7NMHCns9TwIG3r/dA5RdqRlFuKaXG5gqyt0OLIiQoM5wjWerLFSf7Hm01C4sTrQto0c0HsMg/MiMnuzPuSU7oMae+UxxJrYknMLz22OdtzCIiY0fBI5s+y8bOPrsCSdwVfEGV+Cxg560khEZ9jQLx7xddJBl+uPcAu+1tWyUvFZrfAh7LPiqYHi+N5wD6F0d3A0sCtSiSlCofYiC9uzDvTlk4DajFFFhNROGeuSENk1IZmkYraRVWrgPDCoX1+kB2Xv1rgLbXILcgA5GWnuBsV9DaZp86fvNoXonJgzQZYkXfYFxUc1UYRoOOB2BusnajEqFZGz9fqiL+ATSgW5/yjKBQlF2dOYau2NBjz751ZQCnK9Lzh/ez3qr6Mb6m7WqoSYNrad6Nrt2qzLUhvF3L4B7PvvQ3d6fMaQzTGpFCZ25/itXn4CXY4U/hZxZwhFKpw1z3NlhKN1TRHMzmn1Dj1Mn6KICA6tPLZViLaFflJs/t7KR1yhtezy83ziiCIN+Jj6FukX+CY1waaS5AeqmBe60JPqCX2yhDuhIUh4HFptuh7q86hql3ldlG3WoX15vvAmsFTOwBz7+zXMIyH22RAr4L+XJF+BtbpF5wA0GwpQtwq4lolAbvjM+0bPVrZOCi1VQawUMbJ0cH4FdwrFsdFluxGNgeGRLNjDlXh2lyHIlHjpznRvJvQ3D5b4suvGjDE/qDCb8GzthuFFpPw5UHf5J8aDa4Em7aXuezwsGj3kjl4BdgjkngBZR07+AdmY/PgHnu9lTcawtj3oFNTVGhaqn9/tPfVDvi0mUAC8fZnzlyJZfq0eh8u9+Q4YLc8QuQ9Ux2zgD5Fvuaw3McZGi3sLKm0QPGRX6jepD48Icqut7dnHSZY+DwqhqTAze+4DBFi7aRQGTf2opna6Ubt6jgpdn06AJr9ctS5oQT0JzM1T7H7xhwDIOUWdgwURVOVBXtzEQGHn2z39AWZVfscBf1zyp7qx+85N20ziKMwWGsFNPPwNXHOin3Oyp/6cANfjNBT6gd9ASavmLEpf9gXrvlUAk0OQx4yUogQ25f6Gu/5rFD2y0/E3h+We5lhOpeoPvgJv3PaPknfLQXgS18mXdfuCL4TOewHGVvdQWb+wVpHxz7jxKa8Zs+IP+gI7IXkSrfnpy0WaMYHXvQz3wSnmzIHDK9SEdnliFxGnGHCrRFPZNRo/+wSuc7Er9eHqZPC3qePj5KRhGlmtT5727ptYMasvpThrB8kA5ZWGu7UJZGDR2excDbzSW02DDHKFGUN3MlhYANxwvOwdMmW2ilXyooNIE9czDz+eBXzYeewg84dlPXqGGGnr07q2/KaqPllRT/NZUJ7ThMt1jUcLAlo40agfnkrPyoDp8efAEeFEukmqqWIUSJWSbH2sGDCnJHUnA9NQXhsD1xi5UJ2+419DqFETHHIdBUvQ41bPRDxeroWavmNAGuq8ToOJYfPftdqjGJgL0DGdDfryBWjY/i+7WFRLoAZVZ3ygTKBJZROrSii3JULkvmX0ALgvzqwX6KX6niniXf3cc1KOW7ZVA8YMhVBFzuSuoz6+y8KqBwf/EPRVgf3EpVeU4bU6KB1eDOVTEsv9qDcE7UyVN3vF0j2GooRK/qKEY6kTSo0vF6FN9KDXOPQvvwWWMrx60nu+0BGrc+jk+wJVnj+4GNpjfNAH+Zx1zAVjvdIyye2+g/X2oZTezTYHTioxPK4m1MV4QX7xIn0pFmHI/1Z2VBw8G4DI5r1JBoFjdKD1DJ+diNqhnrrpSLbEfssqCmnh0iR5Q/FEBRXUkmyPlfGHPOeoME/zWd+AtXcRMarv4YWmo0WvNpoGn5+u/BepdeUS1ZFRtLzXhpOm0XBhilKc0gbaPhWiHarJau6FqPlnuDdz5fZqSTI3txnqos8w2tIUPd5rIQ1Ux3ycH9HY/Qc+wrT42EmrZrAVtgGr66yioWSqx34Ec61NdgBvN5S4D/bmOBgHdtS+/BHLf4KJC6uUtRzXqkvv8Whi+VB0LBx5vG6Y+dFz9ph3UN9OMf7VsuzVB4XlRaqgUhrjDTLTqSWOMNZPcOkarzmK0yQ9ej9zBDqD1WLst0MWFmw84f8KKptnpNL4KakOE1hWgOss7T2Dpcx3qIh4aUc1Q5bsYH4+//3PeQahxL7SYgVXaV6nj/JLsToQ6beByGvjF9FY7cIW8+ghwzdX1l4DMGQGEhxJcT0KN/Ra4DpgxWrILaNgmRMeOSwZS5VB9fzOqp7qJsz1U3pc1psAuofl7gI4DJwXoMqN+S2BOogFVz/SKoTNQrQTuUalgf/XkHVQOjxhKvfBj9v5Q11gX/wYmuN+nYp53g5Wa8KOiN2QQuyboCu+X1PMXgdcin34DSrm+UAKu7mak6d6Wb1pQxT8UhQLP1oY/B24qWEKVdr4T45sTfkyc5oXhTpYDE1AqyI322Oe7BXURXRsfSlMf5fvq8NYkF9Bh5GWHD804bXMuBUxLr8pXeFPyXH8BN/uaBQPfPEu/Dfw8K0RpOvA6hDZAak5cHwyhWicuALU1V3MCu6QD9IAb5jI+A3Ka2ew61C1dGyl52c4xsls2oq8ChnwpXw3gWV1feshX4kOUsWH9jC+QydB+QkXMuLW2GJdV17ymVf/4aaMy1OtVOTrA31fVqA+d/dBLj75iNnojDOyKR54CrcwUqY07cFVOQP047qcIPK5bvonUxypUEe0K9eOhKhZvWg204bI/APz1cYs+cHOnHm1LZwzj20+LvjZQ5fosyfjhIwGZV1TEEpnWUJ184sj4ds4N+/g5MO7pCwqRQF2nKlr1VeERB6Gum+maCwxetZrCc26G3zeoHsaMr0s44GkaATUpYvsnYOHbTkqcRRsmqWe9MT+QDsOdXdFbgSxjFU+Az5gc6TCi/2AJ3Tiqd9QZhoS2nTTYYNmWVKju+Y+sgEPZV6nNvP2mR4lTnpFN25LQ1UUR9cVy/2dc1vhrAaW0TtWQG1RngTLa2F6JVlLHhYSoo899fpUb3iTzajIIVQ/QYEdDExthSOx7JwR8NJfxATmvK8f5oRa4Sy0FWr36QWVlmxgzhZFvMrM7DHrTbl1A98EHEsDkI1udgCr1jXLAjTkdZcC8/MXUZt59e98A9WSeFOUmpy3TI6iLpOYXAzWESmjczobvr6De4GQZBl4J/jcAfKvMTSU+bbqZMkv98qbzMIwm21GbkU/IvQ7VQm7eKeAy7biHQPPkYlbg+Xx5E+D3OlUKoy3xtWehsst9MweuyHeMBc6RaKVFFR3poVgX8LX+C8PEyWWjwEVOJwOBT1YXU+2zTtIjNc6o+CsMnPMsRYDN+pF7gUulo6msiEwZNUH9erO4BRidN0vdKefyWdr5nhE+OhPckrxFDTA814ZK/Mcvf6swgt61kRKgi+A/D6D/cDI1tYOtIp1kiH3DA6xdr0HP+6CrYTHUI86Rq4AyZlEWwLabz3yArskutFCVLz4PQv1W9XYWmGGt/xpYu3MjZeHgZk5jqO6mcsuBRVcCuoG6+zToSLVMgPERuwmJpfdh0DPY/RMYosxNcfbZ2p0SMrbXWhKGCp2oPcAcRWcqIIF93JSQ89VzbWBI6oifBBZsYq4GZpgI0F68vHOOyuAp8SUPYFA3WUf97cK55R+hthTFSQEL2U5QIP5LLKXnHZFZQAs1t4/xMgL/ZAYt1PfwRmaM8NvxQRHwfY8zVbk18odyoe7sjaOY7O9WIq+CZXg0DA/n7aWHXM0V5gFVWKeNHvKWgCT1TdXTS2iwjrfrkuDd+vVDP7CtfZTiwUY3lcJz9pV8GgzRjadmgGdFJ9KBy7fb9AD5n1yiVZfRmOKGWmYjOQWcDT3jC2QftZ4L/NRmYQYUlI2hk+OhnN00t1rrCcpC256vCvDuLb7cBpTiH60BJn63oKU+GWH/Gaq1lckloN7KFkonQcMr9Lzl2/XoIXteXqaqsbXjSQYuizvsKg5MCrjGB5QZ5qTBUgOnqPB33KujIHDLZqENMFgbcxiXhbZ+TwYK+QXQ+h7xv0SF9LXZB30YivKY6SGPSF6nolA/cJV2yE2AkZCirWKGuOxvdxQ1lBnLF9lQW6+3U9AqBnYeh7pQ4jWtb/bYl4dQ9S+xKQKtO5evB07mrM0ENk+vo+S1flfPCjVvSJQ2IPduxhKozimnKLulxWqvQlVdkLYCKOJzbRyoc2O9MXBAYYi63uTVS++gvovaMB/4YKMVeWOUiii4mkJjwmEwcKs1AT7eMngMOOcOHy0Jc/hampt35J69MBROHwwCqukHUKNiX+BAmXXfKEgJBr/lqZHAmweCtYA9q5rSgS6uPLRZrhK5P+iyK3GLgUJbfTSAloIJNK6DAuMbL7wKV3rBsDBilGaRonH8NlTz2TMrgX/82xOAd9iMmYA57f/eAC9Oi2kCE9czXnOf2RAUAnXDaz9V4DFjLxFgGN+7u0ADnZTTQPe0HWHAFZJ3OYD267Q7gSpBvbS+u6V466FyO+yhqD607808qNu32N4C8mj/2Ac8rjOyHbgsUJdyyHrJLnmoXAc7zYEOHK+omItmdVHBKxN7QJWg5JvTALysX9J2AQ1CJOjRZXVCqO5cn8qlLSxT4KFneJ1SboDL4j0MUoCr/eMuAP2zdSSAt9RvTwP5sk7qAIWMq9YB2U6o8QIvxDjQAU5FMCgJavhbuRygxYsvFUCZvxGrgBNnyk4A54v/o0UdOS1GDWWd/DAF7ar2BArPZBGeRbhs+cfTFJ6O7Ww0buSYGkWq9UVnqiUr+XkLcNmG75MTQNFTZZS8c4ceDEG9lBOyBigb//49UN7caCGwrFWZIrXm4k/awg1DHx1g2P9lhAKRLaSJqpHvWCdFauTHi1RIC4xfUlRnqPrXYYQxpaRNwF2pnLSx61lWUDzc2cbBBcMPK8a7zz+sLabNuhZ8kPYi6ys3VYLwcw+u47L3AdnZQCbzkUKg38CZe8AdQvzPgOwr614ClcQLXgNPKmeZAhVXREgA7X8+pycLmNtJBt+StRRnsamJVEBeHhajKqeg5NCKEYwkeqhnfVx4iYLLcvIJrdn9JSvT4JXcqkzJYBR9/zHUj/Ye3cCJuwuUgCfV7m8D+iiXU/LuTDR+A5VdLcoFqOLsS4/jLasaADU/aYwG42naS4/jLC1NrWPrZ/1/8O5O06KWVH7eeTlUOw87Z+DygA4nYDjLWUoG1eEiQ6i/gwNpC3V6S+jR77W8ekEjfLRwBKoZruUBsndwrgU6HI+myuXUMykJ1S3mAc3C6mqLP9ReA06aUEeBAyVvasEhOob+a1G8A29zw6vzQLlvu+cCNX4qVQLXWwTTQeCx+UVRqJ7cl6nKRWqLSUNdrXp0BlgSl0Dxu+bhNHl9/t6jfJMMrKHsdmnmdMVlpusZ/7b969kqPqg/ncOWAhdcvEIJWdBasglq+4DlBuDN0RoqCrk7Qmkv/ufX0j7A0PJpigm4wmHuTeCILSNouQ7KuEO1SZX9C4wuYfyKnUu+DSfUmoe1asA+o1uZwA0yjUeAioMsYUBVy/y9QCspxkt8j4be5kGNa/R4BTT8z5fmpp7v1wx1ucyqy8A3aarfgN3PDBSA86s06HQV/GuEKkxw4NAOGATXuFoDvVcu7AG6iUcmAln4ou2Aym2JBcCzq8pLgSYfRcKBP+OG6RkK3I29oSZEnboBFNyVWwwsH1ozAuz5uECDsEheF+gxzUsVxua62H2o7jqDAsCURbPywNSohDpg+a1XL4G7vCzpFtebUg5CXZzqpgfcfSnSE5gqw3h/X6Yo21eofc6xx4GrDynRCdrLLpiS18mhkUYI0HP5B6/vnEBaKM5hj+9QHxVJdAIzPlVSIX2/wpMqTG7plAcMNjoztOp9nuOUTjKff7bBEOpbRYlupm9FCck6l+85DDPm+68D779QHQWyr1KgIGB7m+kF1TW8jPJNY24dhWewTBVtyx9ZDlpfzdkLIriM7fD3zUCDS21mwBITjyag14G8VGBtD+P1rFOT6VSCDrYxvq/t1AT7MLy+XcnUUHaoX6dZGE020SzKt5evhnfepScU6+UrWx9AHfPfSC2/YFe4I9SM311rgN+5f1IF708qphbK/ohRYex2tVHQzjE8Rn8dWKyKpltomlyjg4ufSfsljGvAvkcKODkkswWo5XUrHjgxbEzZfTMv/yTUTUNhocA0yRQ6+rSEnGuEutxNkwqpg+5namrzldzp/GB3U4iS4U8y43eNNr9mvImgbm0fZZaF6OhbjKvbz0kpMuvabAt13fgM7VtY5g45qPciB7iBR7Q0+IDyz45KALXFA6gaXT3KvQyq2ctKKroiAUuod3cZst+FQTfXJwoo5halDExYF0dZWCK/4SPUHt7kXcC2gUcrgesKyun4xWfE+HT253IH6mS+b1ZywrvgTsELoOEz1XdAH7fuBcDi+eW/gB/kjL4Bx86FCgHzx9wXAifeGVEW7g/e8BNqlznXMSDnlhJN4PB2TurHh2ozVaEmW4UtAW49fodUpupSCk+bnFMU9o1ywwbwcumtNwdGeUpQlLA4LG2Buvf722SgKLcrrU6NoEs+1K6UfzxA3i1S9cBzE5dphPVujBJ0mWmAprlovoYgvAvrg2hbjBX5xqHGxgjTtgjHeNCfMJtyEygDem/KHYXXlv8oNQnn9rO0DnPuWFDIiQzGt8IrebOKD7h47dh84FHdJ2xA6dHTH4CPc1vpr6R2zdjbpA6WtAFfpvHTjFXMOmiPU0cO8cIg5JXjBrTr2PMIyCezlarnI1PGZxQWq/3gh+EBWwv9PTRPLTwLqpp7GhXHPT1VpjSuXjfd+PQGDZr8rwxxyu6s+UWUsScaea7jsm8L3tERZTpslOIheYnLYxjCdylRHxo0SbgAdeui5xbAWI1RG+AZdU5a6jWVKRuhyuof2Q+8ostChUnh5apoqBGzjLdKLd8VQe325dra5TDczbtrCVzE5EEBM9fHbBHUoh38tGZ+wdWHoZ4eqqCF4ip87Qw1syH0P6BK4nbqQ39EP16D+tfKlCYvuc+uC6pj+1t34E0pdRfgJTlXqkYe2yppQv2FjHeXDoqXBsEb5GJYDoyYWkfj1n6IV4MqqlhKoWyTGysM9fR/O6yBFvKHSS36z5HK65XjlkowxL1pDACen/QTB6qm7afntSn+Vwl1PddRe2Aq9zKqJY/+2NApM/GQ8VIYnF779wM3Lwi6B6z7qE7HmZVyh7WhtrOIU3BttHSkeDBn8tKAgdWRPRXYf82XjjPb+3S1oD5t1XsClPId3AD8/peXEtKXSYIS59lo9goYvhS+o9g5kNlB01y2azcdng4wj1BpG96c8h6XlbiNUOVSzQujHLqz0b4Zhh0BAzTCxfM61I8zmA9RKA+5PKC56WtP0OqE93fnYARLI1lakomAio1QFULFi4FmVRt2AV8fSA8EdpXMPQZkMld/B6x9x/kF+DzmkSFwqYQoxYPQosNUd6TLLlLOr+Q7SnfzZ751H5fJ7hoQAW7L+zcBrI0O7gP+CnxB2T1S/ZOyhbc4gZ7hrl8pFZu5LCIUiH9Hn8tgBFY7vdfAA+eskoAqHxZRaUt3O0WDMR/g6IQhv7WDBXjNq1gBKCCx6BewKiKWRjiSev4K1PuhHjuB4bcXbQFa/mdP+8Zi3kQTWrJ3Vh2GBr4KUSCflfMdYFvRk2FgcKV7EzDqZyt5uwUkfaC+l5sJBz4O73sLtPO+SqseVfv+LNSslW9igYNFc9mBs+/srgL1JW/TNA1S91Kk/tszSXkxWjbnKbxzhY6sAYay2tC+nc6eotbcW59GG7uk+2sEvKvcAkqBZb8OrgWWmKirAF1517MBFX0PUyg/ma5fBHVN6wIrYHZd5AgwSeku3cI7pG4Z1HvPHWglv5y2o7LyhoXxyab1ns/mwlv6OKsEKPdbshqouKj3FdBwebYk8G7Kv83ArnbzRKBnvNQfQkWbDODY1AuKqLDCHVQJ1M/HU5LZ2C05Ae9lf0PqerK8glVQ216uoJLps20xpbSu+RFSJ1Kf6sHrvjn0LvCDgq8n0EeS8X572wOq8eMc4+wVbT8WyDIxTf1/Ik6MNzk1Ojk5ztH24/EcJqbR//nvR9P/Bfo/Q/h/wf9eTiP8H8ywm1m2ZgIA</sci:propval>
+					<sci:propval name="DuplicationEstimate" dblVal="1"/>
+					<sci:propval name="GoodDuplicationEstimate" dblVal="1"/>
+					<sci:propval name="Model Type">Bayesian/SciTegic</sci:propval>
+					<sci:propval name="vcEquation_Vars_MY_Bayesian" base64="UI1">pvYC8PoBAACo0fYJ9iqp9gL69gVBTG9nUPr2GlNjaVRlZ2ljLnZhbHVlLkRvdWJsZVZhbHVl0fj2Nan2Avr2EE1vbGVjdWxhcl9XZWlnaHT69hpTY2lUZWdpYy52YWx1ZS5Eb3VibGVWYWx1ZdH49jKp9gL69gxOdW1fSF9Eb25vcnP69htTY2lUZWdpYy52YWx1ZS5JbnRlZ2VyVmFsdWXR+PY1qfYC+vYPTnVtX0hfQWNjZXB0b3Jz+vYbU2NpVGVnaWMudmFsdWUuSW50ZWdlclZhbHVl0fj2OKn2Avr2Ek51bV9Sb3RhdGFibGVCb25kc/r2G1NjaVRlZ2ljLnZhbHVlLkludGVnZXJWYWx1ZdH49i+p9gL69glOdW1fUmluZ3P69htTY2lUZWdpYy52YWx1ZS5JbnRlZ2VyVmFsdWXR+PY3qfYC+vYRTnVtX0Fyb21hdGljUmluZ3P69htTY2lUZWdpYy52YWx1ZS5JbnRlZ2VyVmFsdWXR+PZJqfYC+vYkTW9sZWN1bGFyX0ZyYWN0aW9uYWxQb2xhclN1cmZhY2VBcmVh+vYaU2NpVGVnaWMudmFsdWUuRG91YmxlVmFsdWXR+PY3qfYC+vYGRUNGUF82+vYmU2NpVGVnaWMudmFsdWUuSW50ZWdlckZpbmdlcnByaW50VmFsdWXR+PYJ9i2q9gX69gVBTG9nUPr2GlNjaVRlZ2ljLnZhbHVlLkRvdWJsZVZhbHVl0/HT8fn2OKr2Bfr2EE1vbGVjdWxhcl9XZWlnaHT69hpTY2lUZWdpYy52YWx1ZS5Eb3VibGVWYWx1ZdPR0/H59jaq9gX69gxOdW1fSF9Eb25vcnP69htTY2lUZWdpYy52YWx1ZS5JbnRlZ2VyVmFsdWXT9gLT8fn2Oar2Bfr2D051bV9IX0FjY2VwdG9yc/r2G1NjaVRlZ2ljLnZhbHVlLkludGVnZXJWYWx1ZdP2A9Px+fY8qvYF+vYSTnVtX1JvdGF0YWJsZUJvbmRz+vYbU2NpVGVnaWMudmFsdWUuSW50ZWdlclZhbHVl0/YE0/H59jOq9gX69glOdW1fUmluZ3P69htTY2lUZWdpYy52YWx1ZS5JbnRlZ2VyVmFsdWXT9gXT8fn2O6r2Bfr2EU51bV9Bcm9tYXRpY1Jpbmdz+vYbU2NpVGVnaWMudmFsdWUuSW50ZWdlclZhbHVl0/YG0/H59k2q9gX69iRNb2xlY3VsYXJfRnJhY3Rpb25hbFBvbGFyU3VyZmFjZUFyZWH69hpTY2lUZWdpYy52YWx1ZS5Eb3VibGVWYWx1ZdP2B9Px+fY7qvYF+vYGRUNGUF82+vYmU2NpVGVnaWMudmFsdWUuSW50ZWdlckZpbmdlcnByaW50VmFsdWXT9gjT8fnx</sci:propval>
+					<sci:propval name="vcEquation_Vars__Props_MY_Bayesian_EQN_NONCATN" lVal="236"/>
+					<sci:propval name="vcEquation_Vars__Props_MY_Bayesian_EQN_CATN" lVal="221"/>
+					<sci:propval name="vcEquation_Vars__Props_MY_Bayesian_EQN_NONCATMEAN" dblVal="-22.0969876943202"/>
+					<sci:propval name="vcEquation_Vars__Props_MY_Bayesian_EQN_NONCATSTDDEV" dblVal="9.05506940835414"/>
+					<sci:propval name="vcEquation_Vars__Props_MY_Bayesian_EQN_CATMEAN" dblVal="19.7043195228684"/>
+					<sci:propval name="vcEquation_Vars__Props_MY_Bayesian_EQN_CATSTDDEV" dblVal="12.9929118322685"/>
+					<sci:propval name="vcEquation_Vars__Props_MY_Bayesian_EQN_AUC" dblVal="0.991506250479331"/>
+					<sci:propval name="vcEquation_Vars__Props_MY_Bayesian_EQN_CUTOFF" dblVal="-6.01677514457119"/>
+					<sci:propval name="vcEquation_Vars__Props_MY_Bayesian_EQN_TP" lVal="210"/>
+					<sci:propval name="vcEquation_Vars__Props_MY_Bayesian_EQN_FN" lVal="11"/>
+					<sci:propval name="vcEquation_Vars__Props_MY_Bayesian_EQN_FP" lVal="3"/>
+					<sci:propval name="vcEquation_Vars__Props_MY_Bayesian_EQN_TN" lVal="233"/>
+					<sci:mpropval name="vcEquation_Vars__Props_MY_Bayesian_EQN_ENRICHPROPORTION" type="DoubleType">
+						<sci:value dblVal="1.e-002"/>
+						<sci:value dblVal="5.e-002"/>
+						<sci:value dblVal="0.1"/>
+						<sci:value dblVal="0.25"/>
+						<sci:value dblVal="0.5"/>
+						<sci:value dblVal="0.75"/>
+						<sci:value dblVal="0.9"/>
+						<sci:value dblVal="0.95"/>
+						<sci:value dblVal="0.99"/>
+					</sci:mpropval>
+					<sci:mpropval name="vcEquation_Vars__Props_MY_Bayesian_EQN_ENRICHCAPTURE" type="DoubleType">
+						<sci:value dblVal="1.80995475113122e-002"/>
+						<sci:value dblVal="9.95475113122172e-002"/>
+						<sci:value dblVal="0.203619909502262"/>
+						<sci:value dblVal="0.515837104072398"/>
+						<sci:value dblVal="0.968325791855204"/>
+						<sci:value dblVal="1"/>
+						<sci:value dblVal="1"/>
+						<sci:value dblVal="1"/>
+						<sci:value dblVal="1"/>
+					</sci:mpropval>
+					<sci:mpropval name="vcEquation_Vars__Props_MY_Bayesian" type="StringType">
+						<sci:value>EQN_NONCATN</sci:value>
+						<sci:value>EQN_CATN</sci:value>
+						<sci:value>EQN_NONCATMEAN</sci:value>
+						<sci:value>EQN_NONCATSTDDEV</sci:value>
+						<sci:value>EQN_CATMEAN</sci:value>
+						<sci:value>EQN_CATSTDDEV</sci:value>
+						<sci:value>EQN_AUC</sci:value>
+						<sci:value>EQN_CUTOFF</sci:value>
+						<sci:value>EQN_TP</sci:value>
+						<sci:value>EQN_FN</sci:value>
+						<sci:value>EQN_FP</sci:value>
+						<sci:value>EQN_TN</sci:value>
+						<sci:value>EQN_ENRICHPROPORTION</sci:value>
+						<sci:value>EQN_ENRICHCAPTURE</sci:value>
+					</sci:mpropval>
+					<sci:mpropval name="vcEquation_MY_Bayesian" type="AnyType">
+						<sci:value lVal="3412"/>
+						<sci:value lVal="11"/>
+						<sci:value/>
+						<sci:value lVal="0"/>
+						<sci:value lVal="1"/>
+						<sci:value lVal="0"/>
+						<sci:value>MY_Bayesian</sci:value>
+						<sci:value>Good</sci:value>
+						<sci:value/>
+						<sci:value/>
+						<sci:value>Sat Sep 17 18:19:46 2022</sci:value>
+						<sci:value>SciTegic.value.DoubleValue</sci:value>
+						<sci:value dblVal="-1"/>
+						<sci:value dblVal="-1"/>
+						<sci:value lVal="-1"/>
+						<sci:value lVal="-1"/>
+						<sci:value/>
+						<sci:value/>
+						<sci:value lVal="6667"/>
+						<sci:value lVal="4"/>
+						<sci:value>DistributionBF</sci:value>
+						<sci:value lVal="9"/>
+						<sci:value lVal="0"/>
+						<sci:value>NormalizedEstimate</sci:value>
+						<sci:value lVal="0"/>
+						<sci:value lVal="1"/>
+						<sci:value lVal="-99"/>
+						<sci:value lVal="0"/>
+						<sci:value lVal="-1"/>
+					</sci:mpropval>
+					<sci:propval name="vcSimpleEquationNames">MY_Bayesian</sci:propval>
+					<sci:propval name="vcSimpleEquationTypes">vcSimpleLinearEquation</sci:propval>
+					<sci:mpropval name="vcLinearEquation_MY_Bayesian_ErrorStats" type="AnyType">
+						<sci:value dblVal="0"/>
+						<sci:value lVal="0"/>
+						<sci:value lVal="0"/>
+					</sci:mpropval>
+					<sci:propval name="vcLinearEquation_MY_Bayesian_ErrorStats_XtXinv" base64="UI1"/>
+				</sci:proplist>
+			</sci:data>
+			<sci:version iVal="1"/>
+		</sci:protocol>
+	</sci:dbitem>
+</sci:data>

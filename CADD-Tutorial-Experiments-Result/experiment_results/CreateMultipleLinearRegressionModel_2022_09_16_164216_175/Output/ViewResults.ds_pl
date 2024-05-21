@@ -1,0 +1,31 @@
+#!/usr/bin/perl
+use MdmDiscoveryScript;
+use ChartDiscoveryScript;
+
+# Returns document only if ApplyToWindow condition is true on the client
+my $document = DiscoveryScript::LastActiveDocument(MdmModelType, True);
+
+if ($document) {
+    $document->Insert({"Path" => "TrainingSet_dataset-qsar.sd", "FormatType" => "mol-merge-properties"});
+    sleep(1);
+} else{
+    $document = Mdm::Document::Create();
+    $document->Insert({"Path" => "TrainingSet_dataset-qsar.sd", "LoadAllObjects" => False});
+    $document->IsDataTableViewShown = True;
+    $document->IsHierarchyViewShown = False;
+    $document->IsGraphicsViewShown  = False; 
+}
+
+$document->UpdateViews();
+
+ my $messageBoxResult = DiscoveryScript::MessageBox(
+	"Model prediction properties have been added to the data table. Do you want to show a plot of the model prediction?",
+	"The plot of the predicted value by the model versus the experimental value using the training set.",
+	DiscoveryScript::messageBoxFlagsYesNo,
+	DiscoveryScript::messageBoxIconInfo,
+	DiscoveryScript::dialogPositionCenter,
+	"QSAR_MLR");
+ exit 0 if ($messageBoxResult eq DiscoveryScript::messageBoxResultNo);
+my $chart = Chart::Document::CreatePointPlot($document, "Molecule", "pki-trypsin", "MY_2D_QSAR", "");
+$chart->AddTrendLine("MY_2D_QSAR");
+$chart->UpdateViews();

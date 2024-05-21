@@ -1,0 +1,9 @@
+[2022-09-24 10:46:40] ------------------------------------
+[2022-09-24 10:46:40] Protocol Name = 'Score Ligand Poses'
+[2022-09-24 10:46:40] User Name = '16606'
+[2022-09-24 10:46:40] Run ID = 'DC19B07E-4500-4120-9C31-3DDD23C93DEA'
+[2022-09-24 10:46:40] Client message: 'Scoring: 3GEN'
+[2022-09-24 10:46:40] Started running 'Scoring'
+[2022-09-24 10:46:41] Finished running 'Scoring'
+[2022-09-24 10:46:41] Client message: 'Poses scored: 31'
+[2022-09-24 10:46:41] Final message: '31 poses: 3GEN, 3GEN'

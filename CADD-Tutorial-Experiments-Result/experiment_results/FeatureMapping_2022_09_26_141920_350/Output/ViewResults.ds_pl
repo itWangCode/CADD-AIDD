@@ -1,0 +1,28 @@
+#!/usr/bin/perl
+use MdmDiscoveryScript;
+use DSScript;
+
+# Returns document only if ApplyToWindow condition is true on the client
+my $document = DiscoveryScript::LastActiveDocument(MdmModelType, True);
+
+if ($document) {
+    $document->Insert({"Path" => "5HT2c_ligands.ds_chm", "LoadAllObjects" => True});
+} else{
+    $document = Mdm::Document::Create();
+    $document->Insert({"Path" => "../Input/5HT2c_ligands.sd", "LoadAllObjects" => True});
+    $document->Insert({"Path" => "5HT2c_ligands.ds_chm", "LoadAllObjects" => True});
+}
+
+$document->UpdateViews();
+DSScript::fit;
+DSScript::show_3d;
+use MdmDiscoveryScript;
+use DSScript;
+
+my $hashargs = { message => "<strong>Feature Mapping</strong><BR> Found 94 features in ligand: 5HT2c_ligands",
+ details => "<html> HB_ACCEPTOR: 15,HB_DONOR: 6,HYDROPHOBIC: 39,POS_IONIZABLE: 8,RING_AROMATIC: 26</html>
+",
+ error => "",
+ ignore => "Protocol MessageBox: Feature Mapping" };
+use MdmCommands;
+MdmCommands::DSReportMessageBox($hashargs);

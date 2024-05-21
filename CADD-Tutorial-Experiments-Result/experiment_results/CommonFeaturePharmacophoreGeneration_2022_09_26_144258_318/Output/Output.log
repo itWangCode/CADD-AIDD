@@ -1,0 +1,134 @@
+[2022-09-26 14:43:00] ------------------------------------
+[2022-09-26 14:43:00] Protocol Name = 'Common Feature Pharmacophore Generation'
+[2022-09-26 14:43:00] User Name = '16606'
+[2022-09-26 14:43:00] Run ID = 'F214A85D-7818-461A-A781-2F0931B9334E'
+[2022-09-26 14:43:00] Client message: 'Preparing confgen.'
+[2022-09-26 14:43:00] Client message: 'Running confgen.'
+[2022-09-26 14:43:00] Started running 'confgen'
+[2022-09-26 14:43:50] Finished running 'confgen'
+[2022-09-26 14:43:50] Client message: 'Build common feature model'
+[2022-09-26 14:43:51] Client message: 'Preparing sdtocpd.'
+[2022-09-26 14:43:51] Client message: 'Running sdtocpd.'
+[2022-09-26 14:43:51] Started running 'sdtocpd'
+[2022-09-26 14:43:54] Finished running 'sdtocpd'
+[2022-09-26 14:43:54] Client message: 'sdtocpd done.'
+[2022-09-26 14:43:54] Client message: 'Preparing catalyst_molspst.'
+[2022-09-26 14:43:54] Client message: 'catalyst_molspst done.'
+[2022-09-26 14:43:54] Client message: 'Preparing catalyst_featlst.'
+[2022-09-26 14:43:54] Client message: 'catalyst_featlst done.'
+[2022-09-26 14:43:54] Client message: 'Preparing HipHop.'
+[2022-09-26 14:43:54] Client message: 'Running HipHop.'
+[2022-09-26 14:43:54] Started running 'HipHop'
+[2022-09-26 14:44:05] Finished running 'HipHop'
+[2022-09-26 14:44:05] Client message: 'HipHop done.'
+[2022-09-26 14:44:06] Client message: 'Preparing confgen.'
+[2022-09-26 14:44:06] Client message: 'Running confgen.'
+[2022-09-26 14:44:06] Started running 'confgen'
+[2022-09-26 14:44:12] Finished running 'confgen'
+[2022-09-26 14:44:13] Client message: 'Preparing confgen.'
+[2022-09-26 14:44:13] Client message: 'Running confgen.'
+[2022-09-26 14:44:13] Started running 'confgen'
+[2022-09-26 14:44:27] Finished running 'confgen'
+[2022-09-26 14:44:28] Client message: 'Preparing citest.'
+[2022-09-26 14:44:28] Client message: 'Running citest.'
+[2022-09-26 14:44:28] Started running 'citest'
+[2022-09-26 14:44:32] Finished running 'citest'
+[2022-09-26 14:44:32] Client message: 'Preparing citest.'
+[2022-09-26 14:44:32] Client message: 'Running citest.'
+[2022-09-26 14:44:32] Started running 'citest'
+[2022-09-26 14:44:36] Finished running 'citest'
+[2022-09-26 14:44:38] Client message: 'Preparing citest.'
+[2022-09-26 14:44:38] Client message: 'Running citest.'
+[2022-09-26 14:44:38] Started running 'citest'
+[2022-09-26 14:44:42] Finished running 'citest'
+[2022-09-26 14:44:42] Client message: 'Preparing citest.'
+[2022-09-26 14:44:42] Client message: 'Running citest.'
+[2022-09-26 14:44:42] Started running 'citest'
+[2022-09-26 14:44:46] Finished running 'citest'
+[2022-09-26 14:44:47] Client message: 'Preparing citest.'
+[2022-09-26 14:44:47] Client message: 'Running citest.'
+[2022-09-26 14:44:47] Started running 'citest'
+[2022-09-26 14:44:50] Finished running 'citest'
+[2022-09-26 14:44:51] Client message: 'Preparing citest.'
+[2022-09-26 14:44:51] Client message: 'Running citest.'
+[2022-09-26 14:44:51] Started running 'citest'
+[2022-09-26 14:44:55] Finished running 'citest'
+[2022-09-26 14:44:55] Client message: 'Preparing citest.'
+[2022-09-26 14:44:55] Client message: 'Running citest.'
+[2022-09-26 14:44:55] Started running 'citest'
+[2022-09-26 14:44:59] Finished running 'citest'
+[2022-09-26 14:44:59] Client message: 'Preparing citest.'
+[2022-09-26 14:44:59] Client message: 'Running citest.'
+[2022-09-26 14:44:59] Started running 'citest'
+[2022-09-26 14:45:03] Finished running 'citest'
+[2022-09-26 14:45:04] Client message: 'Preparing citest.'
+[2022-09-26 14:45:04] Client message: 'Running citest.'
+[2022-09-26 14:45:04] Started running 'citest'
+[2022-09-26 14:45:07] Finished running 'citest'
+[2022-09-26 14:45:08] Client message: 'Preparing citest.'
+[2022-09-26 14:45:08] Client message: 'Running citest.'
+[2022-09-26 14:45:08] Started running 'citest'
+[2022-09-26 14:45:11] Finished running 'citest'
+[2022-09-26 14:45:12] Client message: 'Align to Pharm 1'
+[2022-09-26 14:45:12] Client message: 'Preparing citest.'
+[2022-09-26 14:45:12] Client message: 'Running citest.'
+[2022-09-26 14:45:12] Started running 'citest'
+[2022-09-26 14:45:13] Finished running 'citest'
+[2022-09-26 14:45:14] Client message: 'Align to Pharm 2'
+[2022-09-26 14:45:14] Client message: 'Preparing citest.'
+[2022-09-26 14:45:14] Client message: 'Running citest.'
+[2022-09-26 14:45:14] Started running 'citest'
+[2022-09-26 14:45:15] Finished running 'citest'
+[2022-09-26 14:45:15] Client message: 'Align to Pharm 3'
+[2022-09-26 14:45:15] Client message: 'Preparing citest.'
+[2022-09-26 14:45:15] Client message: 'Running citest.'
+[2022-09-26 14:45:15] Started running 'citest'
+[2022-09-26 14:45:16] Finished running 'citest'
+[2022-09-26 14:45:17] Client message: 'Align to Pharm 4'
+[2022-09-26 14:45:17] Client message: 'Preparing citest.'
+[2022-09-26 14:45:17] Client message: 'Running citest.'
+[2022-09-26 14:45:17] Started running 'citest'
+[2022-09-26 14:45:18] Finished running 'citest'
+[2022-09-26 14:45:18] Client message: 'Align to Pharm 5'
+[2022-09-26 14:45:19] Client message: 'Preparing citest.'
+[2022-09-26 14:45:19] Client message: 'Running citest.'
+[2022-09-26 14:45:19] Started running 'citest'
+[2022-09-26 14:45:20] Finished running 'citest'
+[2022-09-26 14:45:20] 
+ 
+Features
+Rank
+Direct Hit
+Partial Hit
+Max Fit
+1
+PZHHAA
+96.678
+111111
+000000
+6
+2
+PZHHAA
+96.599
+111111
+000000
+6
+3
+PHHHAA
+94.827
+111111
+000000
+6
+4
+PHHHAA
+92.807
+111111
+000000
+6
+5
+PZHHAA
+91.656
+111111
+000000
+6
+[2022-09-26 14:45:20] Final message: 'Generated 5 hypotheses'

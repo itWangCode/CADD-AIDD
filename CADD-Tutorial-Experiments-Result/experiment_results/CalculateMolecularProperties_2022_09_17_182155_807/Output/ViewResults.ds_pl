@@ -1,0 +1,25 @@
+#!/usr/bin/perl
+use MdmDiscoveryScript;
+use DSScript;
+
+# Returns document only if ApplyToWindow condition is true on the client
+my $document = DiscoveryScript::LastActiveDocument(MdmModelType, True);
+
+if ($document) {
+	$document->Insert({"Path" => "TestSet_dataset-AI-2.sd", "FormatType" => "mol-merge-properties"});
+} else {
+	$document = DiscoveryScript::Open({"Path" => "TestSet_dataset-AI-2.sd", "LoadAllObjects" => False});
+}
+$document->UpdateViews();
+
+DSScript::invoke_action("ActionShowInTable");
+use MdmDiscoveryScript;
+use DSScript;
+
+my $hashargs = { message => "<strong>Calculate Molecular Properties</strong><BR>Calculated properties have been added.",
+ details => "<html>The requested properties have been inserted to the data table automatically.</html>
+",
+ error => "",
+ ignore => "Protocol MessageBox: Calculate Molecular Properties" };
+use MdmCommands;
+MdmCommands::DSReportMessageBox($hashargs);

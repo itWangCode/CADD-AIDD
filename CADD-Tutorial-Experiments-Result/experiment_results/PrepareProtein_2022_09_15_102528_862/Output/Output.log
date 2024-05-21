@@ -1,0 +1,94 @@
+[2022-09-15 10:25:30] ------------------------------------
+[2022-09-15 10:25:30] Protocol Name = 'Prepare Protein'
+[2022-09-15 10:25:30] User Name = '16606'
+[2022-09-15 10:25:30] Run ID = '384A7E96-1A79-42BB-8E15-937E6AF73481'
+[2022-09-15 10:25:30] Alternate Conformations
+[2022-09-15 10:25:30] No alternate conformations found in this structure
+[2022-09-15 10:25:30] Standardize Names
+[2022-09-15 10:25:30] 36 name(s) standardized
+Standardized name of atom A:LEU42:H1
+Standardized name of atom A:LEU42:H2
+Standardized name of atom A:LEU42:H3
+Standardized name of atom A:SER43:H
+Standardized name of atom A:ASP44:H
+Standardized name of atom A:GLU45:H
+Standardized name of atom A:ASP46:H
+Standardized name of atom A:PHE47:H
+Standardized name of atom A:LYS48:H
+Standardized name of atom A:ALA49:H
+Standardized name of atom A:VAL50:H
+Standardized name of atom A:PHE51:H
+Standardized name of atom A:GLY52:H
+Standardized name of atom A:MET53:H
+Standardized name of atom A:THR54:H
+Standardized name of atom A:ARG55:H
+Standardized name of atom A:SER56:H
+Standardized name of atom A:ALA57:H
+Standardized name of atom A:PHE58:H
+Standardized name of atom A:ALA59:H
+Standardized name of atom A:ASN60:H
+Standardized name of atom A:LEU61:H
+Standardized name of atom A:LEU63:H
+Standardized name of atom A:TRP64:H
+Standardized name of atom A:LYS65:H
+Standardized name of atom A:GLN66:H
+Standardized name of atom A:GLN67:H
+Standardized name of atom A:HIS68:H
+Standardized name of atom A:LEU69:H
+Standardized name of atom A:LYS70:H
+Standardized name of atom A:LYS71:H
+Standardized name of atom A:GLU72:H
+Standardized name of atom A:LYS73:H
+Standardized name of atom A:GLY74:H
+Standardized name of atom A:LEU75:H
+Standardized name of atom A:PHE76:H
+[2022-09-15 10:25:30] Complete Residues
+[2022-09-15 10:25:30] No incomplete residues found
+[2022-09-15 10:25:30] Bonding and bond orders
+[2022-09-15 10:25:30] Bonds and bond orders have been checked and corrected if necessary
+[2022-09-15 10:25:30] Terminus modification
+[2022-09-15 10:25:30] 1 terminal residue(s) adjusted
+[2022-09-15 10:25:30] Atom ordering
+[2022-09-15 10:25:30] Reordered atoms in 2 residue(s)
+A:LEU42
+A:PHE76
+[2022-09-15 10:25:30] Client message: 'Step 1/5: Cleaning Protein'
+[2022-09-15 10:25:31] Started running 'ForcefieldTool'
+[2022-09-15 10:25:32] Finished running 'ForcefieldTool'
+[2022-09-15 10:25:32] Started running 'ForcefieldTool'
+[2022-09-15 10:25:33] Finished running 'ForcefieldTool'
+[2022-09-15 10:25:33] Client message: 'Generating CHARMm Script...'
+[2022-09-15 10:25:34] Client message: 'CHARMm hbuild...'
+[2022-09-15 10:25:34] Started running 'RunCHARMm'
+[2022-09-15 10:25:34] Finished running 'RunCHARMm'
+[2022-09-15 10:25:36] Client message: 'Step 5/5: Protonating Protein'
+[2022-09-15 10:25:36] Started running 'ForcefieldTool'
+[2022-09-15 10:25:37] Finished running 'ForcefieldTool'
+[2022-09-15 10:25:37] Client message: '1YRF'
+[2022-09-15 10:25:38] Started running 'ForcefieldTool'
+[2022-09-15 10:25:38] Finished running 'ForcefieldTool'
+[2022-09-15 10:25:39] Started running '1YRF'
+[2022-09-15 10:25:40] Finished running '1YRF'
+[2022-09-15 10:25:40] Client message: 'GBpK running'
+[2022-09-15 10:25:40] Started running 'GBpK'
+[2022-09-15 10:25:40] Finished running 'GBpK'
+[2022-09-15 10:25:40] Client message: 'GBpK finished successfully.'
+[2022-09-15 10:25:40] Client message: 'CreateGBpK finished'
+[2022-09-15 10:25:41] Client message: 'pK calculations...'
+[2022-09-15 10:25:41] Started running 'PHPK'
+[2022-09-15 10:25:41] Finished running 'PHPK'
+[2022-09-15 10:25:41] Client message: 'PHPK finished successfully.'
+[2022-09-15 10:25:41] Client message: 'Finished: 1YRF '
+[2022-09-15 10:25:41] Client message: 'reference pK calculations...'
+[2022-09-15 10:25:41] Started running 'PHPK'
+[2022-09-15 10:25:41] Finished running 'PHPK'
+[2022-09-15 10:25:41] Client message: '1YRF_0 finished successfully.'
+[2022-09-15 10:25:41] Client message: 'Finished: 1YRF '
+[2022-09-15 10:25:42] Client message: 'Annotate MacroMolecule...'
+[2022-09-15 10:25:42] Client message: 'Finished: Ionize '
+[2022-09-15 10:25:42] Client message: 'CHARMm protonate...'
+[2022-09-15 10:25:42] Started running 'RunCHARMm'
+[2022-09-15 10:25:43] Finished running 'RunCHARMm'
+[2022-09-15 10:25:44] Started running 'ForcefieldTool'
+[2022-09-15 10:25:45] Finished running 'ForcefieldTool'
+[2022-09-15 10:25:45] Final message: 'Prepared: 1YRF'

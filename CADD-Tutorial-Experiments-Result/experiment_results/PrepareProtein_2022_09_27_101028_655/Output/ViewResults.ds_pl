@@ -1,0 +1,6 @@
+#!/usr/bin/perl
+use MdmDiscoveryScript;
+use SdmDiscoveryScript;
+use DSScript;
+
+my $document = DiscoveryScript::Open({"Path" => "2IRZ_prep.dsv", "LoadAllObjects" => False});

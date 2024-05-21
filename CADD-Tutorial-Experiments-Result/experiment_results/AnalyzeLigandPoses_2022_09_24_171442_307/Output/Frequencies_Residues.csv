@@ -1,0 +1,12 @@
+Residue,Favorable,Unfavorable,HydrogenBond,Charge,Hydrophobic,Halogen,Other
+A:LEU408,10,0,0,0,10,0,0
+A:VAL416,10,0,0,0,10,0,0
+A:ALA428,10,0,0,0,10,0,0
+A:LYS430,10,0,0,2,10,0,0
+A:ILE472,10,0,0,0,10,0,0
+A:GLU475,10,0,10,0,0,0,0
+A:MET477,10,0,10,0,0,0,0
+A:CYS481,2,0,0,0,2,0,0
+A:LEU528,10,0,0,0,10,0,0
+A:PHE540,10,0,0,0,10,0,0
+A:LEU542,8,0,0,0,8,0,0

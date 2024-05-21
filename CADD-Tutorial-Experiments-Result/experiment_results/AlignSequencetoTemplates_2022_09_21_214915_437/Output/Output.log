@@ -1,0 +1,10 @@
+[2022-09-21 21:49:17] ------------------------------------
+[2022-09-21 21:49:17] Protocol Name = 'Align Sequence to Templates'
+[2022-09-21 21:49:17] User Name = '16606'
+[2022-09-21 21:49:17] Run ID = 'CD85AAB2-EC76-4E47-B8EC-3AEC5A46DB07'
+[2022-09-21 21:49:20] Client message: 'step 3/4: P2RY6'
+[2022-09-21 21:49:22] Client message: 'Align123 Preprocessing.'
+[2022-09-21 21:49:22] Client message: 'Running align123...'
+[2022-09-21 21:49:22] Started running 'align123'
+[2022-09-21 21:49:22] Finished running 'align123'
+[2022-09-21 21:49:27] Final message: '31.0% identity, P2RY6 and 1 template'

@@ -1,0 +1,10 @@
+[2022-09-24 10:40:20] ------------------------------------
+[2022-09-24 10:40:20] Protocol Name = 'Minimization'
+[2022-09-24 10:40:20] User Name = '16606'
+[2022-09-24 10:40:20] Run ID = '961EECD0-E749-4E37-8617-04B88973ED23'
+[2022-09-24 10:40:21] Client message: 'Generating CHARMm Script...'
+[2022-09-24 10:40:21] Client message: 'CHARMm minimization...'
+[2022-09-24 10:40:21] Started running 'RunCHARMm'
+[2022-09-24 10:40:22] Finished running 'RunCHARMm'
+[2022-09-24 10:40:22] Client message: 'Processing CHARMm output...'
+[2022-09-24 10:40:23] Final message: '0.97763 kcal/mol: 3GEN_ligand'

@@ -1,0 +1,219 @@
+
+<ELU xmlns="http://www.accelrys.com/dsm/elu/2">
+  <experiment Expanded="" Guid="{44948349-E985-4C5B-8959-08C77DD8089B}" protocol="Protocols/BIOVIA Discovery Studio/Discovery Studio/Receptor-Ligand Interactions/Docking/Dock Ligands (LibDock)" protocolName="Dock Ligands (LibDock)" version="1">
+    <Accl:mpropval name="Advanced" type="GroupType">
+      <Accl:value></Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Apolar SASA Cutoff" type="DoubleType">
+      <Accl:value>15.0</Accl:value>
+      <Accl:transformData>15.0</Accl:transformData>
+    </Accl:mpropval>
+    <Accl:mpropval name="Conformation Method" type="StringType">
+      <Accl:value>FAST</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="DSReport Summary" type="BoolType">
+      <Accl:value>False</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="DSRunInteractive" type="BoolType">
+      <Accl:value>True</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="DeclareLocal" type="StringType">
+      <Accl:value>basename</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Dielectric Constant" type="DoubleType">
+      <Accl:value>1</Accl:value>
+      <Accl:transformData>1</Accl:transformData>
+    </Accl:mpropval>
+    <Accl:mpropval name="Discard Existing Conformations" type="BoolType">
+      <Accl:value>True</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Docking Preferences" type="StringType">
+      <Accl:value>High Quality</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Docking Tolerance" type="DoubleType">
+      <Accl:value>0.25</Accl:value>
+      <Accl:transformData>0.25</Accl:transformData>
+    </Accl:mpropval>
+    <Accl:mpropval name="Energy Threshold" type="DoubleType">
+      <Accl:value>20.0</Accl:value>
+      <Accl:transformData>20.0</Accl:transformData>
+    </Accl:mpropval>
+    <Accl:mpropval name="Final Cluster Radius" type="DoubleType">
+      <Accl:value>0.5</Accl:value>
+      <Accl:transformData>0.5</Accl:transformData>
+    </Accl:mpropval>
+    <Accl:mpropval name="Final Score Cutoff" type="DoubleType">
+      <Accl:value>0.5</Accl:value>
+      <Accl:transformData>0.5</Accl:transformData>
+    </Accl:mpropval>
+    <Accl:mpropval name="Flexible Residues" type="CharmmresiduegroupOfStructureType">
+      <Accl:value></Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Generalized Born Lambda Constant" type="DoubleType">
+      <Accl:value></Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Grid Scoring" type="BoolType">
+      <Accl:value>True</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Hotspots File" type="CopyurlType">
+      <Accl:value></Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Implicit Solvent Dielectric Constant" type="DoubleType">
+      <Accl:value>80</Accl:value>
+      <Accl:transformData>80</Accl:transformData>
+    </Accl:mpropval>
+    <Accl:mpropval name="Implicit Solvent Model" type="StringType">
+      <Accl:value>Distance-Dependent Dielectrics</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Input Atomic Radii" type="StringType">
+      <Accl:value>van der Waals radii</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Input Ligands" type="LigandsType">
+      <Accl:value>Molecule-(1):All</Accl:value>
+      <Accl:transformData>0ec10244-8e80-3c6a-f8-b3-cd-b8-36-fd-19-cb</Accl:transformData>
+    </Accl:mpropval>
+    <Accl:mpropval name="Input Receptor" type="StructureType">
+      <Accl:value>3GEN_prep:3GEN</Accl:value>
+      <Accl:transformData>dfd567e1-adfc-243a-a5-53-44-bb-d0-49-d2-d8</Accl:transformData>
+    </Accl:mpropval>
+    <Accl:mpropval name="Input Site Sphere" type="ReceptorsphereOfStructureType">
+      <Accl:value>-17.0041, 6.71975, -15.0922, 9.73833</Accl:value>
+      <Accl:transformData>-17.0041, 6.71975, -15.0922, 9.73833</Accl:transformData>
+    </Accl:mpropval>
+    <Accl:mpropval name="Keep Hydrogens" type="BoolType">
+      <Accl:value>False</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Max BFGS Steps" type="LongType">
+      <Accl:value>50</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Max Conformation Hits" type="LongType">
+      <Accl:value>30</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Max Hits to Save" type="LongType">
+      <Accl:value>100</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Max Number of Hits" type="LongType">
+      <Accl:value>100</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Max Start Conformations" type="LongType">
+      <Accl:value>1000</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Maximum Conformations" type="LongType">
+      <Accl:value>255</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Minimization Algorithm" type="StringType">
+      <Accl:value>Smart Minimizer</Accl:value>
+      <Accl:transformData>Smart Minimizer</Accl:transformData>
+    </Accl:mpropval>
+    <Accl:mpropval name="Minimization Energy Change" type="DoubleType">
+      <Accl:value>0.0</Accl:value>
+      <Accl:transformData>0.0</Accl:transformData>
+    </Accl:mpropval>
+    <Accl:mpropval name="Minimization Forcefield" type="StringType">
+      <Accl:value>CHARMm</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Minimization Max Steps" type="LongType">
+      <Accl:value>1000</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Minimization RMS Gradient" type="DoubleType">
+      <Accl:value>0.001</Accl:value>
+      <Accl:transformData>0.001</Accl:transformData>
+    </Accl:mpropval>
+    <Accl:mpropval name="Minimization Sphere of Flexible Atoms" type="ReceptorsphereOfStructureType">
+      <Accl:value></Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Minimum Hydrogen Radius" type="DoubleType">
+      <Accl:value>0.8</Accl:value>
+      <Accl:transformData>0.8</Accl:transformData>
+    </Accl:mpropval>
+    <Accl:mpropval name="Minimum LibDockScore" type="DoubleType">
+      <Accl:value>100</Accl:value>
+      <Accl:transformData>100</Accl:transformData>
+    </Accl:mpropval>
+    <Accl:mpropval name="Non-polar Surface Coefficient" type="DoubleType">
+      <Accl:value>0.00542</Accl:value>
+      <Accl:transformData>0.00542</Accl:transformData>
+    </Accl:mpropval>
+    <Accl:mpropval name="Non-polar Surface Constant" type="DoubleType">
+      <Accl:value>0.92</Accl:value>
+      <Accl:transformData>0.92</Accl:transformData>
+    </Accl:mpropval>
+    <Accl:mpropval name="Nonbond Higher Cutoff Distance" type="DoubleType">
+      <Accl:value>12.0</Accl:value>
+      <Accl:transformData>12.0</Accl:transformData>
+    </Accl:mpropval>
+    <Accl:mpropval name="Nonbond List Radius" type="DoubleType">
+      <Accl:value>13.0</Accl:value>
+      <Accl:transformData>13.0</Accl:transformData>
+    </Accl:mpropval>
+    <Accl:mpropval name="Nonbond Lower Cutoff Distance" type="DoubleType">
+      <Accl:value>9.0</Accl:value>
+      <Accl:transformData>9.0</Accl:transformData>
+    </Accl:mpropval>
+    <Accl:mpropval name="Number of Hotspots" type="LongType">
+      <Accl:value>100</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Parallel Processing" type="BoolType">
+      <Accl:value>False</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Parallel Processing Batch Size" type="LongType">
+      <Accl:value>25</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Parallel Processing Preserve Order" type="BoolType">
+      <Accl:value>True</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Parallel Processing Server" type="StringType">
+      <Accl:value>localhost</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Parallel Processing Server Processes" type="StringType">
+      <Accl:value>2</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Polar SASA Cutoff" type="DoubleType">
+      <Accl:value>5.0</Accl:value>
+      <Accl:transformData>5.0</Accl:transformData>
+    </Accl:mpropval>
+    <Accl:mpropval name="RMSD Cutoff" type="DoubleType">
+      <Accl:value>1.0</Accl:value>
+      <Accl:transformData>1.0</Accl:transformData>
+    </Accl:mpropval>
+    <Accl:mpropval name="Reporting" type="GroupType">
+      <Accl:value></Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Reporting Stylesheet" type="StylesheetType">
+      <Accl:value>{42691EC8-0CE0-4DB9-8B3C-5379CBB967A7}</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Rigid Optimization" type="BoolType">
+      <Accl:value>False</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Salt Concentration" type="DoubleType">
+      <Accl:value>0.0</Accl:value>
+      <Accl:transformData>0.0</Accl:transformData>
+    </Accl:mpropval>
+    <Accl:mpropval name="Save Intermediate Files" type="BoolType">
+      <Accl:value>False</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Separate Conformations" type="BoolType">
+      <Accl:value>True</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Steric Fraction" type="DoubleType">
+      <Accl:value>0.10</Accl:value>
+      <Accl:transformData>0.10</Accl:transformData>
+    </Accl:mpropval>
+    <Accl:mpropval name="Surface Grid Steps" type="LongType">
+      <Accl:value>18</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Use Molecular Surface" type="BoolType">
+      <Accl:value>True</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Use Non-polar Surface Area" type="BoolType">
+      <Accl:value>True</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Verbose" type="LongType">
+      <Accl:value>0</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="sp2-sp2 rotation" type="BoolType">
+      <Accl:value>True</Accl:value>
+    </Accl:mpropval>
+  </experiment>
+
+</ELU>

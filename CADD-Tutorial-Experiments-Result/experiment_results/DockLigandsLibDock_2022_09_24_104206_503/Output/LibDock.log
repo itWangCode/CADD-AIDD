@@ -1,0 +1,148 @@
+
+---------------------------------------------------------
+
+ BIOVIA, San Diego 2007
+ LibDock version: 2.3
+ Build date: Oct 14 2018
+
+ D. Diller & K. Merz (2001).
+ "High Throughput Docking for Library Design and Library Prioritization."
+ Proteins: Struct., Funct., and Genet. 43:113-124.
+
+---------------------------------------------------------
+
+Checked out license feature: DS_LibDock <v2009.03> [for msi<TeAM SolidSQUAD-SSQ>] (1 copy)
+
+
+Start time: Sat Sep 24 10:42:14 2022
+
+
+Reading: LibDock.inp parameter file
+Setting FE_STERIC_SOFTNESS = 0.50
+Setting FE_HBOND_SOFTNESS = 1.50
+Setting FE_HBOND_RMIN = 3.00
+Setting FE_HBOND_EPSILON = 2.00
+Setting FE_STERIC_RMIN = 4.05
+Setting FE_STERIC_EPSILON = 0.40
+Setting FE_METAL_ACC_RMIN = 2.20
+Setting FE_METAL_ACC_EPSILON = 6.00
+Setting APOLAR_POLAR_WT = 1.00
+Setting APOLAR_POLAR_PENALTY = 0.00
+Setting STERIC_OUTER_CUTOFF = 6.00
+Setting STERIC_INNER_CUTOFF = 5.00
+Setting HBOND_OUTER_CUTOFF = 4.00
+Setting HBOND_INNER_CUTOFF = 3.00
+Turning Electrostatic Repulsion off
+Setting ELEC_REP_SOFTNESS = 7.90
+Setting ELEC_REP_STRENGTH = 285.50
+Setting VDW_PENALTY_FACTOR = 10.00
+Setting VDW_PENALTY_FRACTION = 1.50
+Using the High Quality Parameters for the Surface Area
+Using the High Quality Parameters
+Host Name = AbdusemiAbduweli
+Verbose =  0
+SASA_WEIGHT = 0.20
+Grids for scoring = 
+Max Hits to Save = 100
+Max Hits to Optimize = 100
+Num BFGS Steps = 50
+Max Hits per Conformations = 30
+Max Number of Starting Conformations = 1000
+Maximum fraction of steric clashes = 0.10
+Final Cluster Radius = 0.50
+Final Score Cutoff = 0.50
+Apolar SASA Cutoff = 15.00
+Polar SASA Cutoff  = 5.00
+tSQ = 0.50
+tSQ_HB = 1.50
+HBondRmin = 3.00
+HBondRminSQ = 9.00
+HBondEpsilon = 2.00
+StericRmin = 4.05
+StericRminSQ = 16.40
+StericEpsilon = 0.40
+MetalAccRmin = 2.20
+MetalAccRminSQ = 4.84
+MetalAccEpsilon = 6.00
+ApolarPolarWt = 1.00
+ApolarPolarPenalty = 0.00
+global_outer_cutoff = 6.00
+global_inner_cutoff = 5.00
+global_outer_hb_cutoff = 4.00
+global_inner_hb_cutoff = 3.00
+HBondRepOn = 0
+tSQ_HB_REP = 7.90
+HBondRep =  285.50
+Intermediate Cluster Radius = 1.00
+Set Score Label: LibDockScore
+####################################################################
+####################### PARAMETER VALUES ###########################
+####################################################################
+#  HS_FILE                            Hotspots-3GEN.pdb
+#  DB_FILE                            sd_file.lst
+#  TOLERANCE                          0.25
+#  PROTEIN_PDB                        3GEN.pdb
+#  PROTEIN_FORMAT                     1
+#  XLO                                -26.74
+#  XHI                                -7.27
+#  YLO                                -3.02
+#  YHI                                16.46
+#  ZLO                                -24.83
+#  ZHI                                -5.35
+#  FAILED_FILE                        LibDock_out-fail.sd
+#  APPEND_SPOT_INFO                   1
+#  APPEND_RMSD_INFO                   0
+####################################################################
+##################### END OF PARAMETER VALUES ######################
+####################################################################
+Reading Hotspot file: Hotspots-3GEN.pdb
+Number of Polar Hotspots: 100
+Number of APolar Hotspots: 100
+Use Default Energy Parameters
+####################################################
+
+# Van der Waals parameters
+SP3_SP3_HT	2.00
+SP3_SP2_HT	15.00
+SP2_SP2_HT	1.00
+DOUBLE_BOND_HT	24.00
+ATTRACTIVE	6
+REPULSIVE	12
+H	1.00   0.05
+C	1.91   0.10
+O	1.66   0.20
+N	1.85   0.20
+S	2.00   0.20
+P	2.10   0.20
+I	2.03   0.20
+F	1.75   0.20
+CL	1.76   0.20
+BR	1.87   0.20
+B	2.01   0.09
+D	0.65   0.02
+A	0.00   0.00
+R	0.00   0.00
+####################################################
+
+There are 4350 atoms in that file
+There are 1150 protein atoms
+Protein Preparation time: 0.44 [s]
+
+==================
+1) File: molecule-1.sd
+Name: 3GEN_ligand conformers: 52
+Number of hits: 100
+CPU time: 3.19 [s]
+==================
+
+
+Ligands processed: 1
+
+
+100 Poses were saved in sd file format to: LibDock_out.sd
+
+CPU time: 3.73[s]
+End time: Sat Sep 24 10:42:17 2022
+
+
+Released LibDock License

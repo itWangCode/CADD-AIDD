@@ -1,0 +1,31 @@
+
+<ELU xmlns="http://www.accelrys.com/dsm/elu/2">
+  <experiment Expanded="" Guid="{66ABFCB6-8B67-4730-9887-EC33AD88B73B}" protocol="Protocols/BIOVIA Discovery Studio/Discovery Studio/Macromolecules/Homology Modeling/Verify Protein (Profiles-3D)" protocolName="Verify Protein (Profiles-3D)" version="1">
+    <Accl:mpropval name="ApplyToWindow" type="StringType">
+      <Accl:value>Input Protein Molecules</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="DSRunInteractive" type="BoolType">
+      <Accl:value>True</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Input Protein Molecules" type="ProteinsType">
+      <Accl:value>P2RY6:All</Accl:value>
+      <Accl:transformData>08e08b86-c319-a11d-66-c3-8c-40-ea-8e-93-4e</Accl:transformData>
+    </Accl:mpropval>
+    <Accl:mpropval name="Reporting" type="GroupType">
+      <Accl:value></Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Reporting Stylesheet" type="StylesheetType">
+      <Accl:value>{42691EC8-0CE0-4DB9-8B3C-5379CBB967A7}</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Save Intermediate Files" type="BoolType">
+      <Accl:value>False</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Secondary Structure Method" type="StringType">
+      <Accl:value>Kabsch-Sander</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Smooth Window Size" type="LongType">
+      <Accl:value>10</Accl:value>
+    </Accl:mpropval>
+  </experiment>
+
+</ELU>

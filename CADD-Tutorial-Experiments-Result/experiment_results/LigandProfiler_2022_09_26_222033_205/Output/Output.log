@@ -1,0 +1,39 @@
+[2022-09-26 22:20:34] ------------------------------------
+[2022-09-26 22:20:34] Protocol Name = 'Ligand Profiler'
+[2022-09-26 22:20:34] User Name = '16606'
+[2022-09-26 22:20:34] Run ID = '7E21EEB2-8F12-444F-BAB2-98DB7BF041F2'
+[2022-09-26 22:20:34] Client message: 'Read ligands'
+[2022-09-26 22:20:34] Client message: 'Read ligands'
+[2022-09-26 22:20:35] Client message: 'Preparing confgen.'
+[2022-09-26 22:20:35] Client message: 'Running confgen.'
+[2022-09-26 22:20:35] Started running 'confgen'
+[2022-09-26 22:25:23] Finished running 'confgen'
+[2022-09-26 22:25:24] Client message: 'Get file pharmacophores'
+[2022-09-26 22:25:25] Profiled 37 uniquely named molecules with 5 pharmacophores.
+[2022-09-26 22:25:26] Client message: 'Preparing citest.'
+[2022-09-26 22:25:26] Client message: 'Running citest.'
+[2022-09-26 22:25:26] Started running 'citest'
+[2022-09-26 22:25:30] Finished running 'citest'
+[2022-09-26 22:25:31] 35 molecules mapped to pharmacophore 5HT2c_ligands_1
+[2022-09-26 22:25:31] Client message: 'Preparing citest.'
+[2022-09-26 22:25:31] Client message: 'Running citest.'
+[2022-09-26 22:25:31] Started running 'citest'
+[2022-09-26 22:25:35] Finished running 'citest'
+[2022-09-26 22:25:35] 35 molecules mapped to pharmacophore 5HT2c_ligands_2
+[2022-09-26 22:25:36] Client message: 'Preparing citest.'
+[2022-09-26 22:25:36] Client message: 'Running citest.'
+[2022-09-26 22:25:36] Started running 'citest'
+[2022-09-26 22:25:40] Finished running 'citest'
+[2022-09-26 22:25:40] 35 molecules mapped to pharmacophore 5HT2c_ligands_3
+[2022-09-26 22:25:41] Client message: 'Preparing citest.'
+[2022-09-26 22:25:41] Client message: 'Running citest.'
+[2022-09-26 22:25:41] Started running 'citest'
+[2022-09-26 22:25:44] Finished running 'citest'
+[2022-09-26 22:25:45] 35 molecules mapped to pharmacophore 5HT2c_ligands_4
+[2022-09-26 22:25:45] Client message: 'Preparing citest.'
+[2022-09-26 22:25:45] Client message: 'Running citest.'
+[2022-09-26 22:25:45] Started running 'citest'
+[2022-09-26 22:25:49] Finished running 'citest'
+[2022-09-26 22:25:49] 35 molecules mapped to pharmacophore 5HT2c_ligands_5
+[2022-09-26 22:25:50] Client message: 'Format results'
+[2022-09-26 22:25:53] Final message: '35 ligands / 5 pharmacophores: all_ligands'

@@ -1,0 +1,106 @@
+
+<ELU xmlns="http://www.accelrys.com/dsm/elu/2">
+  <experiment Expanded="Parallel Processing,Server" Guid="{B9D5CEEE-FE17-4F0E-ACFC-626D1101B656}" protocol="Protocols/BIOVIA Discovery Studio/Discovery Studio/Macromolecules/Homology Modeling/Build Homology Models" protocolName="Build Homology Models" version="1">
+    <Accl:mpropval name="Additional Restraints" type="RestraintsOfAlignmentSequenceType">
+      <Accl:value></Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Advanced" type="GroupType">
+      <Accl:value></Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Cis-Prolines" type="CisprolinesOfAlignmentSequenceType">
+      <Accl:value></Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Copy From Templates" type="GroupType">
+      <Accl:value></Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Copy From Templates Ligands" type="LigandsOfAlignmentProteinstructureType">
+      <Accl:value></Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Copy From Templates Nucleic Acid Chains" type="NucleicacidchainsOfAlignmentProteinstructureType">
+      <Accl:value></Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Copy From Templates Protein" type="TemplatestructureOfAlignmentProteinstructureType">
+      <Accl:value></Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Copy From Templates Protein Copy Regions" type="RegionsOfAlignmentSequenceTemplatestructureType">
+      <Accl:value></Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Copy From Templates Protein Optimize Sidechains" type="BoolType">
+      <Accl:value>False</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Copy From Templates Waters" type="BoolType">
+      <Accl:value>False</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Cut Overhangs" type="BoolType">
+      <Accl:value>True</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="DSRunInteractive" type="BoolType">
+      <Accl:value>True</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Disulfide Bridges" type="SsbridgesOfAlignmentSequenceType">
+      <Accl:value></Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Input Model Sequence" type="SequenceOfAlignmentType">
+      <Accl:value>P2RY6</Accl:value>
+      <Accl:transformData>90747dec-2d67-a80c-fb-e9-2f-35-0e-d6-96-ea:e014fa90-450d-ded2-1c-79-4e-51-54-19-95-15</Accl:transformData>
+    </Accl:mpropval>
+    <Accl:mpropval name="Input Sequence Alignment" type="AlignmentType">
+      <Accl:value>P2RY6_templates:All</Accl:value>
+      <Accl:transformData>90747dec-2d67-a80c-fb-e9-2f-35-0e-d6-96-ea</Accl:transformData>
+    </Accl:mpropval>
+    <Accl:mpropval name="Input Template Structures" type="ProteinstructureOfAlignmentType">
+      <Accl:value>4XNV</Accl:value>
+      <Accl:transformData>90747dec-2d67-a80c-fb-e9-2f-35-0e-d6-96-ea:5c747a20-250b-d11b-be-92-09-c2-87-d5-24-96</Accl:transformData>
+    </Accl:mpropval>
+    <Accl:mpropval name="Number of Models" type="LongType">
+      <Accl:value>3</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Optimization Level" type="StringType">
+      <Accl:value>High</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Parallel Processing" type="BoolType">
+      <Accl:value>True</Accl:value>
+      <Accl:transformData>True</Accl:transformData>
+    </Accl:mpropval>
+    <Accl:mpropval name="Parallel Processing Preserve Order" type="BoolType">
+      <Accl:value>True</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Parallel Processing Server" type="StringType">
+      <Accl:value>localhost</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Parallel Processing Server Processes" type="StringType">
+      <Accl:value>6</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Queue Name" type="StringType">
+      <Accl:value></Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Refine Loops" type="BoolType">
+      <Accl:value>False</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Refine Loops Number of Models" type="LongType">
+      <Accl:value>1</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Refine Loops Optimization Level" type="StringType">
+      <Accl:value>High</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Refine Loops Use DOPE Method" type="StringType">
+      <Accl:value>True</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Reporting" type="GroupType">
+      <Accl:value></Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Reporting Stylesheet" type="StylesheetType">
+      <Accl:value>{42691EC8-0CE0-4DB9-8B3C-5379CBB967A7}</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Run On Grid" type="BoolType">
+      <Accl:value>False</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Save Intermediate Files" type="BoolType">
+      <Accl:value>False</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Start Model Index" type="LongType">
+      <Accl:value>1</Accl:value>
+    </Accl:mpropval>
+  </experiment>
+
+</ELU>

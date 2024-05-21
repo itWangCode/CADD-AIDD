@@ -1,0 +1,80 @@
+
+<ELU xmlns="http://www.accelrys.com/dsm/elu/2">
+  <experiment Expanded="Protonate,Build Loops,Advanced" Guid="{96DE73E3-0727-4B9F-951F-EA3A501FFB0E}" protocol="Protocols/BIOVIA Discovery Studio/Discovery Studio/Macromolecules/General Purpose/Prepare Protein" protocolName="Prepare Protein" version="1">
+    <Accl:mpropval name="Advanced" type="GroupType">
+      <Accl:value></Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Build Loops" type="BoolType">
+      <Accl:value>True</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="DSRunInteractive" type="BoolType">
+      <Accl:value>True</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Disulfide Bridges" type="StringType">
+      <Accl:value></Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Energy Cutoff" type="DoubleType">
+      <Accl:value>0.9</Accl:value>
+      <Accl:transformData>0.9</Accl:transformData>
+    </Accl:mpropval>
+    <Accl:mpropval name="Flexible Stem Residues" type="LongType">
+      <Accl:value>0</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Forcefield" type="StringType">
+      <Accl:value>CHARMm</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Input Protein" type="ProteinstructureType">
+      <Accl:value>3gen:3GEN</Accl:value>
+      <Accl:transformData>75aee9c8-2326-f362-f2-b5-64-b7-64-cd-65-32</Accl:transformData>
+    </Accl:mpropval>
+    <Accl:mpropval name="Ionic Strength" type="DoubleType">
+      <Accl:value>0.145</Accl:value>
+      <Accl:transformData>0.145</Accl:transformData>
+    </Accl:mpropval>
+    <Accl:mpropval name="Keep Ligands" type="BoolType">
+      <Accl:value>True</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Keep Water" type="StringType">
+      <Accl:value>None</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Loop Definition" type="StringType">
+      <Accl:value>SEQRES</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Loop List" type="StringType">
+      <Accl:value></Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Maximal Loop Length" type="LongType">
+      <Accl:value>20</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Protein Dielectric Constant" type="DoubleType">
+      <Accl:value>10</Accl:value>
+      <Accl:transformData>10</Accl:transformData>
+    </Accl:mpropval>
+    <Accl:mpropval name="Protonate" type="BoolType">
+      <Accl:value>True</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Reporting" type="GroupType">
+      <Accl:value></Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Reporting Stylesheet" type="StylesheetType">
+      <Accl:value>{42691EC8-0CE0-4DB9-8B3C-5379CBB967A7}</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Save Intermediate Files" type="BoolType">
+      <Accl:value>False</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Use CHARMm Minimization" type="BoolType">
+      <Accl:value>True</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Use Looper" type="BoolType">
+      <Accl:value>False</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Use Looper Maximal Loop Length" type="LongType">
+      <Accl:value>12</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="pH for Protonation" type="DoubleType">
+      <Accl:value>7.4</Accl:value>
+      <Accl:transformData>7.4</Accl:transformData>
+    </Accl:mpropval>
+  </experiment>
+
+</ELU>

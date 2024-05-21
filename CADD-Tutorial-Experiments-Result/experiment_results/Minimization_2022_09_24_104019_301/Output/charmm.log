@@ -1,0 +1,634 @@
+  
+ CHARMM>    banner
+1
+                 Chemistry at HARvard Macromolecular Mechanics
+                            (CHARMm) - Version 42.2                             
+       Copyright(c) 1984-2014  President and Fellows of Harvard College
+                              All Rights Reserved
+     Current operating system: Microsoft Windows [Version 10.0.22000.856]
+      
+                 Created on  9/24/22 at 10:40:22 by user: ABDUSEMIABDU
+
+            Maximum number of ATOMS:     60000, and RESidues:       20000
+  
+ CHARMM>    UPPER
+  
+ CHARMM>    BOMBLEVEL -2
+  
+ CHARMM>    WRNLEV 0
+  
+ CHARMM>    PRNLEV 5
+  
+ CHARMM>     
+  
+ CHARMM>     
+  
+ CHARMM>     
+  
+ CHARMM>    STREAM "ModelBuild.stream"
+ VOPEN> Attempting to open::ModelBuild.stream::
+ OPNLGU> Unit 98 opened for READONLY access to D:\Program Files\BIOVIA\PPS\web\jobs\16606\961EECD0-E749-4E37-8617-04B88973ED23\Intermediate\ModelBuild.stream
+
+                    INPUT STREAM SWITCHING TO UNIT    98
+ RDTITL> **
+ RDTITL> *
+ Parameter: IN1 <- "" <empty>
+  
+ CHARMM>    OPEN READ UNIT 21 CARD NAME "forcefield.rtf"
+ VOPEN> Attempting to open::forcefield.rtf::
+ OPNLGU> Unit 21 opened for READONLY access to D:\Program Files\BIOVIA\PPS\web\jobs\16606\961EECD0-E749-4E37-8617-04B88973ED23\Intermediate\forcefield.rtf
+  
+ CHARMM>    READ RTF UNIT 21 CARD
+ MAINIO> Residue topology file being read from unit  21.
+ TITLE> * ...
+ TITLE> * TOPOLOGY FILE FOR CHARMM VERSION 22   (ALL HYDROGENS)
+ TITLE> * ...
+ TITLE> * ...
+ TITLE> * COPYRIGHT (C) 1986, 1987, 1988, 1989, 1990, 1991, 1992
+ TITLE> * ACCELRYS INC.
+ TITLE> * CONFIDENTIAL AND PROPRIETARY: ALL RIGHTS RESERVED
+ TITLE> * ...
+ TITLE> * THIS FILE INCORPORATES AMINOH.RTF, AMINO2H.RTF,
+ TITLE> * AND PATCHAH.RTF. IT INCLUDES:
+ TITLE> * 1) FROM AMINOH.RTF- TOPOLOGY DEFINITIONS FOR THE TWENTY NATURALLY
+ TITLE> * OCCURRING AMINO ACIDS AND WATER.
+ TITLE> * 2) FROM AMINO2H.RTF- "abnormal" AMINO ACIDS AS WELL AS OTHER
+ TITLE> * AMINO ACID-LIKE STRUCTURES.
+ TITLE> * 3) FROM PATCHAH.RTF- PATCH RESIDUES FOR THE C AND N TERMINAL ENDS
+ TITLE> * OF POLYPEPTIDE CHAINS.
+ TITLE> * ...
+ TITLE> * HYDROGENS ARE SPECIFIED FOR ALL ATOMS, NEW CHARGES FOR NONPOLAR C AND H'S.
+ TITLE> * ...
+ TITLE> * LATEST MODIFICATION:  $DATE: 2009/10/28 21:45:43 $
+ TITLE> * ...
+ TITLE> *
+          RESI NO3   -1.0
+          PRES 5TER         0.00
+          PRES 5PHO       -0.54
+          PRES PYR          0.00
+          PRES CTER         -0.90
+  
+ CHARMM>    CLOSE UNIT 21
+ VCLOSE: Closing unit   21 with status "KEEP"
+  
+ CHARMM>     
+  
+ CHARMM>    OPEN READ UNIT 21 CARD NAME "molecule_missing.rtf"
+ VOPEN> Attempting to open::molecule_missing.rtf::
+ OPNLGU> Unit 21 opened for READONLY access to D:\Program Files\BIOVIA\PPS\web\jobs\16606\961EECD0-E749-4E37-8617-04B88973ED23\Intermediate\molecule_missing.rtf
+  
+ CHARMM>    READ RTF UNIT 21 CARD APPEND
+ MAINIO> Residue topology file being read from unit  21.
+ TITLE> * RTF FILE
+ TITLE> * ...
+ TITLE> *
+  
+ CHARMM>    CLOSE UNIT 21
+ VCLOSE: Closing unit   21 with status "KEEP"
+  
+ CHARMM>     
+  
+ CHARMM>    stream "readcustomrtf.stream"
+ VOPEN> Attempting to open::readcustomrtf.stream::
+ OPNLGU> Unit 97 opened for READONLY access to D:\Program Files\BIOVIA\PPS\web\jobs\16606\961EECD0-E749-4E37-8617-04B88973ED23\Intermediate\readcustomrtf.stream
+
+                    INPUT STREAM SWITCHING TO UNIT    97
+ RDTITL> **
+ RDTITL> *
+ Parameter: IN1 <- "" <empty>
+  
+ CHARMM>    open unit 20 read card name molecule_specific.rtf
+ VOPEN> Attempting to open::MOLECULE_SPECIFIC.RTF::
+ OPNLGU> Unit 20 opened for READONLY access to D:\Program Files\BIOVIA\PPS\web\jobs\16606\961EECD0-E749-4E37-8617-04B88973ED23\Intermediate\MOLECULE_SPECIFIC.RTF
+  
+ CHARMM>    read rtf card unit 20 append
+ MAINIO> Residue topology file being read from unit  20.
+ TITLE> * RTF FILE
+ TITLE> * ...
+ TITLE> *
+  
+ CHARMM>    close unit 20
+ VCLOSE: Closing unit   20 with status "KEEP"
+  
+ CHARMM>    open unit 21 read card name molecule_patch.rtf
+ VOPEN> Attempting to open::MOLECULE_PATCH.RTF::
+ OPNLGU> Unit 21 opened for READONLY access to D:\Program Files\BIOVIA\PPS\web\jobs\16606\961EECD0-E749-4E37-8617-04B88973ED23\Intermediate\MOLECULE_PATCH.RTF
+  
+ CHARMM>    read rtf card unit 21 append
+ MAINIO> Residue topology file being read from unit  21.
+ TITLE> * RTF FILE
+ TITLE> * ...
+ TITLE> *
+  
+ CHARMM>    close unit 21
+ VCLOSE: Closing unit   21 with status "KEEP"
+  
+ VCLOSE: Closing unit   97 with status "KEEP"
+
+                    RETURNING TO INPUT STREAM    98
+  
+ CHARMM>     
+  
+ CHARMM>    OPEN READ UNIT 20 CARD NAME "molecule.prm"
+ VOPEN> Attempting to open::molecule.prm::
+ OPNLGU> Unit 20 opened for READONLY access to D:\Program Files\BIOVIA\PPS\web\jobs\16606\961EECD0-E749-4E37-8617-04B88973ED23\Intermediate\molecule.prm
+  
+ CHARMM>    READ PARA UNIT 20 CARD
+
+          PARAMETER FILE BEING READ FROM UNIT 20
+ TITLE> * ACCELRYS GENERATED PARAMETER FILE FOR THE CHARMM FORCEFIELD.
+ TITLE> *
+ PARMIO> NONBOND, HBOND lists and IMAGE atoms cleared.
+  
+ CHARMM>    CLOSE UNIT 20
+ VCLOSE: Closing unit   20 with status "KEEP"
+  
+ CHARMM>    OPEN READ UNIT 20 CARD NAME "molecule_custom.prm"
+ VOPEN> Attempting to open::molecule_custom.prm::
+ OPNLGU> Unit 20 opened for READONLY access to D:\Program Files\BIOVIA\PPS\web\jobs\16606\961EECD0-E749-4E37-8617-04B88973ED23\Intermediate\molecule_custom.prm
+  
+ CHARMM>    READ PARA UNIT 20 CARD APPEND
+
+          PARAMETER FILE BEING READ FROM UNIT 20
+ TITLE> * ACCELRYS GENERATED PARAMETER FILE FOR THE CHARMM FORCEFIELD.
+ TITLE> *
+ PARMIO> NONBOND, HBOND lists and IMAGE atoms cleared.
+  
+ CHARMM>    CLOSE UNIT 20
+ VCLOSE: Closing unit   20 with status "KEEP"
+  
+ CHARMM>     
+  
+ CHARMM>    stream "readseq.stream"
+ VOPEN> Attempting to open::readseq.stream::
+ OPNLGU> Unit 97 opened for READONLY access to D:\Program Files\BIOVIA\PPS\web\jobs\16606\961EECD0-E749-4E37-8617-04B88973ED23\Intermediate\readseq.stream
+
+                    INPUT STREAM SWITCHING TO UNIT    97
+ RDTITL> **
+ RDTITL> *
+ Parameter: IN1 <- "" <empty>
+  
+ CHARMM>    open unit 20 read form name 1.crd
+ VOPEN> Attempting to open::1.CRD::
+ OPNLGU> Unit 20 opened for READONLY access to D:\Program Files\BIOVIA\PPS\web\jobs\16606\961EECD0-E749-4E37-8617-04B88973ED23\Intermediate\1.CRD
+  
+ CHARMM>    read sequ coor unit 20
+ MAINIO> Sequence information being read from unit  20.
+ TITLE> * CRD FILE GENERATED BY ACCELRYS DISCOVERY STUDIO USING THE CHARMM FORCEFIELD
+ TITLE> *
+
+          RESIDUE SEQUENCE --     1 RESIDUES
+          R01 
+  
+ CHARMM>    close unit 20
+ VCLOSE: Closing unit   20 with status "KEEP"
+  
+ CHARMM>    generate 1 first none last none
+ NO PATCHING WILL BE DONE ON THE FIRST RESIDUE
+ NO PATCHING WILL BE DONE ON THE LAST  RESIDUE
+ GENPSF> Segment   1 has been generated. Its identifier is 1.
+ PSFSUM> PSF modified: NONBOND lists and IMAGE atoms cleared.
+ PSFSUM> Summary of the structure file counters :
+         Number of segments      =        1   Number of residues   =        1
+         Number of atoms         =       50   Number of groups     =        1
+         Number of bonds         =       54   Number of angles     =       93
+         Number of dihedrals     =      143   Number of impropers  =       20
+         Number of cross-terms   =        0
+         Number of HB acceptors  =        0   Number of HB donors  =        0
+         Number of NB exclusions =        0   Total charge =    0.00000
+  
+ CHARMM>     
+  
+ VCLOSE: Closing unit   97 with status "KEEP"
+
+                    RETURNING TO INPUT STREAM    98
+  
+ CHARMM>    stream "readdeoxy.stream"
+ VOPEN> Attempting to open::readdeoxy.stream::
+ OPNLGU> Unit 97 opened for READONLY access to D:\Program Files\BIOVIA\PPS\web\jobs\16606\961EECD0-E749-4E37-8617-04B88973ED23\Intermediate\readdeoxy.stream
+
+                    INPUT STREAM SWITCHING TO UNIT    97
+ RDTITL> **
+ RDTITL> *
+ Parameter: IN1 <- "" <empty>
+  
+ VCLOSE: Closing unit   97 with status "KEEP"
+
+                    RETURNING TO INPUT STREAM    98
+  
+ CHARMM>    stream "disulnk.stream"
+ VOPEN> Attempting to open::disulnk.stream::
+ OPNLGU> Unit 97 opened for READONLY access to D:\Program Files\BIOVIA\PPS\web\jobs\16606\961EECD0-E749-4E37-8617-04B88973ED23\Intermediate\disulnk.stream
+
+                    INPUT STREAM SWITCHING TO UNIT    97
+ RDTITL> ** STREAM FILE TO BUILD DISULFIDE BOND
+ RDTITL> *
+ Parameter: IN1 <- "" <empty>
+  
+ VCLOSE: Closing unit   97 with status "KEEP"
+
+                    RETURNING TO INPUT STREAM    98
+  
+ CHARMM>    stream "patchlnk.stream"
+ VOPEN> Attempting to open::patchlnk.stream::
+ OPNLGU> Unit 97 opened for READONLY access to D:\Program Files\BIOVIA\PPS\web\jobs\16606\961EECD0-E749-4E37-8617-04B88973ED23\Intermediate\patchlnk.stream
+
+                    INPUT STREAM SWITCHING TO UNIT    97
+ RDTITL> **
+ RDTITL> *
+ Parameter: IN1 <- "" <empty>
+  
+ VCLOSE: Closing unit   97 with status "KEEP"
+
+                    RETURNING TO INPUT STREAM    98
+  
+ CHARMM>    autogen angles dihedrals
+ AUTOGEN: All angles are removed and regenerated.
+ AUTOGEN: All dihedrals are removed and regenerated.
+ PSFSUM> PSF modified: NONBOND lists and IMAGE atoms cleared.
+ PSFSUM> Summary of the structure file counters :
+         Number of segments      =        1   Number of residues   =        1
+         Number of atoms         =       50   Number of groups     =        1
+         Number of bonds         =       54   Number of angles     =       93
+         Number of dihedrals     =      143   Number of impropers  =       20
+         Number of cross-terms   =        0
+         Number of HB acceptors  =        0   Number of HB donors  =        0
+         Number of NB exclusions =        0   Total charge =    0.00000
+  
+ CHARMM>    stream "readcrd.stream"
+ VOPEN> Attempting to open::readcrd.stream::
+ OPNLGU> Unit 97 opened for READONLY access to D:\Program Files\BIOVIA\PPS\web\jobs\16606\961EECD0-E749-4E37-8617-04B88973ED23\Intermediate\readcrd.stream
+
+                    INPUT STREAM SWITCHING TO UNIT    97
+ RDTITL> **
+ RDTITL> *
+ Parameter: IN1 <- "" <empty>
+  
+ CHARMM>    open unit 20 read card name 1.crd
+ VOPEN> Attempting to open::1.CRD::
+ OPNLGU> Unit 20 opened for READONLY access to D:\Program Files\BIOVIA\PPS\web\jobs\16606\961EECD0-E749-4E37-8617-04B88973ED23\Intermediate\1.CRD
+  
+ CHARMM>    read coor card unit 20
+          SPATIAL COORDINATES BEING READ FROM UNIT 20
+ TITLE> * CRD FILE GENERATED BY ACCELRYS DISCOVERY STUDIO USING THE CHARMM FORCEFIELD
+ TITLE> *
+  
+ CHARMM>    close unit 20
+ VCLOSE: Closing unit   20 with status "KEEP"
+  
+ CHARMM>     
+  
+ VCLOSE: Closing unit   97 with status "KEEP"
+
+                    RETURNING TO INPUT STREAM    98
+  
+ CHARMM>    OPEN WRITE UNIT 20 CARD NAME "molecule.psf"
+ VOPEN> Attempting to open::molecule.psf::
+ OPNLGU> Unit 20 opened for WRITE access to D:\Program Files\BIOVIA\PPS\web\jobs\16606\961EECD0-E749-4E37-8617-04B88973ED23\Intermediate\molecule.psf
+  
+ CHARMM>    WRITE PSF UNIT 20 CARD
+ RDTITL> * USING CHARMM FORCEFIELD
+ RDTITL> *
+  
+ CHARMM>    CLOSE UNIT 20
+ VCLOSE: Closing unit   20 with status "KEEP"
+  
+ CHARMM>    define missing sele .not. init show end
+ The following atoms are currently set:
+SEGId RESId RESName  .. TYPEs ..
+ SELRPN>      0 atoms have been selected out of     50
+  
+ VCLOSE: Closing unit   98 with status "KEEP"
+
+                    RETURNING TO INPUT STREAM    99
+  
+ CHARMM>     
+  
+ CHARMM>    STREAM "block.stream"
+ VOPEN> Attempting to open::block.stream::
+ OPNLGU> Unit 98 opened for READONLY access to D:\Program Files\BIOVIA\PPS\web\jobs\16606\961EECD0-E749-4E37-8617-04B88973ED23\Intermediate\block.stream
+
+                    INPUT STREAM SWITCHING TO UNIT    98
+ RDTITL>  
+ Parameter: IN1 <- "" <empty>
+  
+ CHARMM>     
+  
+ VCLOSE: Closing unit   98 with status "KEEP"
+
+                    RETURNING TO INPUT STREAM    99
+  
+ CHARMM>     
+  
+ CHARMM>    STREAM "noneSolvation.stream"
+ VOPEN> Attempting to open::noneSolvation.stream::
+ OPNLGU> Unit 98 opened for READONLY access to D:\Program Files\BIOVIA\PPS\web\jobs\16606\961EECD0-E749-4E37-8617-04B88973ED23\Intermediate\noneSolvation.stream
+
+                    INPUT STREAM SWITCHING TO UNIT    98
+ RDTITL> *STREAM FILE FOR CALCULATIONS IN VACUUM (NONE SOLVATION)
+ RDTITL> *
+ Parameter: IN1 <- "" <empty>
+  
+ CHARMM>    NBONDS CDIE EPS 1
+
+ NONBOND OPTION FLAGS: 
+     ELEC     VDW      ATOMs    CDIElec  SWITch   VATOm    VSWItch 
+     BYGRoup  NOEXtnd  NOEWald 
+ CUTNB  = 15.000 CTEXNB =999.000 CTONNB = 11.000 CTOFNB = 14.000
+ CGONNB =  0.000 CGOFNB = 10.000
+ WMIN   =  1.500 WRNMXD =  0.500 E14FAC =  0.500 EPS    =  1.000
+ NBXMOD =      5
+ There are        0 atom  pairs and        0 atom  exclusions.
+ There are        0 group pairs and        0 group exclusions.
+ <MAKINB> with mode   5 found    147 exclusions and    124 interactions(1-4)
+ <MAKGRP> found      0 group exclusions.
+ Generating nonbond list with Exclusion mode = 5
+ == PRIMARY == SPACE FOR     1201 ATOM PAIRS AND        0 GROUP PAIRS
+
+ General atom nonbond list generation found:
+     1077 ATOM PAIRS WERE FOUND FOR ATOM LIST
+        1 GROUP PAIRS REQUIRED ATOM SEARCHES
+
+  
+ CHARMM>     
+  
+ CHARMM>     
+  
+ CHARMM>     
+  
+ CHARMM>     
+  
+ CHARMM>     
+  
+ CHARMM>     
+  
+ CHARMM>     
+  
+ VCLOSE: Closing unit   98 with status "KEEP"
+
+                    RETURNING TO INPUT STREAM    99
+  
+ CHARMM>     
+  
+ CHARMM>    STREAM "nonbond.stream"
+ VOPEN> Attempting to open::nonbond.stream::
+ OPNLGU> Unit 98 opened for READONLY access to D:\Program Files\BIOVIA\PPS\web\jobs\16606\961EECD0-E749-4E37-8617-04B88973ED23\Intermediate\nonbond.stream
+
+                    INPUT STREAM SWITCHING TO UNIT    98
+ RDTITL> *NONBOND STREAM FILE TEMPLATE
+ RDTITL> *
+ Parameter: IN1 <- "" <empty>
+  
+ CHARMM>    FAST ON
+ MISCOM> FAST option: EXPANDED (limited fast routines)
+  
+ CHARMM>    NBONDS CUTNB 14.0 CTOFNB 12.0 CTONNB 10.0
+
+ NONBOND OPTION FLAGS: 
+     ELEC     VDW      ATOMs    CDIElec  SWITch   VATOm    VSWItch 
+     BYGRoup  NOEXtnd  NOEWald 
+ CUTNB  = 14.000 CTEXNB =999.000 CTONNB = 10.000 CTOFNB = 12.000
+ CGONNB =  0.000 CGOFNB = 10.000
+ WMIN   =  1.500 WRNMXD =  0.500 E14FAC =  0.500 EPS    =  1.000
+ NBXMOD =      5
+ There are     1077 atom  pairs and      271 atom  exclusions.
+ There are        0 group pairs and        0 group exclusions.
+ Generating nonbond list with Exclusion mode = 5
+ == PRIMARY == SPACE FOR     1201 ATOM PAIRS AND        0 GROUP PAIRS
+
+ General atom nonbond list generation found:
+     1069 ATOM PAIRS WERE FOUND FOR ATOM LIST
+        1 GROUP PAIRS REQUIRED ATOM SEARCHES
+
+  
+ CHARMM>     
+  
+ VCLOSE: Closing unit   98 with status "KEEP"
+
+                    RETURNING TO INPUT STREAM    99
+  
+ CHARMM>     
+  
+ CHARMM>    !Cleans up all previous constraints
+ CHARMM>    !clean up all fixed constraint
+ CHARMM>    CONS FIX SELE NONE END
+ SELRPN>      0 atoms have been selected out of     50
+  
+ CHARMM>    !clean up all harmonic restraint
+ CHARMM>    CONS HARM CLEAR
+  
+ CHARMM>    !clean all distance constraints
+ CHARMM>    NOE
+  
+    NOE>     RESET
+  
+    NOE>     END
+ NOE:  CURRENT NUMBER OF CONSTRAINTS=   0
+  
+ CHARMM>    !clean up all dihedral constraints
+ CHARMM>    CONS CLDH
+  
+ CHARMM>     
+  
+ CHARMM>    SHAKE OFF
+ SHKCOM> SHAKE constraints removed.
+  
+ CHARMM>     
+  
+ CHARMM>     
+  
+ CHARMM>     
+  
+ CHARMM>     
+  
+ CHARMM>    MINI SD NSTEP 1000 NPRINT 50 TOLGRD 3
+
+ NONBOND OPTION FLAGS: 
+     ELEC     VDW      ATOMs    CDIElec  SWITch   VATOm    VSWItch 
+     BYGRoup  NOEXtnd  NOEWald 
+ CUTNB  = 14.000 CTEXNB =999.000 CTONNB = 10.000 CTOFNB = 12.000
+ CGONNB =  0.000 CGOFNB = 10.000
+ WMIN   =  1.500 WRNMXD =  0.500 E14FAC =  0.500 EPS    =  1.000
+ NBXMOD =      5
+ There are     1069 atom  pairs and      271 atom  exclusions.
+ There are        0 group pairs and        0 group exclusions.
+ Generating nonbond list with Exclusion mode = 5
+ == PRIMARY == SPACE FOR     1201 ATOM PAIRS AND        0 GROUP PAIRS
+
+ General atom nonbond list generation found:
+     1069 ATOM PAIRS WERE FOUND FOR ATOM LIST
+        1 GROUP PAIRS REQUIRED ATOM SEARCHES
+
+
+
+ STEEPD> An energy minimization has been requested.
+
+ NSTEP  =         1000   NPRINT =           50
+ STEP   =    0.0200000   TOLFUN =    0.0000000
+ TOLGRD =    3.0000000   TOLSTP =    0.0000000
+
+MINI MIN: Cycle      ENERgy      Delta-E         GRMS    Step-size
+MINI INTERN:          BONDs       ANGLes       UREY-b    DIHEdrals    IMPRopers
+MINI EXTERN:        VDWaals         ELEC       HBONds          ASP         USER
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>        0     36.25290      0.00000     24.83471      0.02000
+MINI INTERN>       20.76345     21.12767      0.00000     22.73297      0.00186
+MINI EXTERN>        9.30057    -37.67361      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+
+ STEEPD> Minimization exiting with gradient tolerance ( 3.0000000) satisfied.
+
+STPD MIN: Cycle      ENERgy      Delta-E         GRMS    Step-size
+STPD INTERN:          BONDs       ANGLes       UREY-b    DIHEdrals    IMPRopers
+STPD EXTERN:        VDWaals         ELEC       HBONds          ASP         USER
+ ----------       ---------    ---------    ---------    ---------    ---------
+STPD>        7      7.90701     28.34590      1.97310      0.00259
+STPD INTERN>        1.19868     13.16734      0.00000     23.02233      0.03533
+STPD EXTERN>        8.37904    -37.89571      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+  
+ CHARMM>     
+  
+ CHARMM>     
+  
+ CHARMM>    MINI  CONJ  NSTEP  2000 NPRINT 50 -
+ CHARMM>     TOLGRD  0.1  TOLENR  0.0  TOLSTP  0.000000
+
+ NONBOND OPTION FLAGS: 
+     ELEC     VDW      ATOMs    CDIElec  SWITch   VATOm    VSWItch 
+     BYGRoup  NOEXtnd  NOEWald 
+ CUTNB  = 14.000 CTEXNB =999.000 CTONNB = 10.000 CTOFNB = 12.000
+ CGONNB =  0.000 CGOFNB = 10.000
+ WMIN   =  1.500 WRNMXD =  0.500 E14FAC =  0.500 EPS    =  1.000
+ NBXMOD =      5
+ There are     1069 atom  pairs and      271 atom  exclusions.
+ There are        0 group pairs and        0 group exclusions.
+ Generating nonbond list with Exclusion mode = 5
+ == PRIMARY == SPACE FOR     1201 ATOM PAIRS AND        0 GROUP PAIRS
+
+ General atom nonbond list generation found:
+     1070 ATOM PAIRS WERE FOUND FOR ATOM LIST
+        1 GROUP PAIRS REQUIRED ATOM SEARCHES
+
+
+
+ CONJUG> An energy minimization has been requested.
+
+ NCGCYC =          100   NSTEP  =         2000
+ PCUT   =    0.9999000   PRTMIN =            1
+ STEP   =    0.0200000   TOLFUN =    0.0000000
+ TOLGRD =    0.1000000   TOLITR =          100
+ TOLSTP =    0.0000000
+
+MINI MIN: Cycle      ENERgy      Delta-E         GRMS    Step-size
+MINI INTERN:          BONDs       ANGLes       UREY-b    DIHEdrals    IMPRopers
+MINI EXTERN:        VDWaals         ELEC       HBONds          ASP         USER
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>        0      7.90701     28.34590      1.97310      0.00000
+MINI INTERN>        1.19868     13.16734      0.00000     23.02233      0.03533
+MINI EXTERN>        8.37904    -37.89571      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>       50      1.72212      6.18489      0.53675      0.04872
+MINI INTERN>        0.97307     12.61350      0.00000     24.36989      0.04174
+MINI EXTERN>        4.02313    -40.29921      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>      100      1.11824      0.60388      0.20499      0.02614
+MINI INTERN>        1.01814     12.20450      0.00000     24.60301      0.02477
+MINI EXTERN>        4.11411    -40.84630      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>      100      1.11824      0.60388      0.20499      0.00000
+MINI INTERN>        1.01814     12.20450      0.00000     24.60301      0.02477
+MINI EXTERN>        4.11411    -40.84630      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>      150      1.00269      0.11555      0.16905      0.01206
+MINI INTERN>        0.97244     11.82665      0.00000     25.05838      0.02395
+MINI EXTERN>        3.96249    -40.84123      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+
+ CONJUG> Minimization exiting with gradient tolerance ( 0.1000000) satisfied.
+
+CONJ MIN: Cycle      ENERgy      Delta-E         GRMS    Step-size
+CONJ INTERN:          BONDs       ANGLes       UREY-b    DIHEdrals    IMPRopers
+CONJ EXTERN:        VDWaals         ELEC       HBONds          ASP         USER
+ ----------       ---------    ---------    ---------    ---------    ---------
+CONJ>      163      0.97763      0.02505      0.08795      0.02000
+CONJ INTERN>        0.99233     11.63986      0.00000     25.22069      0.02245
+CONJ EXTERN>        4.00237    -40.90006      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+  
+ CHARMM>     
+  
+ CHARMM>    IOFOrmat exte
+ MISCOM> Expanded I/O format is used.
+  
+ CHARMM>    OPEN WRIT UNIT 51 CARD NAME "3GEN_ligand_mini.crd"
+ VOPEN> Attempting to open::3GEN_ligand_mini.crd::
+ OPNLGU> Unit 51 opened for WRITE access to D:\Program Files\BIOVIA\PPS\web\jobs\16606\961EECD0-E749-4E37-8617-04B88973ED23\Intermediate\3GEN_ligand_mini.crd
+  
+ CHARMM>    WRIT COOR UNIT 51 CARD
+ RDTITL> CLOSE UNIT 51
+ VCLOSE: Closing unit   51 with status "KEEP"
+  
+ CHARMM>    CLOSE UNIT 51
+  
+ CHARMM>     
+  
+ CHARMM>    ENERGY
+
+ NONBOND OPTION FLAGS: 
+     ELEC     VDW      ATOMs    CDIElec  SWITch   VATOm    VSWItch 
+     BYGRoup  NOEXtnd  NOEWald 
+ CUTNB  = 14.000 CTEXNB =999.000 CTONNB = 10.000 CTOFNB = 12.000
+ CGONNB =  0.000 CGOFNB = 10.000
+ WMIN   =  1.500 WRNMXD =  0.500 E14FAC =  0.500 EPS    =  1.000
+ NBXMOD =      5
+ There are     1070 atom  pairs and      271 atom  exclusions.
+ There are        0 group pairs and        0 group exclusions.
+ Generating nonbond list with Exclusion mode = 5
+ == PRIMARY == SPACE FOR     1201 ATOM PAIRS AND        0 GROUP PAIRS
+
+ General atom nonbond list generation found:
+     1068 ATOM PAIRS WERE FOUND FOR ATOM LIST
+        1 GROUP PAIRS REQUIRED ATOM SEARCHES
+
+ENER ENR:  Eval#     ENERgy      Delta-E         GRMS
+ENER INTERN:          BONDs       ANGLes       UREY-b    DIHEdrals    IMPRopers
+ENER EXTERN:        VDWaals         ELEC       HBONds          ASP         USER
+ ----------       ---------    ---------    ---------    ---------    ---------
+ENER>        0      0.97763      0.02505      0.08795
+ENER INTERN>        0.99233     11.63986      0.00000     25.22069      0.02245
+ENER EXTERN>        4.00237    -40.90006      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+  
+ CHARMM>     
+  
+ CHARMM>    STOP
+ VCLOSE: Closing unit    6 with status "KEEP"
+ VCLOSE: Closing unit   99 with status "KEEP"
+
+      $$$$$$  New timer profile Local node$$$$$
+
+         Electrostatic & VDW             0.01 Other:            0.00
+      Nonbond force                   0.01 Other:            0.00
+         Angle energy                    0.00 Other:            0.00
+         Dihedral energy                 0.01 Other:            0.00
+      INTRNL energy                   0.01 Other:            0.00
+   Energy time                     0.02 Other:            0.00
+ Total time                      0.16 Other:            0.14
+
+         $$$$$$  Average   profile $$$$$
+
+         Electrostatic & VDW             0.01 Other:            0.00
+      Nonbond force                   0.01 Other:            0.00
+         Angle energy                    0.00 Other:            0.00
+         Dihedral energy                 0.01 Other:            0.00
+      INTRNL energy                   0.01 Other:            0.00
+   Energy time                     0.02 Other:            0.00
+ Total time                      0.16 Other:            0.14
+
+                    NORMAL TERMINATION BY NORMAL STOP
+                    NO WARNINGS WERE ISSUED
+
+                    $$$$$ JOB ACCOUNTING INFORMATION $$$$$
+                     ELAPSED TIME:     0.25  SECONDS 
+                         CPU TIME:     0.20  SECONDS 

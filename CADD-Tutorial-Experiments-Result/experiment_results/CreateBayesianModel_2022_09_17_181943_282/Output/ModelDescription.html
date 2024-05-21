@@ -1,0 +1,158 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<TITLE>Model MY_Bayesian</TITLE>
+  <style type="text/css">
+  table { 
+	width: 800.0px;
+	border-collapse: collapse; 
+	font-family: sans-serif; 
+	font-size: xx-small;
+  }
+  th {
+	border-width: 1px;
+	padding: 3px;
+	border-style: outset;
+	border-color: black;
+	background-color: #b0c4de;
+  }
+  td {
+	border-width: 1px;
+	padding: 3px;
+	border-style: outset;
+	border-color: black;
+	background-color: #f2f2f2;
+  }
+  h1 {
+	font-family: sans-serif;
+	font-size: large;
+	margin-bottom: 3px;
+  }
+  h5 {
+	font-family: sans-serif;
+	font-size: medium;
+	margin-bottom: 3px;
+  }
+  p {
+	font-family: sans-serif; 
+	font-size: xx-small;
+  }
+  </style>
+</HEAD>
+<BODY>
+<h1>Model MY_Bayesian</h1>
+<!-- Header -->
+<A name="Top"></A><P>Calculates the property MY_Bayesian. </P>
+<P></P><P>The document contains these additional sections of information:<br><A href="#ValidationTable"><B>Cross-validation Results</B></A><br><A href="#EnrichmentTable"><B>Enrichment Results</B></A><br><A href="#PercentileTable"><B>Percentile Results</B></A><br><A href="#CategoryStatisticsTable"><B>Category Statistics Results</B></A><br><A href="#NonValidatedTable"><B>Non-validated Models Results</B></A><br><A href="#TrainingData"><B>Training Data Information</B></A><br><A href="#ConstructionInfo"><B>Model Construction Information</B></A><br><A href="#ModelParameters"><B>Model Construction Parameters</B></A><!-- Section -->
+<!-- LinkText: Cross-validation Results-->
+<P><A name="ValidationTable"></A><U><H5>Leave-one-out Cross-Validation Results</H5></U></P><P>This model was built using 457 samples, and validated using a leave-one-out cross-validation. Each sample was left out one at a time, and a model built using the results of the samples, and that model used to predict the left-out sample. Once all the samples had predictions, a ROC plot was generated, and the area under the curve (<strong>XV ROC AUC</strong>) calculated.</P>
+<P><strong>Best Split</strong> was calculated by picking the split that minimized the sum of the percent misclassified for category members and for category nonmembers, using the cross-validated score for each sample. Using that split, a contingency table is constructed, containing the number of true positives (<strong>TP</strong>), false negatives (<strong>FN</strong>), false positives (<strong>FP</strong>), and true negatives (<strong>TN</strong>). </P>
+<table>
+<tr><th>Output</th><th>XV ROC AUC</th><th>Best Split</th><th>TP/FN<br>FP/TN</th>
+<th># in Category</th></tr>
+<tr><td>MY_Bayesian</td>
+<td>0.992</td><td>-6.017</td><td align=center>210/11<br>3/233</td><td>221</td></tr>
+</table>
+<!-- Section -->
+<!-- LinkText: Enrichment Results-->
+<P><A name="EnrichmentTable"></A><U><H5>Enrichment Results</H5></U><P align="right"><A href="#Top"><I>Back to Top</I></A></P></P><P>This model was built using 457 samples, and validated using a leave-one-out cross-validation. Each sample was left out one at a time, and a model built using the results of the samples, and that model used to predict the left-out sample. Once all the samples had predictions, an enrichment plot was generated, and the percentage of true category members captured at a particular percentage cutoff. (For example, in a column labeled "1%" would be the percentage of true category members (e.g., actives) that were found in the top 1% of the list, when sorted by the model score.)</P>
+<P>This table shows the output name, the percentage of samples that are in that particular category, the number of category members, and the percentage of true members found. Percentages that are less than 100% are in <b>bold</b>.</P>
+<table>
+<tr><th>Output</th><th><center>Category %</center></th><th>1%</th><th>5%</th><th>10%</th><th>25%</th><th>50%</th><th>75%</th><th>90%</th><th>95%</th><th>99%</th><tr>
+<td>MY_Bayesian</td>
+<td><center>48.359%</center></td><td><b>1.8%</b></td><td><b>10%</b></td><td><b>20.4%</b></td><td><b>51.6%</b></td><td><b>96.8%</b></td><td>100%</td><td>100%</td><td>100%</td><td>100%</td></tr>
+</table>
+<!-- Section -->
+<!-- LinkText: Percentile Results-->
+<P><A name="PercentileTable"></A><U><H5>Percentile Results</H5></U><P align="right"><A href="#Top"><I>Back to Top</I></A></P></P><P>This table shows, for each model, the cutoff needed to capture a particular percentage of the good samples. For each cutoff, it shows below the estimated percentages of false positives and true negatives for the non-good samples. This table is designed to help you pick the cutoff value that best balances your desire to capture as many good samples as possible, while keeping the number of false positives at a minimum.</P>
+<P>The rates shown in this table are estimates derived from the cross-validated data; the actual numbers you would find on your own data may vary.</P>
+<P>Cutoffs which lead to 10% or greater false positives are displayed in <B>bold</B> for ease of identification. </P>
+<table>
+<tr><th>Model Name</th><th>99%</th><th>95%</th><th>90%</th>
+<th>70%</th><th>50%</th><th>30%</th><th>10%</th><th>5%</th><th>1%</th></tr>
+<tr><td>MY_Bayesian</td><td>-10.829<br><B>11%</B>/89%</td>
+<td>-1.734<br>2%/98%</td>
+<td>3.203<br>1%/99%</td>
+<td>8.660<br>1%/99%</td>
+<td>19.704<br>1%/99%</td>
+<td>30.748<br>1%/99%</td>
+<td>36.205<br>1%/99%</td>
+<td>41.143<br>1%/99%</td>
+<td>50.238<br>1%/99%</td>
+</tr>
+</table>
+<!-- Section -->
+<!-- LinkText: Category Statistics Results-->
+<P><A name="CategoryStatisticsTable"></A><U><H5>Category Statistics Results</H5></U><P align="right"><A href="#Top"><I>Back to Top</I></A></P></P><P>This table shows, for each category, statistics derived from the cross-validated predictions of the model built for that category as applied to members of that category and non-members of that category.  For each group, the number of members/nonmembers (N) is given; the mean prediction for each subset (Mean); and the estimate standard deviation of the predictions for each subset (StdDev).</P>
+<P>(Categories with one or no members do not have a mean and standard deviation, as there are too few predictions upon which to base them during cross-validation. Also, occasionally categories may contain many duplicate or highly-similar compounds which predict close or identical values, causing them to have unusually low standard deviation values.  These low values may be adjusted at time of use of these standard deviations for predicting, for example, percentile results.)</P>
+<table><tr><th>Output</th><th><center>Category<br>N</center></th><th><center>Category<br>Mean&nbsp;(&#0177;StdDev)</center></th><th><center>Noncategory<br>N</center></th><th><center>Noncategory<br>Mean&nbsp;(&#0177;StdDev)</center></th></tr>
+<tr>
+<td>MY_Bayesian</td><td><center>221</center></td><td><center>19.70&nbsp;(&#0177;12.99)</center></td></td><td><center>236</center></td><td><center>-22.10&nbsp;(&#0177;9.06)</center></td></td></tr>
+</table>
+<!-- Section -->
+<!-- LinkText: Non-validated Models Results-->
+<P><A name="NonValidatedTable"></A><U><H5>Non-validated Models Results</H5></U><P align="right"><A href="#Top"><I>Back to Top</I></A></P></P><P>All categories contained enough samples for cross-validation.</P>
+<!-- Section -->
+<!-- LinkText: Training Data Information-->
+<P><A name="TrainingData"></A><U><H5>Training Data Information</H5></U><P align="right"><A href="#Top"><I>Back to Top</I></A></P></P><p>The data used to train the model consisted of 457 samples. The following are the statistics for the independent (X) properties.</p>
+<table>
+<tr><th>Property</th><th>Min</th><th>Max</th><th>Mean</th><th>Std. Dev.</th></tr>
+<tr><td>ALogP</td><td>-2.331</td><td>8.437</td><td>4.2156</td><td>1.82</td></tr>
+<tr><td>Molecular_Weight</td><td>172.02</td><td>775.86</td><td>437.5</td><td>94.941</td></tr>
+<tr><td>Num_H_Donors</td><td>0</td><td>4</td><td>1.0372</td><td>0.89537</td></tr>
+<tr><td>Num_H_Acceptors</td><td>0</td><td>10</td><td>4.1291</td><td>1.6455</td></tr>
+<tr><td>Num_RotatableBonds</td><td>0</td><td>20</td><td>5.1597</td><td>2.8886</td></tr>
+<tr><td>Num_Rings</td><td>0</td><td>7</td><td>3.5492</td><td>1.3631</td></tr>
+<tr><td>Num_AromaticRings</td><td>0</td><td>5</td><td>2.5405</td><td>1.1718</td></tr>
+<tr><td>Molecular_FractionalPolarSurfaceArea</td><td>0</td><td>0.657</td><td>0.20343</td><td>0.081987</td></tr>
+<tr><td>ECFP_6</td><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td></tr>
+</table>
+<p>The test to identify "good" samples is: <pre>property("activity") is defined AND property("activity") = 1</pre></p>
+You can extend this model by adding your own training data to it to create a new model. Use the <I>New Model from Old</I> component to do this. The new training samples must contain the properties as specified above (except that they need not contain properties that can be calculated on-demand). The "good" samples must be marked so that they can be identified by the above test. Because the original training data were not saved with this model, you will not be able to compute cross-validation statistics for the new model.<!-- Section -->
+<!-- LinkText: Model Construction Information-->
+<P><A name="ConstructionInfo"></A><U><H5>Model Construction Information</H5></U><P align="right"><A href="#Top"><I>Back to Top</I></A></P></P>
+<P>Post-processing was performed to remove low-information bins. Low-information bins are those that have: normalized estimates in the range [-0.05, 0.05].</P>
+<P>For each property, the following table gives the original number of bins (<I>Original</I>), the number removed due to too few samples (<I>TooFew</I>), the number removed due to a poor normalized estimate (<I>Noninformative</I>), and the final number of bins saved in the model (<I>Final</I>).</P>
+<table>
+<tr><th>Property</th><th>Original</th><th>TooFew</th><th>Noninformative</th><th>Final</th></tr>
+<tr><td>ALogP</td><td>11</td><td>0</td><td>1</td><td>10</td></tr>
+<tr><td>Molecular_Weight</td><td>11</td><td>0</td><td>1</td><td>10</td></tr>
+<tr><td>Num_H_Donors</td><td>4</td><td>0</td><td>0</td><td>4</td></tr>
+<tr><td>Num_H_Acceptors</td><td>6</td><td>0</td><td>0</td><td>6</td></tr>
+<tr><td>Num_RotatableBonds</td><td>8</td><td>0</td><td>0</td><td>8</td></tr>
+<tr><td>Num_Rings</td><td>5</td><td>0</td><td>0</td><td>5</td></tr>
+<tr><td>Num_AromaticRings</td><td>5</td><td>0</td><td>0</td><td>5</td></tr>
+<tr><td>Molecular_FractionalPolarSurfaceArea</td><td>11</td><td>0</td><td>0</td><td>11</td></tr>
+<tr><td>ECFP_6</td><td>9246</td><td>0</td><td>34</td><td>9212</td></tr>
+</table>
+</P>
+<!-- Section -->
+<!-- LinkText: Model Construction Parameters-->
+<P><A name="ModelParameters"></A><U><H5>Model Construction Parameters</H5></U><P align="right"><A href="#Top"><I>Back to Top</I></A></P></P><p>The following parameter values were specified by the learner component. Some items are internal parameters not exposed by the component. In the course of building the model, certain values may have been adjusted from the values shown below.</p>
+
+<table><tr><th>Parameter</th><th>Value</th></tr>
+<tr><td>LearnedPropertyName</td><td>MY_Bayesian</td></tr>
+<tr><td>TestForGood</td><td>property(&quot;activity&quot;) is defined AND property(&quot;activity&quot;) = 1</td></tr>
+<tr><td>UseProperties</td><td>UserSet</td></tr>
+<tr><td>PredefinedSet</td><td>ALogP, Molecular_Weight, Num_H_Donors, Num_H_Acceptors, Num_RotatableBonds, Molecular_FractionalPolarSurfaceArea, ECFP_6</td></tr>
+<tr><td>UserSet</td><td>ALogP,Molecular_Weight,Num_H_Donors,Num_H_Acceptors,Num_RotatableBonds,Num_Rings,Num_AromaticRings,Molecular_FractionalPolarSurfaceArea,ECFP_6</td></tr>
+<tr><td>IgnoreProperties</td><td></td></tr>
+<tr><td><b>Additional Options</b></td><td></td></tr>
+<tr><td>NumberOfBins</td><td>10</td></tr>
+<tr><td>Learn Options</td><td>Validate Models, Remove Uninformative Bins, Equipopulate Bins</td></tr>
+<tr><td>Numeric Distance Function</td><td>Euclidean</td></tr>
+<tr><td>Numeric Scaling</td><td>Mean-Center and Scale, Scale by Number of Dimensions</td></tr>
+<tr><td>Fingerprint Distance Function</td><td>Tanimoto</td></tr>
+<tr><td>Model Domain Fingerprint</td><td>FCFP_2</td></tr>
+<tr><td>DestinationFolder</td><td>16606/LearnedProperties</td></tr>
+<tr><td>Create Proxy Component</td><td>False</td></tr>
+<tr><td>Cost Matrix</td><td></td></tr>
+<tr><td>Post-Processing Script</td><td>resize(#op, 4);&#xA;#op[1] := 'NormalizedProbability';&#xA;#op[2] := 'Enrichment';&#xA;#op[3] := 'EstPGood';&#xA;#op[4] := 'Prediction';&#xA;SetParam('Output Options',#op);</td></tr>
+<tr><td>DuplicationEstimate</td><td>1.0</td></tr>
+<tr><td>GoodDuplicationEstimate</td><td>1.0</td></tr>
+<tr><td>Additional Properties</td><td></td></tr>
+<tr><td>Max OPS Fingerprint Bits</td><td>1000</td></tr>
+
+</table>
+</body>
+</html>

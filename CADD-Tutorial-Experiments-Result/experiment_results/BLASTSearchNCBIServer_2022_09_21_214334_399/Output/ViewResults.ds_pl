@@ -1,0 +1,15 @@
+#!/usr/bin/perl
+use MdmDiscoveryScript;
+use SdmDiscoveryScript;
+use DSScript;
+
+my $document = DiscoveryScript::Open({"Path" => "P2RY6.xml", "LoadAllObjects" => False});
+use MdmDiscoveryScript;
+use DSScript;
+
+my $hashargs = { message => "<strong>BLAST Search (NCBI Server)</strong><BR>P2RY6 found 100 NCBI BLAST hits",
+ details => "",
+ error => "",
+ ignore => "Protocol MessageBox: BLAST Search (NCBI Server)" };
+use MdmCommands;
+MdmCommands::DSReportMessageBox($hashargs);

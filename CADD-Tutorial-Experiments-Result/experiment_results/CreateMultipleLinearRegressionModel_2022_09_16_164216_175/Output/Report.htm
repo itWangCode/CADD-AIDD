@@ -1,0 +1,579 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=10" />
+  <title>Create Multiple Linear Regression Model</title>
+  <style type="text/css">
+
+.css0 { margin:10px;  }
+.css1 { box-sizing:border-box; -moz-box-sizing:border-box; -ms-box-sizing:border-box;  }
+.css2 { text-align:left; vertical-align:top; color:#000000; width:100.0%; margin:0; padding:0; font:12.0pt Arial;  }
+.css3 { text-align:left; vertical-align:top; color:#000000; width:100.0%; margin:0; padding:1.0px; font:12.0pt Arial;  }
+.css4 { text-align:left; vertical-align:top; color:#0077c8; margin:0; padding:0; font:bold 18.0pt Arial; text-decoration:none;  }
+.css5 { text-align:left; vertical-align:top; color:#000000; margin:0; padding:0; font:12.0pt Arial; text-decoration:none;  }
+.css6 { text-align:left; vertical-align:top; color:#000000; margin:0; padding:0; font:12.0pt Arial;  }
+.css7 { text-align:left; vertical-align:top; color:#000000; width:50.0%; margin:0; padding:1.0px; font:12.0pt Arial;  }
+.css8 { vertical-align:top; color:#000000; margin:0; padding:0; font:12.0pt Arial; text-decoration:none;  }
+.css9 { vertical-align:top; color:#0077c8; margin:0; padding:0; font:bold 12.0pt Arial; text-decoration:none; white-space:nowrap;  }
+.css10 { text-align:left; vertical-align:top; color:#000000; margin:0; padding:0; font:12.0pt Arial; text-decoration:none; white-space:nowrap;  }
+.css11 { text-align:left; vertical-align:top; color:#000000; width:100.0%; margin:0 0 0 11.0px; padding:0; font:12.0pt Arial;  }
+.css12 { text-align:left; vertical-align:top; color:#000000; width:0; margin:0; padding:0; font:8.0pt Arial;  }
+.css13 { text-align:left; vertical-align:top; color:#000000; width:40.0%; margin:0 auto 0 0; padding:0; font:8.0pt Arial;  }
+.css14 { text-align:left; vertical-align:top; color:#000000; width:1.4778326%; margin:0; padding:0 0 0 5.0px; font:8.0pt Arial;  }
+.css15 { text-align:left; vertical-align:top; color:#000000; margin:0 0 0 13.0px; padding:0; font:8.0pt Arial; text-decoration:none;  }
+.css16 { text-align:left; vertical-align:top; color:#000000; width:49.261086%; margin:0; padding:2.0px 0 0 0; font:bold 8.0pt Arial;  }
+.css17 { text-align:left; vertical-align:top; color:#000000; margin:0; padding:0; font:bold 8.0pt Arial; text-decoration:none;  }
+.css18 { text-align:left; vertical-align:top; color:#000000; width:49.261086%; margin:0; padding:0; font:8.0pt Arial;  }
+.css19 { text-align:left; vertical-align:top; color:#000000; margin:0; padding:0; font:8.0pt Arial; text-decoration:none;  }
+.css20 { text-align:left; vertical-align:top; color:#000000; width:40.0%; margin:0 auto 0 30.0px; padding:0; font:8.0pt Arial;  }
+.css21 { text-align:left; vertical-align:top; color:#000000; width:50.0%; margin:0; padding:0 0 0 3.0px; font:bold 8.0pt Arial;  }
+.css22 { text-align:left; vertical-align:top; color:#000000; width:50.0%; margin:0; padding:2.0px 0 0 5.0px; font:8.0pt Arial;  }
+.css23 { text-align:left; vertical-align:top; color:#000000; width:100.0%; margin:0; padding:0; font:8.0pt Arial;  }
+.css24 { text-align:left; vertical-align:top; color:#000000; width:100.0%; margin:0 0 0 20.0px; padding:0; font:8.0pt Arial;  }
+.css25 { text-align:left; vertical-align:top; color:#000000; margin:0; padding:0; font:8.0pt Arial;  }
+.css26 { text-align:left; vertical-align:top; color:#000000; width:100.0%; margin:0; padding:1.0px; font:8.0pt Arial;  }
+.css27 { text-align:left; vertical-align:top; border-left:1px solid black; border-top:1px solid black; border-right:1px solid black; color:#000000; width:600.0px; margin:10.0px auto 0 0; padding:0; font:8.0pt Arial;  }
+.css28 { text-align:center; vertical-align:top; border-bottom:1px solid black; color:#000000; background:#b0c4de; margin:0; padding:1.0px 3.0px 1.0px 3.0px; font:bold 8.0pt Arial; text-decoration:none;  }
+.css29 { text-align:left; vertical-align:top; border-right:1px solid black; border-bottom:1px solid black; color:#000000; background:#b0c4de; margin:0; padding:1.0px 3.0px 1.0px 3.0px; font:bold 9.0pt Arial;  }
+.css30 { text-align:left; vertical-align:top; border-right:1px solid black; border-bottom:1px solid black; color:#000000; background:#b0c4de; margin:0; padding:1.0px 3.0px 1.0px 3.0px; font:bold 9.0pt Arial; white-space:nowrap;  }
+.css31 { text-align:left; vertical-align:top; border-bottom:1px solid black; color:#000000; background:#b0c4de; margin:0; padding:1.0px 3.0px 1.0px 3.0px; font:bold 9.0pt Arial;  }
+.css32 { text-align:left; vertical-align:top; border-right:1px solid black; border-bottom:1px solid black; color:#000000; margin:0; padding:1.0px 6.0px 1.0px 6.0px; font:8.0pt Arial; white-space:nowrap;  }
+.css33 { text-align:left; vertical-align:top; border-bottom:1px solid black; color:#000000; margin:0; padding:1.0px 6.0px 1.0px 6.0px; font:8.0pt Arial; white-space:nowrap;  }
+.css34 { text-align:left; vertical-align:top; border:1px solid black; color:#000000; background:#b0c4de; margin:10.0px 10.0px 0 0; padding:0; font:12.0pt Arial; text-decoration:none;  }
+.css35 { text-align:left; vertical-align:top; color:#000000; width:100.0%; margin:0 0 0 20.0px; padding:0; font:12.0pt Arial;  }
+.css36 { text-align:left; vertical-align:top; color:#000000; width:100.0%; margin:0; padding:0 0 0 3.0px; font:8.0pt Arial;  }
+.css37 { text-align:left; vertical-align:top; color:#0000ff; margin:0; padding:0; font:8.0pt Arial; text-decoration:underline;  }
+.css38 { text-align:left; vertical-align:top; color:#0000ff; margin:0; padding:2.0px 0 2.0px 0; font:8.0pt Arial; text-decoration:underline;  }
+.css39 { text-align:left; vertical-align:top; color:#000000; width:45.0%; margin:0 auto 0 10.0px; padding:0; font:8.0pt Arial;  }
+.css40 { text-align:left; vertical-align:top; color:#000000; width:50.0%; margin:0; padding:2.0px 0 0 0; font:bold 8.0pt Arial;  }
+.css41 { text-align:left; vertical-align:top; color:#000000; margin:0 0 0 10.0px; padding:0; font:bold 8.0pt Arial; text-decoration:none;  }
+.css42 { text-align:left; vertical-align:top; color:#000000; width:50.0%; margin:0; padding:0 0 0 3.0px; font:8.0pt Arial;  }
+.css43 { text-align:left; vertical-align:top; color:#0000ff; margin:0 0 0 -2.0px; padding:0; font:8.0pt Arial; text-decoration:underline;  }
+.css44 { text-align:left; vertical-align:top; color:#000000; margin:0 0 0 12.0px; padding:0; font:8.0pt Arial; text-decoration:none;  }
+.css45 { vertical-align:top; color:#0077c8; margin:0; padding:0; font:8.0pt Arial; text-decoration:none;  }
+
+  </style>
+  <script type="text/javascript">
+
+function toggleDivVisibility(divId, imageContainerId) 
+{
+	if ( !divId ) { return; }
+	var div = document.getElementById(divId);
+	if ( !div ) { return; }
+	var currentlyVisible = div.style.display != 'none';
+	div.style.display = currentlyVisible ? 'none' : 'block';
+	var imageContainer = document.getElementById(imageContainerId);
+	if( imageContainer ) {
+		var cells = imageContainer.getElementsByTagName('img');
+		if ( cells.length ) 
+		{
+			var image = cells[0];
+			if (image.src.match('plus')) {
+				image.src = image.src.replace('plus', 'minus');
+			} else {
+				image.src = image.src.replace('minus', 'plus');
+			}
+		}
+	}
+}
+
+  </script>
+</head>
+<body class="css0">
+<script type="text/javascript">
+
+window.onload = function( )
+{	
+toggleDivVisibility('ID_Description','DS_REPORT_Description');
+toggleDivVisibility('ID_Parameters','DS_REPORT_Parameters');
+toggleDivVisibility('ID_Input Files','DS_REPORT_Input Files');
+toggleDivVisibility('ID_Details','DS_REPORT_Details');
+toggleDivVisibility('ID_Warnings','DS_REPORT_Warnings');
+toggleDivVisibility('ID_Tables','DS_REPORT_Tables');
+toggleDivVisibility('ID_Images','DS_REPORT_Images');
+toggleDivVisibility('ID_InfoGroupPara-1','DS_REPORT_InfoGroupPara-1');
+toggleDivVisibility('ID_InfoGroupPara-2','DS_REPORT_InfoGroupPara-2');
+toggleDivVisibility('ID_Information','DS_REPORT_Information');
+toggleDivVisibility('ID_GroupPara-1','DS_REPORT_GroupPara-1');
+toggleDivVisibility('ID_GroupPara-2','DS_REPORT_GroupPara-2');
+toggleDivVisibility('ID_GroupPara-3','DS_REPORT_GroupPara-3');
+toggleDivVisibility('ID_GroupPara-4','DS_REPORT_GroupPara-4');
+}
+
+</script>
+<table cellpadding="0" cellspacing="0" class="css2 css1"><tr><td class="css3"><div title="Builds a user model using multiple linear regression" class="css4 css1">Create Multiple Linear Regression Model</div>
+</td>
+</tr>
+<tr><td class="css3"><div class="css5 css1"><HR></div>
+</td>
+</tr>
+<tr><td class="css3"><div class="css6 css1"><table cellpadding="0" cellspacing="0" class="css2 css1"><tr><td class="css7"><div class="css6 css1"><span title="Expand/Collapse" id="DS_REPORT_Information" onclick="toggleDivVisibility('ID_Information', 'DS_REPORT_Information')" class="css8"><img src="Report/images/icons/minus.png" /></span><span title="'Protocol runtime information'" class="css9">Information</span></div>
+</td>
+<td class="css7"><div class="css10 css1"></div>
+</td>
+</tr>
+</table>
+<table id="ID_Information" style="width: 500px;" cols="1" cellpadding="0" cellspacing="0" class="css11 css1">
+<tr>
+<td class="css12"><table style="width: 500px;" cols="3" cellpadding="0" cellspacing="0" class="css13 css1">
+<tr>
+<td class="css14"><div class="css15 css1">&nbsp;</div>
+</td>
+<td class="css16"><div class="css17 css1">Status</div>
+</td>
+<td class="css18"><div class="css19 css1">Success</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td class="css12"><table style="width: 500px;" cols="3" cellpadding="0" cellspacing="0" class="css13 css1">
+<tr>
+<td class="css14"><div class="css15 css1">&nbsp;</div>
+</td>
+<td class="css16"><div class="css17 css1">User</div>
+</td>
+<td class="css18"><div class="css19 css1">16606</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td class="css12"><table style="width: 500px;" cols="3" cellpadding="0" cellspacing="0" class="css13 css1">
+<tr>
+<td class="css14"><div title="Expand/Collapse" id="DS_REPORT_InfoGroupPara-1" onclick="toggleDivVisibility('ID_InfoGroupPara-1', 'DS_REPORT_InfoGroupPara-1')" class="css19 css1"><img src="Report/images/icons/minus.png" /></div>
+</td>
+<td class="css16"><div class="css17 css1">Elapsed Time</div>
+</td>
+<td class="css18"><div title="4 seconds" class="css19 css1">00:00:04</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td class="css12"><table id="ID_InfoGroupPara-1" style="width: 500px;" cols="2" cellpadding="0" cellspacing="0" class="css20 css1">
+<tr>
+<td class="css21"><div class="css17 css1">Start</div>
+</td>
+<td class="css22"><div title="Friday 16 September 22 16:42:16 " class="css19 css1">09/16/22 16:42:16</div>
+</td>
+</tr>
+<tr>
+<td class="css21"><div class="css17 css1">Finish</div>
+</td>
+<td class="css22"><div title="Friday 16 September 22 16:42:20 " class="css19 css1">09/16/22 16:42:20</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td class="css12"><table style="width: 500px;" cols="3" cellpadding="0" cellspacing="0" class="css13 css1">
+<tr>
+<td class="css14"><div title="Expand/Collapse" id="DS_REPORT_InfoGroupPara-2" onclick="toggleDivVisibility('ID_InfoGroupPara-2', 'DS_REPORT_InfoGroupPara-2')" class="css19 css1"><img src="Report/images/icons/minus.png" /></div>
+</td>
+<td class="css16"><div class="css17 css1">Server Name</div>
+</td>
+<td class="css18"><div title="https://localhost:9943" class="css19 css1"><a href="http://localhost:9944" target="_blank">AbdusemiAbduweli</a></div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td class="css12"><table id="ID_InfoGroupPara-2" style="width: 500px;" cols="2" cellpadding="0" cellspacing="0" class="css20 css1">
+<tr>
+<td class="css21"><div class="css17 css1">DS Version</div>
+</td>
+<td class="css22"><div class="css19 css1">19.1.0.18287</div>
+</td>
+</tr>
+<tr>
+<td class="css21"><div class="css17 css1">PP Version</div>
+</td>
+<td class="css22"><div class="css19 css1">19.1.0.1963</div>
+</td>
+</tr>
+<tr>
+<td class="css21"><div class="css17 css1">DS Client Version</div>
+</td>
+<td class="css22"><div class="css19 css1">19.1.0.18287</div>
+</td>
+</tr>
+<tr>
+<td class="css21"><div class="css17 css1">Server Ports</div>
+</td>
+<td class="css22"><div class="css19 css1">9944 (9943)</div>
+</td>
+</tr>
+<tr>
+<td class="css21"><div class="css17 css1">OS Distribution</div>
+</td>
+<td class="css22"><div class="css19 css1">Windows</div>
+</td>
+</tr>
+<tr>
+<td class="css21"><div class="css17 css1">OS  Version</div>
+</td>
+<td class="css22"><div class="css19 css1">10.0.22000</div>
+</td>
+</tr>
+<tr>
+<td class="css21"><div class="css17 css1">Memory Total</div>
+</td>
+<td class="css22"><div class="css19 css1">23.85 GB</div>
+</td>
+</tr>
+<tr>
+<td class="css21"><div class="css17 css1">Memory Free</div>
+</td>
+<td class="css22"><div class="css19 css1">14.12 GB</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr><td class="css3"><div class="css6 css1"><table cellpadding="0" cellspacing="0" class="css2 css1"><tr><td class="css7"><div class="css6 css1"><span title="Expand/Collapse" id="DS_REPORT_Summary" onclick="toggleDivVisibility('ID_Summary', 'DS_REPORT_Summary'); toggleDivVisibility('ID2_Summary', '')" class="css8"><img src="Report/images/icons/minus.png" /></span><span title="'Contains a brief summary of the protocol output'" class="css9">Summary</span></div>
+</td>
+<td class="css7"><div class="css10 css1"></div>
+</td>
+</tr>
+</table>
+<table id="ID_Summary" style="width: 500px;" cols="1" cellpadding="0" cellspacing="0" class="css2 css1">
+<tr>
+<td class="css12"><table cellpadding="0" cellspacing="0" class="css23 css1"><tr><td class="css23"><table style="width: 500px;" cols="1" cellpadding="0" cellspacing="0" class="css24 css1">
+<tr>
+<td class="css25"><div class="css19 css1">Multiple Linear Regression Model MY_2D_QSAR has been created. It contains the following equation:</div>
+</td>
+</tr>
+<tr>
+<td class="css25"><div class="css19 css1">[ MY_2D_QSAR ] = 0.2636 + 0.1395 * [ ALogP ] - 0.1516 * [ Count&lt;ECFP_6:-591526139&gt; ] + 0.2546 * [ Count&lt;ECFP_6:-1910270391&gt; ] + 0.255 * [ Count&lt;ECFP_6:-1100000244&gt; ] + 0.2555 * [ Count&lt;ECFP_6:-1074141656&gt; ] + 0.2572 * [ Count&lt;ECFP_6:1559650422&gt; ] + 0.2565 * [ Count&lt;ECFP_6:642810091&gt; ] + 0.2571 * [ Count&lt;ECFP_6:-182236392&gt; ] + 0.2571 * [ Count&lt;ECFP_6:-606302475&gt; ] + 0.2561 * [ Count&lt;ECFP_6:1572579716&gt; ] + 1.117 * [ Count&lt;ECFP_6:-992506539&gt; ] - 0.493 * [ Count&lt;ECFP_6:734603939&gt; ] + 3.024 * [ Count&lt;ECFP_6:-797085356&gt; ] + 0.2569 * [ Count&lt;ECFP_6:2099970318&gt; ] + 0.2584 * [ Count&lt;ECFP_6:770157610&gt; ] + 0.2571 * [ Count&lt;ECFP_6:-2024255407&gt; ] + 0.2572 * [ Count&lt;ECFP_6:1996767644&gt; ] + 0.2582 * [ Count&lt;ECFP_6:-786013480&gt; ] + 0.2587 * [ Count&lt;ECFP_6:1997021792&gt; ] + 0.2578 * [ Count&lt;ECFP_6:-175146122&gt; ] + 0.2593 * [ Count&lt;ECFP_6:1298504034&gt; ] + 0.2597 * [ Count&lt;ECFP_6:858184972&gt; ] + 0.2611 * [ Count&lt;ECFP_6:-932108170&gt; ] - 9.008e-004 * [ Count&lt;ECFP_6:-1332781180&gt; ] + 0.08699 * [ Count&lt;ECFP_6:-757679000&gt; ] + 0.3318 * [ Count&lt;ECFP_6:-1102925512&gt; ] + 1.15 * [ Count&lt;ECFP_6:-177264675&gt; ] - 1.711 * [ Count&lt;ECFP_6:859796174&gt; ] + 1.135 * [ Count&lt;ECFP_6:-1686976258&gt; ] + 0.2604 * [ Count&lt;ECFP_6:-1302110264&gt; ] + 0.2614 * [ Count&lt;ECFP_6:1095683433&gt; ] + 0.2636 * [ Count&lt;ECFP_6:-768126022&gt; ] + 0.2616 * [ Count&lt;ECFP_6:2007300961&gt; ] + 0.2614 * [ Count&lt;ECFP_6:397284699&gt; ] + 0.2608 * [ Count&lt;ECFP_6:1451403962&gt; ] + 0.2623 * [ Count&lt;ECFP_6:2071685859&gt; ] - 0.6209 * [ Count&lt;ECFP_6:-1952026932&gt; ] + 0.4643 * [ Count&lt;ECFP_6:-658363709&gt; ] - 1.78 * [ Count&lt;ECFP_6:-1506130950&gt; ] + 1.285 * [ Count&lt;ECFP_6:1670941296&gt; ] + 0.2611 * [ Count&lt;ECFP_6:1155958977&gt; ] + 0.2602 * [ Count&lt;ECFP_6:-952707428&gt; ] + 0.2601 * [ Count&lt;ECFP_6:-1278685991&gt; ] + 0.2596 * [ Count&lt;ECFP_6:1079175434&gt; ] + 0.2596 * [ Count&lt;ECFP_6:-2135040425&gt; ] + 0.1629 * [ Count&lt;ECFP_6:-1897341097&gt; ] - 0.7741 * [ Count&lt;ECFP_6:-167460056&gt; ] + 0.7723 * [ Count&lt;ECFP_6:-1059365320&gt; ] + 0.9431 * [ Count&lt;ECFP_6:-572965350&gt; ] + 0.9262 * [ Count&lt;ECFP_6:-1867561664&gt; ] - 0.9626 * [ Count&lt;ECFP_6:-1683911134&gt; ] - 1.475 * [ Count&lt;ECFP_6:-178525456&gt; ] + 0.101 * [ Count&lt;ECFP_6:-292555972&gt; ] + 1.495 * [ Count&lt;ECFP_6:-666950485&gt; ] + 0.3668 * [ Count&lt;ECFP_6:1564392544&gt; ] + 0.00835 * [ Count&lt;ECFP_6:1571214559&gt; ] - 5.271e-002 * [ Count&lt;ECFP_6:-2019199918&gt; ] - 0.8076 * [ Count&lt;ECFP_6:-1487746661&gt; ] - 1.033 * [ Count&lt;ECFP_6:292958156&gt; ] + 1.757 * [ Count&lt;ECFP_6:-756348342&gt; ] + 0.4795 * [ Count&lt;ECFP_6:-103562730&gt; ] - 1.48 * [ Count&lt;ECFP_6:-1950934120&gt; ] + 0.1815 * [ Count&lt;ECFP_6:-857146788&gt; ] + 0.03588 * [ Count&lt;ECFP_6:-408473190&gt; ] - 0.6272 * [ Count&lt;ECFP_6:864909220&gt; ] + 0.7707 * [ Count&lt;ECFP_6:-740847217&gt; ] + 0.9103 * [ Count&lt;ECFP_6:408216150&gt; ] + 0.9887 * [ Count&lt;ECFP_6:1595399376&gt; ] + 0.2622 * [ Count&lt;ECFP_6:515773057&gt; ] + 1.457 * [ Count&lt;ECFP_6:78036066&gt; ] - 2.061 * [ Count&lt;ECFP_6:-1884411803&gt; ] + 0.5047 * [ Count&lt;ECFP_6:1021725999&gt; ] + 0.717 * [ Count&lt;ECFP_6:-665999307&gt; ] + 0.2158 * [ Count&lt;ECFP_6:661073749&gt; ] - 0.3797 * [ Count&lt;ECFP_6:864518973&gt; ] + 0.2571 * [ Count&lt;ECFP_6:191790798&gt; ] - 0.6948 * [ Count&lt;ECFP_6:1338334141&gt; ] - 1.75e-002 * [ Molecular_Weight ] + 0.118 * [ Num_AromaticRings ] + 0.8114 * [ Num_H_Acceptors ] + 0.6535 * [ Num_H_Donors ] - 0.3895 * [ Num_Rings ] + 0.03486 * [ Num_RotatableBonds ] - 11.5 * [ Molecular_FractionalPolarSurfaceArea ]
+</div>
+</td>
+</tr>
+<tr>
+<td class="css25"><div class="css19 css1">See ModelDescription.html for more model information.</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td class="css23"><table cols="1" cellpadding="0" cellspacing="0" class="css23 css1">
+<tr>
+<td class="css25"><table cellpadding="0" cellspacing="0" class="css23 css1"><tr><td class="css26"><table cols="4" cellpadding="0" cellspacing="0" class="css27 css1">
+<tr>
+<td colspan="4" class="css28">5-Fold Cross Validation Result</td>
+</tr>
+<tr>
+<td class="css29">Model Name</td>
+<td class="css30">q^2</td>
+<td class="css29">RMS Error</td>
+<td class="css31">Mean Absolute Error</td>
+</tr>
+<tr>
+<td class="css32">MY_2D_QSAR</td>
+<td class="css32">0.202</td>
+<td class="css32">1.145</td>
+<td class="css33">0.803</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td class="css26"><div><img src="Report/images/image4231614296727996370.png" width="400" height="300" class="css34 css1"></div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td class="css25"><table cellpadding="0" cellspacing="0" class="css23 css1"><tr><td class="css26"><table cols="4" cellpadding="0" cellspacing="0" class="css27 css1">
+<tr>
+<td colspan="4" class="css28">Validation Result Using External Test Set TestSet_dataset-qsar.sd</td>
+</tr>
+<tr>
+<td class="css29">Model Name</td>
+<td class="css30">q^2</td>
+<td class="css29">RMS Error</td>
+<td class="css31">Mean Absolute Error</td>
+</tr>
+<tr>
+<td class="css32">MY_2D_QSAR</td>
+<td class="css32">0.461</td>
+<td class="css32">0.857</td>
+<td class="css33">0.623</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td class="css26"><div><img src="Report/images/image6346133330263921555.png" width="400" height="300" class="css34 css1"></div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr><td class="css3"><div class="css6 css1"><table cellpadding="0" cellspacing="0" class="css2 css1"><tr><td class="css7"><div class="css6 css1"><span title="Expand/Collapse" id="DS_REPORT_Results" onclick="toggleDivVisibility('ID_Results', 'DS_REPORT_Results')" class="css8"><img src="Report/images/icons/minus.png" /></span><span title="'Table with result files generated by the protocol'" class="css9">Results</span></div>
+</td>
+<td class="css7"><div class="css10 css1"></div>
+</td>
+</tr>
+</table>
+<table id="ID_Results" style="width: 500px;" cols="1" cellpadding="0" cellspacing="0" class="css35 css1">
+<tr>
+<td class="css36"><div title="./MY_2D_QSAR.xml" class="css37 css1"><A HREF="./MY_2D_QSAR.xml">Model Component</A></div>
+</td>
+</tr>
+<tr>
+<td class="css36"><div title="./ModelDescription.html" class="css37 css1"><A HREF="./ModelDescription.html">Model Description</A></div>
+</td>
+</tr>
+<tr>
+<td class="css36"><div title="./TestSet_dataset-qsar.sd" class="css37 css1"><A HREF="./TestSet_dataset-qsar.sd">Test Ligandswith Predicted Activity</A></div>
+</td>
+</tr>
+<tr>
+<td class="css36"><div title="./TrainingSet_dataset-qsar.sd" class="css37 css1"><A HREF="./TrainingSet_dataset-qsar.sd">Training Ligands with Predicted Activity</A></div>
+</td>
+</tr>
+<tr>
+<td class="css36"><div title="./ViewTestResults.ds_pl" class="css37 css1"><A HREF="./ViewTestResults.ds_pl">View Test Results</A></div>
+</td>
+</tr>
+<tr>
+<td class="css36"><div title="Open results in Discovery Studio" class="css38 css1"><button onClick="window.location='ViewResults.ds_pl'">View Results</button></div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr><td class="css3"><div class="css6 css1"><table cellpadding="0" cellspacing="0" class="css2 css1"><tr><td class="css7"><div class="css6 css1"><span title="Expand/Collapse" id="DS_REPORT_Parameters" onclick="toggleDivVisibility('ID_Parameters', 'DS_REPORT_Parameters')" class="css8"><img src="Report/images/icons/minus.png" /></span><span title="'A table with the run-time parameters'" class="css9">Parameters</span></div>
+</td>
+<td class="css7"><div class="css10 css1"></div>
+</td>
+</tr>
+</table>
+<table id="ID_Parameters" style="width: 500px;" cols="1" cellpadding="0" cellspacing="0" class="css11 css1">
+<tr>
+<td class="css12"><table style="width: 500px;" cols="2" cellpadding="0" cellspacing="0" class="css39 css1">
+<tr>
+<td class="css40"><div class="css41 css1">Protocol Settings</div>
+</td>
+<td class="css42"><div title="../Input/Protocol.pr_xml" class="css43 css1"><A HREF="../Input/Protocol.pr_xml">Protocol.pr_xml</A></div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td class="css12"><table style="width: 500px;" cols="3" cellpadding="0" cellspacing="0" class="css13 css1">
+<tr>
+<td class="css14"><div class="css44 css1">&nbsp;</div>
+</td>
+<td class="css16"><div class="css17 css1">Input Ligands</div>
+</td>
+<td class="css18"><table cols="1" cellpadding="0" cellspacing="0" class="css23 css1">
+<tr>
+<td class="css25"><div title="../Input/TrainingSet_dataset-qsar.sd" class="css37 css1"><A HREF="../Input/TrainingSet_dataset-qsar.sd">TrainingSet_dataset-qsar.sd</A></div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td class="css12"><table style="width: 500px;" cols="3" cellpadding="0" cellspacing="0" class="css13 css1">
+<tr>
+<td class="css14"><div class="css44 css1">&nbsp;</div>
+</td>
+<td class="css16"><div class="css17 css1">Input Test Ligands</div>
+</td>
+<td class="css18"><table cols="1" cellpadding="0" cellspacing="0" class="css23 css1">
+<tr>
+<td class="css25"><div title="../Input/TestSet_dataset-qsar.sd" class="css37 css1"><A HREF="../Input/TestSet_dataset-qsar.sd">TestSet_dataset-qsar.sd</A></div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td class="css12"><table style="width: 500px;" cols="3" cellpadding="0" cellspacing="0" class="css13 css1">
+<tr>
+<td class="css14"><div class="css44 css1">&nbsp;</div>
+</td>
+<td class="css16"><div class="css17 css1">Model Name</div>
+</td>
+<td class="css18"><div class="css19 css1">MY_2D_QSAR</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td class="css12"><table style="width: 500px;" cols="3" cellpadding="0" cellspacing="0" class="css13 css1">
+<tr>
+<td class="css14"><div title="Expand/Collapse" id="DS_REPORT_GroupPara-1" onclick="toggleDivVisibility('ID_GroupPara-1', 'DS_REPORT_GroupPara-1')" class="css19 css1"><img src="Report/images/icons/minus.png" /></div>
+</td>
+<td class="css16"><div class="css17 css1">Dependent Property</div>
+</td>
+<td class="css18"><div class="css19 css1">pki-trypsin</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td class="css12"><table id="ID_GroupPara-1" cols="2" cellpadding="0" cellspacing="0" class="css20 css1">
+<tr>
+<td class="css21"><div style="width: 300px;" class="css17 css1">Weight Property</div>
+</td>
+<td class="css42"><div style="width: 300px;" class="css19 css1"></div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td class="css12"><table style="width: 500px;" cols="3" cellpadding="0" cellspacing="0" class="css13 css1">
+<tr>
+<td class="css14"><div title="Expand/Collapse" id="DS_REPORT_GroupPara-2" onclick="toggleDivVisibility('ID_GroupPara-2', 'DS_REPORT_GroupPara-2')" class="css19 css1"><img src="Report/images/icons/minus.png" /></div>
+</td>
+<td class="css16"><div class="css17 css1">Independent Properties</div>
+</td>
+<td class="css18"><div class="css19 css1">ALogP,ECFP_6,Molecular_Weight,Num_AromaticRings,Num_H_Acceptors,Num_H_Donors,Num_Rings,Num_RotatableBonds,Molecular_FractionalPolarSurfaceArea</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td class="css12"><table id="ID_GroupPara-2" cols="2" cellpadding="0" cellspacing="0" class="css20 css1">
+<tr>
+<td class="css21"><div style="width: 300px;" class="css17 css1">Calculable Properties</div>
+</td>
+<td class="css42"><div style="width: 300px;" class="css19 css1">ALogP,ECFP_6,Molecular_Weight,Num_AromaticRings,Num_H_Acceptors,Num_H_Donors,Num_Rings,Num_RotatableBonds,Molecular_FractionalPolarSurfaceArea</div>
+</td>
+</tr>
+<tr>
+<td class="css21"><div style="width: 300px;" class="css17 css1">User Properties</div>
+</td>
+<td class="css42"><div style="width: 300px;" class="css19 css1"></div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td class="css12"><table style="width: 500px;" cols="3" cellpadding="0" cellspacing="0" class="css13 css1">
+<tr>
+<td class="css14"><div title="Expand/Collapse" id="DS_REPORT_GroupPara-3" onclick="toggleDivVisibility('ID_GroupPara-3', 'DS_REPORT_GroupPara-3')" class="css19 css1"><img src="Report/images/icons/minus.png" /></div>
+</td>
+<td class="css16"><div class="css17 css1">Cross Validation</div>
+</td>
+<td class="css18"><div class="css19 css1">True</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td class="css12"><table id="ID_GroupPara-3" cols="2" cellpadding="0" cellspacing="0" class="css20 css1">
+<tr>
+<td class="css21"><div style="width: 300px;" class="css17 css1">Folds</div>
+</td>
+<td class="css42"><div style="width: 300px;" class="css19 css1">5</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td class="css12"><table style="width: 500px;" cols="3" cellpadding="0" cellspacing="0" class="css13 css1">
+<tr>
+<td class="css14"><div title="Expand/Collapse" id="DS_REPORT_GroupPara-4" onclick="toggleDivVisibility('ID_GroupPara-4', 'DS_REPORT_GroupPara-4')" class="css19 css1"><img src="Report/images/icons/minus.png" /></div>
+</td>
+<td class="css16"><div class="css17 css1">Advanced</div>
+</td>
+<td class="css18"><div class="css19 css1"></div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td class="css12"><table id="ID_GroupPara-4" cols="2" cellpadding="0" cellspacing="0" class="css20 css1">
+<tr>
+<td class="css21"><div style="width: 300px;" class="css17 css1">Learn Options</div>
+</td>
+<td class="css42"><table cols="1" cellpadding="0" cellspacing="0" class="css23 css1">
+<tr>
+<td class="css25"><div style="width: 300px;" class="css19 css1">Perform OPS Analysis</div>
+</td>
+</tr>
+<tr>
+<td class="css25"><div style="width: 300px;" class="css19 css1">Track Fingerprint Features</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td class="css21"><div style="width: 300px;" class="css17 css1">Model Domain Fingerprint</div>
+</td>
+<td class="css42"><div style="width: 300px;" class="css19 css1">FCFP_2</div>
+</td>
+</tr>
+<tr>
+<td class="css21"><div style="width: 300px;" class="css17 css1">Additional Properties</div>
+</td>
+<td class="css42"><div style="width: 300px;" class="css19 css1"></div>
+</td>
+</tr>
+<tr>
+<td class="css21"><div style="width: 300px;" class="css17 css1">Minimum Samples per Variable</div>
+</td>
+<td class="css42"><div style="width: 300px;" class="css19 css1">SqrtEstimate</div>
+</td>
+</tr>
+<tr>
+<td class="css21"><div style="width: 300px;" class="css17 css1">Maximum Correlation</div>
+</td>
+<td class="css42"><div style="width: 300px;" class="css19 css1">0.90</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr><td class="css3"><div class="css6 css1"><span class="css8"><HR></span><span class="css45">Copyright © 2022 Dassault Systèmes Biovia Corp - All rights reserved.</span></div>
+</td>
+</tr>
+</table>
+
+</body>
+</html>

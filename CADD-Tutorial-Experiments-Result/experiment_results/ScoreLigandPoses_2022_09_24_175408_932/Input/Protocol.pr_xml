@@ -1,0 +1,228 @@
+
+<ELU xmlns="http://www.accelrys.com/dsm/elu/2">
+  <experiment Expanded="Server" Guid="{EFD35B09-1080-4596-A0D8-3604DAB82F77}" protocol="Protocols/BIOVIA Discovery Studio/Discovery Studio/Receptor-Ligand Interactions/Scoring And Analysis/Score Ligand Poses" protocolName="Score Ligand Poses" version="1">
+    <Accl:mpropval name="Advanced" type="GroupType">
+      <Accl:value></Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="CDOCKER Scores" type="StringType">
+      <Accl:value></Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="DSRunInteractive" type="BoolType">
+      <Accl:value>True</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Fix All Receptor Rotatable Bonds" type="BoolType">
+      <Accl:value>False</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="GOLD" type="GroupType">
+      <Accl:value></Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Input Binding Site" type="BindingsiteOfStructureType">
+      <Accl:value></Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Input Control Ligand Property" type="StringType">
+      <Accl:value>Control</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Input Control Ligands" type="LigandsType">
+      <Accl:value></Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Input Ligands" type="LigandsType">
+      <Accl:value>3GEN:All</Accl:value>
+      <Accl:transformData>1035e6f7-08e2-a72b-e0-25-14-97-58-16-c5-87</Accl:transformData>
+    </Accl:mpropval>
+    <Accl:mpropval name="Input Preserve Controls In Input" type="BoolType">
+      <Accl:value>True</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Input Receptor" type="StructureType">
+      <Accl:value>3GEN:3GEN</Accl:value>
+      <Accl:transformData>1035e6f7-08e2-a72b-e0-25-14-97-58-16-c5-87</Accl:transformData>
+    </Accl:mpropval>
+    <Accl:mpropval name="Input Site Sphere" type="ReceptorsphereOfStructureType">
+      <Accl:value>-17.0041, 6.71975, -15.0922, 9.73833</Accl:value>
+      <Accl:transformData>-17.0041, 6.71975, -15.0922, 9.73833</Accl:transformData>
+    </Accl:mpropval>
+    <Accl:mpropval name="Jain" type="GroupType">
+      <Accl:value></Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="LigScore" type="GroupType">
+      <Accl:value></Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Ligand Partial Charge Method" type="StringType">
+      <Accl:value>Momany-Rone</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Ludi" type="GroupType">
+      <Accl:value></Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="PLP" type="GroupType">
+      <Accl:value></Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="PMF" type="GroupType">
+      <Accl:value></Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="PMF04" type="GroupType">
+      <Accl:value></Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Parallel Processing" type="BoolType">
+      <Accl:value>False</Accl:value>
+      <Accl:transformData>False</Accl:transformData>
+    </Accl:mpropval>
+    <Accl:mpropval name="Parallel Processing Batch Size" type="LongType">
+      <Accl:value>25</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Parallel Processing Preserve Order" type="BoolType">
+      <Accl:value>True</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Parallel Processing Server" type="StringType">
+      <Accl:value>localhost</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Parallel Processing Server Processes" type="StringType">
+      <Accl:value>6</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Parameter Files" type="GroupType">
+      <Accl:value></Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Parameter Files ASP" type="CopyurlType">
+      <Accl:value></Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Parameter Files CHEMPLP" type="CopyurlType">
+      <Accl:value></Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Parameter Files Chemscore" type="CopyurlType">
+      <Accl:value></Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Parameter Files Goldscore" type="CopyurlType">
+      <Accl:value></Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Perform Local Optimization" type="BoolType">
+      <Accl:value>True</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Receptor Depth Scaling" type="BoolType">
+      <Accl:value>False</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Report Individual Contributions" type="BoolType">
+      <Accl:value>False</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Reporting" type="GroupType">
+      <Accl:value></Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Reporting Stylesheet" type="StylesheetType">
+      <Accl:value>{42691EC8-0CE0-4DB9-8B3C-5379CBB967A7}</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Retrieve Rotatable H Positions" type="BoolType">
+      <Accl:value>False</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Rotated Atoms Property" type="StringType">
+      <Accl:value>Receptor.Positions,Gold.Protein.RotatedAtoms,Gold.Protein.RotatedWaterAtoms </Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Save Intermediate Files" type="BoolType">
+      <Accl:value>False</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Scores" type="StringType">
+      <Accl:value>-CDOCKER_ENERGY,-CDOCKER_INTERACTION_ENERGY</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Scoring Functions" type="StringType">
+      <Accl:value>LigScore1,LigScore2,PLP1,PLP2,Jain,PMF,PMF04</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Scoring Jain Ignore Non-Polar Hydrogens" type="BoolType">
+      <Accl:value>False</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Scoring Jain Ignore Water" type="BoolType">
+      <Accl:value>False</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Scoring Jain Label" type="StringType">
+      <Accl:value>Jain</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Scoring Jain Minimum Score" type="DoubleType">
+      <Accl:value></Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Scoring LigScore Energy Grid Extension" type="DoubleType">
+      <Accl:value>5.0</Accl:value>
+      <Accl:transformData>5.0</Accl:transformData>
+    </Accl:mpropval>
+    <Accl:mpropval name="Scoring LigScore Forcefield" type="StringType">
+      <Accl:value>Dreiding</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Scoring LigScore1 Label" type="StringType">
+      <Accl:value>LigScore1</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Scoring LigScore1 Minimum Score" type="DoubleType">
+      <Accl:value></Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Scoring LigScore1 Report Individual Contributions" type="BoolType">
+      <Accl:value>False</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Scoring LigScore2 Label" type="StringType">
+      <Accl:value>LigScore2</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Scoring LigScore2 Minimum Score" type="DoubleType">
+      <Accl:value></Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Scoring LigScore2 Report Individual Contributions" type="BoolType">
+      <Accl:value>False</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Scoring Ludi 1 Minimum Score" type="LongType">
+      <Accl:value></Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Scoring Ludi 2 Minimum Score" type="LongType">
+      <Accl:value></Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Scoring Ludi 3 Minimum Score" type="LongType">
+      <Accl:value></Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Scoring Ludi Report Individual Contributions" type="BoolType">
+      <Accl:value>False</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Scoring Ludi Score Label" type="StringType">
+      <Accl:value>Ludi</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Scoring PLP1 Label" type="StringType">
+      <Accl:value>-PLP1</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Scoring PLP1 Minimum Negative Score" type="DoubleType">
+      <Accl:value></Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Scoring PLP2 Label" type="StringType">
+      <Accl:value>-PLP2</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Scoring PLP2 Minimum Negative Score" type="DoubleType">
+      <Accl:value></Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Scoring PMF Carbon-Carbon Cutoff" type="DoubleType">
+      <Accl:value>12.0</Accl:value>
+      <Accl:transformData>12.0</Accl:transformData>
+    </Accl:mpropval>
+    <Accl:mpropval name="Scoring PMF Ignore Hydrogens" type="BoolType">
+      <Accl:value>True</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Scoring PMF Label" type="StringType">
+      <Accl:value>-PMF</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Scoring PMF Minimum Negative Score" type="DoubleType">
+      <Accl:value></Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Scoring PMF Other Interactions Cutoff" type="DoubleType">
+      <Accl:value>12.0</Accl:value>
+      <Accl:transformData>12.0</Accl:transformData>
+    </Accl:mpropval>
+    <Accl:mpropval name="Scoring PMF04 Carbon-Carbon Cutoff" type="DoubleType">
+      <Accl:value>6.0</Accl:value>
+      <Accl:transformData>6.0</Accl:transformData>
+    </Accl:mpropval>
+    <Accl:mpropval name="Scoring PMF04 Ignore Hydrogens" type="BoolType">
+      <Accl:value>True</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Scoring PMF04 Label" type="StringType">
+      <Accl:value>-PMF04</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Scoring PMF04 Minimum Negative Score" type="DoubleType">
+      <Accl:value></Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Scoring PMF04 Other Interactions Cutoff" type="DoubleType">
+      <Accl:value>9.0</Accl:value>
+      <Accl:transformData>9.0</Accl:transformData>
+    </Accl:mpropval>
+    <Accl:mpropval name="Use Input Binding Site" type="BoolType">
+      <Accl:value>False</Accl:value>
+    </Accl:mpropval>
+  </experiment>
+
+</ELU>

@@ -1,0 +1,2936 @@
+<?xml version="1.0"?>
+<!DOCTYPE BlastOutput PUBLIC "-//NCBI//NCBI BlastOutput/EN" "http://www.ncbi.nlm.nih.gov/dtd/NCBI_BlastOutput.dtd">
+<BlastOutput>
+  <BlastOutput_program>blastp</BlastOutput_program>
+  <BlastOutput_version>BLASTP 2.13.0+</BlastOutput_version>
+  <BlastOutput_reference>Stephen F. Altschul, Thomas L. Madden, Alejandro A. Sch&amp;auml;ffer, Jinghui Zhang, Zheng Zhang, Webb Miller, and David J. Lipman (1997), &quot;Gapped BLAST and PSI-BLAST: a new generation of protein database search programs&quot;, Nucleic Acids Res. 25:3389-3402.</BlastOutput_reference>
+  <BlastOutput_db>pdbaa</BlastOutput_db>
+  <BlastOutput_query-ID>Query_11343</BlastOutput_query-ID>
+  <BlastOutput_query-def>lcl|Sci_2|P2RY6 P2Y purinoceptor 6 OS=Homo sapiens OX=9606 GN=P2RY6 PE=1 SV=1</BlastOutput_query-def>
+  <BlastOutput_query-len>328</BlastOutput_query-len>
+  <BlastOutput_param>
+    <Parameters>
+      <Parameters_matrix>BLOSUM62</Parameters_matrix>
+      <Parameters_expect>10</Parameters_expect>
+      <Parameters_gap-open>11</Parameters_gap-open>
+      <Parameters_gap-extend>1</Parameters_gap-extend>
+      <Parameters_filter>L;</Parameters_filter>
+    </Parameters>
+  </BlastOutput_param>
+<BlastOutput_iterations>
+<Iteration>
+  <Iteration_iter-num>1</Iteration_iter-num>
+  <Iteration_query-ID>Query_11343</Iteration_query-ID>
+  <Iteration_query-def>lcl|Sci_2|P2RY6 P2Y purinoceptor 6 OS=Homo sapiens OX=9606 GN=P2RY6 PE=1 SV=1</Iteration_query-def>
+  <Iteration_query-len>328</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>pdb|4XNV|A</Hit_id>
+  <Hit_def>The human P2Y1 receptor in complex with BPTU [Homo sapiens] &gt;pdb|4XNW|A The human P2Y1 receptor in complex with MRS2500 [Homo sapiens] &gt;pdb|4XNW|C The human P2Y1 receptor in complex with MRS2500 [Homo sapiens]</Hit_def>
+  <Hit_accession>4XNV_A</Hit_accession>
+  <Hit_len>421</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>110.923</Hsp_bit-score>
+      <Hsp_score>276</Hsp_score>
+      <Hsp_evalue>5.41467e-27</Hsp_evalue>
+      <Hsp_query-from>21</Hsp_query-from>
+      <Hsp_query-to>201</Hsp_query-to>
+      <Hsp_hit-from>45</Hsp_hit-from>
+      <Hsp_hit-to>225</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>71</Hsp_identity>
+      <Hsp_positive>95</Hsp_positive>
+      <Hsp_gaps>2</Hsp_gaps>
+      <Hsp_align-len>182</Hsp_align-len>
+      <Hsp_qseq>RENFKQLLLPPVYSAVLAAGLPLNICVITQICTSRRALTRTAVYTLNLALADLLYACSLPLLIYNYAQGDHWPFGDFACRLVRFLFYANLHGSILFLTCISFQRYLGICHPLAPWHKRGGRRXXXXXXXXXXXXXTTQCLPTAIFAATGIQRNRTV-CYDLSPPALATHYMPYGMALTVIGF</Hsp_qseq>
+      <Hsp_hseq>KTGFQFYYLPAVYILVFIIGFLGNSVAIWMFVFHMKPWSGISVYMFNLALADFLYVLTLPALIFYYFNKTDWIFGDAMCKLQRFIFHVNLYGSILFLTCISAHRYSGVVYPLKSL-GRLKKKNAICISVLVWLIVVVAISPILFYSGTGVRKNKTITCYDTTSDEYLRSYFIYSMCTTVAMF</Hsp_hseq>
+      <Hsp_midline>+  F+   LP VY  V   G   N   I       +  +  +VY  NLALAD LY  +LP LI+ Y     W FGD  C+L RF+F+ NL+GSILFLTCIS  RY G+ +PL     R  ++ A  + V VWL V     P   ++ TG+++N+T+ CYD +       Y  Y M  TV  F</Hsp_midline>
+    </Hsp>
+    <Hsp>
+      <Hsp_num>2</Hsp_num>
+      <Hsp_bit-score>50.8322</Hsp_bit-score>
+      <Hsp_score>120</Hsp_score>
+      <Hsp_evalue>1.30961e-06</Hsp_evalue>
+      <Hsp_query-from>227</Hsp_query-from>
+      <Hsp_query-to>326</Hsp_query-to>
+      <Hsp_hit-from>296</Hsp_hit-from>
+      <Hsp_hit-to>393</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>37</Hsp_identity>
+      <Hsp_positive>55</Hsp_positive>
+      <Hsp_gaps>8</Hsp_gaps>
+      <Hsp_align-len>103</Hsp_align-len>
+      <Hsp_qseq>EPVAQERRGKXXXXXXXXXXXXXISFLPFHITKTAYLAVR---STPGVPCTVLEAFAAAYKGTRPFASANSVLDPILFYFTQKKFRRRPHELLQKLTAKWQRQ</Hsp_qseq>
+      <Hsp_hseq>EEVEEPLRRKSIYLVIIVLTVFAVSYIPFHVMKTMNLRARLDFQTPAM-CAFNDRVYATYQVTRGLASLNSCVNPILYFLAGDTFRRR----LSRATRKASRR</Hsp_hseq>
+      <Hsp_midline>E V +  R K+  + ++V   FA+S++PFH+ KT  L  R    TP + C   +   A Y+ TR  AS NS ++PIL++     FRRR    L + T K  R+</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>2</Hit_num>
+  <Hit_id>pdb|5XSZ|A</Hit_id>
+  <Hit_def>Crystal structure of zebrafish lysophosphatidic acid receptor LPA6 [Danio rerio]</Hit_def>
+  <Hit_accession>5XSZ_A</Hit_accession>
+  <Hit_len>477</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>99.7525</Hsp_bit-score>
+      <Hsp_score>247</Hsp_score>
+      <Hsp_evalue>7.52664e-23</Hsp_evalue>
+      <Hsp_query-from>16</Hsp_query-from>
+      <Hsp_query-to>201</Hsp_query-to>
+      <Hsp_hit-from>18</Hsp_hit-from>
+      <Hsp_hit-to>204</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>68</Hsp_identity>
+      <Hsp_positive>100</Hsp_positive>
+      <Hsp_gaps>9</Hsp_gaps>
+      <Hsp_align-len>191</Hsp_align-len>
+      <Hsp_qseq>TTCVYRENFKQLLLPPVYSAVLAAGLPLNICVITQICTSRRALTRTAVYTLNLALADLLYACSLPLLIYNYAQGDHWPFGDFACRLVRFLFYANLHGSILFLTCISFQRYLGICHPLAPWHKRGGR--RXXXXXXXXXXXXXTTQCLPTAIF--AATGIQRNRTVCYD-LSPPALATHYMPYGMALTVIGF</Hsp_qseq>
+      <Hsp_hseq>THCPKNDNFKYPLYSMVFSIVFMVGLITNVAAMYIFMCSLKLRNETTTYMMNLVVSDLLFVLTLPLRVFYFVQ-QNWPFGSLLCKLSVSLFYTNMYGSILFLTCISVDRFLAIVY---PFRSRGLRTKRNAKIVCAAVWVLVLSGSLPTGFMLNSTNKLENNSISCFENFSSKEWKSHLSKVVIFIETVGF</Hsp_hseq>
+      <Hsp_midline>T C   +NFK  L   V+S V   GL  N+  +     S +    T  Y +NL ++DLL+  +LPL ++ + Q  +WPFG   C+L   LFY N++GSILFLTCIS  R+L I +   P+  RG R  R A +VC AVW+ V +  LPT     +   ++ N   C++  S     +H     + +  +GF</Hsp_midline>
+    </Hsp>
+    <Hsp>
+      <Hsp_num>2</Hsp_num>
+      <Hsp_bit-score>31.5722</Hsp_bit-score>
+      <Hsp_score>70</Hsp_score>
+      <Hsp_evalue>1.9925</Hsp_evalue>
+      <Hsp_query-from>252</Hsp_query-from>
+      <Hsp_query-to>309</Hsp_query-to>
+      <Hsp_hit-from>409</Hsp_hit-from>
+      <Hsp_hit-to>466</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>15</Hsp_identity>
+      <Hsp_positive>25</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>58</Hsp_align-len>
+      <Hsp_qseq>FLPFHITKTAYLAVRSTPGVPCTVLEAFAAAYKGTRPFASANSVLDPILFYFTQKKFR</Hsp_qseq>
+      <Hsp_hseq>FIPYNVNLVFYSLVRTNTLKGCAAESVVRTIYPIALCIAVSNCCFDPIVYYFTSETIQ</Hsp_hseq>
+      <Hsp_midline>F+P+++    Y  VR+     C         Y      A +N   DPI++YFT +  +</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>3</Hit_num>
+  <Hit_id>pdb|6IBB|A</Hit_id>
+  <Hit_def>Crystal structure of the rat isoform of the succinate receptor SUCNR1 (GPR91) in complex with a nanobody [Rattus norvegicus] &gt;pdb|6IBB|C Crystal structure of the rat isoform of the succinate receptor SUCNR1 (GPR91) in complex with a nanobody [Rattus norvegicus]</Hit_def>
+  <Hit_accession>6IBB_A</Hit_accession>
+  <Hit_len>342</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>93.9745</Hsp_bit-score>
+      <Hsp_score>232</Hsp_score>
+      <Hsp_evalue>2.99414e-21</Hsp_evalue>
+      <Hsp_query-from>24</Hsp_query-from>
+      <Hsp_query-to>309</Hsp_query-to>
+      <Hsp_hit-from>24</Hsp_hit-from>
+      <Hsp_hit-to>305</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>87</Hsp_identity>
+      <Hsp_positive>139</Hsp_positive>
+      <Hsp_gaps>6</Hsp_gaps>
+      <Hsp_align-len>287</Hsp_align-len>
+      <Hsp_qseq>FKQLLLPPVYSAVLAAGLPLNICVITQICTSRRALTRTAVYTLNLALADLLYACSLPLLIYNYAQGDHWPFGDFACRLVRFLFYANLHGSILFLTCISFQRYLGICHPLAPWHKRGGRRXXXXXXXXXXXXXTTQCLPTAIF-AATGIQRNRTVCYDLSPPALATHYMPYGMALTVIGFXXXXXXXXXXXXXXXXXXXRQDGPAEPVAQERRGKXXXXXXXXXXXXXISFLPFHITKTAYLAVRSTPGVPCTVLEAFAAAYKGTRPFASANSVLDPILFYFTQKKFR</Hsp_qseq>
+      <Hsp_hseq>LKKYYLSAFYGIEFIVGMLGNFTVVFGYLFCMKNWNSSNVYLFNLSISDLAFLCTLPMLIRSYATGN-WTYGDVLCISNRYVLHANLYTSILFLTFISIDRYLLMKFPFRE-HILQKKEFAILISLAVWVLVTLEVLPMLTFITSTPIEKGDS-CVDYASSGNPKYSLIYSLCLTLLGFLIPLSVMCFFYYKMVVFLKKRSQQQATVLS--LNKPLRLVVLAVVIFSVLFTPYHIMRNVRIASRLDSWPQGCSQKAIKCLYILTRPLAFLNSAVNPIFYFLVGDHFR</Hsp_hseq>
+      <Hsp_midline> K+  L   Y      G+  N  V+       +    + VY  NL+++DL + C+LP+LI +YA G+ W +GD  C   R++ +ANL+ SILFLT IS  RYL +  P    H    +  A L+ +AVW+ VT + LP   F  +T I++  + C D +      + + Y + LT++GFL+P + +   Y  +   L ++      V      K  R+ V+    F++ F P+HI +   +A R          +A    Y  TRP A  NS ++PI ++     FR</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>4</Hit_num>
+  <Hit_id>pdb|6RNK|A</Hit_id>
+  <Hit_def>Crystal structure of a humanized (K18E, K269N) rat succinate receptor SUCNR1 (GPR91) in complex with a nanobody and antagonist NF-56-EJ40. [Rattus norvegicus] &gt;pdb|6Z10|A Crystal structure of a humanized (K18E, K269N) rat succinate receptor SUCNR1 (GPR91) in complex with a nanobody and antagonist [Rattus norvegicus]</Hit_def>
+  <Hit_accession>6RNK_A</Hit_accession>
+  <Hit_len>342</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>92.4337</Hsp_bit-score>
+      <Hsp_score>228</Hsp_score>
+      <Hsp_evalue>1.1668e-20</Hsp_evalue>
+      <Hsp_query-from>24</Hsp_query-from>
+      <Hsp_query-to>309</Hsp_query-to>
+      <Hsp_hit-from>24</Hsp_hit-from>
+      <Hsp_hit-to>305</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>86</Hsp_identity>
+      <Hsp_positive>139</Hsp_positive>
+      <Hsp_gaps>6</Hsp_gaps>
+      <Hsp_align-len>287</Hsp_align-len>
+      <Hsp_qseq>FKQLLLPPVYSAVLAAGLPLNICVITQICTSRRALTRTAVYTLNLALADLLYACSLPLLIYNYAQGDHWPFGDFACRLVRFLFYANLHGSILFLTCISFQRYLGICHPLAPWHKRGGRRXXXXXXXXXXXXXTTQCLPTAIF-AATGIQRNRTVCYDLSPPALATHYMPYGMALTVIGFXXXXXXXXXXXXXXXXXXXRQDGPAEPVAQERRGKXXXXXXXXXXXXXISFLPFHITKTAYLAVRSTPGVPCTVLEAFAAAYKGTRPFASANSVLDPILFYFTQKKFR</Hsp_qseq>
+      <Hsp_hseq>LEKYYLSAFYGIEFIVGMLGNFTVVFGYLFCMKNWNSSNVYLFNLSISDLAFLCTLPMLIRSYATGN-WTYGDVLCISNRYVLHANLYTSILFLTFISIDRYLLMKFPFRE-HILQKKEFAILISLAVWVLVTLEVLPMLTFITSTPIEKGDS-CVDYASSGNPKYSLIYSLCLTLLGFLIPLSVMCFFYYKMVVFLKKRSQQQATVLS--LNKPLRLVVLAVVIFSVLFTPYHIMRNVRIASRLDSWPQGCSQKAINCLYILTRPLAFLNSAVNPIFYFLVGDHFR</Hsp_hseq>
+      <Hsp_midline> ++  L   Y      G+  N  V+       +    + VY  NL+++DL + C+LP+LI +YA G+ W +GD  C   R++ +ANL+ SILFLT IS  RYL +  P    H    +  A L+ +AVW+ VT + LP   F  +T I++  + C D +      + + Y + LT++GFL+P + +   Y  +   L ++      V      K  R+ V+    F++ F P+HI +   +A R          +A    Y  TRP A  NS ++PI ++     FR</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>5</Hit_num>
+  <Hit_id>pdb|7TUZ|R</Hit_id>
+  <Hit_def>Chain R, G-protein coupled receptor 183 [Homo sapiens]</Hit_def>
+  <Hit_accession>7TUZ_R</Hit_accession>
+  <Hit_len>384</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>90.8929</Hsp_bit-score>
+      <Hsp_score>224</Hsp_score>
+      <Hsp_evalue>5.26894e-20</Hsp_evalue>
+      <Hsp_query-from>26</Hsp_query-from>
+      <Hsp_query-to>318</Hsp_query-to>
+      <Hsp_hit-from>33</Hsp_hit-from>
+      <Hsp_hit-to>327</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>81</Hsp_identity>
+      <Hsp_positive>149</Hsp_positive>
+      <Hsp_gaps>8</Hsp_gaps>
+      <Hsp_align-len>298</Hsp_align-len>
+      <Hsp_qseq>QLLLPPVYSAVLAAGLPLNICVITQICTSRRALTRTAVYTLNLALADLLYACSLPLLIYNYAQGDHWPFGDFACRLVRFLFYANLHGSILFLTCISFQRYLGICHPLAPWHKRGGRRXXXXXXXXXXXXXTTQCLPTAIFAATGIQRNRTVCYDLSPPALATHYMPY-GMALTVIGFXXXXXXXXXXXXXXXXXXXRQDGPAEPVAQER--RGKXXXXXXXXXXXXXISFLPFHITKTAYL--AVRSTPGVPCTVLEAFAAAYKGTRPFASANSVLDPILFYFTQKKFRRRPHELLQK</Hsp_qseq>
+      <Hsp_hseq>RIVMPLHYSLVFIIGLVGNLLALVVIVQNRKKINSTTLYSTNLVISDILFTTALPTRIAYYAMGFDWRIGDALCRITALVFYINTYAGVNFMTCLSIDRFIAVVHPLR-YNKIKRIEHAKGVCIFVWILVFAQTLPLLINPMSKQEAERITCMEY-PNFEETKSLPWILLGACFIGYVLPLIIILICYSQICCKLFRT-AKQNPLTEKSGVNKKALNTIILIIVVFVLCFTPYHVAIIQHMIKKLRFSNFLECSQRHSFQISLHFTVCLMNFNCCMDPFIYFFACKGYKRKVMRMLKR</Hsp_hseq>
+      <Hsp_midline>++++P  YS V   GL  N+  +  I  +R+ +  T +Y+ NL ++D+L+  +LP  I  YA G  W  GD  CR+   +FY N +  + F+TC+S  R++ + HPL  ++K      A  VC+ VW+ V  Q LP  I   +  +  R  C +  P    T  +P+  +    IG++LP   +L CY  + C+L R      P+ ++     KA    +++   F + F P+H+    ++   +R +  + C+   +F  +   T    + N  +DP +++F  K ++R+   +L++</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>6</Hit_num>
+  <Hit_id>pdb|6RZ6|A</Hit_id>
+  <Hit_def>Chain A, Cysteinyl leukotriene receptor 2,Soluble cytochrome b562,Cysteinyl leukotriene receptor 2 [synthetic construct] &gt;pdb|6RZ7|A Chain A, Cysteinyl leukotriene receptor 2,Soluble cytochrome b562,Cysteinyl leukotriene receptor 2 [synthetic construct] &gt;pdb|6RZ8|A Chain A, Cysteinyl leukotriene receptor 2,Soluble cytochrome b562,Cysteinyl leukotriene receptor 2 [synthetic construct] &gt;pdb|6RZ9|A Chain A, Cysteinyl leukotriene receptor 2,Soluble cytochrome b562,Cysteinyl leukotriene receptor 2 [synthetic construct]</Hit_def>
+  <Hit_accession>6RZ6_A</Hit_accession>
+  <Hit_len>405</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>86.2705</Hsp_bit-score>
+      <Hsp_score>212</Hsp_score>
+      <Hsp_evalue>2.45401e-18</Hsp_evalue>
+      <Hsp_query-from>22</Hsp_query-from>
+      <Hsp_query-to>136</Hsp_query-to>
+      <Hsp_hit-from>18</Hsp_hit-from>
+      <Hsp_hit-to>132</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>43</Hsp_identity>
+      <Hsp_positive>62</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>115</Hsp_align-len>
+      <Hsp_qseq>ENFKQLLLPPVYSAVLAAGLPLNICVITQICTSRRALTRTAVYTLNLALADLLYACSLPLLIYNYAQGDHWPFGDFACRLVRFLFYANLHGSILFLTCISFQRYLGICHPLAPWH</Hsp_qseq>
+      <Hsp_hseq>ENFKREFFPIVYLIIFFVGVLGNGLSIYVFLQPYKKSTSVNVFMLNLAISNLLFISTLPFRADYYLRGSNWIFGDLACRIMSYSLYVNMYSSIYFLTVLSVVRYLAMVHPFRLLH</Hsp_hseq>
+      <Hsp_midline>ENFK+   P VY  +   G+  N   I       +  T   V+ LNLA+++LL+  +LP     Y +G +W FGD ACR++ +  Y N++ SI FLT +S  RYL + HP    H</Hsp_midline>
+    </Hsp>
+    <Hsp>
+      <Hsp_num>2</Hsp_num>
+      <Hsp_bit-score>34.6538</Hsp_bit-score>
+      <Hsp_score>78</Hsp_score>
+      <Hsp_evalue>0.239099</Hsp_evalue>
+      <Hsp_query-from>252</Hsp_query-from>
+      <Hsp_query-to>318</Hsp_query-to>
+      <Hsp_hit-from>343</Hsp_hit-from>
+      <Hsp_hit-to>405</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>19</Hsp_identity>
+      <Hsp_positive>32</Hsp_positive>
+      <Hsp_gaps>4</Hsp_gaps>
+      <Hsp_align-len>67</Hsp_align-len>
+      <Hsp_qseq>FLPFHITKTAYLAVRSTPGVPCTVLEAFAAAYKGTRPFASANSVLDPILFYFTQKKFRRRPHELLQK</Hsp_qseq>
+      <Hsp_hseq>FLPYHTLRTVHLTTWKVGLCKDRLHKALVI----TLALAAANACFNPLLYYFAGENFKDRLKSALRK</Hsp_hseq>
+      <Hsp_midline>FLP+H  +T +L           + +A       T   A+AN+  +P+L+YF  + F+ R    L+K</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>7</Hit_num>
+  <Hit_id>pdb|7TUY|R</Hit_id>
+  <Hit_def>Chain R, G-protein coupled receptor 183,Soluble cytochrome b562 fusion [synthetic construct]</Hit_def>
+  <Hit_accession>7TUY_R</Hit_accession>
+  <Hit_len>477</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>86.6557</Hsp_bit-score>
+      <Hsp_score>213</Hsp_score>
+      <Hsp_evalue>2.75991e-18</Hsp_evalue>
+      <Hsp_query-from>26</Hsp_query-from>
+      <Hsp_query-to>132</Hsp_query-to>
+      <Hsp_hit-from>31</Hsp_hit-from>
+      <Hsp_hit-to>137</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>37</Hsp_identity>
+      <Hsp_positive>62</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>107</Hsp_align-len>
+      <Hsp_qseq>QLLLPPVYSAVLAAGLPLNICVITQICTSRRALTRTAVYTLNLALADLLYACSLPLLIYNYAQGDHWPFGDFACRLVRFLFYANLHGSILFLTCISFQRYLGICHPL</Hsp_qseq>
+      <Hsp_hseq>RIVMPLHYSLVFIIGLVGNLLALVVIVQNRKKINSTTLYSTNLVISDILFTTALPTRIAYYAMGFDWRIGDALCRITALVFYINTYAGVNFMTCLSIDRFIAVVHPL</Hsp_hseq>
+      <Hsp_midline>++++P  YS V   GL  N+  +  I  +R+ +  T +Y+ NL ++D+L+  +LP  I  YA G  W  GD  CR+   +FY N +  + F+TC+S  R++ + HPL</Hsp_midline>
+    </Hsp>
+    <Hsp>
+      <Hsp_num>2</Hsp_num>
+      <Hsp_bit-score>31.9574</Hsp_bit-score>
+      <Hsp_score>71</Hsp_score>
+      <Hsp_evalue>1.46704</Hsp_evalue>
+      <Hsp_query-from>250</Hsp_query-from>
+      <Hsp_query-to>318</Hsp_query-to>
+      <Hsp_hit-from>363</Hsp_hit-from>
+      <Hsp_hit-to>433</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>14</Hsp_identity>
+      <Hsp_positive>36</Hsp_positive>
+      <Hsp_gaps>2</Hsp_gaps>
+      <Hsp_align-len>71</Hsp_align-len>
+      <Hsp_qseq>ISFLPFHITKTAYL--AVRSTPGVPCTVLEAFAAAYKGTRPFASANSVLDPILFYFTQKKFRRRPHELLQK</Hsp_qseq>
+      <Hsp_hseq>LCFTPYHVAIIQHMIKKLRFSNFLECSQRHSFQISLHFTVCLMNFNCCMDPFIYFFACKGYKRKVMRMLKR</Hsp_hseq>
+      <Hsp_midline>+ F P+H+    ++   +R +  + C+   +F  +   T    + N  +DP +++F  K ++R+   +L++</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>8</Hit_num>
+  <Hit_id>pdb|7VL8|R</Hit_id>
+  <Hit_def>Chain R, C-C chemokine receptor type 1 [Homo sapiens] &gt;pdb|7VL9|R Chain R, C-C chemokine receptor type 1 [Homo sapiens] &gt;pdb|7VLA|R Chain R, C-C chemokine receptor type 1 [Homo sapiens]</Hit_def>
+  <Hit_accession>7VL8_R</Hit_accession>
+  <Hit_len>365</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>85.1149</Hsp_bit-score>
+      <Hsp_score>209</Hsp_score>
+      <Hsp_evalue>5.27528e-18</Hsp_evalue>
+      <Hsp_query-from>15</Hsp_query-from>
+      <Hsp_query-to>130</Hsp_query-to>
+      <Hsp_hit-from>27</Hsp_hit-from>
+      <Hsp_hit-to>141</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>44</Hsp_identity>
+      <Hsp_positive>63</Hsp_positive>
+      <Hsp_gaps>1</Hsp_gaps>
+      <Hsp_align-len>116</Hsp_align-len>
+      <Hsp_qseq>PTTCVYRENFKQLLLPPVYSAVLAAGLPLNICVITQICTSRRALTRTAVYTLNLALADLLYACSLPLLIYNYAQGDHWPFGDFACRLVRFLFYANLHGSILFLTCISFQRYLGICH</Hsp_qseq>
+      <Hsp_hseq>PCQKVNERAFGAQLLPPLYSLVFVIGLVGNILVVLVLVQYKRLKNMTSIYLLNLAISDLLFLFTLPFWI-DYKLKDDWVFGDAMCKILSGFYYTGLYSEIFFIILLTIDRYLAIVH</Hsp_hseq>
+      <Hsp_midline>P   V    F   LLPP+YS V   GL  NI V+  +   +R    T++Y LNLA++DLL+  +LP  I +Y   D W FGD  C+++   +Y  L+  I F+  ++  RYL I H</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>9</Hit_num>
+  <Hit_id>pdb|3VW7|A</Hit_id>
+  <Hit_def>Crystal structure of human protease-activated receptor 1 (PAR1) bound with antagonist vorapaxar at 2.2 angstrom [Homo sapiens]</Hit_def>
+  <Hit_accession>3VW7_A</Hit_accession>
+  <Hit_len>484</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>85.5001</Hsp_bit-score>
+      <Hsp_score>210</Hsp_score>
+      <Hsp_evalue>7.11373e-18</Hsp_evalue>
+      <Hsp_query-from>27</Hsp_query-from>
+      <Hsp_query-to>132</Hsp_query-to>
+      <Hsp_hit-from>21</Hsp_hit-from>
+      <Hsp_hit-to>126</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>42</Hsp_identity>
+      <Hsp_positive>55</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>106</Hsp_align-len>
+      <Hsp_qseq>LLLPPVYSAVLAAGLPLNICVITQICTSRRALTRTAVYTLNLALADLLYACSLPLLIYNYAQGDHWPFGDFACRLVRFLFYANLHGSILFLTCISFQRYLGICHPL</Hsp_qseq>
+      <Hsp_hseq>LFVPSVYTGVFVVSLPLNIMAIVVFILKMKVKKPAVVYMLHLATADVLFVSVLPFKISYYFSGSDWQFGSELCRFVTAAFYCNMYASILLMTVISIDRFLAVVYPM</Hsp_hseq>
+      <Hsp_midline>L +P VY+ V    LPLNI  I       +      VY L+LA AD+L+   LP  I  Y  G  W FG   CR V   FY N++ SIL +T IS  R+L + +P+</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>10</Hit_num>
+  <Hit_id>pdb|7W0P|R</Hit_id>
+  <Hit_def>Chain R, Soluble cytochrome b562,Apelin receptor [synthetic construct]</Hit_def>
+  <Hit_accession>7W0P_R</Hit_accession>
+  <Hit_len>477</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>85.5001</Hsp_bit-score>
+      <Hsp_score>210</Hsp_score>
+      <Hsp_evalue>7.23743e-18</Hsp_evalue>
+      <Hsp_query-from>28</Hsp_query-from>
+      <Hsp_query-to>310</Hsp_query-to>
+      <Hsp_hit-from>177</Hsp_hit-from>
+      <Hsp_hit-to>465</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>87</Hsp_identity>
+      <Hsp_positive>139</Hsp_positive>
+      <Hsp_gaps>12</Hsp_gaps>
+      <Hsp_align-len>292</Hsp_align-len>
+      <Hsp_qseq>LLPPVYSAVLAAGLPLNICVITQICTSRRALTRTA-VYTLNLALADLLYACSLPL-LIYNYAQGDHWPFGDFACRLVRFLFYANLHGSILFLTCISFQRYLGICHPLAPWHKRGGRRXXXXXXXXXXXXXTTQCLPTAIFAATGIQRNRT--VCY-DLSPPALATHYMPY----GMALTVIGFXXXXXXXXXXXXXXXXXXXRQDGPAEPVAQERRGKXXXXXXXXXXXXXISFLPFHITKTAYLAVRSTPGVPCTVLEAFAAAYKGTRPFASANSVLDPILFYFTQKKFRR</Hsp_qseq>
+      <Hsp_hseq>LIPAIYMLVFLLGTTGNGLVLWTVFRSSREKRRSADIFIASLAVADLTFVVTLPLWATYTYRDYD-WPFGTFACKLSSYLIFVNMYASVFCLTGLSFDRYLAIVRPVANARLR-LRVSGAVATAVLWVLAALLAMPVMVLRTTGDLENTTKVQCYMDYSMVATVSSEWAWEVGLGVSSTTVGFVVPFTIMLTCYFFIAQTIAGHFRKERIEGLRKRRRLLSIIVVLVVTFALCWMPYHLVKTLYM-LGSLLHWPCDFDLFLMNIFPYCTCISYVNSCLNPFLYAFFDPRFRQ</Hsp_hseq>
+      <Hsp_midline>L+P +Y  V   G   N  V+  +  S R   R+A ++  +LA+ADL +  +LPL   Y Y   D WPFG FAC+L  +L + N++ S+  LT +SF RYL I  P+A    R  R +  +    +W+      +P  +   TG   N T   CY D S  A  +    +    G++ T +GF++PF  +L CY  +A  +             +R +   + VV+   FA+ ++P+H+ KT Y+ + S    PC         +      +  NS L+P L+ F   +FR+</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>11</Hit_num>
+  <Hit_id>pdb|6DO1|A</Hit_id>
+  <Hit_def>Structure of nanobody-stabilized angiotensin II type 1 receptor bound to S1I8 [Homo sapiens] &gt;pdb|6DO1|B Structure of nanobody-stabilized angiotensin II type 1 receptor bound to S1I8 [Homo sapiens] &gt;pdb|6OS0|A Structure of synthetic nanobody-stabilized angiotensin II type 1 receptor bound to angiotensin II [Homo sapiens] &gt;pdb|6OS1|A Structure of synthetic nanobody-stabilized angiotensin II type 1 receptor bound to TRV023 [Homo sapiens] &gt;pdb|6OS2|A Structure of synthetic nanobody-stabilized angiotensin II type 1 receptor bound to TRV026 [Homo sapiens]</Hit_def>
+  <Hit_accession>6DO1_A</Hit_accession>
+  <Hit_len>425</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>84.3445</Hsp_bit-score>
+      <Hsp_score>207</Hsp_score>
+      <Hsp_evalue>1.2946e-17</Hsp_evalue>
+      <Hsp_query-from>21</Hsp_query-from>
+      <Hsp_query-to>138</Hsp_query-to>
+      <Hsp_hit-from>30</Hsp_hit-from>
+      <Hsp_hit-to>147</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>42</Hsp_identity>
+      <Hsp_positive>64</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>118</Hsp_align-len>
+      <Hsp_qseq>RENFKQLLLPPVYSAVLAAGLPLNICVITQICTSRRALTRTAVYTLNLALADLLYACSLPLLIYNYAQGDHWPFGDFACRLVRFLFYANLHGSILFLTCISFQRYLGICHPLAPWHKR</Hsp_qseq>
+      <Hsp_hseq>RHNYIFVMIPTLYSIIFVVGIFGNSLVVIVIYFYMKLKTVASVFLLNLALADLCFLLTLPLWAVYTAMEYRWPFGNYLCKIASASVSFNLYASVFLLTCLSIDRYLAIVHPMKSRLRR</Hsp_hseq>
+      <Hsp_midline>R N+  +++P +YS +   G+  N  V+  I    +  T  +V+ LNLALADL +  +LPL     A    WPFG++ C++       NL+ S+  LTC+S  RYL I HP+    +R</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>12</Hit_num>
+  <Hit_id>pdb|4ZUD|A</Hit_id>
+  <Hit_def>Crystal Structure of Human Angiotensin Receptor in Complex with Inverse Agonist Olmesartan at 2.8A resolution. [Escherichia coli]</Hit_def>
+  <Hit_accession>4ZUD_A</Hit_accession>
+  <Hit_len>410</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>83.5741</Hsp_bit-score>
+      <Hsp_score>205</Hsp_score>
+      <Hsp_evalue>2.41471e-17</Hsp_evalue>
+      <Hsp_query-from>21</Hsp_query-from>
+      <Hsp_query-to>138</Hsp_query-to>
+      <Hsp_hit-from>118</Hsp_hit-from>
+      <Hsp_hit-to>235</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>42</Hsp_identity>
+      <Hsp_positive>64</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>118</Hsp_align-len>
+      <Hsp_qseq>RENFKQLLLPPVYSAVLAAGLPLNICVITQICTSRRALTRTAVYTLNLALADLLYACSLPLLIYNYAQGDHWPFGDFACRLVRFLFYANLHGSILFLTCISFQRYLGICHPLAPWHKR</Hsp_qseq>
+      <Hsp_hseq>RHNYIFVMIPTLYSIIFVVGIFGNSLVVIVIYFYMKLKTVASVFLLNLALADLCFLLTLPLWAVYTAMEYRWPFGNYLCKIASASVSFNLYASVFLLTCLSIDRYLAIVHPMKSRLRR</Hsp_hseq>
+      <Hsp_midline>R N+  +++P +YS +   G+  N  V+  I    +  T  +V+ LNLALADL +  +LPL     A    WPFG++ C++       NL+ S+  LTC+S  RYL I HP+    +R</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>13</Hit_num>
+  <Hit_id>pdb|4YAY|A</Hit_id>
+  <Hit_def>XFEL structure of human Angiotensin Receptor [Escherichia coli]</Hit_def>
+  <Hit_accession>4YAY_A</Hit_accession>
+  <Hit_len>414</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>83.1889</Hsp_bit-score>
+      <Hsp_score>204</Hsp_score>
+      <Hsp_evalue>2.76104e-17</Hsp_evalue>
+      <Hsp_query-from>21</Hsp_query-from>
+      <Hsp_query-to>138</Hsp_query-to>
+      <Hsp_hit-from>118</Hsp_hit-from>
+      <Hsp_hit-to>235</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>42</Hsp_identity>
+      <Hsp_positive>64</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>118</Hsp_align-len>
+      <Hsp_qseq>RENFKQLLLPPVYSAVLAAGLPLNICVITQICTSRRALTRTAVYTLNLALADLLYACSLPLLIYNYAQGDHWPFGDFACRLVRFLFYANLHGSILFLTCISFQRYLGICHPLAPWHKR</Hsp_qseq>
+      <Hsp_hseq>RHNYIFVMIPTLYSIIFVVGIFGNSLVVIVIYFYMKLKTVASVFLLNLALADLCFLLTLPLWAVYTAMEYRWPFGNYLCKIASASVSFNLYASVFLLTCLSIDRYLAIVHPMKSRLRR</Hsp_hseq>
+      <Hsp_midline>R N+  +++P +YS +   G+  N  V+  I    +  T  +V+ LNLALADL +  +LPL     A    WPFG++ C++       NL+ S+  LTC+S  RYL I HP+    +R</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>14</Hit_num>
+  <Hit_id>pdb|7W0L|Q</Hit_id>
+  <Hit_def>Chain Q, Soluble cytochrome b562,Apelin receptor [synthetic construct] &gt;pdb|7W0L|R Chain R, Soluble cytochrome b562,Apelin receptor [synthetic construct] &gt;pdb|7W0M|R Chain R, Soluble cytochrome b562,Apelin receptor [synthetic construct] &gt;pdb|7W0N|Q Chain Q, Soluble cytochrome b562,Apelin receptor [synthetic construct] &gt;pdb|7W0N|R Chain R, Soluble cytochrome b562,Apelin receptor [synthetic construct] &gt;pdb|7W0O|R Chain R, Soluble cytochrome b562,Apelin receptor [synthetic construct]</Hit_def>
+  <Hit_accession>7W0L_Q</Hit_accession>
+  <Hit_len>477</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>82.8037</Hsp_bit-score>
+      <Hsp_score>203</Hsp_score>
+      <Hsp_evalue>5.03943e-17</Hsp_evalue>
+      <Hsp_query-from>28</Hsp_query-from>
+      <Hsp_query-to>310</Hsp_query-to>
+      <Hsp_hit-from>177</Hsp_hit-from>
+      <Hsp_hit-to>465</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>86</Hsp_identity>
+      <Hsp_positive>138</Hsp_positive>
+      <Hsp_gaps>12</Hsp_gaps>
+      <Hsp_align-len>292</Hsp_align-len>
+      <Hsp_qseq>LLPPVYSAVLAAGLPLNICVITQICTSRRALTRTA-VYTLNLALADLLYACSLPL-LIYNYAQGDHWPFGDFACRLVRFLFYANLHGSILFLTCISFQRYLGICHPLAPWHKRGGRRXXXXXXXXXXXXXTTQCLPTAIFAATGIQRNRT--VCY-DLSPPALATHYMPY----GMALTVIGFXXXXXXXXXXXXXXXXXXXRQDGPAEPVAQERRGKXXXXXXXXXXXXXISFLPFHITKTAYLAVRSTPGVPCTVLEAFAAAYKGTRPFASANSVLDPILFYFTQKKFRR</Hsp_qseq>
+      <Hsp_hseq>LIPAIYMLVFLLGTTGNGLVLWTVFRSSREKRRSADIFIASLAVADLTFVVTLPLWATYTYRDYD-WPFGTFFCKLSSYLIFVNMYASVFCLTGLSFDRYLAIVRPVANARLR-LRVSGAVATAVLWVLAALLAMPVMVLRTTGDLENTTKVQCYMDYSMVATVSSEWAWEVGLGVSSTTVGFVVPFTIMLTCYFFIAQTIAGHFRKERIEGLRKRRRLLSIIVVLVVTFALCWMPYHLVKTLYM-LGSLLHWPCDFDLFLMNIFPYCTCISYVNSCLNPFLYAFFDPRFRQ</Hsp_hseq>
+      <Hsp_midline>L+P +Y  V   G   N  V+  +  S R   R+A ++  +LA+ADL +  +LPL   Y Y   D WPFG F C+L  +L + N++ S+  LT +SF RYL I  P+A    R  R +  +    +W+      +P  +   TG   N T   CY D S  A  +    +    G++ T +GF++PF  +L CY  +A  +             +R +   + VV+   FA+ ++P+H+ KT Y+ + S    PC         +      +  NS L+P L+ F   +FR+</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>15</Hit_num>
+  <Hit_id>pdb|5LWE|A</Hit_id>
+  <Hit_def>Crystal structure of the human CC chemokine receptor type 9 (CCR9) in complex with vercirnon [Homo sapiens] &gt;pdb|5LWE|B Crystal structure of the human CC chemokine receptor type 9 (CCR9) in complex with vercirnon [Homo sapiens]</Hit_def>
+  <Hit_accession>5LWE_A</Hit_accession>
+  <Hit_len>331</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>78.1814</Hsp_bit-score>
+      <Hsp_score>191</Hsp_score>
+      <Hsp_evalue>9.68945e-16</Hsp_evalue>
+      <Hsp_query-from>24</Hsp_query-from>
+      <Hsp_query-to>321</Hsp_query-to>
+      <Hsp_hit-from>24</Hsp_hit-from>
+      <Hsp_hit-to>315</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>83</Hsp_identity>
+      <Hsp_positive>132</Hsp_positive>
+      <Hsp_gaps>20</Hsp_gaps>
+      <Hsp_align-len>305</Hsp_align-len>
+      <Hsp_qseq>FKQLLLPPVYSAVLAAGLPLNICVITQICTSRRALTRTAVYTLNLALADLLYACSLPLLIYNYAQGDHWPFGDFACRLVRFLFYANLHGSILFLTCISFQRYLGICHPLAPWHKRGGRRXXXXXXXXXX-XXXTTQCLPTAIFAATGIQRNRTVCYDLSPPALATHYMPYGMALTVI-GFXXXXXXXXXXXXXXXXXXXRQDGPAEPVAQERRGKXXXXXXXXXXXXXISFLPFHI-----TKTAYLAVRSTPGVPCTVLEAFAAAYKGTRPFASANSVLDPILFYFTQKKFRRRPHELLQKLTA</Hsp_qseq>
+      <Hsp_hseq>FASHFLPPLYWLVFIVGALGNSLVILVYWYCARAKTATDMFLLNLAIADLLFLVTLPF--WAIAAADQWKFQTFMCKVVNSMYKMNFYSCVLLIMCICVDRYIAIAQAMRAHTWREKRLLYSKMVCFTIWVLAAALCIPEILYSQIKEESGIAICTMVYPSDESTKLKSAVLALKVILGFFLPFVVMACCYTIIIHTLIQ-------AKKSSKHKALKATITVLTVFVLSQFPYNCILLVQTIDAYAMFISN----CAVSTAIDICFQVTQAIAFFHSCLNPVLYVFVGERFRRDLVKTLKNLGA</Hsp_hseq>
+      <Hsp_midline>F    LPP+Y  V   G   N  VI       RA T T ++ LNLA+ADLL+  +LP   +  A  D W F  F C++V  ++  N +  +L + CI   RY+ I   +     R  R     +      +     C+P  +++    +    +C  + P   +T      +AL VI GF LPF  +  CY ++   L +         +  + KA +  + V   F +S  P++      T  AY    S     C V  A    ++ T+  A  +S L+P+L+ F  ++FRR   + L+ L A</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>16</Hit_num>
+  <Hit_id>pdb|6RZ4|A</Hit_id>
+  <Hit_def>Chain A, Cysteinyl leukotriene receptor 1,Soluble cytochrome b562,Cysteinyl leukotriene receptor 1 [synthetic construct] &gt;pdb|6RZ5|A Chain A, Cysteinyl leukotriene receptor 1,Soluble cytochrome b562,Cysteinyl leukotriene receptor 1 [synthetic construct] &gt;pdb|6RZ5|B Chain B, Cysteinyl leukotriene receptor 1,Soluble cytochrome b562,Cysteinyl leukotriene receptor 1 [synthetic construct]</Hit_def>
+  <Hit_accession>6RZ4_A</Hit_accession>
+  <Hit_len>423</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>78.5666</Hsp_bit-score>
+      <Hsp_score>192</Hsp_score>
+      <Hsp_evalue>1.02491e-15</Hsp_evalue>
+      <Hsp_query-from>22</Hsp_query-from>
+      <Hsp_query-to>132</Hsp_query-to>
+      <Hsp_hit-from>22</Hsp_hit-from>
+      <Hsp_hit-to>132</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>40</Hsp_identity>
+      <Hsp_positive>60</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>111</Hsp_align-len>
+      <Hsp_qseq>ENFKQLLLPPVYSAVLAAGLPLNICVITQICTSRRALTRTAVYTLNLALADLLYACSLPLLIYNYAQGDHWPFGDFACRLVRFLFYANLHGSILFLTCISFQRYLGICHPL</Hsp_qseq>
+      <Hsp_hseq>DDFRNQVYSTLYSMISVVGFFGNGFVLYVLIKTYHKKSAFQVYMINLAVADLLCVCTLPLRVVYYVHKGIWLFGDFLCRLSTYALYVNLYCSIFFMTAMSFFRCIAIVFPV</Hsp_hseq>
+      <Hsp_midline>++F+  +   +YS +   G   N  V+  +  +    +   VY +NLA+ADLL  C+LPL +  Y     W FGDF CRL  +  Y NL+ SI F+T +SF R + I  P+</Hsp_midline>
+    </Hsp>
+    <Hsp>
+      <Hsp_num>2</Hsp_num>
+      <Hsp_bit-score>45.4394</Hsp_bit-score>
+      <Hsp_score>106</Hsp_score>
+      <Hsp_evalue>7.24324e-05</Hsp_evalue>
+      <Hsp_query-from>250</Hsp_query-from>
+      <Hsp_query-to>311</Hsp_query-to>
+      <Hsp_hit-from>356</Hsp_hit-from>
+      <Hsp_hit-to>417</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>19</Hsp_identity>
+      <Hsp_positive>33</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>62</Hsp_align-len>
+      <Hsp_qseq>ISFLPFHITKTAYLAVRSTPGVPCTVLEAFAAAYKGTRPFASANSVLDPILFYFTQKKFRRR</Hsp_qseq>
+      <Hsp_hseq>VSFMPYHIQRTIHLHFLHNETKPCDSVLRMQKSVVITLSLAASNCCFDPLLYFFSGGNFRKR</Hsp_hseq>
+      <Hsp_midline>+SF+P+HI +T +L        PC  +     +   T   A++N   DP+L++F+   FR+R</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>17</Hit_num>
+  <Hit_id>pdb|6WWZ|R</Hit_id>
+  <Hit_def>Cryo-EM structure of the human chemokine receptor CCR6 in complex with CCL20 and a Go protein [Homo sapiens]</Hit_def>
+  <Hit_accession>6WWZ_R</Hit_accession>
+  <Hit_len>529</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>77.7962</Hsp_bit-score>
+      <Hsp_score>190</Hsp_score>
+      <Hsp_evalue>2.84516e-15</Hsp_evalue>
+      <Hsp_query-from>24</Hsp_query-from>
+      <Hsp_query-to>128</Hsp_query-to>
+      <Hsp_hit-from>189</Hsp_hit-from>
+      <Hsp_hit-to>292</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>38</Hsp_identity>
+      <Hsp_positive>61</Hsp_positive>
+      <Hsp_gaps>1</Hsp_gaps>
+      <Hsp_align-len>105</Hsp_align-len>
+      <Hsp_qseq>FKQLLLPPVYSAVLAAGLPLNICVITQICTSRRALTRTAVYTLNLALADLLYACSLPLLIYNYAQGDHWPFGDFACRLVRFLFYANLHGSILFLTCISFQRYLGI</Hsp_qseq>
+      <Hsp_hseq>FSRLFVPIAYSLICVFGLLGNILVVITFAFYKKARSMTDVYLLNMAIADILFVLTLPFWAVSHATG-AWVFSNATCKLLKGIYAINFNCGMLLLTCISMDRYIAI</Hsp_hseq>
+      <Hsp_midline>F +L +P  YS +   GL  NI V+      ++A + T VY LN+A+AD+L+  +LP    ++A G  W F +  C+L++ ++  N +  +L LTCIS  RY+ I</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>18</Hit_num>
+  <Hit_id>pdb|5NDD|A</Hit_id>
+  <Hit_def>Chain A, Lysozyme,Proteinase-activated receptor 2,Soluble cytochrome b562,Proteinase-activated receptor 2 [Tequatrovirus T4] &gt;pdb|5NDZ|A Chain A, Lysozyme,Proteinase-activated receptor 2,Soluble cytochrome b562,Proteinase-activated receptor 2 [Tequatrovirus T4]</Hit_def>
+  <Hit_accession>5NDD_A</Hit_accession>
+  <Hit_len>619</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>77.7962</Hsp_bit-score>
+      <Hsp_score>190</Hsp_score>
+      <Hsp_evalue>3.09498e-15</Hsp_evalue>
+      <Hsp_query-from>27</Hsp_query-from>
+      <Hsp_query-to>139</Hsp_query-to>
+      <Hsp_hit-from>205</Hsp_hit-from>
+      <Hsp_hit-to>317</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>41</Hsp_identity>
+      <Hsp_positive>59</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>113</Hsp_align-len>
+      <Hsp_qseq>LLLPPVYSAVLAAGLPLNICVITQICTSRRALTRTAVYTLNLALADLLYACSLPLLIYNYAQGDHWPFGDFACRLVRFLFYANLHGSILFLTCISFQRYLGICHPLAPWHKRG</Hsp_qseq>
+      <Hsp_hseq>VFLPIVYTIVFVVALPSNGMALWVFLFRTKKKAPAVIYMANLALADLLSVIWFPLKIAYHIHGNNWIYGEALCNVLIGFFYANMYCSILFLTCLSVQRAWEIVNPMGHSRKKA</Hsp_hseq>
+      <Hsp_midline>+ LP VY+ V    LP N   +       +      +Y  NLALADLL     PL I  +  G++W +G+  C ++   FYAN++ SILFLTC+S QR   I +P+    K+ </Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>19</Hit_num>
+  <Hit_id>pdb|5NJ6|A</Hit_id>
+  <Hit_def>Crystal structure of a thermostabilised human protease-activated receptor-2 (PAR2) in ternary complex with Fab3949 and AZ7188 at 4.0 angstrom resolution [Homo sapiens]</Hit_def>
+  <Hit_accession>5NJ6_A</Hit_accession>
+  <Hit_len>437</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>77.0258</Hsp_bit-score>
+      <Hsp_score>188</Hsp_score>
+      <Hsp_evalue>3.88273e-15</Hsp_evalue>
+      <Hsp_query-from>27</Hsp_query-from>
+      <Hsp_query-to>139</Hsp_query-to>
+      <Hsp_hit-from>23</Hsp_hit-from>
+      <Hsp_hit-to>135</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>41</Hsp_identity>
+      <Hsp_positive>59</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>113</Hsp_align-len>
+      <Hsp_qseq>LLLPPVYSAVLAAGLPLNICVITQICTSRRALTRTAVYTLNLALADLLYACSLPLLIYNYAQGDHWPFGDFACRLVRFLFYANLHGSILFLTCISFQRYLGICHPLAPWHKRG</Hsp_qseq>
+      <Hsp_hseq>VFLPIVYTIVFVVALPSNGMALWVFLFRTKKKAPAVIYMANLALADLLSVIWFPLKIAYHIHGNNWIYGEALCNVLIGFFYANMYCSILFLTCLSVQRAWEIVNPMGHSRKKA</Hsp_hseq>
+      <Hsp_midline>+ LP VY+ V    LP N   +       +      +Y  NLALADLL     PL I  +  G++W +G+  C ++   FYAN++ SILFLTC+S QR   I +P+    K+ </Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>20</Hit_num>
+  <Hit_id>pdb|4RWA|A</Hit_id>
+  <Hit_def>Synchrotron structure of the human delta opioid receptor in complex with a bifunctional peptide (PSI community target) [Homo sapiens] &gt;pdb|4RWA|B Synchrotron structure of the human delta opioid receptor in complex with a bifunctional peptide (PSI community target) [Homo sapiens] &gt;pdb|4RWD|A XFEL structure of the human delta opioid receptor in complex with a bifunctional peptide [Homo sapiens] &gt;pdb|4RWD|B XFEL structure of the human delta opioid receptor in complex with a bifunctional peptide [Homo sapiens]</Hit_def>
+  <Hit_accession>4RWA_A</Hit_accession>
+  <Hit_len>411</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>76.2554</Hsp_bit-score>
+      <Hsp_score>186</Hsp_score>
+      <Hsp_evalue>6.07436e-15</Hsp_evalue>
+      <Hsp_query-from>32</Hsp_query-from>
+      <Hsp_query-to>132</Hsp_query-to>
+      <Hsp_hit-from>128</Hsp_hit-from>
+      <Hsp_hit-to>227</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>41</Hsp_identity>
+      <Hsp_positive>56</Hsp_positive>
+      <Hsp_gaps>1</Hsp_gaps>
+      <Hsp_align-len>101</Hsp_align-len>
+      <Hsp_qseq>VYSAVLAAGLPLNICVITQICTSRRALTRTAVYTLNLALADLLYACSLPLLIYNYAQGDHWPFGDFACRLVRFLFYANLHGSILFLTCISFQRYLGICHPL</Hsp_qseq>
+      <Hsp_hseq>LYSAVCAVGLLGNVLVMFGIVRYTKMKTATNIYIFNLALADALATSTLPFQSAKYLM-ETWPFGELLCKAVLSIDYYNMFTSIFTLTMMSVDRYIAVCHPV</Hsp_hseq>
+      <Hsp_midline>+YSAV A GL  N+ V+  I    +  T T +Y  NLALAD L   +LP     Y   + WPFG+  C+ V  + Y N+  SI  LT +S  RY+ +CHP+</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>21</Hit_num>
+  <Hit_id>pdb|4N6H|A</Hit_id>
+  <Hit_def>1.8 A Structure of the human delta opioid 7TM receptor (PSI Community Target) [Homo sapiens]</Hit_def>
+  <Hit_accession>4N6H_A</Hit_accession>
+  <Hit_len>414</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>76.2554</Hsp_bit-score>
+      <Hsp_score>186</Hsp_score>
+      <Hsp_evalue>6.20266e-15</Hsp_evalue>
+      <Hsp_query-from>32</Hsp_query-from>
+      <Hsp_query-to>132</Hsp_query-to>
+      <Hsp_hit-from>131</Hsp_hit-from>
+      <Hsp_hit-to>230</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>41</Hsp_identity>
+      <Hsp_positive>56</Hsp_positive>
+      <Hsp_gaps>1</Hsp_gaps>
+      <Hsp_align-len>101</Hsp_align-len>
+      <Hsp_qseq>VYSAVLAAGLPLNICVITQICTSRRALTRTAVYTLNLALADLLYACSLPLLIYNYAQGDHWPFGDFACRLVRFLFYANLHGSILFLTCISFQRYLGICHPL</Hsp_qseq>
+      <Hsp_hseq>LYSAVCAVGLLGNVLVMFGIVRYTKMKTATNIYIFNLALADALATSTLPFQSAKYLM-ETWPFGELLCKAVLSIDYYNMFTSIFTLTMMSVDRYIAVCHPV</Hsp_hseq>
+      <Hsp_midline>+YSAV A GL  N+ V+  I    +  T T +Y  NLALAD L   +LP     Y   + WPFG+  C+ V  + Y N+  SI  LT +S  RY+ +CHP+</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>22</Hit_num>
+  <Hit_id>pdb|6B73|A</Hit_id>
+  <Hit_def>Crystal Structure of a nanobody-stabilized active state of the kappa-opioid receptor [Escherichia coli] &gt;pdb|6B73|B Crystal Structure of a nanobody-stabilized active state of the kappa-opioid receptor [Escherichia coli]</Hit_def>
+  <Hit_accession>6B73_A</Hit_accession>
+  <Hit_len>418</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>76.2554</Hsp_bit-score>
+      <Hsp_score>186</Hsp_score>
+      <Hsp_evalue>7.0386e-15</Hsp_evalue>
+      <Hsp_query-from>27</Hsp_query-from>
+      <Hsp_query-to>132</Hsp_query-to>
+      <Hsp_hit-from>120</Hsp_hit-from>
+      <Hsp_hit-to>224</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>40</Hsp_identity>
+      <Hsp_positive>57</Hsp_positive>
+      <Hsp_gaps>1</Hsp_gaps>
+      <Hsp_align-len>106</Hsp_align-len>
+      <Hsp_qseq>LLLPPVYSAVLAAGLPLNICVITQICTSRRALTRTAVYTLNLALADLLYACSLPLLIYNYAQGDHWPFGDFACRLVRFLFYANLHGSILFLTCISFQRYLGICHPL</Hsp_qseq>
+      <Hsp_hseq>VIITAVYSVVFVVGLVGNSLVMFVIIRYTKMKTATNIYIFNLALADALVTTTMPFQSTVYLM-NSWPFGDVLCKIVLSIDYYNMFTSIFTLTMMSVDRYIAVCHPV</Hsp_hseq>
+      <Hsp_midline>+++  VYS V   GL  N  V+  I    +  T T +Y  NLALAD L   ++P     Y   + WPFGD  C++V  + Y N+  SI  LT +S  RY+ +CHP+</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>23</Hit_num>
+  <Hit_id>pdb|4DJH|A</Hit_id>
+  <Hit_def>Structure of the human kappa opioid receptor in complex with JDTic [Homo sapiens] &gt;pdb|4DJH|B Structure of the human kappa opioid receptor in complex with JDTic [Homo sapiens]</Hit_def>
+  <Hit_accession>4DJH_A</Hit_accession>
+  <Hit_len>480</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>75.8702</Hsp_bit-score>
+      <Hsp_score>185</Hsp_score>
+      <Hsp_evalue>9.84522e-15</Hsp_evalue>
+      <Hsp_query-from>27</Hsp_query-from>
+      <Hsp_query-to>132</Hsp_query-to>
+      <Hsp_hit-from>23</Hsp_hit-from>
+      <Hsp_hit-to>127</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>40</Hsp_identity>
+      <Hsp_positive>57</Hsp_positive>
+      <Hsp_gaps>1</Hsp_gaps>
+      <Hsp_align-len>106</Hsp_align-len>
+      <Hsp_qseq>LLLPPVYSAVLAAGLPLNICVITQICTSRRALTRTAVYTLNLALADLLYACSLPLLIYNYAQGDHWPFGDFACRLVRFLFYANLHGSILFLTCISFQRYLGICHPL</Hsp_qseq>
+      <Hsp_hseq>VIITAVYSVVFVVGLVGNSLVMFVIIRYTKMKTATNIYIFNLALADALVTTTMPFQSTVYLM-NSWPFGDVLCKIVLSIDYYNMFTSIFTLTMMSVDRYIAVCHPV</Hsp_hseq>
+      <Hsp_midline>+++  VYS V   GL  N  V+  I    +  T T +Y  NLALAD L   ++P     Y   + WPFGD  C++V  + Y N+  SI  LT +S  RY+ +CHP+</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>24</Hit_num>
+  <Hit_id>pdb|6VI4|A</Hit_id>
+  <Hit_def>Nanobody-Enabled Monitoring of Kappa Opioid Receptor States [Homo sapiens] &gt;pdb|6VI4|B Nanobody-Enabled Monitoring of Kappa Opioid Receptor States [Homo sapiens]</Hit_def>
+  <Hit_accession>6VI4_A</Hit_accession>
+  <Hit_len>307</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>74.7146</Hsp_bit-score>
+      <Hsp_score>182</Hsp_score>
+      <Hsp_evalue>1.1517e-14</Hsp_evalue>
+      <Hsp_query-from>27</Hsp_query-from>
+      <Hsp_query-to>132</Hsp_query-to>
+      <Hsp_hit-from>9</Hsp_hit-from>
+      <Hsp_hit-to>113</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>40</Hsp_identity>
+      <Hsp_positive>57</Hsp_positive>
+      <Hsp_gaps>1</Hsp_gaps>
+      <Hsp_align-len>106</Hsp_align-len>
+      <Hsp_qseq>LLLPPVYSAVLAAGLPLNICVITQICTSRRALTRTAVYTLNLALADLLYACSLPLLIYNYAQGDHWPFGDFACRLVRFLFYANLHGSILFLTCISFQRYLGICHPL</Hsp_qseq>
+      <Hsp_hseq>VIITAVYSVVFVVGLVGNSLVMFVIIRYTKMKTATNIYIFNLALADALVTTTMPFQSTVYLM-NSWPFGDVLCKIVLSIDYYNMFTSIFTLTMMSVDRYIAVCHPV</Hsp_hseq>
+      <Hsp_midline>+++  VYS V   GL  N  V+  I    +  T T +Y  NLALAD L   ++P     Y   + WPFGD  C++V  + Y N+  SI  LT +S  RY+ +CHP+</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>25</Hit_num>
+  <Hit_id>pdb|4EJ4|A</Hit_id>
+  <Hit_def>Structure of the delta opioid receptor bound to naltrindole [Mus musculus]</Hit_def>
+  <Hit_accession>4EJ4_A</Hit_accession>
+  <Hit_len>461</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>75.485</Hsp_bit-score>
+      <Hsp_score>184</Hsp_score>
+      <Hsp_evalue>1.28024e-14</Hsp_evalue>
+      <Hsp_query-from>32</Hsp_query-from>
+      <Hsp_query-to>132</Hsp_query-to>
+      <Hsp_hit-from>20</Hsp_hit-from>
+      <Hsp_hit-to>119</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>41</Hsp_identity>
+      <Hsp_positive>56</Hsp_positive>
+      <Hsp_gaps>1</Hsp_gaps>
+      <Hsp_align-len>101</Hsp_align-len>
+      <Hsp_qseq>VYSAVLAAGLPLNICVITQICTSRRALTRTAVYTLNLALADLLYACSLPLLIYNYAQGDHWPFGDFACRLVRFLFYANLHGSILFLTCISFQRYLGICHPL</Hsp_qseq>
+      <Hsp_hseq>LYSAVCAVGLLGNVLVMFGIVRYTKLKTATNIYIFNLALADALATSTLPFQSAKYLM-ETWPFGELLCKAVLSIDYYNMFTSIFTLTMMSVDRYIAVCHPV</Hsp_hseq>
+      <Hsp_midline>+YSAV A GL  N+ V+  I    +  T T +Y  NLALAD L   +LP     Y   + WPFG+  C+ V  + Y N+  SI  LT +S  RY+ +CHP+</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>26</Hit_num>
+  <Hit_id>pdb|7SBF|R</Hit_id>
+  <Hit_def>Chain R, Soluble cytochrome b562, Mu-type opioid receptor chimera,Mu-type opioid receptor [synthetic construct]</Hit_def>
+  <Hit_accession>7SBF_R</Hit_accession>
+  <Hit_len>488</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>74.7146</Hsp_bit-score>
+      <Hsp_score>182</Hsp_score>
+      <Hsp_evalue>2.9866e-14</Hsp_evalue>
+      <Hsp_query-from>32</Hsp_query-from>
+      <Hsp_query-to>132</Hsp_query-to>
+      <Hsp_hit-from>148</Hsp_hit-from>
+      <Hsp_hit-to>247</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>40</Hsp_identity>
+      <Hsp_positive>54</Hsp_positive>
+      <Hsp_gaps>1</Hsp_gaps>
+      <Hsp_align-len>101</Hsp_align-len>
+      <Hsp_qseq>VYSAVLAAGLPLNICVITQICTSRRALTRTAVYTLNLALADLLYACSLPLLIYNYAQGDHWPFGDFACRLVRFLFYANLHGSILFLTCISFQRYLGICHPL</Hsp_qseq>
+      <Hsp_hseq>LYSIVCVVGLFGNFLVMYVIVRYTKMKTATNIYIFNLALADALATSTLPFQSVNYLMGT-WPFGNILCKIVISIDYYNMFTSIFTLCTMSVDRYIAVCHPV</Hsp_hseq>
+      <Hsp_midline>+YS V   GL  N  V+  I    +  T T +Y  NLALAD L   +LP    NY  G  WPFG+  C++V  + Y N+  SI  L  +S  RY+ +CHP+</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>27</Hit_num>
+  <Hit_id>pdb|4DKL|A</Hit_id>
+  <Hit_def>Crystal structure of the mu-opioid receptor bound to a morphinan antagonist [Mus musculus]</Hit_def>
+  <Hit_accession>4DKL_A</Hit_accession>
+  <Hit_len>464</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>73.9442</Hsp_bit-score>
+      <Hsp_score>180</Hsp_score>
+      <Hsp_evalue>4.46739e-14</Hsp_evalue>
+      <Hsp_query-from>32</Hsp_query-from>
+      <Hsp_query-to>132</Hsp_query-to>
+      <Hsp_hit-from>23</Hsp_hit-from>
+      <Hsp_hit-to>122</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>40</Hsp_identity>
+      <Hsp_positive>54</Hsp_positive>
+      <Hsp_gaps>1</Hsp_gaps>
+      <Hsp_align-len>101</Hsp_align-len>
+      <Hsp_qseq>VYSAVLAAGLPLNICVITQICTSRRALTRTAVYTLNLALADLLYACSLPLLIYNYAQGDHWPFGDFACRLVRFLFYANLHGSILFLTCISFQRYLGICHPL</Hsp_qseq>
+      <Hsp_hseq>LYSIVCVVGLFGNFLVMYVIVRYTKMKTATNIYIFNLALADALATSTLPFQSVNYLMGT-WPFGNILCKIVISIDYYNMFTSIFTLCTMSVDRYIAVCHPV</Hsp_hseq>
+      <Hsp_midline>+YS V   GL  N  V+  I    +  T T +Y  NLALAD L   +LP    NY  G  WPFG+  C++V  + Y N+  SI  L  +S  RY+ +CHP+</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>28</Hit_num>
+  <Hit_id>pdb|5C1M|A</Hit_id>
+  <Hit_def>Chain A, Mu-type opioid receptor [Mus musculus]</Hit_def>
+  <Hit_accession>5C1M_A</Hit_accession>
+  <Hit_len>296</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>72.7886</Hsp_bit-score>
+      <Hsp_score>177</Hsp_score>
+      <Hsp_evalue>5.09946e-14</Hsp_evalue>
+      <Hsp_query-from>32</Hsp_query-from>
+      <Hsp_query-to>132</Hsp_query-to>
+      <Hsp_hit-from>23</Hsp_hit-from>
+      <Hsp_hit-to>122</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>40</Hsp_identity>
+      <Hsp_positive>54</Hsp_positive>
+      <Hsp_gaps>1</Hsp_gaps>
+      <Hsp_align-len>101</Hsp_align-len>
+      <Hsp_qseq>VYSAVLAAGLPLNICVITQICTSRRALTRTAVYTLNLALADLLYACSLPLLIYNYAQGDHWPFGDFACRLVRFLFYANLHGSILFLTCISFQRYLGICHPL</Hsp_qseq>
+      <Hsp_hseq>LYSIVCVVGLFGNFLVMYVIVRYTKMKTATNIYIFNLALADALATSTLPFQSVNYLMGT-WPFGNILCKIVISIDYYNMFTSIFTLCTMSVDRYIAVCHPV</Hsp_hseq>
+      <Hsp_midline>+YS V   GL  N  V+  I    +  T T +Y  NLALAD L   +LP    NY  G  WPFG+  C++V  + Y N+  SI  L  +S  RY+ +CHP+</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>29</Hit_num>
+  <Hit_id>pdb|3OE6|A</Hit_id>
+  <Hit_def>Chain A, C-X-C chemokine receptor type 4, Lysozyme Chimera [synthetic construct]</Hit_def>
+  <Hit_accession>3OE6_A</Hit_accession>
+  <Hit_len>508</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>73.559</Hsp_bit-score>
+      <Hsp_score>179</Hsp_score>
+      <Hsp_evalue>5.81601e-14</Hsp_evalue>
+      <Hsp_query-from>20</Hsp_query-from>
+      <Hsp_query-to>130</Hsp_query-to>
+      <Hsp_hit-from>39</Hsp_hit-from>
+      <Hsp_hit-to>150</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>39</Hsp_identity>
+      <Hsp_positive>62</Hsp_positive>
+      <Hsp_gaps>5</Hsp_gaps>
+      <Hsp_align-len>114</Hsp_align-len>
+      <Hsp_qseq>YRE---NFKQLLLPPVYSAVLAAGLPLNICVITQICTSRRALTRTAVYTLNLALADLLYACSLPLLIYNYAQGDHWPFGDFACRLVRFLFYANLHGSILFLTCISFQRYLGICH</Hsp_qseq>
+      <Hsp_hseq>FREENANFNKIFLPTIYSIIFLTGIVGNGLVILVMGYQKKLRSMTDKYRLHLSVADLLFVITLPFWAVDAVA--NWYFGNFLCKAVHVIYTVNLYSSVWILAFISLDRYLAIVH</Hsp_hseq>
+      <Hsp_midline>+RE   NF ++ LP +YS +   G+  N  VI  +   ++  + T  Y L+L++ADLL+  +LP    +     +W FG+F C+ V  ++  NL+ S+  L  IS  RYL I H</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>30</Hit_num>
+  <Hit_id>pdb|3ODU|A</Hit_id>
+  <Hit_def>Chain A, C-X-C chemokine receptor type 4, Lysozyme Chimera [synthetic construct] &gt;pdb|3ODU|B Chain B, C-X-C chemokine receptor type 4, Lysozyme Chimera [synthetic construct] &gt;pdb|3OE8|A Chain A, C-X-C chemokine receptor type 4, Lysozyme Chimera [synthetic construct] &gt;pdb|3OE8|B Chain B, C-X-C chemokine receptor type 4, Lysozyme Chimera [synthetic construct] &gt;pdb|3OE8|C Chain C, C-X-C chemokine receptor type 4, Lysozyme Chimera [synthetic construct]</Hit_def>
+  <Hit_accession>3ODU_A</Hit_accession>
+  <Hit_len>502</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>73.559</Hsp_bit-score>
+      <Hsp_score>179</Hsp_score>
+      <Hsp_evalue>6.37265e-14</Hsp_evalue>
+      <Hsp_query-from>20</Hsp_query-from>
+      <Hsp_query-to>130</Hsp_query-to>
+      <Hsp_hit-from>39</Hsp_hit-from>
+      <Hsp_hit-to>150</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>39</Hsp_identity>
+      <Hsp_positive>62</Hsp_positive>
+      <Hsp_gaps>5</Hsp_gaps>
+      <Hsp_align-len>114</Hsp_align-len>
+      <Hsp_qseq>YRE---NFKQLLLPPVYSAVLAAGLPLNICVITQICTSRRALTRTAVYTLNLALADLLYACSLPLLIYNYAQGDHWPFGDFACRLVRFLFYANLHGSILFLTCISFQRYLGICH</Hsp_qseq>
+      <Hsp_hseq>FREENANFNKIFLPTIYSIIFLTGIVGNGLVILVMGYQKKLRSMTDKYRLHLSVADLLFVITLPFWAVDAVA--NWYFGNFLCKAVHVIYTVNLYSSVWILAFISLDRYLAIVH</Hsp_hseq>
+      <Hsp_midline>+RE   NF ++ LP +YS +   G+  N  VI  +   ++  + T  Y L+L++ADLL+  +LP    +     +W FG+F C+ V  ++  NL+ S+  L  IS  RYL I H</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>31</Hit_num>
+  <Hit_id>pdb|3OE0|A</Hit_id>
+  <Hit_def>Chain A, C-X-C chemokine receptor type 4, Lysozyme Chimera [synthetic construct] &gt;pdb|3OE9|A Chain A, C-X-C chemokine receptor type 4, Lysozyme Chimera [synthetic construct] &gt;pdb|3OE9|B Chain B, C-X-C chemokine receptor type 4, Lysozyme Chimera [synthetic construct]</Hit_def>
+  <Hit_accession>3OE0_A</Hit_accession>
+  <Hit_len>499</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>73.559</Hsp_bit-score>
+      <Hsp_score>179</Hsp_score>
+      <Hsp_evalue>7.14442e-14</Hsp_evalue>
+      <Hsp_query-from>20</Hsp_query-from>
+      <Hsp_query-to>130</Hsp_query-to>
+      <Hsp_hit-from>39</Hsp_hit-from>
+      <Hsp_hit-to>150</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>39</Hsp_identity>
+      <Hsp_positive>62</Hsp_positive>
+      <Hsp_gaps>5</Hsp_gaps>
+      <Hsp_align-len>114</Hsp_align-len>
+      <Hsp_qseq>YRE---NFKQLLLPPVYSAVLAAGLPLNICVITQICTSRRALTRTAVYTLNLALADLLYACSLPLLIYNYAQGDHWPFGDFACRLVRFLFYANLHGSILFLTCISFQRYLGICH</Hsp_qseq>
+      <Hsp_hseq>FREENANFNKIFLPTIYSIIFLTGIVGNGLVILVMGYQKKLRSMTDKYRLHLSVADLLFVITLPFWAVDAVA--NWYFGNFLCKAVHVIYTVNLYSSVWILAFISLDRYLAIVH</Hsp_hseq>
+      <Hsp_midline>+RE   NF ++ LP +YS +   G+  N  VI  +   ++  + T  Y L+L++ADLL+  +LP    +     +W FG+F C+ V  ++  NL+ S+  L  IS  RYL I H</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>32</Hit_num>
+  <Hit_id>pdb|4RWS|A</Hit_id>
+  <Hit_def>Chain A, C-X-C chemokine receptor type 4/Endolysin chimeric protein [Tequatrovirus T4]</Hit_def>
+  <Hit_accession>4RWS_A</Hit_accession>
+  <Hit_len>498</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>73.1738</Hsp_bit-score>
+      <Hsp_score>178</Hsp_score>
+      <Hsp_evalue>7.53601e-14</Hsp_evalue>
+      <Hsp_query-from>20</Hsp_query-from>
+      <Hsp_query-to>130</Hsp_query-to>
+      <Hsp_hit-from>38</Hsp_hit-from>
+      <Hsp_hit-to>149</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>39</Hsp_identity>
+      <Hsp_positive>62</Hsp_positive>
+      <Hsp_gaps>5</Hsp_gaps>
+      <Hsp_align-len>114</Hsp_align-len>
+      <Hsp_qseq>YRE---NFKQLLLPPVYSAVLAAGLPLNICVITQICTSRRALTRTAVYTLNLALADLLYACSLPLLIYNYAQGDHWPFGDFACRLVRFLFYANLHGSILFLTCISFQRYLGICH</Hsp_qseq>
+      <Hsp_hseq>FREENANFNKIFLPTIYSIIFLTGIVGNGLVILVMGYQKKLRSMTDKYRLHLSVADLLFVITLPFWAVDAVA--NWYFGNFLCKAVHVIYTVNLYSSVWILAFISLDRYLAIVH</Hsp_hseq>
+      <Hsp_midline>+RE   NF ++ LP +YS +   G+  N  VI  +   ++  + T  Y L+L++ADLL+  +LP    +     +W FG+F C+ V  ++  NL+ S+  L  IS  RYL I H</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>33</Hit_num>
+  <Hit_id>pdb|7UL4|A</Hit_id>
+  <Hit_def>Chain A, Mu-type opioid receptor [Mus musculus]</Hit_def>
+  <Hit_accession>7UL4_A</Hit_accession>
+  <Hit_len>426</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>73.1738</Hsp_bit-score>
+      <Hsp_score>178</Hsp_score>
+      <Hsp_evalue>7.65593e-14</Hsp_evalue>
+      <Hsp_query-from>32</Hsp_query-from>
+      <Hsp_query-to>132</Hsp_query-to>
+      <Hsp_hit-from>94</Hsp_hit-from>
+      <Hsp_hit-to>193</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>40</Hsp_identity>
+      <Hsp_positive>54</Hsp_positive>
+      <Hsp_gaps>1</Hsp_gaps>
+      <Hsp_align-len>101</Hsp_align-len>
+      <Hsp_qseq>VYSAVLAAGLPLNICVITQICTSRRALTRTAVYTLNLALADLLYACSLPLLIYNYAQGDHWPFGDFACRLVRFLFYANLHGSILFLTCISFQRYLGICHPL</Hsp_qseq>
+      <Hsp_hseq>LYSIVCVVGLFGNFLVMYVIVRYTKMKTATNIYIFNLALADALATSTLPFQSVNYLMGT-WPFGNILCKIVISIDYYNMFTSIFTLCTMSVDRYIAVCHPV</Hsp_hseq>
+      <Hsp_midline>+YS V   GL  N  V+  I    +  T T +Y  NLALAD L   +LP    NY  G  WPFG+  C++V  + Y N+  SI  L  +S  RY+ +CHP+</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>34</Hit_num>
+  <Hit_id>pdb|5T1A|A</Hit_id>
+  <Hit_def>Structure of CC Chemokine Receptor 2 with Orthosteric and Allosteric Antagonists [Homo sapiens]</Hit_def>
+  <Hit_accession>5T1A_A</Hit_accession>
+  <Hit_len>508</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>73.1738</Hsp_bit-score>
+      <Hsp_score>178</Hsp_score>
+      <Hsp_evalue>8.39062e-14</Hsp_evalue>
+      <Hsp_query-from>28</Hsp_query-from>
+      <Hsp_query-to>130</Hsp_query-to>
+      <Hsp_hit-from>54</Hsp_hit-from>
+      <Hsp_hit-to>154</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>36</Hsp_identity>
+      <Hsp_positive>58</Hsp_positive>
+      <Hsp_gaps>2</Hsp_gaps>
+      <Hsp_align-len>103</Hsp_align-len>
+      <Hsp_qseq>LLPPVYSAVLAAGLPLNICVITQICTSRRALTRTAVYTLNLALADLLYACSLPLLIYNYAQGDHWPFGDFACRLVRFLFYANLHGSILFLTCISFQRYLGICH</Hsp_qseq>
+      <Hsp_hseq>LLPPLYSLVFIFGFVGNMLVVLILINCKKLKCLTDIYLLNLAISDLLFLITLPL--WAHSAANEWVFGNAMCKLFTGLYHIGYFGGIFFIILLTIDRYLAIVH</Hsp_hseq>
+      <Hsp_midline>LLPP+YS V   G   N+ V+  +   ++    T +Y LNLA++DLL+  +LPL  + ++  + W FG+  C+L   L++    G I F+  ++  RYL I H</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>35</Hit_num>
+  <Hit_id>pdb|6GPX|A</Hit_id>
+  <Hit_def>CRYSTAL STRUCTURE OF CCR2A IN COMPLEX WITH MK-0812 [Homo sapiens] &gt;pdb|6GPX|B CRYSTAL STRUCTURE OF CCR2A IN COMPLEX WITH MK-0812 [Homo sapiens]</Hit_def>
+  <Hit_accession>6GPX_A</Hit_accession>
+  <Hit_len>349</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>72.4034</Hsp_bit-score>
+      <Hsp_score>176</Hsp_score>
+      <Hsp_evalue>9.02294e-14</Hsp_evalue>
+      <Hsp_query-from>28</Hsp_query-from>
+      <Hsp_query-to>130</Hsp_query-to>
+      <Hsp_hit-from>16</Hsp_hit-from>
+      <Hsp_hit-to>116</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>36</Hsp_identity>
+      <Hsp_positive>58</Hsp_positive>
+      <Hsp_gaps>2</Hsp_gaps>
+      <Hsp_align-len>103</Hsp_align-len>
+      <Hsp_qseq>LLPPVYSAVLAAGLPLNICVITQICTSRRALTRTAVYTLNLALADLLYACSLPLLIYNYAQGDHWPFGDFACRLVRFLFYANLHGSILFLTCISFQRYLGICH</Hsp_qseq>
+      <Hsp_hseq>LLPPLYSLVFIFGFVGNMLVVLILINYKKLKCLTDIYLLNLAISDLLFLITLPL--WAHSAANEWVFGNAMCKLFTGLYHIGYFGGIFFIILLTIDRYLAIVH</Hsp_hseq>
+      <Hsp_midline>LLPP+YS V   G   N+ V+  +   ++    T +Y LNLA++DLL+  +LPL  + ++  + W FG+  C+L   L++    G I F+  ++  RYL I H</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>36</Hit_num>
+  <Hit_id>pdb|6DDE|R</Hit_id>
+  <Hit_def>Mu Opioid Receptor-Gi Protein Complex [Mus musculus] &gt;pdb|6DDF|R Mu Opioid Receptor-Gi Protein Complex [Mus musculus] &gt;pdb|7SCG|D Chain D, Mu-type opioid receptor [Mus musculus] &gt;pdb|7U2L|D Chain D, Mu-type opioid receptor [Mus musculus]</Hit_def>
+  <Hit_accession>6DDE_R</Hit_accession>
+  <Hit_len>356</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>72.4034</Hsp_bit-score>
+      <Hsp_score>176</Hsp_score>
+      <Hsp_evalue>9.67481e-14</Hsp_evalue>
+      <Hsp_query-from>32</Hsp_query-from>
+      <Hsp_query-to>132</Hsp_query-to>
+      <Hsp_hit-from>72</Hsp_hit-from>
+      <Hsp_hit-to>171</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>40</Hsp_identity>
+      <Hsp_positive>54</Hsp_positive>
+      <Hsp_gaps>1</Hsp_gaps>
+      <Hsp_align-len>101</Hsp_align-len>
+      <Hsp_qseq>VYSAVLAAGLPLNICVITQICTSRRALTRTAVYTLNLALADLLYACSLPLLIYNYAQGDHWPFGDFACRLVRFLFYANLHGSILFLTCISFQRYLGICHPL</Hsp_qseq>
+      <Hsp_hseq>LYSIVCVVGLFGNFLVMYVIVRYTKMKTATNIYIFNLALADALATSTLPFQSVNYLMGT-WPFGNILCKIVISIDYYNMFTSIFTLCTMSVDRYIAVCHPV</Hsp_hseq>
+      <Hsp_midline>+YS V   GL  N  V+  I    +  T T +Y  NLALAD L   +LP    NY  G  WPFG+  C++V  + Y N+  SI  L  +S  RY+ +CHP+</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>37</Hit_num>
+  <Hit_id>pdb|7SK3|A</Hit_id>
+  <Hit_def>Chain A, Atypical chemokine receptor 3 [Homo sapiens] &gt;pdb|7SK4|A Chain A, Atypical chemokine receptor 3 [Homo sapiens] &gt;pdb|7SK5|A Chain A, Atypical chemokine receptor 3 [Homo sapiens] &gt;pdb|7SK6|A Chain A, Atypical chemokine receptor 3 [Homo sapiens] &gt;pdb|7SK7|A Chain A, Atypical chemokine receptor 3 [Homo sapiens] &gt;pdb|7SK8|A Chain A, Atypical chemokine receptor 3 [Homo sapiens] &gt;pdb|7SK9|A Chain A, Atypical chemokine receptor 3 [Homo sapiens]</Hit_def>
+  <Hit_accession>7SK3_A</Hit_accession>
+  <Hit_len>393</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>72.4034</Hsp_bit-score>
+      <Hsp_score>176</Hsp_score>
+      <Hsp_evalue>1.21159e-13</Hsp_evalue>
+      <Hsp_query-from>32</Hsp_query-from>
+      <Hsp_query-to>130</Hsp_query-to>
+      <Hsp_hit-from>52</Hsp_hit-from>
+      <Hsp_hit-to>150</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>34</Hsp_identity>
+      <Hsp_positive>53</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>99</Hsp_align-len>
+      <Hsp_qseq>VYSAVLAAGLPLNICVITQICTSRRALTRTAVYTLNLALADLLYACSLPLLIYNYAQGDHWPFGDFACRLVRFLFYANLHGSILFLTCISFQRYLGICH</Hsp_qseq>
+      <Hsp_hseq>IYIFIFVIGMIANSVVVWVNIQAKTTGYDTHCYILNLAIADLWVVLTIPVWVVSLVQHNQWPMGELTCKVTHLIFSINLFGSIFFLTCMSVDRYLSITY</Hsp_hseq>
+      <Hsp_midline>+Y  +   G+  N  V+     ++     T  Y LNLA+ADL    ++P+ + +  Q + WP G+  C++   +F  NL GSI FLTC+S  RYL I +</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>38</Hit_num>
+  <Hit_id>pdb|6GPS|A</Hit_id>
+  <Hit_def>CRYSTAL STRUCTURE OF CCR2A IN COMPLEX WITH MK-0812 [Homo sapiens]</Hit_def>
+  <Hit_accession>6GPS_A</Hit_accession>
+  <Hit_len>429</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>72.4034</Hsp_bit-score>
+      <Hsp_score>176</Hsp_score>
+      <Hsp_evalue>1.24716e-13</Hsp_evalue>
+      <Hsp_query-from>28</Hsp_query-from>
+      <Hsp_query-to>130</Hsp_query-to>
+      <Hsp_hit-from>43</Hsp_hit-from>
+      <Hsp_hit-to>143</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>36</Hsp_identity>
+      <Hsp_positive>58</Hsp_positive>
+      <Hsp_gaps>2</Hsp_gaps>
+      <Hsp_align-len>103</Hsp_align-len>
+      <Hsp_qseq>LLPPVYSAVLAAGLPLNICVITQICTSRRALTRTAVYTLNLALADLLYACSLPLLIYNYAQGDHWPFGDFACRLVRFLFYANLHGSILFLTCISFQRYLGICH</Hsp_qseq>
+      <Hsp_hseq>LLPPLYSLVFIFGFVGNMLVVLILINYKKLKCLTDIYLLNLAISDLLFLITLPL--WAHSAANEWVFGNAMCKLFTGLYHIGYFGGIFFIILLTIDRYLAIVH</Hsp_hseq>
+      <Hsp_midline>LLPP+YS V   G   N+ V+  +   ++    T +Y LNLA++DLL+  +LPL  + ++  + W FG+  C+L   L++    G I F+  ++  RYL I H</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>39</Hit_num>
+  <Hit_id>pdb|7XA3|R</Hit_id>
+  <Hit_def>Chain R, Isoform B of C-C chemokine receptor type 2 [Homo sapiens]</Hit_def>
+  <Hit_accession>7XA3_R</Hit_accession>
+  <Hit_len>360</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>72.0182</Hsp_bit-score>
+      <Hsp_score>175</Hsp_score>
+      <Hsp_evalue>1.30948e-13</Hsp_evalue>
+      <Hsp_query-from>28</Hsp_query-from>
+      <Hsp_query-to>130</Hsp_query-to>
+      <Hsp_hit-from>44</Hsp_hit-from>
+      <Hsp_hit-to>144</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>36</Hsp_identity>
+      <Hsp_positive>58</Hsp_positive>
+      <Hsp_gaps>2</Hsp_gaps>
+      <Hsp_align-len>103</Hsp_align-len>
+      <Hsp_qseq>LLPPVYSAVLAAGLPLNICVITQICTSRRALTRTAVYTLNLALADLLYACSLPLLIYNYAQGDHWPFGDFACRLVRFLFYANLHGSILFLTCISFQRYLGICH</Hsp_qseq>
+      <Hsp_hseq>LLPPLYSLVFIFGFVGNMLVVLILINCKKLKCLTDIYLLNLAISDLLFLITLPL--WAHSAANEWVFGNAMCKLFTGLYHIGYFGGIFFIILLTIDRYLAIVH</Hsp_hseq>
+      <Hsp_midline>LLPP+YS V   G   N+ V+  +   ++    T +Y LNLA++DLL+  +LPL  + ++  + W FG+  C+L   L++    G I F+  ++  RYL I H</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>40</Hit_num>
+  <Hit_id>pdb|5VBL|B</Hit_id>
+  <Hit_def>Chain B, Apelin receptor,Rubredoxin,Apelin receptor Chimera [synthetic construct] &gt;pdb|6KNM|B Apelin receptor in complex with single domain antibody [Homo sapiens]</Hit_def>
+  <Hit_accession>5VBL_B</Hit_accession>
+  <Hit_len>407</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>72.0182</Hsp_bit-score>
+      <Hsp_score>175</Hsp_score>
+      <Hsp_evalue>1.623e-13</Hsp_evalue>
+      <Hsp_query-from>28</Hsp_query-from>
+      <Hsp_query-to>133</Hsp_query-to>
+      <Hsp_hit-from>48</Hsp_hit-from>
+      <Hsp_hit-to>154</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>42</Hsp_identity>
+      <Hsp_positive>60</Hsp_positive>
+      <Hsp_gaps>3</Hsp_gaps>
+      <Hsp_align-len>108</Hsp_align-len>
+      <Hsp_qseq>LLPPVYSAVLAAGLPLNICVITQICTSRRALTRTA-VYTLNLALADLLYACSLPL-LIYNYAQGDHWPFGDFACRLVRFLFYANLHGSILFLTCISFQRYLGICHPLA</Hsp_qseq>
+      <Hsp_hseq>LIPAIYMLVFLLGTTGNGLVLWTVFRSSREKRRSADIFIASLAVADLTFVVTLPLWATYTYRDYD-WPFGTFFCKLSSYLIFVNMYASAFCLTGLSFDRYLAIVRPVA</Hsp_hseq>
+      <Hsp_midline>L+P +Y  V   G   N  V+  +  S R   R+A ++  +LA+ADL +  +LPL   Y Y   D WPFG F C+L  +L + N++ S   LT +SF RYL I  P+A</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>41</Hit_num>
+  <Hit_id>pdb|7F2O|R</Hit_id>
+  <Hit_def>Chain R, B2 bradykinin receptor [Homo sapiens]</Hit_def>
+  <Hit_accession>7F2O_R</Hit_accession>
+  <Hit_len>595</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>72.0182</Hsp_bit-score>
+      <Hsp_score>175</Hsp_score>
+      <Hsp_evalue>2.10051e-13</Hsp_evalue>
+      <Hsp_query-from>30</Hsp_query-from>
+      <Hsp_query-to>322</Hsp_query-to>
+      <Hsp_hit-from>128</Hsp_hit-from>
+      <Hsp_hit-to>420</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>82</Hsp_identity>
+      <Hsp_positive>127</Hsp_positive>
+      <Hsp_gaps>14</Hsp_gaps>
+      <Hsp_align-len>300</Hsp_align-len>
+      <Hsp_qseq>PPVYSAVLAAGLPLNICVITQICTSRRALTRTAVYTLNLALADLLYACSLPLLIYNYAQGDHWPFGDFACRLVRFLFYANLHGSILFLTCISFQRYLGICHPLAPWHKRGGRRXXXXXXXXXXXXXTTQCLPTAIFAA----TGIQRNRTVCYDLSPPALATHYMPYGMALTVIGFXXXXXXXXXXXXXXXXXXXRQDGPA-EPVAQERRGKXXXXXXXXXXXXXISFLPFHITKTAYLAVRSTPGV--PCTVLEAFAAAYKGTRPFASANSVLDPILFYFTQKKFRRRPHELLQKLTAK</Hsp_qseq>
+      <Hsp_hseq>PPFLWVLFVLATLENIFVLSVFCLHKSSCTVAEIYLGNLAAADLILACGLPFWAITISNNFDWLFGETLCRVVNAIISMNLYSSIWFLMLVSIDRYLALVKTMSMGRMRGVRWAKLYSLVIWGCTLLLSS-PMLVFRTMKEYSDEGHNVTACV-ISYPSLIWEVFT-NMLLNVVGFLLPLSVITFCTMQIMQVLRNNEMQKFKEIQTERRA--TVLVLVVLLLFIICWLPFQI--STFLDTLHRLGILSSCQDERIIDVITQIASFMAYSNSCLNPLVYVIVGKRFRKKSWEVYQGVCQK</Hsp_hseq>
+      <Hsp_midline>PP    +       NI V++  C  + + T   +Y  NLA ADL+ AC LP      +    W FG+  CR+V  +   NL+ SI FL  +S  RYL +   ++    RG R A     V     +     P  +F      +    N T C  +S P+L        M L V+GFLLP + +  C   +   L   +    + +  ERR     + +VV   F I +LPF I  + +L      G+   C          +     A +NS L+P+++    K+FR++  E+ Q +  K</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>42</Hit_num>
+  <Hit_id>pdb|7SUS|A</Hit_id>
+  <Hit_def>Chain A, Apelin receptor, with Rubredoxin insertion [synthetic construct]</Hit_def>
+  <Hit_accession>7SUS_A</Hit_accession>
+  <Hit_len>407</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>71.633</Hsp_bit-score>
+      <Hsp_score>174</Hsp_score>
+      <Hsp_evalue>2.22136e-13</Hsp_evalue>
+      <Hsp_query-from>28</Hsp_query-from>
+      <Hsp_query-to>133</Hsp_query-to>
+      <Hsp_hit-from>48</Hsp_hit-from>
+      <Hsp_hit-to>154</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>42</Hsp_identity>
+      <Hsp_positive>60</Hsp_positive>
+      <Hsp_gaps>3</Hsp_gaps>
+      <Hsp_align-len>108</Hsp_align-len>
+      <Hsp_qseq>LLPPVYSAVLAAGLPLNICVITQICTSRRALTRTA-VYTLNLALADLLYACSLPL-LIYNYAQGDHWPFGDFACRLVRFLFYANLHGSILFLTCISFQRYLGICHPLA</Hsp_qseq>
+      <Hsp_hseq>LIPAIYMLVFLLGTTGNGLVLWTVFRSSREKRRSADIFIASLAVADLTFVVTLPLWATYTYRDYD-WPFGTFFCKLSSYLIFVNMYASAFCLTGLSFDRYLAIVRPVA</Hsp_hseq>
+      <Hsp_midline>L+P +Y  V   G   N  V+  +  S R   R+A ++  +LA+ADL +  +LPL   Y Y   D WPFG F C+L  +L + N++ S   LT +SF RYL I  P+A</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>43</Hit_num>
+  <Hit_id>pdb|7F6H|A</Hit_id>
+  <Hit_def>Chain A, Bradykinin receptor BK2R [Homo sapiens] &gt;pdb|7F6I|A Chain A, Bradykinin receptor BK2R [Homo sapiens]</Hit_def>
+  <Hit_accession>7F6H_A</Hit_accession>
+  <Hit_len>770</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>71.633</Hsp_bit-score>
+      <Hsp_score>174</Hsp_score>
+      <Hsp_evalue>4.01993e-13</Hsp_evalue>
+      <Hsp_query-from>30</Hsp_query-from>
+      <Hsp_query-to>322</Hsp_query-to>
+      <Hsp_hit-from>440</Hsp_hit-from>
+      <Hsp_hit-to>732</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>82</Hsp_identity>
+      <Hsp_positive>127</Hsp_positive>
+      <Hsp_gaps>14</Hsp_gaps>
+      <Hsp_align-len>300</Hsp_align-len>
+      <Hsp_qseq>PPVYSAVLAAGLPLNICVITQICTSRRALTRTAVYTLNLALADLLYACSLPLLIYNYAQGDHWPFGDFACRLVRFLFYANLHGSILFLTCISFQRYLGICHPLAPWHKRGGRRXXXXXXXXXXXXXTTQCLPTAIFAA----TGIQRNRTVCYDLSPPALATHYMPYGMALTVIGFXXXXXXXXXXXXXXXXXXXRQDGPA-EPVAQERRGKXXXXXXXXXXXXXISFLPFHITKTAYLAVRSTPGV--PCTVLEAFAAAYKGTRPFASANSVLDPILFYFTQKKFRRRPHELLQKLTAK</Hsp_qseq>
+      <Hsp_hseq>PPFLWVLFVLATLENIFVLSVFCLHKSSCTVAEIYLGNLAAADLILACGLPFWAITISNNFDWLFGETLCRVVNAIISMNLYSSICFLMLVSIDRYLALVKTMSMGRMRGVRWAKLYSLVIWGCTLLLSS-PMLVFRTMKEYSDEGHNVTACV-ISYPSLIWEVFT-NMLLNVVGFLLPLSVITFCTMQIMQVLRNNEMQKFKEIQTERRA--TVLVLVVLLLFIICWLPFQI--STFLDTLHRLGILSSCQDERIIDVITQIASFMAYSNSCLNPLVYVIVGKRFRKKSWEVYQGVCQK</Hsp_hseq>
+      <Hsp_midline>PP    +       NI V++  C  + + T   +Y  NLA ADL+ AC LP      +    W FG+  CR+V  +   NL+ SI FL  +S  RYL +   ++    RG R A     V     +     P  +F      +    N T C  +S P+L        M L V+GFLLP + +  C   +   L   +    + +  ERR     + +VV   F I +LPF I  + +L      G+   C          +     A +NS L+P+++    K+FR++  E+ Q +  K</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>44</Hit_num>
+  <Hit_id>pdb|7C6A|A</Hit_id>
+  <Hit_def>Crystal structure of AT2R-BRIL and SRP2070_Fab complex [Homo sapiens]</Hit_def>
+  <Hit_accession>7C6A_A</Hit_accession>
+  <Hit_len>422</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>70.8626</Hsp_bit-score>
+      <Hsp_score>172</Hsp_score>
+      <Hsp_evalue>4.19556e-13</Hsp_evalue>
+      <Hsp_query-from>29</Hsp_query-from>
+      <Hsp_query-to>136</Hsp_query-to>
+      <Hsp_hit-from>14</Hsp_hit-from>
+      <Hsp_hit-to>126</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>36</Hsp_identity>
+      <Hsp_positive>55</Hsp_positive>
+      <Hsp_gaps>5</Hsp_gaps>
+      <Hsp_align-len>113</Hsp_align-len>
+      <Hsp_qseq>LPPVYSAVLAAGLPLNICVITQICTSRRALTRTAVYTLNLALADLLYACSLPLLIYNYAQGDHWPFGDFACRLVRFLFYANLHGSILFLTCISFQRYLGICHPLA-----PWH</Hsp_qseq>
+      <Hsp_hseq>IPILYYIIFVIGFLVNIVVVTLFCCQKGPKKVSSIYIFNLAVADLLVLATLPLWATYYSYRYDWLFGPVMCKVFGSFLTLNMFASIWFITCMSVDRYQSVIYPFLSQRRNPWQ</Hsp_hseq>
+      <Hsp_midline>+P +Y  +   G  +NI V+T  C  +     +++Y  NLA+ADLL   +LPL    Y+    W FG   C++       N+  SI F+TC+S  RY  + +P       PW </Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>45</Hit_num>
+  <Hit_id>pdb|7XN9|A</Hit_id>
+  <Hit_def>Chain A, Somatostatin receptor type 2,Endo-1,4-beta-xylanase [synthetic construct]</Hit_def>
+  <Hit_accession>7XN9_A</Hit_accession>
+  <Hit_len>589</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>70.0922</Hsp_bit-score>
+      <Hsp_score>170</Hsp_score>
+      <Hsp_evalue>1.12824e-12</Hsp_evalue>
+      <Hsp_query-from>32</Hsp_query-from>
+      <Hsp_query-to>137</Hsp_query-to>
+      <Hsp_hit-from>74</Hsp_hit-from>
+      <Hsp_hit-to>180</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>43</Hsp_identity>
+      <Hsp_positive>55</Hsp_positive>
+      <Hsp_gaps>3</Hsp_gaps>
+      <Hsp_align-len>108</Hsp_align-len>
+      <Hsp_qseq>VYSAVLAAGLPLNICVITQICTSRRALTRTAVYTLNLALADLLYACSLPLLIYNYAQGDHWPFGDFACRLVRFLFYANLHGSILFLTCISFQRYLGICHPL--APWHK</Hsp_qseq>
+      <Hsp_hseq>IYFVVCIIGLCGNTLVIYVILRYAKMKTITNIYILNLAIADELFMLGLPFLAMQVAL-EHWPFGKAICRVVMTVDGINQFTSIFCLTVMSIDRYLAVVHPIKSAKWRR</Hsp_hseq>
+      <Hsp_midline>+Y  V   GL  N  VI  I    +  T T +Y LNLA+AD L+   LP L    A  +HWPFG   CR+V  +   N   SI  LT +S  RYL + HP+  A W +</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>46</Hit_num>
+  <Hit_id>pdb|7XAT|A</Hit_id>
+  <Hit_def>Chain A, Somatostatin receptor type 2,LargeBit [synthetic construct] &gt;pdb|7XAU|A Chain A, Somatostatin receptor type 2,LargeBit [synthetic construct] &gt;pdb|7XAV|A Chain A, Somatostatin receptor type 2,LargeBit [synthetic construct]</Hit_def>
+  <Hit_accession>7XAT_A</Hit_accession>
+  <Hit_len>563</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>68.9366</Hsp_bit-score>
+      <Hsp_score>167</Hsp_score>
+      <Hsp_evalue>2.11699e-12</Hsp_evalue>
+      <Hsp_query-from>32</Hsp_query-from>
+      <Hsp_query-to>137</Hsp_query-to>
+      <Hsp_hit-from>95</Hsp_hit-from>
+      <Hsp_hit-to>201</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>43</Hsp_identity>
+      <Hsp_positive>54</Hsp_positive>
+      <Hsp_gaps>3</Hsp_gaps>
+      <Hsp_align-len>108</Hsp_align-len>
+      <Hsp_qseq>VYSAVLAAGLPLNICVITQICTSRRALTRTAVYTLNLALADLLYACSLPLLIYNYAQGDHWPFGDFACRLVRFLFYANLHGSILFLTCISFQRYLGICHPL--APWHK</Hsp_qseq>
+      <Hsp_hseq>IYFVVCIIGLCGNTLVIYVILRYAKMKTITNIYILNLAIADELFMLGLPFLAMQVALV-HWPFGKAICRVVMTVDGINQFTSIFCLTVMSIDRYLAVVHPIKSAKWRR</Hsp_hseq>
+      <Hsp_midline>+Y  V   GL  N  VI  I    +  T T +Y LNLA+AD L+   LP L    A   HWPFG   CR+V  +   N   SI  LT +S  RYL + HP+  A W +</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>47</Hit_num>
+  <Hit_id>pdb|7T10|R</Hit_id>
+  <Hit_def>Chain R, Somatostatin receptor type 2,Kappa-type opioid receptor [Homo sapiens] &gt;pdb|7T11|R Chain R, Somatostatin receptor type 2,Kappa-type opioid receptor [Homo sapiens]</Hit_def>
+  <Hit_accession>7T10_R</Hit_accession>
+  <Hit_len>408</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>68.5514</Hsp_bit-score>
+      <Hsp_score>166</Hsp_score>
+      <Hsp_evalue>2.18276e-12</Hsp_evalue>
+      <Hsp_query-from>32</Hsp_query-from>
+      <Hsp_query-to>316</Hsp_query-to>
+      <Hsp_hit-from>88</Hsp_hit-from>
+      <Hsp_hit-to>366</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>85</Hsp_identity>
+      <Hsp_positive>128</Hsp_positive>
+      <Hsp_gaps>22</Hsp_gaps>
+      <Hsp_align-len>293</Hsp_align-len>
+      <Hsp_qseq>VYSAVLAAGLPLNICVITQICTSRRALTRTAVYTLNLALADLLYACSLPLLIYNYAQGDHWPFGDFACRLVRFLFYANLHGSILFLTCISFQRYLGICHPL--APWHKRGGRRXXXXXXXXXXXXXTTQCLPTAIFAATGIQRN---RTVCYDLSPPALATHYMPYGMALTVIGFXXXXXXXXXXXXXXXXXXXRQDGPAEPVAQERRGKXXXXXXXXXXXXXI-SFLPFHI--TKTAYLAVRSTPGVPCTVLEAFAAAYKGTRPFASANSVLDPILFYFTQKKFRRRPHELL</Hsp_qseq>
+      <Hsp_hseq>IYFVVCIIGLCGNTLVIYVILRYAKMKTITNIYILNLAIADELFMLGLPFLAMQVALV-HWPFGKAICRVVMTVDGINQFTSIFCLTVMSIDRYLAVVHPIKSAKWRR---PRTAKMITMAVWGVSLLVILPIMIYA--GLRSNQWGRSSCTINWPGESGAWYTGFIIYTFILGFLVPLTIICLCYLFIIIKVKSVRLLSGSREKDRNLRKVTRMVSIVVAVFIFCWLPFYIFNVSSVSMAISPTP--------ALKGMFDFVVVLTYANSCANPILYAFLSDNFKKSFQNVL</Hsp_hseq>
+      <Hsp_midline>+Y  V   GL  N  VI  I    +  T T +Y LNLA+AD L+   LP L    A   HWPFG   CR+V  +   N   SI  LT +S  RYL + HP+  A W +    R A ++ +AVW       LP  I+A  G++ N   R+ C    P      Y  + +   ++GFL+P   +  CY  +  ++      +    ++R  +     V +  A  I  +LPF+I    +  +A+  TP        A    +        ANS  +PIL+ F    F++    +L</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>48</Hit_num>
+  <Hit_id>pdb|6QZH|A</Hit_id>
+  <Hit_def>Structure of the human CC Chemokine Receptor 7 in complex with the intracellular allosteric antagonist Cmp2105 and the insertion protein Sialidase NanA [Homo sapiens]</Hit_def>
+  <Hit_accession>6QZH_A</Hit_accession>
+  <Hit_len>785</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>69.3218</Hsp_bit-score>
+      <Hsp_score>168</Hsp_score>
+      <Hsp_evalue>2.32068e-12</Hsp_evalue>
+      <Hsp_query-from>23</Hsp_query-from>
+      <Hsp_query-to>139</Hsp_query-to>
+      <Hsp_hit-from>14</Hsp_hit-from>
+      <Hsp_hit-to>128</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>39</Hsp_identity>
+      <Hsp_positive>58</Hsp_positive>
+      <Hsp_gaps>2</Hsp_gaps>
+      <Hsp_align-len>117</Hsp_align-len>
+      <Hsp_qseq>NFKQLLLPPVYSAVLAAGLPLNICVITQICTSRRALTRTAVYTLNLALADLLYACSLPLLIYNYAQGDHWPFGDFACRLVRFLFYANLHGSILFLTCISFQRYLGICHPLAPWHKRG</Hsp_qseq>
+      <Hsp_hseq>NFKAWFLPIMYSIICFVGLLGNGLVVLTYIYFKRLKTMTDTYLLNLAVADILFLLTLPFWAYSAAKS--WVFGVHFCKLIFAIYKMSFFSGMWLLLCISIDRYVAIVQAVSAHRHRA</Hsp_hseq>
+      <Hsp_midline>NFK   LP +YS +   GL  N  V+      +R  T T  Y LNLA+AD+L+  +LP   Y+ A+   W FG   C+L+  ++  +    +  L CIS  RY+ I   ++    R </Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>49</Hit_num>
+  <Hit_id>pdb|7UL5|A</Hit_id>
+  <Hit_def>Chain A, Somatostatin receptor type 2 [Homo sapiens]</Hit_def>
+  <Hit_accession>7UL5_A</Hit_accession>
+  <Hit_len>414</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>68.5514</Hsp_bit-score>
+      <Hsp_score>166</Hsp_score>
+      <Hsp_evalue>2.47941e-12</Hsp_evalue>
+      <Hsp_query-from>32</Hsp_query-from>
+      <Hsp_query-to>316</Hsp_query-to>
+      <Hsp_hit-from>88</Hsp_hit-from>
+      <Hsp_hit-to>366</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>85</Hsp_identity>
+      <Hsp_positive>128</Hsp_positive>
+      <Hsp_gaps>22</Hsp_gaps>
+      <Hsp_align-len>293</Hsp_align-len>
+      <Hsp_qseq>VYSAVLAAGLPLNICVITQICTSRRALTRTAVYTLNLALADLLYACSLPLLIYNYAQGDHWPFGDFACRLVRFLFYANLHGSILFLTCISFQRYLGICHPL--APWHKRGGRRXXXXXXXXXXXXXTTQCLPTAIFAATGIQRN---RTVCYDLSPPALATHYMPYGMALTVIGFXXXXXXXXXXXXXXXXXXXRQDGPAEPVAQERRGKXXXXXXXXXXXXXI-SFLPFHI--TKTAYLAVRSTPGVPCTVLEAFAAAYKGTRPFASANSVLDPILFYFTQKKFRRRPHELL</Hsp_qseq>
+      <Hsp_hseq>IYFVVCIIGLCGNTLVIYVILRYAKMKTITNIYILNLAIADELFMLGLPFLAMQVALV-HWPFGKAICRVVMTVDGINQFTSIFCLTVMSIDRYLAVVHPIKSAKWRR---PRTAKMITMAVWGVSLLVILPIMIYA--GLRSNQWGRSSCTINWPGESGAWYTGFIIYTFILGFLVPLTIICLCYLFIIIKVKSVRLLSGSREKDRNLRRVTRMVSIVVAVFIFCWLPFYIFNVSSVSMAISPTP--------ALKGMFDFVVVLTYANSCANPILYAFLSDNFKKSFQNVL</Hsp_hseq>
+      <Hsp_midline>+Y  V   GL  N  VI  I    +  T T +Y LNLA+AD L+   LP L    A   HWPFG   CR+V  +   N   SI  LT +S  RYL + HP+  A W +    R A ++ +AVW       LP  I+A  G++ N   R+ C    P      Y  + +   ++GFL+P   +  CY  +  ++      +    ++R  +     V +  A  I  +LPF+I    +  +A+  TP        A    +        ANS  +PIL+ F    F++    +L</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>50</Hit_num>
+  <Hit_id>pdb|7WJ5|R</Hit_id>
+  <Hit_def>Chain R, Soluble cytochrome b562,Somatostatin receptor type 2 [synthetic construct]</Hit_def>
+  <Hit_accession>7WJ5_R</Hit_accession>
+  <Hit_len>518</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>68.5514</Hsp_bit-score>
+      <Hsp_score>166</Hsp_score>
+      <Hsp_evalue>2.91541e-12</Hsp_evalue>
+      <Hsp_query-from>32</Hsp_query-from>
+      <Hsp_query-to>137</Hsp_query-to>
+      <Hsp_hit-from>198</Hsp_hit-from>
+      <Hsp_hit-to>304</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>43</Hsp_identity>
+      <Hsp_positive>54</Hsp_positive>
+      <Hsp_gaps>3</Hsp_gaps>
+      <Hsp_align-len>108</Hsp_align-len>
+      <Hsp_qseq>VYSAVLAAGLPLNICVITQICTSRRALTRTAVYTLNLALADLLYACSLPLLIYNYAQGDHWPFGDFACRLVRFLFYANLHGSILFLTCISFQRYLGICHPL--APWHK</Hsp_qseq>
+      <Hsp_hseq>IYFVVCIIGLCGNTLVIYVILRYAKMKTITNIYILNLAIADELFMLGLPFLAMQVALV-HWPFGKAICRVVMTVDGINQFTSIFCLTVMSIDRYLAVVHPIKSAKWRR</Hsp_hseq>
+      <Hsp_midline>+Y  V   GL  N  VI  I    +  T T +Y LNLA+AD L+   LP L    A   HWPFG   CR+V  +   N   SI  LT +S  RYL + HP+  A W +</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>51</Hit_num>
+  <Hit_id>pdb|7WIC|R</Hit_id>
+  <Hit_def>Chain R, Somatostatin receptor type 2 [Homo sapiens] &gt;pdb|7WIG|R Chain R, Somatostatin receptor type 2 [Homo sapiens]</Hit_def>
+  <Hit_accession>7WIC_R</Hit_accession>
+  <Hit_len>369</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>67.781</Hsp_bit-score>
+      <Hsp_score>164</Hsp_score>
+      <Hsp_evalue>3.68399e-12</Hsp_evalue>
+      <Hsp_query-from>32</Hsp_query-from>
+      <Hsp_query-to>137</Hsp_query-to>
+      <Hsp_hit-from>49</Hsp_hit-from>
+      <Hsp_hit-to>155</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>43</Hsp_identity>
+      <Hsp_positive>54</Hsp_positive>
+      <Hsp_gaps>3</Hsp_gaps>
+      <Hsp_align-len>108</Hsp_align-len>
+      <Hsp_qseq>VYSAVLAAGLPLNICVITQICTSRRALTRTAVYTLNLALADLLYACSLPLLIYNYAQGDHWPFGDFACRLVRFLFYANLHGSILFLTCISFQRYLGICHPL--APWHK</Hsp_qseq>
+      <Hsp_hseq>IYFVVCIIGLCGNTLVIYVILRYAKMKTITNIYILNLAIADELFMLGLPFLAMQVALV-HWPFGKAICRVVMTVDGINQFTSIFCLTVMSIDRYLAVVHPIKSAKWRR</Hsp_hseq>
+      <Hsp_midline>+Y  V   GL  N  VI  I    +  T T +Y LNLA+AD L+   LP L    A   HWPFG   CR+V  +   N   SI  LT +S  RYL + HP+  A W +</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>52</Hit_num>
+  <Hit_id>pdb|7XMR|R</Hit_id>
+  <Hit_def>Chain R, Somatostatin receptor type 2 [Homo sapiens]</Hit_def>
+  <Hit_accession>7XMR_R</Hit_accession>
+  <Hit_len>406</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>67.781</Hsp_bit-score>
+      <Hsp_score>164</Hsp_score>
+      <Hsp_evalue>4.31633e-12</Hsp_evalue>
+      <Hsp_query-from>32</Hsp_query-from>
+      <Hsp_query-to>137</Hsp_query-to>
+      <Hsp_hit-from>58</Hsp_hit-from>
+      <Hsp_hit-to>164</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>43</Hsp_identity>
+      <Hsp_positive>54</Hsp_positive>
+      <Hsp_gaps>3</Hsp_gaps>
+      <Hsp_align-len>108</Hsp_align-len>
+      <Hsp_qseq>VYSAVLAAGLPLNICVITQICTSRRALTRTAVYTLNLALADLLYACSLPLLIYNYAQGDHWPFGDFACRLVRFLFYANLHGSILFLTCISFQRYLGICHPL--APWHK</Hsp_qseq>
+      <Hsp_hseq>IYFVVCIIGLCGNTLVIYVILRYAKMKTITNIYILNLAIADELFMLGLPFLAMQVALV-HWPFGKAICRVVMTVDGINQFTSIFCLTVMSIDRYLAVVHPIKSAKWRR</Hsp_hseq>
+      <Hsp_midline>+Y  V   GL  N  VI  I    +  T T +Y LNLA+AD L+   LP L    A   HWPFG   CR+V  +   N   SI  LT +S  RYL + HP+  A W +</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>53</Hit_num>
+  <Hit_id>pdb|7XNA|A</Hit_id>
+  <Hit_def>Chain A, Somatostatin receptor type 2,Endo-1,4-beta-xylanase [synthetic construct]</Hit_def>
+  <Hit_accession>7XNA_A</Hit_accession>
+  <Hit_len>583</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>68.1662</Hsp_bit-score>
+      <Hsp_score>165</Hsp_score>
+      <Hsp_evalue>4.43019e-12</Hsp_evalue>
+      <Hsp_query-from>32</Hsp_query-from>
+      <Hsp_query-to>137</Hsp_query-to>
+      <Hsp_hit-from>74</Hsp_hit-from>
+      <Hsp_hit-to>180</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>42</Hsp_identity>
+      <Hsp_positive>55</Hsp_positive>
+      <Hsp_gaps>3</Hsp_gaps>
+      <Hsp_align-len>108</Hsp_align-len>
+      <Hsp_qseq>VYSAVLAAGLPLNICVITQICTSRRALTRTAVYTLNLALADLLYACSLPLLIYNYAQGDHWPFGDFACRLVRFLFYANLHGSILFLTCISFQRYLGICHPL--APWHK</Hsp_qseq>
+      <Hsp_hseq>IYFVVCIIGLCGNTLVIYVILRYAKMKTITNIYILNLAIANELFMLGLPFLAMQVAL-EHWPFGKAICRVVMTVDGINQFTSIFCLTVMSIDRYLAVVHPIKSAKWRR</Hsp_hseq>
+      <Hsp_midline>+Y  V   GL  N  VI  I    +  T T +Y LNLA+A+ L+   LP L    A  +HWPFG   CR+V  +   N   SI  LT +S  RYL + HP+  A W +</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>54</Hit_num>
+  <Hit_id>pdb|7X9Y|R</Hit_id>
+  <Hit_def>Chain R, C-C chemokine receptor type 3 [Homo sapiens]</Hit_def>
+  <Hit_accession>7X9Y_R</Hit_accession>
+  <Hit_len>355</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>67.0106</Hsp_bit-score>
+      <Hsp_score>162</Hsp_score>
+      <Hsp_evalue>5.69773e-12</Hsp_evalue>
+      <Hsp_query-from>28</Hsp_query-from>
+      <Hsp_query-to>130</Hsp_query-to>
+      <Hsp_hit-from>36</Hsp_hit-from>
+      <Hsp_hit-to>137</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>38</Hsp_identity>
+      <Hsp_positive>59</Hsp_positive>
+      <Hsp_gaps>1</Hsp_gaps>
+      <Hsp_align-len>103</Hsp_align-len>
+      <Hsp_qseq>LLPPVYSAVLAAGLPLNICVITQICTSRRALTRTAVYTLNLALADLLYACSLPLLIYNYAQGDHWPFGDFACRLVRFLFYANLHGSILFLTCISFQRYLGICH</Hsp_qseq>
+      <Hsp_hseq>FVPPLYSLVFTVGLLGNVVVVMILIKYRRLRIMTNIYLLNLAISDLLFLVTLPFWIH-YVRGHNWVFGHGMCKLLSGFYHTGLYSEIFFIILLTIDRYLAIVH</Hsp_hseq>
+      <Hsp_midline> +PP+YS V   GL  N+ V+  +   RR    T +Y LNLA++DLL+  +LP  I+ Y +G +W FG   C+L+   ++  L+  I F+  ++  RYL I H</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>55</Hit_num>
+  <Hit_id>pdb|6PT2|A</Hit_id>
+  <Hit_def>Crystal structure of the active delta opioid receptor in complex with the peptide agonist KGCHM07 [Homo sapiens] &gt;pdb|6PT2|B Crystal structure of the active delta opioid receptor in complex with the peptide agonist KGCHM07 [Homo sapiens] &gt;pdb|6PT3|A Crystal structure of the active delta opioid receptor in complex with the small molecule agonist DPI-287 [Homo sapiens] &gt;pdb|6PT3|B Crystal structure of the active delta opioid receptor in complex with the small molecule agonist DPI-287 [Homo sapiens]</Hit_def>
+  <Hit_accession>6PT2_A</Hit_accession>
+  <Hit_len>454</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>67.3958</Hsp_bit-score>
+      <Hsp_score>163</Hsp_score>
+      <Hsp_evalue>5.91995e-12</Hsp_evalue>
+      <Hsp_query-from>32</Hsp_query-from>
+      <Hsp_query-to>132</Hsp_query-to>
+      <Hsp_hit-from>171</Hsp_hit-from>
+      <Hsp_hit-to>270</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>37</Hsp_identity>
+      <Hsp_positive>55</Hsp_positive>
+      <Hsp_gaps>1</Hsp_gaps>
+      <Hsp_align-len>101</Hsp_align-len>
+      <Hsp_qseq>VYSAVLAAGLPLNICVITQICTSRRALTRTAVYTLNLALADLLYACSLPLLIYNYAQGDHWPFGDFACRLVRFLFYANLHGSILFLTCISFQRYLGICHPL</Hsp_qseq>
+      <Hsp_hseq>LYSAVCAVGLLGNVLVMFVIVRYTKMKTATNIYIFSLALAGALATSTLPFQSADYLM-ETWPFGELLCKAVLSIDYYSMFTSIFTLTMMCVDRYIAVCHPV</Hsp_hseq>
+      <Hsp_midline>+YSAV A GL  N+ V+  I    +  T T +Y  +LALA  L   +LP    +Y   + WPFG+  C+ V  + Y ++  SI  LT +   RY+ +CHP+</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>56</Hit_num>
+  <Hit_id>pdb|7WVV|R</Hit_id>
+  <Hit_def>Chain R, Soluble cytochrome b562,N-formyl peptide receptor 2 [Homo sapiens] &gt;pdb|7WVW|R Chain R, Soluble cytochrome b562,N-formyl peptide receptor 2 [Homo sapiens] &gt;pdb|7WVX|R Chain R, Soluble cytochrome b562,N-formyl peptide receptor 2 [Homo sapiens] &gt;pdb|7WVY|R Chain R, Soluble cytochrome b562,N-formyl peptide receptor 2 [Homo sapiens]</Hit_def>
+  <Hit_accession>7WVV_R</Hit_accession>
+  <Hit_len>513</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>67.3958</Hsp_bit-score>
+      <Hsp_score>163</Hsp_score>
+      <Hsp_evalue>7.2588e-12</Hsp_evalue>
+      <Hsp_query-from>55</Hsp_query-from>
+      <Hsp_query-to>138</Hsp_query-to>
+      <Hsp_hit-from>173</Hsp_hit-from>
+      <Hsp_hit-to>256</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>32</Hsp_identity>
+      <Hsp_positive>47</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>84</Hsp_align-len>
+      <Hsp_qseq>RRALTRTAVYTLNLALADLLYACSLPLLIYNYAQGDHWPFGDFACRLVRFLFYANLHGSILFLTCISFQRYLGICHPLAPWHKR</Hsp_qseq>
+      <Hsp_hseq>RMTRTVTTICYLNLALADFSFTATLPFLIVSMAMGEKWPFGWFLCKLIHIVVDINLFGSVFLIGFIALDRCICVLHPVWAQNHR</Hsp_hseq>
+      <Hsp_midline>R   T T +  LNLALAD  +  +LP LI + A G+ WPFG F C+L+  +   NL GS+  +  I+  R + + HP+   + R</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>57</Hit_num>
+  <Hit_id>pdb|6LW5|A</Hit_id>
+  <Hit_def>Crystal structure of the human formyl peptide receptor 2 in complex with WKYMVm [Escherichia coli]</Hit_def>
+  <Hit_accession>6LW5_A</Hit_accession>
+  <Hit_len>427</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>67.0106</Hsp_bit-score>
+      <Hsp_score>162</Hsp_score>
+      <Hsp_evalue>7.75681e-12</Hsp_evalue>
+      <Hsp_query-from>55</Hsp_query-from>
+      <Hsp_query-to>138</Hsp_query-to>
+      <Hsp_hit-from>159</Hsp_hit-from>
+      <Hsp_hit-to>242</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>32</Hsp_identity>
+      <Hsp_positive>47</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>84</Hsp_align-len>
+      <Hsp_qseq>RRALTRTAVYTLNLALADLLYACSLPLLIYNYAQGDHWPFGDFACRLVRFLFYANLHGSILFLTCISFQRYLGICHPLAPWHKR</Hsp_qseq>
+      <Hsp_hseq>RMTRTVTTICYLNLALADFSFTATLPFLIVSMAMGEKWPFGWFLCKLIHIVVDINLFGSVFLIGFIALDRCICVLHPVWAQNHR</Hsp_hseq>
+      <Hsp_midline>R   T T +  LNLALAD  +  +LP LI + A G+ WPFG F C+L+  +   NL GS+  +  I+  R + + HP+   + R</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>58</Hit_num>
+  <Hit_id>pdb|5DHG|A</Hit_id>
+  <Hit_def>The crystal structure of nociceptin/orphanin FQ peptide receptor (NOP) in complex with C-35 (PSI Community Target) [Escherichia coli] &gt;pdb|5DHG|B The crystal structure of nociceptin/orphanin FQ peptide receptor (NOP) in complex with C-35 (PSI Community Target) [Escherichia coli] &gt;pdb|5DHH|A The crystal structure of nociceptin/orphanin FQ peptide receptor (NOP) in complex with SB-612111 (PSI Community Target) [Escherichia coli] &gt;pdb|5DHH|B The crystal structure of nociceptin/orphanin FQ peptide receptor (NOP) in complex with SB-612111 (PSI Community Target) [Escherichia coli]</Hit_def>
+  <Hit_accession>5DHG_A</Hit_accession>
+  <Hit_len>424</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>66.2402</Hsp_bit-score>
+      <Hsp_score>160</Hsp_score>
+      <Hsp_evalue>1.23796e-11</Hsp_evalue>
+      <Hsp_query-from>32</Hsp_query-from>
+      <Hsp_query-to>132</Hsp_query-to>
+      <Hsp_hit-from>131</Hsp_hit-from>
+      <Hsp_hit-to>230</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>39</Hsp_identity>
+      <Hsp_positive>52</Hsp_positive>
+      <Hsp_gaps>1</Hsp_gaps>
+      <Hsp_align-len>101</Hsp_align-len>
+      <Hsp_qseq>VYSAVLAAGLPLNICVITQICTSRRALTRTAVYTLNLALADLLYACSLPLLIYNYAQGDHWPFGDFACRLVRFLFYANLHGSILFLTCISFQRYLGICHPL</Hsp_qseq>
+      <Hsp_hseq>LYLAVCVGGLLGNCLVMYVILRHTKMKTATNIYIFNLALADTLVLLTLPFQGTDILLG-FWPFGNALCKTVIAIDYYNMFTSTFTLTAMSVDRYVAICHPI</Hsp_hseq>
+      <Hsp_midline>+Y AV   GL  N  V+  I    +  T T +Y  NLALAD L   +LP    +   G  WPFG+  C+ V  + Y N+  S   LT +S  RY+ ICHP+</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>59</Hit_num>
+  <Hit_id>pdb|4EA3|A</Hit_id>
+  <Hit_def>Structure of the N/OFQ Opioid Receptor in Complex with a Peptide Mimetic [Homo sapiens] &gt;pdb|4EA3|B Structure of the N/OFQ Opioid Receptor in Complex with a Peptide Mimetic [Homo sapiens]</Hit_def>
+  <Hit_accession>4EA3_A</Hit_accession>
+  <Hit_len>434</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>66.2402</Hsp_bit-score>
+      <Hsp_score>160</Hsp_score>
+      <Hsp_evalue>1.26679e-11</Hsp_evalue>
+      <Hsp_query-from>32</Hsp_query-from>
+      <Hsp_query-to>132</Hsp_query-to>
+      <Hsp_hit-from>131</Hsp_hit-from>
+      <Hsp_hit-to>230</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>39</Hsp_identity>
+      <Hsp_positive>52</Hsp_positive>
+      <Hsp_gaps>1</Hsp_gaps>
+      <Hsp_align-len>101</Hsp_align-len>
+      <Hsp_qseq>VYSAVLAAGLPLNICVITQICTSRRALTRTAVYTLNLALADLLYACSLPLLIYNYAQGDHWPFGDFACRLVRFLFYANLHGSILFLTCISFQRYLGICHPL</Hsp_qseq>
+      <Hsp_hseq>LYLAVCVGGLLGNCLVMYVILRHTKMKTATNIYIFNLALADTLVLLTLPFQGTDILLG-FWPFGNALCKTVIAIDYYNMFTSTFTLTAMSVDRYVAICHPI</Hsp_hseq>
+      <Hsp_midline>+Y AV   GL  N  V+  I    +  T T +Y  NLALAD L   +LP    +   G  WPFG+  C+ V  + Y N+  S   LT +S  RY+ ICHP+</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>60</Hit_num>
+  <Hit_id>pdb|7T6S|R</Hit_id>
+  <Hit_def>Chain R, N-formyl peptide receptor 2 [Homo sapiens] &gt;pdb|7T6U|R Chain R, N-formyl peptide receptor 2 [Homo sapiens] &gt;pdb|7T6V|R Chain R, N-formyl peptide receptor 2 [Homo sapiens]</Hit_def>
+  <Hit_accession>7T6S_R</Hit_accession>
+  <Hit_len>390</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>66.2402</Hsp_bit-score>
+      <Hsp_score>160</Hsp_score>
+      <Hsp_evalue>1.40242e-11</Hsp_evalue>
+      <Hsp_query-from>55</Hsp_query-from>
+      <Hsp_query-to>138</Hsp_query-to>
+      <Hsp_hit-from>102</Hsp_hit-from>
+      <Hsp_hit-to>185</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>32</Hsp_identity>
+      <Hsp_positive>47</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>84</Hsp_align-len>
+      <Hsp_qseq>RRALTRTAVYTLNLALADLLYACSLPLLIYNYAQGDHWPFGDFACRLVRFLFYANLHGSILFLTCISFQRYLGICHPLAPWHKR</Hsp_qseq>
+      <Hsp_hseq>RMTRTVTTICYLNLALADFSFTATLPFLIVSMAMGEKWPFGWFLCKLIHIVVDINLFGSVFLIGFIALDRCICVLHPVWAQNHR</Hsp_hseq>
+      <Hsp_midline>R   T T +  LNLALAD  +  +LP LI + A G+ WPFG F C+L+  +   NL GS+  +  I+  R + + HP+   + R</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>61</Hit_num>
+  <Hit_id>pdb|6OMM|R</Hit_id>
+  <Hit_def>Cryo-EM structure of formyl peptide receptor 2/lipoxin A4 receptor in complex with Gi [Homo sapiens]</Hit_def>
+  <Hit_accession>6OMM_R</Hit_accession>
+  <Hit_len>363</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>65.855</Hsp_bit-score>
+      <Hsp_score>159</Hsp_score>
+      <Hsp_evalue>1.48463e-11</Hsp_evalue>
+      <Hsp_query-from>55</Hsp_query-from>
+      <Hsp_query-to>138</Hsp_query-to>
+      <Hsp_hit-from>75</Hsp_hit-from>
+      <Hsp_hit-to>158</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>32</Hsp_identity>
+      <Hsp_positive>47</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>84</Hsp_align-len>
+      <Hsp_qseq>RRALTRTAVYTLNLALADLLYACSLPLLIYNYAQGDHWPFGDFACRLVRFLFYANLHGSILFLTCISFQRYLGICHPLAPWHKR</Hsp_qseq>
+      <Hsp_hseq>RMTRTVTTICYLNLALADFSFTATLPFLIVSMAMGEKWPFGWFLCKLIHIVVDINLFGSVFLIGFIALDRCICVLHPVWAQNHR</Hsp_hseq>
+      <Hsp_midline>R   T T +  LNLALAD  +  +LP LI + A G+ WPFG F C+L+  +   NL GS+  +  I+  R + + HP+   + R</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>62</Hit_num>
+  <Hit_id>pdb|7XMS|R</Hit_id>
+  <Hit_def>Chain R, Somatostatin receptor type 4 [Homo sapiens] &gt;pdb|7XMT|R Chain R, Somatostatin receptor type 4 [Homo sapiens]</Hit_def>
+  <Hit_accession>7XMS_R</Hit_accession>
+  <Hit_len>375</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>65.855</Hsp_bit-score>
+      <Hsp_score>159</Hsp_score>
+      <Hsp_evalue>1.90441e-11</Hsp_evalue>
+      <Hsp_query-from>32</Hsp_query-from>
+      <Hsp_query-to>168</Hsp_query-to>
+      <Hsp_hit-from>62</Hsp_hit-from>
+      <Hsp_hit-to>196</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>50</Hsp_identity>
+      <Hsp_positive>70</Hsp_positive>
+      <Hsp_gaps>4</Hsp_gaps>
+      <Hsp_align-len>138</Hsp_align-len>
+      <Hsp_qseq>VYSAVLAAGLPLNICVITQICTSRRALTRTAVYTLNLALADLLYACSLPLLIYNYAQGDHWPFGDFACRLVRFLFYANLHGSILFLTCISFQRYLGICHPL-APWHKRGGRRXXXXXXXXXXXXXTTQCLPTAIFAAT</Hsp_qseq>
+      <Hsp_hseq>IYALVCLVGLVGNALVIFVILRYAKMKTATNIYLLNLAVADELFMLSVPF-VASSAALRHWPFGSVLCRAVLSVDGLNMFTSVFCLTVLSVDRYVAVVHPLRAATYRRPSVAKLINLGVWLASLLVT--LPIAIFADT</Hsp_hseq>
+      <Hsp_midline>+Y+ V   GL  N  VI  I    +  T T +Y LNLA+AD L+  S+P  + + A   HWPFG   CR V  +   N+  S+  LT +S  RY+ + HPL A  ++R        + V +   + T  LP AIFA T</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>63</Hit_num>
+  <Hit_id>pdb|6C1Q|B</Hit_id>
+  <Hit_def>Crystal structure of human C5a receptor in complex with an orthosteric antagonist PMX53 and an allosteric antagonist NDT9513727 [Escherichia coli] &gt;pdb|6C1R|B Crystal structure of human C5a receptor in complex with an orthosteric antagonist PMX53 and an allosteric antagonist avacopan [Escherichia coli]</Hit_def>
+  <Hit_accession>6C1Q_B</Hit_accession>
+  <Hit_len>422</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>64.3142</Hsp_bit-score>
+      <Hsp_score>155</Hsp_score>
+      <Hsp_evalue>6.70831e-11</Hsp_evalue>
+      <Hsp_query-from>59</Hsp_query-from>
+      <Hsp_query-to>140</Hsp_query-to>
+      <Hsp_hit-from>155</Hsp_hit-from>
+      <Hsp_hit-to>236</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>33</Hsp_identity>
+      <Hsp_positive>47</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>82</Hsp_align-len>
+      <Hsp_qseq>TRTAVYTLNLALADLLYACSLPLLIYNYAQGDHWPFGDFACRLVRFLFYANLHGSILFLTCISFQRYLGICHPLAPWHKRGG</Hsp_qseq>
+      <Hsp_hseq>TINAIWFLNLAVADFLSCLALPILFTSIVQHHHWPFGGAACSILPSLILLNMYASILLLATISADRFLLVFKPIWXQNFRGA</Hsp_hseq>
+      <Hsp_midline>T  A++ LNLA+AD L   +LP+L  +  Q  HWPFG  AC ++  L   N++ SIL L  IS  R+L +  P+   + RG </Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>64</Hit_num>
+  <Hit_id>pdb|7EUO|R</Hit_id>
+  <Hit_def>Chain R, fMet-Leu-Phe receptor [Homo sapiens]</Hit_def>
+  <Hit_accession>7EUO_R</Hit_accession>
+  <Hit_len>378</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>62.7734</Hsp_bit-score>
+      <Hsp_score>151</Hsp_score>
+      <Hsp_evalue>1.69783e-10</Hsp_evalue>
+      <Hsp_query-from>55</Hsp_query-from>
+      <Hsp_query-to>132</Hsp_query-to>
+      <Hsp_hit-from>72</Hsp_hit-from>
+      <Hsp_hit-to>149</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>29</Hsp_identity>
+      <Hsp_positive>42</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>78</Hsp_align-len>
+      <Hsp_qseq>RRALTRTAVYTLNLALADLLYACSLPLLIYNYAQGDHWPFGDFACRLVRFLFYANLHGSILFLTCISFQRYLGICHPL</Hsp_qseq>
+      <Hsp_hseq>RMTHTVTTISYLNLAVADFCFTSTLPFFMVRKAMGGHWPFGWFLCKFVFTIVDINLFGSVFLIALIALDRCVCVLHPV</Hsp_hseq>
+      <Hsp_midline>R   T T +  LNLA+AD  +  +LP  +   A G HWPFG F C+ V  +   NL GS+  +  I+  R + + HP+</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>65</Hit_num>
+  <Hit_id>pdb|7WVU|R</Hit_id>
+  <Hit_def>Chain R, fMet-Leu-Phe receptor [Homo sapiens]</Hit_def>
+  <Hit_accession>7WVU_R</Hit_accession>
+  <Hit_len>371</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>62.3882</Hsp_bit-score>
+      <Hsp_score>150</Hsp_score>
+      <Hsp_evalue>2.14235e-10</Hsp_evalue>
+      <Hsp_query-from>55</Hsp_query-from>
+      <Hsp_query-to>132</Hsp_query-to>
+      <Hsp_hit-from>56</Hsp_hit-from>
+      <Hsp_hit-to>133</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>29</Hsp_identity>
+      <Hsp_positive>42</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>78</Hsp_align-len>
+      <Hsp_qseq>RRALTRTAVYTLNLALADLLYACSLPLLIYNYAQGDHWPFGDFACRLVRFLFYANLHGSILFLTCISFQRYLGICHPL</Hsp_qseq>
+      <Hsp_hseq>RMTHTVTTISYLNLAVADFCFTSTLPFFMVRKAMGGHWPFGWFLCKFVFTIVDINLFGSVFLIALIALDRCVCVLHPV</Hsp_hseq>
+      <Hsp_midline>R   T T +  LNLA+AD  +  +LP  +   A G HWPFG F C+ V  +   NL GS+  +  I+  R + + HP+</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>66</Hit_num>
+  <Hit_id>pdb|7T6T|R</Hit_id>
+  <Hit_def>Chain R, fMet-Leu-Phe receptor [Homo sapiens]</Hit_def>
+  <Hit_accession>7T6T_R</Hit_accession>
+  <Hit_len>354</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>62.3882</Hsp_bit-score>
+      <Hsp_score>150</Hsp_score>
+      <Hsp_evalue>2.20602e-10</Hsp_evalue>
+      <Hsp_query-from>55</Hsp_query-from>
+      <Hsp_query-to>132</Hsp_query-to>
+      <Hsp_hit-from>75</Hsp_hit-from>
+      <Hsp_hit-to>152</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>29</Hsp_identity>
+      <Hsp_positive>42</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>78</Hsp_align-len>
+      <Hsp_qseq>RRALTRTAVYTLNLALADLLYACSLPLLIYNYAQGDHWPFGDFACRLVRFLFYANLHGSILFLTCISFQRYLGICHPL</Hsp_qseq>
+      <Hsp_hseq>RMTHTVTTISYLNLAVADFCFTSTLPFFMVRKAMGGHWPFGWFLCKFVFTIVDINLFGSVFLIALIALDRCVCVLHPV</Hsp_hseq>
+      <Hsp_midline>R   T T +  LNLA+AD  +  +LP  +   A G HWPFG F C+ V  +   NL GS+  +  I+  R + + HP+</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>67</Hit_num>
+  <Hit_id>pdb|5ZKP|A</Hit_id>
+  <Hit_def>Crystal structure of the human platelet-activating factor receptor in complex with SR 27417 [Homo sapiens]</Hit_def>
+  <Hit_accession>5ZKP_A</Hit_accession>
+  <Hit_len>466</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>62.3882</Hsp_bit-score>
+      <Hsp_score>150</Hsp_score>
+      <Hsp_evalue>2.57428e-10</Hsp_evalue>
+      <Hsp_query-from>24</Hsp_query-from>
+      <Hsp_query-to>139</Hsp_query-to>
+      <Hsp_hit-from>15</Hsp_hit-from>
+      <Hsp_hit-to>136</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>36</Hsp_identity>
+      <Hsp_positive>60</Hsp_positive>
+      <Hsp_gaps>8</Hsp_gaps>
+      <Hsp_align-len>123</Hsp_align-len>
+      <Hsp_qseq>FKQLLLPPVYSAVLAAGLPLN---ICVITQICTSRRALTRTAVYTLNLALADLLYACSLPLLIYNYAQGDHWPFGDFACRLVRFLFYANLHGSILFLTCISFQRYLGICHPL----APWHKRG</Hsp_qseq>
+      <Hsp_hseq>FRYTLFPIVYSIIFVLGVIANGYVLWVFARLYPCKK-FNEIKIFMVNLTMADMLFLITLPLWIVYYQNQGNWILPKFLCNVAGCLFFINTYCSVAFLGVITYNRYQAVTRPIKTAQANTRKRG</Hsp_hseq>
+      <Hsp_midline>F+  L P VYS +   G+  N   + V  ++   ++      ++ +NL +AD+L+  +LPL I  Y    +W    F C +   LF+ N + S+ FL  I++ RY  +  P+    A   KRG</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>68</Hit_num>
+  <Hit_id>pdb|5ZKQ|A</Hit_id>
+  <Hit_def>Crystal structure of the human platelet-activating factor receptor in complex with ABT-491 [Homo sapiens] &gt;pdb|5ZKQ|B Crystal structure of the human platelet-activating factor receptor in complex with ABT-491 [Homo sapiens]</Hit_def>
+  <Hit_accession>5ZKQ_A</Hit_accession>
+  <Hit_len>438</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>61.6178</Hsp_bit-score>
+      <Hsp_score>148</Hsp_score>
+      <Hsp_evalue>5.48757e-10</Hsp_evalue>
+      <Hsp_query-from>24</Hsp_query-from>
+      <Hsp_query-to>139</Hsp_query-to>
+      <Hsp_hit-from>15</Hsp_hit-from>
+      <Hsp_hit-to>136</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>36</Hsp_identity>
+      <Hsp_positive>60</Hsp_positive>
+      <Hsp_gaps>8</Hsp_gaps>
+      <Hsp_align-len>123</Hsp_align-len>
+      <Hsp_qseq>FKQLLLPPVYSAVLAAGLPLN---ICVITQICTSRRALTRTAVYTLNLALADLLYACSLPLLIYNYAQGDHWPFGDFACRLVRFLFYANLHGSILFLTCISFQRYLGICHPL----APWHKRG</Hsp_qseq>
+      <Hsp_hseq>FRYTLFPIVYSIIFVLGVIANGYVLWVFARLYPCKK-FNEIKIFMVNLTMADMLFLITLPLWIVYYQNQGNWILPKFLCNVAGCLFFINTYCSVAFLGVITYNRYQAVTRPIKTAQANTRKRG</Hsp_hseq>
+      <Hsp_midline>F+  L P VYS +   G+  N   + V  ++   ++      ++ +NL +AD+L+  +LPL I  Y    +W    F C +   LF+ N + S+ FL  I++ RY  +  P+    A   KRG</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>69</Hit_num>
+  <Hit_id>pdb|7F9Y|R</Hit_id>
+  <Hit_def>Chain R, Soluble cytochrome b562 [Homo sapiens] &gt;pdb|7F9Z|R Chain R, human ghrelin receptor [Homo sapiens]</Hit_def>
+  <Hit_accession>7F9Y_R</Hit_accession>
+  <Hit_len>661</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>61.6178</Hsp_bit-score>
+      <Hsp_score>148</Hsp_score>
+      <Hsp_evalue>6.05222e-10</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>132</Hsp_query-to>
+      <Hsp_hit-from>151</Hsp_hit-from>
+      <Hsp_hit-to>281</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>39</Hsp_identity>
+      <Hsp_positive>65</Hsp_positive>
+      <Hsp_gaps>17</Hsp_gaps>
+      <Hsp_align-len>140</Hsp_align-len>
+      <Hsp_qseq>MEWDNGTGQ-ALGLPPTTCVYRENFKQLLLPPVYSAVLAA-------GLPLNICVITQICTSRRALTRTAVYTLNLALADLLYACSLPLLIYNYAQGDHWPFGDFACRLVRFLFYANLHGSILFLTCISFQRYLGICHPL</Hsp_qseq>
+      <Hsp_hseq>LDWDASPGNDSLG---------DELLQLFPAPLLAGVTATCVALFVVGIAGNLLTMLVVSRFRELRTTTNLYLSSMAFSDLLIFLCMPLDLVRLWQYRPWNFGDLLCKLFQFVSESCTYATVLTITALSVERYFAICFPL</Hsp_hseq>
+      <Hsp_midline>++WD   G  +LG         +   QL   P+ + V A        G+  N+  +  +   R   T T +Y  ++A +DLL    +PL +    Q   W FGD  C+L +F+  +  + ++L +T +S +RY  IC PL</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>70</Hit_num>
+  <Hit_id>pdb|5O9H|A</Hit_id>
+  <Hit_def>Crystal structure of thermostabilised human C5a anaphylatoxin chemotactic receptor 1 (C5aR) in complex with NDT9513727 [Homo sapiens] &gt;pdb|5O9H|B Crystal structure of thermostabilised human C5a anaphylatoxin chemotactic receptor 1 (C5aR) in complex with NDT9513727 [Homo sapiens]</Hit_def>
+  <Hit_accession>5O9H_A</Hit_accession>
+  <Hit_len>317</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>60.4622</Hsp_bit-score>
+      <Hsp_score>145</Hsp_score>
+      <Hsp_evalue>8.53718e-10</Hsp_evalue>
+      <Hsp_query-from>59</Hsp_query-from>
+      <Hsp_query-to>138</Hsp_query-to>
+      <Hsp_hit-from>40</Hsp_hit-from>
+      <Hsp_hit-to>117</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>33</Hsp_identity>
+      <Hsp_positive>45</Hsp_positive>
+      <Hsp_gaps>2</Hsp_gaps>
+      <Hsp_align-len>80</Hsp_align-len>
+      <Hsp_qseq>TRTAVYTLNLALADLLYACSLPLLIYNYAQGDHWPFGDFACRLVRFLFYANLHGSILFLTCISFQRYLGICHPLAPWHKR</Hsp_qseq>
+      <Hsp_hseq>TINAIWFLNLAVADFLACLALPALFTSIVQHHHWPFGGAACSILPSLILLNMYASILLLATISADRFLLVFKP--AWCQR</Hsp_hseq>
+      <Hsp_midline>T  A++ LNLA+AD L   +LP L  +  Q  HWPFG  AC ++  L   N++ SIL L  IS  R+L +  P   W +R</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>71</Hit_num>
+  <Hit_id>pdb|7EIB|A</Hit_id>
+  <Hit_def>Chain A, B1 bradykinin receptor [Homo sapiens]</Hit_def>
+  <Hit_accession>7EIB_A</Hit_accession>
+  <Hit_len>613</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>60.8474</Hsp_bit-score>
+      <Hsp_score>146</Hsp_score>
+      <Hsp_evalue>9.86399e-10</Hsp_evalue>
+      <Hsp_query-from>28</Hsp_query-from>
+      <Hsp_query-to>133</Hsp_query-to>
+      <Hsp_hit-from>144</Hsp_hit-from>
+      <Hsp_hit-to>249</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>36</Hsp_identity>
+      <Hsp_positive>52</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>106</Hsp_align-len>
+      <Hsp_qseq>LLPPVYSAVLAAGLPLNICVITQICTSRRALTRTAVYTLNLALADLLYACSLPLLIYNYAQGDHWPFGDFACRLVRFLFYANLHGSILFLTCISFQRYLGICHPLA</Hsp_qseq>
+      <Hsp_hseq>VLPTFIISICFFGLLGNLFVLLVFLLPRRQLNVAEIYLANLAASDLVFVLGLPFWAENIWNQFNWPFGALLCRVINGVIKANLFISIWLVVAISQDRYRVLVHPMA</Hsp_hseq>
+      <Hsp_midline>+LP    ++   GL  N+ V+      RR L    +Y  NLA +DL++   LP    N     +WPFG   CR++  +  ANL  SI  +  IS  RY  + HP+A</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>72</Hit_num>
+  <Hit_id>pdb|4PHU|A</Hit_id>
+  <Hit_def>Crystal structure of Human GPR40 bound to allosteric agonist TAK-875 [Homo sapiens] &gt;pdb|5KW2|A The extra-helical binding site of GPR40 and the structural basis for allosteric agonism and incretin stimulation [Homo sapiens] &gt;pdb|5TZR|A GPR40 in complex with partial agonist MK-8666 [Homo sapiens]</Hit_def>
+  <Hit_accession>4PHU_A</Hit_accession>
+  <Hit_len>491</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>60.8474</Hsp_bit-score>
+      <Hsp_score>146</Hsp_score>
+      <Hsp_evalue>1.06381e-09</Hsp_evalue>
+      <Hsp_query-from>29</Hsp_query-from>
+      <Hsp_query-to>133</Hsp_query-to>
+      <Hsp_hit-from>16</Hsp_hit-from>
+      <Hsp_hit-to>126</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>41</Hsp_identity>
+      <Hsp_positive>50</Hsp_positive>
+      <Hsp_gaps>6</Hsp_gaps>
+      <Hsp_align-len>111</Hsp_align-len>
+      <Hsp_qseq>LPP-----VYSAVLAAGLPLNICVIT-QICTSRRALTRTAVYTLNLALADLLYACSLPLLIYNYAQGDHWPFGDFACRLVRFLFYANLHGSILFLTCISFQRYLGICHPLA</Hsp_qseq>
+      <Hsp_hseq>LPPQLSFGLYVAAFALGFPLNVLAIRGATAHARLRLTPSAVYALNLGCSDLLLTVSLPLKAVEALASGAWPLPASLCPVFAVAHFAPLYAGGGFLAALSAARYLGAAFPLG</Hsp_hseq>
+      <Hsp_midline>LPP     +Y A  A G PLN+  I      +R  LT +AVY LNL  +DLL   SLPL          WP     C +     +A L+    FL  +S  RYLG   PL </Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>73</Hit_num>
+  <Hit_id>pdb|7O7F|C</Hit_id>
+  <Hit_def>Chain C, C-C chemokine receptor type 5 [Homo sapiens]</Hit_def>
+  <Hit_accession>7O7F_C</Hit_accession>
+  <Hit_len>372</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>60.077</Hsp_bit-score>
+      <Hsp_score>144</Hsp_score>
+      <Hsp_evalue>1.37821e-09</Hsp_evalue>
+      <Hsp_query-from>23</Hsp_query-from>
+      <Hsp_query-to>130</Hsp_query-to>
+      <Hsp_hit-from>24</Hsp_hit-from>
+      <Hsp_hit-to>132</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>36</Hsp_identity>
+      <Hsp_positive>59</Hsp_positive>
+      <Hsp_gaps>5</Hsp_gaps>
+      <Hsp_align-len>111</Hsp_align-len>
+      <Hsp_qseq>NFKQL---LLPPVYSAVLAAGLPLNICVITQICTSRRALTRTAVYTLNLALADLLYACSLPLLIYNYAQGDHWPFGDFACRLVRFLFYANLHGSILFLTCISFQRYLGICH</Hsp_qseq>
+      <Hsp_hseq>NVKQIAARLLPPLYSLVFIFGFVGNMLVILILINCKRLKSMTDIYLLNLAISDLFFLLTVPF--WAHYAAAQWDFGNTMCQLLTGLYFIGFFSGIFFIILLTIDRYLAVVH</Hsp_hseq>
+      <Hsp_midline>N KQ+   LLPP+YS V   G   N+ VI  +   +R  + T +Y LNLA++DL +  ++P   + +     W FG+  C+L+  L++      I F+  ++  RYL + H</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>74</Hit_num>
+  <Hit_id>pdb|6MEO|B</Hit_id>
+  <Hit_def>Structural basis of coreceptor recognition by HIV-1 envelope spike [Homo sapiens] &gt;pdb|6MET|B Structural basis of coreceptor recognition by HIV-1 envelope spike [Homo sapiens]</Hit_def>
+  <Hit_accession>6MEO_B</Hit_accession>
+  <Hit_len>313</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>59.6918</Hsp_bit-score>
+      <Hsp_score>143</Hsp_score>
+      <Hsp_evalue>1.42469e-09</Hsp_evalue>
+      <Hsp_query-from>23</Hsp_query-from>
+      <Hsp_query-to>130</Hsp_query-to>
+      <Hsp_hit-from>24</Hsp_hit-from>
+      <Hsp_hit-to>132</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>36</Hsp_identity>
+      <Hsp_positive>59</Hsp_positive>
+      <Hsp_gaps>5</Hsp_gaps>
+      <Hsp_align-len>111</Hsp_align-len>
+      <Hsp_qseq>NFKQL---LLPPVYSAVLAAGLPLNICVITQICTSRRALTRTAVYTLNLALADLLYACSLPLLIYNYAQGDHWPFGDFACRLVRFLFYANLHGSILFLTCISFQRYLGICH</Hsp_qseq>
+      <Hsp_hseq>NVKQIAARLLPPLYSLVFIFGFVGNMLVILILINCKRLKSMTDIYLLNLAISDLFFLLTVPF--WAHYAAAQWDFGNTMCQLLTGLYFIGFFSGIFFIILLTIDRYLAVVH</Hsp_hseq>
+      <Hsp_midline>N KQ+   LLPP+YS V   G   N+ VI  +   +R  + T +Y LNLA++DL +  ++P   + +     W FG+  C+L+  L++      I F+  ++  RYL + H</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>75</Hit_num>
+  <Hit_id>pdb|7F1S|R</Hit_id>
+  <Hit_def>Chain R, C-C chemokine receptor type 5 [Homo sapiens]</Hit_def>
+  <Hit_accession>7F1S_R</Hit_accession>
+  <Hit_len>367</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>59.6918</Hsp_bit-score>
+      <Hsp_score>143</Hsp_score>
+      <Hsp_evalue>1.59817e-09</Hsp_evalue>
+      <Hsp_query-from>23</Hsp_query-from>
+      <Hsp_query-to>130</Hsp_query-to>
+      <Hsp_hit-from>26</Hsp_hit-from>
+      <Hsp_hit-to>134</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>36</Hsp_identity>
+      <Hsp_positive>59</Hsp_positive>
+      <Hsp_gaps>5</Hsp_gaps>
+      <Hsp_align-len>111</Hsp_align-len>
+      <Hsp_qseq>NFKQL---LLPPVYSAVLAAGLPLNICVITQICTSRRALTRTAVYTLNLALADLLYACSLPLLIYNYAQGDHWPFGDFACRLVRFLFYANLHGSILFLTCISFQRYLGICH</Hsp_qseq>
+      <Hsp_hseq>NVKQIAARLLPPLYSLVFIFGFVGNMLVILILINCKRLKSMTDIYLLNLAISDLFFLLTVPF--WAHYAAAQWDFGNTMCQLLTGLYFIGFFSGIFFIILLTIDRYLAVVH</Hsp_hseq>
+      <Hsp_midline>N KQ+   LLPP+YS V   G   N+ VI  +   +R  + T +Y LNLA++DL +  ++P   + +     W FG+  C+L+  L++      I F+  ++  RYL + H</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>76</Hit_num>
+  <Hit_id>pdb|6AKX|A</Hit_id>
+  <Hit_def>The Crystal structure of Human Chemokine Receptor CCR5 in complex with compound 21 [Homo sapiens] &gt;pdb|6AKX|B The Crystal structure of Human Chemokine Receptor CCR5 in complex with compound 21 [Homo sapiens] &gt;pdb|6AKY|A The Crystal structure of Human Chemokine Receptor CCR5 in complex with compound 34 [Homo sapiens]</Hit_def>
+  <Hit_accession>6AKX_A</Hit_accession>
+  <Hit_len>381</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>59.6918</Hsp_bit-score>
+      <Hsp_score>143</Hsp_score>
+      <Hsp_evalue>1.82462e-09</Hsp_evalue>
+      <Hsp_query-from>23</Hsp_query-from>
+      <Hsp_query-to>130</Hsp_query-to>
+      <Hsp_hit-from>26</Hsp_hit-from>
+      <Hsp_hit-to>134</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>38</Hsp_identity>
+      <Hsp_positive>60</Hsp_positive>
+      <Hsp_gaps>5</Hsp_gaps>
+      <Hsp_align-len>111</Hsp_align-len>
+      <Hsp_qseq>NFKQL---LLPPVYSAVLAAGLPLNICVITQICTSRRALTRTAVYTLNLALADLLYACSLPLLIYNYAQGDHWPFGDFACRLVRFLFYANLHGSILFLTCISFQRYLGICH</Hsp_qseq>
+      <Hsp_hseq>NVKQIAARLLPPLYSLVFIFGFVGNMLVILILINYKRLKSMTDIYLLNLAISDLFFLLTVPFWAH-YAAA-QWDFGNTMCQLLTGLYFIGFFSGIFFIILLTIDRYLAVVH</Hsp_hseq>
+      <Hsp_midline>N KQ+   LLPP+YS V   G   N+ VI  +   +R  + T +Y LNLA++DL +  ++P   + YA    W FG+  C+L+  L++      I F+  ++  RYL + H</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>77</Hit_num>
+  <Hit_id>pdb|5UIW|A</Hit_id>
+  <Hit_def>Crystal Structure of CC Chemokine Receptor 5 (CCR5) in complex with high potency HIV entry inhibitor 5P7-CCL5 [Homo sapiens]</Hit_def>
+  <Hit_accession>5UIW_A</Hit_accession>
+  <Hit_len>411</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>59.6918</Hsp_bit-score>
+      <Hsp_score>143</Hsp_score>
+      <Hsp_evalue>2.03713e-09</Hsp_evalue>
+      <Hsp_query-from>23</Hsp_query-from>
+      <Hsp_query-to>130</Hsp_query-to>
+      <Hsp_hit-from>26</Hsp_hit-from>
+      <Hsp_hit-to>134</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>38</Hsp_identity>
+      <Hsp_positive>60</Hsp_positive>
+      <Hsp_gaps>5</Hsp_gaps>
+      <Hsp_align-len>111</Hsp_align-len>
+      <Hsp_qseq>NFKQL---LLPPVYSAVLAAGLPLNICVITQICTSRRALTRTAVYTLNLALADLLYACSLPLLIYNYAQGDHWPFGDFACRLVRFLFYANLHGSILFLTCISFQRYLGICH</Hsp_qseq>
+      <Hsp_hseq>NVKQIAARLLPPLYSLVFIFGFVGNMLVILILINYKRLKSMTDIYLLNLAISDLFFLLTVPFWAH-YAAA-QWDFGNTMCQLLTGLYFIGFFSGIFFIILLTIDRYLAVVH</Hsp_hseq>
+      <Hsp_midline>N KQ+   LLPP+YS V   G   N+ VI  +   +R  + T +Y LNLA++DL +  ++P   + YA    W FG+  C+L+  L++      I F+  ++  RYL + H</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>78</Hit_num>
+  <Hit_id>pdb|4MBS|A</Hit_id>
+  <Hit_def>Crystal Structure of the CCR5 Chemokine Receptor [Homo sapiens] &gt;pdb|4MBS|B Crystal Structure of the CCR5 Chemokine Receptor [Homo sapiens]</Hit_def>
+  <Hit_accession>4MBS_A</Hit_accession>
+  <Hit_len>414</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>59.6918</Hsp_bit-score>
+      <Hsp_score>143</Hsp_score>
+      <Hsp_evalue>2.08776e-09</Hsp_evalue>
+      <Hsp_query-from>23</Hsp_query-from>
+      <Hsp_query-to>130</Hsp_query-to>
+      <Hsp_hit-from>26</Hsp_hit-from>
+      <Hsp_hit-to>134</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>38</Hsp_identity>
+      <Hsp_positive>60</Hsp_positive>
+      <Hsp_gaps>5</Hsp_gaps>
+      <Hsp_align-len>111</Hsp_align-len>
+      <Hsp_qseq>NFKQL---LLPPVYSAVLAAGLPLNICVITQICTSRRALTRTAVYTLNLALADLLYACSLPLLIYNYAQGDHWPFGDFACRLVRFLFYANLHGSILFLTCISFQRYLGICH</Hsp_qseq>
+      <Hsp_hseq>NVKQIAARLLPPLYSLVFIFGFVGNMLVILILINYKRLKSMTDIYLLNLAISDLFFLLTVPFWAH-YAAA-QWDFGNTMCQLLTGLYFIGFFSGIFFIILLTIDRYLAVVH</Hsp_hseq>
+      <Hsp_midline>N KQ+   LLPP+YS V   G   N+ VI  +   +R  + T +Y LNLA++DL +  ++P   + YA    W FG+  C+L+  L++      I F+  ++  RYL + H</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>79</Hit_num>
+  <Hit_id>pdb|7F1Q|R</Hit_id>
+  <Hit_def>Chain R, C-C motif chemokine 3,C-C chemokine receptor type 5 [Homo sapiens]</Hit_def>
+  <Hit_accession>7F1Q_R</Hit_accession>
+  <Hit_len>457</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>59.6918</Hsp_bit-score>
+      <Hsp_score>143</Hsp_score>
+      <Hsp_evalue>2.40664e-09</Hsp_evalue>
+      <Hsp_query-from>23</Hsp_query-from>
+      <Hsp_query-to>130</Hsp_query-to>
+      <Hsp_hit-from>116</Hsp_hit-from>
+      <Hsp_hit-to>224</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>36</Hsp_identity>
+      <Hsp_positive>59</Hsp_positive>
+      <Hsp_gaps>5</Hsp_gaps>
+      <Hsp_align-len>111</Hsp_align-len>
+      <Hsp_qseq>NFKQL---LLPPVYSAVLAAGLPLNICVITQICTSRRALTRTAVYTLNLALADLLYACSLPLLIYNYAQGDHWPFGDFACRLVRFLFYANLHGSILFLTCISFQRYLGICH</Hsp_qseq>
+      <Hsp_hseq>NVKQIAARLLPPLYSLVFIFGFVGNMLVILILINCKRLKSMTDIYLLNLAISDLFFLLTVPF--WAHYAAAQWDFGNTMCQLLTGLYFIGFFSGIFFIILLTIDRYLAVVH</Hsp_hseq>
+      <Hsp_midline>N KQ+   LLPP+YS V   G   N+ VI  +   +R  + T +Y LNLA++DL +  ++P   + +     W FG+  C+L+  L++      I F+  ++  RYL + H</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>80</Hit_num>
+  <Hit_id>pdb|7W2Z|R</Hit_id>
+  <Hit_def>Chain R, Growth hormone secretagogue receptor type 1 [Homo sapiens]</Hit_def>
+  <Hit_accession>7W2Z_R</Hit_accession>
+  <Hit_len>366</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>59.3066</Hsp_bit-score>
+      <Hsp_score>142</Hsp_score>
+      <Hsp_evalue>2.60269e-09</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>132</Hsp_query-to>
+      <Hsp_hit-from>19</Hsp_hit-from>
+      <Hsp_hit-to>149</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>39</Hsp_identity>
+      <Hsp_positive>65</Hsp_positive>
+      <Hsp_gaps>17</Hsp_gaps>
+      <Hsp_align-len>140</Hsp_align-len>
+      <Hsp_qseq>MEWDNGTGQ-ALGLPPTTCVYRENFKQLLLPPVYSAVLAA-------GLPLNICVITQICTSRRALTRTAVYTLNLALADLLYACSLPLLIYNYAQGDHWPFGDFACRLVRFLFYANLHGSILFLTCISFQRYLGICHPL</Hsp_qseq>
+      <Hsp_hseq>LDWDASPGNDSLG---------DELLQLFPAPLLAGVTATCVALFVVGIAGNLLTMLVVSRFRELRTTTNLYLSSMAFSDLLIFLCMPLDLVRLWQYRPWNFGDLLCKLFQFVSESCTYATVLTITALSVERYFAICFPL</Hsp_hseq>
+      <Hsp_midline>++WD   G  +LG         +   QL   P+ + V A        G+  N+  +  +   R   T T +Y  ++A +DLL    +PL +    Q   W FGD  C+L +F+  +  + ++L +T +S +RY  IC PL</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>81</Hit_num>
+  <Hit_id>pdb|7F1T|A</Hit_id>
+  <Hit_def>Chain A, C-C motif chemokine 3,C-C chemokine receptor type 5,Rubredoxin,C-C chemokine receptor type 5 [synthetic construct]</Hit_def>
+  <Hit_accession>7F1T_A</Hit_accession>
+  <Hit_len>491</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>59.3066</Hsp_bit-score>
+      <Hsp_score>142</Hsp_score>
+      <Hsp_evalue>2.64361e-09</Hsp_evalue>
+      <Hsp_query-from>23</Hsp_query-from>
+      <Hsp_query-to>130</Hsp_query-to>
+      <Hsp_hit-from>116</Hsp_hit-from>
+      <Hsp_hit-to>224</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>38</Hsp_identity>
+      <Hsp_positive>60</Hsp_positive>
+      <Hsp_gaps>5</Hsp_gaps>
+      <Hsp_align-len>111</Hsp_align-len>
+      <Hsp_qseq>NFKQL---LLPPVYSAVLAAGLPLNICVITQICTSRRALTRTAVYTLNLALADLLYACSLPLLIYNYAQGDHWPFGDFACRLVRFLFYANLHGSILFLTCISFQRYLGICH</Hsp_qseq>
+      <Hsp_hseq>NVKQIAARLLPPLYSLVFIFGFVGNMLVILILINYKRLKSATDIYLLNLAISDLFFLLTVPFWAH-YAAA-QWDFGNTMCQLLTGLYFIGFFSGIFFIILLTIDRYLAVVH</Hsp_hseq>
+      <Hsp_midline>N KQ+   LLPP+YS V   G   N+ VI  +   +R  + T +Y LNLA++DL +  ++P   + YA    W FG+  C+L+  L++      I F+  ++  RYL + H</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>82</Hit_num>
+  <Hit_id>pdb|7XJK|F</Hit_id>
+  <Hit_def>Chain F, Galanin receptor type 2 [Homo sapiens] &gt;pdb|7XJL|F Chain F, Galanin receptor type 2 [Homo sapiens]</Hit_def>
+  <Hit_accession>7XJK_F</Hit_accession>
+  <Hit_len>332</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>58.9214</Hsp_bit-score>
+      <Hsp_score>141</Hsp_score>
+      <Hsp_evalue>2.70584e-09</Hsp_evalue>
+      <Hsp_query-from>27</Hsp_query-from>
+      <Hsp_query-to>132</Hsp_query-to>
+      <Hsp_hit-from>36</Hsp_hit-from>
+      <Hsp_hit-to>141</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>33</Hsp_identity>
+      <Hsp_positive>55</Hsp_positive>
+      <Hsp_gaps>2</Hsp_gaps>
+      <Hsp_align-len>107</Hsp_align-len>
+      <Hsp_qseq>LLLPPVYSAVLAAGLPLNICVITQICTSRRALTRTAVYTLNLALADLLYA-CSLPLLIYNYAQGDHWPFGDFACRLVRFLFYANLHGSILFLTCISFQRYLGICHPL</Hsp_qseq>
+      <Hsp_hseq>VIVPLLFALIFLVGTVGNTLVLAVLLRGGQAVSTTNLFILNLGVADLCFILCCVPFQATIYTL-DGWVFGSLLCKAVHFLIFLTMHASSFTLAAVSLDRYLAIRYPL</Hsp_hseq>
+      <Hsp_midline>+++P +++ +   G   N  V+  +    +A++ T ++ LNL +ADL +  C +P     Y   D W FG   C+ V FL +  +H S   L  +S  RYL I +PL</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>83</Hit_num>
+  <Hit_id>pdb|6KO5|A</Hit_id>
+  <Hit_def>Complex structure of Ghrelin receptor with Fab [Escherichia coli]</Hit_def>
+  <Hit_accession>6KO5_A</Hit_accession>
+  <Hit_len>424</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>59.3066</Hsp_bit-score>
+      <Hsp_score>142</Hsp_score>
+      <Hsp_evalue>2.79451e-09</Hsp_evalue>
+      <Hsp_query-from>35</Hsp_query-from>
+      <Hsp_query-to>132</Hsp_query-to>
+      <Hsp_hit-from>130</Hsp_hit-from>
+      <Hsp_hit-to>227</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>30</Hsp_identity>
+      <Hsp_positive>50</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>98</Hsp_align-len>
+      <Hsp_qseq>AVLAAGLPLNICVITQICTSRRALTRTAVYTLNLALADLLYACSLPLLIYNYAQGDHWPFGDFACRLVRFLFYANLHGSILFLTCISFQRYLGICHPL</Hsp_qseq>
+      <Hsp_hseq>ALFVVGIAGNLLTMLVVSRFRELRTTTNLYLSSMAFSDLLIFLCMPLDLVRLWQYRPWNFGDLLCKLFQFVSESCTYAKVLTITALSVERYFAICFPL</Hsp_hseq>
+      <Hsp_midline>A+   G+  N+  +  +   R   T T +Y  ++A +DLL    +PL +    Q   W FGD  C+L +F+  +  +  +L +T +S +RY  IC PL</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>84</Hit_num>
+  <Hit_id>pdb|7F1R|R</Hit_id>
+  <Hit_def>Chain R, C-C motif chemokine 5,C-C chemokine receptor type 5 [Homo sapiens]</Hit_def>
+  <Hit_accession>7F1R_R</Hit_accession>
+  <Hit_len>462</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>59.3066</Hsp_bit-score>
+      <Hsp_score>142</Hsp_score>
+      <Hsp_evalue>3.01141e-09</Hsp_evalue>
+      <Hsp_query-from>23</Hsp_query-from>
+      <Hsp_query-to>130</Hsp_query-to>
+      <Hsp_hit-from>119</Hsp_hit-from>
+      <Hsp_hit-to>227</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>36</Hsp_identity>
+      <Hsp_positive>59</Hsp_positive>
+      <Hsp_gaps>5</Hsp_gaps>
+      <Hsp_align-len>111</Hsp_align-len>
+      <Hsp_qseq>NFKQL---LLPPVYSAVLAAGLPLNICVITQICTSRRALTRTAVYTLNLALADLLYACSLPLLIYNYAQGDHWPFGDFACRLVRFLFYANLHGSILFLTCISFQRYLGICH</Hsp_qseq>
+      <Hsp_hseq>NVKQIAARLLPPLYSLVFIFGFVGNMLVILILINCKRLKSMTDIYLLNLAISDLFFLLTVPF--WAHYAAAQWDFGNTMCQLLTGLYFIGFFSGIFFIILLTIDRYLAVVH</Hsp_hseq>
+      <Hsp_midline>N KQ+   LLPP+YS V   G   N+ VI  +   +R  + T +Y LNLA++DL +  ++P   + +     W FG+  C+L+  L++      I F+  ++  RYL + H</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>85</Hit_num>
+  <Hit_id>pdb|7F83|A</Hit_id>
+  <Hit_def>Chain A, Growth hormone secretagogue receptor type 1,Soluble cytochrome b562 [synthetic construct] &gt;pdb|7F83|B Chain B, Growth hormone secretagogue receptor type 1,Soluble cytochrome b562 [synthetic construct]</Hit_def>
+  <Hit_accession>7F83_A</Hit_accession>
+  <Hit_len>416</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>58.9214</Hsp_bit-score>
+      <Hsp_score>141</Hsp_score>
+      <Hsp_evalue>3.47798e-09</Hsp_evalue>
+      <Hsp_query-from>35</Hsp_query-from>
+      <Hsp_query-to>132</Hsp_query-to>
+      <Hsp_hit-from>18</Hsp_hit-from>
+      <Hsp_hit-to>115</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>30</Hsp_identity>
+      <Hsp_positive>50</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>98</Hsp_align-len>
+      <Hsp_qseq>AVLAAGLPLNICVITQICTSRRALTRTAVYTLNLALADLLYACSLPLLIYNYAQGDHWPFGDFACRLVRFLFYANLHGSILFLTCISFQRYLGICHPL</Hsp_qseq>
+      <Hsp_hseq>ALFVVGIAGNLLTMLVVSRFRELRTTTNLYLSSMAFSDLLIFLCMPLDLVRLWQYRPWNFGDLLCKLFQFVSESCTYAKVLTITALSVERYFAICFPL</Hsp_hseq>
+      <Hsp_midline>A+   G+  N+  +  +   R   T T +Y  ++A +DLL    +PL +    Q   W FGD  C+L +F+  +  +  +L +T +S +RY  IC PL</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>86</Hit_num>
+  <Hit_id>pdb|7NA8|R</Hit_id>
+  <Hit_def>Chain R, Growth hormone secretagogue receptor type 1 [Homo sapiens]</Hit_def>
+  <Hit_accession>7NA8_R</Hit_accession>
+  <Hit_len>366</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>58.5362</Hsp_bit-score>
+      <Hsp_score>140</Hsp_score>
+      <Hsp_evalue>3.9523e-09</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>132</Hsp_query-to>
+      <Hsp_hit-from>19</Hsp_hit-from>
+      <Hsp_hit-to>149</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>39</Hsp_identity>
+      <Hsp_positive>64</Hsp_positive>
+      <Hsp_gaps>17</Hsp_gaps>
+      <Hsp_align-len>140</Hsp_align-len>
+      <Hsp_qseq>MEWDNGTGQ-ALGLPPTTCVYRENFKQLLLPPVYSAVLAA-------GLPLNICVITQICTSRRALTRTAVYTLNLALADLLYACSLPLLIYNYAQGDHWPFGDFACRLVRFLFYANLHGSILFLTCISFQRYLGICHPL</Hsp_qseq>
+      <Hsp_hseq>LDWDASPGNDSLG---------DELLQLFPAPLLAGVTATCVALFVVGIAGNLLTMLVVSRFRELRTTTNLYLSSMAFSDLLIFLCMPLDLVRLWQYRPWNFGDLLCKLFQFVSESCTYAKVLTITALSVERYFAICFPL</Hsp_hseq>
+      <Hsp_midline>++WD   G  +LG         +   QL   P+ + V A        G+  N+  +  +   R   T T +Y  ++A +DLL    +PL +    Q   W FGD  C+L +F+  +  +  +L +T +S +RY  IC PL</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>87</Hit_num>
+  <Hit_id>pdb|7NA7|R</Hit_id>
+  <Hit_def>Chain R, Growth hormone secretagogue receptor type 1 [Homo sapiens]</Hit_def>
+  <Hit_accession>7NA7_R</Hit_accession>
+  <Hit_len>366</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>58.5362</Hsp_bit-score>
+      <Hsp_score>140</Hsp_score>
+      <Hsp_evalue>4.21157e-09</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>132</Hsp_query-to>
+      <Hsp_hit-from>19</Hsp_hit-from>
+      <Hsp_hit-to>149</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>39</Hsp_identity>
+      <Hsp_positive>64</Hsp_positive>
+      <Hsp_gaps>17</Hsp_gaps>
+      <Hsp_align-len>140</Hsp_align-len>
+      <Hsp_qseq>MEWDNGTGQ-ALGLPPTTCVYRENFKQLLLPPVYSAVLAA-------GLPLNICVITQICTSRRALTRTAVYTLNLALADLLYACSLPLLIYNYAQGDHWPFGDFACRLVRFLFYANLHGSILFLTCISFQRYLGICHPL</Hsp_qseq>
+      <Hsp_hseq>LDWDASPGNDSLG---------DELLQLFPAPLLAGVTATCVALFVVGIAGNLLTMLVVSRFRELRTTTNLYLSSMAFSDLLIFLCMPLDLVRLWQYRPWNFGDLLCKLFQFVSESCTYAKVLTITALSVERYFAICFPL</Hsp_hseq>
+      <Hsp_midline>++WD   G  +LG         +   QL   P+ + V A        G+  N+  +  +   R   T T +Y  ++A +DLL    +PL +    Q   W FGD  C+L +F+  +  +  +L +T +S +RY  IC PL</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>88</Hit_num>
+  <Hit_id>pdb|7WQ4|R</Hit_id>
+  <Hit_def>Chain R, Galanin receptor type 2 [Homo sapiens] &gt;pdb|7XBD|A Chain A, Galanin receptor type 2 [Homo sapiens]</Hit_def>
+  <Hit_accession>7WQ4_R</Hit_accession>
+  <Hit_len>387</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>58.151</Hsp_bit-score>
+      <Hsp_score>139</Hsp_score>
+      <Hsp_evalue>6.13039e-09</Hsp_evalue>
+      <Hsp_query-from>27</Hsp_query-from>
+      <Hsp_query-to>132</Hsp_query-to>
+      <Hsp_hit-from>26</Hsp_hit-from>
+      <Hsp_hit-to>131</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>33</Hsp_identity>
+      <Hsp_positive>55</Hsp_positive>
+      <Hsp_gaps>2</Hsp_gaps>
+      <Hsp_align-len>107</Hsp_align-len>
+      <Hsp_qseq>LLLPPVYSAVLAAGLPLNICVITQICTSRRALTRTAVYTLNLALADLLYA-CSLPLLIYNYAQGDHWPFGDFACRLVRFLFYANLHGSILFLTCISFQRYLGICHPL</Hsp_qseq>
+      <Hsp_hseq>VIVPLLFALIFLVGTVGNTLVLAVLLRGGQAVSTTNLFILNLGVADLCFILCCVPFQATIYTL-DGWVFGSLLCKAVHFLIFLTMHASSFTLAAVSLDRYLAIRYPL</Hsp_hseq>
+      <Hsp_midline>+++P +++ +   G   N  V+  +    +A++ T ++ LNL +ADL +  C +P     Y   D W FG   C+ V FL +  +H S   L  +S  RYL I +PL</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>89</Hit_num>
+  <Hit_id>pdb|5TZY|A</Hit_id>
+  <Hit_def>GPR40 in complex with AgoPAM AP8 and partial agonist MK-8666 [Homo sapiens]</Hit_def>
+  <Hit_accession>5TZY_A</Hit_accession>
+  <Hit_len>491</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>58.151</Hsp_bit-score>
+      <Hsp_score>139</Hsp_score>
+      <Hsp_evalue>6.73942e-09</Hsp_evalue>
+      <Hsp_query-from>29</Hsp_query-from>
+      <Hsp_query-to>133</Hsp_query-to>
+      <Hsp_hit-from>16</Hsp_hit-from>
+      <Hsp_hit-to>126</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>40</Hsp_identity>
+      <Hsp_positive>49</Hsp_positive>
+      <Hsp_gaps>6</Hsp_gaps>
+      <Hsp_align-len>111</Hsp_align-len>
+      <Hsp_qseq>LPP-----VYSAVLAAGLPLNICVIT-QICTSRRALTRTAVYTLNLALADLLYACSLPLLIYNYAQGDHWPFGDFACRLVRFLFYANLHGSILFLTCISFQRYLGICHPLA</Hsp_qseq>
+      <Hsp_hseq>LPPQLSFGLYVAAFALGFPLNVLAIRGATAHARLRLTPSAVYALNLGCSDLLLTVSLPLKAVEALASGAWPLPASLCPVFAVAHFFPLYAGGGFLAALSAARYLGAAFPLG</Hsp_hseq>
+      <Hsp_midline>LPP     +Y A  A G PLN+  I      +R  LT +AVY LNL  +DLL   SLPL          WP     C +     +  L+    FL  +S  RYLG   PL </Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>90</Hit_num>
+  <Hit_id>pdb|5WB2|A</Hit_id>
+  <Hit_def>Chain A, Envelope protein US28, nanobody 7 fusion protein [Human betaherpesvirus 5]</Hit_def>
+  <Hit_accession>5WB2_A</Hit_accession>
+  <Hit_len>460</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>56.225</Hsp_bit-score>
+      <Hsp_score>134</Hsp_score>
+      <Hsp_evalue>2.69677e-08</Hsp_evalue>
+      <Hsp_query-from>16</Hsp_query-from>
+      <Hsp_query-to>130</Hsp_query-to>
+      <Hsp_hit-from>28</Hsp_hit-from>
+      <Hsp_hit-to>142</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>41</Hsp_identity>
+      <Hsp_positive>53</Hsp_positive>
+      <Hsp_gaps>8</Hsp_gaps>
+      <Hsp_align-len>119</Hsp_align-len>
+      <Hsp_qseq>TTCVYRENFKQLLLPPV----YSAVLAAGLPLNICVITQICTSRRALTRTAVYTLNLALADLLYACSLPLLIYNYAQGDHWPFGDFACRLVRFLFYANLHGSILFLTCISFQRYLGICH</Hsp_qseq>
+      <Hsp_hseq>TPCVFTDVLNQS--KPVTLFLYGVVFLFGSIGNFLVIFTITWRRRIQXSGDVYFINLAAADLLFVCTLPLWMQYLL--DHNSLASVPCTLLTACFYVAMFASLCFITEIALDRYYAIVY</Hsp_hseq>
+      <Hsp_midline>T CV+ +   Q    PV    Y  V   G   N  VI  I   RR      VY +NLA ADLL+ C+LPL +      DH       C L+   FY  +  S+ F+T I+  RY  I +</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>91</Hit_num>
+  <Hit_id>pdb|5WB1|A</Hit_id>
+  <Hit_def>Chain A, Envelope protein US28, nanobody 7 fusion protein [Human betaherpesvirus 5]</Hit_def>
+  <Hit_accession>5WB1_A</Hit_accession>
+  <Hit_len>458</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>56.225</Hsp_bit-score>
+      <Hsp_score>134</Hsp_score>
+      <Hsp_evalue>2.96811e-08</Hsp_evalue>
+      <Hsp_query-from>16</Hsp_query-from>
+      <Hsp_query-to>130</Hsp_query-to>
+      <Hsp_hit-from>29</Hsp_hit-from>
+      <Hsp_hit-to>143</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>41</Hsp_identity>
+      <Hsp_positive>53</Hsp_positive>
+      <Hsp_gaps>8</Hsp_gaps>
+      <Hsp_align-len>119</Hsp_align-len>
+      <Hsp_qseq>TTCVYRENFKQLLLPPV----YSAVLAAGLPLNICVITQICTSRRALTRTAVYTLNLALADLLYACSLPLLIYNYAQGDHWPFGDFACRLVRFLFYANLHGSILFLTCISFQRYLGICH</Hsp_qseq>
+      <Hsp_hseq>TPCVFTDVLNQS--KPVTLFLYGVVFLFGSIGNFLVIFTITWRRRIQCSGDVYFINLAAADLLFVCTLPLWMQYLL--DHNSLASVPCTLLTACFYVAMFASLCFITEIALDRYYAIVY</Hsp_hseq>
+      <Hsp_midline>T CV+ +   Q    PV    Y  V   G   N  VI  I   RR      VY +NLA ADLL+ C+LPL +      DH       C L+   FY  +  S+ F+T I+  RY  I +</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>92</Hit_num>
+  <Hit_id>pdb|4XT1|A</Hit_id>
+  <Hit_def>Structure of a nanobody-bound viral GPCR bound to human chemokine CX3CL1 [Cytomegalovirus] &gt;pdb|4XT3|A Structure of a viral GPCR bound to human chemokine CX3CL1 [Cytomegalovirus] &gt;pdb|7RKF|R Chain R, G-protein coupled receptor homolog US28 [Human betaherpesvirus 5] &gt;pdb|7RKM|R Chain R, G-protein coupled receptor homolog US28 [Human betaherpesvirus 5] &gt;pdb|7RKN|R Chain R, G-protein coupled receptor homolog US28 [Human herpesvirus 5 strain AD169]</Hit_def>
+  <Hit_accession>4XT1_A</Hit_accession>
+  <Hit_len>362</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>55.8398</Hsp_bit-score>
+      <Hsp_score>133</Hsp_score>
+      <Hsp_evalue>3.34404e-08</Hsp_evalue>
+      <Hsp_query-from>16</Hsp_query-from>
+      <Hsp_query-to>130</Hsp_query-to>
+      <Hsp_hit-from>29</Hsp_hit-from>
+      <Hsp_hit-to>143</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>41</Hsp_identity>
+      <Hsp_positive>53</Hsp_positive>
+      <Hsp_gaps>8</Hsp_gaps>
+      <Hsp_align-len>119</Hsp_align-len>
+      <Hsp_qseq>TTCVYRENFKQLLLPPV----YSAVLAAGLPLNICVITQICTSRRALTRTAVYTLNLALADLLYACSLPLLIYNYAQGDHWPFGDFACRLVRFLFYANLHGSILFLTCISFQRYLGICH</Hsp_qseq>
+      <Hsp_hseq>TPCVFTDVLNQS--KPVTLFLYGVVFLFGSIGNFLVIFTITWRRRIQCSGDVYFINLAAADLLFVCTLPLWMQYLL--DHNSLASVPCTLLTACFYVAMFASLCFITEIALDRYYAIVY</Hsp_hseq>
+      <Hsp_midline>T CV+ +   Q    PV    Y  V   G   N  VI  I   RR      VY +NLA ADLL+ C+LPL +      DH       C L+   FY  +  S+ F+T I+  RY  I +</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>93</Hit_num>
+  <Hit_id>pdb|6J21|A</Hit_id>
+  <Hit_def>Crystal structure of the human NK1 substance P receptor [Homo sapiens]</Hit_def>
+  <Hit_accession>6J21_A</Hit_accession>
+  <Hit_len>441</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>55.4546</Hsp_bit-score>
+      <Hsp_score>132</Hsp_score>
+      <Hsp_evalue>5.00166e-08</Hsp_evalue>
+      <Hsp_query-from>51</Hsp_query-from>
+      <Hsp_query-to>134</Hsp_query-to>
+      <Hsp_hit-from>56</Hsp_hit-from>
+      <Hsp_hit-to>139</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>29</Hsp_identity>
+      <Hsp_positive>43</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>84</Hsp_align-len>
+      <Hsp_qseq>ICTSRRALTRTAVYTLNLALADLLYACSLPLLIYNYAQGDHWPFGDFACRLVRFLFYANLHGSILFLTCISFQRYLGICHPLAP</Hsp_qseq>
+      <Hsp_hseq>ILAHKRMRTVTNYFLVNLAFADASMAAFNTVVNFTYAVHNEWYYGLFYCKFHNFFPIAAVFASIWSMTAVAFDRYMAIIHPLQP</Hsp_hseq>
+      <Hsp_midline>I   +R  T T  + +NLA AD   A    ++ + YA  + W +G F C+   F   A +  SI  +T ++F RY+ I HPL P</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>94</Hit_num>
+  <Hit_id>pdb|5WQC|A</Hit_id>
+  <Hit_def>Crystal structure of human orexin 2 receptor bound to the selective antagonist EMPA determined by the synchrotron light source at SPring-8. [Homo sapiens] &gt;pdb|5WS3|A Crystal structures of human orexin 2 receptor bound to the selective antagonist EMPA determined by serial femtosecond crystallography at SACLA [Homo sapiens]</Hit_def>
+  <Hit_accession>5WQC_A</Hit_accession>
+  <Hit_len>560</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>55.0694</Hsp_bit-score>
+      <Hsp_score>131</Hsp_score>
+      <Hsp_evalue>6.80824e-08</Hsp_evalue>
+      <Hsp_query-from>21</Hsp_query-from>
+      <Hsp_query-to>132</Hsp_query-to>
+      <Hsp_hit-from>48</Hsp_hit-from>
+      <Hsp_hit-to>167</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>36</Hsp_identity>
+      <Hsp_positive>60</Hsp_positive>
+      <Hsp_gaps>12</Hsp_gaps>
+      <Hsp_align-len>122</Hsp_align-len>
+      <Hsp_qseq>RENFKQLLLPPVYSAVLAAGLPL--------NICVITQICTSRRALTRTAVYTLNLALADLLYA--CSLPLLIYNYAQGDHWPFGDFACRLVRFLFYANLHGSILFLTCISFQRYLGICHPL</Hsp_qseq>
+      <Hsp_hseq>RYLWREYLHPKEYEWVLIAGYIIVFVVALIGNVLVCVAVWKNHHMRTVTNYFIVNLSLADVLVTITCLPATLVVDITET--WFFGQSLCKVIPYLQTVSVSVSVLTLSCIALDRWYAICHPL</Hsp_hseq>
+      <Hsp_midline>R  +++ L P  Y  VL AG  +        N+ V   +  +    T T  + +NL+LAD+L    C    L+ +  +   W FG   C+++ +L   ++  S+L L+CI+  R+  ICHPL</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>95</Hit_num>
+  <Hit_id>pdb|4S0V|A</Hit_id>
+  <Hit_def>Crystal structure of the human OX2 orexin receptor bound to the insomnia drug Suvorexant [Homo sapiens]</Hit_def>
+  <Hit_accession>4S0V_A</Hit_accession>
+  <Hit_len>559</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>55.0694</Hsp_bit-score>
+      <Hsp_score>131</Hsp_score>
+      <Hsp_evalue>7.30658e-08</Hsp_evalue>
+      <Hsp_query-from>21</Hsp_query-from>
+      <Hsp_query-to>132</Hsp_query-to>
+      <Hsp_hit-from>47</Hsp_hit-from>
+      <Hsp_hit-to>166</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>36</Hsp_identity>
+      <Hsp_positive>60</Hsp_positive>
+      <Hsp_gaps>12</Hsp_gaps>
+      <Hsp_align-len>122</Hsp_align-len>
+      <Hsp_qseq>RENFKQLLLPPVYSAVLAAGLPL--------NICVITQICTSRRALTRTAVYTLNLALADLLYA--CSLPLLIYNYAQGDHWPFGDFACRLVRFLFYANLHGSILFLTCISFQRYLGICHPL</Hsp_qseq>
+      <Hsp_hseq>RYLWREYLHPKEYEWVLIAGYIIVFVVALIGNVLVCVAVWKNHHMRTVTNYFIVNLSLADVLVTITCLPATLVVDITET--WFFGQSLCKVIPYLQTVSVSVSVLTLSCIALDRWYAICHPL</Hsp_hseq>
+      <Hsp_midline>R  +++ L P  Y  VL AG  +        N+ V   +  +    T T  + +NL+LAD+L    C    L+ +  +   W FG   C+++ +L   ++  S+L L+CI+  R+  ICHPL</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>96</Hit_num>
+  <Hit_id>pdb|6E59|A</Hit_id>
+  <Hit_def>Crystal structure of the human NK1 tachykinin receptor [Homo sapiens]</Hit_def>
+  <Hit_accession>6E59_A</Hit_accession>
+  <Hit_len>542</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>54.6842</Hsp_bit-score>
+      <Hsp_score>130</Hsp_score>
+      <Hsp_evalue>8.52959e-08</Hsp_evalue>
+      <Hsp_query-from>51</Hsp_query-from>
+      <Hsp_query-to>134</Hsp_query-to>
+      <Hsp_hit-from>57</Hsp_hit-from>
+      <Hsp_hit-to>140</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>28</Hsp_identity>
+      <Hsp_positive>43</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>84</Hsp_align-len>
+      <Hsp_qseq>ICTSRRALTRTAVYTLNLALADLLYACSLPLLIYNYAQGDHWPFGDFACRLVRFLFYANLHGSILFLTCISFQRYLGICHPLAP</Hsp_qseq>
+      <Hsp_hseq>ILAHKRMRTVTNYFLVNLAFAEASMAAFNTVVNFTYAVHNEWYYGLFYCKFHNFFPIAAVFASIYSMTAVAFDRYMAIIHPLQP</Hsp_hseq>
+      <Hsp_midline>I   +R  T T  + +NLA A+   A    ++ + YA  + W +G F C+   F   A +  SI  +T ++F RY+ I HPL P</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>97</Hit_num>
+  <Hit_id>pdb|6D26|A</Hit_id>
+  <Hit_def>Crystal structure of the prostaglandin D2 receptor CRTH2 with fevipiprant [Homo sapiens] &gt;pdb|6D27|A Crystal structure of the prostaglandin D2 receptor CRTH2 with CAY10471 [Homo sapiens] &gt;pdb|7M8W|A Chain A, Prostaglandin D2 receptor 2, Endolysin chimera [synthetic construct]</Hit_def>
+  <Hit_accession>6D26_A</Hit_accession>
+  <Hit_len>470</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>53.9138</Hsp_bit-score>
+      <Hsp_score>128</Hsp_score>
+      <Hsp_evalue>1.48821e-07</Hsp_evalue>
+      <Hsp_query-from>47</Hsp_query-from>
+      <Hsp_query-to>138</Hsp_query-to>
+      <Hsp_hit-from>53</Hsp_hit-from>
+      <Hsp_hit-to>144</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>31</Hsp_identity>
+      <Hsp_positive>44</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>92</Hsp_align-len>
+      <Hsp_qseq>VITQICTSRRALTRTAVYTLNLALADLLYACSLPLLIYNYAQGDHWPFGDFACRLVRFLFYANLHGSILFLTCISFQRYLGICHPLAPWHKR</Hsp_qseq>
+      <Hsp_hseq>VILFVVGCRMRQTVVTTWVLHLALSDLLASASLPFFTYFLAVGHSWELGTTFCKLHSSIFFLNMFASGFLLSAISLDRCLQVVRPVWAQNHR</Hsp_hseq>
+      <Hsp_midline>VI  +   R   T    + L+LAL+DLL + SLP   Y  A G  W  G   C+L   +F+ N+  S   L+ IS  R L +  P+   + R</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>98</Hit_num>
+  <Hit_id>pdb|7L1U|R</Hit_id>
+  <Hit_def>Chain R, Hypocretin receptor type 2 [Homo sapiens] &gt;pdb|7L1V|R Chain R, Hypocretin receptor type 2 [Homo sapiens]</Hit_def>
+  <Hit_accession>7L1U_R</Hit_accession>
+  <Hit_len>374</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>53.5286</Hsp_bit-score>
+      <Hsp_score>127</Hsp_score>
+      <Hsp_evalue>1.88231e-07</Hsp_evalue>
+      <Hsp_query-from>21</Hsp_query-from>
+      <Hsp_query-to>132</Hsp_query-to>
+      <Hsp_hit-from>47</Hsp_hit-from>
+      <Hsp_hit-to>166</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>36</Hsp_identity>
+      <Hsp_positive>60</Hsp_positive>
+      <Hsp_gaps>12</Hsp_gaps>
+      <Hsp_align-len>122</Hsp_align-len>
+      <Hsp_qseq>RENFKQLLLPPVYSAVLAAGLPL--------NICVITQICTSRRALTRTAVYTLNLALADLLYA--CSLPLLIYNYAQGDHWPFGDFACRLVRFLFYANLHGSILFLTCISFQRYLGICHPL</Hsp_qseq>
+      <Hsp_hseq>RYLWREYLHPKEYEWVLIAGYIIVFVVALIGNVLVCVAVWKNHHMRTVTNYFIVNLSLADVLVTITCLPATLVVDITET--WFFGQSLCKVIPYLQTVSVSVSVLTLSCIALDRWYAICHPL</Hsp_hseq>
+      <Hsp_midline>R  +++ L P  Y  VL AG  +        N+ V   +  +    T T  + +NL+LAD+L    C    L+ +  +   W FG   C+++ +L   ++  S+L L+CI+  R+  ICHPL</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>99</Hit_num>
+  <Hit_id>pdb|7RMG|R</Hit_id>
+  <Hit_def>Chain R, Substance-P receptor [Homo sapiens] &gt;pdb|7RMH|R Chain R, Substance-P receptor [Homo sapiens] &gt;pdb|7RMI|R Chain R, Substance-P receptor [Homo sapiens]</Hit_def>
+  <Hit_accession>7RMG_R</Hit_accession>
+  <Hit_len>418</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>53.5286</Hsp_bit-score>
+      <Hsp_score>127</Hsp_score>
+      <Hsp_evalue>1.90011e-07</Hsp_evalue>
+      <Hsp_query-from>51</Hsp_query-from>
+      <Hsp_query-to>134</Hsp_query-to>
+      <Hsp_hit-from>68</Hsp_hit-from>
+      <Hsp_hit-to>151</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>28</Hsp_identity>
+      <Hsp_positive>43</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>84</Hsp_align-len>
+      <Hsp_qseq>ICTSRRALTRTAVYTLNLALADLLYACSLPLLIYNYAQGDHWPFGDFACRLVRFLFYANLHGSILFLTCISFQRYLGICHPLAP</Hsp_qseq>
+      <Hsp_hseq>ILAHKRMRTVTNYFLVNLAFAEASMAAFNTVVNFTYAVHNEWYYGLFYCKFHNFFPIAAVFASIYSMTAVAFDRYMAIIHPLQP</Hsp_hseq>
+      <Hsp_midline>I   +R  T T  + +NLA A+   A    ++ + YA  + W +G F C+   F   A +  SI  +T ++F RY+ I HPL P</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>100</Hit_num>
+  <Hit_id>pdb|6J20|A</Hit_id>
+  <Hit_def>Crystal structure of the human NK1 substance P receptor [Homo sapiens]</Hit_def>
+  <Hit_accession>6J20_A</Hit_accession>
+  <Hit_len>441</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>53.5286</Hsp_bit-score>
+      <Hsp_score>127</Hsp_score>
+      <Hsp_evalue>1.9203e-07</Hsp_evalue>
+      <Hsp_query-from>51</Hsp_query-from>
+      <Hsp_query-to>134</Hsp_query-to>
+      <Hsp_hit-from>56</Hsp_hit-from>
+      <Hsp_hit-to>139</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>28</Hsp_identity>
+      <Hsp_positive>43</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>84</Hsp_align-len>
+      <Hsp_qseq>ICTSRRALTRTAVYTLNLALADLLYACSLPLLIYNYAQGDHWPFGDFACRLVRFLFYANLHGSILFLTCISFQRYLGICHPLAP</Hsp_qseq>
+      <Hsp_hseq>ILAHKRMRTVTNYFLVNLAFANASMAAFNTVVNFTYAVHNEWYYGLFYCKFHNFFPIAAVFASIWSMTAVAFDRYMAIIHPLQP</Hsp_hseq>
+      <Hsp_midline>I   +R  T T  + +NLA A+   A    ++ + YA  + W +G F C+   F   A +  SI  +T ++F RY+ I HPL P</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>142313</Statistics_db-num>
+      <Statistics_db-len>38627650</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+</BlastOutput_iterations>
+</BlastOutput>

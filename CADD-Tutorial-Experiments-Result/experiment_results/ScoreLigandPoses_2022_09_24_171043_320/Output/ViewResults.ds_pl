@@ -1,0 +1,26 @@
+#!/usr/bin/perl
+use MdmDiscoveryScript;
+use DSScript;
+
+my $document = Mdm::Document::Create();
+$document->Insert({"Path" => "../Input/3GEN.dsv", "LoadAllObjects" => True});
+$document->ModelName = "3GEN";
+
+# lock the visibility of the Complex Source molecules
+my $molecules = $document->Molecules;
+if ($molecules) {
+  foreach my $mol (@$molecules) {
+    # don't lock molecules that are part of a query
+    if (($mol->Parent()) && ($mol->Parent()->ClassName() eq "Mdm::QueryOperator"))
+    { next; }
+    $mol->SetVisible(False);
+    $mol->Select(False);
+  }
+  $document->LockVisibility();
+  $document->DeselectAll();
+} 
+$document->Insert({"Path" => "3GEN.sd", "LoadAllObjects" => False});
+
+DSScript::invoke_action("ActionShowInTable");
+DSScript::invoke_action("ActionShowInGraphics");
+$document->UpdateViews();

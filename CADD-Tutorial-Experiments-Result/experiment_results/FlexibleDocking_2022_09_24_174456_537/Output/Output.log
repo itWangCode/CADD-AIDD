@@ -1,0 +1,30 @@
+[2022-09-24 17:44:59] ------------------------------------
+[2022-09-24 17:44:59] Protocol Name = 'Flexible Docking'
+[2022-09-24 17:44:59] User Name = '16606'
+[2022-09-24 17:44:59] Run ID = '415D7CE7-3371-48AB-8E48-5746A86F5D1B'
+[2022-09-24 17:45:00] Started running 'ForcefieldTool'
+[2022-09-24 17:45:00] Finished running 'ForcefieldTool'
+[2022-09-24 17:45:01] Started running 'ForcefieldTool'
+[2022-09-24 17:45:02] Finished running 'ForcefieldTool'
+[2022-09-24 17:45:02] Client message: 'Generating CHARMm Script...'
+[2022-09-24 17:45:03] Client message: 'CHARMm charmm...'
+[2022-09-24 17:45:03] Started running 'RunCHARMm'
+[2022-09-24 17:45:03] Finished running 'RunCHARMm'
+[2022-09-24 17:45:04] Client message: 'ChiFlex: 3GEN'
+[2022-09-24 17:45:04] Started running '3GEN'
+[2022-09-24 17:45:14] Finished running '3GEN'
+[2022-09-24 17:45:14] Started running '3GEN_min'
+[2022-09-24 17:45:19] Finished running '3GEN_min'
+[2022-09-24 17:45:19] Client message: 'Finished: 3GEN'
+[2022-09-24 17:45:19] Excluded residues removed (1): A:ALA428   
+[2022-09-24 17:45:19] Residues used in the calculation (9): A:LEU408   A:LYS430   A:MET449   A:THR474   A:GLU475   A:MET477   A:SER538   A:ASP539   A:PHE540   
+[2022-09-24 17:45:20]  reached maximum number of Chi-Flex residues: 8 (max: 8) 
+[2022-09-24 17:45:20] Number of Protein Conformations: 10
+[2022-09-24 17:45:20] Lowest Energy: -62.8331617
+[2022-09-24 17:45:20] Highest Energy: -47.9048603
+[2022-09-24 17:45:24] Client message: 'Preparing confgen.'
+[2022-09-24 17:45:24] Client message: 'Running confgen.'
+[2022-09-24 17:45:24] Started running 'confgen'
+[2022-09-24 17:45:24] Finished running 'confgen'
+[2022-09-24 17:45:53] Number of ligand poses filtered: 24
+[2022-09-24 17:47:28] Final message: '6 poses: Molecule-(1) 3GEN'

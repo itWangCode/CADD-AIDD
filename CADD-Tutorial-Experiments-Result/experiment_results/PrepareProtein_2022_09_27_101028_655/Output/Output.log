@@ -1,0 +1,86 @@
+[2022-09-27 10:10:33] ------------------------------------
+[2022-09-27 10:10:33] Protocol Name = 'Prepare Protein'
+[2022-09-27 10:10:33] User Name = '16606'
+[2022-09-27 10:10:33] Run ID = '2323093F-E6B1-43A6-A0CE-11F5B6A4240C'
+[2022-09-27 10:10:34] Alternate Conformations
+[2022-09-27 10:10:34] No alternate conformations found in this structure
+[2022-09-27 10:10:34] Standardize Names
+[2022-09-27 10:10:34] No names have been changed
+[2022-09-27 10:10:34] Complete Residues
+[2022-09-27 10:10:34] No incomplete residues found
+[2022-09-27 10:10:34] Bonding and bond orders
+[2022-09-27 10:10:34] Bonds and bond orders have been checked and corrected if necessary
+[2022-09-27 10:10:34] Terminus modification
+[2022-09-27 10:10:34] 1 terminal residue(s) adjusted
+[2022-09-27 10:10:34] Atom ordering
+[2022-09-27 10:10:34] Reordered atoms in 1 residue(s)
+A:ASN385
+[2022-09-27 10:10:35] Client message: 'Step 1/5: Cleaning Protein'
+[2022-09-27 10:10:36] Started running 'ForcefieldTool'
+[2022-09-27 10:10:38] Finished running 'ForcefieldTool'
+[2022-09-27 10:10:38] Started running 'ForcefieldTool'
+[2022-09-27 10:10:39] Finished running 'ForcefieldTool'
+[2022-09-27 10:10:40] Client message: 'Generating CHARMm Script...'
+[2022-09-27 10:10:40] Client message: 'CHARMm hbuild...'
+[2022-09-27 10:10:40] Started running 'RunCHARMm'
+[2022-09-27 10:10:42] Finished running 'RunCHARMm'
+[2022-09-27 10:10:44] Client message: 'Step 2/5: Inserting Missing Loops'
+[2022-09-27 10:10:45] Loops added with InsertAminoAcidChain
+[2022-09-27 10:10:45] A:GLY158-A:SER169
+[2022-09-27 10:10:47] Client message: 'Refine Loops Preprocessing.'
+[2022-09-27 10:10:47] Client message: 'Running modeler...'
+[2022-09-27 10:10:47] Started running 'modeler'
+[2022-09-27 10:10:56] Finished running 'modeler'
+[2022-09-27 10:10:57] Client message: 'Annotate MacroMolecule...'
+[2022-09-27 10:11:01] Started running 'ForcefieldTool'
+[2022-09-27 10:11:02] Finished running 'ForcefieldTool'
+[2022-09-27 10:11:02] Started running 'ForcefieldTool'
+[2022-09-27 10:11:03] Finished running 'ForcefieldTool'
+[2022-09-27 10:11:04] Client message: 'Generating CHARMm Script...'
+[2022-09-27 10:11:04] Client message: 'CHARMm hbuild...'
+[2022-09-27 10:11:04] Started running 'RunCHARMm'
+[2022-09-27 10:11:05] Finished running 'RunCHARMm'
+[2022-09-27 10:11:06] Client message: 'Step 3/5: Refining Loops'
+[2022-09-27 10:11:06] Client message: 'Step 4/5: Minimizing Loops'
+[2022-09-27 10:11:07] Started running 'ForcefieldTool'
+[2022-09-27 10:11:08] Finished running 'ForcefieldTool'
+[2022-09-27 10:11:09] Loops minimized
+[2022-09-27 10:11:09] A:GLY158-A:SER169
+[2022-09-27 10:11:12] Started running 'ForcefieldTool'
+[2022-09-27 10:11:13] Finished running 'ForcefieldTool'
+[2022-09-27 10:11:13] Client message: 'Generating CHARMm Script...'
+[2022-09-27 10:11:14] Client message: 'CHARMm minimization...'
+[2022-09-27 10:11:14] Started running 'RunCHARMm'
+[2022-09-27 10:11:15] Finished running 'RunCHARMm'
+[2022-09-27 10:11:15] Client message: 'Processing CHARMm output...'
+[2022-09-27 10:11:16] Client message: 'Step 5/5: Protonating Protein'
+[2022-09-27 10:11:17] Started running 'ForcefieldTool'
+[2022-09-27 10:11:18] Finished running 'ForcefieldTool'
+[2022-09-27 10:11:19] Client message: '2IRZ'
+[2022-09-27 10:11:20] Started running 'ForcefieldTool'
+[2022-09-27 10:11:21] Finished running 'ForcefieldTool'
+[2022-09-27 10:11:22] Started running '2IRZ'
+[2022-09-27 10:11:35] Finished running '2IRZ'
+[2022-09-27 10:11:35] Client message: 'GBpK running'
+[2022-09-27 10:11:35] Started running 'GBpK'
+[2022-09-27 10:11:36] Finished running 'GBpK'
+[2022-09-27 10:11:36] Client message: 'GBpK finished successfully.'
+[2022-09-27 10:11:36] Client message: 'CreateGBpK finished'
+[2022-09-27 10:11:37] Client message: 'pK calculations...'
+[2022-09-27 10:11:37] Started running 'PHPK'
+[2022-09-27 10:11:37] Finished running 'PHPK'
+[2022-09-27 10:11:37] Client message: 'PHPK finished successfully.'
+[2022-09-27 10:11:37] Client message: 'Finished: 2IRZ '
+[2022-09-27 10:11:37] Client message: 'reference pK calculations...'
+[2022-09-27 10:11:37] Started running 'PHPK'
+[2022-09-27 10:11:38] Finished running 'PHPK'
+[2022-09-27 10:11:38] Client message: '2IRZ_0 finished successfully.'
+[2022-09-27 10:11:38] Client message: 'Finished: 2IRZ '
+[2022-09-27 10:11:38] Client message: 'Annotate MacroMolecule...'
+[2022-09-27 10:11:39] Client message: 'Finished: Ionize '
+[2022-09-27 10:11:39] Client message: 'CHARMm protonate...'
+[2022-09-27 10:11:39] Started running 'RunCHARMm'
+[2022-09-27 10:11:49] Finished running 'RunCHARMm'
+[2022-09-27 10:11:52] Started running 'ForcefieldTool'
+[2022-09-27 10:11:53] Finished running 'ForcefieldTool'
+[2022-09-27 10:11:54] Final message: 'Prepared: 2IRZ'

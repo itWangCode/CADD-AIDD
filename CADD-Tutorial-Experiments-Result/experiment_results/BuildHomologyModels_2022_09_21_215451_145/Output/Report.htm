@@ -1,0 +1,588 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=10" />
+  <title>Build Homology Models</title>
+  <style type="text/css">
+
+.css0 { margin:10px;  }
+.css1 { box-sizing:border-box; -moz-box-sizing:border-box; -ms-box-sizing:border-box;  }
+.css2 { text-align:left; vertical-align:top; color:#000000; width:100.0%; margin:0; padding:0; font:12.0pt Arial;  }
+.css3 { text-align:left; vertical-align:top; color:#000000; width:100.0%; margin:0; padding:1.0px; font:12.0pt Arial;  }
+.css4 { text-align:left; vertical-align:top; color:#0077c8; margin:0; padding:0; font:bold 18.0pt Arial; text-decoration:none;  }
+.css5 { text-align:left; vertical-align:top; color:#000000; margin:0; padding:0; font:12.0pt Arial; text-decoration:none;  }
+.css6 { text-align:left; vertical-align:top; color:#000000; margin:0; padding:0; font:12.0pt Arial;  }
+.css7 { text-align:left; vertical-align:top; color:#000000; width:50.0%; margin:0; padding:1.0px; font:12.0pt Arial;  }
+.css8 { vertical-align:top; color:#000000; margin:0; padding:0; font:12.0pt Arial; text-decoration:none;  }
+.css9 { vertical-align:top; color:#0077c8; margin:0; padding:0; font:bold 12.0pt Arial; text-decoration:none; white-space:nowrap;  }
+.css10 { text-align:left; vertical-align:top; color:#000000; margin:0; padding:0; font:12.0pt Arial; text-decoration:none; white-space:nowrap;  }
+.css11 { text-align:left; vertical-align:top; color:#000000; width:100.0%; margin:0 0 0 11.0px; padding:0; font:12.0pt Arial;  }
+.css12 { text-align:left; vertical-align:top; color:#000000; width:0; margin:0; padding:0; font:8.0pt Arial;  }
+.css13 { text-align:left; vertical-align:top; color:#000000; width:40.0%; margin:0 auto 0 0; padding:0; font:8.0pt Arial;  }
+.css14 { text-align:left; vertical-align:top; color:#000000; width:1.4778326%; margin:0; padding:0 0 0 5.0px; font:8.0pt Arial;  }
+.css15 { text-align:left; vertical-align:top; color:#000000; margin:0 0 0 13.0px; padding:0; font:8.0pt Arial; text-decoration:none;  }
+.css16 { text-align:left; vertical-align:top; color:#000000; width:49.261086%; margin:0; padding:2.0px 0 0 0; font:bold 8.0pt Arial;  }
+.css17 { text-align:left; vertical-align:top; color:#000000; margin:0; padding:0; font:bold 8.0pt Arial; text-decoration:none;  }
+.css18 { text-align:left; vertical-align:top; color:#000000; width:49.261086%; margin:0; padding:0; font:8.0pt Arial;  }
+.css19 { text-align:left; vertical-align:top; color:#000000; margin:0; padding:0; font:8.0pt Arial; text-decoration:none;  }
+.css20 { text-align:left; vertical-align:top; color:#000000; width:40.0%; margin:0 auto 0 30.0px; padding:0; font:8.0pt Arial;  }
+.css21 { text-align:left; vertical-align:top; color:#000000; width:50.0%; margin:0; padding:0 0 0 3.0px; font:bold 8.0pt Arial;  }
+.css22 { text-align:left; vertical-align:top; color:#000000; width:50.0%; margin:0; padding:2.0px 0 0 5.0px; font:8.0pt Arial;  }
+.css23 { text-align:left; vertical-align:top; color:#000000; width:100.0%; margin:0; padding:0; font:8.0pt Arial;  }
+.css24 { text-align:left; vertical-align:top; color:#000000; margin:0; padding:0; font:8.0pt Arial;  }
+.css25 { text-align:left; vertical-align:top; border-left:1px solid black; border-top:1px solid black; border-right:1px solid black; color:#000000; width:100.0%; margin:10.0px 10.0px 0 0; padding:0; font:8.0pt Arial;  }
+.css26 { text-align:center; vertical-align:top; border-bottom:1px solid black; color:#000000; background:#b0c4de; margin:0; padding:1.0px 3.0px 1.0px 3.0px; font:bold 8.0pt Arial; text-decoration:none;  }
+.css27 { text-align:left; vertical-align:top; border-right:1px solid black; border-bottom:1px solid black; color:#000000; background:#b0c4de; margin:0; padding:1.0px 3.0px 1.0px 3.0px; font:bold 9.0pt Arial; white-space:nowrap;  }
+.css28 { text-align:left; vertical-align:top; border-right:1px solid black; border-bottom:1px solid black; color:#000000; background:#b0c4de; margin:0; padding:1.0px 3.0px 1.0px 3.0px; font:bold 9.0pt Arial;  }
+.css29 { text-align:left; vertical-align:top; border-bottom:1px solid black; color:#000000; background:#b0c4de; margin:0; padding:1.0px 3.0px 1.0px 3.0px; font:bold 9.0pt Arial;  }
+.css30 { text-align:left; vertical-align:top; border-right:1px solid black; border-bottom:1px solid black; color:#000000; margin:0; padding:1.0px 6.0px 1.0px 6.0px; font:8.0pt Arial; white-space:nowrap;  }
+.css31 { text-align:left; vertical-align:top; border-bottom:1px solid black; color:#000000; margin:0; padding:1.0px 6.0px 1.0px 6.0px; font:8.0pt Arial; white-space:nowrap;  }
+.css32 { text-align:left; vertical-align:top; color:#000000; width:100.0%; margin:0 0 0 20.0px; padding:0; font:12.0pt Arial;  }
+.css33 { text-align:left; vertical-align:top; color:#000000; width:100.0%; margin:0; padding:0 0 0 3.0px; font:8.0pt Arial;  }
+.css34 { text-align:left; vertical-align:top; color:#0000ff; margin:0; padding:0; font:8.0pt Arial; text-decoration:underline;  }
+.css35 { text-align:left; vertical-align:top; color:#0000ff; margin:0; padding:2.0px 0 2.0px 0; font:8.0pt Arial; text-decoration:underline;  }
+.css36 { text-align:left; vertical-align:top; color:#000000; width:45.0%; margin:0 auto 0 10.0px; padding:0; font:8.0pt Arial;  }
+.css37 { text-align:left; vertical-align:top; color:#000000; width:50.0%; margin:0; padding:2.0px 0 0 0; font:bold 8.0pt Arial;  }
+.css38 { text-align:left; vertical-align:top; color:#000000; margin:0 0 0 10.0px; padding:0; font:bold 8.0pt Arial; text-decoration:none;  }
+.css39 { text-align:left; vertical-align:top; color:#000000; width:50.0%; margin:0; padding:0 0 0 3.0px; font:8.0pt Arial;  }
+.css40 { text-align:left; vertical-align:top; color:#0000ff; margin:0 0 0 -2.0px; padding:0; font:8.0pt Arial; text-decoration:underline;  }
+.css41 { text-align:left; vertical-align:top; color:#000000; margin:0 0 0 12.0px; padding:0; font:8.0pt Arial; text-decoration:none;  }
+.css42 { text-align:left; vertical-align:top; color:#a9a9a9; margin:0; padding:0; font:bold 8.0pt Arial; text-decoration:none;  }
+.css43 { text-align:left; vertical-align:top; color:#a9a9a9; margin:0; padding:0; font:8.0pt Arial; text-decoration:none;  }
+.css44 { vertical-align:top; color:#0077c8; margin:0; padding:0; font:8.0pt Arial; text-decoration:none;  }
+
+  </style>
+  <script type="text/javascript">
+
+function toggleDivVisibility(divId, imageContainerId) 
+{
+	if ( !divId ) { return; }
+	var div = document.getElementById(divId);
+	if ( !div ) { return; }
+	var currentlyVisible = div.style.display != 'none';
+	div.style.display = currentlyVisible ? 'none' : 'block';
+	var imageContainer = document.getElementById(imageContainerId);
+	if( imageContainer ) {
+		var cells = imageContainer.getElementsByTagName('img');
+		if ( cells.length ) 
+		{
+			var image = cells[0];
+			if (image.src.match('plus')) {
+				image.src = image.src.replace('plus', 'minus');
+			} else {
+				image.src = image.src.replace('minus', 'plus');
+			}
+		}
+	}
+}
+
+  </script>
+</head>
+<body class="css0">
+<script type="text/javascript">
+
+window.onload = function( )
+{	
+toggleDivVisibility('ID_Description','DS_REPORT_Description');
+toggleDivVisibility('ID_Parameters','DS_REPORT_Parameters');
+toggleDivVisibility('ID_Input Files','DS_REPORT_Input Files');
+toggleDivVisibility('ID_Details','DS_REPORT_Details');
+toggleDivVisibility('ID_Warnings','DS_REPORT_Warnings');
+toggleDivVisibility('ID_Tables','DS_REPORT_Tables');
+toggleDivVisibility('ID_Images','DS_REPORT_Images');
+toggleDivVisibility('ID_InfoGroupPara-1','DS_REPORT_InfoGroupPara-1');
+toggleDivVisibility('ID_InfoGroupPara-2','DS_REPORT_InfoGroupPara-2');
+toggleDivVisibility('ID_Information','DS_REPORT_Information');
+toggleDivVisibility('ID_GroupPara-1','DS_REPORT_GroupPara-1');
+toggleDivVisibility('ID_GroupPara-2','DS_REPORT_GroupPara-2');
+toggleDivVisibility('ID_GroupPara-3','DS_REPORT_GroupPara-3');
+toggleDivVisibility('ID_GroupPara-4','DS_REPORT_GroupPara-4');
+}
+
+</script>
+<table cellpadding="0" cellspacing="0" class="css2 css1"><tr><td class="css3"><div title="Builds homology models of a protein sequence using one or more template structures" class="css4 css1">Build Homology Models</div>
+</td>
+</tr>
+<tr><td class="css3"><div class="css5 css1"><HR></div>
+</td>
+</tr>
+<tr><td class="css3"><div class="css6 css1"><table cellpadding="0" cellspacing="0" class="css2 css1"><tr><td class="css7"><div class="css6 css1"><span title="Expand/Collapse" id="DS_REPORT_Information" onclick="toggleDivVisibility('ID_Information', 'DS_REPORT_Information')" class="css8"><img src="Report/images/icons/minus.png" /></span><span title="'Protocol runtime information'" class="css9">Information</span></div>
+</td>
+<td class="css7"><div class="css10 css1"></div>
+</td>
+</tr>
+</table>
+<table id="ID_Information" style="width: 500px;" cols="1" cellpadding="0" cellspacing="0" class="css11 css1">
+<tr>
+<td class="css12"><table style="width: 500px;" cols="3" cellpadding="0" cellspacing="0" class="css13 css1">
+<tr>
+<td class="css14"><div class="css15 css1">&nbsp;</div>
+</td>
+<td class="css16"><div class="css17 css1">Status</div>
+</td>
+<td class="css18"><div class="css19 css1">Success</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td class="css12"><table style="width: 500px;" cols="3" cellpadding="0" cellspacing="0" class="css13 css1">
+<tr>
+<td class="css14"><div class="css15 css1">&nbsp;</div>
+</td>
+<td class="css16"><div class="css17 css1">User</div>
+</td>
+<td class="css18"><div class="css19 css1">16606</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td class="css12"><table style="width: 500px;" cols="3" cellpadding="0" cellspacing="0" class="css13 css1">
+<tr>
+<td class="css14"><div title="Expand/Collapse" id="DS_REPORT_InfoGroupPara-1" onclick="toggleDivVisibility('ID_InfoGroupPara-1', 'DS_REPORT_InfoGroupPara-1')" class="css19 css1"><img src="Report/images/icons/minus.png" /></div>
+</td>
+<td class="css16"><div class="css17 css1">Elapsed Time</div>
+</td>
+<td class="css18"><div title="62 seconds" class="css19 css1">00:01:02</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td class="css12"><table id="ID_InfoGroupPara-1" style="width: 500px;" cols="2" cellpadding="0" cellspacing="0" class="css20 css1">
+<tr>
+<td class="css21"><div class="css17 css1">Start</div>
+</td>
+<td class="css22"><div title="Wednesday 21 September 22 21:54:51 " class="css19 css1">09/21/22 21:54:51</div>
+</td>
+</tr>
+<tr>
+<td class="css21"><div class="css17 css1">Finish</div>
+</td>
+<td class="css22"><div title="Wednesday 21 September 22 21:55:53 " class="css19 css1">09/21/22 21:55:53</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td class="css12"><table style="width: 500px;" cols="3" cellpadding="0" cellspacing="0" class="css13 css1">
+<tr>
+<td class="css14"><div title="Expand/Collapse" id="DS_REPORT_InfoGroupPara-2" onclick="toggleDivVisibility('ID_InfoGroupPara-2', 'DS_REPORT_InfoGroupPara-2')" class="css19 css1"><img src="Report/images/icons/minus.png" /></div>
+</td>
+<td class="css16"><div class="css17 css1">Server Name</div>
+</td>
+<td class="css18"><div title="https://localhost:9943" class="css19 css1"><a href="http://localhost:9944" target="_blank">AbdusemiAbduweli</a></div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td class="css12"><table id="ID_InfoGroupPara-2" style="width: 500px;" cols="2" cellpadding="0" cellspacing="0" class="css20 css1">
+<tr>
+<td class="css21"><div class="css17 css1">DS Version</div>
+</td>
+<td class="css22"><div class="css19 css1">19.1.0.18287</div>
+</td>
+</tr>
+<tr>
+<td class="css21"><div class="css17 css1">PP Version</div>
+</td>
+<td class="css22"><div class="css19 css1">19.1.0.1963</div>
+</td>
+</tr>
+<tr>
+<td class="css21"><div class="css17 css1">DS Client Version</div>
+</td>
+<td class="css22"><div class="css19 css1">19.1.0.18287</div>
+</td>
+</tr>
+<tr>
+<td class="css21"><div class="css17 css1">Server Ports</div>
+</td>
+<td class="css22"><div class="css19 css1">9944 (9943)</div>
+</td>
+</tr>
+<tr>
+<td class="css21"><div class="css17 css1">OS Distribution</div>
+</td>
+<td class="css22"><div class="css19 css1">Windows</div>
+</td>
+</tr>
+<tr>
+<td class="css21"><div class="css17 css1">OS  Version</div>
+</td>
+<td class="css22"><div class="css19 css1">10.0.22000</div>
+</td>
+</tr>
+<tr>
+<td class="css21"><div class="css17 css1">Memory Total</div>
+</td>
+<td class="css22"><div class="css19 css1">23.85 GB</div>
+</td>
+</tr>
+<tr>
+<td class="css21"><div class="css17 css1">Memory Free</div>
+</td>
+<td class="css22"><div class="css19 css1">13.49 GB</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr><td class="css3"><div class="css6 css1"><table cellpadding="0" cellspacing="0" class="css2 css1"><tr><td class="css7"><div class="css6 css1"><span title="Expand/Collapse" id="DS_REPORT_Summary" onclick="toggleDivVisibility('ID_Summary', 'DS_REPORT_Summary'); toggleDivVisibility('ID2_Summary', '')" class="css8"><img src="Report/images/icons/minus.png" /></span><span title="'Contains a brief summary of the protocol output'" class="css9">Summary</span></div>
+</td>
+<td class="css7"><div class="css10 css1"></div>
+</td>
+</tr>
+</table>
+<table id="ID_Summary" style="width: 500px;" cols="1" cellpadding="0" cellspacing="0" class="css2 css1">
+<tr>
+<td class="css12"><table cellpadding="0" cellspacing="0" class="css23 css1"><tr><td class="css23"><table cols="1" cellpadding="0" cellspacing="0" class="css23 css1">
+<tr>
+<td class="css24"><div class="css24 css1"><table cols="4" cellpadding="0" cellspacing="0" class="css25 css1">
+<tr>
+<td colspan="4" class="css26">Model Scores</td>
+</tr>
+<tr>
+<td class="css27">Name</td>
+<td class="css28">PDF Total Energy</td>
+<td class="css28">PDF Physical Energy</td>
+<td class="css29">DOPE Score</td>
+</tr>
+<tr>
+<td class="css30">P2RY6.M0003</td>
+<td class="css30">1219.2933</td>
+<td class="css30">742.159478000002</td>
+<td class="css31">-36820.281250</td>
+</tr>
+<tr>
+<td class="css30">P2RY6.M0001</td>
+<td class="css30">1238.3477</td>
+<td class="css30">754.255235000001</td>
+<td class="css31">-36606.445313</td>
+</tr>
+<tr>
+<td class="css30">P2RY6.M0002</td>
+<td class="css30">1412.0177</td>
+<td class="css30">783.25606</td>
+<td class="css31">-36696.117188</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr><td class="css3"><div class="css6 css1"><table cellpadding="0" cellspacing="0" class="css2 css1"><tr><td class="css7"><div class="css6 css1"><span title="Expand/Collapse" id="DS_REPORT_Results" onclick="toggleDivVisibility('ID_Results', 'DS_REPORT_Results')" class="css8"><img src="Report/images/icons/minus.png" /></span><span title="'Table with result files generated by the protocol'" class="css9">Results</span></div>
+</td>
+<td class="css7"><div class="css10 css1"></div>
+</td>
+</tr>
+</table>
+<table id="ID_Results" style="width: 500px;" cols="1" cellpadding="0" cellspacing="0" class="css32 css1">
+<tr>
+<td class="css33"><div title="./P2RY6.dsv" class="css34 css1"><A HREF="./P2RY6.dsv">Annotated Model Structures Superimposed to Templates</A></div>
+</td>
+</tr>
+<tr>
+<td class="css33"><div title="./P2RY6_templates.bsml" class="css34 css1"><A HREF="./P2RY6_templates.bsml">Sequence Alignment of Models to Templates</A></div>
+</td>
+</tr>
+<tr>
+<td class="css33"><div title="Open results in Discovery Studio" class="css35 css1"><button onClick="window.location='ViewResults.ds_pl'">View Results</button></div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr><td class="css3"><div class="css6 css1"><table cellpadding="0" cellspacing="0" class="css2 css1"><tr><td class="css7"><div class="css6 css1"><span title="Expand/Collapse" id="DS_REPORT_Parameters" onclick="toggleDivVisibility('ID_Parameters', 'DS_REPORT_Parameters')" class="css8"><img src="Report/images/icons/minus.png" /></span><span title="'A table with the run-time parameters'" class="css9">Parameters</span></div>
+</td>
+<td class="css7"><div class="css10 css1"></div>
+</td>
+</tr>
+</table>
+<table id="ID_Parameters" style="width: 500px;" cols="1" cellpadding="0" cellspacing="0" class="css11 css1">
+<tr>
+<td class="css12"><table style="width: 500px;" cols="2" cellpadding="0" cellspacing="0" class="css36 css1">
+<tr>
+<td class="css37"><div class="css38 css1">Protocol Settings</div>
+</td>
+<td class="css39"><div title="../Input/Protocol.pr_xml" class="css40 css1"><A HREF="../Input/Protocol.pr_xml">Protocol.pr_xml</A></div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td class="css12"><table style="width: 500px;" cols="3" cellpadding="0" cellspacing="0" class="css13 css1">
+<tr>
+<td class="css14"><div class="css41 css1">&nbsp;</div>
+</td>
+<td class="css16"><div class="css17 css1">Input Sequence Alignment</div>
+</td>
+<td class="css18"><table cols="1" cellpadding="0" cellspacing="0" class="css23 css1">
+<tr>
+<td class="css24"><div title="../Input/P2RY6_templates.bsml" class="css34 css1"><A HREF="../Input/P2RY6_templates.bsml">P2RY6_templates.bsml</A></div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td class="css12"><table style="width: 500px;" cols="3" cellpadding="0" cellspacing="0" class="css13 css1">
+<tr>
+<td class="css14"><div class="css41 css1">&nbsp;</div>
+</td>
+<td class="css16"><div class="css17 css1">Input Template Structures</div>
+</td>
+<td class="css18"><table cols="1" cellpadding="0" cellspacing="0" class="css23 css1">
+<tr>
+<td class="css24"><div title="../Input/4XNV.dsv" class="css34 css1"><A HREF="../Input/4XNV.dsv">4XNV.dsv</A></div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td class="css12"><table style="width: 500px;" cols="3" cellpadding="0" cellspacing="0" class="css13 css1">
+<tr>
+<td class="css14"><div class="css41 css1">&nbsp;</div>
+</td>
+<td class="css16"><div class="css17 css1">Input Model Sequence</div>
+</td>
+<td class="css18"><div class="css19 css1">P2RY6</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td class="css12"><table style="width: 500px;" cols="3" cellpadding="0" cellspacing="0" class="css13 css1">
+<tr>
+<td class="css14"><div title="Expand/Collapse" id="DS_REPORT_GroupPara-1" onclick="toggleDivVisibility('ID_GroupPara-1', 'DS_REPORT_GroupPara-1')" class="css19 css1"><img src="Report/images/icons/minus.png" /></div>
+</td>
+<td class="css16"><div class="css17 css1">Copy From Templates</div>
+</td>
+<td class="css18"><div class="css19 css1"></div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td class="css12"><table id="ID_GroupPara-1" cols="2" cellpadding="0" cellspacing="0" class="css20 css1">
+<tr>
+<td class="css21"><div style="width: 300px;" class="css17 css1">Ligands</div>
+</td>
+<td class="css39"><div style="width: 300px;" class="css19 css1"></div>
+</td>
+</tr>
+<tr>
+<td class="css21"><div style="width: 300px;" class="css17 css1">Nucleic Acid Chains</div>
+</td>
+<td class="css39"><div style="width: 300px;" class="css19 css1"></div>
+</td>
+</tr>
+<tr>
+<td class="css21"><div style="width: 300px;" class="css17 css1">Protein</div>
+</td>
+<td class="css39"><div style="width: 300px;" class="css19 css1"></div>
+</td>
+</tr>
+<tr>
+<td class="css21"><div style="width: 300px;" class="css17 css1">Protein Copy Regions</div>
+</td>
+<td class="css39"><div style="width: 300px;" class="css19 css1"></div>
+</td>
+</tr>
+<tr>
+<td class="css21"><div style="width: 300px;" class="css17 css1">Protein Optimize Sidechains</div>
+</td>
+<td class="css39"><div style="width: 300px;" class="css19 css1">False</div>
+</td>
+</tr>
+<tr>
+<td class="css21"><div style="width: 300px;" class="css17 css1">Waters</div>
+</td>
+<td class="css39"><div style="width: 300px;" class="css19 css1">False</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td class="css12"><table style="width: 500px;" cols="3" cellpadding="0" cellspacing="0" class="css13 css1">
+<tr>
+<td class="css14"><div title="Expand/Collapse" id="DS_REPORT_GroupPara-2" onclick="toggleDivVisibility('ID_GroupPara-2', 'DS_REPORT_GroupPara-2')" class="css19 css1"><img src="Report/images/icons/minus.png" /></div>
+</td>
+<td class="css16"><div class="css17 css1">Number of Models</div>
+</td>
+<td class="css18"><div class="css19 css1">3</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td class="css12"><table id="ID_GroupPara-2" cols="2" cellpadding="0" cellspacing="0" class="css20 css1">
+<tr>
+<td class="css21"><div style="width: 300px;" class="css17 css1">Start Model Index</div>
+</td>
+<td class="css39"><div style="width: 300px;" class="css19 css1">1</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td class="css12"><table style="width: 500px;" cols="3" cellpadding="0" cellspacing="0" class="css13 css1">
+<tr>
+<td class="css14"><div class="css41 css1">&nbsp;</div>
+</td>
+<td class="css16"><div class="css17 css1">Optimization Level</div>
+</td>
+<td class="css18"><div class="css19 css1">High</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td class="css12"><table style="width: 500px;" cols="3" cellpadding="0" cellspacing="0" class="css13 css1">
+<tr>
+<td class="css14"><div title="Expand/Collapse" id="DS_REPORT_GroupPara-3" onclick="toggleDivVisibility('ID_GroupPara-3', 'DS_REPORT_GroupPara-3')" class="css19 css1"><img src="Report/images/icons/minus.png" /></div>
+</td>
+<td class="css16"><div class="css17 css1">Advanced</div>
+</td>
+<td class="css18"><div class="css19 css1"></div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td class="css12"><table id="ID_GroupPara-3" cols="2" cellpadding="0" cellspacing="0" class="css20 css1">
+<tr>
+<td class="css21"><div style="width: 300px;" class="css17 css1">Cut Overhangs</div>
+</td>
+<td class="css39"><div style="width: 300px;" class="css19 css1">True</div>
+</td>
+</tr>
+<tr>
+<td class="css21"><div style="width: 300px;" class="css17 css1">Disulfide Bridges</div>
+</td>
+<td class="css39"><div style="width: 300px;" class="css19 css1"></div>
+</td>
+</tr>
+<tr>
+<td class="css21"><div style="width: 300px;" class="css17 css1">Cis-Prolines</div>
+</td>
+<td class="css39"><div style="width: 300px;" class="css19 css1"></div>
+</td>
+</tr>
+<tr>
+<td class="css21"><div style="width: 300px;" class="css17 css1">Additional Restraints</div>
+</td>
+<td class="css39"><div style="width: 300px;" class="css19 css1"></div>
+</td>
+</tr>
+<tr>
+<td class="css21"><div style="width: 300px;" class="css42 css1">Refine Loops</div>
+</td>
+<td class="css39"><div style="width: 300px;" class="css43 css1">False</div>
+</td>
+</tr>
+<tr>
+<td class="css21"><div style="width: 300px;" class="css42 css1">Refine Loops Number of Models</div>
+</td>
+<td class="css39"><div style="width: 300px;" class="css43 css1">1</div>
+</td>
+</tr>
+<tr>
+<td class="css21"><div style="width: 300px;" class="css42 css1">Refine Loops Optimization Level</div>
+</td>
+<td class="css39"><div style="width: 300px;" class="css43 css1">High</div>
+</td>
+</tr>
+<tr>
+<td class="css21"><div style="width: 300px;" class="css42 css1">Refine Loops Use DOPE Method</div>
+</td>
+<td class="css39"><div style="width: 300px;" class="css43 css1">True</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td class="css12"><table style="width: 500px;" cols="3" cellpadding="0" cellspacing="0" class="css13 css1">
+<tr>
+<td class="css14"><div title="Expand/Collapse" id="DS_REPORT_GroupPara-4" onclick="toggleDivVisibility('ID_GroupPara-4', 'DS_REPORT_GroupPara-4')" class="css19 css1"><img src="Report/images/icons/minus.png" /></div>
+</td>
+<td class="css16"><div class="css17 css1">Parallel Processing</div>
+</td>
+<td class="css18"><div class="css19 css1">True</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td class="css12"><table id="ID_GroupPara-4" cols="2" cellpadding="0" cellspacing="0" class="css20 css1">
+<tr>
+<td class="css21"><div style="width: 300px;" class="css17 css1">Server</div>
+</td>
+<td class="css39"><div style="width: 300px;" class="css19 css1">localhost</div>
+</td>
+</tr>
+<tr>
+<td class="css21"><div style="width: 300px;" class="css17 css1">Server Processes</div>
+</td>
+<td class="css39"><div style="width: 300px;" class="css19 css1">6</div>
+</td>
+</tr>
+<tr>
+<td class="css21"><div style="width: 300px;" class="css17 css1">Preserve Order</div>
+</td>
+<td class="css39"><div style="width: 300px;" class="css19 css1">True</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr><td class="css3"><div class="css6 css1"><span class="css8"><HR></span><span class="css44">Copyright © 2022 Dassault Systèmes Biovia Corp - All rights reserved.</span></div>
+</td>
+</tr>
+</table>
+
+</body>
+</html>

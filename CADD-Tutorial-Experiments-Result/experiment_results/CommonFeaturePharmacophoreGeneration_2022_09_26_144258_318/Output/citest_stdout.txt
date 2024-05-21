@@ -1,0 +1,2335 @@
+===== D:\Program Files\BIOVIA\PPS\apps\scitegic\dscore\server\bin\citest-bin -sd citest_in.sd -chm D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_1.ds_chm -bestonly -outsd citest_out.sd -omit -1 -mibd 200 -failsd fail.sd -fitname FitValue -shapename Shape -estname Estimate -mapidname MapID -pharmprintname Pharmprint -pharmtypename Pharmtype 
+
+Checked out license feature: DS_Chemistry <v2009.03> [for msi<TeAM SolidSQUAD-SSQ>] (1 copy)
+
+
+sulfonamide5HT2c_07  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.0625, 0
+Conf: conf5
+Fit: 1.35559
+Transform: 
+	-0.992395	0.0952702	0.0779524	-43.8264
+	-0.104485	-0.986738	-0.124224	60.0882
+	-0.0650838	0.131424	-0.989187	-46.6399
+	0	0	0	1
+Relative starting energy: 6432.5
+Relative final energy: 6432.5
+Total number of maps: 1
+sulfonamide5HT2c_08  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.046875, 0
+Conf: conf80
+Fit: 1.64892
+Transform: 
+	0.246741	0.801932	-0.544081	-317.473
+	0.66629	-0.548069	-0.505647	-121.045
+	0.703688	0.237751	0.66955	-35.4921
+	0	0	0	1
+Relative starting energy: 64577.6
+Relative final energy: 64577.6
+Total number of maps: 1
+sulfonamide5HT2c_10  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.0625, 0
+Conf: conf10
+Fit: 1.97789
+Transform: 
+	-0.753334	0.649849	0.100919	-49.9156
+	0.245368	0.135368	0.959932	43.1028
+	-0.61015	-0.747911	0.261429	-64.4708
+	0	0	0	1
+Relative starting energy: 7978.05
+Relative final energy: 7978.05
+Total number of maps: 1
+sulfonamide5HT2c_11  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.078125, 0
+Conf: conf74
+Fit: 1.88239
+Transform: 
+	0.594031	0.495139	0.634007	-318.514
+	0.803428	-0.325605	-0.498482	-151.949
+	0.0403821	-0.805492	0.591229	-20.6353
+	0	0	0	1
+Relative starting energy: 41603.4
+Relative final energy: 41603.4
+Total number of maps: 1
+sulfonamide5HT2c_12  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.09375, 0
+Conf: conf25
+Fit: 1.87176
+Transform: 
+	0.60081	-0.0371446	-0.798529	-247.024
+	0.775321	-0.216212	0.593406	20.5698
+	-0.194693	-0.97564	-0.101103	-73.939
+	0	0	0	1
+Relative starting energy: 12845.5
+Relative final energy: 12845.5
+Total number of maps: 1
+sulfonamide5HT2c_13  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.15625, 0
+Conf: conf142
+Fit: 1.87249
+Transform: 
+	0.552279	-0.719746	-0.420658	-260.593
+	0.740732	0.192148	0.643735	58.501
+	-0.382497	-0.667116	0.639259	-43.3853
+	0	0	0	1
+Relative starting energy: 40856.4
+Relative final energy: 40856.4
+Total number of maps: 1
+sulfonamide5HT2c_14  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.0625, 0.015625
+Conf: conf70
+Fit: 1.9401
+Transform: 
+	0.269106	0.849431	0.453927	-249.325
+	0.95821	-0.188647	-0.21505	19.7156
+	-0.0970378	0.492828	-0.864699	-13.0488
+	0	0	0	1
+Relative starting energy: 37653.8
+Relative final energy: 37653.8
+Total number of maps: 1
+sulfonamide5HT2c_15  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.171875, 0
+Conf: conf118
+Fit: 2.98802
+Transform: 
+	-0.372117	-0.925418	0.0716264	-290.335
+	-0.76955	0.264453	-0.581255	-138.176
+	0.518962	-0.271415	-0.810563	-26.9622
+	0	0	0	1
+Relative starting energy: 13053.8
+Relative final energy: 13053.8
+Total number of maps: 1
+sulfonamide5HT2c_16  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.234375, 0
+Conf: conf23
+Fit: 2.35896
+Transform: 
+	0.569268	-0.276479	-0.774269	-230.586
+	0.796389	-0.0484677	0.602839	36.7952
+	-0.2042	-0.959797	0.192594	-86.6442
+	0	0	0	1
+Relative starting energy: 4203.86
+Relative final energy: 4203.86
+Total number of maps: 1
+sulfonamide5HT2c_17  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.109375, 0
+Conf: conf66
+Fit: 2.21245
+Transform: 
+	0.361213	0.922294	-0.137476	-242.296
+	0.9324	-0.359207	0.0400141	20.6941
+	-0.0124776	-0.142636	-0.989697	-31.8124
+	0	0	0	1
+Relative starting energy: 7795.11
+Relative final energy: 7795.11
+Total number of maps: 1
+sulfonamide5HT2c_18  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.140625, 0
+Conf: conf85
+Fit: 1.62976
+Transform: 
+	0.621	0.573017	0.5348	103.113
+	-0.684587	0.0642436	0.726095	139.729
+	0.381707	-0.817022	0.432175	89.1865
+	0	0	0	1
+Relative starting energy: 9374.5
+Relative final energy: 9374.5
+Total number of maps: 1
+sulfonamide5HT2c_19  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.125, 0
+Conf: conf78
+Fit: 0.461998
+Transform: 
+	0.447695	0.849519	-0.27908	-227.197
+	0.784721	-0.223632	0.578102	177.508
+	-0.428697	0.477813	0.766755	-56.0582
+	0	0	0	1
+Relative starting energy: 47916.5
+Relative final energy: 47916.5
+Total number of maps: 1
+sulfonamide5HT2c_20  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.078125, 0
+Conf: conf84
+Fit: 1.77751
+Transform: 
+	0.960517	-0.00460417	-0.278185	-198.191
+	0.180347	0.77166	0.609931	177.069
+	0.211856	-0.636018	0.742023	-60.4489
+	0	0	0	1
+Relative starting energy: 33677.4
+Relative final energy: 33677.4
+Total number of maps: 1
+sulfonamide5HT2c_21  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.078125, 0
+Conf: conf83
+Fit: 1.2002
+Transform: 
+	-0.771836	0.604485	0.19715	-190.351
+	-0.621679	-0.652437	-0.433407	164.927
+	0.13336	0.457083	-0.879369	-33.8728
+	0	0	0	1
+Relative starting energy: 59591.9
+Relative final energy: 59591.9
+Total number of maps: 1
+sulfonamide5HT2c_22  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.140625, 0.015625
+Conf: conf53
+Fit: 2.47608
+Transform: 
+	-0.776527	0.550668	0.30622	-188.536
+	-0.625627	-0.616149	-0.478488	51.9729
+	0.0748113	0.563139	-0.822969	-37.1388
+	0	0	0	1
+Relative starting energy: 41143.6
+Relative final energy: 41143.6
+Total number of maps: 1
+sulfonamide5HT2c_23  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.09375, 0
+Conf: conf65
+Fit: 1.42164
+Transform: 
+	0.593264	0.0454468	0.803724	-179.913
+	0.541708	0.715996	-0.440344	183.54
+	0.595475	-0.696624	-0.400155	-50.2586
+	0	0	0	1
+Relative starting energy: 34745.9
+Relative final energy: 34745.9
+Total number of maps: 1
+sulfonamide5HT2c_24  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.125, 0
+Conf: conf79
+Fit: 1.37425
+Transform: 
+	0.761068	-0.196217	0.618284	-197.637
+	0.413857	0.880836	-0.229892	172.806
+	0.499498	-0.430845	-0.751582	-76.7805
+	0	0	0	1
+Relative starting energy: 34527.1
+Relative final energy: 34527.1
+Total number of maps: 1
+sulfonamide5HT2c_25  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.078125, 0
+Conf: conf70
+Fit: 0.987391
+Transform: 
+	0.961861	-0.172332	0.212426	-208.747
+	0.0129006	0.804303	0.594079	159.092
+	-0.273234	-0.568682	0.775851	-95.6149
+	0	0	0	1
+Relative starting energy: 27821.4
+Relative final energy: 27821.4
+Total number of maps: 1
+Done!
+===== D:\Program Files\BIOVIA\PPS\apps\scitegic\dscore\server\bin\citest-bin -sd citest_in.sd -chm D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_1.ds_chm -bestonly -outsd citest_out.sd -omit -1 -mibd 200 -failsd fail.sd -fitname FitValue -shapename Shape -estname Estimate -mapidname MapID -pharmprintname Pharmprint -pharmtypename Pharmtype 
+
+Checked out license feature: DS_Chemistry <v2009.03> [for msi<TeAM SolidSQUAD-SSQ>] (1 copy)
+
+
+Nafoxidine Hydrochloride  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.0625, 0
+Conf: conf3
+Fit: 2.7901
+Transform: 
+	0.750112	-0.605523	-0.265846	-88.9178
+	0.659248	0.716419	0.228334	441.384
+	0.0521958	-0.346534	0.936584	-119.64
+	0	0	0	1
+Relative starting energy: 2249.21
+Relative final energy: 2249.21
+Total number of maps: 1
+Trioxifene  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.21875, 0
+Conf: conf302
+Fit: 0.88424
+Transform: 
+	0.337167	-0.896365	0.287834	-37.307
+	0.890732	0.40272	0.210743	16.1708
+	-0.304819	0.185327	0.934205	-13.7404
+	0	0	0	1
+Relative starting energy: 57137.7
+Relative final energy: 57137.7
+Total number of maps: 1
+Nitromifene  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.046875, 0
+Conf: conf41
+Fit: 1.24423
+Transform: 
+	0.210305	-0.972945	-0.0956513	-63.7984
+	0.939051	0.173819	0.296597	1.84283
+	0.271947	0.152197	-0.9502	-13.6628
+	0	0	0	1
+Relative starting energy: 50713.7
+Relative final energy: 50713.7
+Total number of maps: 1
+Levormeloxifene  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.046875, 0
+Conf: conf14
+Fit: 0.578536
+Transform: 
+	0.881337	0.180157	0.436792	-247.02
+	0.365368	-0.846019	-0.388276	82.712
+	0.299584	0.501793	-0.811452	-58.3879
+	0	0	0	1
+Relative starting energy: 39877.8
+Relative final energy: 39877.8
+Total number of maps: 1
+Raloxifene Hydorchloride  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.09375, 0
+Conf: conf55
+Fit: 2.76713
+Transform: 
+	-0.0539844	-0.992863	-0.106346	-3.82566
+	0.380656	0.0779971	-0.921421	-23.5509
+	0.92314	-0.0902237	0.373728	-3.23122
+	0	0	0	1
+Relative starting energy: 17737.1
+Relative final energy: 17737.1
+Total number of maps: 1
+(p-2-Diethylaminoethoxyphenyl)-1-phenyl-2-p-anisylethanol  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.15625, 0
+Conf: conf156
+Fit: 2.32181
+Transform: 
+	-0.674328	0.175257	0.717333	-19.7936
+	-0.45579	-0.863079	-0.2176	349.725
+	0.580979	-0.473687	0.661879	-67.4145
+	0	0	0	1
+Relative starting energy: 75970
+Relative final energy: 75970
+Total number of maps: 1
+FLURAZEPAM  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.078125, 0
+Conf: conf24
+Fit: 2.95664
+Transform: 
+	0.902872	-0.236098	-0.359277	-162.931
+	0.104249	-0.690525	0.715756	283.441
+	0.417078	0.68369	0.598843	24.3371
+	0	0	0	1
+Relative starting energy: 20275.2
+Relative final energy: 20275.2
+Total number of maps: 1
+Toremifene  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.203125, 0
+Conf: conf27
+Fit: 3.04196
+Transform: 
+	-0.700493	0.219876	-0.678944	-28.7639
+	0.289244	0.957186	0.0115594	-124.175
+	-0.652417	0.188283	0.734099	74.6847
+	0	0	0	1
+Relative starting energy: 18632
+Relative final energy: 18632
+Total number of maps: 1
+PIMOZIDE  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.0625, 0
+Conf: conf12
+Fit: 3.08996
+Transform: 
+	-0.509899	0.298552	-0.806765	-179.414
+	0.0268671	0.942913	0.331954	-22.1359
+	0.859814	0.147588	-0.488812	-82.2507
+	0	0	0	1
+Relative starting energy: 13025.4
+Relative final energy: 13025.4
+Total number of maps: 1
+Ametik hydrochloride  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.140625, 0
+Conf: conf18
+Fit: 2.63753
+Transform: 
+	-0.0215546	0.999469	0.02444	-443.06
+	0.691965	-0.00273033	0.721926	-115.79
+	0.721609	0.0324725	-0.691539	-4.51162
+	0	0	0	1
+Relative starting energy: 14049.8
+Relative final energy: 14049.8
+Total number of maps: 1
+Tamoxifen  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.171875, 0
+Conf: conf108
+Fit: 2.96224
+Transform: 
+	-0.544061	0.450165	-0.70806	-110.954
+	0.698582	0.710453	-0.0850917	442.644
+	0.464738	-0.540933	-0.701007	-143.025
+	0	0	0	1
+Relative starting energy: 53705.8
+Relative final energy: 53705.8
+Total number of maps: 1
+Enclomiphene  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.265625, 0
+Conf: conf188
+Fit: 3.0202
+Transform: 
+	0.739367	0.469933	-0.482182	-425.757
+	-0.241415	-0.483499	-0.841396	11.0471
+	-0.628534	0.738506	-0.244035	-11.6776
+	0	0	0	1
+Relative starting energy: 64538.8
+Relative final energy: 64538.8
+Total number of maps: 1
+Acrichine  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.203125, 0
+Conf: conf234
+Fit: 0.248305
+Transform: 
+	-0.658047	0.10297	-0.745903	161.879
+	-0.235485	0.912773	0.333754	174.891
+	-0.715207	-0.395275	0.576399	-39.8509
+	0	0	0	1
+Relative starting energy: 83246.3
+Relative final energy: 83246.3
+Total number of maps: 1
+QUAZEPAM  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.015625, 0
+Conf: conf2
+Fit: 2.45208
+Transform: 
+	0.628675	0.644458	-0.435248	-146.398
+	-0.776791	0.546977	-0.31211	416.112
+	-0.0369292	-0.534312	-0.84448	-7.65156
+	0	0	0	1
+Relative starting energy: 47.3973
+Relative final energy: 47.3973
+Total number of maps: 1
+HALOPERIDOL  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.046875, 0
+Conf: conf53
+Fit: 0.254414
+Transform: 
+	-0.65245	0.724295	-0.222947	123.799
+	0.680614	0.689417	0.24793	161.195
+	0.333278	0.0100212	-0.942775	-54.1443
+	0	0	0	1
+Relative starting energy: 53631.2
+Relative final energy: 53631.2
+Total number of maps: 1
+THIORIDAZINE  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.125, 0
+Conf: conf78
+Fit: 3.36193
+Transform: 
+	0.377887	0.414664	-0.827801	115.757
+	0.885326	0.0997915	0.454135	240.208
+	-0.270921	0.904486	0.329403	-14.1576
+	0	0	0	1
+Relative starting energy: 50738.4
+Relative final energy: 50738.4
+Total number of maps: 1
+Aminazin monohydrochloride  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.0625, 0
+Conf: conf72
+Fit: 0.427533
+Transform: 
+	-0.885332	-0.378946	-0.269419	218.504
+	-0.182385	0.816045	-0.548459	156.694
+	-0.427695	0.43643	0.791585	48.3219
+	0	0	0	1
+Relative starting energy: 82960.3
+Relative final energy: 82960.3
+Total number of maps: 1
+Done!
+===== D:\Program Files\BIOVIA\PPS\apps\scitegic\dscore\server\bin\citest-bin -sd citest_in.sd -chm D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_2.ds_chm -bestonly -outsd citest_out.sd -omit -1 -mibd 200 -failsd fail.sd -fitname FitValue -shapename Shape -estname Estimate -mapidname MapID -pharmprintname Pharmprint -pharmtypename Pharmtype 
+
+Checked out license feature: DS_Chemistry <v2009.03> [for msi<TeAM SolidSQUAD-SSQ>] (1 copy)
+
+
+sulfonamide5HT2c_07  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.0625, 0
+Conf: conf22
+Fit: 2.28651
+Transform: 
+	0.96854	-0.247972	-0.0209696	-21.1385
+	-0.241753	-0.957535	0.157107	86.3568
+	0.0590373	0.147095	0.987359	-52.1003
+	0	0	0	1
+Relative starting energy: 14975.2
+Relative final energy: 14975.2
+Total number of maps: 1
+sulfonamide5HT2c_08  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.0625, 0
+Conf: conf8
+Fit: 1.9277
+Transform: 
+	-0.873564	0.44075	-0.206458	461.397
+	0.059111	-0.324975	-0.943873	-91.015
+	-0.483106	-0.836738	0.257834	-31.4158
+	0	0	0	1
+Relative starting energy: 3315.04
+Relative final energy: 3315.04
+Total number of maps: 1
+sulfonamide5HT2c_10  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.078125, 0
+Conf: conf9
+Fit: 2.13284
+Transform: 
+	0.78285	-0.621857	0.0209851	-45.3397
+	0.433667	0.569503	0.698283	21.8959
+	0.446183	0.53755	-0.715514	5.23331
+	0	0	0	1
+Relative starting energy: 7560.38
+Relative final energy: 7560.38
+Total number of maps: 1
+sulfonamide5HT2c_11  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.09375, 0
+Conf: conf1
+Fit: 2.3682
+Transform: 
+	0.988201	0.0687639	-0.13686	-90.7666
+	-0.153123	0.423059	-0.89307	49.7659
+	0.00351129	-0.903489	-0.428596	-0.128619
+	0	0	0	1
+Relative starting energy: 0
+Relative final energy: 0
+Total number of maps: 1
+sulfonamide5HT2c_12  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.09375, 0
+Conf: conf63
+Fit: 1.92218
+Transform: 
+	0.14476	-0.361209	-0.92118	71.6247
+	0.563824	0.795165	-0.223193	203.799
+	0.81311	-0.487074	0.318766	-324.243
+	0	0	0	1
+Relative starting energy: 36917.2
+Relative final energy: 36917.2
+Total number of maps: 1
+sulfonamide5HT2c_13  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.1875, 0
+Conf: conf153
+Fit: 1.94291
+Transform: 
+	0.0954875	-0.0193017	-0.995243	88.4714
+	0.453426	0.890908	0.0262252	226.121
+	0.886164	-0.453774	0.0938225	-301.842
+	0	0	0	1
+Relative starting energy: 44163.2
+Relative final energy: 44163.2
+Total number of maps: 1
+sulfonamide5HT2c_14  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.09375, 0
+Conf: conf30
+Fit: 1.95993
+Transform: 
+	-0.360845	0.0186166	0.93244	93.4026
+	0.461521	0.872363	0.161187	191.623
+	0.810426	-0.488504	0.32338	-326.495
+	0	0	0	1
+Relative starting energy: 19443.8
+Relative final energy: 19443.8
+Total number of maps: 1
+sulfonamide5HT2c_15  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.171875, 0
+Conf: conf118
+Fit: 3.08925
+Transform: 
+	0.59039	0.61129	-0.527033	320.275
+	-0.805937	0.411184	-0.425902	-144.378
+	-0.0436419	0.676204	0.73542	-8.81531
+	0	0	0	1
+Relative starting energy: 13053.8
+Relative final energy: 13053.8
+Total number of maps: 1
+sulfonamide5HT2c_16  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.265625, 0
+Conf: conf210
+Fit: 2.99023
+Transform: 
+	0.58702	0.550564	-0.593538	326.258
+	-0.809544	0.393033	-0.436078	-128.469
+	-0.0068089	0.736481	0.676424	-20.4558
+	0	0	0	1
+Relative starting energy: 37673.1
+Relative final energy: 37673.1
+Total number of maps: 1
+sulfonamide5HT2c_17  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.140625, 0
+Conf: conf98
+Fit: 1.90581
+Transform: 
+	0.1624	-0.170036	-0.971964	75.2783
+	0.54441	0.836984	-0.0554598	190.251
+	0.822948	-0.520141	0.228496	-343.818
+	0	0	0	1
+Relative starting energy: 10538.7
+Relative final energy: 10538.7
+Total number of maps: 1
+sulfonamide5HT2c_18  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.15625, 0
+Conf: conf29
+Fit: 2.40404
+Transform: 
+	-0.56098	-0.605819	-0.564168	-81.728
+	0.763294	-0.642331	-0.0692294	307.933
+	0.320442	0.469462	-0.822753	-209.876
+	0	0	0	1
+Relative starting energy: 4849.99
+Relative final energy: 4849.99
+Total number of maps: 1
+sulfonamide5HT2c_19  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.078125, 0
+Conf: conf78
+Fit: 1.60291
+Transform: 
+	-0.531125	-0.795686	0.291187	207.795
+	0.844891	-0.523222	0.111346	108.008
+	-0.0637592	-0.30516	-0.950164	-87.4061
+	0	0	0	1
+Relative starting energy: 47916.5
+Relative final energy: 47916.5
+Total number of maps: 1
+sulfonamide5HT2c_20  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.09375, 0
+Conf: conf84
+Fit: 2.10945
+Transform: 
+	-0.950522	-0.0975288	0.29495	180.072
+	-0.0534056	0.986607	0.154126	108.241
+	-0.306031	0.130748	-0.943	-84.4241
+	0	0	0	1
+Relative starting energy: 33677.4
+Relative final energy: 33677.4
+Total number of maps: 1
+sulfonamide5HT2c_21  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.09375, 0
+Conf: conf74
+Fit: 1.77583
+Transform: 
+	0.717343	-0.243584	-0.652752	175.586
+	-0.508271	-0.823757	-0.251167	77.4208
+	0.476529	-0.511948	0.714723	-109.063
+	0	0	0	1
+Relative starting energy: 49515.7
+Relative final energy: 49515.7
+Total number of maps: 1
+sulfonamide5HT2c_22  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.0625, 0.015625
+Conf: conf52
+Fit: 0.990212
+Transform: 
+	0.940966	-0.279896	-0.190372	107.507
+	-0.292787	-0.955221	-0.0427585	-43.1279
+	0.169879	-0.0959726	0.980781	-21.9338
+	0	0	0	1
+Relative starting energy: 40569.5
+Relative final energy: 40569.5
+Total number of maps: 1
+sulfonamide5HT2c_23  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.0625, 0
+Conf: conf77
+Fit: 0.031937
+Transform: 
+	-0.957294	-0.225907	0.180429	60.6255
+	-0.218444	0.973973	0.0604813	65.1382
+	-0.189396	0.0184848	-0.981727	-45.6342
+	0	0	0	1
+Relative starting energy: 50528.5
+Relative final energy: 50528.5
+Total number of maps: 1
+sulfonamide5HT2c_24  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.109375, 0
+Conf: conf85
+Fit: 2.26393
+Transform: 
+	0.804776	-0.506989	-0.308704	329.849
+	0.593153	0.706578	0.385897	34.7502
+	0.0224783	-0.493669	0.869359	-61.8213
+	0	0	0	1
+Relative starting energy: 36778.5
+Relative final energy: 36778.5
+Total number of maps: 1
+sulfonamide5HT2c_25  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.09375, 0.015625
+Conf: conf70
+Fit: 1.25363
+Transform: 
+	-0.983097	0.038729	-0.178942	197.442
+	0.025871	0.996949	0.0736392	111.159
+	0.181248	0.067765	-0.9811	-50.5762
+	0	0	0	1
+Relative starting energy: 27821.4
+Relative final energy: 27821.4
+Total number of maps: 1
+Done!
+===== D:\Program Files\BIOVIA\PPS\apps\scitegic\dscore\server\bin\citest-bin -sd citest_in.sd -chm D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_2.ds_chm -bestonly -outsd citest_out.sd -omit -1 -mibd 200 -failsd fail.sd -fitname FitValue -shapename Shape -estname Estimate -mapidname MapID -pharmprintname Pharmprint -pharmtypename Pharmtype 
+
+Checked out license feature: DS_Chemistry <v2009.03> [for msi<TeAM SolidSQUAD-SSQ>] (1 copy)
+
+
+Nafoxidine Hydrochloride  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.046875, 0
+Conf: conf27
+Fit: 2.72332
+Transform: 
+	-0.47689	0.870953	0.118396	-28.4484
+	-0.878714	-0.475617	-0.0406263	309.549
+	-0.0209278	0.123411	-0.992135	-59.9567
+	0	0	0	1
+Relative starting energy: 37010.6
+Relative final energy: 37010.6
+Total number of maps: 1
+Trioxifene  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.21875, 0
+Conf: conf275
+Fit: 2.16232
+Transform: 
+	-0.107848	0.908287	-0.404206	62.2473
+	0.958206	0.203332	0.201241	47.3111
+	-0.264973	0.365609	0.892255	-3.86423
+	0	0	0	1
+Relative starting energy: 48260.9
+Relative final energy: 48260.9
+Total number of maps: 1
+Nitromifene  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.046875, 0
+Conf: conf27
+Fit: 1.51664
+Transform: 
+	-0.419502	0.868375	-0.264466	-192.969
+	0.208516	0.375732	0.902966	272.396
+	0.883481	0.323651	-0.33869	-98.7472
+	0	0	0	1
+Relative starting energy: 34066.5
+Relative final energy: 34066.5
+Total number of maps: 1
+Levormeloxifene  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.03125, 0
+Conf: conf19
+Fit: 0.165904
+Transform: 
+	-0.935209	-0.0768378	-0.34566	243.949
+	0.0339899	-0.991145	0.128362	49.9404
+	-0.352462	0.108297	0.929539	-49.5149
+	0	0	0	1
+Relative starting energy: 56235.5
+Relative final energy: 56235.5
+Total number of maps: 1
+Raloxifene Hydorchloride  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.09375, 0
+Conf: conf64
+Fit: 2.14403
+Transform: 
+	-0.810409	0.102247	0.576874	190.698
+	-0.223341	-0.964216	-0.142854	117.55
+	0.541624	-0.24461	0.804244	-27.9692
+	0	0	0	1
+Relative starting energy: 31579.7
+Relative final energy: 31579.7
+Total number of maps: 1
+(p-2-Diethylaminoethoxyphenyl)-1-phenyl-2-p-anisylethanol  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.171875, 0
+Conf: conf169
+Fit: 2.37899
+Transform: 
+	0.831573	0.555258	-0.0132295	177.696
+	-0.120162	0.203112	0.971754	-157.034
+	0.542262	-0.806495	0.235624	22.6932
+	0	0	0	1
+Relative starting energy: 83089.4
+Relative final energy: 83089.4
+Total number of maps: 1
+FLURAZEPAM  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.0625, 0
+Conf: conf9
+Fit: 1.98697
+Transform: 
+	-0.800284	0.554932	0.227148	10.9181
+	-0.534514	-0.831893	0.149158	83.865
+	-0.271736	0.00204502	-0.96237	-55.6155
+	0	0	0	1
+Relative starting energy: 6557.32
+Relative final energy: 6557.32
+Total number of maps: 1
+Toremifene  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.171875, 0
+Conf: conf33
+Fit: 2.92929
+Transform: 
+	0.724319	-0.226028	0.651363	85.7975
+	0.163533	0.974098	0.156171	-182.684
+	-0.66979	-0.00659799	0.742521	4.06763
+	0	0	0	1
+Relative starting energy: 21888.6
+Relative final energy: 21888.6
+Total number of maps: 1
+PIMOZIDE  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.046875, 0.015625
+Conf: conf41
+Fit: 3.23146
+Transform: 
+	0.397142	0.883594	-0.248073	310.353
+	0.662477	-0.463069	-0.588805	-78.799
+	-0.63514	0.0694967	-0.769265	-120.479
+	0	0	0	1
+Relative starting energy: 65886.9
+Relative final energy: 65886.9
+Total number of maps: 1
+Ametik hydrochloride  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.140625, 0
+Conf: conf111
+Fit: 2.71225
+Transform: 
+	0.282029	-0.931024	-0.231634	434.26
+	0.416031	-0.0988748	0.903959	-130.627
+	-0.86451	-0.351309	0.359449	59.6607
+	0	0	0	1
+Relative starting energy: 40129.8
+Relative final energy: 40129.8
+Total number of maps: 1
+Tamoxifen  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.171875, 0
+Conf: conf53
+Fit: 2.71558
+Transform: 
+	0.360673	-0.343759	0.867032	3.45315
+	0.322937	0.918128	0.22968	440.954
+	0.875001	-0.197157	-0.442157	-15.0198
+	0	0	0	1
+Relative starting energy: 33469.5
+Relative final energy: 33469.5
+Total number of maps: 1
+Enclomiphene  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.171875, 0
+Conf: conf175
+Fit: 1.0346
+Transform: 
+	-0.3173	0.18658	0.92979	66.3239
+	0.438131	0.898385	-0.0307612	10.8481
+	-0.841048	0.397609	-0.366804	8.44731
+	0	0	0	1
+Relative starting energy: 58615.4
+Relative final energy: 58615.4
+Total number of maps: 1
+Acrichine  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.1875, 0
+Conf: conf178
+Fit: 1.3881
+Transform: 
+	0.782079	0.136779	0.607984	-155.103
+	0.325924	0.741772	-0.586129	215.515
+	0.531156	-0.656555	-0.535545	-57.7572
+	0	0	0	1
+Relative starting energy: 59143
+Relative final energy: 59143
+Total number of maps: 1
+QUAZEPAM  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.015625, 0
+Conf: conf10
+Fit: 2.98716
+Transform: 
+	-0.0119282	-0.934737	0.35514	-143.883
+	-0.994848	-0.0246648	-0.0983327	237.922
+	0.100675	-0.354483	-0.929627	-111.632
+	0	0	0	1
+Relative starting energy: 8112.45
+Relative final energy: 8112.45
+Total number of maps: 1
+HALOPERIDOL  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.0625, 0
+Conf: conf57
+Fit: 0.393495
+Transform: 
+	0.594208	-0.672881	0.440622	-148.391
+	0.540094	0.739751	0.401331	161.219
+	0.595999	0.00049659	-0.802985	-65.8298
+	0	0	0	1
+Relative starting energy: 65015.5
+Relative final energy: 65015.5
+Total number of maps: 1
+THIORIDAZINE  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.140625, 0
+Conf: conf100
+Fit: 3.303
+Transform: 
+	-0.36438	-0.431208	0.825401	-109.83
+	0.930904	-0.144506	0.335463	169.627
+	-0.0253791	0.890605	0.454069	-24.8423
+	0	0	0	1
+Relative starting energy: 70825.2
+Relative final energy: 70825.2
+Total number of maps: 1
+Aminazin monohydrochloride  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.046875, 0
+Conf: conf41
+Fit: 1.11646
+Transform: 
+	0.44279	0.753437	-0.486075	-212.485
+	0.826728	-0.552918	-0.103939	76.7656
+	0.347071	0.355828	0.867714	-170.701
+	0	0	0	1
+Relative starting energy: 33300.2
+Relative final energy: 33300.2
+Total number of maps: 1
+Done!
+===== D:\Program Files\BIOVIA\PPS\apps\scitegic\dscore\server\bin\citest-bin -sd citest_in.sd -chm D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_3.ds_chm -bestonly -outsd citest_out.sd -omit -1 -mibd 200 -failsd fail.sd -fitname FitValue -shapename Shape -estname Estimate -mapidname MapID -pharmprintname Pharmprint -pharmtypename Pharmtype 
+
+Checked out license feature: DS_Chemistry <v2009.03> [for msi<TeAM SolidSQUAD-SSQ>] (1 copy)
+
+
+sulfonamide5HT2c_07  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.0625, 0
+Conf: conf8
+Fit: 2.44052
+Transform: 
+	-0.974074	0.116698	-0.193807	-899.645
+	0.207107	0.115285	-0.971502	1.1524
+	-0.0910297	-0.986454	-0.136465	-772.741
+	0	0	0	1
+Relative starting energy: 7374.65
+Relative final energy: 7374.65
+Total number of maps: 1
+sulfonamide5HT2c_08  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.0625, 0
+Conf: conf37
+Fit: 1.60318
+Transform: 
+	-0.782027	-0.299019	-0.546829	-500.007
+	0.116475	0.791813	-0.599555	-106.89
+	-0.612265	0.53256	0.58439	-670.536
+	0	0	0	1
+Relative starting energy: 20048.5
+Relative final energy: 20048.5
+Total number of maps: 1
+sulfonamide5HT2c_10  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.0625, 0
+Conf: conf10
+Fit: 1.8968
+Transform: 
+	-0.140199	0.846738	0.513204	-618.979
+	-0.372432	-0.525356	0.765046	-131.259
+	-0.917409	0.083875	-0.389007	-717.56
+	0	0	0	1
+Relative starting energy: 7978.05
+Relative final energy: 7978.05
+Total number of maps: 1
+sulfonamide5HT2c_11  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.09375, 0
+Conf: conf26
+Fit: 2.78476
+Transform: 
+	-0.825497	-0.564357	-0.00750017	-838.335
+	0.31675	-0.474235	0.821444	-23.5699
+	0.467144	-0.675724	-0.570239	-796.925
+	0	0	0	1
+Relative starting energy: 12161.2
+Relative final energy: 12161.2
+Total number of maps: 1
+sulfonamide5HT2c_12  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.078125, 0
+Conf: conf25
+Fit: 2.8744
+Transform: 
+	0.962785	0.0434208	-0.266759	-816.813
+	-0.0309464	0.99823	0.0507917	-42.6582
+	-0.268493	0.0406462	-0.962424	-791.131
+	0	0	0	1
+Relative starting energy: 12845.5
+Relative final energy: 12845.5
+Total number of maps: 1
+sulfonamide5HT2c_13  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.140625, 0
+Conf: conf86
+Fit: 2.69623
+Transform: 
+	0.722653	0.304513	0.620519	-807.336
+	0.0885885	0.849522	-0.520063	-15.6306
+	-0.68551	0.430796	0.586933	-788.934
+	0	0	0	1
+Relative starting energy: 29861
+Relative final energy: 29861
+Total number of maps: 1
+sulfonamide5HT2c_14  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.078125, 0
+Conf: conf10
+Fit: 2.77667
+Transform: 
+	0.830356	0.525994	0.183953	-835.808
+	-0.172542	-0.0711963	0.982426	-30.8993
+	-0.529847	0.847503	-0.0316375	-770.868
+	0	0	0	1
+Relative starting energy: 7120.81
+Relative final energy: 7120.81
+Total number of maps: 1
+sulfonamide5HT2c_15  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.203125, 0.015625
+Conf: conf20
+Fit: 2.90532
+Transform: 
+	-0.967847	-0.0517405	0.246162	-973.662
+	-0.10986	0.967296	-0.228626	-41.0573
+	0.226282	0.248318	0.941878	-700.147
+	0	0	0	1
+Relative starting energy: 494.972
+Relative final energy: 494.972
+Total number of maps: 1
+sulfonamide5HT2c_16  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.125, 0
+Conf: conf65
+Fit: 0.201211
+Transform: 
+	0.689921	-0.669464	0.275366	-686.639
+	-0.00822176	-0.387623	-0.921781	1.8861
+	-0.723838	-0.633692	0.272934	-893.361
+	0	0	0	1
+Relative starting energy: 9505.71
+Relative final energy: 9505.71
+Total number of maps: 1
+sulfonamide5HT2c_17  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.109375, 0
+Conf: conf66
+Fit: 2.89307
+Transform: 
+	0.79366	0.559976	0.23776	-825.302
+	0.295903	-0.0138527	-0.955118	-3.28532
+	-0.531549	0.828393	-0.176693	-778.695
+	0	0	0	1
+Relative starting energy: 7795.11
+Relative final energy: 7795.11
+Total number of maps: 1
+sulfonamide5HT2c_18  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.15625, 0
+Conf: conf63
+Fit: 2.86242
+Transform: 
+	0.898862	0.431762	0.0750198	-840.147
+	-0.334508	0.565394	0.753945	10.4555
+	-0.283109	0.702788	-0.65264	-843.746
+	0	0	0	1
+Relative starting energy: 7986.52
+Relative final energy: 7986.52
+Total number of maps: 1
+sulfonamide5HT2c_19  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.09375, 0.015625
+Conf: conf31
+Fit: 2.97617
+Transform: 
+	0.839117	0.38623	0.383025	-774.059
+	0.246893	0.357009	-0.900882	6.73376
+	-0.484691	0.850512	0.204215	-803.391
+	0	0	0	1
+Relative starting energy: 31498
+Relative final energy: 31498
+Total number of maps: 1
+sulfonamide5HT2c_20  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.125, 0
+Conf: conf102
+Fit: 3.34461
+Transform: 
+	0.853597	0.325469	0.406746	-523.021
+	0.378945	0.147822	-0.913537	-33.8033
+	0.357454	-0.933926	-0.00284557	-931.003
+	0	0	0	1
+Relative starting energy: 51636.6
+Relative final energy: 51636.6
+Total number of maps: 1
+sulfonamide5HT2c_21  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.125, 0
+Conf: conf77
+Fit: 2.84403
+Transform: 
+	-0.9741	0.203028	-0.0995454	-530.983
+	0.0565762	-0.207396	-0.97662	-4.71942
+	0.218927	0.956957	-0.190537	-916.36
+	0	0	0	1
+Relative starting energy: 51286.2
+Relative final energy: 51286.2
+Total number of maps: 1
+sulfonamide5HT2c_22  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.078125, 0
+Conf: conf25
+Fit: 2.72033
+Transform: 
+	-0.988949	-0.0386939	0.143119	-760.516
+	-0.14763	0.345753	-0.926639	1.51272
+	0.0136285	0.937527	0.347645	-775.699
+	0	0	0	1
+Relative starting energy: 26634.4
+Relative final energy: 26634.4
+Total number of maps: 1
+sulfonamide5HT2c_23  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.109375, 0
+Conf: conf65
+Fit: 2.9549
+Transform: 
+	0.90372	0.331333	0.271126	-498.889
+	0.318505	-0.097142	-0.942931	-41.9892
+	0.286086	-0.9385	0.19332	-947.522
+	0	0	0	1
+Relative starting energy: 34745.9
+Relative final energy: 34745.9
+Total number of maps: 1
+sulfonamide5HT2c_24  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.171875, 0
+Conf: conf79
+Fit: 3.62393
+Transform: 
+	0.842293	0.31252	0.439174	-523.016
+	0.492783	-0.116306	-0.862344	-18.9326
+	0.218421	-0.942764	0.251968	-926.048
+	0	0	0	1
+Relative starting energy: 34527.1
+Relative final energy: 34527.1
+Total number of maps: 1
+sulfonamide5HT2c_25  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.125, 0
+Conf: conf91
+Fit: 2.86998
+Transform: 
+	0.741788	0.317662	0.590628	-536.235
+	0.535164	0.250375	-0.806791	39.9755
+	0.404165	-0.914551	-0.0157243	-904.19
+	0	0	0	1
+Relative starting energy: 37699.2
+Relative final energy: 37699.2
+Total number of maps: 1
+Done!
+===== D:\Program Files\BIOVIA\PPS\apps\scitegic\dscore\server\bin\citest-bin -sd citest_in.sd -chm D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_3.ds_chm -bestonly -outsd citest_out.sd -omit -1 -mibd 200 -failsd fail.sd -fitname FitValue -shapename Shape -estname Estimate -mapidname MapID -pharmprintname Pharmprint -pharmtypename Pharmtype 
+
+Checked out license feature: DS_Chemistry <v2009.03> [for msi<TeAM SolidSQUAD-SSQ>] (1 copy)
+
+
+Nafoxidine Hydrochloride  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.03125, 0.015625
+Conf: conf6
+Fit: 3.21686
+Transform: 
+	-0.235309	-0.945206	-0.226307	-726.005
+	0.0873452	-0.252469	0.963655	-21.4801
+	0.967988	-0.206989	-0.141967	-639.591
+	0	0	0	1
+Relative starting energy: 5654.48
+Relative final energy: 5654.48
+Total number of maps: 1
+Trioxifene  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.328125, 0
+Conf: conf355
+Fit: 2.99447
+Transform: 
+	-0.398914	-0.822168	0.406089	-739.006
+	0.102175	0.400241	0.910696	-49.6042
+	0.911278	-0.404781	0.0756564	-598.956
+	0	0	0	1
+Relative starting energy: 81279.8
+Relative final energy: 81279.8
+Total number of maps: 1
+Nitromifene  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.03125, 0
+Conf: conf8
+Fit: 0.962208
+Transform: 
+	-0.687808	0.661517	-0.298857	-767.28
+	0.696147	0.484474	-0.529777	-70.3406
+	-0.205668	-0.572433	-0.793738	-960.487
+	0	0	0	1
+Relative starting energy: 12635.6
+Relative final energy: 12635.6
+Total number of maps: 1
+Levormeloxifene  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.015625, 0.015625
+Conf: conf29
+Fit: 1.3894
+Transform: 
+	0.539211	0.832845	0.124982	-714.597
+	-0.359732	0.361957	-0.859988	-132.997
+	0.761475	-0.418755	-0.494773	-686.853
+	0	0	0	1
+Relative starting energy: 140535
+Relative final energy: 140535
+Total number of maps: 1
+Raloxifene Hydorchloride  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.078125, 0
+Conf: conf70
+Fit: 1.81019
+Transform: 
+	-0.613902	-0.527545	0.587214	-424.349
+	0.756395	-0.180328	0.628768	6.05909
+	0.225812	-0.830168	-0.509735	-879.248
+	0	0	0	1
+Relative starting energy: 37149.6
+Relative final energy: 37149.6
+Total number of maps: 1
+(p-2-Diethylaminoethoxyphenyl)-1-phenyl-2-p-anisylethanol  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.140625, 0
+Conf: conf106
+Fit: 3.48564
+Transform: 
+	-0.681453	-0.315779	0.660231	-665.423
+	0.714202	-0.483916	0.505708	6.76967
+	0.159804	0.816155	0.555296	-588.213
+	0	0	0	1
+Relative starting energy: 52065.3
+Relative final energy: 52065.3
+Total number of maps: 1
+FLURAZEPAM  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.0625, 0
+Conf: conf48
+Fit: 1.44503
+Transform: 
+	0.0904878	0.904019	-0.417805	-794.246
+	0.521503	0.314396	0.793215	-62.1854
+	0.848438	-0.289663	-0.443	-833.99
+	0	0	0	1
+Relative starting energy: 34473.7
+Relative final energy: 34473.7
+Total number of maps: 1
+Toremifene  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.15625, 0
+Conf: conf6
+Fit: 2.46634
+Transform: 
+	-0.426882	-0.488438	-0.761052	-357.544
+	0.738079	0.298078	-0.605301	-164.059
+	-0.522505	0.820108	-0.233262	-1053.73
+	0	0	0	1
+Relative starting energy: 5841.63
+Relative final energy: 5841.63
+Total number of maps: 1
+PIMOZIDE  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.0625, 0
+Conf: conf44
+Fit: 2.3325
+Transform: 
+	0.166403	-0.901295	-0.399972	-1003.17
+	0.575862	0.418095	-0.702552	-67.7408
+	-0.800433	0.113422	-0.588594	-874.431
+	0	0	0	1
+Relative starting energy: 66823.3
+Relative final energy: 66823.3
+Total number of maps: 1
+Ametik hydrochloride  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.140625, 0
+Conf: conf70
+Fit: 0.366848
+Transform: 
+	-0.331743	-0.750449	-0.57164	-854.04
+	-0.889841	0.0477128	0.453769	-68.6127
+	0.313256	-0.659203	0.683609	-645.763
+	0	0	0	1
+Relative starting energy: 31431.9
+Relative final energy: 31431.9
+Total number of maps: 1
+Tamoxifen  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.171875, 0
+Conf: conf49
+Fit: 2.62629
+Transform: 
+	0.00102737	0.90061	-0.434627	-396.41
+	-0.835328	0.23971	0.494738	-80.5409
+	-0.549751	-0.362548	-0.752551	-1028.47
+	0	0	0	1
+Relative starting energy: 32146.7
+Relative final energy: 32146.7
+Total number of maps: 1
+Enclomiphene  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.25, 0
+Conf: conf52
+Fit: 2.8822
+Transform: 
+	0.592535	-0.0927874	-0.800183	-975.349
+	0.801339	-0.0334823	0.597273	-0.827024
+	-0.0822114	-0.995123	0.0545147	-794.881
+	0	0	0	1
+Relative starting energy: 20897
+Relative final energy: 20897
+Total number of maps: 1
+Acrichine  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.203125, 0
+Conf: conf56
+Fit: 1.75285
+Transform: 
+	-0.958738	0.0441767	-0.280837	-602.361
+	-0.0130035	0.980004	0.198551	-117.588
+	-0.283992	-0.19401	0.938993	-940.032
+	0	0	0	1
+Relative starting energy: 24747.1
+Relative final energy: 24747.1
+Total number of maps: 1
+QUAZEPAM  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.015625, 0
+Conf: conf2
+Fit: 2.30079
+Transform: 
+	-0.135795	0.915115	-0.379638	-462.267
+	0.647954	0.371908	0.664711	-174.223
+	0.749477	-0.155724	-0.643455	-968.073
+	0	0	0	1
+Relative starting energy: 47.3973
+Relative final energy: 47.3973
+Total number of maps: 1
+HALOPERIDOL  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.078125, 0
+Conf: conf26
+Fit: 2.5075
+Transform: 
+	-0.306614	-0.630597	-0.712976	-731.95
+	0.950579	-0.164414	-0.263378	-76.9031
+	-0.0488621	0.758496	-0.649844	-726.101
+	0	0	0	1
+Relative starting energy: 25855.6
+Relative final energy: 25855.6
+Total number of maps: 1
+THIORIDAZINE  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.125, 0
+Conf: conf23
+Fit: 3.15295
+Transform: 
+	0.92933	0.181143	-0.321765	-394.847
+	-0.0991803	-0.716925	-0.69006	-22.7006
+	-0.355681	0.673206	-0.648294	-688.931
+	0	0	0	1
+Relative starting energy: 23530.2
+Relative final energy: 23530.2
+Total number of maps: 1
+Aminazin monohydrochloride  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.078125, 0
+Conf: conf22
+Fit: 2.65697
+Transform: 
+	-0.983579	0.171833	-0.0551976	-276.842
+	-0.0439708	-0.52477	-0.850108	-36.8645
+	-0.175042	-0.833721	0.523708	-744.278
+	0	0	0	1
+Relative starting energy: 19220.5
+Relative final energy: 19220.5
+Total number of maps: 1
+Done!
+===== D:\Program Files\BIOVIA\PPS\apps\scitegic\dscore\server\bin\citest-bin -sd citest_in.sd -chm D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_4.ds_chm -bestonly -outsd citest_out.sd -omit -1 -mibd 200 -failsd fail.sd -fitname FitValue -shapename Shape -estname Estimate -mapidname MapID -pharmprintname Pharmprint -pharmtypename Pharmtype 
+
+Checked out license feature: DS_Chemistry <v2009.03> [for msi<TeAM SolidSQUAD-SSQ>] (1 copy)
+
+
+sulfonamide5HT2c_07  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.046875, 0
+Conf: conf48
+Fit: 1.25179
+Transform: 
+	0.0435479	0.99644	0.0721827	-291.978
+	-0.77836	0.0791338	-0.622811	-39.9964
+	0.626306	0.029062	-0.779035	34.2945
+	0	0	0	1
+Relative starting energy: 28755.9
+Relative final energy: 28755.9
+Total number of maps: 1
+sulfonamide5HT2c_08  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.0625, 0
+Conf: conf37
+Fit: 0.0990489
+Transform: 
+	-0.885853	0.324186	0.331915	157.501
+	-0.282279	0.191163	-0.940093	127.598
+	0.368215	0.926477	0.0778316	-112.783
+	0	0	0	1
+Relative starting energy: 20048.5
+Relative final energy: 20048.5
+Total number of maps: 1
+sulfonamide5HT2c_10  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.078125, 0
+Conf: conf81
+Fit: 2.32358
+Transform: 
+	0.12916	-0.474646	-0.870649	-399.031
+	-0.98913	-0.12389	-0.0791971	-92.275
+	0.0702739	-0.871414	0.485488	61.7844
+	0	0	0	1
+Relative starting energy: 46783.1
+Relative final energy: 46783.1
+Total number of maps: 1
+sulfonamide5HT2c_11  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.046875, 0.015625
+Conf: conf24
+Fit: 0.585127
+Transform: 
+	-0.124236	-0.454247	0.88217	-267.719
+	-0.89104	0.44226	0.102243	47.7396
+	0.436592	0.773347	0.459697	-26.4275
+	0	0	0	1
+Relative starting energy: 11550.9
+Relative final energy: 11550.9
+Total number of maps: 1
+sulfonamide5HT2c_12  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.078125, 0
+Conf: conf74
+Fit: 1.7694
+Transform: 
+	0.706944	0.701635	0.0890942	-62.2779
+	0.610305	-0.668826	0.424498	64.6363
+	-0.357432	0.245722	0.901035	-2.58675
+	0	0	0	1
+Relative starting energy: 38330.2
+Relative final energy: 38330.2
+Total number of maps: 1
+sulfonamide5HT2c_13  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.171875, 0
+Conf: conf143
+Fit: 2.20798
+Transform: 
+	0.721602	0.692278	0.00639911	-22.4093
+	0.447647	-0.47362	0.758483	139.107
+	-0.528112	0.544458	0.651662	58.223
+	0	0	0	1
+Relative starting energy: 40821
+Relative final energy: 40821
+Total number of maps: 1
+sulfonamide5HT2c_14  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.078125, 0
+Conf: conf71
+Fit: 1.72356
+Transform: 
+	0.706939	0.698186	0.113018	-81.1611
+	0.620788	-0.68909	0.373869	50.5126
+	-0.33891	0.194142	0.92057	-3.98325
+	0	0	0	1
+Relative starting energy: 37930.2
+Relative final energy: 37930.2
+Total number of maps: 1
+sulfonamide5HT2c_15  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.125, 0
+Conf: conf134
+Fit: 0.706133
+Transform: 
+	0.850999	0.37952	-0.362995	-13.9966
+	0.522788	-0.546472	0.654263	171.233
+	0.0499391	-0.746547	-0.663456	-10.063
+	0	0	0	1
+Relative starting energy: 13803.8
+Relative final energy: 13803.8
+Total number of maps: 1
+sulfonamide5HT2c_16  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.109375, 0
+Conf: conf178
+Fit: 1.33904
+Transform: 
+	0.722914	0.683927	-0.0981773	20.8748
+	0.690716	-0.711745	0.127795	123.337
+	0.0175251	-0.160197	-0.986929	7.80463
+	0	0	0	1
+Relative starting energy: 31466.3
+Relative final energy: 31466.3
+Total number of maps: 1
+sulfonamide5HT2c_17  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.125, 0
+Conf: conf59
+Fit: 1.94385
+Transform: 
+	0.820027	0.472836	-0.322463	-12.3064
+	0.422459	-0.119968	0.898408	134.737
+	-0.386114	0.872946	0.298131	39.2431
+	0	0	0	1
+Relative starting energy: 7444.85
+Relative final energy: 7444.85
+Total number of maps: 1
+sulfonamide5HT2c_18  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.109375, 0
+Conf: conf51
+Fit: 0.675041
+Transform: 
+	0.839629	0.533622	-0.101347	-102.196
+	0.24453	-0.204751	0.947778	51.7865
+	-0.485004	0.820564	0.302401	39.6835
+	0	0	0	1
+Relative starting energy: 7040.24
+Relative final energy: 7040.24
+Total number of maps: 1
+sulfonamide5HT2c_19  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.09375, 0
+Conf: conf78
+Fit: 1.76043
+Transform: 
+	0.476645	0.750111	0.458413	-216.174
+	0.871741	-0.335992	-0.356619	49.8551
+	-0.113481	0.569598	-0.814052	-99.5213
+	0	0	0	1
+Relative starting energy: 47916.5
+Relative final energy: 47916.5
+Total number of maps: 1
+sulfonamide5HT2c_20  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.078125, 0
+Conf: conf84
+Fit: 2.28284
+Transform: 
+	0.885443	0.0382629	0.46317	-198.166
+	0.128919	0.937273	-0.323883	58.8648
+	0.44651	-0.346491	-0.824968	-81.246
+	0	0	0	1
+Relative starting energy: 33677.4
+Relative final energy: 33677.4
+Total number of maps: 1
+sulfonamide5HT2c_21  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.078125, 0
+Conf: conf74
+Fit: 1.87421
+Transform: 
+	-0.875346	0.480944	-0.0496278	-179.78
+	-0.476635	-0.841132	0.255568	24.2869
+	0.0811704	0.247365	0.965516	-77.6522
+	0	0	0	1
+Relative starting energy: 49515.7
+Relative final energy: 49515.7
+Total number of maps: 1
+sulfonamide5HT2c_22  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.0625, 0
+Conf: conf3
+Fit: 0.591152
+Transform: 
+	-0.943006	0.176911	0.281854	-153.493
+	-0.318475	-0.725405	-0.610214	-61.0358
+	-0.096505	0.665199	-0.740403	14.2804
+	0	0	0	1
+Relative starting energy: 4123.48
+Relative final energy: 4123.48
+Total number of maps: 1
+sulfonamide5HT2c_23  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.109375, 0
+Conf: conf71
+Fit: 2.35062
+Transform: 
+	0.887286	0.0356735	0.459837	-182.723
+	0.199001	0.869815	-0.451465	66.9211
+	0.416079	-0.492087	-0.764676	-84.2101
+	0	0	0	1
+Relative starting energy: 38500.7
+Relative final energy: 38500.7
+Total number of maps: 1
+sulfonamide5HT2c_24  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.140625, 0
+Conf: conf138
+Fit: 2.20267
+Transform: 
+	0.939261	0.00472978	0.343171	-195.332
+	0.069882	0.976322	-0.204724	72.0847
+	0.336013	-0.216271	-0.916691	-83.9748
+	0	0	0	1
+Relative starting energy: 62898.7
+Relative final energy: 62898.7
+Total number of maps: 1
+sulfonamide5HT2c_25  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.078125, 0
+Conf: conf70
+Fit: 1.89752
+Transform: 
+	0.571655	-0.0109866	0.820421	-233.799
+	0.399215	0.877297	-0.266418	68.9568
+	0.716825	-0.479823	-0.505897	-74.0378
+	0	0	0	1
+Relative starting energy: 27821.4
+Relative final energy: 27821.4
+Total number of maps: 1
+Done!
+===== D:\Program Files\BIOVIA\PPS\apps\scitegic\dscore\server\bin\citest-bin -sd citest_in.sd -chm D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_4.ds_chm -bestonly -outsd citest_out.sd -omit -1 -mibd 200 -failsd fail.sd -fitname FitValue -shapename Shape -estname Estimate -mapidname MapID -pharmprintname Pharmprint -pharmtypename Pharmtype 
+
+Checked out license feature: DS_Chemistry <v2009.03> [for msi<TeAM SolidSQUAD-SSQ>] (1 copy)
+
+
+Nafoxidine Hydrochloride  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.015625, 0.015625
+Conf: conf21
+Fit: 2.44228
+Transform: 
+	0.267802	-0.963306	-0.0179636	-2.75637
+	-0.886998	-0.239223	-0.394976	120.794
+	0.376186	0.121709	-0.918516	-68.9007
+	0	0	0	1
+Relative starting energy: 25498
+Relative final energy: 25498
+Total number of maps: 1
+Trioxifene  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.234375, 0
+Conf: conf342
+Fit: 0.112953
+Transform: 
+	0.2356	-0.630305	0.739736	2.82118
+	-0.76435	-0.590273	-0.259513	10.9441
+	0.600218	-0.504276	-0.620842	-13.4803
+	0	0	0	1
+Relative starting energy: 72763.4
+Relative final energy: 72763.4
+Total number of maps: 1
+Nitromifene  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.03125, 0
+Conf: conf22
+Fit: 0.0238865
+Transform: 
+	0.450226	-0.74245	-0.496049	-140.358
+	0.1335	-0.493325	0.85954	6.39521
+	-0.882878	-0.45321	-0.122991	-56.7771
+	0	0	0	1
+Relative starting energy: 31100.6
+Relative final energy: 31100.6
+Total number of maps: 1
+Levormeloxifene  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.03125, 0
+Conf: conf6
+Fit: 1.38517
+Transform: 
+	-0.174283	-0.972484	-0.154594	-20.7057
+	-0.872501	0.0797325	0.482063	92.6684
+	0.456472	-0.218899	0.86239	-44.7748
+	0	0	0	1
+Relative starting energy: 14860.2
+Relative final energy: 14860.2
+Total number of maps: 1
+Raloxifene Hydorchloride  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.09375, 0
+Conf: conf45
+Fit: 3.15895
+Transform: 
+	-0.141869	0.0075698	0.989857	-220.816
+	-0.054035	0.998421	-0.0153797	-42.6398
+	-0.98841	-0.0556688	-0.141236	-8.67355
+	0	0	0	1
+Relative starting energy: 564.655
+Relative final energy: 564.655
+Total number of maps: 1
+(p-2-Diethylaminoethoxyphenyl)-1-phenyl-2-p-anisylethanol  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.109375, 0
+Conf: conf155
+Fit: 1.36591
+Transform: 
+	-0.669978	0.550265	0.498334	-70.4997
+	-0.0785926	-0.720066	0.689441	52.6905
+	0.738209	0.422745	0.525675	41.2051
+	0	0	0	1
+Relative starting energy: 75669.2
+Relative final energy: 75669.2
+Total number of maps: 1
+FLURAZEPAM  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.0625, 0
+Conf: conf2
+Fit: 2.15902
+Transform: 
+	0.286991	0.505134	-0.813926	-255.101
+	-0.20499	0.862371	0.46292	-61.8393
+	0.935743	0.0339922	0.35104	-33.7774
+	0	0	0	1
+Relative starting energy: 436.833
+Relative final energy: 436.833
+Total number of maps: 1
+Toremifene  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.171875, 0
+Conf: conf94
+Fit: 3.1479
+Transform: 
+	-0.735823	0.294237	-0.60991	-122.284
+	0.32264	0.9442	0.0662595	-177.464
+	-0.595373	0.148026	0.789696	-3.58136
+	0	0	0	1
+Relative starting energy: 47661.8
+Relative final energy: 47661.8
+Total number of maps: 1
+PIMOZIDE  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.0625, 0
+Conf: conf36
+Fit: 3.25249
+Transform: 
+	-0.600073	-0.487327	-0.63437	-290.071
+	0.691462	-0.71474	-0.10501	-181.213
+	-0.402236	-0.501656	0.765864	-137.444
+	0	0	0	1
+Relative starting energy: 55989.5
+Relative final energy: 55989.5
+Total number of maps: 1
+Ametik hydrochloride  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.171875, 0
+Conf: conf125
+Fit: 2.93875
+Transform: 
+	0.279607	-0.945032	-0.169511	116.464
+	-0.491317	0.0108498	-0.870913	166.654
+	0.82488	0.326797	-0.461277	-66.739
+	0	0	0	1
+Relative starting energy: 41978.6
+Relative final energy: 41978.6
+Total number of maps: 1
+Tamoxifen  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.15625, 0
+Conf: conf53
+Fit: 2.73091
+Transform: 
+	-0.213803	0.249565	-0.94446	-6.04279
+	-0.0889166	0.957831	0.273227	348.452
+	-0.972822	-0.142395	0.182596	-245.878
+	0	0	0	1
+Relative starting energy: 33469.5
+Relative final energy: 33469.5
+Total number of maps: 1
+Enclomiphene  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.203125, 0
+Conf: conf133
+Fit: 0.682832
+Transform: 
+	0.683534	-0.473574	-0.555436	-59.2796
+	-0.148148	0.655106	-0.74087	-30.4023
+	-0.714726	-0.588696	-0.377628	68.7012
+	0	0	0	1
+Relative starting energy: 44130.7
+Relative final energy: 44130.7
+Total number of maps: 1
+Acrichine  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.21875, 0.015625
+Conf: conf51
+Fit: 3.33101
+Transform: 
+	-0.924829	0.375799	0.058871	-145.036
+	-0.273116	-0.548304	-0.790424	90.8795
+	-0.264761	-0.747086	0.609725	-89.9553
+	0	0	0	1
+Relative starting energy: 23560
+Relative final energy: 23560
+Total number of maps: 1
+QUAZEPAM  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.015625, 0
+Conf: conf10
+Fit: 3.01836
+Transform: 
+	-0.0978823	0.888532	0.448253	48.0243
+	-0.8326	0.173619	-0.52596	258.881
+	0.545157	0.424697	-0.722797	49.4103
+	0	0	0	1
+Relative starting energy: 8112.45
+Relative final energy: 8112.45
+Total number of maps: 1
+HALOPERIDOL  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.078125, 0
+Conf: conf18
+Fit: 3.29855
+Transform: 
+	0.103318	0.754533	-0.648079	-163.098
+	-0.089997	0.655985	0.74939	42.9075
+	-0.990569	0.0191	-0.13568	79.3943
+	0	0	0	1
+Relative starting energy: 20237.5
+Relative final energy: 20237.5
+Total number of maps: 1
+THIORIDAZINE  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.15625, 0
+Conf: conf46
+Fit: 3.17212
+Transform: 
+	0.260069	0.587916	-0.765975	146.488
+	0.849764	-0.516068	-0.107585	137.009
+	-0.458547	-0.622919	-0.633804	-122.777
+	0	0	0	1
+Relative starting energy: 32545.8
+Relative final energy: 32545.8
+Total number of maps: 1
+Aminazin monohydrochloride  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.078125, 0
+Conf: conf13
+Fit: 0.94015
+Transform: 
+	-0.394141	-0.664548	0.634846	192.466
+	0.585497	-0.714007	-0.383909	81.146
+	-0.708411	-0.220386	-0.67051	60.2799
+	0	0	0	1
+Relative starting energy: 10534.9
+Relative final energy: 10534.9
+Total number of maps: 1
+Done!
+===== D:\Program Files\BIOVIA\PPS\apps\scitegic\dscore\server\bin\citest-bin -sd citest_in.sd -chm D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_5.ds_chm -bestonly -outsd citest_out.sd -omit -1 -mibd 200 -failsd fail.sd -fitname FitValue -shapename Shape -estname Estimate -mapidname MapID -pharmprintname Pharmprint -pharmtypename Pharmtype 
+
+Checked out license feature: DS_Chemistry <v2009.03> [for msi<TeAM SolidSQUAD-SSQ>] (1 copy)
+
+
+sulfonamide5HT2c_07  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.0625, 0
+Conf: conf22
+Fit: 1.74155
+Transform: 
+	0.950688	0.309294	-0.0230099	25.7752
+	-0.304939	0.945683	0.112674	-55.5261
+	0.0566094	-0.100101	0.993366	-119.859
+	0	0	0	1
+Relative starting energy: 14975.2
+Relative final energy: 14975.2
+Total number of maps: 1
+sulfonamide5HT2c_08  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.046875, 0
+Conf: conf37
+Fit: 0.040432
+Transform: 
+	0.94054	-0.202979	0.272366	-135.796
+	-0.157333	0.450313	0.8789	-60.4135
+	-0.301048	-0.869493	0.391602	-9.45492
+	0	0	0	1
+Relative starting energy: 20048.5
+Relative final energy: 20048.5
+Total number of maps: 1
+sulfonamide5HT2c_10  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.0625, 0
+Conf: conf11
+Fit: 2.11592
+Transform: 
+	-0.716891	0.64687	0.260049	416.923
+	-0.693722	-0.624724	-0.358426	-30.1517
+	0.0693968	0.437354	-0.896608	88.6109
+	0	0	0	1
+Relative starting energy: 8483.22
+Relative final energy: 8483.22
+Total number of maps: 1
+sulfonamide5HT2c_11  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.0625, 0
+Conf: conf54
+Fit: 0.0473253
+Transform: 
+	-0.869026	-0.250888	-0.426437	265.805
+	-0.179078	-0.643961	0.743804	-100.815
+	-0.46122	0.722751	0.514691	27.9963
+	0	0	0	1
+Relative starting energy: 26187.7
+Relative final energy: 26187.7
+Total number of maps: 1
+sulfonamide5HT2c_12  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.078125, 0
+Conf: conf63
+Fit: 1.71074
+Transform: 
+	0.0260441	-0.736033	-0.676445	18.1821
+	-0.635181	-0.534703	0.557349	-201.55
+	0.771924	-0.415149	0.48144	-281.311
+	0	0	0	1
+Relative starting energy: 36917.2
+Relative final energy: 36917.2
+Total number of maps: 1
+sulfonamide5HT2c_13  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.15625, 0
+Conf: conf29
+Fit: 1.71973
+Transform: 
+	-0.240506	-0.503546	0.829818	-2.35084
+	-0.22956	-0.801151	-0.552684	-237.803
+	0.943111	-0.323417	0.0770878	-276.82
+	0	0	0	1
+Relative starting energy: 8618.84
+Relative final energy: 8618.84
+Total number of maps: 1
+sulfonamide5HT2c_14  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.078125, 0
+Conf: conf30
+Fit: 1.69014
+Transform: 
+	-0.374323	-0.439161	0.816713	40.5833
+	-0.327644	-0.761297	-0.559532	-200.358
+	0.867486	-0.477037	0.141082	-288.466
+	0	0	0	1
+Relative starting energy: 19443.8
+Relative final energy: 19443.8
+Total number of maps: 1
+sulfonamide5HT2c_15  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.125, 0
+Conf: conf122
+Fit: 0.654841
+Transform: 
+	0.886876	-0.458581	-0.0561618	109.717
+	0.392767	0.812381	-0.431012	-128.468
+	0.243278	0.360195	0.900597	-104.108
+	0	0	0	1
+Relative starting energy: 13372.5
+Relative final energy: 13372.5
+Total number of maps: 1
+sulfonamide5HT2c_16  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.125, 0
+Conf: conf65
+Fit: 0.514666
+Transform: 
+	-0.631424	0.76396	0.132921	195.065
+	-0.730051	-0.643451	0.23021	-213.287
+	-0.2614	-0.0483209	-0.96402	12.216
+	0	0	0	1
+Relative starting energy: 9505.71
+Relative final energy: 9505.71
+Total number of maps: 1
+sulfonamide5HT2c_17  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.109375, 0
+Conf: conf98
+Fit: 1.70128
+Transform: 
+	0.0506097	-0.588065	-0.807229	24.0694
+	-0.626249	-0.648306	0.433027	-188.999
+	0.777979	-0.483611	0.401086	-301.136
+	0	0	0	1
+Relative starting energy: 10538.7
+Relative final energy: 10538.7
+Total number of maps: 1
+sulfonamide5HT2c_18  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.140625, 0
+Conf: conf137
+Fit: 1.72447
+Transform: 
+	-0.31361	-0.571422	0.758371	16.4247
+	-0.399022	-0.645416	-0.651321	-180.922
+	0.861644	-0.506868	-0.0256007	-287.697
+	0	0	0	1
+Relative starting energy: 18115.7
+Relative final energy: 18115.7
+Total number of maps: 1
+sulfonamide5HT2c_19  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.109375, 0
+Conf: conf82
+Fit: 2.75455
+Transform: 
+	-0.175847	0.526543	-0.831763	221.48
+	-0.944065	0.149231	0.294059	-206.823
+	-0.27896	-0.836948	-0.470849	-43.3697
+	0	0	0	1
+Relative starting energy: 74990.6
+Relative final energy: 74990.6
+Total number of maps: 1
+sulfonamide5HT2c_20  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.109375, 0
+Conf: conf84
+Fit: 3.14193
+Transform: 
+	0.0393959	0.997641	-0.0562226	348.435
+	0.982682	-0.0284867	0.183096	-56.9796
+	-0.181062	0.0624622	0.981486	28.4229
+	0	0	0	1
+Relative starting energy: 33677.4
+Relative final energy: 33677.4
+Total number of maps: 1
+sulfonamide5HT2c_21  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.109375, 0
+Conf: conf82
+Fit: 2.99802
+Transform: 
+	-0.519034	-0.844952	0.129074	312.688
+	-0.828801	0.534432	0.165747	-52.0038
+	-0.20903	-0.0209483	-0.977685	72.8254
+	0	0	0	1
+Relative starting energy: 58161.1
+Relative final energy: 58161.1
+Total number of maps: 1
+sulfonamide5HT2c_22  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.09375, 0
+Conf: conf59
+Fit: 2.71341
+Transform: 
+	-0.0323277	0.621211	0.782977	247.269
+	0.743525	0.538465	-0.396517	-195.905
+	0.667926	-0.569345	0.479293	-61.4238
+	0	0	0	1
+Relative starting energy: 65403.7
+Relative final energy: 65403.7
+Total number of maps: 1
+sulfonamide5HT2c_23  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.125, 0
+Conf: conf71
+Fit: 3.46008
+Transform: 
+	-0.946671	-0.139764	-0.29031	36.7492
+	0.246048	-0.895319	-0.371302	-274.074
+	-0.208026	-0.422931	0.881961	-51.6433
+	0	0	0	1
+Relative starting energy: 38500.7
+Relative final energy: 38500.7
+Total number of maps: 1
+sulfonamide5HT2c_24  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.1875, 0
+Conf: conf138
+Fit: 3.64651
+Transform: 
+	-0.964445	-0.18053	-0.193014	38.1211
+	0.262946	-0.728835	-0.632186	-276.504
+	-0.0265468	-0.660461	0.750391	-53.7205
+	0	0	0	1
+Relative starting energy: 62898.7
+Relative final energy: 62898.7
+Total number of maps: 1
+sulfonamide5HT2c_25  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.125, 0
+Conf: conf70
+Fit: 3.33781
+Transform: 
+	-0.911412	-0.371227	-0.177535	42.241
+	0.406401	-0.879719	-0.246846	-250.508
+	0.0645453	0.297129	-0.952653	-3.11101
+	0	0	0	1
+Relative starting energy: 27821.4
+Relative final energy: 27821.4
+Total number of maps: 1
+Done!
+===== D:\Program Files\BIOVIA\PPS\apps\scitegic\dscore\server\bin\citest-bin -sd citest_in.sd -chm D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_5.ds_chm -bestonly -outsd citest_out.sd -omit -1 -mibd 200 -failsd fail.sd -fitname FitValue -shapename Shape -estname Estimate -mapidname MapID -pharmprintname Pharmprint -pharmtypename Pharmtype 
+
+Checked out license feature: DS_Chemistry <v2009.03> [for msi<TeAM SolidSQUAD-SSQ>] (1 copy)
+
+
+Nafoxidine Hydrochloride  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.03125, 0.015625
+Conf: conf15
+Fit: 0.617963
+Transform: 
+	0.188954	0.981113	-0.0414044	-5.44534
+	0.969985	-0.19305	-0.147856	-85.3066
+	0.153057	0.0122237	0.988142	-28.8718
+	0	0	0	1
+Relative starting energy: 21013.5
+Relative final energy: 21013.5
+Total number of maps: 1
+Trioxifene  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.25, 0
+Conf: conf232
+Fit: 0.658547
+Transform: 
+	-0.655479	0.552683	-0.514673	60.5825
+	-0.719165	-0.664835	0.201982	-27.4139
+	-0.23054	0.502529	0.833256	56.2592
+	0	0	0	1
+Relative starting energy: 35296.8
+Relative final energy: 35296.8
+Total number of maps: 1
+Nitromifene  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.046875, 0
+Conf: conf27
+Fit: 2.4445
+Transform: 
+	-0.565903	0.491423	-0.66201	-213.836
+	0.0537927	-0.779232	-0.624423	-120.592
+	0.822715	0.388974	-0.414535	-91.95
+	0	0	0	1
+Relative starting energy: 34066.5
+Relative final energy: 34066.5
+Total number of maps: 1
+Levormeloxifene  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.046875, 0
+Conf: conf29
+Fit: 0.765106
+Transform: 
+	0.650199	0.72499	0.227226	41.1992
+	0.7345	-0.523325	-0.432019	-114.748
+	0.194297	-0.447796	0.87277	16.0533
+	0	0	0	1
+Relative starting energy: 140535
+Relative final energy: 140535
+Total number of maps: 1
+Raloxifene Hydorchloride  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.09375, 0
+Conf: conf60
+Fit: 2.39159
+Transform: 
+	-0.023975	0.929506	0.368028	85.0565
+	-0.456626	0.317306	-0.831149	-118.133
+	0.889335	0.187978	-0.416829	-3.32067
+	0	0	0	1
+Relative starting energy: 26836.6
+Relative final energy: 26836.6
+Total number of maps: 1
+(p-2-Diethylaminoethoxyphenyl)-1-phenyl-2-p-anisylethanol  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.171875, 0
+Conf: conf2
+Fit: 3.32475
+Transform: 
+	-0.706811	-0.62184	-0.337243	193.634
+	0.486297	-0.0808967	-0.870041	-250.839
+	0.513744	-0.778955	0.359578	2.12582
+	0	0	0	1
+Relative starting energy: 2035.5
+Relative final energy: 2035.5
+Total number of maps: 1
+FLURAZEPAM  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.046875, 0
+Conf: conf9
+Fit: 4.1456
+Transform: 
+	-0.563125	0.823732	0.0660032	92.3861
+	0.823852	0.565847	-0.0329457	-157.166
+	-0.0644861	0.0358244	-0.997275	-12.3276
+	0	0	0	1
+Relative starting energy: 6557.32
+Relative final energy: 6557.32
+Total number of maps: 1
+Toremifene  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.21875, 0
+Conf: conf133
+Fit: 3.08006
+Transform: 
+	0.157377	-0.833838	0.5291	232.873
+	-0.978748	-0.203029	-0.0288439	-24.7964
+	0.131474	-0.513316	-0.848069	-69.1702
+	0	0	0	1
+Relative starting energy: 61716.4
+Relative final energy: 61716.4
+Total number of maps: 1
+PIMOZIDE  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.0625, 0
+Conf: conf9
+Fit: 3.35177
+Transform: 
+	-0.138665	0.77082	0.621779	102.851
+	-0.147013	0.604866	-0.782639	-134.885
+	-0.979367	-0.199935	0.0294467	83.8788
+	0	0	0	1
+Relative starting energy: 9576.7
+Relative final energy: 9576.7
+Total number of maps: 1
+Ametik hydrochloride  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.15625, 0
+Conf: conf63
+Fit: 2.89415
+Transform: 
+	-0.434321	0.00860092	-0.900717	356.442
+	0.486498	-0.839324	-0.242601	125.342
+	-0.75808	-0.543564	0.360351	95.4631
+	0	0	0	1
+Relative starting energy: 29210.2
+Relative final energy: 29210.2
+Total number of maps: 1
+Tamoxifen  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.125, 0
+Conf: conf13
+Fit: 0.952157
+Transform: 
+	0.410601	0.630755	0.658449	-15.942
+	-0.152919	0.759537	-0.632233	-73.2261
+	0.898901	-0.158906	-0.408322	-26.9823
+	0	0	0	1
+Relative starting energy: 13544.8
+Relative final energy: 13544.8
+Total number of maps: 1
+Enclomiphene  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.1875, 0
+Conf: conf112
+Fit: 1.18638
+Transform: 
+	-0.760368	-0.422323	0.493441	-87.8735
+	-0.249476	-0.511541	-0.822245	-5.92436
+	0.599669	-0.748311	0.283599	-26.189
+	0	0	0	1
+Relative starting energy: 39233.9
+Relative final energy: 39233.9
+Total number of maps: 1
+Acrichine  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.171875, 0.015625
+Conf: conf25
+Fit: 3.11953
+Transform: 
+	0.890929	-0.441332	0.107105	188.357
+	-0.110524	0.018041	0.99371	-251.814
+	0.440488	0.897162	0.0327047	18.5167
+	0	0	0	1
+Relative starting energy: 14450.4
+Relative final energy: 14450.4
+Total number of maps: 1
+QUAZEPAM  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.015625, 0
+Conf: conf15
+Fit: 3.64915
+Transform: 
+	-0.584493	0.673922	-0.451882	270.099
+	0.796123	0.583878	-0.15898	-136.474
+	-0.156704	0.452677	0.877797	-7.97639
+	0	0	0	1
+Relative starting energy: 34159.1
+Relative final energy: 34159.1
+Total number of maps: 1
+HALOPERIDOL  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.09375, 0
+Conf: conf18
+Fit: 3.51777
+Transform: 
+	0.3893	-0.914655	-0.108865	124.004
+	-0.629537	-0.177927	-0.756323	-55.4966
+	-0.672405	-0.362971	0.645076	71.1109
+	0	0	0	1
+Relative starting energy: 20237.5
+Relative final energy: 20237.5
+Total number of maps: 1
+THIORIDAZINE  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.125, 0
+Conf: conf79
+Fit: 3.39345
+Transform: 
+	-0.81925	-0.329758	0.469138	-89.6985
+	-0.541406	0.714399	-0.443299	-56.7161
+	0.18897	0.617166	0.763804	-106.405
+	0	0	0	1
+Relative starting energy: 51126.3
+Relative final energy: 51126.3
+Total number of maps: 1
+Aminazin monohydrochloride  modelThresh=0  compareThresh=3.40282e+38
+MinInterBlobDistance= 200
+Compare uTime, sTime = 0.0625, 0
+Conf: conf23
+Fit: 1.8417
+Transform: 
+	-0.634891	0.548937	-0.543673	34.4451
+	-0.727554	-0.661564	0.181655	-43.7801
+	-0.259958	0.510883	0.819403	12.4554
+	0	0	0	1
+Relative starting energy: 20078.5
+Relative final energy: 20078.5
+Total number of maps: 1
+Done!

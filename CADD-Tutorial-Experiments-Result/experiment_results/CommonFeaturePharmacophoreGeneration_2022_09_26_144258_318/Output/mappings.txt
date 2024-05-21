@@ -1,0 +1,525 @@
+Summary of mapping of compound "sulfonamide5HT2c_07" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_1.ds_chm":
+| Query Atom heavyAtom1 mapped to Atom O14 (-1.442233 -1.911589 2.558151) angstroms
+Summary of mapping of compound "sulfonamide5HT2c_08" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_1.ds_chm":
+| Query Atom heavyAtom1 mapped to Atom O14 (-1.742183 -2.166245 2.435195) angstroms
+Summary of mapping of compound "sulfonamide5HT2c_10" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_1.ds_chm":
+| Query Atom heavyAtom1 mapped to Atom O14 (-1.375310 -1.610759 2.405438) angstroms
+Summary of mapping of compound "sulfonamide5HT2c_11" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_1.ds_chm":
+| Query Atom heavyAtom1 mapped to Atom O20 (-1.123481 -1.050350 2.007265) angstroms
+Summary of mapping of compound "sulfonamide5HT2c_12" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_1.ds_chm":
+| Query Atom heavyAtom1 mapped to Atom O17 (-1.628689 0.223022 1.459162) angstroms
+Summary of mapping of compound "sulfonamide5HT2c_13" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_1.ds_chm":
+| Query Atom heavyAtom1 mapped to Atom O17 (-1.233919 0.321289 1.609006) angstroms
+Summary of mapping of compound "sulfonamide5HT2c_14" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_1.ds_chm":
+| Query Atom heavyAtom1 mapped to Atom O17 (-1.263686 0.086908 1.644514) angstroms
+Summary of mapping of compound "sulfonamide5HT2c_15" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_1.ds_chm":
+| Query Atom heavyAtom1 mapped to Atom O11 (-1.368539 -1.770063 1.432450) angstroms
+Summary of mapping of compound "sulfonamide5HT2c_16" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_1.ds_chm":
+| Query Atom heavyAtom1 mapped to Atom O11 (-1.470012 0.016803 1.142237) angstroms
+Summary of mapping of compound "sulfonamide5HT2c_17" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_1.ds_chm":
+| Query Atom heavyAtom1 mapped to Atom O17 (-1.441837 0.047398 1.576128) angstroms
+Summary of mapping of compound "sulfonamide5HT2c_18" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_1.ds_chm":
+| Query Atom heavyAtom1 mapped to Atom O11 (-1.236351 -0.379264 3.461642) angstroms
+Summary of mapping of compound "sulfonamide5HT2c_19" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_1.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom O17 (0.187307 0.699399 -0.024310) angstroms
+| Query Atom heavyAtom1 mapped to Atom O11 (0.049027 0.732307 2.396783) angstroms
+Summary of mapping of compound "sulfonamide5HT2c_20" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_1.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom O11 (0.140631 0.914305 -0.044141) angstroms
+| Query Atom heavyAtom1 mapped to Atom O17 (0.172232 0.808551 2.380709) angstroms
+Summary of mapping of compound "sulfonamide5HT2c_21" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_1.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom O17 (-0.046733 0.800104 -0.164628) angstroms
+| Query Atom heavyAtom1 mapped to Atom O11 (-0.010025 0.806408 2.259274) angstroms
+Summary of mapping of compound "sulfonamide5HT2c_22" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_1.ds_chm":
+| Query Atom heavyAtom1 mapped to Atom O11 (-0.820935 0.321882 1.644016) angstroms
+Summary of mapping of compound "sulfonamide5HT2c_23" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_1.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom O17 (0.066005 0.849597 -0.142369) angstroms
+| Query Atom heavyAtom1 mapped to Atom O11 (0.055558 0.851069 2.281578) angstroms
+Summary of mapping of compound "sulfonamide5HT2c_24" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_1.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom O17 (0.665644 0.625651 0.178130) angstroms
+| Query Atom heavyAtom1 mapped to Atom O11 (0.339742 0.738614 2.579108) angstroms
+Summary of mapping of compound "sulfonamide5HT2c_25" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_1.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom O11 (0.514556 1.137356 0.255052) angstroms
+| Query Atom heavyAtom1 mapped to Atom O17 (0.078628 1.022025 2.638395) angstroms
+Summary of mapping of compound "Nafoxidine Hydrochloride" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_1.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom O24 (2.312044 3.888752 -0.834520) angstroms
+Summary of mapping of compound "Trioxifene" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_1.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom O26 (2.271965 1.600665 -0.755663) angstroms
+| Query Atom heavyAtom1 mapped to Atom O10 (-2.822917 -0.622405 2.278976) angstroms
+Summary of mapping of compound "Nitromifene" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_1.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom O24 (2.355091 2.450546 0.943216) angstroms
+| Query Atom heavyAtom1 mapped to Atom O13 (-0.934678 -1.204689 2.510819) angstroms
+Summary of mapping of compound "Levormeloxifene" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_1.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom O24 (3.068708 1.883544 0.996213) angstroms
+| Query Atom heavyAtom1 mapped to Atom O11 (-0.177161 -1.425088 2.059607) angstroms
+Summary of mapping of compound "Raloxifene Hydorchloride" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_1.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom O26 (1.680701 1.983359 -0.826156) angstroms
+| Query Atom heavyAtom1 mapped to Atom O10 (-2.187445 -1.569203 2.714462) angstroms
+Summary of mapping of compound "(p-2-Diethylaminoethoxyphenyl)-1-phenyl-2-p-anisylethanol" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_1.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom O21 (2.202615 4.028718 -0.851438) angstroms
+| Query Atom heavyAtom1 mapped to Atom O24 (-1.681307 -0.506681 -0.030806) angstroms
+Summary of mapping of compound "FLURAZEPAM" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_1.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom O19 (1.328536 1.980556 -0.453244) angstroms
+| Query Atom heavyAtom1 mapped to Atom N10 (-0.650364 -0.061529 1.291222) angstroms
+Summary of mapping of compound "Toremifene" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_1.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom O24 (1.998996 2.284819 0.213855) angstroms
+Summary of mapping of compound "PIMOZIDE" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_1.ds_chm":
+| Query Atom heavyAtom1 mapped to Atom O10 (-1.099337 -2.145054 2.121112) angstroms
+Summary of mapping of compound "Ametik hydrochloride" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_1.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom O13 (1.902238 2.363067 -0.595117) angstroms
+| Query Atom heavyAtom1 mapped to Atom O3 (-0.642260 -1.161697 2.130969) angstroms
+Summary of mapping of compound "Tamoxifen" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_1.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom O23 (2.209975 3.867977 -0.689731) angstroms
+Summary of mapping of compound "Enclomiphene" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_1.ds_chm":
+| Query Atom heavyAtom1 mapped to Atom O21 (-1.642889 0.025893 0.999511) angstroms
+Summary of mapping of compound "Acrichine" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_1.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom O21 (3.183083 3.496002 2.565954) angstroms
+| Query Atom heavyAtom1 mapped to Atom N14 (-1.366444 0.574043 1.292026) angstroms
+Summary of mapping of compound "QUAZEPAM" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_1.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom N10 (0.478535 3.399041 0.524303) angstroms
+| Query Atom heavyAtom1 mapped to Atom S18 (-0.979334 0.050563 1.297117) angstroms
+Summary of mapping of compound "HALOPERIDOL" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_1.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom O10 (3.039239 4.132157 0.046453) angstroms
+| Query Atom heavyAtom1 mapped to Atom O19 (-0.106411 -1.960205 1.898255) angstroms
+Summary of mapping of compound "THIORIDAZINE" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_1.ds_chm":
+| Query Atom heavyAtom1 mapped to Atom S16 (-2.031833 -0.858248 1.177280) angstroms
+Summary of mapping of compound "Aminazin monohydrochloride" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_1.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom S8 (2.735966 4.659758 -0.463343) angstroms
+Summary of mapping of compound "sulfonamide5HT2c_07" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_2.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom O14 (0.994776 -3.480498 -1.544160) angstroms
+Summary of mapping of compound "sulfonamide5HT2c_08" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_2.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom O20 (1.276798 -3.276757 -1.507806) angstroms
+Summary of mapping of compound "sulfonamide5HT2c_10" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_2.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom O14 (0.095022 -3.146514 -0.937925) angstroms
+Summary of mapping of compound "sulfonamide5HT2c_11" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_2.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom O14 (0.042334 -3.286692 -0.930657) angstroms
+Summary of mapping of compound "sulfonamide5HT2c_12" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_2.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom O11 (0.281459 -2.331856 -1.274970) angstroms
+| Query Atom heavyAtom1 mapped to Atom O17 (-1.039007 -0.298132 -1.295276) angstroms
+Summary of mapping of compound "sulfonamide5HT2c_13" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_2.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom O11 (0.189823 -2.243900 -1.125895) angstroms
+| Query Atom heavyAtom1 mapped to Atom O17 (-1.300123 -0.337211 -1.305627) angstroms
+Summary of mapping of compound "sulfonamide5HT2c_14" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_2.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom O17 (0.214006 -2.326720 -1.145826) angstroms
+| Query Atom heavyAtom1 mapped to Atom O11 (-1.050729 -0.271165 -1.377870) angstroms
+Summary of mapping of compound "sulfonamide5HT2c_15" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_2.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom O17 (0.610805 -2.925837 -1.710698) angstroms
+Summary of mapping of compound "sulfonamide5HT2c_16" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_2.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom O11 (0.452431 -2.126408 -1.703593) angstroms
+| Query Atom heavyAtom1 mapped to Atom S21 (-0.193554 0.998217 -1.663436) angstroms
+Summary of mapping of compound "sulfonamide5HT2c_17" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_2.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom O11 (0.260306 -2.365378 -1.295325) angstroms
+| Query Atom heavyAtom1 mapped to Atom O17 (-1.060235 -0.330170 -1.306908) angstroms
+Summary of mapping of compound "sulfonamide5HT2c_18" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_2.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom N25 (1.661029 -2.460275 -1.625563) angstroms
+Summary of mapping of compound "sulfonamide5HT2c_19" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_2.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom O11 (0.051389 -1.584302 -2.877692) angstroms
+| Query Atom heavyAtom1 mapped to Atom O17 (-0.255225 -0.350041 -0.812630) angstroms
+Summary of mapping of compound "sulfonamide5HT2c_20" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_2.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom O17 (-0.040152 -1.509497 -2.934849) angstroms
+| Query Atom heavyAtom1 mapped to Atom O11 (-0.208598 -0.145231 -0.934228) angstroms
+Summary of mapping of compound "sulfonamide5HT2c_21" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_2.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom O11 (0.128849 -1.463179 -2.828348) angstroms
+| Query Atom heavyAtom1 mapped to Atom O17 (-0.031282 -0.181361 -0.775212) angstroms
+Summary of mapping of compound "sulfonamide5HT2c_22" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_2.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom O11 (0.788260 -1.725431 -2.485836) angstroms
+Summary of mapping of compound "sulfonamide5HT2c_23" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_2.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom O17 (0.689822 -1.157364 -3.618441) angstroms
+| Query Atom heavyAtom1 mapped to Atom O11 (-0.570024 -0.658165 -1.606802) angstroms
+Summary of mapping of compound "sulfonamide5HT2c_24" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_2.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom O11 (-0.007602 -2.147582 -2.058080) angstroms
+| Query Atom heavyAtom1 mapped to Atom O30 (-0.030187 2.562731 -1.380185) angstroms
+Summary of mapping of compound "sulfonamide5HT2c_25" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_2.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom O17 (0.266662 -1.511977 -3.358282) angstroms
+| Query Atom heavyAtom1 mapped to Atom O11 (-0.431988 -0.239734 -1.414846) angstroms
+Summary of mapping of compound "Nafoxidine Hydrochloride" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_2.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom O22 (1.645699 -2.778713 -0.826176) angstroms
+Summary of mapping of compound "Trioxifene" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_2.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom O10 (3.206807 -2.967512 -1.799349) angstroms
+| Query Atom heavyAtom1 mapped to Atom O26 (-2.277997 0.149027 -1.230196) angstroms
+Summary of mapping of compound "Nitromifene" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_2.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom O14 (0.428553 -0.483593 -2.006043) angstroms
+| Query Atom heavyAtom1 mapped to Atom O13 (-1.433202 0.260155 -1.161762) angstroms
+Summary of mapping of compound "Levormeloxifene" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_2.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom O11 (0.616443 -3.204304 -1.473849) angstroms
+| Query Atom heavyAtom1 mapped to Atom O24 (-3.254709 -0.504517 -2.060863) angstroms
+Summary of mapping of compound "Raloxifene Hydorchloride" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_2.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom S6 (2.397175 -4.298540 -0.487059) angstroms
+| Query Atom heavyAtom1 mapped to Atom O25 (-1.913092 0.633795 -1.257862) angstroms
+Summary of mapping of compound "(p-2-Diethylaminoethoxyphenyl)-1-phenyl-2-p-anisylethanol" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_2.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom O5 (2.408729 -4.423457 -0.800611) angstroms
+| Query Atom heavyAtom1 mapped to Atom O21 (-1.548321 0.347992 -1.462794) angstroms
+Summary of mapping of compound "FLURAZEPAM" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_2.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom N10 (0.898110 -2.156143 -1.607200) angstroms
+| Query Atom heavyAtom1 mapped to Atom O19 (-1.993000 -0.509161 -1.859753) angstroms
+Summary of mapping of compound "Toremifene" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_2.ds_chm":
+| Query Atom heavyAtom1 mapped to Atom O24 (-2.075244 0.099665 -1.990613) angstroms
+Summary of mapping of compound "PIMOZIDE" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_2.ds_chm":
+| Query Atom heavyAtom1 mapped to Atom O10 (-0.518117 0.880498 -1.741639) angstroms
+Summary of mapping of compound "Ametik hydrochloride" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_2.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom O3 (0.808459 -3.038208 -0.833420) angstroms
+| Query Atom heavyAtom1 mapped to Atom O15 (-1.912939 1.088626 -2.123886) angstroms
+Summary of mapping of compound "Tamoxifen" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_2.ds_chm":
+| Query Atom heavyAtom1 mapped to Atom O23 (-2.562861 2.607999 -2.103803) angstroms
+Summary of mapping of compound "Enclomiphene" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_2.ds_chm":
+| Query Atom heavyAtom1 mapped to Atom O21 (-1.647771 -0.396872 -0.973882) angstroms
+Summary of mapping of compound "Acrichine" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_2.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom N14 (1.515894 -1.082719 -1.095835) angstroms
+| Query Atom heavyAtom1 mapped to Atom O21 (-3.501184 -0.017034 -3.226249) angstroms
+Summary of mapping of compound "QUAZEPAM" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_2.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom S18 (0.977660 -0.963708 -0.995943) angstroms
+| Query Atom heavyAtom1 mapped to Atom N10 (-2.062920 0.690032 -2.396986) angstroms
+Summary of mapping of compound "HALOPERIDOL" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_2.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom O19 (-1.239253 -2.617900 1.036794) angstroms
+| Query Atom heavyAtom1 mapped to Atom O10 (-0.944168 1.988717 -3.378232) angstroms
+Summary of mapping of compound "THIORIDAZINE" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_2.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom S16 (2.253347 -2.130166 -0.930752) angstroms
+Summary of mapping of compound "Aminazin monohydrochloride" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_2.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom S8 (0.879991 -1.493007 -1.633707) angstroms
+Summary of mapping of compound "sulfonamide5HT2c_07" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_3.ds_chm":
+| Query Atom heavyAtom1 mapped to Atom O14 (-8.323431 -0.619854 -7.082927) angstroms
+Summary of mapping of compound "sulfonamide5HT2c_08" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_3.ds_chm":
+| Query Atom heavyAtom1 mapped to Atom O14 (-8.224452 -0.259371 -5.676645) angstroms
+Summary of mapping of compound "sulfonamide5HT2c_10" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_3.ds_chm":
+| Query Atom heavyAtom1 mapped to Atom O14 (-9.240939 0.007007 -5.389802) angstroms
+Summary of mapping of compound "sulfonamide5HT2c_11" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_3.ds_chm":
+| Query Atom heavyAtom1 mapped to Atom O20 (-8.033402 -0.278970 -6.734981) angstroms
+Summary of mapping of compound "sulfonamide5HT2c_12" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_3.ds_chm":
+| Query Atom heavyAtom1 mapped to Atom O11 (-7.552043 -0.296964 -6.733832) angstroms
+Summary of mapping of compound "sulfonamide5HT2c_13" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_3.ds_chm":
+| Query Atom heavyAtom1 mapped to Atom O11 (-7.444021 -0.684605 -6.598337) angstroms
+Summary of mapping of compound "sulfonamide5HT2c_14" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_3.ds_chm":
+| Query Atom heavyAtom1 mapped to Atom O17 (-7.579905 -0.453791 -6.700565) angstroms
+Summary of mapping of compound "sulfonamide5HT2c_15" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_3.ds_chm":
+| Query Atom heavyAtom1 mapped to Atom O11 (-9.133070 0.435349 -5.463236) angstroms
+Summary of mapping of compound "sulfonamide5HT2c_16" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_3.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom O11 (-4.013428 0.030919 -6.139870) angstroms
+| Query Atom heavyAtom1 mapped to Atom S21 (-7.176171 0.232145 -5.530199) angstroms
+Summary of mapping of compound "sulfonamide5HT2c_17" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_3.ds_chm":
+| Query Atom heavyAtom1 mapped to Atom O11 (-7.572030 -0.389716 -6.696019) angstroms
+Summary of mapping of compound "sulfonamide5HT2c_18" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_3.ds_chm":
+| Query Atom heavyAtom1 mapped to Atom O17 (-8.118633 -0.944975 -6.536062) angstroms
+Summary of mapping of compound "sulfonamide5HT2c_19" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_3.ds_chm":
+| Query Atom heavyAtom1 mapped to Atom O11 (-7.059358 -0.303842 -6.439098) angstroms
+Summary of mapping of compound "sulfonamide5HT2c_20" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_3.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom O11 (-3.677230 -0.256255 -6.863871) angstroms
+Summary of mapping of compound "sulfonamide5HT2c_21" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_3.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom O11 (-3.803555 -0.342204 -6.318126) angstroms
+Summary of mapping of compound "sulfonamide5HT2c_22" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_3.ds_chm":
+| Query Atom heavyAtom1 mapped to Atom O17 (-6.966178 -0.303834 -6.448218) angstroms
+Summary of mapping of compound "sulfonamide5HT2c_23" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_3.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom O11 (-3.606711 -0.226309 -6.279530) angstroms
+Summary of mapping of compound "sulfonamide5HT2c_24" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_3.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom O17 (-3.599214 0.016060 -6.733001) angstroms
+Summary of mapping of compound "sulfonamide5HT2c_25" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_3.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom O17 (-3.872307 -0.243820 -6.161590) angstroms
+Summary of mapping of compound "Nafoxidine Hydrochloride" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_3.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom O24 (-4.080600 -0.228941 -5.988484) angstroms
+Summary of mapping of compound "Trioxifene" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_3.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom O26 (-3.185550 -0.218842 -6.238750) angstroms
+| Query Atom heavyAtom1 mapped to Atom O10 (-9.431075 0.728193 -6.691069) angstroms
+Summary of mapping of compound "Nitromifene" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_3.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom O14 (-4.543641 -0.548493 -7.166080) angstroms
+| Query Atom heavyAtom1 mapped to Atom O13 (-6.272500 0.572383 -7.864211) angstroms
+Summary of mapping of compound "Levormeloxifene" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_3.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom O11 (-2.727326 -1.240119 -7.941786) angstroms
+| Query Atom heavyAtom1 mapped to Atom O26 (-9.150286 0.101278 -4.686429) angstroms
+Summary of mapping of compound "Raloxifene Hydorchloride" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_3.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom O26 (-1.992763 -0.303614 -7.170740) angstroms
+| Query Atom heavyAtom1 mapped to Atom O25 (-8.237937 -0.728246 -7.528281) angstroms
+Summary of mapping of compound "(p-2-Diethylaminoethoxyphenyl)-1-phenyl-2-p-anisylethanol" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_3.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom O21 (-2.522872 1.009264 -6.177128) angstroms
+| Query Atom heavyAtom1 mapped to Atom O5 (-8.360147 -1.164010 -6.387841) angstroms
+Summary of mapping of compound "FLURAZEPAM" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_3.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom N10 (-4.763563 -1.036319 -7.709928) angstroms
+| Query Atom heavyAtom1 mapped to Atom O19 (-7.220470 -0.857535 -5.458632) angstroms
+Summary of mapping of compound "Toremifene" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_3.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom O24 (-2.201989 0.141415 -7.325903) angstroms
+Summary of mapping of compound "PIMOZIDE" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_3.ds_chm":
+| Query Atom heavyAtom1 mapped to Atom O10 (-6.772185 -0.743136 -6.978334) angstroms
+Summary of mapping of compound "Ametik hydrochloride" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_3.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom O23 (-4.070925 -0.568728 -7.188082) angstroms
+| Query Atom heavyAtom1 mapped to Atom O3 (-9.288589 0.629286 -8.212420) angstroms
+Summary of mapping of compound "Tamoxifen" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_3.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom O23 (-2.077649 -0.149792 -7.399286) angstroms
+Summary of mapping of compound "Enclomiphene" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_3.ds_chm":
+| Query Atom heavyAtom1 mapped to Atom O21 (-7.600085 0.048112 -6.840099) angstroms
+Summary of mapping of compound "Acrichine" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_3.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom O21 (-3.155951 -0.849169 -6.926956) angstroms
+| Query Atom heavyAtom1 mapped to Atom N14 (-8.384411 -0.369445 -5.111813) angstroms
+Summary of mapping of compound "QUAZEPAM" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_3.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom N10 (-3.972214 -1.131740 -7.701008) angstroms
+| Query Atom heavyAtom1 mapped to Atom S18 (-7.500703 -0.560224 -6.624880) angstroms
+Summary of mapping of compound "HALOPERIDOL" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_3.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom O19 (-2.581486 -0.716384 -6.640792) angstroms
+| Query Atom heavyAtom1 mapped to Atom O10 (-9.833637 -0.125351 -5.526758) angstroms
+Summary of mapping of compound "THIORIDAZINE" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_3.ds_chm":
+| Query Atom heavyAtom1 mapped to Atom S16 (-8.792878 -0.090798 -6.792490) angstroms
+Summary of mapping of compound "Aminazin monohydrochloride" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_3.ds_chm":
+Summary of mapping of compound "sulfonamide5HT2c_07" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_4.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom O23 (0.478243 -2.187990 1.119395) angstroms
+| Query Atom heavyAtom1 mapped to Atom O14 (-0.199628 0.101541 1.541871) angstroms
+Summary of mapping of compound "sulfonamide5HT2c_08" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_4.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom O20 (-0.527567 -1.955299 0.570357) angstroms
+| Query Atom heavyAtom1 mapped to Atom O14 (1.137350 -0.639485 1.744397) angstroms
+Summary of mapping of compound "sulfonamide5HT2c_10" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_4.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom O20 (0.441853 -1.785297 0.466544) angstroms
+| Query Atom heavyAtom1 mapped to Atom O14 (0.193192 0.358663 1.573263) angstroms
+Summary of mapping of compound "sulfonamide5HT2c_11" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_4.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom O20 (0.063370 -2.387775 0.506456) angstroms
+| Query Atom heavyAtom1 mapped to Atom O14 (-0.267135 -0.168592 1.430250) angstroms
+Summary of mapping of compound "sulfonamide5HT2c_12" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_4.ds_chm":
+| Query Atom heavyAtom1 mapped to Atom O17 (0.140983 0.163710 0.834076) angstroms
+Summary of mapping of compound "sulfonamide5HT2c_13" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_4.ds_chm":
+| Query Atom heavyAtom1 mapped to Atom O17 (0.547387 1.109722 1.494455) angstroms
+Summary of mapping of compound "sulfonamide5HT2c_14" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_4.ds_chm":
+| Query Atom heavyAtom1 mapped to Atom O17 (0.116865 0.172364 0.832969) angstroms
+Summary of mapping of compound "sulfonamide5HT2c_15" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_4.ds_chm":
+| Query Atom heavyAtom1 mapped to Atom O11 (0.936105 1.285378 0.809837) angstroms
+Summary of mapping of compound "sulfonamide5HT2c_16" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_4.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom S21 (-2.141534 -1.598085 0.807480) angstroms
+| Query Atom heavyAtom1 mapped to Atom O5 (0.539503 0.122344 0.608524) angstroms
+Summary of mapping of compound "sulfonamide5HT2c_17" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_4.ds_chm":
+| Query Atom heavyAtom1 mapped to Atom O17 (0.670833 0.988593 1.064380) angstroms
+Summary of mapping of compound "sulfonamide5HT2c_18" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_4.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom O17 (-0.656217 -1.141672 -0.482996) angstroms
+| Query Atom heavyAtom1 mapped to Atom O11 (-0.337458 0.100960 1.575751) angstroms
+Summary of mapping of compound "sulfonamide5HT2c_19" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_4.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom O11 (0.519319 -1.992464 0.356517) angstroms
+| Query Atom heavyAtom1 mapped to Atom O17 (-0.620283 -0.026901 1.204908) angstroms
+Summary of mapping of compound "sulfonamide5HT2c_20" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_4.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom O17 (0.631911 -1.903430 0.385972) angstroms
+| Query Atom heavyAtom1 mapped to Atom O11 (-0.570240 0.110040 1.012748) angstroms
+Summary of mapping of compound "sulfonamide5HT2c_21" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_4.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom O11 (0.439165 -1.882454 0.296666) angstroms
+| Query Atom heavyAtom1 mapped to Atom O17 (-0.803034 0.075421 1.009219) angstroms
+Summary of mapping of compound "sulfonamide5HT2c_22" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_4.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom O17 (-0.525892 -1.659610 0.439493) angstroms
+Summary of mapping of compound "sulfonamide5HT2c_23" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_4.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom O17 (1.026146 -2.072625 0.592402) angstroms
+| Query Atom heavyAtom1 mapped to Atom O11 (0.035648 0.046698 1.236770) angstroms
+Summary of mapping of compound "sulfonamide5HT2c_24" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_4.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom O17 (0.992602 -1.981790 0.576486) angstroms
+| Query Atom heavyAtom1 mapped to Atom O11 (-0.091393 0.077645 1.258711) angstroms
+Summary of mapping of compound "sulfonamide5HT2c_25" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_4.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom O17 (0.707230 -2.171460 -0.049346) angstroms
+| Query Atom heavyAtom1 mapped to Atom O11 (-0.079911 -0.089261 0.914248) angstroms
+Summary of mapping of compound "Nafoxidine Hydrochloride" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_4.ds_chm":
+| Query Atom heavyAtom1 mapped to Atom O24 (2.691416 0.224617 1.455265) angstroms
+Summary of mapping of compound "Trioxifene" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_4.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom O10 (-1.508312 -2.208461 -0.930652) angstroms
+| Query Atom heavyAtom1 mapped to Atom O26 (3.789002 0.226939 1.549198) angstroms
+Summary of mapping of compound "Nitromifene" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_4.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom O13 (-1.039760 -3.539365 1.183045) angstroms
+| Query Atom heavyAtom1 mapped to Atom O24 (2.744139 0.177715 1.182865) angstroms
+Summary of mapping of compound "Levormeloxifene" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_4.ds_chm":
+| Query Atom heavyAtom1 mapped to Atom O26 (3.209659 0.134010 1.676954) angstroms
+Summary of mapping of compound "Raloxifene Hydorchloride" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_4.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom O26 (-1.817772 -2.775677 1.411185) angstroms
+| Query Atom heavyAtom1 mapped to Atom O10 (2.187477 2.068557 0.619026) angstroms
+Summary of mapping of compound "(p-2-Diethylaminoethoxyphenyl)-1-phenyl-2-p-anisylethanol" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_4.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom O5 (-1.860161 -2.154023 -0.221423) angstroms
+| Query Atom heavyAtom1 mapped to Atom O21 (3.313738 0.757656 1.679444) angstroms
+Summary of mapping of compound "FLURAZEPAM" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_4.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom O19 (-0.897569 -2.180518 1.072077) angstroms
+| Query Atom heavyAtom1 mapped to Atom N10 (0.409751 0.494524 -0.435639) angstroms
+Summary of mapping of compound "Toremifene" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_4.ds_chm":
+| Query Atom heavyAtom1 mapped to Atom O24 (1.851747 0.496758 0.191766) angstroms
+Summary of mapping of compound "PIMOZIDE" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_4.ds_chm":
+| Query Atom heavyAtom1 mapped to Atom O10 (0.385812 0.738653 0.633394) angstroms
+Summary of mapping of compound "Ametik hydrochloride" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_4.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom O15 (-0.204668 -2.611377 1.693022) angstroms
+| Query Atom heavyAtom1 mapped to Atom O3 (0.672893 2.337655 0.945241) angstroms
+Summary of mapping of compound "Tamoxifen" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_4.ds_chm":
+| Query Atom heavyAtom1 mapped to Atom O23 (2.237808 2.919043 0.405991) angstroms
+Summary of mapping of compound "Enclomiphene" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_4.ds_chm":
+| Query Atom heavyAtom1 mapped to Atom O21 (1.448692 0.222907 1.107261) angstroms
+Summary of mapping of compound "Acrichine" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_4.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom N14 (-1.896455 -3.052527 1.409912) angstroms
+| Query Atom heavyAtom1 mapped to Atom O21 (1.761602 1.126173 1.525689) angstroms
+Summary of mapping of compound "QUAZEPAM" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_4.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom S18 (-1.333430 -1.116933 0.578617) angstroms
+| Query Atom heavyAtom1 mapped to Atom N10 (1.795137 0.881156 0.981876) angstroms
+Summary of mapping of compound "HALOPERIDOL" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_4.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom O19 (-0.790573 -3.011303 0.360306) angstroms
+| Query Atom heavyAtom1 mapped to Atom O10 (0.500224 2.016266 1.252618) angstroms
+Summary of mapping of compound "THIORIDAZINE" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_4.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom S16 (-2.142732 -2.355396 0.564818) angstroms
+Summary of mapping of compound "Aminazin monohydrochloride" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_4.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom S8 (-0.932128 -1.577678 0.881086) angstroms
+Summary of mapping of compound "sulfonamide5HT2c_07" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_5.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom O23 (3.947603 2.511398 -0.805613) angstroms
+Summary of mapping of compound "sulfonamide5HT2c_08" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_5.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom O20 (2.457544 1.156959 -0.388314) angstroms
+| Query Atom heavyAtom1 mapped to Atom O14 (0.584709 1.704378 -1.828629) angstroms
+Summary of mapping of compound "sulfonamide5HT2c_10" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_5.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom O14 (2.995751 2.623974 -0.811106) angstroms
+Summary of mapping of compound "sulfonamide5HT2c_11" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_5.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom O20 (0.906452 1.934396 -1.868171) angstroms
+| Query Atom heavyAtom1 mapped to Atom O14 (-1.050840 2.060456 -0.442898) angstroms
+Summary of mapping of compound "sulfonamide5HT2c_12" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_5.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom O11 (1.950035 1.976075 -0.789184) angstroms
+| Query Atom heavyAtom1 mapped to Atom O17 (-0.085515 0.675982 -0.573852) angstroms
+Summary of mapping of compound "sulfonamide5HT2c_13" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_5.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom O17 (1.946377 1.955802 -1.463321) angstroms
+| Query Atom heavyAtom1 mapped to Atom O11 (-0.091602 0.781325 -0.866106) angstroms
+Summary of mapping of compound "sulfonamide5HT2c_14" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_5.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom O17 (1.937539 1.981237 -0.696781) angstroms
+| Query Atom heavyAtom1 mapped to Atom O11 (-0.098778 0.665420 -0.669531) angstroms
+Summary of mapping of compound "sulfonamide5HT2c_15" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_5.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom O17 (1.239798 0.457156 -2.589209) angstroms
+| Query Atom heavyAtom1 mapped to Atom O11 (0.495813 -0.133599 -0.357807) angstroms
+Summary of mapping of compound "sulfonamide5HT2c_16" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_5.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom S21 (2.175869 1.279377 0.296917) angstroms
+| Query Atom heavyAtom1 mapped to Atom O11 (-0.626146 0.631505 -1.167361) angstroms
+Summary of mapping of compound "sulfonamide5HT2c_17" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_5.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom O11 (1.942457 2.016759 -0.799892) angstroms
+| Query Atom heavyAtom1 mapped to Atom O17 (-0.092965 0.715107 -0.578994) angstroms
+Summary of mapping of compound "sulfonamide5HT2c_18" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_5.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom O17 (1.886657 1.946212 -0.797611) angstroms
+| Query Atom heavyAtom1 mapped to Atom O11 (-0.154220 0.652210 -0.599589) angstroms
+Summary of mapping of compound "sulfonamide5HT2c_19" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_5.ds_chm":
+| Query Atom heavyAtom1 mapped to Atom O11 (-1.884451 0.274906 -1.445426) angstroms
+Summary of mapping of compound "sulfonamide5HT2c_20" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_5.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom O11 (2.577875 1.300154 -0.826683) angstroms
+Summary of mapping of compound "sulfonamide5HT2c_21" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_5.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom O17 (2.693289 1.076679 -0.861536) angstroms
+Summary of mapping of compound "sulfonamide5HT2c_22" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_5.ds_chm":
+| Query Atom heavyAtom1 mapped to Atom O11 (-1.867592 0.308496 -1.477046) angstroms
+Summary of mapping of compound "sulfonamide5HT2c_23" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_5.ds_chm":
+| Query Atom heavyAtom1 mapped to Atom O11 (-1.558251 -0.642685 -0.779543) angstroms
+Summary of mapping of compound "sulfonamide5HT2c_24" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_5.ds_chm":
+| Query Atom heavyAtom1 mapped to Atom O11 (-1.525884 -0.620652 -0.757683) angstroms
+Summary of mapping of compound "sulfonamide5HT2c_25" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_5.ds_chm":
+| Query Atom heavyAtom1 mapped to Atom O11 (-1.211251 -0.605367 -1.502688) angstroms
+Summary of mapping of compound "Nafoxidine Hydrochloride" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_5.ds_chm":
+| Query Atom heavyAtom1 mapped to Atom O24 (-1.766476 1.919163 -1.690332) angstroms
+Summary of mapping of compound "Trioxifene" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_5.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom O10 (4.425346 0.528492 -1.215150) angstroms
+| Query Atom heavyAtom1 mapped to Atom O26 (-1.858458 0.587302 -0.423053) angstroms
+Summary of mapping of compound "Nitromifene" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_5.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom O14 (1.663201 0.239279 -1.508312) angstroms
+| Query Atom heavyAtom1 mapped to Atom O13 (-0.392767 0.610618 -0.902336) angstroms
+Summary of mapping of compound "Levormeloxifene" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_5.ds_chm":
+| Query Atom heavyAtom1 mapped to Atom O26 (-1.624124 1.088069 -1.137110) angstroms
+Summary of mapping of compound "Raloxifene Hydorchloride" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_5.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom O10 (3.785816 1.339977 -1.051195) angstroms
+| Query Atom heavyAtom1 mapped to Atom O26 (-2.463258 0.353504 -1.346101) angstroms
+Summary of mapping of compound "(p-2-Diethylaminoethoxyphenyl)-1-phenyl-2-p-anisylethanol" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_5.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom O5 (3.566384 1.176033 -0.853871) angstroms
+| Query Atom heavyAtom1 mapped to Atom O24 (-2.506993 0.032095 -1.469811) angstroms
+Summary of mapping of compound "FLURAZEPAM" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_5.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom N10 (2.677309 1.093999 -0.841321) angstroms
+| Query Atom heavyAtom1 mapped to Atom O19 (-0.630195 0.653566 -0.877214) angstroms
+Summary of mapping of compound "Toremifene" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_5.ds_chm":
+| Query Atom heavyAtom1 mapped to Atom O24 (-1.411173 0.478023 -1.291564) angstroms
+Summary of mapping of compound "PIMOZIDE" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_5.ds_chm":
+| Query Atom heavyAtom1 mapped to Atom O10 (-1.700512 -0.372507 -1.131991) angstroms
+Summary of mapping of compound "Ametik hydrochloride" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_5.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom O3 (3.199884 1.578889 -0.933477) angstroms
+| Query Atom heavyAtom1 mapped to Atom O13 (-1.422843 -0.255502 -2.059586) angstroms
+Summary of mapping of compound "Tamoxifen" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_5.ds_chm":
+| Query Atom heavyAtom1 mapped to Atom O23 (-2.265307 1.891617 -2.178908) angstroms
+Summary of mapping of compound "Enclomiphene" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_5.ds_chm":
+| Query Atom heavyAtom1 mapped to Atom O21 (-2.443121 1.148465 -2.144952) angstroms
+Summary of mapping of compound "Acrichine" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_5.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom N14 (3.756540 2.134384 0.036549) angstroms
+| Query Atom heavyAtom1 mapped to Atom O21 (-1.050590 -0.127876 -1.587157) angstroms
+Summary of mapping of compound "QUAZEPAM" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_5.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom N10 (2.510109 0.588124 -0.856468) angstroms
+| Query Atom heavyAtom1 mapped to Atom S18 (-1.172831 -0.025723 -0.831229) angstroms
+Summary of mapping of compound "HALOPERIDOL" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_5.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom O19 (3.386965 1.532609 -1.228805) angstroms
+| Query Atom heavyAtom1 mapped to Atom O10 (-1.310230 -0.598454 -0.164022) angstroms
+Summary of mapping of compound "THIORIDAZINE" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_5.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom S16 (3.825512 0.649610 -0.785322) angstroms
+Summary of mapping of compound "Aminazin monohydrochloride" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_5.ds_chm":
+Summary of mapping of compound "5HT2c_ligand1" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_1.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom O23 (1.440691 2.302918 -0.345038) angstroms
+| Query Atom heavyAtom1 mapped to Atom O11 (-2.011211 -1.287649 0.677111) angstroms
+Summary of mapping of compound "5HT2c_ligand2" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_1.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom O14 (1.693230 2.807059 0.210356) angstroms
+| Query Atom heavyAtom1 mapped to Atom O11 (-1.611629 -0.827168 1.342126) angstroms
+Summary of mapping of compound "5HT2c_ligand3" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_1.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom O9 (1.022105 2.026535 -0.732275) angstroms
+| Query Atom heavyAtom1 mapped to Atom O23 (-2.488155 -1.116456 0.996109) angstroms
+Summary of mapping of compound "5HT2c_ligand4" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_1.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom O10 (1.868976 2.780451 -0.116711) angstroms
+| Query Atom heavyAtom1 mapped to Atom O21 (-1.184147 -0.659337 1.532191) angstroms
+Summary of mapping of compound "5HT2c_ligand5" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_1.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom O9 (1.034042 1.891629 -0.206148) angstroms
+| Query Atom heavyAtom1 mapped to Atom O23 (-2.522640 -1.187492 1.192163) angstroms
+Summary of mapping of compound "5HT2c_ligand6" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_1.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom O12 (1.475820 2.077187 -0.517361) angstroms
+| Query Atom heavyAtom1 mapped to Atom O22 (-1.920166 -1.364067 1.682429) angstroms
+Summary of mapping of compound "5HT2c_ligand1" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_2.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom O11 (1.911359 -2.006463 -0.569135) angstroms
+| Query Atom heavyAtom1 mapped to Atom O23 (-1.566593 1.127153 -2.025947) angstroms
+Summary of mapping of compound "5HT2c_ligand2" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_2.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom O11 (1.090842 -2.161471 -1.379056) angstroms
+| Query Atom heavyAtom1 mapped to Atom O14 (-2.036491 1.555367 -2.097441) angstroms
+Summary of mapping of compound "5HT2c_ligand3" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_2.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom O23 (2.693225 -1.915409 -0.775207) angstroms
+| Query Atom heavyAtom1 mapped to Atom O9 (-1.131215 1.177973 -0.814366) angstroms
+Summary of mapping of compound "5HT2c_ligand4" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_2.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom O21 (1.140102 -1.850295 -1.186598) angstroms
+| Query Atom heavyAtom1 mapped to Atom O10 (-1.987098 1.892645 -1.475751) angstroms
+Summary of mapping of compound "5HT2c_ligand5" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_2.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom O23 (2.390245 -2.136587 -0.572612) angstroms
+| Query Atom heavyAtom1 mapped to Atom O9 (-1.032938 1.286775 -0.338212) angstroms
+Summary of mapping of compound "5HT2c_ligand6" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_2.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom O22 (1.791918 -2.201970 -1.372719) angstroms
+| Query Atom heavyAtom1 mapped to Atom O12 (-1.609272 1.540915 -1.148295) angstroms
+Summary of mapping of compound "5HT2c_ligand1" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_3.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom O23 (-3.574698 -0.067977 -6.847083) angstroms
+| Query Atom heavyAtom1 mapped to Atom O11 (-8.642719 -0.419768 -6.637318) angstroms
+Summary of mapping of compound "5HT2c_ligand2" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_3.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom O14 (-3.512212 0.594301 -6.694664) angstroms
+| Query Atom heavyAtom1 mapped to Atom O11 (-8.478506 0.419650 -5.848484) angstroms
+Summary of mapping of compound "5HT2c_ligand3" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_3.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom O9 (-3.935675 -0.474215 -7.115057) angstroms
+| Query Atom heavyAtom1 mapped to Atom O23 (-8.947810 -0.249677 -6.989719) angstroms
+Summary of mapping of compound "5HT2c_ligand4" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_3.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom O10 (-4.090634 0.244585 -6.188299) angstroms
+| Query Atom heavyAtom1 mapped to Atom O21 (-9.199978 0.755736 -6.117095) angstroms
+Summary of mapping of compound "5HT2c_ligand5" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_3.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom O9 (-3.992350 -0.544541 -7.220850) angstroms
+| Query Atom heavyAtom1 mapped to Atom O23 (-8.749208 -0.174598 -6.893005) angstroms
+Summary of mapping of compound "5HT2c_ligand6" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_3.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom O12 (-3.548999 -0.293254 -6.709479) angstroms
+| Query Atom heavyAtom1 mapped to Atom O22 (-8.727118 0.541729 -5.870489) angstroms
+Summary of mapping of compound "5HT2c_ligand1" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_4.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom O11 (-1.737359 -1.909097 0.584959) angstroms
+| Query Atom heavyAtom1 mapped to Atom O23 (1.604655 1.669503 0.641506) angstroms
+Summary of mapping of compound "5HT2c_ligand2" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_4.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom O11 (-1.143814 -2.315814 0.784890) angstroms
+| Query Atom heavyAtom1 mapped to Atom O14 (1.690319 1.706679 0.629784) angstroms
+Summary of mapping of compound "5HT2c_ligand3" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_4.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom O23 (-1.569261 -1.651798 -0.656793) angstroms
+| Query Atom heavyAtom1 mapped to Atom O9 (1.297160 1.800037 0.886293) angstroms
+Summary of mapping of compound "5HT2c_ligand4" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_4.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom O21 (-1.476427 -2.494318 1.021630) angstroms
+| Query Atom heavyAtom1 mapped to Atom O10 (1.770238 1.166659 0.582582) angstroms
+Summary of mapping of compound "5HT2c_ligand5" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_4.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom O23 (-2.547166 -2.354267 0.143615) angstroms
+| Query Atom heavyAtom1 mapped to Atom O9 (0.687056 1.255717 0.162650) angstroms
+Summary of mapping of compound "5HT2c_ligand6" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_4.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom O22 (-1.968760 -2.532549 0.470485) angstroms
+| Query Atom heavyAtom1 mapped to Atom O12 (1.598169 1.185596 0.641293) angstroms
+Summary of mapping of compound "5HT2c_ligand1" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_5.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom O11 (3.074403 0.626049 0.067131) angstroms
+| Query Atom heavyAtom1 mapped to Atom O23 (-1.512353 -0.463489 -1.270339) angstroms
+Summary of mapping of compound "5HT2c_ligand2" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_5.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom O11 (2.486666 1.377307 -0.964150) angstroms
+| Query Atom heavyAtom1 mapped to Atom O14 (-1.981564 -0.301922 -2.115792) angstroms
+Summary of mapping of compound "5HT2c_ligand3" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_5.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom O23 (3.611427 0.376043 -0.169447) angstroms
+| Query Atom heavyAtom1 mapped to Atom O9 (-1.044993 -0.649069 -0.823733) angstroms
+Summary of mapping of compound "5HT2c_ligand4" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_5.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom O21 (2.332791 1.108125 -0.777748) angstroms
+| Query Atom heavyAtom1 mapped to Atom O10 (-2.177327 -0.630894 -1.489949) angstroms
+Summary of mapping of compound "5HT2c_ligand5" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_5.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom O23 (3.492617 0.757616 -0.018775) angstroms
+| Query Atom heavyAtom1 mapped to Atom O9 (-1.170730 -0.544328 -0.243883) angstroms
+Summary of mapping of compound "5HT2c_ligand6" to hypothesis "D:\Program Files\BIOVIA\PPS\web\jobs\16606\F214A85D-7818-461A-A781-2F0931B9334E\5HT2c_ligands_5.ds_chm":
+| Query Atom heavyAtom2 mapped to Atom O22 (3.109154 1.062975 -0.881521) angstroms
+| Query Atom heavyAtom1 mapped to Atom O12 (-1.707593 -0.475334 -1.126873) angstroms

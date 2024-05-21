@@ -1,0 +1,67 @@
+
+<ELU xmlns="http://www.accelrys.com/dsm/elu/2">
+  <experiment Expanded="Split Method" Guid="{E10E740E-427E-424B-BD68-B73F26C6D99A}" protocol="Protocols/BIOVIA Discovery Studio/Discovery Studio/Small Molecules/QSAR/Generate Training and Test Data" protocolName="Generate Training and Test Data" version="1">
+    <Accl:mpropval name="Average Number per Cluster" type="LongType">
+      <Accl:value></Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Center Selection Method" type="StringType">
+      <Accl:value>MaximumDissimilarity</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Clustering Options" type="GroupType">
+      <Accl:value></Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="DSRunInteractive" type="BoolType">
+      <Accl:value>True</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Input Ligands" type="LigandsType">
+      <Accl:value>dataset-qsar:All</Accl:value>
+      <Accl:transformData>c661afd8-3074-e516-11-ba-10-71-94-e8-2e-83</Accl:transformData>
+    </Accl:mpropval>
+    <Accl:mpropval name="Maximum Distance" type="DoubleType">
+      <Accl:value></Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Number of Clusters" type="LongType">
+      <Accl:value>20</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Predefined Set" type="StringType">
+      <Accl:value>ALogP,Molecular_Weight,Num_H_Donors,Num_H_Acceptors,Num_RotatableBonds,Num_Atoms,Num_Rings,Num_AromaticRings,Num_Fragments,Molecular_PolarSurfaceArea</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Queue Name" type="StringType">
+      <Accl:value></Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Random Number Seed" type="LongType">
+      <Accl:value>31415926</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Recenter Clusters" type="StringType">
+      <Accl:value>No</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Recenter Count" type="LongType">
+      <Accl:value>2</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Reporting" type="GroupType">
+      <Accl:value></Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Reporting Stylesheet" type="StylesheetType">
+      <Accl:value>Protocols\Stylesheets\Pipeline Pilot 2010</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Run On Grid" type="BoolType">
+      <Accl:value>False</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Save Intermediate Files" type="BoolType">
+      <Accl:value>False</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Split Method" type="StringType">
+      <Accl:value>Random</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Training Set Percentage" type="StringType">
+      <Accl:value>80</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Use Properties" type="StringType">
+      <Accl:value>PredefinedSet</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="User Set" type="PropertiesOfLigandsType">
+      <Accl:value></Accl:value>
+    </Accl:mpropval>
+  </experiment>
+
+</ELU>

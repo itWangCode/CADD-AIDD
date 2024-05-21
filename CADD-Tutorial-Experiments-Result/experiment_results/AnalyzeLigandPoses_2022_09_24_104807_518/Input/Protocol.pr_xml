@@ -1,0 +1,78 @@
+
+<ELU xmlns="http://www.accelrys.com/dsm/elu/2">
+  <experiment Expanded="" Guid="{26BC5BCC-EEB5-40CF-9479-526F6BC2A900}" protocol="Protocols/BIOVIA Discovery Studio/Discovery Studio/Receptor-Ligand Interactions/Scoring And Analysis/Analyze Ligand Poses" protocolName="Analyze Ligand Poses" version="1">
+    <Accl:mpropval name="Advanced" type="GroupType">
+      <Accl:value></Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Analysis Options" type="GroupType">
+      <Accl:value></Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Analyze Interacting Residues" type="BoolType">
+      <Accl:value>True</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Calculate Solvent Accessibility" type="BoolType">
+      <Accl:value>False</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Create Heat Maps" type="StringType">
+      <Accl:value>Favorable</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Create Histograms" type="BoolType">
+      <Accl:value>True</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="DSRunInteractive" type="BoolType">
+      <Accl:value>True</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Input Ligands" type="LigandsType">
+      <Accl:value>3GEN-(1):All</Accl:value>
+      <Accl:transformData>6569ba95-d7d1-3ef6-2a-28-52-c6-1d-ee-63-ab</Accl:transformData>
+    </Accl:mpropval>
+    <Accl:mpropval name="Input Receptor" type="StructureType">
+      <Accl:value>3GEN-(1):3GEN</Accl:value>
+      <Accl:transformData>6569ba95-d7d1-3ef6-2a-28-52-c6-1d-ee-63-ab</Accl:transformData>
+    </Accl:mpropval>
+    <Accl:mpropval name="Interacting Residues" type="ResiduegroupOfStructureType">
+      <Accl:value></Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Interacting Residues Required" type="StringType">
+      <Accl:value>Any</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Parallel Processing" type="BoolType">
+      <Accl:value>False</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Parallel Processing Batch Size" type="LongType">
+      <Accl:value>100</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Parallel Processing Preserve Order" type="BoolType">
+      <Accl:value>True</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Parallel Processing Server" type="StringType">
+      <Accl:value>localhost</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Parallel Processing Server Processes" type="StringType">
+      <Accl:value>2</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Property Grouping" type="StringType">
+      <Accl:value>Category</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Reporting" type="GroupType">
+      <Accl:value></Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Reporting Chart Display Type" type="StringType">
+      <Accl:value>Default</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Reporting Stylesheet" type="StylesheetType">
+      <Accl:value>{42691EC8-0CE0-4DB9-8B3C-5379CBB967A7}</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Rotated Atoms Property" type="StringType">
+      <Accl:value>Receptor.Positions,Gold.Protein.RotatedAtoms</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Save Intermediate Files" type="BoolType">
+      <Accl:value>False</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Scope" type="StringType">
+      <Accl:value>Residue</Accl:value>
+      <Accl:transformData>Residue</Accl:transformData>
+    </Accl:mpropval>
+  </experiment>
+
+</ELU>

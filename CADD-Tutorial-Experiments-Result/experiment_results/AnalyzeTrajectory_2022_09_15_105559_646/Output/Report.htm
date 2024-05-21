@@ -1,0 +1,572 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=10" />
+  <title>Analyze Trajectory</title>
+  <style type="text/css">
+
+.css0 { margin:10px;  }
+.css1 { box-sizing:border-box; -moz-box-sizing:border-box; -ms-box-sizing:border-box;  }
+.css2 { text-align:left; vertical-align:top; color:#000000; width:100.0%; margin:0; padding:0; font:12.0pt Arial;  }
+.css3 { text-align:left; vertical-align:top; color:#000000; width:100.0%; margin:0; padding:1.0px; font:12.0pt Arial;  }
+.css4 { text-align:left; vertical-align:top; color:#0077c8; margin:0; padding:0; font:bold 18.0pt Arial; text-decoration:none;  }
+.css5 { text-align:left; vertical-align:top; color:#000000; margin:0; padding:0; font:12.0pt Arial; text-decoration:none;  }
+.css6 { text-align:left; vertical-align:top; color:#000000; margin:0; padding:0; font:12.0pt Arial;  }
+.css7 { text-align:left; vertical-align:top; color:#000000; width:50.0%; margin:0; padding:1.0px; font:12.0pt Arial;  }
+.css8 { vertical-align:top; color:#000000; margin:0; padding:0; font:12.0pt Arial; text-decoration:none;  }
+.css9 { vertical-align:top; color:#0077c8; margin:0; padding:0; font:bold 12.0pt Arial; text-decoration:none; white-space:nowrap;  }
+.css10 { text-align:left; vertical-align:top; color:#000000; margin:0; padding:0; font:12.0pt Arial; text-decoration:none; white-space:nowrap;  }
+.css11 { text-align:left; vertical-align:top; color:#000000; width:100.0%; margin:0 0 0 11.0px; padding:0; font:12.0pt Arial;  }
+.css12 { text-align:left; vertical-align:top; color:#000000; width:0; margin:0; padding:0; font:8.0pt Arial;  }
+.css13 { text-align:left; vertical-align:top; color:#000000; width:40.0%; margin:0 auto 0 0; padding:0; font:8.0pt Arial;  }
+.css14 { text-align:left; vertical-align:top; color:#000000; width:1.4778326%; margin:0; padding:0 0 0 5.0px; font:8.0pt Arial;  }
+.css15 { text-align:left; vertical-align:top; color:#000000; margin:0 0 0 13.0px; padding:0; font:8.0pt Arial; text-decoration:none;  }
+.css16 { text-align:left; vertical-align:top; color:#000000; width:49.261086%; margin:0; padding:2.0px 0 0 0; font:bold 8.0pt Arial;  }
+.css17 { text-align:left; vertical-align:top; color:#000000; margin:0; padding:0; font:bold 8.0pt Arial; text-decoration:none;  }
+.css18 { text-align:left; vertical-align:top; color:#000000; width:49.261086%; margin:0; padding:0; font:8.0pt Arial;  }
+.css19 { text-align:left; vertical-align:top; color:#000000; margin:0; padding:0; font:8.0pt Arial; text-decoration:none;  }
+.css20 { text-align:left; vertical-align:top; color:#000000; width:40.0%; margin:0 auto 0 30.0px; padding:0; font:8.0pt Arial;  }
+.css21 { text-align:left; vertical-align:top; color:#000000; width:50.0%; margin:0; padding:0 0 0 3.0px; font:bold 8.0pt Arial;  }
+.css22 { text-align:left; vertical-align:top; color:#000000; width:50.0%; margin:0; padding:2.0px 0 0 5.0px; font:8.0pt Arial;  }
+.css23 { text-align:left; vertical-align:top; color:#000000; width:100.0%; margin:0; padding:0; font:8.0pt Arial;  }
+.css24 { text-align:left; vertical-align:top; color:#000000; width:100.0%; margin:0 0 0 20.0px; padding:0; font:8.0pt Arial;  }
+.css25 { text-align:left; vertical-align:top; color:#000000; margin:0; padding:0; font:8.0pt Arial;  }
+.css26 { text-align:left; vertical-align:top; color:#000000; width:100.0%; margin:0; padding:1.0px; font:8.0pt Arial;  }
+.css27 { text-align:left; vertical-align:top; border:1px solid black; color:#000000; background:#b0c4de; margin:10.0px 10.0px 0 0; padding:0; font:12.0pt Arial; text-decoration:none;  }
+.css28 { text-align:left; vertical-align:top; color:#000000; width:100.0%; margin:0 0 0 20.0px; padding:0; font:12.0pt Arial;  }
+.css29 { text-align:left; vertical-align:top; color:#000000; width:100.0%; margin:0; padding:0 0 0 3.0px; font:8.0pt Arial;  }
+.css30 { text-align:left; vertical-align:top; color:#0000ff; margin:0; padding:0; font:8.0pt Arial; text-decoration:underline;  }
+.css31 { text-align:left; vertical-align:top; color:#000000; width:45.0%; margin:0 auto 0 10.0px; padding:0; font:8.0pt Arial;  }
+.css32 { text-align:left; vertical-align:top; color:#000000; width:50.0%; margin:0; padding:2.0px 0 0 0; font:bold 8.0pt Arial;  }
+.css33 { text-align:left; vertical-align:top; color:#000000; margin:0 0 0 10.0px; padding:0; font:bold 8.0pt Arial; text-decoration:none;  }
+.css34 { text-align:left; vertical-align:top; color:#000000; width:50.0%; margin:0; padding:0 0 0 3.0px; font:8.0pt Arial;  }
+.css35 { text-align:left; vertical-align:top; color:#0000ff; margin:0 0 0 -2.0px; padding:0; font:8.0pt Arial; text-decoration:underline;  }
+.css36 { text-align:left; vertical-align:top; color:#000000; margin:0 0 0 12.0px; padding:0; font:8.0pt Arial; text-decoration:none;  }
+.css37 { vertical-align:top; color:#0077c8; margin:0; padding:0; font:8.0pt Arial; text-decoration:none;  }
+
+  </style>
+  <script type="text/javascript">
+
+function toggleDivVisibility(divId, imageContainerId) 
+{
+	if ( !divId ) { return; }
+	var div = document.getElementById(divId);
+	if ( !div ) { return; }
+	var currentlyVisible = div.style.display != 'none';
+	div.style.display = currentlyVisible ? 'none' : 'block';
+	var imageContainer = document.getElementById(imageContainerId);
+	if( imageContainer ) {
+		var cells = imageContainer.getElementsByTagName('img');
+		if ( cells.length ) 
+		{
+			var image = cells[0];
+			if (image.src.match('plus')) {
+				image.src = image.src.replace('plus', 'minus');
+			} else {
+				image.src = image.src.replace('minus', 'plus');
+			}
+		}
+	}
+}
+
+  </script>
+</head>
+<body class="css0">
+<script type="text/javascript">
+
+window.onload = function( )
+{	
+toggleDivVisibility('ID_Description','DS_REPORT_Description');
+toggleDivVisibility('ID_Parameters','DS_REPORT_Parameters');
+toggleDivVisibility('ID_Input Files','DS_REPORT_Input Files');
+toggleDivVisibility('ID_Details','DS_REPORT_Details');
+toggleDivVisibility('ID_Warnings','DS_REPORT_Warnings');
+toggleDivVisibility('ID_Tables','DS_REPORT_Tables');
+toggleDivVisibility('ID_Images','DS_REPORT_Images');
+toggleDivVisibility('ID_InfoGroupPara-1','DS_REPORT_InfoGroupPara-1');
+toggleDivVisibility('ID_InfoGroupPara-2','DS_REPORT_InfoGroupPara-2');
+toggleDivVisibility('ID_Information','DS_REPORT_Information');
+toggleDivVisibility('ID_GroupPara-1','DS_REPORT_GroupPara-1');
+toggleDivVisibility('ID_GroupPara-2','DS_REPORT_GroupPara-2');
+toggleDivVisibility('ID_GroupPara-3','DS_REPORT_GroupPara-3');
+}
+
+</script>
+<table cellpadding="0" cellspacing="0" class="css2 css1"><tr><td class="css3"><div title="Calculates RMSD and geometries of dynamics trajectories" class="css4 css1">Analyze Trajectory</div>
+</td>
+</tr>
+<tr><td class="css3"><div class="css5 css1"><HR></div>
+</td>
+</tr>
+<tr><td class="css3"><div class="css6 css1"><table cellpadding="0" cellspacing="0" class="css2 css1"><tr><td class="css7"><div class="css6 css1"><span title="Expand/Collapse" id="DS_REPORT_Information" onclick="toggleDivVisibility('ID_Information', 'DS_REPORT_Information')" class="css8"><img src="Report/images/icons/minus.png" /></span><span title="'Protocol runtime information'" class="css9">Information</span></div>
+</td>
+<td class="css7"><div class="css10 css1"></div>
+</td>
+</tr>
+</table>
+<table id="ID_Information" style="width: 500px;" cols="1" cellpadding="0" cellspacing="0" class="css11 css1">
+<tr>
+<td class="css12"><table style="width: 500px;" cols="3" cellpadding="0" cellspacing="0" class="css13 css1">
+<tr>
+<td class="css14"><div class="css15 css1">&nbsp;</div>
+</td>
+<td class="css16"><div class="css17 css1">Status</div>
+</td>
+<td class="css18"><div class="css19 css1">Success</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td class="css12"><table style="width: 500px;" cols="3" cellpadding="0" cellspacing="0" class="css13 css1">
+<tr>
+<td class="css14"><div class="css15 css1">&nbsp;</div>
+</td>
+<td class="css16"><div class="css17 css1">User</div>
+</td>
+<td class="css18"><div class="css19 css1">16606</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td class="css12"><table style="width: 500px;" cols="3" cellpadding="0" cellspacing="0" class="css13 css1">
+<tr>
+<td class="css14"><div title="Expand/Collapse" id="DS_REPORT_InfoGroupPara-1" onclick="toggleDivVisibility('ID_InfoGroupPara-1', 'DS_REPORT_InfoGroupPara-1')" class="css19 css1"><img src="Report/images/icons/minus.png" /></div>
+</td>
+<td class="css16"><div class="css17 css1">Elapsed Time</div>
+</td>
+<td class="css18"><div title="2 seconds" class="css19 css1">00:00:02</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td class="css12"><table id="ID_InfoGroupPara-1" style="width: 500px;" cols="2" cellpadding="0" cellspacing="0" class="css20 css1">
+<tr>
+<td class="css21"><div class="css17 css1">Start</div>
+</td>
+<td class="css22"><div title="Thursday 15 September 22 10:56:00 " class="css19 css1">09/15/22 10:56:00</div>
+</td>
+</tr>
+<tr>
+<td class="css21"><div class="css17 css1">Finish</div>
+</td>
+<td class="css22"><div title="Thursday 15 September 22 10:56:02 " class="css19 css1">09/15/22 10:56:02</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td class="css12"><table style="width: 500px;" cols="3" cellpadding="0" cellspacing="0" class="css13 css1">
+<tr>
+<td class="css14"><div title="Expand/Collapse" id="DS_REPORT_InfoGroupPara-2" onclick="toggleDivVisibility('ID_InfoGroupPara-2', 'DS_REPORT_InfoGroupPara-2')" class="css19 css1"><img src="Report/images/icons/minus.png" /></div>
+</td>
+<td class="css16"><div class="css17 css1">Server Name</div>
+</td>
+<td class="css18"><div title="https://localhost:9943" class="css19 css1"><a href="http://localhost:9944" target="_blank">AbdusemiAbduweli</a></div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td class="css12"><table id="ID_InfoGroupPara-2" style="width: 500px;" cols="2" cellpadding="0" cellspacing="0" class="css20 css1">
+<tr>
+<td class="css21"><div class="css17 css1">DS Version</div>
+</td>
+<td class="css22"><div class="css19 css1">19.1.0.18287</div>
+</td>
+</tr>
+<tr>
+<td class="css21"><div class="css17 css1">PP Version</div>
+</td>
+<td class="css22"><div class="css19 css1">19.1.0.1963</div>
+</td>
+</tr>
+<tr>
+<td class="css21"><div class="css17 css1">DS Client Version</div>
+</td>
+<td class="css22"><div class="css19 css1">19.1.0.18287</div>
+</td>
+</tr>
+<tr>
+<td class="css21"><div class="css17 css1">Server Ports</div>
+</td>
+<td class="css22"><div class="css19 css1">9944 (9943)</div>
+</td>
+</tr>
+<tr>
+<td class="css21"><div class="css17 css1">OS Distribution</div>
+</td>
+<td class="css22"><div class="css19 css1">Windows</div>
+</td>
+</tr>
+<tr>
+<td class="css21"><div class="css17 css1">OS  Version</div>
+</td>
+<td class="css22"><div class="css19 css1">10.0.22000</div>
+</td>
+</tr>
+<tr>
+<td class="css21"><div class="css17 css1">Memory Total</div>
+</td>
+<td class="css22"><div class="css19 css1">23.85 GB</div>
+</td>
+</tr>
+<tr>
+<td class="css21"><div class="css17 css1">Memory Free</div>
+</td>
+<td class="css22"><div class="css19 css1">14.19 GB</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr><td class="css3"><div class="css6 css1"><table cellpadding="0" cellspacing="0" class="css2 css1"><tr><td class="css7"><div class="css6 css1"><span title="Expand/Collapse" id="DS_REPORT_Summary" onclick="toggleDivVisibility('ID_Summary', 'DS_REPORT_Summary'); toggleDivVisibility('ID2_Summary', '')" class="css8"><img src="Report/images/icons/minus.png" /></span><span title="'Contains a brief summary of the protocol output'" class="css9">Summary</span></div>
+</td>
+<td class="css7"><div class="css10 css1"></div>
+</td>
+</tr>
+</table>
+<table id="ID_Summary" style="width: 500px;" cols="1" cellpadding="0" cellspacing="0" class="css2 css1">
+<tr>
+<td class="css12"><table cellpadding="0" cellspacing="0" class="css23 css1"><tr><td class="css23"><table style="width: 500px;" cols="1" cellpadding="0" cellspacing="0" class="css24 css1">
+<tr>
+<td class="css25"><div class="css19 css1">5 conformations analyzed.</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td class="css23"><table cols="1" cellpadding="0" cellspacing="0" class="css23 css1">
+<tr>
+<td class="css25"><table cellpadding="0" cellspacing="0" class="css23 css1"><tr><td class="css26"><map name="Map1">
+<area nohref="" shape="poly" coords="90,376,87,379,84,376,87,373,90,376" title="Conformation 1, 0.000"></area>
+<area nohref="" shape="poly" coords="209,276,206,279,203,276,206,273,209,276" title="Conformation 2, 2.954"></area>
+<area nohref="" shape="poly" coords="328,203,325,206,322,203,325,200,328,203" title="Conformation 3, 5.142"></area>
+<area nohref="" shape="poly" coords="448,122,445,125,442,122,445,119,448,122" title="Conformation 4, 7.540"></area>
+<area nohref="" shape="poly" coords="567,47,564,50,561,47,564,44,567,47" title="Conformation 5, 9.766"></area>
+</map>
+<div><img src="Report/images/image1450666338200069900.png" width="600" height="450" usemap="#Map1" class="css27 css1"></div>
+</td>
+</tr>
+<tr><td class="css26"><map name="Map2">
+<area nohref="" shape="poly" coords="79,322,76,325,73,322,76,319,79,322" title="A:LEU42, 4.428"></area>
+<area nohref="" shape="poly" coords="93,328,90,331,87,328,90,325,93,328" title="A:SER43, 3.992"></area>
+<area nohref="" shape="poly" coords="106,336,103,339,100,336,103,333,106,336" title="A:ASP44, 3.297"></area>
+<area nohref="" shape="poly" coords="120,328,117,331,114,328,117,325,120,328" title="A:GLU45, 3.924"></area>
+<area nohref="" shape="poly" coords="133,346,130,349,127,346,130,343,133,346" title="A:ASP46, 2.505"></area>
+<area nohref="" shape="poly" coords="147,352,144,355,141,352,144,349,147,352" title="A:PHE47, 1.977"></area>
+<area nohref="" shape="poly" coords="161,350,158,353,155,350,158,347,161,350" title="A:LYS48, 2.154"></area>
+<area nohref="" shape="poly" coords="174,353,171,356,168,353,171,350,174,353" title="A:ALA49, 1.858"></area>
+<area nohref="" shape="poly" coords="188,359,185,362,182,359,185,356,188,359" title="A:VAL50, 1.406"></area>
+<area nohref="" shape="poly" coords="201,350,198,353,195,350,198,347,201,350" title="A:PHE51, 2.157"></area>
+<area nohref="" shape="poly" coords="215,358,212,361,209,358,212,355,215,358" title="A:GLY52, 1.429"></area>
+<area nohref="" shape="poly" coords="228,355,225,358,222,355,225,352,228,355" title="A:MET53, 1.702"></area>
+<area nohref="" shape="poly" coords="242,342,239,345,236,342,239,339,242,342" title="A:THR54, 2.761"></area>
+<area nohref="" shape="poly" coords="255,344,252,347,249,344,252,341,255,344" title="A:ARG55, 2.615"></area>
+<area nohref="" shape="poly" coords="269,340,266,343,263,340,266,337,269,340" title="A:SER56, 2.965"></area>
+<area nohref="" shape="poly" coords="282,352,279,355,276,352,279,349,282,352" title="A:ALA57, 1.982"></area>
+<area nohref="" shape="poly" coords="296,360,293,363,290,360,293,357,296,360" title="A:PHE58, 1.302"></area>
+<area nohref="" shape="poly" coords="309,354,306,357,303,354,306,351,309,354" title="A:ALA59, 1.797"></area>
+<area nohref="" shape="poly" coords="323,358,320,361,317,358,320,355,323,358" title="A:ASN60, 1.505"></area>
+<area nohref="" shape="poly" coords="337,364,334,367,331,364,334,361,337,364" title="A:LEU61, 0.964"></area>
+<area nohref="" shape="poly" coords="350,362,347,365,344,362,347,359,350,362" title="A:PRO62, 1.126"></area>
+<area nohref="" shape="poly" coords="364,351,361,354,358,351,361,348,364,351" title="A:LEU63, 2.015"></area>
+<area nohref="" shape="poly" coords="377,354,374,357,371,354,374,351,377,354" title="A:TRP64, 1.780"></area>
+<area nohref="" shape="poly" coords="391,362,388,365,385,362,388,359,391,362" title="A:LYS65, 1.106"></area>
+<area nohref="" shape="poly" coords="404,362,401,365,398,362,401,359,404,362" title="A:GLN66, 1.180"></area>
+<area nohref="" shape="poly" coords="418,356,415,359,412,356,415,353,418,356" title="A:GLN67, 1.639"></area>
+<area nohref="" shape="poly" coords="431,359,428,362,425,359,428,356,431,359" title="A:HIS68, 1.370"></area>
+<area nohref="" shape="poly" coords="445,368,442,371,439,368,442,365,445,368" title="A:LEU69, 0.656"></area>
+<area nohref="" shape="poly" coords="458,363,455,366,452,363,455,360,458,363" title="A:LYS70, 1.030"></area>
+<area nohref="" shape="poly" coords="472,356,469,359,466,356,469,353,472,356" title="A:LYS71, 1.659"></area>
+<area nohref="" shape="poly" coords="485,355,482,358,479,355,482,352,485,355" title="A:GLU72, 1.733"></area>
+<area nohref="" shape="poly" coords="499,354,496,357,493,354,496,351,499,354" title="A:LYS73, 1.781"></area>
+<area nohref="" shape="poly" coords="512,353,509,356,506,353,509,350,512,353" title="A:GLY74, 1.880"></area>
+<area nohref="" shape="poly" coords="526,353,523,356,520,353,523,350,526,353" title="A:LEU75, 1.908"></area>
+<area nohref="" shape="poly" coords="540,345,537,348,534,345,537,342,540,345" title="A:PHE76, 2.556"></area>
+<area nohref="" shape="poly" coords="553,47,550,50,547,47,550,44,553,47" title="A:SO477, 27.247"></area>
+<area nohref="" shape="poly" coords="567,238,564,241,561,238,564,235,567,238" title="A:ACT80, 11.385"></area>
+</map>
+<div><img src="Report/images/image1737098951285909537.png" width="600" height="450" usemap="#Map2" class="css27 css1"></div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr><td class="css3"><div class="css6 css1"><table cellpadding="0" cellspacing="0" class="css2 css1"><tr><td class="css7"><div class="css6 css1"><span title="Expand/Collapse" id="DS_REPORT_Results" onclick="toggleDivVisibility('ID_Results', 'DS_REPORT_Results')" class="css8"><img src="Report/images/icons/minus.png" /></span><span title="'Table with result files generated by the protocol'" class="css9">Results</span></div>
+</td>
+<td class="css7"><div class="css10 css1"></div>
+</td>
+</tr>
+</table>
+<table id="ID_Results" style="width: 500px;" cols="1" cellpadding="0" cellspacing="0" class="css28 css1">
+<tr>
+<td class="css29"><div title="./RMSD.csv" class="css30 css1"><A HREF="./RMSD.csv">RMSD Table</A></div>
+</td>
+</tr>
+<tr>
+<td class="css29"><div title="./RMSF.csv" class="css30 css1"><A HREF="./RMSF.csv">RMSF Table</A></div>
+</td>
+</tr>
+<tr>
+<td class="css29"><div title="./1YRF.dsv" class="css30 css1"><A HREF="./1YRF.dsv">Analyzed Trajectory</A></div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr><td class="css3"><div class="css6 css1"><table cellpadding="0" cellspacing="0" class="css2 css1"><tr><td class="css7"><div class="css6 css1"><span title="Expand/Collapse" id="DS_REPORT_Parameters" onclick="toggleDivVisibility('ID_Parameters', 'DS_REPORT_Parameters')" class="css8"><img src="Report/images/icons/minus.png" /></span><span title="'A table with the run-time parameters'" class="css9">Parameters</span></div>
+</td>
+<td class="css7"><div class="css10 css1"></div>
+</td>
+</tr>
+</table>
+<table id="ID_Parameters" style="width: 500px;" cols="1" cellpadding="0" cellspacing="0" class="css11 css1">
+<tr>
+<td class="css12"><table style="width: 500px;" cols="2" cellpadding="0" cellspacing="0" class="css31 css1">
+<tr>
+<td class="css32"><div class="css33 css1">Protocol Settings</div>
+</td>
+<td class="css34"><div title="../Input/Protocol.pr_xml" class="css35 css1"><A HREF="../Input/Protocol.pr_xml">Protocol.pr_xml</A></div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td class="css12"><table style="width: 500px;" cols="3" cellpadding="0" cellspacing="0" class="css13 css1">
+<tr>
+<td class="css14"><div title="Expand/Collapse" id="DS_REPORT_GroupPara-1" onclick="toggleDivVisibility('ID_GroupPara-1', 'DS_REPORT_GroupPara-1')" class="css19 css1"><img src="Report/images/icons/minus.png" /></div>
+</td>
+<td class="css16"><div class="css17 css1">Input Molecule</div>
+</td>
+<td class="css18"><table cols="1" cellpadding="0" cellspacing="0" class="css23 css1">
+<tr>
+<td class="css25"><div title="../Input/1YRF.dsv" class="css30 css1"><A HREF="../Input/1YRF.dsv">1YRF.dsv</A></div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td class="css12"><table id="ID_GroupPara-1" cols="2" cellpadding="0" cellspacing="0" class="css20 css1">
+<tr>
+<td class="css21"><div style="width: 300px;" class="css17 css1">Frame Start</div>
+</td>
+<td class="css34"><div style="width: 300px;" class="css19 css1">1</div>
+</td>
+</tr>
+<tr>
+<td class="css21"><div style="width: 300px;" class="css17 css1">Frame Stop</div>
+</td>
+<td class="css34"><div style="width: 300px;" class="css19 css1"></div>
+</td>
+</tr>
+<tr>
+<td class="css21"><div style="width: 300px;" class="css17 css1">Frame Increment</div>
+</td>
+<td class="css34"><div style="width: 300px;" class="css19 css1">1</div>
+</td>
+</tr>
+<tr>
+<td class="css21"><div style="width: 300px;" class="css17 css1">Trajectory File</div>
+</td>
+<td class="css34"><div style="width: 300px;" class="css19 css1"></div>
+</td>
+</tr>
+<tr>
+<td class="css21"><div style="width: 300px;" class="css17 css1">Frame Start</div>
+</td>
+<td class="css34"><div style="width: 300px;" class="css19 css1">1</div>
+</td>
+</tr>
+<tr>
+<td class="css21"><div style="width: 300px;" class="css17 css1">Frame Stop</div>
+</td>
+<td class="css34"><div style="width: 300px;" class="css19 css1"></div>
+</td>
+</tr>
+<tr>
+<td class="css21"><div style="width: 300px;" class="css17 css1">Frame Increment</div>
+</td>
+<td class="css34"><div style="width: 300px;" class="css19 css1">1</div>
+</td>
+</tr>
+<tr>
+<td class="css21"><div style="width: 300px;" class="css17 css1">Energy File</div>
+</td>
+<td class="css34"><div style="width: 300px;" class="css19 css1"></div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td class="css12"><table style="width: 500px;" cols="3" cellpadding="0" cellspacing="0" class="css13 css1">
+<tr>
+<td class="css14"><div class="css36 css1">&nbsp;</div>
+</td>
+<td class="css16"><div class="css17 css1">Analysis Type</div>
+</td>
+<td class="css18"><table cols="1" cellpadding="0" cellspacing="0" class="css23 css1">
+<tr>
+<td class="css25"><div class="css19 css1">RMSD</div>
+</td>
+</tr>
+<tr>
+<td class="css25"><div class="css19 css1">RMSF</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td class="css12"><table style="width: 500px;" cols="3" cellpadding="0" cellspacing="0" class="css13 css1">
+<tr>
+<td class="css14"><div title="Expand/Collapse" id="DS_REPORT_GroupPara-2" onclick="toggleDivVisibility('ID_GroupPara-2', 'DS_REPORT_GroupPara-2')" class="css19 css1"><img src="Report/images/icons/minus.png" /></div>
+</td>
+<td class="css16"><div class="css17 css1">RMSD Reference</div>
+</td>
+<td class="css18"><div class="css19 css1">First Frame</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td class="css12"><table id="ID_GroupPara-2" cols="2" cellpadding="0" cellspacing="0" class="css20 css1">
+<tr>
+<td class="css21"><div style="width: 300px;" class="css17 css1">Reference Frame</div>
+</td>
+<td class="css34"><div style="width: 300px;" class="css19 css1"></div>
+</td>
+</tr>
+<tr>
+<td class="css21"><div style="width: 300px;" class="css17 css1">Reference Molecule</div>
+</td>
+<td class="css34"><div style="width: 300px;" class="css19 css1"></div>
+</td>
+</tr>
+<tr>
+<td class="css21"><div style="width: 300px;" class="css17 css1">Scope</div>
+</td>
+<td class="css34"><div style="width: 300px;" class="css19 css1">Molecule</div>
+</td>
+</tr>
+<tr>
+<td class="css21"><div style="width: 300px;" class="css17 css1">Label</div>
+</td>
+<td class="css34"><div style="width: 300px;" class="css19 css1">RMSD to conf</div>
+</td>
+</tr>
+<tr>
+<td class="css21"><div style="width: 300px;" class="css17 css1">Atom Group</div>
+</td>
+<td class="css34"><div style="width: 300px;" class="css19 css1"></div>
+</td>
+</tr>
+<tr>
+<td class="css21"><div style="width: 300px;" class="css17 css1">Atom Group to Fit</div>
+</td>
+<td class="css34"><div style="width: 300px;" class="css19 css1"></div>
+</td>
+</tr>
+<tr>
+<td class="css21"><div style="width: 300px;" class="css17 css1">Save Fitted Trajectory</div>
+</td>
+<td class="css34"><div style="width: 300px;" class="css19 css1">True</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td class="css12"><table style="width: 500px;" cols="3" cellpadding="0" cellspacing="0" class="css13 css1">
+<tr>
+<td class="css14"><div class="css36 css1">&nbsp;</div>
+</td>
+<td class="css16"><div class="css17 css1">Fit Frames for RMSF</div>
+</td>
+<td class="css18"><div class="css19 css1">True</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td class="css12"><table style="width: 500px;" cols="3" cellpadding="0" cellspacing="0" class="css13 css1">
+<tr>
+<td class="css14"><div class="css36 css1">&nbsp;</div>
+</td>
+<td class="css16"><div class="css17 css1">Properties</div>
+</td>
+<td class="css18"><div class="css19 css1"></div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td class="css12"><table style="width: 500px;" cols="3" cellpadding="0" cellspacing="0" class="css13 css1">
+<tr>
+<td class="css14"><div title="Expand/Collapse" id="DS_REPORT_GroupPara-3" onclick="toggleDivVisibility('ID_GroupPara-3', 'DS_REPORT_GroupPara-3')" class="css19 css1"><img src="Report/images/icons/minus.png" /></div>
+</td>
+<td class="css16"><div class="css17 css1">Protein Torsion Angles</div>
+</td>
+<td class="css18"><div class="css19 css1">Main Chain</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td class="css12"><table id="ID_GroupPara-3" cols="2" cellpadding="0" cellspacing="0" class="css20 css1">
+<tr>
+<td class="css21"><div style="width: 300px;" class="css17 css1">Residues to Analyze</div>
+</td>
+<td class="css34"><div style="width: 300px;" class="css19 css1"></div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr><td class="css3"><div class="css6 css1"><span class="css8"><HR></span><span class="css37">Copyright © 2022 Dassault Systèmes Biovia Corp - All rights reserved.</span></div>
+</td>
+</tr>
+</table>
+
+</body>
+</html>

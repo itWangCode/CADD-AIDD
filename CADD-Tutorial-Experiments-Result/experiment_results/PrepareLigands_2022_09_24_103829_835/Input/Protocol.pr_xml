@@ -1,0 +1,192 @@
+
+<ELU xmlns="http://www.accelrys.com/dsm/elu/2">
+  <experiment Expanded="Generate Coordinates,Change Ionization,pH Based" Guid="{4E644DD0-0BFC-4F5E-8463-8848D12815BF}" protocol="Protocols/BIOVIA Discovery Studio/Discovery Studio/Small Molecules/General Purpose/Prepare Ligands" protocolName="Prepare Ligands" version="1">
+    <Accl:mpropval name="AcceptInputStereoAsMarked" type="BoolType">
+      <Accl:value>True</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Acid Ionization" type="StringType">
+      <Accl:value>Carboxylate</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Advanced" type="GroupType">
+      <Accl:value></Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="ApplyToWindow" type="StringType">
+      <Accl:value>Input Ligands</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Base Ionization" type="StringType">
+      <Accl:value>Amine (primary),Amine (secondary),Amine (tertiary)</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Change Ionization" type="BoolType">
+      <Accl:value>True</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="DSRunInteractive" type="BoolType">
+      <Accl:value>True</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Duplicate Structures" type="StringType">
+      <Accl:value>Remove</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Filter SMARTS" type="StringType">
+      <Accl:value>Positive 1-Bond,Positive 2-Bonds,Positive 3-Bonds,Negative 1-Bonds,Negative 2-Bonds,Negative 3-Bonds</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Fix Bad Valencies" type="BoolType">
+      <Accl:value>True</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Generate Coordinates" type="StringType">
+      <Accl:value>3D</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Generate Isomers" type="BoolType">
+      <Accl:value>False</Accl:value>
+      <Accl:transformData>False</Accl:transformData>
+    </Accl:mpropval>
+    <Accl:mpropval name="Generate Isomers EnumerateWhat" type="StringType">
+      <Accl:value>UnknownStereoatoms,UnknownStereobonds</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Generate Tautomers" type="BoolType">
+      <Accl:value>False</Accl:value>
+      <Accl:transformData>False</Accl:transformData>
+    </Accl:mpropval>
+    <Accl:mpropval name="Generate Tautomers Amides Tautomerization" type="StringType">
+      <Accl:value>Tautomerize Only Diamides</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Generate Tautomers ConsiderCarbonAsDonor" type="StringType">
+      <Accl:value>Never</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Generate Tautomers Enumerate What" type="StringType">
+      <Accl:value>AllTautomers</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Generate Tautomers MakeAllSp2AtomsAcceptors" type="BoolType">
+      <Accl:value>False</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Generate Tautomers Maximum Number of Tautomers" type="LongType">
+      <Accl:value>10</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Generate Tautomers Perceive Charge Tautomerization" type="BoolType">
+      <Accl:value>False</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Generate Tautomers Preserve Aromaticity" type="BoolType">
+      <Accl:value>False</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Input Ligands" type="LigandsType">
+      <Accl:value>Molecule-(1):All</Accl:value>
+      <Accl:transformData>463b9135-3091-8a46-34-38-fa-93-fa-9b-b4-d2</Accl:transformData>
+    </Accl:mpropval>
+    <Accl:mpropval name="Ionization Enumeration" type="StringType">
+      <Accl:value>One Protomer</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Ionization Method" type="StringType">
+      <Accl:value>pH Based</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Maximum pH" type="DoubleType">
+      <Accl:value>7.4</Accl:value>
+      <Accl:transformData>7.4</Accl:transformData>
+    </Accl:mpropval>
+    <Accl:mpropval name="Minimum pH" type="DoubleType">
+      <Accl:value>7.4</Accl:value>
+      <Accl:transformData>7.4</Accl:transformData>
+    </Accl:mpropval>
+    <Accl:mpropval name="Name Property" type="PropertyOfLigandsType">
+      <Accl:value></Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="NonStandard Name Property" type="BoolType">
+      <Accl:value>False</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Parallel Processing" type="BoolType">
+      <Accl:value>False</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Parallel Processing Batch Size" type="LongType">
+      <Accl:value>25</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Parallel Processing Preserve Order" type="BoolType">
+      <Accl:value>True</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Parallel Processing Server" type="StringType">
+      <Accl:value>localhost</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Parallel Processing Server Processes" type="StringType">
+      <Accl:value>2</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Rearrange Hydrogens" type="BoolType">
+      <Accl:value>True</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Remove Charges" type="StringType">
+      <Accl:value>Protonate Acids,Deprotonate Bases</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Reporting" type="GroupType">
+      <Accl:value></Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Reporting Stylesheet" type="StylesheetType">
+      <Accl:value>{42691EC8-0CE0-4DB9-8B3C-5379CBB967A7}</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Rule Based" type="GroupType">
+      <Accl:value></Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="SMARTS Charge Templates" type="TextType">
+      <Accl:value># SMARTS Rules for filtering molecules with charges 
+
+# positive charges separated by 1 bond length
+[+,+2,+3,+4,+5,+6,+7;!'$'([+,+2,+3,+4,+5,+6,+7]~[-,-2,-3,-4,-5,-6,-7])]~[+,+2,+3,+4,+5,+6,+7;!'$'([+,+2,+3,+4,+5,+6,+7]~[-,-2,-3,-4,-5,-6,-7])]	Positive 1-Bond
+
+# positive charges separated by 2 bond length
+[+,+2,+3,+4,+5,+6,+7;!'$'([+,+2,+3,+4,+5,+6,+7]~[-,-2,-3,-4,-5,-6,-7])]~[*]~[+,+2,+3,+4,+5,+6,+7;!'$'([+,+2,+3,+4,+5,+6,+7]~[-,-2,-3,-4,-5,-6,-7])]	Positive 2-Bonds
+
+# positive charges separated by 3 bond length
+[+,+2,+3,+4,+5,+6,+7;!'$'([+,+2,+3,+4,+5,+6,+7]~[-,-2,-3,-4,-5,-6,-7])]~[*]~[*]~[+,+2,+3,+4,+5,+6,+7;!'$'([+,+2,+3,+4,+5,+6,+7]~[-,-2,-3,-4,-5,-6,-7])]	Positive 3-Bonds
+
+# negative charges separated by 1 bond length
+[-,-2,-3,-4,-5,-6,-7;!'$'([-,-2,-3,-4,-5,-6,-7]~[+,+2,+3,+4,+5,+6,+7])]~[-,-2,-3,-4,-5,-6,-7;!'$'([-,-2,-3,-4,-5,-6,-7]~[+,+2,+3,+4,+5,+6,+7])]	Negative 1-Bonds
+
+# negative charges separated by 2 bond length
+[-,-2,-3,-4,-5,-6,-7;!'$'([-,-2,-3,-4,-5,-6,-7]~[+,+2,+3,+4,+5,+6,+7])]~[*]~[-,-2,-3,-4,-5,-6,-7;!'$'([-,-2,-3,-4,-5,-6,-7]~[+,+2,+3,+4,+5,+6,+7])]	Negative 2-Bonds
+
+# negative charges separated by 3 bond length
+[-,-2,-3,-4,-5,-6,-7;!'$'([-,-2,-3,-4,-5,-6,-7]~[+,+2,+3,+4,+5,+6,+7])]~[*]~[*]~[-,-2,-3,-4,-5,-6,-7;!'$'([-,-2,-3,-4,-5,-6,-7]~[+,+2,+3,+4,+5,+6,+7])]	Negative 3-Bonds</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="SMIRKS Acid Templates" type="TextType">
+      <Accl:value>#  ACIDS
+[#6:1][SX4:2](=[O:3])(=[O:4])[OH:6]&gt;&gt;[#6:1][SX4:2](=[O:3])(=[O:4])[O-:6]	Sulfonate
+[#6:1][OX2:2][PX4:3](=[O:4])([O+0:5][#1,#6:6])[OH:7]&gt;&gt;[#6:1][OX2:2][PX4:3](=[O:4])([O+0:5][#1,#6:6])[O-:7]	Phosphate (1st ionization)
+[#6:1][OX2:2][PX4:3](=[O:4])([OH,O-:5])[OH:7]&gt;&gt;[#6:1][OX2:2][PX4:3](=[O:4])([O-:5])[O-:7]	Phosphate (2nd ionization)
+[#6:1][C:2](=[O:3])[OH:4]&gt;&gt;[#6:1][C:2](=[O:3])[O-:4]	Carboxylate
+[#6:1][OX2:2][SX4:3](=[O:4])(=[O:5])[OH:6]&gt;&gt;[#6:1][OX2:2][SX4:3](=[O:4])(=[O:5])[O-:6]	Sulfate
+[#6:1][SX3:2](=[O:3])[OH:4]&gt;&gt;[#6:1][SX3:2](=[O:3])[O-:4]	Sulfinic Acid
+[#6:1][PX4:2](=[O:3])([OH:4])[OX2:5][#6,#1:6]&gt;&gt;[#6:1][PX4:2](=[O:3])([O-:4])[OX2:5][#6,#1:6]	Phosphonates (1st ionization)
+[#6:1][PX4:2](=[O:3])([OH:4])[OH:5]&gt;&gt;[#6:1][PX4:2](=[O:3])([O-:4])[O-:5]	Phosphonates (2nd ionization)
+[#6:1][PX4:2](=[O:3])([OH:4])[#6:5]&gt;&gt;[#6:1][PX4:2](=[O:3])([O-:4])[#6:5]	Phosphinates
+[c:1][SX2H:2]&gt;&gt;[c:1][S-:2]	 Thiol (aryl)
+[C:1][SX2:2][H]&gt;&gt;[C:1][S-1:2]	Thiol (aliphatic)
+[*:1][c:2]1[n:3][n:4][nH:5][n:6]1&gt;&gt;[*:1][c:2]1[n:3][n:4][n-:5][n:6]1	Tetrazolates 1
+[*:1][c:2]1[n:3][n:4][n:5][nH:6]1&gt;&gt;[*:1][c:2]1[n:3][n:4][n:5][n-:6]1	Tetrazolates 2
+[#6,H:1][CX3:2](=[O:3])[SH:4]&gt;&gt;[#6,H:1][CX3:2](=[O:3])[S-:4]	Thiocarboxylates
+[#6,H:1][CX3:2](=[S:3])[SH:4]&gt;&gt;[#6,H:1][CX3:2](=[S:3])[S-:4]	Dithiocarboxylates
+[c:1][SX4:2]([NH2:3])(=[OX1:4])(=[OX1:5])&gt;&gt;[c:1][SX4:2]([NH-:3])(=[OX1:4])(=[OX1:5])	Sulfonamides (aryl)
+[#6:1][CX3:2](=[O:3])[NH:4][CX3:5](=[O:6])[#6:7]&gt;&gt;[#6:1][CX3:2](=[O:3])[N-1:4][CX3:5](=[O:6])[#6:7]	N-Acyl Amide
+[c:1][OX2H:2]&gt;&gt;[c:1][O-:2]	Phenol
+[CX4:1][SX4:2]([NH2])(=[OX1:3])(=[OX1:4])&gt;&gt;[CX4:1][SX4:2]([N-1])(=[OX1:3])(=[OX1:4])	Sulfonamide (alkyl)
+[#6:4][NHX3:2][CX3:1](=[OX1:3])[#6:5]&gt;&gt;[#6:4][N-1:2][CX3:1](=[OX1:3])[#6:5]	Amides
+[#6,H:1][CX3:2](=[O:3])[NX3:4]([OH:5])&gt;&gt;[#6,H:1][CX3:2](=[O:3])[NX3:4]([O-1:5])	Hydroxamates</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="SMIRKS Base Templates" type="TextType">
+      <Accl:value>#  BASES
+['$'([N+0X3]([H])([H])[CX4]):1]&gt;&gt;[N+1:1]([H])	Amine (primary)
+['$'([N+0X3]([H])([CX4])[CX4]):1]&gt;&gt;[N+1:1]([H])	Amine (secondary)
+['$'([N+0X3]([CX4])([CX4])[CX4]):1]&gt;&gt;[N+1:1]([H])	Amine (tertiary)
+[c:1][N+0:2]([CX4,H:3])[CX4,H:4]&gt;&gt;[c:1][N+1:2]([H])([CX4,H:3])[CX4,H:4]	Amine (aryl)
+[#6,H:1][N+0X3:2]([#6,H:3])[C:4](=[N+0X2:5][CX4,H:6])[N+0X3:7]([#6,H:8])[#6,H:9]&gt;&gt;[#6,H:1][N+0:2]([#6,H:3])[C:4](=[N+1:5]([H])[#6,H:6])[N+0:7]([#6,H:8])[#6,H:9]	Guanidine
+[#6,H:1][N+0X3:2]([#6,H:3])[C:4](=[N+0X2:5][#6,H:6])[#6,H:7]&gt;&gt;[#6,H:1][N+0:2]([#6,H:3])[C:4](=[N+1:5]([H])[#6,H:6])[#6,H:7]	Amidine
+[CX4:1][N+0X3:2]([#6,H:3])[N:4]([#6,H:5])[#6,H:6]&gt;&gt;[CX4:1][N+1:2]([H])([#6,H:3])[N:4]([#6,H:5])[#6,H:6]	Hydrazine (alkyl)
+[CX4,H:1][#6:2]1:[#6:3]([CX4,H:4])[#7+0:5][#6:6]([CX4,H:7]):[#7X2+0:8]1&gt;&gt;[CX4,H:1][#6:2]1:[#6:3]([CX4,H:4])[#7+0:5][#6:6]([CX4,H:7]):[#7+1:8]1[H]	Imidazole
+[c:1][N+0X3:2]([CX4,H:3])[N:4]([CX4,H:5])[CX4,H:6]&gt;&gt;[c:1][N+1:2]([H])([CX4,H:3])[N:4]([CX4,H:5])[CX4,H:6]	Hydrazine (aryl)
+[C,H:1][C:2](=[O:3])[N+0X3:4]([CX4,H:5])[N+0X3:6]([CX4,H:7])[CX4,H:8]&gt;&gt;[C,H:1][C:2](=[O:3])[N+0:4]([CX4,H:5])[N+1:6]([H])([CX4,H:7])[CX4,H:8]	Hydrazide </Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Save Intermediate Files" type="BoolType">
+      <Accl:value>False</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="SkipStereoAtomsAtBridgeHeads" type="BoolType">
+      <Accl:value>True</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="pH Based" type="GroupType">
+      <Accl:value></Accl:value>
+    </Accl:mpropval>
+  </experiment>
+
+</ELU>

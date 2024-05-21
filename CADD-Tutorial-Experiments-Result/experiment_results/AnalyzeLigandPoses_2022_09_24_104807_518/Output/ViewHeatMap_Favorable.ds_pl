@@ -1,0 +1,22 @@
+#!/usr/bin/perl
+use MdmDiscoveryScript;
+use ChartDiscoveryScript;
+
+# Returns document only if ApplyToWindow condition is true on the client
+my $document = DiscoveryScript::LastActiveDocument(MdmModelType, True);
+
+if ($document) {
+    $document->Insert({"Path" => "3GEN-(1).sd", "FormatType" => "mol-merge-properties"});
+    sleep(1);
+} else{
+    $document = Mdm::Document::Create();
+    $document->Insert({"Path" => "3GEN-(1).sd", "LoadAllObjects" => False});
+    $document->IsDataTableViewShown = True;
+    $document->IsHierarchyViewShown = False;
+    $document->IsGraphicsViewShown  = False; 
+}
+
+$document->UpdateViews();
+
+my $chart = Chart::Document::CreateHeatMap($document, "Molecule", "Favorable A:LEU408,Favorable A:THR410,Favorable A:GLY411,Favorable A:GLN412,Favorable A:PHE413,Favorable A:GLY414,Favorable A:VAL416,Favorable A:ALA428,Favorable A:LYS430,Favorable A:MET449,Favorable A:VAL458,Favorable A:LEU460,Favorable A:ILE472,Favorable A:THR474,Favorable A:GLU475,Favorable A:TYR476,Favorable A:MET477,Favorable A:CYS481,Favorable A:ARG525,Favorable A:ASN526,Favorable A:LEU528,Favorable A:SER538,Favorable A:ASP539,Favorable A:PHE540,Favorable A:LEU542,Favorable A:VAL546,Favorable A:TYR551,Favorable A:LYS558", "Name");
+$chart->UpdateViews();

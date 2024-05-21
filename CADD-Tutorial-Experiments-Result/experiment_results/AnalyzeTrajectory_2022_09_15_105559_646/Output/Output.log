@@ -1,0 +1,9 @@
+[2022-09-15 10:56:00] ------------------------------------
+[2022-09-15 10:56:00] Protocol Name = 'Analyze Trajectory'
+[2022-09-15 10:56:00] User Name = '16606'
+[2022-09-15 10:56:00] Run ID = '7DEB7E19-BD9F-436F-B987-F6E5F0643C2F'
+[2022-09-15 10:56:00] Client message: 'Analyzing trajectory...'
+[2022-09-15 10:56:00] Started running 'analyzetrajectory'
+[2022-09-15 10:56:01] Finished running 'analyzetrajectory'
+[2022-09-15 10:56:01] Client message: 'Analysis finished'
+[2022-09-15 10:56:02] Final message: '5 frames: 1YRF'

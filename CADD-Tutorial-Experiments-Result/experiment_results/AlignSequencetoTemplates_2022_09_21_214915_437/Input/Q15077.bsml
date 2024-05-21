@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<?format DECIMAL="."?>
+<!DOCTYPE Bsml PUBLIC "-//Labbook, Inc. BSML DTD//EN" "http://www.labbook.com/dtd/bsml2_2.dtd">
+<!-- The BSML specification was created by Joseph H. Spitzner, Ph.D., LabBook, Inc. http://www.labbook.com -->
+<Bsml>
+<Attribute name="model-type" content="alignment"/>
+<Definitions>
+<Sequences>
+<Sequence id="SEQ_0" title="P2RY6" comment="P2Y purinoceptor 6 OS=Homo sapiens OX=9606 GN=P2RY6 PE=1 SV=1" locus="P2RY6" representation="raw" local-acckey="" db-source="" length="328" molecule="aa">
+<Attribute name="sequence-id" content="P2RY6"/>
+<Attribute name="sequence-guid" content="bd607942-264f-b33d-2d-10-d5-04-b6-b3-ea-f0"/>
+<Attribute name="seq-version" content="1.3"/>
+<Attribute name="Sacs" content="0 1"/>
+<Attribute name="transl-table" content="1"/>
+<Feature-tables>
+<Feature-table>
+</Feature-table>
+<Feature-table>
+</Feature-table>
+</Feature-tables>
+<Seq-data>MEWDNGTGQALGLPPTTCVYRENFKQLLLPPVYSAVLAAGLPLNICVITQ
+ICTSRRALTRTAVYTLNLALADLLYACSLPLLIYNYAQGDHWPFGDFACR
+LVRFLFYANLHGSILFLTCISFQRYLGICHPLAPWHKRGGRRAAWLVCVA
+VWLAVTTQCLPTAIFAATGIQRNRTVCYDLSPPALATHYMPYGMALTVIG
+FLLPFAALLACYCLLACRLCRQDGPAEPVAQERRGKAARMAVVVAAAFAI
+SFLPFHITKTAYLAVRSTPGVPCTVLEAFAAAYKGTRPFASANSVLDPIL
+FYFTQKKFRRRPHELLQKLTAKWQRQGR</Seq-data>
+</Sequence>
+</Sequences>
+<Tables>
+<Alignment-point-set id="ALIGN_0" seqids="SEQ_0" featids="NONE" numseg="1" starts="1" strands="N" seglens="328">
+<Attribute name="alignment-guid" content="7605b7f9-ab51-09b5-4d-f4-53-3d-c5-af-77-b6"/>
+<Attribute name="score" content="0"/>
+<Attribute name="e-value" content="0"/>
+<Attribute name="bit-score" content="0"/>
+<Attribute name="number" content="0"/>
+</Alignment-point-set>
+</Tables>
+</Definitions>
+</Bsml>
